@@ -9,45 +9,50 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-17 13:26 Eastern Daylight Time. Data from yfinance. Times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**._
+_Last updated: 2026-04-17 13:37 Eastern Daylight Time. Data from yfinance. Times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**._
 
 ## Upcoming
 
 | Date | Time | Ticker | Company |
 | ---- | ---- | ------ | ------- |
-| 2026-02-26 | — | SJM | JM Smucker |
-| 2026-03-05 | — | KR | Kroger |
-| 2026-03-18 | — | GIS | General Mills |
-| 2026-03-31 | — | MKC | McCormick & Co |
-| 2026-04-01 | — | CAG | ConAgra Brands |
-| 2026-04-01 | — | LW | Lamb Weston |
-| 2026-04-22 | — | PM | Philip Morris International |
-| 2026-04-23 | — | KDP | Keurig Dr Pepper |
-| 2026-04-24 | — | PG | Procter & Gamble |
-| 2026-04-28 | — | KO | Coca-Cola |
-| 2026-04-28 | — | MDLZ | Mondelez International |
-| 2026-04-28 | — | KMB | Kimberly-Clark |
-| 2026-04-28 | — | SYY | Sysco |
-| 2026-04-29 | — | BG | Bunge |
-| 2026-04-30 | — | MO | Altria Group |
-| 2026-04-30 | — | HSY | Hershey |
-| 2026-04-30 | — | CLX | Clorox |
-| 2026-05-01 | — | CL | Colgate-Palmolive |
-| 2026-05-01 | — | EL | Estée Lauder |
-| 2026-05-01 | — | CHD | Church & Dwight |
-| 2026-05-04 | — | TSN | Tyson Foods |
-| 2026-05-05 | — | ADM | Archer-Daniels-Midland |
-| 2026-05-07 | — | MNST | Monster Beverage |
+| 2026-04-16 | BMO | PEP | PepsiCo |
+| 2026-04-22 | BMO | PM | Philip Morris International |
+| 2026-04-23 | BMO | KDP | Keurig Dr Pepper |
+| 2026-04-24 | BMO | PG | Procter & Gamble |
+| 2026-04-28 | BMO | KO | Coca-Cola |
+| 2026-04-28 | AMC | MDLZ | Mondelez International |
+| 2026-04-28 | BMO | KMB | Kimberly-Clark |
+| 2026-04-28 | BMO | SYY | Sysco |
+| 2026-04-29 | BMO | BG | Bunge |
+| 2026-04-30 | BMO | MO | Altria Group |
+| 2026-04-30 | BMO | HSY | Hershey |
+| 2026-04-30 | AMC | CLX | Clorox |
+| 2026-05-01 | BMO | CL | Colgate-Palmolive |
+| 2026-05-01 | BMO | EL | Estée Lauder |
+| 2026-05-01 | BMO | CHD | Church & Dwight |
+| 2026-05-04 | BMO | TSN | Tyson Foods |
+| 2026-05-05 | BMO | ADM | Archer-Daniels-Midland |
+| 2026-05-07 | AMC | MNST | Monster Beverage |
 | 2026-05-11 | — | CELH | Celsius Holdings |
 | 2026-05-20 | — | TGT | Target |
-| 2026-05-21 | — | WMT | Walmart |
-| 2026-05-28 | — | COST | Costco Wholesale |
+| 2026-05-21 | BMO | WMT | Walmart |
+| 2026-05-28 | AMC | COST | Costco Wholesale |
 | 2026-05-28 | — | HRL | Hormel Foods |
 | 2026-06-02 | — | DG | Dollar General |
 | 2026-06-03 | — | DLTR | Dollar Tree |
 | 2026-06-04 | — | BF-B | Brown-Forman |
 | 2026-07-01 | — | STZ | Constellation Brands |
-| 2026-07-16 | — | PEP | PepsiCo |
+
+## No date found
+
+| Ticker | Company | Note |
+| ------ | ------- | ---- |
+| GIS | General Mills | no data |
+| KR | Kroger | no data |
+| CAG | ConAgra Brands | no data |
+| SJM | JM Smucker | no data |
+| MKC | McCormick & Co | no data |
+| LW | Lamb Weston | no data |
 
 ---
 
