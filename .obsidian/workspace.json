@@ -8,29 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e8962a112bf76c6b",
+            "id": "754ba455436a0134",
             "type": "leaf",
             "state": {
-              "type": "smart-release-notes-view",
+              "type": "empty",
               "state": {},
-              "icon": "file-text",
-              "title": "Release Notes"
-            }
-          }
-        ]
-      },
-      {
-        "id": "9e589b5d1adbf774",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "e0e81fbf3e8f7e89",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -203,10 +187,11 @@
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": false,
       "smart-connections:Smart Lookup: Open lookup view": false,
-      "smart-connections-visualizer:Open smart connections visualizer": false
+      "smart-connections-visualizer:Open smart connections visualizer": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e8962a112bf76c6b",
+  "active": "754ba455436a0134",
   "lastOpenFiles": [
     "Untitled.md",
     "Sources",
