@@ -1,0 +1,11 @@
+
+"event_logs:source:initial_scan_started": {"key":"source:initial_scan_started","ct":1,"first_at":1776401533351,"last_at":1776401533351,"class_name":"EventLog","event_sources":{"init_items":1}},
+"event_logs:source:initial_scan_completed": {"key":"source:initial_scan_completed","ct":1,"first_at":1776401533466,"last_at":1776401533466,"class_name":"EventLog","event_sources":{"init_items":1}},
+"event_logs:settings:changed": {"key":"settings:changed","ct":8,"first_at":1776401533466,"last_at":1776401533467,"class_name":"EventLog"},
+"event_logs:collection:load_started": {"key":"collection:load_started","ct":5,"first_at":1776401536469,"last_at":1776401536487,"class_name":"EventLog"},
+"event_logs:collection:load_completed": {"key":"collection:load_completed","ct":2,"first_at":1776401536474,"last_at":1776401536490,"class_name":"EventLog"},
+"event_logs:collection:load_halted": {"key":"collection:load_halted","ct":3,"first_at":1776401536479,"last_at":1776401536486,"class_name":"EventLog"},
+"event_logs:sources:import_queue_empty": {"key":"sources:import_queue_empty","ct":1,"first_at":1776401536491,"last_at":1776401536491,"class_name":"EventLog","event_sources":{"process_source_import_queue":1}},
+"event_logs:blocks:cleaned": {"key":"blocks:cleaned","ct":1,"first_at":1776401536491,"last_at":1776401536491,"class_name":"EventLog"},
+"event_logs:connections:opened": {"key":"connections:opened","ct":2,"first_at":1776401537546,"last_at":1776401537729,"class_name":"EventLog"},
+"event_logs:milestones:first_achieved": {"key":"milestones:first_achieved","ct":1,"first_at":1776401537546,"last_at":1776401537546,"class_name":"EventLog","event_sources":{"onboarding_events":1}},
