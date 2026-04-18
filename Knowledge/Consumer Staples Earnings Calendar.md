@@ -9,83 +9,85 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-18 16:34 Eastern Daylight Time. Data from yfinance. Times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**._
+_Last updated: 2026-04-18 16:46 Eastern Daylight Time. Data from yfinance. Times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**._
 
 ## Upcoming
 
-| Next Earnings | Time | Ticker | Company | Last Earnings |
-| ------------- | ---- | ------ | ------- | ------------- |
-| 2026-04-22 | BMO | PM | Philip Morris International | 2026-02-06 |
-| 2026-04-23 | BMO | KDP | Keurig Dr Pepper | 2026-02-24 |
-| 2026-04-24 | BMO | PG | Procter & Gamble | 2026-01-22 |
-| 2026-04-28 | BMO | KO | Coca-Cola | 2026-02-10 |
-| 2026-04-28 | AMC | MDLZ | Mondelez International | 2026-02-03 |
-| 2026-04-28 | BMO | KMB | Kimberly-Clark | 2026-01-27 |
-| 2026-04-28 | BMO | SYY | Sysco | 2026-01-27 |
-| 2026-04-29 | BMO | BG | Bunge | 2026-02-04 |
-| 2026-04-30 | BMO | MO | Altria Group | 2026-01-29 |
-| 2026-04-30 | BMO | HSY | Hershey | 2026-02-05 |
-| 2026-04-30 | AMC | CLX | Clorox | 2026-02-03 |
-| 2026-05-01 | BMO | CL | Colgate-Palmolive | 2026-01-30 |
-| 2026-05-01 | BMO | EL | Estée Lauder | 2026-02-05 |
-| 2026-05-01 | BMO | CHD | Church & Dwight | 2026-01-30 |
-| 2026-05-04 | BMO | TSN | Tyson Foods | 2026-02-02 |
-| 2026-05-05 | BMO | ADM | Archer-Daniels-Midland | 2026-02-03 |
-| 2026-05-07 | AMC | MNST | Monster Beverage | 2026-02-26 |
-| 2026-05-11 | BMO | CELH | Celsius Holdings | 2026-02-26 |
-| 2026-05-20 | BMO | TGT | Target | 2026-03-03 |
-| 2026-05-21 | BMO | WMT | Walmart | 2026-02-19 |
-| 2026-05-28 | AMC | COST | Costco Wholesale | 2026-03-05 |
-| 2026-05-28 | BMO | HRL | Hormel Foods | 2026-02-26 |
-| 2026-06-02 | BMO | DG | Dollar General | 2026-03-12 |
-| 2026-06-03 | BMO | DLTR | Dollar Tree | 2026-03-16 |
-| 2026-06-04 | BMO | BF-B | Brown-Forman | 2026-03-04 |
-| 2026-06-09 | BMO | SJM | JM Smucker | 2026-02-26 |
-| 2026-06-22 | BMO | KR | Kroger | 2026-03-05 |
-| 2026-06-24 | BMO | GIS | General Mills | 2026-03-18 |
-| 2026-07-01 | AMC | STZ | Constellation Brands | 2026-04-08 |
-| 2026-07-02 | BMO | MKC | McCormick & Co | 2026-03-31 |
-| 2026-07-09 | BMO | CAG | ConAgra Brands | 2026-04-01 |
-| 2026-07-16 | BMO | PEP | PepsiCo | 2026-04-16 |
-| 2026-07-22 | BMO | LW | Lamb Weston | 2026-04-01 |
+_Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing._
+
+| Next Earnings | Time | Ticker | Company | Last Earnings | Audio | Transcript |
+| ------------- | ---- | ------ | ------- | ------------- | ----- | ---------- |
+| 2026-04-22 | BMO | PM | Philip Morris International | 2026-02-06 | ❌ | ❌ |
+| 2026-04-23 | BMO | KDP | Keurig Dr Pepper | 2026-02-24 | ❌ | ❌ |
+| 2026-04-24 | BMO | PG | Procter & Gamble | 2026-01-22 | ❌ | ❌ |
+| 2026-04-28 | BMO | KO | Coca-Cola | 2026-02-10 | ❌ | ❌ |
+| 2026-04-28 | AMC | MDLZ | Mondelez International | 2026-02-03 | ❌ | ❌ |
+| 2026-04-28 | BMO | KMB | Kimberly-Clark | 2026-01-27 | ❌ | ❌ |
+| 2026-04-28 | BMO | SYY | Sysco | 2026-01-27 | ❌ | ❌ |
+| 2026-04-29 | BMO | BG | Bunge | 2026-02-04 | ❌ | ❌ |
+| 2026-04-30 | BMO | MO | Altria Group | 2026-01-29 | ❌ | ❌ |
+| 2026-04-30 | BMO | HSY | Hershey | 2026-02-05 | ❌ | ❌ |
+| 2026-04-30 | AMC | CLX | Clorox | 2026-02-03 | ❌ | ❌ |
+| 2026-05-01 | BMO | CL | Colgate-Palmolive | 2026-01-30 | ❌ | ❌ |
+| 2026-05-01 | BMO | EL | Estée Lauder | 2026-02-05 | ❌ | ❌ |
+| 2026-05-01 | BMO | CHD | Church & Dwight | 2026-01-30 | ❌ | ❌ |
+| 2026-05-04 | BMO | TSN | Tyson Foods | 2026-02-02 | ❌ | ❌ |
+| 2026-05-05 | BMO | ADM | Archer-Daniels-Midland | 2026-02-03 | ❌ | ❌ |
+| 2026-05-07 | AMC | MNST | Monster Beverage | 2026-02-26 | ❌ | ❌ |
+| 2026-05-11 | BMO | CELH | Celsius Holdings | 2026-02-26 | ❌ | ❌ |
+| 2026-05-20 | BMO | TGT | Target | 2026-03-03 | ❌ | ❌ |
+| 2026-05-21 | BMO | WMT | Walmart | 2026-02-19 | ❌ | ❌ |
+| 2026-05-28 | AMC | COST | Costco Wholesale | 2026-03-05 | ❌ | ❌ |
+| 2026-05-28 | BMO | HRL | Hormel Foods | 2026-02-26 | ❌ | ❌ |
+| 2026-06-02 | BMO | DG | Dollar General | 2026-03-12 | ❌ | ❌ |
+| 2026-06-03 | BMO | DLTR | Dollar Tree | 2026-03-16 | ❌ | ❌ |
+| 2026-06-04 | BMO | BF-B | Brown-Forman | 2026-03-04 | ❌ | ❌ |
+| 2026-06-09 | BMO | SJM | JM Smucker | 2026-02-26 | ❌ | ❌ |
+| 2026-06-22 | BMO | KR | Kroger | 2026-03-05 | ❌ | ❌ |
+| 2026-06-24 | BMO | GIS | General Mills | 2026-03-18 | ❌ | ❌ |
+| 2026-07-01 | AMC | STZ | Constellation Brands | 2026-04-08 | ❌ | ❌ |
+| 2026-07-02 | BMO | MKC | McCormick & Co | 2026-03-31 | ❌ | ❌ |
+| 2026-07-09 | BMO | CAG | ConAgra Brands | 2026-04-01 | ❌ | ❌ |
+| 2026-07-16 | BMO | PEP | PepsiCo | 2026-04-16 | ❌ | ❌ |
+| 2026-07-22 | BMO | LW | Lamb Weston | 2026-04-01 | ❌ | ❌ |
 
 ## Most Recent Historical Releases
 
-| Last Earnings | Time | Ticker | Company |
-| ------------- | ---- | ------ | ------- |
-| 2026-04-16 | BMO | PEP | PepsiCo |
-| 2026-04-08 | AMC | STZ | Constellation Brands |
-| 2026-04-01 | BMO | CAG | ConAgra Brands |
-| 2026-04-01 | BMO | LW | Lamb Weston |
-| 2026-03-31 | BMO | MKC | McCormick & Co |
-| 2026-03-18 | BMO | GIS | General Mills |
-| 2026-03-16 | BMO | DLTR | Dollar Tree |
-| 2026-03-12 | BMO | DG | Dollar General |
-| 2026-03-05 | AMC | COST | Costco Wholesale |
-| 2026-03-05 | BMO | KR | Kroger |
-| 2026-03-04 | BMO | BF-B | Brown-Forman |
-| 2026-03-03 | BMO | TGT | Target |
-| 2026-02-26 | AMC | MNST | Monster Beverage |
-| 2026-02-26 | BMO | SJM | JM Smucker |
-| 2026-02-26 | BMO | HRL | Hormel Foods |
-| 2026-02-26 | BMO | CELH | Celsius Holdings |
-| 2026-02-24 | BMO | KDP | Keurig Dr Pepper |
-| 2026-02-19 | BMO | WMT | Walmart |
-| 2026-02-10 | BMO | KO | Coca-Cola |
-| 2026-02-06 | BMO | PM | Philip Morris International |
-| 2026-02-05 | BMO | HSY | Hershey |
-| 2026-02-05 | BMO | EL | Estée Lauder |
-| 2026-02-04 | BMO | BG | Bunge |
-| 2026-02-03 | AMC | MDLZ | Mondelez International |
-| 2026-02-03 | BMO | ADM | Archer-Daniels-Midland |
-| 2026-02-03 | AMC | CLX | Clorox |
-| 2026-02-02 | BMO | TSN | Tyson Foods |
-| 2026-01-30 | BMO | CL | Colgate-Palmolive |
-| 2026-01-30 | BMO | CHD | Church & Dwight |
-| 2026-01-29 | BMO | MO | Altria Group |
-| 2026-01-27 | BMO | KMB | Kimberly-Clark |
-| 2026-01-27 | BMO | SYY | Sysco |
-| 2026-01-22 | BMO | PG | Procter & Gamble |
+| Last Earnings | Time | Ticker | Company | Audio | Transcript |
+| ------------- | ---- | ------ | ------- | ----- | ---------- |
+| 2026-04-16 | BMO | PEP | PepsiCo | ❌ | ❌ |
+| 2026-04-08 | AMC | STZ | Constellation Brands | ❌ | ❌ |
+| 2026-04-01 | BMO | CAG | ConAgra Brands | ❌ | ❌ |
+| 2026-04-01 | BMO | LW | Lamb Weston | ❌ | ❌ |
+| 2026-03-31 | BMO | MKC | McCormick & Co | ❌ | ❌ |
+| 2026-03-18 | BMO | GIS | General Mills | ❌ | ❌ |
+| 2026-03-16 | BMO | DLTR | Dollar Tree | ❌ | ❌ |
+| 2026-03-12 | BMO | DG | Dollar General | ❌ | ❌ |
+| 2026-03-05 | AMC | COST | Costco Wholesale | ❌ | ❌ |
+| 2026-03-05 | BMO | KR | Kroger | ❌ | ❌ |
+| 2026-03-04 | BMO | BF-B | Brown-Forman | ❌ | ❌ |
+| 2026-03-03 | BMO | TGT | Target | ❌ | ❌ |
+| 2026-02-26 | AMC | MNST | Monster Beverage | ❌ | ❌ |
+| 2026-02-26 | BMO | SJM | JM Smucker | ❌ | ❌ |
+| 2026-02-26 | BMO | HRL | Hormel Foods | ❌ | ❌ |
+| 2026-02-26 | BMO | CELH | Celsius Holdings | ❌ | ❌ |
+| 2026-02-24 | BMO | KDP | Keurig Dr Pepper | ❌ | ❌ |
+| 2026-02-19 | BMO | WMT | Walmart | ❌ | ❌ |
+| 2026-02-10 | BMO | KO | Coca-Cola | ❌ | ❌ |
+| 2026-02-06 | BMO | PM | Philip Morris International | ❌ | ❌ |
+| 2026-02-05 | BMO | HSY | Hershey | ❌ | ❌ |
+| 2026-02-05 | BMO | EL | Estée Lauder | ❌ | ❌ |
+| 2026-02-04 | BMO | BG | Bunge | ❌ | ❌ |
+| 2026-02-03 | AMC | MDLZ | Mondelez International | ❌ | ❌ |
+| 2026-02-03 | BMO | ADM | Archer-Daniels-Midland | ❌ | ❌ |
+| 2026-02-03 | AMC | CLX | Clorox | ❌ | ❌ |
+| 2026-02-02 | BMO | TSN | Tyson Foods | ❌ | ❌ |
+| 2026-01-30 | BMO | CL | Colgate-Palmolive | ❌ | ❌ |
+| 2026-01-30 | BMO | CHD | Church & Dwight | ❌ | ❌ |
+| 2026-01-29 | BMO | MO | Altria Group | ❌ | ❌ |
+| 2026-01-27 | BMO | KMB | Kimberly-Clark | ❌ | ❌ |
+| 2026-01-27 | BMO | SYY | Sysco | ❌ | ❌ |
+| 2026-01-22 | BMO | PG | Procter & Gamble | ❌ | ❌ |
 
 ---
 
