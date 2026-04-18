@@ -78,5 +78,8 @@
     "template_preset": "xml_structured",
     "template_before": "<context>\n{{FILE_TREE}}",
     "template_after": "</context>"
+  },
+  "embedding_models": {
+    "default_model_key": "transformers#1776543350179"
   }
 }
