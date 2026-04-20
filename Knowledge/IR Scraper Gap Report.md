@@ -7,4 +7,4 @@ generated_on: 2026-04-20
 
 | Ticker | Last Earnings | Got Audio | Got PDFs | Note | IR Page |
 | ------ | ------------- | --------- | -------- | ---- | ------- |
-| WMT | 2026-02-19 | ❌ | ❌ | could not find any events/press candidates from https://www.stock.walmart.com (also tried corp homepage https://www.stoc | — |
+| WMT | 2026-02-19 | ❌ | ✅ | via generic_backend | — |
