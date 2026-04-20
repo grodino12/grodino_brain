@@ -9,12 +9,12 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-20 17:37 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-04-20 18:00 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript | IR Page |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- | ------- |
 | PM | Philip Morris International | 2026-02-06 (BMO) | 2026-04-22 (BMO) | ✅ | ✅ | [Link](https://www.pmi.com/investor-relations) |
-| KDP | Keurig Dr Pepper | 2026-02-24 (BMO) | 2026-04-23 (BMO) | ❌ | ❌ | — |
+| KDP | Keurig Dr Pepper | 2026-02-24 (BMO) | 2026-04-23 (BMO) | ❌ | ✅ | — |
 | PG | Procter & Gamble | 2026-01-22 (BMO) | 2026-04-24 (BMO) | ❌ | ❌ | — |
 | KO | Coca-Cola | 2026-02-10 (BMO) | 2026-04-28 (BMO) | ❌ | ✅ | — |
 | MDLZ | Mondelez International | 2026-02-03 (AMC) | 2026-04-28 (AMC) | ❌ | ❌ | — |
@@ -26,7 +26,7 @@ _Last updated: 2026-04-20 17:37 Eastern Daylight Time. Dates from yfinance; time
 | CLX | Clorox | 2026-02-03 (AMC) | 2026-04-30 (AMC) | ❌ | ❌ | — |
 | CL | Colgate-Palmolive | 2026-01-30 (BMO) | 2026-05-01 (BMO) | ❌ | ❌ | — |
 | EL | Estée Lauder | 2026-02-05 (BMO) | 2026-05-01 (BMO) | ❌ | ✅ | — |
-| CHD | Church & Dwight | 2026-01-30 (BMO) | 2026-05-01 (BMO) | ❌ | ❌ | — |
+| CHD | Church & Dwight | 2026-01-30 (BMO) | 2026-05-01 (BMO) | ❌ | ✅ | — |
 | TSN | Tyson Foods | 2026-02-02 (BMO) | 2026-05-04 (BMO) | ❌ | ❌ | — |
 | ADM | Archer-Daniels-Midland | 2026-02-03 (BMO) | 2026-05-05 (BMO) | ❌ | ❌ | — |
 | MNST | Monster Beverage | 2026-02-26 (AMC) | 2026-05-07 (AMC) | ❌ | ❌ | — |
@@ -43,8 +43,8 @@ _Last updated: 2026-04-20 17:37 Eastern Daylight Time. Dates from yfinance; time
 | GIS | General Mills | 2026-03-18 (BMO) | 2026-06-24 (BMO) | ❌ | ❌ | — |
 | STZ | Constellation Brands | 2026-04-08 (AMC) | 2026-07-01 (AMC) | ❌ | ✅ | — |
 | MKC | McCormick & Co | 2026-03-31 (BMO) | 2026-07-02 (BMO) | ❌ | ❌ | — |
-| CAG | ConAgra Brands | 2026-04-01 (BMO) | 2026-07-09 (BMO) | ❌ | ❌ | — |
-| PEP | PepsiCo | 2026-04-16 (BMO) | 2026-07-16 (BMO) | ❌ | ❌ | — |
+| CAG | ConAgra Brands | 2026-04-01 (BMO) | 2026-07-09 (BMO) | ❌ | ✅ | — |
+| PEP | PepsiCo | 2026-04-16 (BMO) | 2026-07-16 (BMO) | ❌ | ✅ | — |
 | LW | Lamb Weston | 2026-04-01 (BMO) | 2026-07-22 (BMO) | ❌ | ❌ | — |
 
 ---
