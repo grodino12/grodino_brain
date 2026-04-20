@@ -7,35 +7,35 @@ generated_on: 2026-04-20
 
 | Ticker | Last Earnings | Got Audio | Got PDFs | Note | IR Page |
 | ------ | ------------- | --------- | -------- | ---- | ------- |
-| PG | 2026-01-22 | ❌ | ❌ | IR_URLS empty | — |
-| COST | 2026-03-05 | ❌ | ❌ | IR_URLS empty | — |
-| WMT | 2026-02-19 | ❌ | ❌ | IR_URLS empty | — |
-| KO | 2026-02-10 | ❌ | ❌ | IR_URLS empty | — |
-| PEP | 2026-04-16 | ❌ | ❌ | IR_URLS empty | — |
-| MO | 2026-01-29 | ❌ | ❌ | IR_URLS empty | — |
-| MDLZ | 2026-02-03 | ❌ | ❌ | IR_URLS empty | — |
-| CL | 2026-01-30 | ❌ | ❌ | IR_URLS empty | — |
-| TGT | 2026-03-03 | ❌ | ❌ | IR_URLS empty | — |
-| KMB | 2026-01-27 | ❌ | ❌ | IR_URLS empty | — |
-| GIS | 2026-03-18 | ❌ | ❌ | IR_URLS empty | — |
-| SYY | 2026-01-27 | ❌ | ❌ | IR_URLS empty | — |
-| KR | 2026-03-05 | ❌ | ❌ | IR_URLS empty | — |
-| STZ | 2026-04-08 | ❌ | ❌ | IR_URLS empty | — |
-| HSY | 2026-02-05 | ❌ | ❌ | IR_URLS empty | — |
-| KDP | 2026-02-24 | ❌ | ❌ | IR_URLS empty | — |
-| MNST | 2026-02-26 | ❌ | ❌ | IR_URLS empty | — |
-| EL | 2026-02-05 | ❌ | ❌ | IR_URLS empty | — |
-| TSN | 2026-02-02 | ❌ | ❌ | IR_URLS empty | — |
-| ADM | 2026-02-03 | ❌ | ❌ | IR_URLS empty | — |
-| CHD | 2026-01-30 | ❌ | ❌ | IR_URLS empty | — |
-| CAG | 2026-04-01 | ❌ | ❌ | IR_URLS empty | — |
-| CLX | 2026-02-03 | ❌ | ❌ | IR_URLS empty | — |
-| SJM | 2026-02-26 | ❌ | ❌ | IR_URLS empty | — |
-| HRL | 2026-02-26 | ❌ | ❌ | IR_URLS empty | — |
-| MKC | 2026-03-31 | ❌ | ❌ | IR_URLS empty | — |
-| LW | 2026-04-01 | ❌ | ❌ | IR_URLS empty | — |
-| BG | 2026-02-04 | ❌ | ❌ | IR_URLS empty | — |
-| DLTR | 2026-03-16 | ❌ | ❌ | IR_URLS empty | — |
-| DG | 2026-03-12 | ❌ | ❌ | IR_URLS empty | — |
-| BF-B | 2026-03-04 | ❌ | ❌ | IR_URLS empty | — |
-| CELH | 2026-02-26 | ❌ | ❌ | IR_URLS empty | — |
+| PG | 2026-01-22 | ❌ | ❌ | no backend registered | — |
+| COST | 2026-03-05 | ❌ | ❌ | no backend registered | — |
+| WMT | 2026-02-19 | ❌ | ❌ | no backend registered | — |
+| KO | 2026-02-10 | ❌ | ❌ | no backend registered | — |
+| PEP | 2026-04-16 | ❌ | ❌ | no backend registered | — |
+| MO | 2026-01-29 | ❌ | ❌ | no backend registered | — |
+| MDLZ | 2026-02-03 | ❌ | ❌ | no backend registered | — |
+| CL | 2026-01-30 | ❌ | ❌ | no backend registered | — |
+| TGT | 2026-03-03 | ❌ | ❌ | no backend registered | — |
+| KMB | 2026-01-27 | ❌ | ❌ | no backend registered | — |
+| GIS | 2026-03-18 | ❌ | ❌ | no backend registered | — |
+| SYY | 2026-01-27 | ❌ | ❌ | no backend registered | — |
+| KR | 2026-03-05 | ❌ | ❌ | no backend registered | — |
+| STZ | 2026-04-08 | ❌ | ❌ | no backend registered | — |
+| HSY | 2026-02-05 | ❌ | ❌ | no backend registered | — |
+| KDP | 2026-02-24 | ❌ | ❌ | no backend registered | — |
+| MNST | 2026-02-26 | ❌ | ❌ | no backend registered | — |
+| EL | 2026-02-05 | ❌ | ❌ | no backend registered | — |
+| TSN | 2026-02-02 | ❌ | ❌ | no backend registered | — |
+| ADM | 2026-02-03 | ❌ | ❌ | no backend registered | — |
+| CHD | 2026-01-30 | ❌ | ❌ | no backend registered | — |
+| CAG | 2026-04-01 | ❌ | ❌ | no backend registered | — |
+| CLX | 2026-02-03 | ❌ | ❌ | no backend registered | — |
+| SJM | 2026-02-26 | ❌ | ❌ | no backend registered | — |
+| HRL | 2026-02-26 | ❌ | ❌ | no backend registered | — |
+| MKC | 2026-03-31 | ❌ | ❌ | no backend registered | — |
+| LW | 2026-04-01 | ❌ | ❌ | no backend registered | — |
+| BG | 2026-02-04 | ❌ | ❌ | no backend registered | — |
+| DLTR | 2026-03-16 | ❌ | ❌ | no backend registered | — |
+| DG | 2026-03-12 | ❌ | ❌ | no backend registered | — |
+| BF-B | 2026-03-04 | ❌ | ❌ | no backend registered | — |
+| CELH | 2026-02-26 | ❌ | ❌ | no backend registered | — |
