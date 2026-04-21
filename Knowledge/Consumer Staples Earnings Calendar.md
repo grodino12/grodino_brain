@@ -9,7 +9,7 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-21 10:37 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-04-21 14:32 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- |
@@ -18,7 +18,7 @@ _Last updated: 2026-04-21 10:37 Eastern Daylight Time. Dates from yfinance; time
 | PG | Procter & Gamble | 2026-01-22 (BMO) | 2026-04-24 (BMO) | ❌ | ✅ |
 | KO | Coca-Cola | 2026-02-10 (BMO) | 2026-04-28 (BMO) | ❌ | ✅ |
 | MDLZ | Mondelez International | 2026-02-03 (AMC) | 2026-04-28 (AMC) | ❌ | ✅ |
-| KMB | Kimberly-Clark | 2026-01-27 (BMO) | 2026-04-28 (BMO) | ❌ | ✅ |
+| KMB | Kimberly-Clark | 2026-01-27 (BMO) | 2026-04-28 (BMO) | ✅ | ✅ |
 | SYY | Sysco | 2026-01-27 (BMO) | 2026-04-28 (BMO) | ❌ | ❌ |
 | BG | Bunge | 2026-02-04 (BMO) | 2026-04-29 (BMO) | ❌ | ✅ |
 | MO | Altria Group | 2026-01-29 (BMO) | 2026-04-30 (BMO) | ❌ | ✅ |
