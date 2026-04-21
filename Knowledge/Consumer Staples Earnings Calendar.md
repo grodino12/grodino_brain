@@ -1,7 +1,7 @@
 ---
 type: earnings-calendar
 sector: Consumer Staples
-generated_on: 2026-04-20
+generated_on: 2026-04-21
 data_source: yfinance (Yahoo Finance)
 update_frequency: weekly
 tags: [earnings-calendar, consumer-staples, watchlist]
@@ -9,7 +9,7 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-20 21:42 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-04-21 09:11 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript | IR Page |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- | ------- |
@@ -22,7 +22,7 @@ _Last updated: 2026-04-20 21:42 Eastern Daylight Time. Dates from yfinance; time
 | SYY | Sysco | 2026-01-27 (BMO) | 2026-04-28 (BMO) | ❌ | ❌ | — |
 | BG | Bunge | 2026-02-04 (BMO) | 2026-04-29 (BMO) | ❌ | ✅ | — |
 | MO | Altria Group | 2026-01-29 (BMO) | 2026-04-30 (BMO) | ❌ | ❌ | — |
-| HSY | Hershey | 2026-02-05 (BMO) | 2026-04-30 (BMO) | ❌ | ❌ | — |
+| HSY | Hershey | 2026-02-05 (BMO) | 2026-04-30 (BMO) | ❌ | ✅ | — |
 | CLX | Clorox | 2026-02-03 (AMC) | 2026-04-30 (AMC) | ❌ | ✅ | — |
 | CL | Colgate-Palmolive | 2026-01-30 (BMO) | 2026-05-01 (BMO) | ❌ | ❌ | — |
 | EL | Estée Lauder | 2026-02-05 (BMO) | 2026-05-01 (BMO) | ❌ | ✅ | — |
@@ -42,10 +42,10 @@ _Last updated: 2026-04-20 21:42 Eastern Daylight Time. Dates from yfinance; time
 | KR | Kroger | 2026-03-05 (BMO) | 2026-06-22 (BMO) | ❌ | ✅ | — |
 | GIS | General Mills | 2026-03-18 (BMO) | 2026-06-24 (BMO) | ❌ | ✅ | — |
 | STZ | Constellation Brands | 2026-04-08 (AMC) | 2026-07-01 (AMC) | ❌ | ✅ | — |
-| MKC | McCormick & Co | 2026-03-31 (BMO) | 2026-07-02 (BMO) | ❌ | ❌ | — |
+| MKC | McCormick & Co | 2026-03-31 (BMO) | 2026-07-02 (BMO) | ❌ | ✅ | — |
 | CAG | ConAgra Brands | 2026-04-01 (BMO) | 2026-07-09 (BMO) | ❌ | ✅ | — |
 | PEP | PepsiCo | 2026-04-16 (BMO) | 2026-07-16 (BMO) | ❌ | ✅ | — |
-| LW | Lamb Weston | 2026-04-01 (BMO) | 2026-07-22 (BMO) | ❌ | ❌ | — |
+| LW | Lamb Weston | 2026-04-01 (BMO) | 2026-07-22 (BMO) | ❌ | ✅ | — |
 
 ---
 
