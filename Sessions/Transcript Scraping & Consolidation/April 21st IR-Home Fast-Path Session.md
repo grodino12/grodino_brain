@@ -1,8 +1,8 @@
 ---
 type: session-handoff
 date: 2026-04-21
-topic: IR-home fast-path + curl_cffi-on-Playwright-failure + playwright-stealth + direct-first walk — coverage 23/33 → 32/33 (97%)
-tags: [session, consumer-staples, earnings, scraper, generic-backend, stealth, dedup]
+topic: IR-home fast-path + stealth + direct-first walk + HTML-render + TSN fix — coverage 23/33 → 33/33 (100%) for PDFs
+tags: [session, consumer-staples, earnings, scraper, generic-backend, stealth, dedup, complete]
 ---
 
 # April 21st — IR-Home Fast-Path + Stealth Session
@@ -78,15 +78,30 @@ Added two rendering fallbacks via Playwright's `page.pdf()` (requires headless C
 
 DG now produces `DG_2026-03-12_press_release.pdf` (16 pages, 253KB, correctly titled "Dollar General Corporation Reports Strong Fourth Quarter and Fiscal Year 2025 Results").
 
-### 11. Presentation classifier tightened
+### 11. Presentation classifier tightened (anti-false-positive)
 
 `_collect_pdf_links` and `_extract_pdfs_from_html` previously accepted `"slides" in href` as a presentation match. DG's archive has 2016 Analyst Day slide decks at `.../1-MPilkington-Opening_Slides.pdf` etc. — these were getting mis-classified as the current quarter's presentation (the resulting PDF metadata showed creation-date 2016-03-23 and first-page title "Welcome - Mary Winn Pilkington, VP Investor Relations").
 
 Fix: require `"presentation"` or `"slide"` in link *text* only. URL-based `"slides"` match is gone. Verified no regressions — all previously-matched presentations (LW, MKC, KR, COST, KMB, MO, etc.) use explicit "PRESENTATION" or "Earnings Presentation" link text.
 
+### 12. TSN unlocked (100% coverage)
+
+TSN's IR lives at `ir.tyson.com` — note the different apex domain from `tysonfoods.com` (the corporate site). The generic `_try_common_ir_patterns` tries `investors.{host}`, `investor.{host}`, `ir.{host}` etc. — for `tysonfoods.com` it would try `ir.tysonfoods.com`, but that doesn't exist. So auto-discovery couldn't find `ir.tyson.com`.
+
+Fix: added `"TSN": "https://ir.tyson.com/presentations/default.aspx"` to `IR_URLS` in `consumer_staples_earnings.py`. With the hardcoded IR URL, the IR-home fast-path lands directly on TSN's presentations page, which has "PRESENTATION → Tyson-Foods-1Q26-Investor-Presentation.pdf" and "TRANSCRIPT → 02-04-2026_TsyonFoods_20260202_900AME.pdf" as direct `s203.q4cdn.com` links. Both download cleanly on the first pass.
+
+**Result: 33/33 tickers have PDF coverage.** Every ticker in the consumer-staples watchlist now has at least one artifact for the latest earnings quarter. Audio remains PM-only.
+
+### 13. Calendar UI + folder reorg
+
+- **URL column removed from the Consumer Staples Earnings Calendar.** The "IR Page" column was purely display and not used by any downstream tool. Removed the column, dropped the unused `_format_ir_link` helper. Calendar headers now have 6 columns: Ticker / Company / Last Earnings / Next Earnings / Audio / Transcript.
+- **Sessions folder reorganized by task theme.** All four prior handoffs moved to `Brain\Sessions\Transcript Scraping & Consolidation\`. Memory (`feedback_session_handoffs.md`) updated to reflect the new subfolder convention — future handoffs go under `Brain\Sessions\{Task-Theme}\{Month} {Ord} ... Session.md`. New workstreams get new sibling subfolders.
+
 ## Current state
 
-### Coverage: 32/33 (97%), +9 vs. session start
+### Coverage: 33/33 (100% PDFs), +10 vs. session start
+
+Every ticker in the consumer-staples watchlist now has at least one PDF artifact (press release, presentation, or transcript) on disk for the latest earnings release. Only audio is still missing broadly — see Open decisions.
 
 Tickers unlocked this session:
 
@@ -100,9 +115,8 @@ Tickers unlocked this session:
 | CL | 2026-Q4 | press_release | Hop-follow (Playwright-success path) |
 | KMB | 2026-Q4 | presentation + press_release | Stealth + direct-first walk |
 | MO | 2026-Q1 | press_release + presentation + transcript | Stealth + direct-first walk |
-| DG | 2025-Q4 | presentation | Direct-first walk |
-
-**Only TSN remains uncovered.** Its IR landing `https://www.tysonfoods.com/investors` renders with no earnings-classifiable PDFs or events-page links visible in stealth-Playwright; `_ranked_candidates` returns only the IR URL itself as a candidate, and direct extraction finds nothing. Needs a deeper probe — possibly the URL pattern heuristics miss something, or Tyson uses a non-standard IR CMS.
+| DG | 2025-Q4 | press_release | HTML-render fallback (page.pdf()) |
+| TSN | 2026-Q1 | presentation + transcript | Hardcoded IR_URLS (apex domain is `tyson.com`, not `tysonfoods.com`) |
 
 ### Infrastructure
 
@@ -113,11 +127,17 @@ Tickers unlocked this session:
 
 ## Open decisions / pending work
 
-1. **TSN unlock probe.** IR landing at `https://www.tysonfoods.com/investors` yields nothing. Try: search for a `/investors/news-releases/` or `/newsroom/` path; Tyson's press releases likely live in a separate subdomain or on the main `.com` newsroom. A Playwright-stealth walk of their newsroom with earnings keyword filter would likely find it.
-2. **Audio extraction for non-PM tickers.** Still deferred. Many Q4 Inc tenants (MNST, MO, COST) expose webcast links to `events.q4inc.com/attendee/*` or `edge.media-server.com/*`. MO's events-and-presentations page in particular shows Mediasite URLs that could be sniffed via the factored-out `pmi_backend._sniff_mediasite_hls` logic. Factor into `mediasite_vendor` backend.
-3. **PM audio still not transcribed.** `Brain\Sources\PM\2025-Q4\audio\PM_2026-02-06.m4a` — deferred again. Run `audio-transcription` skill standalone when ready.
-4. **HSY quarter labeling** is still date-based (`2026-02-05`). Its IR home has no URL with quarter info. Could fix by scanning page *text* for "Q4 2025" / "fourth quarter" patterns.
-5. **Refactor `pmi_backend` → `mediasite_vendor`.** With 4+ Mediasite-using tickers now identified (PM, MO likely, MNST likely), the `_sniff_mediasite_hls` logic should factor out of `pmi_backend` into a shared vendor module that plugs in between per-ticker backends and `generic_backend`.
+**This workstream (PDF scraping) is complete.** The next session should start a new workstream for audio/webcast extraction — likely under a new sibling folder `Brain\Sessions\Audio Vendor Modules\` (or similar). What remains:
+
+1. **Audio extraction is the next session's focus.** User confirmed audio is more broadly available on IR sites than PDFs are — every ticker has a webcast/replay link, but each webcast platform needs a bespoke sniffer. Suggested plan:
+   - **Step 1: Factor out `mediasite_vendor`.** Move `_sniff_mediasite_hls` out of `pmi_backend` into a shared module. Dispatch any ticker whose webcast URL matches `edge.media-server.com` or `mediasite` through it. Covers PM + likely MO, MNST, and others that use Mediasite. Stealth should let the form submit through without CAPTCHA for most; PM still needs `--semi-auto`.
+   - **Step 2: Build `q4_inc_attendee_vendor`.** Webcast URLs matching `events.q4inc.com/attendee/*` — used by COST, TSN, MNST (per the events page scan), probably more. Separate sniffer since it uses a different player protocol than Mediasite.
+   - **Step 3: Other vendors as found** — `webcasts.com/*`, `cc.webcasts.com/*`, `open-exchange.net/*`, etc.
+   - **Dispatch**: after PDF extraction succeeds, also sniff for a webcast URL on the same candidate page; dispatch to the matching vendor backend by URL pattern.
+2. **Audio gap-skip logic.** Current `build_gap_list` skips tickers with a transcript on disk. For audio-focused sessions, need a separate gap check: `has_audio = False AND webcast vendor available for this ticker`. Add `--audio-only` flag or a parallel audio queue.
+3. **PM audio transcription.** `Brain\Sources\PM\2025-Q4\audio\PM_2026-02-06.m4a` is on disk but no whisper transcript. Run `audio-transcription` skill standalone whenever — low priority, just cleanup.
+4. **HSY quarter labeling** is date-based (`2026-02-05`). Cosmetic — artifacts still found by the calendar's glob. Fix would be to scan page *text* for "Q4 2025" / "fourth quarter" patterns.
+5. **CONFLICT-file dedup heuristic.** Current rule: keep larger file. Logged here for future consideration — might be worth a diff-based check (compare titles/dates) instead of raw size when sizes are within 20% of each other. Not causing issues right now.
 
 ## Key file paths
 
@@ -131,6 +151,8 @@ Tickers unlocked this session:
 | Gap report | `C:\Users\rodin\Desktop\Brain\Knowledge\IR Scraper Gap Report.md` |
 | Per-ticker sources | `C:\Users\rodin\Desktop\Brain\Sources\{TICKER}\{QUARTER}\{audio\|presentation\|transcripts}\` |
 | Scheduled task name | `Consumer Staples Earnings Weekly` |
+| This session's handoff | `C:\Users\rodin\Desktop\Brain\Sessions\Transcript Scraping & Consolidation\April 21st IR-Home Fast-Path Session.md` |
+| Prior handoffs in this task | `Brain\Sessions\Transcript Scraping & Consolidation\April 18th...`, `April 20th IR Scraper v1...`, `April 20th IR Scraper Generic Backend...` |
 
 ---
 
