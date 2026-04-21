@@ -7,4 +7,4 @@ generated_on: 2026-04-21
 
 | Ticker | Last Earnings | Got Audio | Got PDFs | Note | IR Page |
 | ------ | ------------- | --------- | -------- | ---- | ------- |
-| MNST | 2026-02-26 | ❌ | ✅ | via generic_backend (IR-home direct) | — |
+| COST | 2026-03-05 | ❌ | ✅ | via generic_backend (candidate direct) | — |
