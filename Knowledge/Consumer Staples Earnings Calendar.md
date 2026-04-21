@@ -9,7 +9,7 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-21 15:57 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-04-21 16:03 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- |
@@ -45,7 +45,7 @@ _Last updated: 2026-04-21 15:57 Eastern Daylight Time. Dates from yfinance; time
 | MKC | McCormick & Co | 2026-03-31 (BMO) | 2026-07-02 (BMO) | ❌ | ✅ |
 | CAG | ConAgra Brands | 2026-04-01 (BMO) | 2026-07-09 (BMO) | ❌ | ✅ |
 | PEP | PepsiCo | 2026-04-16 (BMO) | 2026-07-16 (BMO) | ❌ | ✅ |
-| LW | Lamb Weston | 2026-04-01 (BMO) | 2026-07-22 (BMO) | ❌ | ✅ |
+| LW | Lamb Weston | 2026-04-01 (BMO) | 2026-07-22 (BMO) | ✅ | ✅ |
 
 ---
 
