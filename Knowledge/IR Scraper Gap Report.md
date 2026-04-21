@@ -7,4 +7,4 @@ generated_on: 2026-04-21
 
 | Ticker | Last Earnings | Got Audio | Got PDFs | Note | IR Page |
 | ------ | ------------- | --------- | -------- | ---- | ------- |
-| WMT | 2026-02-19 | ✅ | ✅ | via generic_backend (candidate direct) | [Link](https://corporate.walmart.com/investors/events) |
+| LW | 2026-04-01 | ❌ | ✅ | via generic_backend (IR-home direct) | — |
