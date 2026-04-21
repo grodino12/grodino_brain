@@ -9,7 +9,7 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-21 09:11 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-04-21 09:28 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript | IR Page |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- | ------- |
@@ -29,7 +29,7 @@ _Last updated: 2026-04-21 09:11 Eastern Daylight Time. Dates from yfinance; time
 | CHD | Church & Dwight | 2026-01-30 (BMO) | 2026-05-01 (BMO) | ❌ | ✅ | — |
 | TSN | Tyson Foods | 2026-02-02 (BMO) | 2026-05-04 (BMO) | ❌ | ❌ | — |
 | ADM | Archer-Daniels-Midland | 2026-02-03 (BMO) | 2026-05-05 (BMO) | ❌ | ✅ | — |
-| MNST | Monster Beverage | 2026-02-26 (AMC) | 2026-05-07 (AMC) | ❌ | ❌ | — |
+| MNST | Monster Beverage | 2026-02-26 (AMC) | 2026-05-07 (AMC) | ❌ | ✅ | — |
 | CELH | Celsius Holdings | 2026-02-26 (BMO) | 2026-05-11 (BMO) | ❌ | ✅ | — |
 | TGT | Target | 2026-03-03 (BMO) | 2026-05-20 (BMO) | ❌ | ✅ | — |
 | WMT | Walmart | 2026-02-19 (BMO) | 2026-05-21 (BMO) | ❌ | ✅ | — |
