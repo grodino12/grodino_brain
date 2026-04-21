@@ -1,122 +1,107 @@
 ---
 type: session-handoff
 date: 2026-04-21
-topic: IR-home fast-path + curl_cffi-on-Playwright-failure — coverage 23/33 → 26/33 (79%)
-tags: [session, consumer-staples, earnings, scraper, generic-backend, ir-home-pattern]
+topic: IR-home fast-path + curl_cffi-on-Playwright-failure + playwright-stealth + direct-first walk — coverage 23/33 → 32/33 (97%)
+tags: [session, consumer-staples, earnings, scraper, generic-backend, stealth, dedup]
 ---
 
-# April 21st — IR-Home Fast-Path Session
+# April 21st — IR-Home Fast-Path + Stealth Session
 
-Picks up where `April 20th IR Scraper Generic Backend Session.md` left off (23/33 tickers covered, 10 uncovered).
+Picks up where `April 20th IR Scraper Generic Backend Session.md` left off (23/33, 10 uncovered).
 
 ## Starting state
 
 Per the 4/20 handoff:
-- 23/33 tickers (70%) covered via `pmi_backend` (PM) + `generic_backend` (everything else).
-- 10 uncovered, split into two buckets:
-  - **Stage 2 "no earnings link matched on candidate pages" (5)**: CL, KMB, MNST, MKC, LW
-  - **Stage 3 "candidates resolved to event URLs but no PDFs classified" (5)**: COST, MO, HSY, TSN, DG
-- `generic_backend` had a 7-step pipeline with Playwright + curl_cffi fallback for Akamai-blocked static-file hosts, but the curl_cffi fallback only fired when Playwright *successfully* rendered a page with empty PDFs — not when `page.goto()` itself failed.
+- 23/33 tickers (70%) covered.
+- 10 uncovered: CL, KMB, MNST, MKC, LW (Stage 2); COST, MO, HSY, TSN, DG (Stage 3).
+- `generic_backend` curl_cffi fallback only ran when Playwright *successfully rendered* an empty page — not on `page.goto()` failure.
+- No stealth on Playwright; Akamai + Cloudflare both problematic.
 
 ## Work done this session
 
-### 1. LW's IR-home pattern — the trigger for this session
+### 1. IR-home fast-path in `generic_backend`
 
-User pointed at `https://investors.lambweston.com/`. Probing the HTML showed LW's Drupal-based IR landing exposes the latest quarter's artifacts directly on the home page as `/static-files/{uuid}` links:
-- `[Earnings Presentation] -> /static-files/a8a54519-...`
-- `[Press Release] -> /static-files/9f03ff19-...`
-- `[Financial Schedules] -> /static-files/ff3d9c28-...` (not classifier-matched; supplementary)
+Added pre-candidate-walk step: `_try_extract_from_event_url(ir)` directly on the resolved IR home URL. Returns early when the IR landing exposes the latest quarter's artifacts as `/static-files/{uuid}` or `.pdf` links (LW's Drupal pattern; also MKC, HSY).
 
-User asked to generalize this pattern for all remaining-uncovered tickers: "check for it in this location for all tickers where we are still missing transcripts". MKC and HSY turned out to use the same pattern.
+### 2. curl_cffi fallback when Playwright `page.goto()` raises
 
-### 2. Added IR-home fast-path to `generic_backend`
+Extended the `except Exception as e` block: if the URL responds 200 via curl_cffi Chrome131, parse HTML and run `_extract_pdfs_from_html` → download & return. Akamai `ERR_HTTP2_PROTOCOL_ERROR` no longer terminates extraction.
 
-Inserted a pre-candidate-walk step: call `_try_extract_from_event_url(ir)` directly on the resolved IR home URL before falling through to the ranked sub-navigation candidate walk. If the IR home has classifiable PDFs, we return in one hop with `note="via generic_backend (IR-home direct)"`.
+### 3. `_extract_pdfs_from_html` now returns `(pdfs, hrefs)`
 
-Previously `ir` was appended to `candidates` at the end and only reached as a last resort. The fast-path inverts that priority because CMS widgets on IR home pages auto-update to point at the latest quarter — when present, they're authoritative.
+Tuple return. All 3 callsites updated. The hrefs list feeds quarter derivation and curl_cffi hop-follow.
 
-Also added a `continue` guard in the candidate walk so `ir` isn't retried after the fast-path.
+### 4. Quarter derivation from page links (`_derive_quarter_from_links`)
 
-### 3. Curl_cffi fallback when Playwright `page.goto()` fails
+Problem: LW's IR home has no quarter in its URL, so `parse_quarter_label` fell back to `target_date`, putting artifacts in `Brain/Sources/LW/2026-04-01/` instead of `2026-Q3/`. New helper scans all hrefs for the first one that parses as `YYYY-QN`. LW's IR home links out to `/events/event-details/fiscal-2026-third-quarter-earnings-call` → `2026-Q3`. Integrated in all three code paths (Playwright-failure curl_cffi branch, Playwright-success fallback, end-of-function re-derivation).
 
-The initial LW test revealed `ERR_HTTP2_PROTOCOL_ERROR` on `https://investors.lambweston.com/` — same Akamai HTTP/2 issue as `gcs-web.com`. The existing curl_cffi fallback only triggered after a successful `page.goto()` returned empty PDFs — not on navigation failure.
+### 5. curl_cffi-based hop-follow (`_find_hop_url_from_hrefs`)
 
-Extended the `except Exception as e` block in `_try_extract_from_event_url`:
-- If the event URL responds 200 via curl_cffi with Chrome131 impersonation, parse its HTML and run `_extract_pdfs_from_html`.
-- On non-empty result: download and return.
+Module-level constants `_HOP_DETAIL_PATTERNS`, `_HOP_ANNOUNCE_PATTERNS`, `_HOP_EARNINGS_KWS` plus URL-only hop-match helper. Used in the Playwright-failure branch after direct-PDF extraction returns empty: scan collected hrefs for press-release-detail URLs matching earnings keywords (skipping announcement posts), fetch the hop target via curl_cffi, classify PDFs there.
 
-This unlocked LW (presentation + press_release) on the next run.
+### 6. Sources folder dedup
 
-### 4. `_extract_pdfs_from_html` now returns `(pdfs, all_hrefs)`
+Audited all 33 ticker folders; 13 had 2+ event folders from repeated runs during development. 3 patterns:
+- **Exact duplicates** (GIS, DLTR): identical hashes in both folders → delete non-canonical side.
+- **Complementary artifacts** (CELH, HRL, KR, PEP, SJM, STZ): each folder had a unique subset → merged into one folder.
+- **Same-name-different-content CONFLICTs** (CHD, KDP, KO, SJM): kept the **larger** file (smaller = failed/stub re-downloads).
 
-Refactored from `dict[str, str]` to `tuple[dict[str, str], list[str]]`. All 3 callsites updated to unpack. The hrefs list feeds two new capabilities: quarter derivation and curl_cffi-based hop-follow.
+Canonical folder preference: `YYYY-QN` if present, else the date-labeled folder. Result: **12 files deleted, 10 moved, 12 folders removed.** HRL's `2026-Q1/press_release.pdf` turned out to be a misnamed copy of the transcript (same sha1) — correctly replaced with the real 357KB press_release.
 
-### 5. Quarter-label derivation from page links (`_derive_quarter_from_links`)
+### 7. MNST classifier fix (`/node/*/pdf` Drupal pattern)
 
-Problem after step 2-3: LW's fast-path used the IR home URL for quarter parsing — `cse.parse_quarter_label("https://investors.lambweston.com/", "2026-04-01")` returns the date fallback `"2026-04-01"` because the URL has no quarter info. Artifacts landed in `Brain/Sources/LW/2026-04-01/` instead of `Brain/Sources/LW/2026-Q3/`.
+MNST's press release detail page links to the PDF as `/node/17871/pdf` — Drupal's dynamic PDF renderer. The classifier's PDF-URL check required `.pdf` substring or `/static-files/`; extended to also accept `h.endswith("/pdf")`. Unlocked MNST: press release downloads cleanly via the curl_cffi hop-follow path.
 
-Added `_derive_quarter_from_links(hrefs, target_date)`: scans a list of hrefs and returns the first one that `parse_quarter_label` can parse as `YYYY-QN`. LW's IR home links out to `/events/event-details/fiscal-2026-third-quarter-earnings-call` — that parses cleanly as `2026-Q3`.
+### 8. Playwright-stealth integration
 
-Integrated into:
-- The Playwright-failure curl_cffi branch (uses hrefs returned by `_extract_pdfs_from_html`)
-- The end-of-function quarter re-derivation step (falls back to link scan when event_detail_url yields the date fallback)
-- The Playwright-success path (collects hrefs via `page.eval_on_selector_all` before the fallback ladder so HSY-style direct-classify paths also benefit)
+Installed `playwright-stealth` (2.0.3). Wrapped `sync_playwright()` in `Stealth().use_sync(...)`. Every page now gets stealth init-scripts injected — `navigator.webdriver`, plugin fingerprints, WebGL vendor, sec-ch-ua headers all match real Chrome. Bypasses Cloudflare's passive bot-check that was blocking COST.
 
-Verified LW → `2026-Q3`, MKC → `2026-Q1`. HSY stays at `2026-02-05` because its IR home doesn't expose any link with quarter info — not a regression, just a gap.
+**Note on audio / CAPTCHA:** stealth does NOT solve visible reCAPTCHA v2 checkboxes (PM's Mediasite). It raises the reCAPTCHA score enough that many sites never challenge, and bypasses Cloudflare's passive fingerprinting, but a visible "I'm not a robot" widget still needs `--semi-auto` or a paid solver.
 
-### 6. Curl_cffi hop-follow (new)
+### 9. Direct-first candidate walk
 
-Added module-level constants `_HOP_DETAIL_PATTERNS`, `_HOP_ANNOUNCE_PATTERNS`, `_HOP_EARNINGS_KWS` plus helper `_find_hop_url_from_hrefs(hrefs, current_url)` — URL-only version of the existing Playwright hop-follow.
+Before this change: the walk resolved each candidate to a sub-event URL via `_find_earnings_event_link` (drilling into the first earnings-keyword link on the listing). For COST, the top link was "Q3 2026 Earnings Results" — an *upcoming* placeholder event with no PDFs. Meanwhile Q2-FY26's PDF was linked directly on the listing page under the Q2 row: "PRESENTATION → `s201.q4cdn.com/.../Q2-FY-26-Earnings-Supplement.pdf`".
 
-Wired into the Playwright-failure curl_cffi branch: after direct-PDF fallback returns empty, scan the collected hrefs for a press-release-detail URL matching earnings keywords (skipping announcement posts). If found, fetch it via curl_cffi and classify PDFs on the hop target. Previously hop-follow only worked in the Playwright-success path.
+New two-pass per candidate:
+- **Pass (a)**: `_try_extract_from_event_url(cand)` on the candidate URL directly. Listings with inline PDFs return here.
+- **Pass (b)**: if (a) empty and candidate isn't already an event URL, drill into sub-event via `_find_earnings_event_link`.
 
-Tested on MNST: the hop-follow correctly identified `https://investors.monsterbevcorp.com/news-releases/news-release-details/monster-beverage-reports-2025-fourth-quarter-and-full-year` from the IR home. But the hop target's own page then didn't yield classifiable PDFs — MNST's news-release-details page doesn't expose `/static-files/` or `.pdf` links the classifier recognizes. Still uncovered; needs a site-specific probe.
-
-### 7. SKILL.md updated
-
-Documented in §Pipeline:
-- Step 4: IR-home fast-path (before candidate walk)
-- Step 6's Playwright-failure curl_cffi fallback
-- Step 8: new quarter-derivation step using `_derive_quarter_from_links`
+Unlocked: COST, CL, KMB, MO all on the same run.
 
 ## Current state
 
-### Coverage: 26/33 (79%), +3 vs. session start
+### Coverage: 32/33 (97%), +9 vs. session start
 
-New artifacts this session:
+Tickers unlocked this session:
 
-| Ticker | Folder | Artifacts |
-|---|---|---|
-| LW | 2026-Q3 | presentation + press_release |
-| MKC | 2026-Q1 | presentation + transcript |
-| HSY | 2026-02-05 | press_release |
+| Ticker | Folder | Artifacts | Unlock path |
+|---|---|---|---|
+| LW | 2026-Q3 | presentation + press_release | IR-home fast-path + curl_cffi on Playwright failure |
+| MKC | 2026-Q1 | presentation + transcript | Same |
+| HSY | 2026-02-05 | press_release | IR-home fast-path (Playwright path) |
+| MNST | 2026-Q4 | press_release | Hop-follow + `/node/*/pdf` classifier |
+| COST | 2026-Q3 | presentation | Stealth + direct-first walk |
+| CL | 2026-Q4 | press_release | Hop-follow (Playwright-success path) |
+| KMB | 2026-Q4 | presentation + press_release | Stealth + direct-first walk |
+| MO | 2026-Q1 | press_release + presentation + transcript | Stealth + direct-first walk |
+| DG | 2025-Q4 | presentation | Direct-first walk |
 
-Existing coverage unchanged (23 prior tickers).
-
-### 7 tickers still uncovered
-
-- **CL** — Playwright ERR_HTTP2. IR home has `/static-files/` links but they're Annual Report / Proxy Statement / SEC filings, not labeled as earnings artifacts. No hop-follow target on the home page.
-- **KMB** — Playwright ERR_HTTP2. IR home has `/events/event-details/first-quarter-2026-earnings` URL that WOULD match `_url_is_earnings_event` if we could make it a candidate — but `_ranked_candidates` returns empty after the Playwright failure, so that URL never enters the walk. Needs curl_cffi-based candidate enumeration.
-- **MNST** — Curl_cffi hop-follow works; detail page at `/news-releases/news-release-details/...` doesn't yield classifiable PDFs. Needs site-specific probe of the detail page structure (what PDF URL pattern does it use?).
-- **COST** — Q4 Inc tenant behind Cloudflare bot protection; needs JSON API reverse-engineering (same as prior session).
-- **MO** — Hop-follow keeps latching onto "Altria Declares Regular Quarterly Dividend" because that contains "quarterly" in the text. Needs tighter earnings vs. dividend discrimination or pagination/scroll into the archive.
-- **TSN** — Minimalist 55KB IR home, zero earnings-ish links visible. Heavy JS SPA; curl_cffi doesn't see the real content.
-- **DG** — 2KB IR home HTML (likely a redirect or shell). Needs direct archive URL or Playwright-with-long-wait for SPA hydration.
+**Only TSN remains uncovered.** Its IR landing `https://www.tysonfoods.com/investors` renders with no earnings-classifiable PDFs or events-page links visible in stealth-Playwright; `_ranked_candidates` returns only the IR URL itself as a candidate, and direct extraction finds nothing. Needs a deeper probe — possibly the URL pattern heuristics miss something, or Tyson uses a non-standard IR CMS.
 
 ### Infrastructure
 
-- **SKILL.md** updated with new pipeline steps.
-- **`scrape.py`** ~1120 lines now. Key new helpers: `_derive_quarter_from_links`, `_find_hop_url_from_hrefs`, plus module-level constants `_HOP_DETAIL_PATTERNS`, `_HOP_ANNOUNCE_PATTERNS`, `_HOP_EARNINGS_KWS`.
-- `_extract_pdfs_from_html` now returns `tuple[dict, list]` — breaking change propagated to all 3 callsites.
+- **SKILL.md** updated: new pipeline steps (fast-path, curl_cffi-on-failure, hop-follow, direct-first walk), stealth documented under Known Quirks, prerequisites list now includes `playwright-stealth`.
+- **`scrape.py`** ~1180 lines. New helpers: `_derive_quarter_from_links`, `_find_hop_url_from_hrefs`. Module-level constants for hop-follow: `_HOP_DETAIL_PATTERNS`, `_HOP_ANNOUNCE_PATTERNS`, `_HOP_EARNINGS_KWS`. `_extract_pdfs_from_html` now returns `tuple[dict, list]`.
+- **Sources tree:** clean, all tickers under `{TICKER}/{QUARTER}/{audio|presentation|transcripts}/` except TSN (empty) and HSY (`2026-02-05` date folder; no quarter-bearing links on its IR home to derive).
+- **Calendar refresh:** now shows `transcripts: 32/33`.
 
 ## Open decisions / pending work
 
-1. **Curl_cffi-based candidate enumeration.** When Playwright `page.goto(ir)` fails, `_ranked_candidates(page, ...)` returns [] because the page never loaded. The IR URL gets appended as sole candidate. For KMB (home links `/events/event-details/first-quarter-2026-earnings`) and MNST (home links `/news-releases/news-release-details/...`), enumerating candidates from curl_cffi HTML would give the walk real work to do. Highest-leverage next fix — likely unlocks KMB, MNST, possibly CL.
-2. **MNST news-release-details PDF classifier.** The hop-follow reaches the right page but finds nothing classifiable. Need to `curl_cffi` that URL manually and see what PDF link pattern Monster uses — likely `/static-files/` on the same domain, but the classifier may need a tweak.
-3. **MO earnings-vs-dividend discrimination.** "Altria Declares Regular Quarterly Dividend" contains "quarterly" so passes the earnings keyword filter, and the announcement filter doesn't catch "Declares". Options: add `declares-regular` / `dividend` to the ANNOUNCE list (risky — could exclude real dividend-related earnings releases); or require the title contain "results" / "earnings" / "reports results" (tighter).
-4. **PM audio still not transcribed.** `Brain\Sources\PM\2025-Q4\audio\PM_2026-02-06.m4a` exists — whisper transcript chain deferred again.
-5. **No per-vendor modules built yet.** Still just `pmi_backend`. MKC + LW's "IR-home direct artifacts" pattern now suggests a possible shared "Drupal-IR-home" vendor module, but it's really just exercising the generic path — no code to factor out.
-6. **HSY quarter labeling is date-based** (`2026-02-05`). Fine functionally (artifacts still discovered by the calendar's glob), cosmetically inconsistent. Fix would be: scan page *text* (not just URLs) for `Q4 2025` / `fourth quarter 2025` patterns.
+1. **TSN unlock probe.** IR landing at `https://www.tysonfoods.com/investors` yields nothing. Try: search for a `/investors/news-releases/` or `/newsroom/` path; Tyson's press releases likely live in a separate subdomain or on the main `.com` newsroom. A Playwright-stealth walk of their newsroom with earnings keyword filter would likely find it.
+2. **Audio extraction for non-PM tickers.** Still deferred. Many Q4 Inc tenants (MNST, MO, COST) expose webcast links to `events.q4inc.com/attendee/*` or `edge.media-server.com/*`. MO's events-and-presentations page in particular shows Mediasite URLs that could be sniffed via the factored-out `pmi_backend._sniff_mediasite_hls` logic. Factor into `mediasite_vendor` backend.
+3. **PM audio still not transcribed.** `Brain\Sources\PM\2025-Q4\audio\PM_2026-02-06.m4a` — deferred again. Run `audio-transcription` skill standalone when ready.
+4. **HSY quarter labeling** is still date-based (`2026-02-05`). Its IR home has no URL with quarter info. Could fix by scanning page *text* for "Q4 2025" / "fourth quarter" patterns.
+5. **Refactor `pmi_backend` → `mediasite_vendor`.** With 4+ Mediasite-using tickers now identified (PM, MO likely, MNST likely), the `_sniff_mediasite_hls` logic should factor out of `pmi_backend` into a shared vendor module that plugs in between per-ticker backends and `generic_backend`.
 
 ## Key file paths
 
@@ -129,7 +114,6 @@ Existing coverage unchanged (23 prior tickers).
 | Calendar output | `C:\Users\rodin\Desktop\Brain\Knowledge\Consumer Staples Earnings Calendar.md` |
 | Gap report | `C:\Users\rodin\Desktop\Brain\Knowledge\IR Scraper Gap Report.md` |
 | Per-ticker sources | `C:\Users\rodin\Desktop\Brain\Sources\{TICKER}\{QUARTER}\{audio\|presentation\|transcripts}\` |
-| New artifacts this session | LW/2026-Q3, MKC/2026-Q1, HSY/2026-02-05 |
 | Scheduled task name | `Consumer Staples Earnings Weekly` |
 
 ---
