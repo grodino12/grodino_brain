@@ -284,3 +284,32 @@ Call log:
      [survey] candidate: https://investors.brown-forman.com/investors/news-releases
      [survey]   sub-event: https://investors.brown-forman.com/investors/news-releases/#earnings
      [survey] candidate: https://investors.brown-forman.com/investors/events-presentations/default.aspx
+     [survey]   sub-event: https://s28.q4cdn.com/657950427/files/doc_financials/2026/q2/F262Q-Earnings-Release-Final.pdf
+     [survey]   sub-event goto failed: Page.goto: Download is starting
+Call log:
+  - navigating to "https://s28.q4cdn.com/657950427/files/doc_financials/2026/q2/F262Q-Earnings-Release-Final.pdf", waiting until "domcontentloaded"
+
+     [survey] candidate: https://investors.brown-forman.com/investors/financial-reports-filings/sec-filings/default.aspx
+     [survey]   sub-event: https://investors.brown-forman.com/investors/financial-reports-filings/sec-filings/default.aspx#
+     → 39 hit(s); vendors: ['(unknown)', 'direct_audio', 'mediasite', 'west_intrado']
+
+   [HRL]
+     [survey] start=https://www.hormelfoods.com
+     [survey] IR: https://investor.hormelfoods.com/ir-home/default.aspx
+     [survey] candidate: https://investor.hormelfoods.com/news-and-events/events-and-presentations/default.aspx
+     [survey]   sub-event: https://investor.hormelfoods.com/financials/quarterly-results/default.aspx
+     [survey] candidate: https://investor.hormelfoods.com/financials/sec-filings/default.aspx
+     → 15 hit(s); vendors: ['(unknown)', 'q4_inc_attendee', 'west_intrado']
+
+   [LW]
+     [survey] start=https://www.lambweston.com
+     [survey] IR: https://investors.lambweston.com/
+     [survey] candidate: https://investors.lambweston.com/news-events/events-and-presentations
+     [survey]   sub-event: https://investors.lambweston.com/events/event-details/fiscal-2026-third-quarter-earnings-call
+     [survey] candidate: https://investors.lambweston.com/news-events/news-releases
+     [survey]   sub-event: https://investors.lambweston.com/news-releases/news-release-details/lamb-weston-reports-third-quarter-fiscal-2026-results-increases
+     [survey] candidate: https://investors.lambweston.com/news-releases/news-release-details/lamb-weston-announce-fiscal-year-2026-third-quarter-financial
+     → 5 hit(s); vendors: ['west_intrado']
+
+Survey written to: C:\Users\rodin\Desktop\Brain\Knowledge\IR Webcast Vendor Survey.md
+Coverage: 28/32 tickers had ≥1 webcast URL.
