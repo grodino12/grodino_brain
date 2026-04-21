@@ -4,7 +4,7 @@ date: 2026-04-21
 topic: IR-home fast-path + stealth + direct-first walk + HTML-render + TSN fix — coverage 23/33 → 33/33 (100%) for PDFs
 tags: [session, consumer-staples, earnings, scraper, generic-backend, stealth, dedup, complete]
 ---
-
+	
 # April 21st — IR-Home Fast-Path + Stealth Session
 
 Picks up where `April 20th IR Scraper Generic Backend Session.md` left off (23/33, 10 uncovered).
