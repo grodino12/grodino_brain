@@ -1,0 +1,231 @@
+[1/4] Building gap list...
+   29 ticker(s) with gaps.
+     PG     last=2026-01-22  audio=False  transcript=True  ir=(empty)
+     COST   last=2026-03-05  audio=False  transcript=False  ir=(empty)
+     KO     last=2026-02-10  audio=False  transcript=True  ir=(empty)
+     PEP    last=2026-04-16  audio=False  transcript=True  ir=(empty)
+     MO     last=2026-01-29  audio=False  transcript=True  ir=(empty)
+     MDLZ   last=2026-02-03  audio=False  transcript=True  ir=(empty)
+     CL     last=2026-01-30  audio=False  transcript=True  ir=(empty)
+     TGT    last=2026-03-03  audio=False  transcript=True  ir=(empty)
+     GIS    last=2026-03-18  audio=False  transcript=True  ir=(empty)
+     SYY    last=2026-01-27  audio=False  transcript=False  ir=(empty)
+     KR     last=2026-03-05  audio=False  transcript=True  ir=(empty)
+     STZ    last=2026-04-08  audio=False  transcript=True  ir=(empty)
+     HSY    last=2026-02-05  audio=False  transcript=True  ir=(empty)
+     KDP    last=2026-02-24  audio=False  transcript=True  ir=(empty)
+     MNST   last=2026-02-26  audio=False  transcript=True  ir=✓
+     EL     last=2026-02-05  audio=False  transcript=True  ir=(empty)
+     TSN    last=2026-02-02  audio=False  transcript=True  ir=✓
+     ADM    last=2026-02-03  audio=False  transcript=True  ir=(empty)
+     CHD    last=2026-01-30  audio=False  transcript=True  ir=(empty)
+     CAG    last=2026-04-01  audio=False  transcript=True  ir=(empty)
+     CLX    last=2026-02-03  audio=False  transcript=True  ir=(empty)
+     SJM    last=2026-02-26  audio=False  transcript=True  ir=(empty)
+     HRL    last=2026-02-26  audio=False  transcript=True  ir=(empty)
+     MKC    last=2026-03-31  audio=False  transcript=True  ir=✓
+     BG     last=2026-02-04  audio=False  transcript=True  ir=(empty)
+     DLTR   last=2026-03-16  audio=False  transcript=True  ir=(empty)
+     DG     last=2026-03-12  audio=False  transcript=True  ir=✓
+     BF-B   last=2026-03-04  audio=False  transcript=True  ir=(empty)
+     CELH   last=2026-02-26  audio=False  transcript=True  ir=(empty)
+
+[2/4] Scraping...
+
+   [PG] target=2026-01-22
+     [generic] start=https://www.pginvestor.com
+     [generic] candidate pages: 7
+        · https://www.pginvestor.com/news/default.aspx
+        · https://www.pginvestor.com/events-and-presentations/default.aspx
+        · https://www.pginvestor.com/financials/sec-filings/default.aspx
+        · https://www.pginvestor.com/news/news-details/2026/PG-Recommends-Stockholders-Reject-Mini-Tender-Offer-by-Potemkin-Limited-2f7b4ea8b/default.aspx
+        · https://www.pginvestor.com/news/news-details/2026/PG-Recommends-Stockholders-Reject-April-7-Mini-Tender-Offer-by-Potemkin-Limited/default.aspx
+        · https://www.pginvestor.com/news/news-details/2026/PG-Declares-Dividend-Increase-for-April-2026/default.aspx
+        · https://www.pginvestor.com
+     [generic] IR-home fast-path: https://www.pginvestor.com
+     [generic] PDFs found: ['presentation', 'press_release']
+     [audio] west_intrado: sniffing HLS from https://event.webcasts.com/starthere.jsp?ei=1749695&tp_key=267d9db6b9
+     [audio] west_intrado downloaded: PG_2026-01-22.m4a
+     ✓ presentation: PG_2026-01-22_presentation.pdf
+     ✓ press_release: PG_2026-01-22_press_release.pdf
+     ✓ audio: PG_2026-01-22.m4a
+
+   [COST] target=2026-03-05
+     [generic] start=https://www.costco.com
+     [generic] IR via URL pattern: https://investor.costco.com/overview/default.aspx
+     [generic] candidate pages: 7
+        · https://investor.costco.com/events-and-presentations/default.aspx
+        · https://investor.costco.com/financials/sec-filings/default.aspx
+        · https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Announces-an-Increase-in-Its-Quarterly-Cash-Dividend/default.aspx
+        · https://investor.costco.com/events-and-presentations/events/event-details/2027/Shareholders-Meeting-2027-rBjhi9_cGy/default.aspx
+        · https://investor.costco.com/events-and-presentations/events/event-details/2026/Q3-2026-Earnings-Results-2026-2TUZRPTsc9/default.aspx
+        · https://events.q4inc.com/attendee/247600739
+        · https://investor.costco.com/overview/default.aspx
+     [generic] IR-home fast-path: https://investor.costco.com/overview/default.aspx
+     [generic] PDFs found: []
+     [generic] hop-follow to https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Announces-an-Increas
+     [generic] PDFs after hop (Playwright): []
+     [generic] IR-home had no direct artifacts; walking candidates
+     [generic] try candidate direct: https://investor.costco.com/events-and-presentations/default.aspx
+     [generic] PDFs found: ['presentation']
+     [audio] no audio on current page; drilling into https://investor.costco.com/events-and-presentations/events/event-details/2026/April-Sales-Results-2
+     ✓ presentation: COST_2026-03-05_presentation.pdf
+
+   [KO] target=2026-02-10
+     [generic] start=https://www.coca-colacompany.com
+     [generic] IR via URL pattern: https://investors.coca-colacompany.com/
+     [generic] candidate pages: 7
+        · https://investors.coca-colacompany.com/news-events
+        · https://investors.coca-colacompany.com/news-events/press-releases
+        · https://investors.coca-colacompany.com/financial-information
+        · https://investors.coca-colacompany.com/filings-reports/all-sec-filings
+        · https://investors.coca-colacompany.com/news-events/press-releases/detail/1157/the-coca-cola-company-selects-new-global-chief-people-officer
+        · https://investors.coca-colacompany.com/news-events/events/detail/20260428-1st-quarter-2026-earnings-call
+        · https://investors.coca-colacompany.com/
+     [generic] IR-home fast-path: https://investors.coca-colacompany.com/
+     [generic] PDFs found: ['transcript', 'presentation']
+     [audio] direct_audio downloaded: KO_2026-02-10.mp3
+     ✓ transcript: KO_2026-02-10_transcript.pdf
+     ✓ presentation: KO_2026-02-10_presentation.pdf
+     ✓ audio: KO_2026-02-10.mp3
+
+   [PEP] target=2026-04-16
+     [generic] start=https://www.pepsico.com
+     [generic] IR via URL pattern: https://investors.pepsico.com/investors/earnings/index.html
+     [generic] candidate pages: 7
+        · https://www.pepsico.com/investors/events-presentations
+        · https://www.pepsico.com/investors/sec-filings
+        · https://www.pepsico.com/en/newsroom
+        · https://investors.pepsico.com/investors/earnings/index.html#s2026
+        · https://investors.pepsico.com/investors/earnings/index.html#s2025
+        · https://investors.pepsico.com/investors/earnings/index.html#s2024
+        · https://investors.pepsico.com/investors/earnings/index.html
+     [generic] IR-home fast-path: https://investors.pepsico.com/investors/earnings/index.html
+     [generic] PDFs found: ['transcript']
+     [audio] mediasite: sniffing HLS from https://edge.media-server.com/mmc/p/fgn5nuso/
+       [mediasite] dismissed cookies via #onetrust-accept-btn-handler
+       [mediasite] filled input[name='firstname']
+       [mediasite] filled input[name='lastname']
+       [mediasite] filled input[name='email']
+       [mediasite] filled input[name='institution']
+       [mediasite] selected '....................'
+       [mediasite] selected '....................'
+       [mediasite] ✗ submit button[type='submit']: Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("button[type='submit']").first
+    - locator resolved to <button type="submit" aria-disabled="true" class="btn btn-primary d-inline-block mb-3"> Submit </button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+
+       [mediasite] ✗ submit button.btn-primary: Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("button.btn-primary").first
+    - locator resolved to <button type="submit" aria-disabled="true" class="btn btn-primary d-inline-block mb-3"> Submit </button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 500ms
+
+       [mediasite] ✗ submit button:has-text('Submit'): Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Submit')").first
+    - locator resolved to <button type="submit" aria-disabled="true" class="btn btn-primary d-inline-block mb-3"> Submit </button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    6 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 500ms
+
+       [mediasite] ✗ no submit button matched (CAPTCHA likely blocking — rerun with --semi-auto)
+     [audio] mediasite: no HLS URL captured (retry with --semi-auto)
+     [audio] mediasite: sniffing HLS from https://edge.media-server.com/mmc/p/bk9s3ib8/
+       [mediasite] filled input[name='firstname']
+       [mediasite] filled input[name='lastname']
+       [mediasite] filled input[name='email']
+       [mediasite] filled input[name='institution']
+       [mediasite] selected '....................'
+       [mediasite] selected '....................'
+       [mediasite] ✗ submit button[type='submit']: Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("button[type='submit']").first
+    - locator resolved to <button type="submit" aria-disabled="true" class="btn btn-primary d-inline-block mb-3"> Submit </button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    6 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 500ms
+
+       [mediasite] ✗ submit button.btn-primary: Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("button.btn-primary").first
+    - locator resolved to <button type="submit" aria-disabled="true" class="btn btn-primary d-inline-block mb-3"> Submit </button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    6 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 500ms
+
+       [mediasite] ✗ submit button:has-text('Submit'): Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Submit')").first
+    - locator resolved to <button type="submit" aria-disabled="true" class="btn btn-primary d-inline-block mb-3"> Submit </button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    6 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 500ms
+
+       [mediasite] ✗ no submit button matched (CAPTCHA likely blocking — rerun with --semi-auto)
