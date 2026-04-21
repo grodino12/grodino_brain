@@ -1,0 +1,333 @@
+[1/4] Building gap list...
+   14 ticker(s) with gaps.
+     CELH   last=2026-02-26  audio=False  transcript=True  ir=(empty)
+     ADM    last=2026-02-03  audio=False  transcript=True  ir=(empty)
+     BG     last=2026-02-04  audio=False  transcript=True  ir=(empty)
+     CHD    last=2026-01-30  audio=False  transcript=True  ir=(empty)
+     MKC    last=2026-03-31  audio=False  transcript=True  ir=✓
+     TSN    last=2026-02-02  audio=False  transcript=True  ir=✓
+     SJM    last=2026-02-26  audio=False  transcript=True  ir=(empty)
+     DLTR   last=2026-03-16  audio=False  transcript=True  ir=(empty)
+     BF-B   last=2026-03-04  audio=False  transcript=True  ir=(empty)
+     CLX    last=2026-02-03  audio=False  transcript=True  ir=(empty)
+     HRL    last=2026-02-26  audio=False  transcript=True  ir=(empty)
+     EL     last=2026-02-05  audio=False  transcript=True  ir=(empty)
+     CAG    last=2026-04-01  audio=False  transcript=True  ir=(empty)
+     DG     last=2026-03-12  audio=False  transcript=True  ir=✓
+
+[2/4] Scraping...
+
+   [CELH] target=2026-02-26
+     [generic] start=https://celsiusholdingsinc.com
+     [generic] IR via URL pattern: https://ir.celsiusholdingsinc.com/overview/default.aspx
+     [generic] candidate pages: 7
+        · https://ir.celsiusholdingsinc.com/events-and-presentations/default.aspx
+        · https://ir.celsiusholdingsinc.com/financials/quarterly-results/default.aspx
+        · https://s203.q4cdn.com/427437840/files/doc_financials/2025/q4/CELH-Q4-2025-Earnings-Press-Release-022526.pdf
+        · https://ir.celsiusholdingsinc.com/news/news-details/2026/Celsius-Holdings-Reports-Full-Year-2025-and-Fourth-Quarter-Financial-Results/default.aspx
+        · https://ir.celsiusholdingsinc.com/financials/sec-filings/default.aspx
+        · https://s203.q4cdn.com/427437840/files/doc_news/Celsius-Holdings-to-Participate-in-Upcoming-Investor-Conferences-2026.pdf
+        · https://ir.celsiusholdingsinc.com/overview/default.aspx
+     [generic] IR-home fast-path: https://ir.celsiusholdingsinc.com/overview/default.aspx
+     [generic] PDFs found: ['presentation', 'transcript']
+     [audio] west_intrado: sniffing HLS from https://event.webcasts.com/viewer/event.jsp?ei=1753604&tp_key=d53b046c53
+     [audio] west_intrado downloaded: CELH_2026-02-26.m4a
+     ✓ presentation: CELH_2026-02-26_presentation.pdf
+     ✓ transcript: CELH_2026-02-26_transcript.pdf
+     ✓ audio: CELH_2026-02-26.m4a
+
+   [ADM] target=2026-02-03
+     [generic] start=https://www.adm.com
+     [generic] IR via URL pattern: https://investors.adm.com/home/default.aspx
+     [generic] candidate pages: 7
+        · https://investors.adm.com/events-and-presentations/default.aspx
+        · https://investors.adm.com/financials/quarterly-results/default.aspx
+        · https://investors.adm.com/news/news-details/2026/ADM-to-Release-First-Quarter-Financial-Results-on-May-5-2026/default.aspx
+        · https://investors.adm.com/financials/sec-filings/default.aspx
+        · https://www.adm.com/globalassets/sustainability/sustainability-reports/archer_daniels_2024_corporate_sustainability_report.pdf
+        · https://investors.adm.com/news/news-details/2026/Ethisphere-Names-ADM-as-One-of-the-2026-Worlds-Most-Ethical-Companies-for-7th-Year-in-a-Row/default.aspx
+        · https://investors.adm.com/home/default.aspx
+     [generic] IR-home fast-path: https://investors.adm.com/home/default.aspx
+     [generic] PDFs found: ['presentation', 'transcript']
+     [audio] no audio on current page; drilling into https://investors.adm.com/events-and-presentations/event-details/2026/Q1-2026-ADM-Earnings-Conferenc
+     ✓ presentation: ADM_2026-02-03_presentation.pdf
+     ✓ transcript: ADM_2026-02-03_transcript.pdf
+
+   [BG] target=2026-02-04
+     [generic] start=https://www.bunge.com
+     [generic] IR via URL pattern: https://investors.bunge.com/
+     [generic] candidate pages: 7
+        · https://investors.bunge.com/news-and-events/press-releases
+        · javascript:;
+        · https://investors.bunge.com/news-and-events/events-and-presentation
+        · https://investors.bunge.com/financial-information/quarterly-results/2026
+        · https://investors.bunge.com/financial-information/quarterly-results
+        · https://investors.bunge.com/financial-information/sec-filings
+        · https://investors.bunge.com/
+     [generic] IR-home fast-path: https://investors.bunge.com/
+     [generic] PDFs found: ['press_release', 'presentation']
+     ✓ press_release: BG_2026-02-04_press_release.pdf
+     ✓ presentation: BG_2026-02-04_presentation.pdf
+
+   [CHD] target=2026-01-30
+     [generic] start=https://www.churchdwight.com
+     [generic] IR via URL pattern: https://investors.churchdwight.com/overview/default.aspx
+     [generic] candidate pages: 7
+        · https://investor.churchdwight.com/Investors/events-and-presentations/default.aspx
+        · https://investor.churchdwight.com/Investors/financials/quarterly-results/default.aspx
+        · https://investors.churchdwight.com/Investors/financials/quarterly-results/default.aspx
+        · https://investors.churchdwight.com/Investors/financials/sec-filings
+        · https://investor.churchdwight.com/Investors/financials/sec-filings/default.aspx
+        · https://s203.q4cdn.com/233583214/files/doc_news/Church--Dwight-to-Present-at-2026-CAGNY-Conference-2026.pdf
+        · https://investors.churchdwight.com/overview/default.aspx
+     [generic] IR-home fast-path: https://investors.churchdwight.com/overview/default.aspx
+     [generic] PDFs found: ['press_release', 'presentation']
+     [audio] no audio on current page; drilling into https://investors.churchdwight.com/Investors/events-and-presentations/event-details/2026/Q1-2026-Chu
+     ✓ press_release: CHD_2026-01-30_press_release.pdf
+     ✓ presentation: CHD_2026-01-30_presentation.pdf
+
+   [MKC] target=2026-03-31
+     [generic] start=https://ir.mccormick.com/events
+     [generic] candidate pages: 7
+        · https://ir.mccormick.com/financial-information
+        · https://ir.mccormick.com/news-releases/news-release-details/mccormick-combine-unilevers-foods-business-creating-preeminent
+        · https://ir.mccormick.com/news-releases/news-release-details/mccormick-advances-flavor-leadership-mexico
+        · https://ir.mccormick.com/events/event-details/mccormick-company-participate-fireside-chat-barclays
+        · https://ir.mccormick.com/events/event-details/mccormick-combine-unilevers-foods-business
+        · https://ir.mccormick.com/events/event-details/mccormick-acquire-controlling-interest-mccormick-de-mexico
+        · https://ir.mccormick.com/events
+     [generic] IR-home fast-path: https://ir.mccormick.com/events
+     [generic] PDFs found: ['transcript', 'presentation']
+     [generic] HTML press release fallback: rendering https://ir.mccormick.com/news-releases/news-release-details/mccormick-combine-unilevers-foods-busine
+     [generic] press_release rendered from HTML: MKC_2026-03-31_press_release.pdf
+     ✓ transcript: MKC_2026-03-31_transcript.pdf
+     ✓ presentation: MKC_2026-03-31_presentation.pdf
+     ✓ press_release: MKC_2026-03-31_press_release.pdf
+
+   [TSN] target=2026-02-02
+     [generic] start=https://ir.tyson.com/presentations/default.aspx
+     [generic] candidate pages: 7
+        · https://ir.tyson.com/sec-filings/default.aspx
+        · https://ir.tyson.com/reports/resource-center/default.aspx
+        · https://events.q4inc.com/attendee/891408037
+        · https://ir.tyson.com/presentations/event-details/2026/Q2-2026-Tyson-Foods-Earnings-Conference-Call-/default.aspx
+        · https://ir.tyson.com/presentations/event-details/2026/Q1-2026-Tyson-Foods-Earnings-Conference-Call-/default.aspx
+        · https://events.q4inc.com/attendee/928734779
+        · https://ir.tyson.com/presentations/default.aspx
+     [generic] IR-home fast-path: https://ir.tyson.com/presentations/default.aspx
+     [generic] PDFs found: ['presentation', 'transcript']
+     [audio] no audio on current page; drilling into https://ir.tyson.com/presentations/event-details/2026/Q2-2026-Tyson-Foods-Earnings-Conference-Call-/
+     ✓ presentation: TSN_2026-02-02_presentation.pdf
+     ✓ transcript: TSN_2026-02-02_transcript.pdf
+
+   [SJM] target=2026-02-26
+     [generic] start=https://www.jmsmucker.com
+     [generic] IR via URL pattern: https://investors.jmsmucker.com/overview/default.aspx
+     [generic] candidate pages: 7
+        · https://investors.jmsmucker.com/events-and-presentations/default.aspx
+        · https://investors.jmsmucker.com/events-and-presentations
+        · https://investors.jmsmucker.com/financials/quarterly-results/default.aspx
+        · https://investors.jmsmucker.com/financials/sec-filings/default.aspx
+        · https://www.jmsmucker.com/news-stories/press-archive
+        · https://www.jmsmucker.com/news-stories/media-assets
+        · https://investors.jmsmucker.com/overview/default.aspx
+     [generic] IR-home fast-path: https://investors.jmsmucker.com/overview/default.aspx
+     [generic] PDFs found: ['press_release']
+     [audio] direct_audio downloaded: SJM_2026-02-26.mp3
+     ✓ press_release: SJM_2026-02-26_press_release.pdf
+     ✓ audio: SJM_2026-02-26.mp3
+
+   [DLTR] target=2026-03-16
+     [generic] start=https://www.dollartree.com
+     [generic] IR via URL pattern: https://corporate.dollartree.com/investors
+     [generic] candidate pages: 7
+        · https://corporate.dollartree.com/investors/news-events
+        · https://corporate.dollartree.com/news-media/press-releases
+        · https://corporate.dollartree.com/investors/news-events/press-releases
+        · https://corporate.dollartree.com/investors/financial-information/financial-results
+        · https://corporate.dollartree.com/investors/sec-filings
+        · https://corporate.dollartree.com/news-media/presentations
+        · https://corporate.dollartree.com/investors
+     [generic] IR-home fast-path: https://corporate.dollartree.com/investors
+     [generic] PDFs found: ['presentation']
+     [generic] HTML press release fallback: rendering https://corporate.dollartree.com/investors/news-events/press-releases/detail/303/dollar-tree-inc-rep
+     [generic] press_release rendered from HTML: DLTR_2026-03-16_press_release.pdf
+     [audio] no audio on current page; drilling into https://corporate.dollartree.com/investors/news-events/press-releases/detail/303/dollar-tree-inc-rep
+     ✓ presentation: DLTR_2026-03-16_presentation.pdf
+     ✓ press_release: DLTR_2026-03-16_press_release.pdf
+
+   [BF-B] target=2026-03-04
+     [generic] start=https://www.brown-forman.com
+     [generic] IR via URL pattern: https://investors.brown-forman.com/investors/overview/default.aspx
+     [generic] candidate pages: 7
+        · https://investors.brown-forman.com/investors/news-releases
+        · https://investors.brown-forman.com/investors/events-presentations/default.aspx
+        · https://investors.brown-forman.com/investors/financial-reports-filings/sec-filings/default.aspx
+        · https://investors.brown-forman.com/investors/news-releases/press-release/2026/Brown-Forman-Names-Jim-Peters-Chief-Financial-Officer/default.aspx
+        · https://investors.brown-forman.com/investors/news-releases/press-release/2026/Brown-Forman-Confirms-Discussions-With-Pernod-Ricard/default.aspx
+        · https://investors.brown-forman.com/investors/financial-reports-filings/regulatory-documents/default.aspx
+        · https://investors.brown-forman.com/investors/overview/default.aspx
+     [generic] IR-home fast-path: https://investors.brown-forman.com/investors/overview/default.aspx
+     [generic] PDFs found: ['press_release', 'presentation']
+     [audio] west_intrado: sniffing HLS from https://cc.webcasts.com/ubsx001/031126a_js/?entity=9_COCX8J1
+     [audio] west_intrado downloaded: BF-B_2026-03-04.m4a
+     ✓ press_release: BF-B_2026-03-04_press_release.pdf
+     ✓ presentation: BF-B_2026-03-04_presentation.pdf
+     ✓ audio: BF-B_2026-03-04.m4a
+
+   [CLX] target=2026-02-03
+     [generic] start=https://www.thecloroxcompany.com
+     [generic] IR via URL pattern: https://investors.thecloroxcompany.com/overview/default.aspx
+     [generic] candidate pages: 7
+        · https://investors.thecloroxcompany.com/investors/news-and-events/press-releases/
+        · https://investors.thecloroxcompany.com/events-and-presentations/default.aspx
+        · https://investors.thecloroxcompany.com/events-and-presentations/
+        · https://investors.thecloroxcompany.com/financial-reporting/quarterly-results/default.aspx
+        · https://investors.thecloroxcompany.com/financial-reporting/sec-filings/default.aspx
+        · https://www.thecloroxcompany.com/newsroom/media-resources/logo-gallery/
+        · https://investors.thecloroxcompany.com/overview/default.aspx
+     [generic] IR-home fast-path: https://investors.thecloroxcompany.com/overview/default.aspx
+     [generic] PDFs found: []
+     [generic] IR-home had no direct artifacts; walking candidates
+     [generic] try candidate direct: https://investors.thecloroxcompany.com/investors/news-and-events/press-releases/
+     [generic] PDFs found: ['presentation', 'press_release']
+     [audio] no audio on current page; drilling into https://investors.thecloroxcompany.com/news/news-details/2026/Clorox-Declares-Regular-Quarterly-Divi
+     ✓ presentation: CLX_2026-02-03_presentation.pdf
+     ✓ press_release: CLX_2026-02-03_press_release.pdf
+
+   [HRL] target=2026-02-26
+     [generic] start=https://www.hormelfoods.com
+     [generic] IR via URL pattern: https://investor.hormelfoods.com/ir-home/default.aspx
+     [generic] candidate pages: 7
+        · https://investor.hormelfoods.com/news-and-events/events-and-presentations/default.aspx
+        · https://investor.hormelfoods.com/financials/quarterly-results/default.aspx
+        · https://investor.hormelfoods.com/financials/sec-filings/default.aspx
+        · https://s204.q4cdn.com/636391999/files/doc_earnings/2026/q1/transcript/corrected-transcript-hormel-foods-corp-q1-2026-earnings-call.pdf
+        · https://s204.q4cdn.com/636391999/files/doc_earnings/2026/q1/supplemental-info/q1-earnings-supplemental-deck.pdf
+        · https://s204.q4cdn.com/636391999/files/doc_earnings/2026/q1/earnings-result/hormel-earnings-release-q1-2026.pdf
+        · https://investor.hormelfoods.com/ir-home/default.aspx
+     [generic] IR-home fast-path: https://investor.hormelfoods.com/ir-home/default.aspx
+     [generic] PDFs found: ['press_release', 'presentation', 'transcript']
+     [audio] west_intrado: sniffing HLS from https://event.webcasts.com/starthere.jsp?ei=1750288&tp_key=2fac240380
+     [audio] west_intrado downloaded: HRL_2026-02-26.m4a
+     ✓ press_release: HRL_2026-02-26_press_release.pdf
+     ✓ presentation: HRL_2026-02-26_presentation.pdf
+     ✓ transcript: HRL_2026-02-26_transcript.pdf
+     ✓ audio: HRL_2026-02-26.m4a
+
+   [EL] target=2026-02-05
+     [generic] start=https://www.elcompanies.com
+     [generic] IR via URL pattern: https://www.elcompanies.com/en/investors
+     [generic] candidate pages: 7
+        · https://www.elcompanies.com/en/investors/press-releases-and-news
+        · https://www.elcompanies.com/en/investors/events-and-presentations
+        · https://www.elcompanies.com/en/investors/earnings-and-financials/sec-filings
+        · https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/4-22-2026
+        · https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/4-20-2026
+        · https://www.elcompanies.com/en/news-and-media/newsroom
+        · https://www.elcompanies.com/en/investors
+     [generic] IR-home fast-path: https://www.elcompanies.com/en/investors
+     [generic] PDFs found: ['press_release']
+     ✓ press_release: EL_2026-02-05_press_release.pdf
+
+   [CAG] target=2026-04-01
+     [generic] start=https://www.conagrabrands.com
+     [generic] IR via URL pattern: https://www.conagrabrands.com/investor-relations
+     [generic] candidate pages: 7
+        · https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+        · https://www.conagrabrands.com/investor-relations/financial-reports
+        · https://www.conagrabrands.com/news-room/news-conagra-brands-appoints-john-brase-as-president-and-chief-executive-officer-prn-122951
+        · https://www.conagrabrands.com/news-room/news-conagra-brands-announces-quarterly-dividend-payment-prn-122949
+        · https://www.conagrabrands.com/news-room/news-conagra-brands-announces-appointment-of-john-mulligan-and-pietro-satriano-to-its-board-of-directors-prn-122947
+        · https://www.conagrabrands.com/news-room/media-contacts
+        · https://www.conagrabrands.com/investor-relations
+     [generic] IR-home fast-path: https://www.conagrabrands.com/investor-relations
+     [generic] PDFs found: []
+     [generic] IR-home had no direct artifacts; walking candidates
+     [generic] try candidate direct: https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] PDFs found: []
+     [generic] try candidate direct: https://www.conagrabrands.com/investor-relations/financial-reports
+     [generic] PDFs found: []
+     [generic] try candidate->sub-event: https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] PDFs found: []
+     [generic] no artifacts from sub-event https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] try candidate direct: https://www.conagrabrands.com/news-room/news-conagra-brands-appoints-john-brase-as-president-and-chief-executive-officer-prn-122951
+     [generic] PDFs found: []
+     [generic] try candidate->sub-event: https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] PDFs found: []
+     [generic] no artifacts from sub-event https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] try candidate direct: https://www.conagrabrands.com/news-room/news-conagra-brands-announces-quarterly-dividend-payment-prn-122949
+     [generic] PDFs found: []
+     [generic] try candidate->sub-event: https://www.conagrabrands.com/news-room/news-conagra-brands-announces-quarterly-dividend-payment-prn-122949#main-content
+     [generic] PDFs found: []
+     [generic] no artifacts from sub-event https://www.conagrabrands.com/news-room/news-conagra-brands-announces-quarterly-
+     [generic] try candidate direct: https://www.conagrabrands.com/news-room/news-conagra-brands-announces-appointment-of-john-mulligan-and-pietro-satriano-to-its-board-of-directors-prn-122947
+     [generic] PDFs found: []
+     [generic] try candidate->sub-event: https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] PDFs found: []
+     [generic] no artifacts from sub-event https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] try candidate direct: https://www.conagrabrands.com/news-room/media-contacts
+     [generic] PDFs found: []
+     [generic] try candidate->sub-event: https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [generic] PDFs found: []
+     [generic] no artifacts from sub-event https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     ✗ tried 6 candidate URL(s); none yielded classifiable PDFs
+
+   [DG] target=2026-03-12
+     [generic] start=https://investor.dollargeneral.com/events-presentations
+     [generic] candidate pages: 6
+        · https://investor.dollargeneral.com/events-presentations#
+        · https://investor.dollargeneral.com/events-presentations
+        · https://webcasts.eqs.com/dollargeneral20200312/en?disposition=inline
+        · https://investor.dollargeneral.com/financials-sec-filings/sec-filings
+        · https://edge.media-server.com/mmc/p/k8pas9pe?disposition=inline
+        · https://edge.media-server.com/mmc/p/fvkard7r?disposition=inline
+     [generic] IR-home fast-path: https://investor.dollargeneral.com/events-presentations
+     [generic] PDFs found: []
+     [generic] hop-follow to https://investor.dollargeneral.com/news-detail/dollar-general-corporation-reports-strong-fourth-quar
+     [generic] PDFs after hop (Playwright): []
+     [generic] rendered page-to-PDF as press release: DG_2026-03-12_press_release.pdf
+     ✓ press_release: DG_2026-03-12_press_release.pdf
+
+[3/4] Skipping transcription (--no-transcribe).
+
+Summary: 29 artifact(s), 1 error(s), 14 ticker(s) attempted.
+Gap report: C:\Users\rodin\Desktop\Brain\Knowledge\IR Scraper Gap Report.md
+
+[4/4] Refreshing Consumer Staples Earnings Calendar...
+Ensuring Sources subfolders for 33 tickers...
+Fetching earnings dates for 33 tickers...
+  [1/33] PG...
+  [2/33] COST...
+  [3/33] WMT...
+  [4/33] KO...
+  [5/33] PEP...
+  [6/33] PM...
+  [7/33] MO...
+  [8/33] MDLZ...
+  [9/33] CL...
+  [10/33] TGT...
+  [11/33] KMB...
+  [12/33] GIS...
+  [13/33] SYY...
+  [14/33] KR...
+  [15/33] STZ...
+  [16/33] HSY...
+  [17/33] KDP...
+  [18/33] MNST...
+  [19/33] EL...
+  [20/33] TSN...
+  [21/33] ADM...
+  [22/33] CHD...
+  [23/33] CAG...
+  [24/33] CLX...
+  [25/33] SJM...
+  [26/33] HRL...
+  [27/33] MKC...
+  [28/33] LW...
+  [29/33] BG...
+  [30/33] DLTR...
+  [31/33] DG...
+  [32/33] BF-B...
+  [33/33] CELH...
+Wrote C:\Users\rodin\Desktop\Brain\Knowledge\Consumer Staples Earnings Calendar.md — next: 33/33, last: 33/33, audio: 13/33, transcripts: 31/33.
