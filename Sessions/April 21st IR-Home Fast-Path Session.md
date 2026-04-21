@@ -58,7 +58,7 @@ Installed `playwright-stealth` (2.0.3). Wrapped `sync_playwright()` in `Stealth(
 
 **Note on audio / CAPTCHA:** stealth does NOT solve visible reCAPTCHA v2 checkboxes (PM's Mediasite). It raises the reCAPTCHA score enough that many sites never challenge, and bypasses Cloudflare's passive fingerprinting, but a visible "I'm not a robot" widget still needs `--semi-auto` or a paid solver.
 
-### 9. Direct-first candidate walk
+### 9. Direct-first candidate walk (continued)
 
 Before this change: the walk resolved each candidate to a sub-event URL via `_find_earnings_event_link` (drilling into the first earnings-keyword link on the listing). For COST, the top link was "Q3 2026 Earnings Results" — an *upcoming* placeholder event with no PDFs. Meanwhile Q2-FY26's PDF was linked directly on the listing page under the Q2 row: "PRESENTATION → `s201.q4cdn.com/.../Q2-FY-26-Earnings-Supplement.pdf`".
 
@@ -67,6 +67,22 @@ New two-pass per candidate:
 - **Pass (b)**: if (a) empty and candidate isn't already an event URL, drill into sub-event via `_find_earnings_event_link`.
 
 Unlocked: COST, CL, KMB, MO all on the same run.
+
+### 10. HTML press-release fallback (page-to-PDF rendering)
+
+DG's IR pattern: `/events-presentations` lists each quarter with a "Press Release" link next to a PDF icon — but the link points at a `/news-detail/{slug}/{uuid}` URL which is a fully-HTML article with **no downloadable PDF anywhere on the page**. The PDF icon is purely decorative.
+
+Added two rendering fallbacks via Playwright's `page.pdf()` (requires headless Chromium, which is our default):
+1. **After PDF extraction**: if `press_release` is still missing AND there's a text-labeled "Press Release"/"News Release"/"Earnings Release" link on the page pointing at a news-detail URL, navigate there and render to PDF.
+2. **At the end of extraction**: if we drilled directly into a news-detail URL and found no classifiable PDFs, render the page to PDF as the press release.
+
+DG now produces `DG_2026-03-12_press_release.pdf` (16 pages, 253KB, correctly titled "Dollar General Corporation Reports Strong Fourth Quarter and Fiscal Year 2025 Results").
+
+### 11. Presentation classifier tightened
+
+`_collect_pdf_links` and `_extract_pdfs_from_html` previously accepted `"slides" in href` as a presentation match. DG's archive has 2016 Analyst Day slide decks at `.../1-MPilkington-Opening_Slides.pdf` etc. — these were getting mis-classified as the current quarter's presentation (the resulting PDF metadata showed creation-date 2016-03-23 and first-page title "Welcome - Mary Winn Pilkington, VP Investor Relations").
+
+Fix: require `"presentation"` or `"slide"` in link *text* only. URL-based `"slides"` match is gone. Verified no regressions — all previously-matched presentations (LW, MKC, KR, COST, KMB, MO, etc.) use explicit "PRESENTATION" or "Earnings Presentation" link text.
 
 ## Current state
 
