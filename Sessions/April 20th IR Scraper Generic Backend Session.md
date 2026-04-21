@@ -61,13 +61,23 @@ Each round probed the largest failure bucket, added a targeted fix, re-ran. Cove
 - Round 4's `_find_earnings_event_link` was too strict: required specific patterns like `"-q2-"` or `"earnings-release"` in addition to the earnings keyword. Regressed PG because its press release titles use "Second Quarter 2026 Results" (no dashes, no `q2`).
 - New matcher: accept any link that passes `is_earnings_event()`, minus a hard blocklist of generic nav labels (`"earnings"`, `"events"`, `"news"`, `"view all news"`, etc.), with a length-guard for short tabs that don't have a detail-page URL.
 
+**Round 6 — Q4 Inc static-files classifier + curl_cffi hop fallback** → 23 tickers (70%, +MDLZ)
+- Many Q4 Inc-hosted press releases link the PDF as `<a href="/static-files/{uuid}">PDF Version</a>` — no `.pdf` extension. Old classifier required `.pdf` in URL; widened to also accept `/static-files/` and `/static_files/` paths and generic labels like `"PDF Version"`, `"Full Report"`.
+- MDLZ landed on a news *summary* page (`/news/2025_q4_fy_earnings/`) that only linked OUT to the Q4 Inc detail page. Added **hop-follow logic**: when the current event page has 0 PDFs, look for an outbound link matching `news-release-details/`, `press-releases/detail/`, etc., navigate there, and try PDF extraction again.
+- Playwright hit Akamai's `ERR_HTTP2_PROTOCOL_ERROR` on the MDLZ hop target. Added a **curl_cffi fallback** (`_extract_pdfs_from_html`) that fetches the hop URL with Chrome TLS impersonation and parses `<a>` tags from the HTML directly — Q4 Inc detail pages are server-rendered, so no JS is needed. MDLZ press_release downloaded on first try with the fallback.
+
+**Round 7 — skip-if-transcript gap logic + announcement filter**
+- Gap-skip change: `build_gap_list()` now skips tickers that already have a transcript (press release PDF or whisper md) for the current quarter, regardless of audio status. Audio is vendor-specific and often unreachable; re-scraping already-covered tickers every run was pure waste. Makes re-runs an order of magnitude faster (only attempt the uncovered tickers).
+- Announcement filter: excluded links containing `"to host"`, `"to announce"`, `"announces date"`, `"schedules"`, `"will host"`, `"webcast of"`, `"conference call details"` — these are upcoming-call calendar posts, not results releases (fixed MO picking up "Altria to Host Webcast of 2026 First Quarter" instead of the Jan 29 Q4 2025 results).
+- Tightened hop-follow to require the target URL/text also contain an earnings keyword (`earnings`, `quarter`, `results`, `-q1-` through `-q4-`, `first-quarter` through `fourth-quarter`, `full-year`, `fy25`, `fy26`). Prevents hop-follow from grabbing unrelated press releases (dividend declarations, product launches) when the recent-news feed has no earnings release visible.
+
 ### 5. All fixes documented in SKILL.md
 Per user's "ensure all troubleshooting is encapsulated in the skill so the next pull is smoother", SKILL.md now documents the generic_backend's 7-step pipeline, four fallback layers (alt-root → subpath → candidate retry → Playwright `goto` fallback), and 10+ known quirks (Akamai HTTP/2, Angular reactive forms, OneTrust banner, Q4 Inc attendee URLs, "Download is starting", Mediasite reCAPTCHA wall, etc.).
 
 ## Current state
 
 ### Coverage
-**22/33 tickers (67%) have at least one artifact on disk** covering the current earnings cycle:
+**23/33 tickers (70%) have at least one artifact on disk** covering the current earnings cycle (MDLZ added via curl_cffi hop fallback):
 
 | Ticker | Artifacts |
 |---|---|
@@ -88,9 +98,12 @@ Per user's "ensure all troubleshooting is encapsulated in the skill so the next 
 | SYY | presentation |
 | BF-B, CAG, CHD, CLX, KDP, PG, TGT | press_release each |
 
-### 11 tickers still uncovered — grouped by failure mode
+### 10 tickers still uncovered — grouped by failure mode
 - **Stage 2 "no earnings link matched on candidate pages" (5)**: CL, KMB, MNST, MKC, LW. Candidates are found, but `_find_earnings_event_link()` doesn't locate a release link on them — likely JS-rendered listings that need longer wait times, or unusual title phrasing.
-- **Stage 3 "candidates resolved to event URLs but no PDFs classified" (6)**: COST, MO, MDLZ, HSY, TSN, DG. Landed on what looks like an event page but the PDF classifier finds no matches — probably sites where the press release body is HTML (not linked as a PDF download) OR where PDFs use unusual label text.
+- **Stage 3 "candidates resolved to event URLs but no PDFs classified" (5)**: COST, MO, HSY, TSN, DG. Landed on what looks like an event page but the PDF classifier finds no matches. Known specifics:
+  - **COST** — Q4 Inc tenant behind **Cloudflare bot protection**. Playwright gets served the Cloudflare challenge page; curl_cffi bypasses Cloudflare but sees un-rendered `{{title}}` placeholders because COST's Q4 Inc tenant fetches news via client-side JSON API. Needs reverse-engineering of Q4 Inc's JSON API endpoints OR a Cloudflare-stealth Playwright plugin.
+  - **MO** — Altria's press-releases listing is JS-lazy-loaded; the Q4 2025 results release (2026-01-29) is below the fold of the initial DOM. Recent-news links are all dividend declarations, executive announcements, or next-quarter scheduling posts. Needs pagination/scroll or direct URL construction.
+  - **HSY, TSN, DG** — similar JS/content-loading issues, not yet individually probed.
 
 ### Infrastructure
 - **SKILL.md** fully documents the generic_backend pipeline, fallbacks, and known quirks. Follow-session-ready.
