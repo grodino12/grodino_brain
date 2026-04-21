@@ -9,7 +9,7 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-21 10:12 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-04-21 10:17 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript | IR Page |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- | ------- |
@@ -35,7 +35,7 @@ _Last updated: 2026-04-21 10:12 Eastern Daylight Time. Dates from yfinance; time
 | WMT | Walmart | 2026-02-19 (BMO) | 2026-05-21 (BMO) | ❌ | ✅ | — |
 | COST | Costco Wholesale | 2026-03-05 (AMC) | 2026-05-28 (AMC) | ❌ | ❌ | — |
 | HRL | Hormel Foods | 2026-02-26 (BMO) | 2026-05-28 (BMO) | ❌ | ✅ | — |
-| DG | Dollar General | 2026-03-12 (BMO) | 2026-06-02 (BMO) | ❌ | ❌ | — |
+| DG | Dollar General | 2026-03-12 (BMO) | 2026-06-02 (BMO) | ❌ | ✅ | — |
 | DLTR | Dollar Tree | 2026-03-16 (BMO) | 2026-06-03 (BMO) | ❌ | ✅ | — |
 | BF-B | Brown-Forman | 2026-03-04 (BMO) | 2026-06-04 (BMO) | ❌ | ✅ | — |
 | SJM | JM Smucker | 2026-02-26 (BMO) | 2026-06-09 (BMO) | ❌ | ✅ | — |
