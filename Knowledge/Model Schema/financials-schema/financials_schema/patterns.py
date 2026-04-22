@@ -29,7 +29,7 @@ class RegexPatternEntry(BaseModel):
 
 
 class PatternLibrary(BaseModel):
-    """A loaded YAML pattern file. One library per enum it resolves to."""
+    """A loaded JSON pattern file. One library per enum it resolves to."""
 
     entries: dict[str, PatternEntry | RegexPatternEntry]
     file_path: Path

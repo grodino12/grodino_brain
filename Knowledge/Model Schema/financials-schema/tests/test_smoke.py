@@ -255,7 +255,7 @@ def test_pattern_library_rejects_duplicate_variants():
                 variants=["(in thousands"],  # duplicate!
             ),
         },
-        "file_path": Path("unit_phrases.yaml"),
+        "file_path": Path("unit_phrases.json"),
         "last_updated": datetime(2026, 4, 22),
     }
     with pytest.raises(ValidationError):

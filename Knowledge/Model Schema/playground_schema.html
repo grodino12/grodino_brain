@@ -348,7 +348,7 @@ const SCHEMA = [
   },
   {
     name: 'PatternLibrary', kind: 'model', extends: 'BaseModel', layer: 'patterns',
-    doc: 'A loaded YAML pattern file (e.g. unit_phrases.yaml). Maps canonical slugs to either PatternEntry (phrase match) or RegexPatternEntry (structured regex extraction). Validates that no variant string appears in more than one entry.',
+    doc: 'A loaded JSON pattern file (e.g. unit_phrases.json). Maps canonical slugs to either PatternEntry (phrase match) or RegexPatternEntry (structured regex extraction). Validates that no variant string appears in more than one entry.',
     fields: [
       { name: 'entries',      type: 'dict[str, PatternEntry | RegexPatternEntry]', typeKind: 'container', ref: 'PatternEntry' },
       { name: 'file_path',    type: 'Path',                    typeKind: 'primitive' },
@@ -373,7 +373,7 @@ const SCHEMA = [
   },
   {
     name: 'Period', kind: 'model', extends: 'BaseModel', layer: 'raw',
-    doc: 'Fiscal period identity. Resolved from varied filing notations ("Q1 2025", "1Q25", "52 weeks ended Dec 30, 2023") via period_phrase_patterns.yaml.',
+    doc: 'Fiscal period identity. Resolved from varied filing notations ("Q1 2025", "1Q25", "52 weeks ended Dec 30, 2023") via period_phrase_patterns.json.',
     fields: [
       { name: 'fiscal_year',         type: 'int',        typeKind: 'primitive', default: 'Field(ge=1990, le=2100)' },
       { name: 'fiscal_quarter',      type: 'int | None', typeKind: 'primitive', default: 'None, ge=1, le=4' },

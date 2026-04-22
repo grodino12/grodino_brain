@@ -14,7 +14,7 @@
         { "pattern": "(\\d)q\\s*[\\'']?\\s*(\\d{2,4})", "description": "1Q25, 1Q 2025", "captures": { "1": "fiscal_quarter", "2": "fiscal_year" } },
         { "pattern": "quarter\\s+(\\d)\\s*,?\\s+(\\d{4})", "description": "Quarter 1, 2025", "captures": { "1": "fiscal_quarter", "2": "fiscal_year" } },
         { "pattern": "(first|second|third|fourth)\\s+quarter\\s+(?:of\\s+)?(\\d{4})", "description": "First Quarter 2025, Second quarter of 2025", "captures": { "1": "fiscal_quarter_word", "2": "fiscal_year" } },
-        { "pattern": "three\\s+months\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "Three months ended March 31, 2025 — quarter inferred from month_name via config.yaml fiscal_year_end", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } }
+        { "pattern": "three\\s+months\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "Three months ended March 31, 2025 — quarter inferred from month_name via config.json fiscal_year_end", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } }
       ]
     },
     "ytd": {
