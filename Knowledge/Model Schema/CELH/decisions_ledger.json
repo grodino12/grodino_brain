@@ -635,18 +635,22 @@
     {
       "rule_id": "MAP-IS-020",
       "filing_term_normalized": "basic",
+      "filing_subsection": "eps",
       "model_sheet": "ANNL P&L",
       "model_row": 31,
       "model_label": "GAAP EPS (Basic)",
-      "decided_date": "2026-04-22"
+      "decided_date": "2026-04-22",
+      "note": "filing_subsection=eps disambiguates from share-count Basic"
     },
     {
       "rule_id": "MAP-IS-021",
       "filing_term_normalized": "diluted",
+      "filing_subsection": "eps",
       "model_sheet": "ANNL P&L",
       "model_row": 32,
       "model_label": "GAAP EPS (Diluted)",
-      "decided_date": "2026-04-22"
+      "decided_date": "2026-04-22",
+      "note": "filing_subsection=eps disambiguates from share-count Diluted"
     },
     {
       "rule_id": "MAP-CF-030",
@@ -1099,6 +1103,28 @@
       "position_note": "Current liabilities, after Accrued Expenses",
       "decided_date": "2026-04-22",
       "note": "Non-zero in some years per anomalies.json"
+    },
+    {
+      "rule_id": "NEW-IS-001",
+      "filing_term_normalized": "basic",
+      "filing_subsection": "shares_outstanding",
+      "model_sheet": "ANNL P&L",
+      "new_row_label": "Weighted Avg Shares Outstanding (Basic)",
+      "section": "eps",
+      "position_note": "Below GAAP EPS (Basic) at row 31; share counts in thousands per 'Weighted Average Shares Outstanding (in thousands)' filing header",
+      "decided_date": "2026-04-22",
+      "note": "Disambiguated from EPS Basic via filing_subsection=shares_outstanding"
+    },
+    {
+      "rule_id": "NEW-IS-002",
+      "filing_term_normalized": "diluted",
+      "filing_subsection": "shares_outstanding",
+      "model_sheet": "ANNL P&L",
+      "new_row_label": "Weighted Avg Shares Outstanding (Diluted)",
+      "section": "eps",
+      "position_note": "Below GAAP EPS (Diluted) at row 32; share counts in thousands",
+      "decided_date": "2026-04-22",
+      "note": "Disambiguated from EPS Diluted via filing_subsection=shares_outstanding"
     }
   ],
   "structural_decisions": [

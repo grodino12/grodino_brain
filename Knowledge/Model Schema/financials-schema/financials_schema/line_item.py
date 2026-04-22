@@ -40,6 +40,7 @@ class RawLineItem(BaseModel):
     indent_level: int = 2
     row_type: RowType = "line_item"
     section: Section = Section.UNCLASSIFIED
+    subsection_context: str | None = None
     sign_convention: SignConvention = "as_reported"
     citation: Citation
 
