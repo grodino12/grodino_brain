@@ -9,7 +9,7 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-04-21 21:14 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-04-21 21:18 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- |
@@ -27,7 +27,7 @@ _Last updated: 2026-04-21 21:14 Eastern Daylight Time. Dates from yfinance; time
 | CL | Colgate-Palmolive | 2026-01-30 (BMO) | 2026-05-01 (BMO) | ❌ | ✅ |
 | EL | Estée Lauder | 2026-02-05 (BMO) | 2026-05-01 (BMO) | ❌ | ✅ |
 | CHD | Church & Dwight | 2026-01-30 (BMO) | 2026-05-01 (BMO) | ❌ | ✅ |
-| TSN | Tyson Foods | 2026-02-02 (BMO) | 2026-05-04 (BMO) | ❌ | ✅ |
+| TSN | Tyson Foods | 2026-02-02 (BMO) | 2026-05-04 (BMO) | ✅ | ✅ |
 | ADM | Archer-Daniels-Midland | 2026-02-03 (BMO) | 2026-05-05 (BMO) | ❌ | ✅ |
 | MNST | Monster Beverage | 2026-02-26 (AMC) | 2026-05-07 (AMC) | ❌ | ✅ |
 | CELH | Celsius Holdings | 2026-02-26 (BMO) | 2026-05-11 (BMO) | ✅ | ✅ |
