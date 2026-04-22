@@ -35,7 +35,7 @@ Every skill is ticker-agnostic. Ticker-specific state (CELH anomalies, ledger en
   3. rapidfuzz-score novel items against ledger; surface top 3 candidates
   4. Prompt user for novel items only
   5. Append confirmed new decisions back to ledger (append-only, dated)
-- **Dependencies:** `pydantic`, `pyyaml`, `rapidfuzz`
+- **Dependencies:** `pydantic`, `rapidfuzz`
 - **Fails loudly on:** any unresolved novel item reaching `MappedFiling` construction
 
 ---
@@ -52,7 +52,7 @@ Every skill is ticker-agnostic. Ticker-specific state (CELH anomalies, ledger en
   2. Run CF-1/CF-2 (CFO+CFI+CFF+FX=ΔCash; Cash End = Beg + Δ)
   3. Run X-1..X-4 (CF NI = P&L NI, CF CashEnd = BS Cash, pref div ties)
   4. Raise `ValidationError` with structured gap list on any fail
-  5. Honor overrides from `tickers/{ticker}/anomalies.yaml` (e.g. cash convention per year)
+  5. Honor overrides from `tickers/{ticker}/anomalies.json` (e.g. cash convention per year)
 - **Dependencies:** `pydantic`, `decimal`
 - **Tolerance:** $1K absolute, 0.1% relative
 
@@ -108,8 +108,8 @@ Three parallel skills, all consuming `ValidatedFiling`.
 Not skills — supporting infrastructure.
 
 - **`financials-schema/`** — shared Pydantic package. Imported by all six skills.
-- **`pattern_libraries/*.yaml`** — per-enum phrase matching (read by `financials-extract`, appended to on confirmed novel matches).
-- **`tickers/{ticker}/`** — per-ticker config, ledger, source PDFs, Excel target. See `05_ticker_folder_spec.md`.
+- **`pattern_libraries/*.json`** — per-enum phrase matching (read by `financials-extract`, appended to on confirmed novel matches).
+- **`tickers/{ticker}/`** — per-ticker config, ledger, source PDFs, Excel target. See `03_ticker_folder_spec.md`.
 - **External model inputs** — GLP-1 and SNAP model outputs feed `model-calc` as scenario inputs.
 
 ---
@@ -169,6 +169,6 @@ model-write \
 model-calc \
     --ticker-root tickers/celh/ \
     --validated tickers/celh/derived/validated_*.json \
-    --scenarios scenarios.yaml \
+    --scenarios scenarios.json \
     --out tickers/celh/derived/derived_calcs.json
 ```

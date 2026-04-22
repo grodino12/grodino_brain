@@ -17,7 +17,7 @@
     --c-skill:    #e97c2b;   /* orange — user-invoked entry points */
     --c-contract: #14b8a6;   /* teal  — Pydantic data contracts */
     --c-pkg:      #0ea5e9;   /* cyan  — shared package */
-    --c-store:    #ec4899;   /* magenta — persistent markdown / YAML */
+    --c-store:    #ec4899;   /* magenta — persistent markdown / JSON */
     --c-external: #ef4444;   /* red   — external sources / sinks */
 
     --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
@@ -480,7 +480,7 @@ const NODES = [
     path: 'Brain/Knowledge/Model Schema/CELH/sources/{10-K, 10-Q, press_releases}/'
   },
   { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 310, y: 225, w: 240, h: 50, label: 'pattern_libraries/*.json',
-    purpose: 'YAML pattern files for statement headings, unit phrases, section labels, period phrases, numeric notation. Read by financials-extract; new variants auto-appended on fuzzy match.',
+    purpose: 'JSON pattern files for statement headings, unit phrases, section labels, period phrases, numeric notation. Read by financials-extract; new variants auto-appended on fuzzy match.',
     path: '~/.claude/skills/financials-extract/references/*.json'
   },
 

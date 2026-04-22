@@ -8,9 +8,9 @@ Every ticker gets its own folder. Generic skills receive `--ticker-root` and rea
 
 ```
 tickers/
-└── {ticker}/                              ← e.g. tickers/celh/
-    ├── config.yaml                        ← ticker metadata
-    ├── anomalies.yaml                     ← quirks affecting validation
+└── {ticker}/                              ← e.g. CELH/
+    ├── config.json                        ← ticker metadata
+    ├── anomalies.json                     ← quirks affecting validation
     ├── decisions_ledger.json              ← label → model row mappings
     ├── source_citations.json              ← per-value citation trail (output)
     ├── sources/
@@ -31,67 +31,77 @@ tickers/
 
 ---
 
-## `config.yaml` — ticker metadata
+## `config.json` — ticker metadata
 
-```yaml
-ticker: CELH
-company_name: Celsius Holdings, Inc.
-cik: "0001341766"
-fiscal_year_end: 12-31
-currency: USD
+```json
+{
+  "ticker": "CELH",
+  "company_name": "Celsius Holdings, Inc.",
+  "cik": "0001341766",
+  "fiscal_year_end": "12-31",
+  "currency": "USD",
 
-# Plausibility ranges for unit detection fallback
-expected_revenue_range_thousands: [1_000_000, 3_000_000]
-expected_total_assets_range_thousands: [500_000, 2_500_000]
+  "expected_revenue_range_thousands": [1000000, 3000000],
+  "expected_total_assets_range_thousands": [500000, 2500000],
 
-# Share split history — affects pre/post split comparability
-stock_splits:
-  - date: 2023-11-13
-    ratio: 3         # 3-for-1
+  "stock_splits": [
+    { "date": "2023-11-13", "ratio": 3, "note": "3-for-1 split" }
+  ]
+}
 ```
+
+`expected_*_range_thousands` ranges feed the unit-detection plausibility fallback when no explicit "(in thousands)" header phrase is found on the statement page.
 
 ---
 
-## `anomalies.yaml` — quirks affecting extraction/validation
+## `anomalies.json` — quirks affecting extraction/validation
 
-```yaml
-# Cash convention changes year-over-year — affects X-2 cross-statement check
-cash_convention_per_year:
-  2023: cash_plus_restricted    # FY2023 10-K reconciles to "Cash + restricted cash"
-  2024: cash_only               # FY2024+ uses "Cash and cash equivalents" only
-  2025: cash_only
+```json
+{
+  "cash_convention_per_year": {
+    "2023": "cash_plus_restricted",
+    "2024": "cash_only",
+    "2025": "cash_only"
+  },
 
-# Mezzanine equity — sits between Total Liabilities and Total SE
-mezzanine_equity:
-  enabled: true
-  line_items:
-    - Series A convertible preferred stock
-  excluded_from_total_se: true  # do NOT sum into Total Stockholders' Equity
+  "mezzanine_equity": {
+    "enabled": true,
+    "line_items": ["Series A convertible preferred stock"],
+    "excluded_from_total_se": true
+  },
 
-# Line items whose values are intentionally identical YoY — do not flag as extraction error
-identical_yoy_values:
-  - line: Deferred Other Costs (Current)
-    value: 14124
-    reason: Annual straight-line amortization of deferred slotting fees
-  - line: Deferred Revenue (Current)
-    value: 9513
-    reason: PEP distribution agreement straight-line recognition
+  "identical_yoy_values": [
+    {
+      "line": "Deferred Other Costs (Current)",
+      "value": 14124,
+      "reason": "Annual straight-line amortization of deferred slotting fees"
+    },
+    {
+      "line": "Deferred Revenue (Current)",
+      "value": 9513,
+      "reason": "PEP distribution agreement straight-line recognition"
+    }
+  ],
 
-# Validation overrides — per-rule exemptions with documented reasons
-validation_overrides:
-  # Example structure; empty at start
-  # - rule_id: X-2
-  #   period: 2023
-  #   reason: Restricted cash convention differs between filings
-  #   approved_by: user
-  #   approved_date: 2026-04-22
+  "structural_rules": [
+    {
+      "rule_id": "STRUCT-001",
+      "description": "Convertible Preferred excluded from Total SE sum",
+      "reason": "Matches CELH's filed BS structure; sell-side standard"
+    }
+  ],
+
+  "validation_overrides": []
+}
 ```
+
+Underscore-prefixed keys (e.g. `_notes`, `_cash_convention_note`) are allowed for inline documentation — readers ignore them.
 
 ---
 
 ## `decisions_ledger.json` — label → model row mappings
 
-Converted from the existing markdown ledger. Append-only.
+Append-only. Grows as filings flow through; user confirms novel mappings once, future runs are silent.
 
 ```json
 {
@@ -172,7 +182,7 @@ Written by `financials-validate` at the end of each run. One entry per value wri
 ## Adding a new ticker
 
 1. `mkdir tickers/mnst/`
-2. Copy a blank `config.yaml` and `anomalies.yaml` template
+2. Copy a blank `config.json` and `anomalies.json` template
 3. Create an empty `decisions_ledger.json` with the version header
 4. Drop source PDFs into `sources/`
 5. Run the pipeline; user-prompt on novel items populates the ledger

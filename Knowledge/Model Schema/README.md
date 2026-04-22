@@ -1,8 +1,8 @@
 # Model Schema
 
-Framework design for a generic, ticker-agnostic financial-modeling pipeline. A chain of 6 Claude Code skills glued together by Pydantic contracts, per-ticker configuration folders, and YAML pattern libraries.
+Framework design for a generic, ticker-agnostic financial-modeling pipeline. A chain of 6 Claude Code skills glued together by Pydantic contracts, per-ticker configuration folders, and JSON pattern libraries.
 
-**Status:** design phase. No skills built yet.
+**Status:** 3 of 6 skills built (`financials-extract`, `financials-reconcile`, `financials-validate`). End-to-end CELH 2024 10-K run passes 26/26 validation rules.
 
 ---
 
@@ -10,13 +10,13 @@ Framework design for a generic, ticker-agnostic financial-modeling pipeline. A c
 
 | # | File | What it is |
 |---|------|------------|
-| 01 | `01_architecture_map.html` | Interactive pipeline map. Click nodes for details. |
-| 02 | `02_pydantic_schema.html` | Interactive class diagram. Click cards for fields + Python source. |
-| 03 | `03_schema_spec.md` | Full Pydantic schema spec (text version of the class diagram). |
-| 04 | `04_pipeline_design.md` | The 6 skills × 5 layers — what each skill does. |
-| 05 | `05_ticker_folder_spec.md` | Per-ticker folder structure. How CELH-specific stuff is kept out of the generic skills. |
-| 06 | `06_pattern_library_design.md` | YAML pattern files + rapidfuzz matching ladder. |
-| — | `examples/celh/` | CELH-specific config + anomalies + decisions ledger. |
+| 01 | `01_schema_spec.md` | Full Pydantic schema spec (text version of the class diagram). |
+| 02 | `02_pipeline_design.md` | The 6 skills × 5 layers — what each skill does. |
+| 03 | `03_ticker_folder_spec.md` | Per-ticker folder structure. How CELH-specific stuff is kept out of the generic skills. |
+| 04 | `04_pattern_library_design.md` | JSON pattern files + rapidfuzz matching ladder. |
+| — | `playground_architecture.html` | Interactive pipeline map. Click nodes for details. |
+| — | `playground_schema.html` | Interactive class diagram. Click cards for fields + Python source. |
+| — | `CELH/` | CELH-specific config + anomalies + decisions ledger. |
 
 ---
 
@@ -24,10 +24,11 @@ Framework design for a generic, ticker-agnostic financial-modeling pipeline. A c
 
 1. **Generic skills, ticker data in folders.** No `if ticker == "CELH"` anywhere.
 2. **Pydantic contracts at every boundary.** Bad data fails at the boundary, not three steps downstream.
-3. **Progressive learning via append-only stores.** Ledger + pattern YAMLs get smarter with each run.
+3. **Progressive learning via append-only stores.** Ledger + pattern libraries get smarter with each run.
 4. **Audit trail preserved end-to-end.** Each layer wraps the prior output — you can always trace a value back to the source PDF.
-5. **One pattern library per enum.** `Unit`, `StatementType`, `FilingType`, `Section`, `NumericNotation` each get their own YAML file.
+5. **One pattern library per enum.** `Unit`, `StatementType`, `FilingType`, `Section`, `NumericNotation` each get their own JSON file.
 6. **Schema hosting = shared package.** All Pydantic models live in one importable Python package, not copied per-skill.
+7. **JSON for all persistent state.** No YAML anywhere — pattern libraries, ticker config, anomalies, decisions ledger are all JSON. Simpler stdlib handling, no `pyyaml` dependency.
 
 ---
 
@@ -50,7 +51,7 @@ Layer 4 — VIZ · WRITE · CALC
 
 Layer 5 — CONTRACTS + EXTERNAL
           financials-schema/          (shared Pydantic package)
-          pattern_libraries/*.yaml    (enum phrase matching)
+          pattern_libraries/*.json    (enum phrase matching)
           tickers/{ticker}/           (per-ticker config, ledger, sources)
 ```
 
@@ -58,4 +59,4 @@ Layer 5 — CONTRACTS + EXTERNAL
 
 ## Current CELH work state
 
-Session-handoff docs live separately at `Brain/Sessions/CELH Model/`. Those describe where CELH currently is in the Phase 0-5 workflow using the *old* skill, and are reference material for what the new framework needs to support.
+Session-handoff docs live separately at `Brain/Sessions/CELH Model/`. The most recent handoff (`April 22nd Multi-Skill Framework Session.md`) describes the clean-slate rebuild that produced the current pipeline.

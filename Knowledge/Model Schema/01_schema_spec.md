@@ -1,6 +1,6 @@
 # Pydantic Schema Spec
 
-Canonical text version of `02_pydantic_schema.html`. Every class in the `financials-schema/` shared package, grouped by layer.
+Canonical text version of `playground_schema.html`. Every class in the `financials-schema/` shared package, grouped by layer.
 
 ---
 
@@ -64,7 +64,7 @@ class NumericNotation(Flag):
 
 ## Shared · Pattern libraries
 
-Pydantic models that validate the YAML pattern files. One pattern library per enum.
+Pydantic models that validate the JSON pattern files. One pattern library per enum.
 
 ```python
 class PatternEntry(BaseModel):
@@ -85,7 +85,7 @@ class RegexPatternEntry(BaseModel):
     regex_patterns: list[RegexPattern]
 
 class PatternLibrary(BaseModel):
-    """A loaded YAML pattern file. One file per enum."""
+    """A loaded JSON pattern file. One file per enum."""
     entries: dict[str, PatternEntry | RegexPatternEntry]
     file_path: Path
     last_updated: datetime
