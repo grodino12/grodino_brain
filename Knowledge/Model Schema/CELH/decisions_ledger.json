@@ -853,8 +853,9 @@
       "filing_term_normalized": "net proceeds from sale of common stock",
       "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net Proceeds from Common Stock Sale (new)",
-      "decided_date": "2026-04-22"
+      "model_label": "Proceeds from Common",
+      "decided_date": "2026-04-22",
+      "note": "User: create new row above Proceeds from Preferred (row 42). model-write should insert and reassign model_row."
     },
     {
       "rule_id": "MAP-CF-064",
@@ -1276,6 +1277,16 @@
       "position_note": "Same concept as NEW-CF-003 (Note Receivable-Net Change) — FY2024 10-K dropped the 'change' word",
       "decided_date": "2026-04-22",
       "note": "FY2024 10-K wording (#14 user first-fuzzy maps to note receivable-net change = NEW-CF-003). Kept as separate entry since different normalized form."
+    },
+    {
+      "rule_id": "NEW-CF-011",
+      "filing_term_normalized": "net proceeds from sale of common stock",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Proceeds from Common",
+      "section": "financing",
+      "position_note": "Insert as new row immediately ABOVE Proceeds from Preferred (currently row 42). After insert, model-write should bump existing rows 42+ down by 1 and assign model_row to this entry.",
+      "decided_date": "2026-04-22",
+      "note": "User wants this as a new row, not reuse of an existing one. MAP-CF-063 carries a duplicate placeholder for the same concept — kept for backward compat but this NEW-CF entry is the source of truth for model-write placement."
     }
   ],
   "structural_decisions": [
