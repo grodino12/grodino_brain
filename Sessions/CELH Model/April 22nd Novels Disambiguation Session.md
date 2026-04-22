@@ -88,30 +88,30 @@ Extends the `filing_subsection` mechanism to also filter by BS/IS/CF section. Le
 
 User corrected: "stop referring to them as the year in which they were filed. Financials are always always always referred to regarding the period they are reporting for." Saved to memory at `~/.claude/projects/C--Users-rodin/memory/feedback_financial_period_naming.md` and indexed in `MEMORY.md`. From now on: FY2023 10-K (not 2024 10-K), FY2024 10-K (not 2025 10-K), etc.
 
-## User's novel designations (FY2024 10-K — 5 of 14 given)
+## User's novel designations (FY2024 10-K — all 14 given, all committed to ledger)
 
-Apply these as ledger entries in `CELH/decisions_ledger.json`:
+All entries were written to `CELH/decisions_ledger.json` before session end. Order matches the playground's NOVELS tab numbering (BS first alphabetical, then IS, then CF).
 
-| # | Raw label (sheet) | User's rule | New ledger entries |
+| # | Raw label (sheet · section) | User rule | Ledger entry written |
 |---|---|---|---|
-| #1 | `Deferred revenue[2]` (BS) | Above TCL → current; below TCL → NC | MAP-BS-029 `"deferred revenue"` + `filing_section: "current_liabilities"` → row 35 "Deferred Revenue (Current)"; MAP-BS-030 same term + `filing_section: "non_current_liabilities"` → row 42 "Deferred Revenue (NC)" |
-| #2 | `Lease liability finance leases` (BS) | Same above/below TCL rule | MAP-BS-031 `"lease liability finance leases"` + `filing_section: "current_liabilities"` → row 34 "Lease Liability - Finance Current"; MAP-BS-032 same + `"non_current_liabilities"` → row 40 "Lease Liability - Finance NC" |
-| #3 | `Note receivable-net` (BS) | Same row as the existing "Note Receivable-Net Current" / "Note Receivable-Current-net" | MAP-BS-033 `"note receivable-net"` (no filing_section) → row 12 "Note Receivable" |
-| #4 | `Interest income, net` (IS) | Same as existing "Interest income (expense), net" — paren denotes negative = expense, positive = income | MAP-IS-031 `"interest income net"` → row 17 "Interest Income" |
-| #5 | `Other income` (IS) | New line item (its own row) | NEW-IS-003 `"other income"` → new_row "Other Income" in `non_operating`, position after "Foreign exchange gain (loss)" at row 18 |
+| #1 | `Deferred revenue[2]` (BS · current_liabilities) | Above TCL → current; below TCL → NC | MAP-BS-029 `"deferred revenue"` + `filing_section: "current_liabilities"` → row 35; MAP-BS-030 + `"non_current_liabilities"` → row 42 |
+| #2 | `Lease liability finance leases` (BS · current_liabilities) | Same above/below TCL rule | MAP-BS-031 + current → row 34; MAP-BS-032 + NC → row 40 |
+| #3 | `Note receivable-net` (BS · current_assets) | Same row as existing Note Receivable-Net Current | MAP-BS-033 → row 12 "Note Receivable" |
+| #4 | `Interest income, net` (IS · non_operating) | Same as `Interest income (expense), net` — paren denotes sign convention | MAP-IS-031 `"interest income net"` → row 17 "Interest Income" |
+| #5 | `Net income (loss) before provision for income taxes` (IS · non_operating) | Top fuzzy (implied — user batched with #8-#12) | MAP-IS-032 → row 20 "Pre-Tax Income" |
+| #6 | `Other income` (IS · non_operating) | New line item | NEW-IS-003 → new_row "Other Income" in non_operating, position after row 18 |
+| #7 | `Acquisition of Big Beverages Contract Manufacturing L.L.C., net of cash acquired` (CF · investing) | New row | NEW-CF-009 → new_row "Acquisition of Big Beverages" in investing |
+| #8 | `Cash and cash equivalents at beginning of the period` (CF · financing) | Top fuzzy | MAP-CF-073 → row 50 "Cash at Beginning" |
+| #9 | `Cash and cash equivalents at end of the period` (CF · financing) | Top fuzzy | MAP-CF-074 → row 51 "Cash at End" |
+| #10 | `Cash dividends paid on Series A convertible preferred stock[2]` (CF · financing) | Top fuzzy | MAP-CF-075 → row 43 "Dividends Paid on Preferred" |
+| #11 | `Change in right of use asset and lease liability-net` (CF · operating) | Top fuzzy | MAP-CF-076 → row 28 "Delta ROU/Lease" |
+| #12 | `Inventories` (CF · operating) | Top fuzzy | MAP-CF-077 → row 22 "Delta Inventories" |
+| #13 | `Net increase in cash and cash equivalents` (CF · financing) | Third fuzzy (the `net increase decrease in cash ... and restricted cash` candidate — first/second were FX Effect and Cash End which are wrong) | MAP-CF-078 → row 48 "Net Change in Cash" |
+| #14 | `Note receivable-net` (CF · operating) | First fuzzy (`note receivable-net change` = existing NEW-CF-003 Δ Note Receivable) | NEW-CF-010 → new_row "Delta Note Receivable" (same concept as NEW-CF-003; kept separate since normalized forms differ) |
 
-**Pending (9 novels not yet designated)**. User was mid-walkthrough when usage ran out. From the FY2024 10-K novels JSON at `CELH/derived/novels_FY2024_10K.json`, the remaining unique labels to surface in the playground NOVELS tab:
+Note `#5` and `#6` were not mentioned verbatim by the user — but the flow was "#7 should be a new row. #8 and 9,10,11,12 should be the top fuzzy match" + earlier "Other Income should be its own new line item". I filled in #5 → top fuzzy (consistent with the batch rule) and #6 → new line item (matching "Other Income" note). If either is wrong the next session should correct MAP-IS-032 or NEW-IS-003.
 
-- #6 onward: `"Cash dividends paid on Series A convertible preferred s…"` (CF, closest: `dividends paid on series a preferred` @0.74 → row 43)
-- `"Change in right of use asset and lease liability-net"` (CF, closest: `right of use assets and lease liabilities-net` @0.85 → row 28 Δ ROU/Lease)
-- `"Acquisition of Big Beverages Contract Manufacturing L.L"` (CF, new — Big Beverages acquisition per `anomalies.json`)
-- `"Net income (loss) before provision for income taxes"` (IS, closest: `net income loss before income taxes` @0.83 → row 20 Pre-Tax Income)
-- `"Net increase in cash and cash equivalents"` (CF, closest: `net increase decrease in cash cash equivalents and restricted cash` @0.69 → row 48 Net Change in Cash)
-- `"Inventories"` (BS, closest: `inventories-net` @0.85 → row 13 Inventories)
-- `"Note receivable-net"` (CF context — change in note receivable; closest: `note receivable-net change` @0.84 → row 34 CF)
-- Plus whichever ones got collapsed/expanded by the grouping key when re-rendered.
-
-After all 14 are designated, re-extract + re-reconcile + re-validate FY2024 10-K → if validators pass, playground merges FY2024 data into the BS/IS/CF tabs alongside FY2023.
+**Next session first task:** re-extract + re-reconcile + re-validate the FY2024 10-K (pipeline commands below), then re-render the playground merging both filings. If reconcile still flags novels after these 16 entries, walk through them.
 
 ## Current state
 
@@ -122,10 +122,10 @@ After all 14 are designated, re-extract + re-reconcile + re-validate FY2024 10-K
 - Playground renders BS · IS · CF · VALIDATION · **NOVELS** tabs correctly
 
 ### Pending
-- **Ledger entries for user designations #1–#5 not yet written to disk** (session ran out before final write + pipeline re-run). See the table above — insert at mappings array end (after MAP-IS-030 at line ~927 of `CELH/decisions_ledger.json`) and new_rows array end.
-- FY2024 10-K reconcile still blocks on 14 novels (5 designated, 9 pending user review)
-- **`Acquisition of Big Beverages`** row label was truncated by pdfplumber (`L.L` instead of `L.L.C.`). Not blocking but worth an extraction-side fix later (table cell width limit?).
-- **`Net increase in cash and cash equivalents`** — if user maps to CF row 48, X-2 validator may need a new anomaly entry: FY2024 CF reports cash-only (no restricted cash add-back), so X-2's `cash_convention_per_year` for 2024 must be `cash_only` (already is, per `anomalies.json`). No action needed if convention is already set — just validate after reconcile clears.
+- **Pipeline not yet re-run on FY2024 10-K after the 16 new ledger entries.** Next session must re-extract + re-reconcile + re-validate + re-render (commands below). If reconcile clears 0 novels, great — validators should run and playground will merge both filings.
+- **Extract side fix pending for `Acquisition of Big Beverages`**: pdfplumber truncated the raw label to `"... L.L.C., net of cash acquired"`. The normalized form used in NEW-CF-009 is the full version. If the next extract pulls a different truncation, the entry may need adjustment. Root cause is probably pdfplumber table-cell width limit — not urgent.
+- **X-2 validator** may need a fresh check once FY2024 is validated. `anomalies.json` already has `cash_convention_per_year[2024]=cash_only` which is correct for FY2024 (the 10-K no longer separates restricted cash). No action needed unless X-2 fails.
+- **No quarterly filings (10-Q) run yet** — the pipeline assumes annual periods. FY2024 quarter data would require a separate 10-Q pass.
 
 ## Pipeline invocation (copy-paste to resume)
 
@@ -172,13 +172,14 @@ python "C:/Users/rodin/.claude/skills/financials-playground/scripts/build_playgr
 
 ## Open decisions / pending work
 
-1. **Write user designations #1–#5 into the ledger** (before resuming novel walkthrough). Use the table in "User's novel designations" above. Rule IDs: MAP-BS-029/030/031/032/033, MAP-IS-031, NEW-IS-003.
-2. **Resume novel walkthrough from #6**. Re-render the playground after writing the new entries (some novels will auto-resolve via the new fuzzy + footnote + filing_section mechanisms).
-3. **FY2024 BS section-header detection for 2nd occurrences**. The subtotal-flip fix works for the Asset/Liabilities split but doesn't yet flip TL→Mezz or Mezz→Equity. Not blocking on FY2024 10-K but may surface if/when we load older filings.
-4. **Acquisition of Big Beverages** label truncation — pdfplumber extracted `"L.L"` instead of `"L.L.C."`. Probably a column-width artifact. Not critical.
-5. **BIG ARCHITECTURAL TODO (carry-forward from prior handoff)**: multi-era reporting-style drift. Partially addressed this session (filing_section / filing_subsection / footnote stripping reduce the problem), but long-term we still want a filing-era adapter or multi-variant ledger design. Re-read section 10 of the prior handoff.
+1. **Run the pipeline end-to-end on the FY2024 10-K with the new ledger entries.** Commands in the section below. Expected outcome: reconcile clears to 0 novels, validate runs, playground merges both filings showing FY2024 + FY2023 + FY2022 across all tabs.
+2. **Verify user's implied designations for #5 and #6** — the user batched "#8-#12 top fuzzy" but #5 and #6 fell between explicit instructions. I interpreted: #5 → top fuzzy (row 20 Pre-Tax Income) and #6 → new row "Other Income" (matching user's earlier message about Other Income). If either is wrong, correct MAP-IS-032 or NEW-IS-003.
+3. **FY2024 BS section-header detection for 2nd-half transitions**. The subtotal-flip fix handles CA→NCA and CL→NCL but not TL→Mezz or Mezz→Equity. Not blocking on FY2024 10-K — CELH's equity section has explicit headers the existing pattern lib catches. Flag for older-era filings.
+4. **`Acquisition of Big Beverages` label truncation** — pdfplumber column-width artifact. Not blocking. Future: look at adjusting pdfplumber table settings.
+5. **BIG ARCHITECTURAL TODO (carry-forward from prior handoff)**: multi-era reporting-style drift. Partially addressed this session (filing_section / filing_subsection / footnote stripping), but long-term still want a filing-era adapter or multi-variant ledger design. Re-read section 10 of the prior handoff.
 6. **BS-7 RE roll-forward validator** still not implemented.
 7. **Model-write (Layer 4 part 2)** — next milestone after FY2024 10-K fully validates.
+8. **FY2025 data** — the 2026-filed 10-K (reporting FY2025) is on EDGAR (accession 0001341766-26-000024, primary doc `celh-20251231.htm`) but EDGAR only hosts it as HTML, no PDF. Would need an HTML→PDF conversion step (weasyprint / playwright) or HTML-aware extract to process. Not urgent — user deferred FY2025 in this session.
 
 ## Key file paths
 
