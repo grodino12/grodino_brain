@@ -924,6 +924,127 @@
       "model_label": "Foreign exchange gain (loss)",
       "decided_date": "2026-04-22",
       "note": "IS alias"
+    },
+    {
+      "rule_id": "MAP-BS-029",
+      "filing_term_normalized": "deferred revenue",
+      "filing_section": "current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 35,
+      "model_label": "Deferred Revenue (Current)",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K uses 'Deferred revenue[2]' without current/NC qualifier. filing_section disambiguates: above TCL subtotal -> current (#1 user designation)"
+    },
+    {
+      "rule_id": "MAP-BS-030",
+      "filing_term_normalized": "deferred revenue",
+      "filing_section": "non_current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 42,
+      "model_label": "Deferred Revenue (NC)",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K companion entry to MAP-BS-029: below TCL subtotal -> non-current"
+    },
+    {
+      "rule_id": "MAP-BS-031",
+      "filing_term_normalized": "lease liability finance leases",
+      "filing_section": "current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 34,
+      "model_label": "Lease Liability - Finance Current",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K consolidated wording (#2 user designation): above TCL -> current"
+    },
+    {
+      "rule_id": "MAP-BS-032",
+      "filing_term_normalized": "lease liability finance leases",
+      "filing_section": "non_current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 40,
+      "model_label": "Lease Liability - Finance NC",
+      "decided_date": "2026-04-22",
+      "note": "Companion to MAP-BS-031: below TCL -> non-current"
+    },
+    {
+      "rule_id": "MAP-BS-033",
+      "filing_term_normalized": "note receivable-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 12,
+      "model_label": "Note Receivable",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K dropped qualifier (#3 user: same row as note receivable-net current / note receivable-current-net)"
+    },
+    {
+      "rule_id": "MAP-IS-031",
+      "filing_term_normalized": "interest income net",
+      "model_sheet": "ANNL P&L",
+      "model_row": 17,
+      "model_label": "Interest Income",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#4 user): (expense) notation dropped since value is positive; same row as MAP-IS-010"
+    },
+    {
+      "rule_id": "MAP-IS-032",
+      "filing_term_normalized": "net income loss before provision for income taxes",
+      "model_sheet": "ANNL P&L",
+      "model_row": 20,
+      "model_label": "Pre-Tax Income",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#5 user, implied top-fuzzy): added 'provision for' vs MAP-IS-012"
+    },
+    {
+      "rule_id": "MAP-CF-073",
+      "filing_term_normalized": "cash and cash equivalents at beginning of the period",
+      "model_sheet": "CASH FLOW",
+      "model_row": 50,
+      "model_label": "Cash at Beginning",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#8 user top-fuzzy): adds 'at ... of the period' vs MAP-CF-028"
+    },
+    {
+      "rule_id": "MAP-CF-074",
+      "filing_term_normalized": "cash and cash equivalents at end of the period",
+      "model_sheet": "CASH FLOW",
+      "model_row": 51,
+      "model_label": "Cash at End",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#9 user top-fuzzy): adds 'at ... of the period' vs MAP-CF-029"
+    },
+    {
+      "rule_id": "MAP-CF-075",
+      "filing_term_normalized": "cash dividends paid on series a convertible preferred stock",
+      "model_sheet": "CASH FLOW",
+      "model_row": 43,
+      "model_label": "Dividends Paid on Preferred",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#10 user top-fuzzy): adds 'cash' prefix and 'convertible ... stock' suffix vs MAP-CF-024"
+    },
+    {
+      "rule_id": "MAP-CF-076",
+      "filing_term_normalized": "change in right of use asset and lease liability-net",
+      "model_sheet": "CASH FLOW",
+      "model_row": 28,
+      "model_label": "Delta ROU/Lease",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#11 user top-fuzzy): singular 'asset'/'liability' vs MAP-CF-040"
+    },
+    {
+      "rule_id": "MAP-CF-077",
+      "filing_term_normalized": "inventories",
+      "model_sheet": "CASH FLOW",
+      "model_row": 22,
+      "model_label": "Delta Inventories",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#12 user top-fuzzy): bare 'Inventories' on CF — maps to Δ Inventories per MAP-CF-034 row"
+    },
+    {
+      "rule_id": "MAP-CF-078",
+      "filing_term_normalized": "net increase in cash and cash equivalents",
+      "model_sheet": "CASH FLOW",
+      "model_row": 48,
+      "model_label": "Net Change in Cash",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#13 user third-fuzzy): simpler vs MAP-CF-046 (which had 'net increase decrease ... and restricted cash')"
     }
   ],
   "renames": [
@@ -1125,6 +1246,36 @@
       "position_note": "Below GAAP EPS (Diluted) at row 32; share counts in thousands",
       "decided_date": "2026-04-22",
       "note": "Disambiguated from EPS Diluted via filing_subsection=shares_outstanding"
+    },
+    {
+      "rule_id": "NEW-IS-003",
+      "filing_term_normalized": "other income",
+      "model_sheet": "ANNL P&L",
+      "new_row_label": "Other Income",
+      "section": "non_operating",
+      "position_note": "After Foreign exchange gain (loss) at row 18",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K added a consolidated 'Other income' line (#6 user: new line item)"
+    },
+    {
+      "rule_id": "NEW-CF-009",
+      "filing_term_normalized": "acquisition of big beverages contract manufacturing l l c net of cash acquired",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Acquisition of Big Beverages",
+      "section": "investing",
+      "position_note": "In investing activities; per anomalies.json caveat about FY2024 Big Beverages acquisition adding ~$57M goodwill",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K new line (#7 user: new row). pdfplumber truncated label to 'L.L' — fix later"
+    },
+    {
+      "rule_id": "NEW-CF-010",
+      "filing_term_normalized": "note receivable-net",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Delta Note Receivable",
+      "section": "operating",
+      "position_note": "Same concept as NEW-CF-003 (Note Receivable-Net Change) — FY2024 10-K dropped the 'change' word",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#14 user first-fuzzy maps to note receivable-net change = NEW-CF-003). Kept as separate entry since different normalized form."
     }
   ],
   "structural_decisions": [
