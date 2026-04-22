@@ -1500,7 +1500,7 @@
       "raw_unit_phrase": "(in thousands, except per share amounts)",
       "unit_detection_source": "explicit_header",
       "unit_detection_confidence": 0.9,
-      "share_unit": "actual",
+      "share_unit": "thousands",
       "eps_unit": "actual",
       "currency": "USD",
       "dialect": "US_GAAP",
@@ -1899,7 +1899,7 @@
       "raw_unit_phrase": "(in thousands, except per share amounts)",
       "unit_detection_source": "explicit_header",
       "unit_detection_confidence": 0.9,
-      "share_unit": "actual",
+      "share_unit": "thousands",
       "eps_unit": "actual",
       "currency": "USD",
       "dialect": "US_GAAP",
@@ -2298,7 +2298,7 @@
       "raw_unit_phrase": "(in thousands, except per share amounts)",
       "unit_detection_source": "explicit_header",
       "unit_detection_confidence": 0.9,
-      "share_unit": "actual",
+      "share_unit": "thousands",
       "eps_unit": "actual",
       "currency": "USD",
       "dialect": "US_GAAP",
@@ -2697,8 +2697,8 @@
       "raw_unit_phrase": "(in thousands)",
       "unit_detection_source": "explicit_header",
       "unit_detection_confidence": 0.9,
-      "share_unit": "actual",
-      "eps_unit": "actual",
+      "share_unit": "thousands",
+      "eps_unit": "thousands",
       "currency": "USD",
       "dialect": "US_GAAP",
       "line_items": [
@@ -3420,8 +3420,8 @@
       "raw_unit_phrase": "(in thousands)",
       "unit_detection_source": "explicit_header",
       "unit_detection_confidence": 0.9,
-      "share_unit": "actual",
-      "eps_unit": "actual",
+      "share_unit": "thousands",
+      "eps_unit": "thousands",
       "currency": "USD",
       "dialect": "US_GAAP",
       "line_items": [
@@ -4143,8 +4143,8 @@
       "raw_unit_phrase": "(in thousands)",
       "unit_detection_source": "explicit_header",
       "unit_detection_confidence": 0.9,
-      "share_unit": "actual",
-      "eps_unit": "actual",
+      "share_unit": "thousands",
+      "eps_unit": "thousands",
       "currency": "USD",
       "dialect": "US_GAAP",
       "line_items": [
@@ -4854,7 +4854,7 @@
     }
   ],
   "extraction_metadata": {
-    "extracted_at": "2026-04-22T18:18:07",
+    "extracted_at": "2026-04-22T18:20:21",
     "page_count": 159,
     "statement_pages": [
       {
