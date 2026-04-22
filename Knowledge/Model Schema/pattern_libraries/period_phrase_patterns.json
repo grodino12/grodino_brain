@@ -1,0 +1,46 @@
+{
+  "_notes": "Period phrases → Period model. Regex-based. Extracts structured data (year, quarter, period_end_date, period_length_weeks) from varied period notations. Captures map regex group index → target Period field name.",
+
+  "normalization": {
+    "case_insensitive": true,
+    "collapse_whitespace": true
+  },
+
+  "entries": {
+    "quarterly": {
+      "canonical": "QUARTERLY",
+      "regex_patterns": [
+        { "pattern": "q(\\d)\\s*[\\'']?\\s*(\\d{2,4})", "description": "Q1 2025, Q1'25, Q1 25", "captures": { "1": "fiscal_quarter", "2": "fiscal_year" } },
+        { "pattern": "(\\d)q\\s*[\\'']?\\s*(\\d{2,4})", "description": "1Q25, 1Q 2025", "captures": { "1": "fiscal_quarter", "2": "fiscal_year" } },
+        { "pattern": "quarter\\s+(\\d)\\s*,?\\s+(\\d{4})", "description": "Quarter 1, 2025", "captures": { "1": "fiscal_quarter", "2": "fiscal_year" } },
+        { "pattern": "(first|second|third|fourth)\\s+quarter\\s+(?:of\\s+)?(\\d{4})", "description": "First Quarter 2025, Second quarter of 2025", "captures": { "1": "fiscal_quarter_word", "2": "fiscal_year" } },
+        { "pattern": "three\\s+months\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "Three months ended March 31, 2025 — quarter inferred from month_name via config.yaml fiscal_year_end", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } }
+      ]
+    },
+    "ytd": {
+      "canonical": "YTD",
+      "regex_patterns": [
+        { "pattern": "six\\s+months\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "Six months ended June 30, 2025 — Q2 YTD", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } },
+        { "pattern": "nine\\s+months\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "Nine months ended September 30, 2025 — Q3 YTD", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } }
+      ]
+    },
+    "annual": {
+      "canonical": "ANNUAL",
+      "regex_patterns": [
+        { "pattern": "fiscal\\s+year\\s+(\\d{4})", "description": "Fiscal Year 2024", "captures": { "1": "fiscal_year" } },
+        { "pattern": "fy\\s*[\\'']?\\s*(\\d{2,4})", "description": "FY24, FY 2024, FY'24", "captures": { "1": "fiscal_year" } },
+        { "pattern": "year\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "Year ended December 31, 2024", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } },
+        { "pattern": "(\\d{2})\\s+weeks\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "52 weeks ended December 30, 2023 — retailer fiscal year", "captures": { "1": "period_length_weeks", "2": "month_name", "3": "day", "4": "fiscal_year" } },
+        { "pattern": "for\\s+the\\s+year\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "For the year ended December 31, 2024", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } },
+        { "pattern": "(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "December 31, 2024 — bare date column header (e.g. Balance Sheet as-of). Auto-appended when pipeline encounters bare dates.", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } }
+      ]
+    },
+    "ltm": {
+      "canonical": "LTM",
+      "regex_patterns": [
+        { "pattern": "(?:ltm|ttm)\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "LTM June 30, 2025 or TTM December 31, 2024", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } },
+        { "pattern": "trailing\\s+(?:twelve|12)\\s+months\\s+ended\\s+(\\w+)\\s+(\\d{1,2}),?\\s+(\\d{4})", "description": "Trailing twelve months ended June 30, 2025", "captures": { "1": "month_name", "2": "day", "3": "fiscal_year" } }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "_notes": "Statement heading phrases → StatementType enum. Seeded with SEC / IFRS / UK GAAP filing conventions. Will grow automatically as real filings flow through. Append-only.",
+
+  "normalization": {
+    "case_insensitive": true,
+    "collapse_whitespace": true,
+    "strip_prefixes": ["consolidated", "condensed", "unaudited", "the"],
+    "strip_punctuation": true
+  },
+
+  "entries": {
+    "balance_sheet": {
+      "canonical": "BALANCE_SHEET",
+      "keywords": ["balance sheet", "balance sheets", "financial position"],
+      "variants": [
+        "Consolidated Balance Sheets",
+        "Consolidated Balance Sheet",
+        "Condensed Consolidated Balance Sheets",
+        "Balance Sheets",
+        "Balance Sheet",
+        "Statement of Financial Position",
+        "Consolidated Statement of Financial Position"
+      ],
+      "fuzzy_threshold": 85
+    },
+
+    "cash_flow": {
+      "canonical": "CASH_FLOW",
+      "keywords": ["cash flows", "cash flow"],
+      "variants": [
+        "Consolidated Statements of Cash Flows",
+        "Consolidated Statement of Cash Flows",
+        "Condensed Consolidated Statements of Cash Flows",
+        "Statements of Cash Flows",
+        "Statement of Cash Flows",
+        "Cash Flow Statement"
+      ],
+      "fuzzy_threshold": 85
+    },
+
+    "income_statement": {
+      "canonical": "INCOME_STATEMENT",
+      "keywords": ["operations", "income", "comprehensive income"],
+      "keyword_exclusions": ["other comprehensive income"],
+      "variants": [
+        "Consolidated Statements of Operations",
+        "Consolidated Statement of Operations",
+        "Statements of Operations",
+        "Statement of Operations",
+        "Consolidated Statements of Income",
+        "Consolidated Statement of Income",
+        "Statements of Income",
+        "Statement of Income",
+        "Statement of Consolidated Income",
+        "Consolidated Statements of Comprehensive Income",
+        "Consolidated Statement of Comprehensive Income",
+        "Condensed Consolidated Statements of Operations",
+        "Consolidated Income Statement",
+        "Profit and Loss Account",
+        "Consolidated Statements of Operations and Comprehensive Income (Loss)"
+      ],
+      "fuzzy_threshold": 85
+    }
+  }
+}

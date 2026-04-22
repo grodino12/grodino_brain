@@ -1,0 +1,146 @@
+[survey] surveying 15 ticker(s)
+
+   [PEP]
+     [survey] start=https://www.pepsico.com
+     [survey] IR: https://investors.pepsico.com/investors/earnings/index.html
+     [survey] candidate: https://www.pepsico.com/investors/events-presentations
+     [survey] candidate: https://www.pepsico.com/investors/sec-filings
+     [survey] candidate: https://www.pepsico.com/en/newsroom
+     → 9 hit(s); vendors: ['(unknown)', 'mediasite', 'west_intrado']
+
+   [CAG]
+     [survey] start=https://www.conagrabrands.com
+     [survey] IR: https://www.conagrabrands.com/investor-relations
+     [survey] candidate: https://www.conagrabrands.com/investor-relations/financial-news/events-calendar
+     [survey] candidate: https://www.conagrabrands.com/investor-relations/financial-reports
+     [survey] candidate: https://www.conagrabrands.com/news-room/news-conagra-brands-appoints-john-brase-as-president-and-chief-executive-officer-prn-122951
+     → 12 hit(s); vendors: ['(unknown)', 'west_intrado']
+
+   [DLTR]
+     [survey] start=https://www.dollartree.com
+     [survey] IR: https://corporate.dollartree.com/investors
+     [survey] candidate: https://corporate.dollartree.com/investors/news-events
+     [survey]   sub-event: https://corporate.dollartree.com/investors/news-events/press-releases/detail/303/dollar-tree-inc-reports-fourth-quarter-and-full-year-2025
+     [survey] candidate: https://corporate.dollartree.com/news-media/press-releases
+     [survey]   sub-event: https://corporate.dollartree.com/news-media/press-releases/detail/303/dollar-tree-inc-reports-fourth-quarter-and-full-year-2025
+     [survey] candidate: https://corporate.dollartree.com/investors/news-events/press-releases
+     → 2 hit(s); vendors: ['(unknown)']
+
+   [BG]
+     [survey] start=https://www.bunge.com
+     [survey] IR: https://investors.bunge.com/
+     [survey] candidate: https://investors.bunge.com/news-and-events/press-releases
+     [survey]   sub-event: https://investors.bunge.com/financial-information/quarterly-results
+     [survey] candidate: javascript:;
+     [survey] candidate goto failed: Page.goto: net::ERR_ABORTED at javascript:;
+Call log:
+  - navigating to "javascript:;", waiting until "domcontentloaded"
+
+     [survey] candidate: https://investors.bunge.com/news-and-events/events-and-presentation
+     → 23 hit(s); vendors: ['(unknown)', 'direct_audio', 'west_intrado']
+
+   [MDLZ]
+     [survey] start=https://www.mondelezinternational.com
+     [survey] IR: https://ir.mondelezinternational.com/
+     [survey] candidate: https://ir.mondelezinternational.com/news-and-events/financial-news
+     [survey]   sub-event: https://ir.mondelezinternational.com/news-releases/news-release-details/mondelez-international-declares-regular-quarterly-dividend-050-0
+     [survey] candidate: https://www.mondelezinternational.com/media/press-releases/
+     → 2 hit(s); vendors: ['(unknown)', 'mediasite']
+
+   [KDP]
+     [survey] start=https://www.keurigdrpepper.com
+     [survey] IR: https://investors.keurigdrpepper.com/
+     [survey] candidate: https://www.keurigdrpepper.com/wp-json/featured-news/category?lang_slug=en&category_slug=press-releases
+     [survey]   sub-event: https://www.keurigdrpepper.com/keurig-dr-pepper-announces-results-of-post-closing-acceptance-period-for-offer-for-jde-peets/
+     [survey] candidate: https://investors.keurigdrpepper.com/events-and-presentations
+     [survey]   sub-event: https://investors.keurigdrpepper.com/events-and-presentations?item=78
+     [survey] candidate: https://investors.keurigdrpepper.com/financials#quarterly
+     → 17 hit(s); vendors: ['(unknown)', 'mediasite', 'west_intrado']
+
+   [CLX]
+     [survey] start=https://www.thecloroxcompany.com
+     [survey] IR: https://investors.thecloroxcompany.com/overview/default.aspx
+     [survey] candidate: https://investors.thecloroxcompany.com/investors/news-and-events/press-releases/
+     [survey]   sub-event: https://investors.thecloroxcompany.com/financial-reporting/quarterly-results/default.aspx
+     [survey] candidate: https://investors.thecloroxcompany.com/events-and-presentations/default.aspx
+     [survey] candidate: https://investors.thecloroxcompany.com/events-and-presentations/
+     → 19 hit(s); vendors: ['(unknown)', 'q4_inc_attendee', 'west_intrado']
+
+   [CHD]
+     [survey] start=https://www.churchdwight.com
+     [survey] IR: https://investors.churchdwight.com/overview/default.aspx
+     [survey] candidate: https://investor.churchdwight.com/Investors/events-and-presentations/default.aspx
+     [survey]   sub-event: https://investor.churchdwight.com/Investors/financials/quarterly-results/default.aspx
+     [survey] candidate: https://investors.churchdwight.com/Investors/financials/quarterly-results/default.aspx
+     [survey]   sub-event: https://investors.churchdwight.com/Investors/financials/quarterly-results/default.aspx#main-content
+     → 109 hit(s); vendors: ['(unknown)', 'mediasite', 'q4_inc_attendee', 'veracast', 'west_intrado']
+
+   [STZ]
+     [survey] start=https://www.cbrands.com
+     [survey] IR: https://ir.cbrands.com/
+     [survey] candidate: https://ir.cbrands.com/news-events
+     [survey]   sub-event: https://ir.cbrands.com/sec-filings/quarterly-reports
+     [survey] candidate: https://www.cbrands.com/blogs/news
+     [survey]   sub-event: https://www.cbrands.com/blogs/press-releases/constellation-brands-reports-full-fiscal-year-and-fourth-quarter-2026-financial-results
+     [survey] candidate: https://ir.cbrands.com/news-events/press-releases
+     → 3 hit(s); vendors: ['(unknown)']
+
+   [MKC]
+     [survey] start=https://ir.mccormick.com/events
+     [survey] IR: https://ir.mccormick.com/events
+     [survey] candidate: https://ir.mccormick.com/financial-information
+     [survey]   sub-event: https://ir.mccormick.com/news-releases/news-release-details/mccormick-reports-strong-first-quarter-performance-and-1
+     [survey] candidate: https://ir.mccormick.com/news-releases/news-release-details/mccormick-combine-unilevers-foods-business-creating-preeminent
+     [survey] candidate: https://ir.mccormick.com/news-releases/news-release-details/mccormick-advances-flavor-leadership-mexico
+     → 9 hit(s); vendors: ['(unknown)', 'mediasite', 'west_intrado']
+
+   [DG]
+     [survey] start=https://investor.dollargeneral.com/events-presentations
+     [survey] IR: https://investor.dollargeneral.com/events-presentations
+     [survey] candidate: https://investor.dollargeneral.com/events-presentations#
+     [survey]   sub-event: https://investor.dollargeneral.com/news-detail/dollar-general-corporation-reports-strong-fourth-quarter-and-fiscal-year-2025-results/629cb739-9b2d-457e-b99b-c6d0c2bcb90a
+     [survey] candidate: https://investor.dollargeneral.com/financials-sec-filings/sec-filings
+     → 38 hit(s); vendors: ['(unknown)', 'mediasite', 'webcast_eqs', 'west_intrado', 'wsw']
+
+   [CL]
+     [survey] start=https://www.colgatepalmolive.com
+     [survey] IR: https://investor.colgatepalmolive.com/
+     [survey] candidate: https://investor.colgatepalmolive.com/investor-news
+     [survey]   sub-event: https://investor.colgatepalmolive.com/news-releases/news-release-details/colgate-palmolive-webcasts-2026-first-quarter-earnings
+     [survey] candidate: https://x.com/cp_news
+     [survey] candidate: https://www.colgatepalmolive.com/en-us/news
+     [survey]   sub-event: https://www.colgatepalmolive.com/en-us/news/how-we-are-reimagining-a-healthier-future-for-all-by-2030
+     → 2 hit(s); vendors: ['(unknown)']
+
+   [TGT]
+     [survey] start=https://corporate.target.com
+     [survey] IR: https://corporate.target.com/investors
+     [survey] candidate: https://corporate.target.com/press/release/2026/03/target-corporation-reports-fourth-quarter-and-full-year-2025-earnings
+     [survey] candidate: https://corporate.target.com/press/release/2026/03/target-corporation-declares-regular-quarterly-dividend
+     [survey]   sub-event: https://corporate.target.com/press/release/2026/03/target-corporation-declares-regular-quarterly-dividend#site-nav-toggle
+     [survey] candidate: https://corporate.target.com/press/release/2026/01/target-corporation-declares-regular-quarterly-dividend
+     [survey]   sub-event: https://corporate.target.com/press/release/2026/01/target-corporation-declares-regular-quarterly-dividend#site-nav-toggle
+     → 1 hit(s); vendors: ['(unknown)']
+
+   [EL]
+     [survey] start=https://www.elcompanies.com
+     [survey] IR: https://www.elcompanies.com/en/investors
+     [survey] candidate: https://www.elcompanies.com/en/investors/press-releases-and-news
+     [survey]   sub-event: https://www.elcompanies.com/en/investors/press-releases-and-news#mobinav-section-earnings-and-financials-level3
+     [survey] candidate: https://www.elcompanies.com/en/investors/events-and-presentations
+     [survey]   sub-event: https://www.elcompanies.com/en/investors/events-and-presentations#mobinav-section-earnings-and-financials-level3
+     [survey] candidate: https://www.elcompanies.com/en/investors/earnings-and-financials/sec-filings
+     [survey]   sub-event: https://www.elcompanies.com/en/investors/earnings-and-financials/sec-filings#mobinav-section-who-we-are-level2
+     → 25 hit(s); vendors: ['(unknown)', 'west_intrado']
+
+   [SYY]
+     [survey] start=https://www.sysco.com
+     [survey] IR: https://investors.sysco.com/
+     [survey] candidate skipped (blocked pattern): https://investors.sysco.com/annual-reports-and-sec-filings/events-and-presentations/upcoming-events
+     [survey] candidate skipped (blocked pattern): https://investors.sysco.com/annual-reports-and-sec-filings/events-and-presentations
+     [survey] candidate: https://investors.sysco.com/earnings-reports-and-financials/quarterly-results/2026
+     [survey]   sub-event: https://investors.sysco.com/earnings-reports-and-financials/quarterly-results/2026#maincontent
+     → 2 hit(s); vendors: ['(unknown)']
+
+Survey written to: C:\Users\rodin\Desktop\Brain\Knowledge\IR Webcast Vendor Survey.md
+Coverage: 15/15 tickers had ≥1 webcast URL.

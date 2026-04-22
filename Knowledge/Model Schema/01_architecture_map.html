@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CELH Pipeline — Architecture Map</title>
+<style>
+  :root {
+    --bg: #0a0d14;
+    --panel: #131824;
+    --panel-2: #1a2030;
+    --border: #2a3244;
+    --text: #e6e8ef;
+    --text-dim: #7b8294;
+    --accent: #4f9eff;
+
+    /* node type colors (legend) */
+    --c-skill:    #e97c2b;   /* orange — user-invoked entry points */
+    --c-contract: #14b8a6;   /* teal  — Pydantic data contracts */
+    --c-pkg:      #0ea5e9;   /* cyan  — shared package */
+    --c-store:    #ec4899;   /* magenta — persistent markdown / YAML */
+    --c-external: #ef4444;   /* red   — external sources / sinks */
+
+    --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    --sys: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    font-family: var(--sys);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header {
+    padding: 14px 24px 10px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    flex: 0 0 auto;
+  }
+  header h1 { margin: 0 0 2px; font-size: 16px; font-weight: 600; }
+  header .sub { color: var(--text-dim); font-size: 12px; }
+  .toggles { display: flex; gap: 18px; margin-top: 10px; flex-wrap: wrap; }
+  .toggle-group { display: flex; flex-direction: column; gap: 4px; }
+  .toggle-label {
+    font-size: 10px; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .seg {
+    display: inline-flex; background: var(--panel-2);
+    border: 1px solid var(--border); border-radius: 5px; overflow: hidden;
+  }
+  .seg button {
+    background: transparent; color: var(--text-dim);
+    border: none; padding: 5px 11px; font-family: var(--sys);
+    font-size: 12px; cursor: pointer;
+  }
+  .seg button.active { background: var(--accent); color: #fff; }
+  .seg button:hover:not(.active) { color: var(--text); }
+
+  main {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .map-wrap {
+    position: relative;
+    background: var(--bg);
+    overflow: hidden;
+    cursor: grab;
+  }
+  .map-wrap.panning { cursor: grabbing; }
+  svg.map { width: 100%; height: 100%; display: block; }
+  .layer-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    fill: var(--text-dim);
+    letter-spacing: 1.2px;
+  }
+  .layer-divider { stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 4; }
+  .edge {
+    fill: none;
+    stroke: #3a4358;
+    stroke-width: 1.2;
+    stroke-dasharray: 3 3;
+    opacity: 0.6;
+  }
+  .edge.active { stroke: var(--accent); opacity: 1; stroke-dasharray: none; stroke-width: 1.8; }
+  .edge.schema { stroke: var(--c-pkg); stroke-dasharray: 1 4; opacity: 0.4; }
+
+  .node-g { cursor: pointer; }
+  .node-rect {
+    rx: 6; ry: 6;
+    stroke-width: 1.5;
+    fill: var(--panel-2);
+    transition: all 0.15s;
+  }
+  .node-g:hover .node-rect { filter: brightness(1.3); }
+  .node-g.selected .node-rect { stroke-width: 2.5; filter: brightness(1.4); }
+
+  .node-rect.skill    { stroke: var(--c-skill);    fill: #2a1a0a; }
+  .node-rect.contract { stroke: var(--c-contract); fill: #0d2725; }
+  .node-rect.pkg      { stroke: var(--c-pkg);      fill: #0a2030; }
+  .node-rect.store    { stroke: var(--c-store);    fill: #2a0f22; }
+  .node-rect.external { stroke: var(--c-external); fill: #2a0f0f; }
+
+  .node-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    fill: var(--text);
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+    font-weight: 500;
+  }
+  .node-sub {
+    font-family: var(--sys);
+    font-size: 9px;
+    fill: var(--text-dim);
+    text-anchor: middle;
+    pointer-events: none;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    gap: 4px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px;
+  }
+  .controls button {
+    background: transparent;
+    color: var(--text-dim);
+    border: none;
+    width: 28px; height: 28px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: var(--mono);
+    border-radius: 4px;
+  }
+  .controls button:hover { background: var(--panel-2); color: var(--text); }
+  .controls .fit { width: auto; padding: 0 10px; font-size: 11px; }
+
+  .legend {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    display: flex;
+    gap: 14px;
+    background: rgba(19, 24, 36, 0.92);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 11px;
+    color: var(--text-dim);
+    flex-wrap: wrap;
+  }
+  .legend span::before {
+    content: '■';
+    margin-right: 5px;
+  }
+  .legend .l-skill::before    { color: var(--c-skill); }
+  .legend .l-contract::before { color: var(--c-contract); }
+  .legend .l-pkg::before      { color: var(--c-pkg); }
+  .legend .l-store::before    { color: var(--c-store); }
+  .legend .l-external::before { color: var(--c-external); }
+
+  aside {
+    background: var(--panel);
+    border-left: 1px solid var(--border);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .detail h2 {
+    margin: 0 0 2px;
+    font-family: var(--mono);
+    font-size: 15px;
+    color: var(--text);
+  }
+  .detail .kind-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .kind-tag.skill    { background: #2a1a0a; color: var(--c-skill);    border: 1px solid var(--c-skill); }
+  .kind-tag.contract { background: #0d2725; color: var(--c-contract); border: 1px solid var(--c-contract); }
+  .kind-tag.pkg      { background: #0a2030; color: var(--c-pkg);      border: 1px solid var(--c-pkg); }
+  .kind-tag.store    { background: #2a0f22; color: var(--c-store);    border: 1px solid var(--c-store); }
+  .kind-tag.external { background: #2a0f0f; color: var(--c-external); border: 1px solid var(--c-external); }
+  .detail .purpose { color: var(--text-dim); font-size: 12.5px; margin-bottom: 12px; }
+  .detail-block { margin-bottom: 10px; }
+  .detail-block .label {
+    font-size: 9px; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px;
+  }
+  .detail-block code {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--c-contract);
+    background: var(--panel-2); padding: 2px 6px;
+    border-radius: 3px; border: 1px solid var(--border);
+  }
+  .detail-block ul { margin: 0; padding-left: 16px; font-size: 12px; }
+  .detail-block ul li { margin-bottom: 3px; }
+  .connections {
+    display: flex; flex-direction: column; gap: 3px;
+  }
+  .conn-pill {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  .conn-pill:hover { color: var(--text); border-color: var(--accent); }
+  .conn-arrow { color: var(--text-dim); margin: 0 5px; }
+
+  .scaffold-section {
+    padding: 16px 20px;
+  }
+  .scaffold-section h3 {
+    margin: 0 0 10px;
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .scaffold-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+  .scaffold-grid button {
+    background: var(--panel-2); color: var(--text-dim);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 7px 9px; font-family: var(--mono); font-size: 10.5px;
+    cursor: pointer; text-align: left;
+  }
+  .scaffold-grid button.active { background: #2a1f0a; border-color: var(--c-skill); color: var(--c-skill); }
+  .scaffold-grid button:hover:not(.active) { color: var(--text); }
+  .prompt-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px;
+  }
+  .copy-btn {
+    background: var(--accent); color: #fff; border: none;
+    border-radius: 4px; padding: 5px 11px; font-size: 11px; cursor: pointer;
+  }
+  .copy-btn.copied { background: #16a34a; }
+  pre.prompt {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text);
+    background: var(--panel-2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    white-space: pre-wrap;
+    line-height: 1.5;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>CELH Pipeline — Architecture Map</h1>
+  <div class="sub">Top-down: raw extraction → reconciliation → validation → viz/write/calc. Bottom row = contracts + external sources. Drag to pan, scroll to zoom, click a node for details.</div>
+  <div class="sub" style="margin-top: 4px;"><span style="color: #16a34a; font-weight: 600;">✓</span> <span style="color: var(--text);">3 of 6 skills built:</span> <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-reconcile</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-validate</code> <span style="color: var(--text-dim);">— full pipeline run on CELH 2024 10-K (BS + IS + CF): 260 extracted → 260 mapped → <strong style="color: #16a34a">26 of 26 validation rules PASS</strong> (BS-1..BS-6 × 2 periods, CF-1/CF-2 × 3 periods, X-1/X-2/X-4 × 3 periods) with all gaps = 0 and cash-convention anomaly handled.</span></div>
+  <div class="toggles">
+    <div class="toggle-group">
+      <div class="toggle-label">Schema Hosting</div>
+      <div class="seg" id="seg-schema">
+        <button data-val="shared" class="active">A · Shared package</button>
+        <button data-val="per-skill">B · Per-skill copy</button>
+      </div>
+    </div>
+    <div class="toggle-group">
+      <div class="toggle-label">Scope</div>
+      <div class="seg" id="seg-scope">
+        <button data-val="celh" class="active">CELH-only</button>
+        <button data-val="generic">Generic + ledger</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="map-wrap" id="mapWrap">
+    <svg class="map" id="svg" viewBox="0 0 1200 1150" preserveAspectRatio="xMidYMin meet">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#3a4358" />
+        </marker>
+        <marker id="arrow-active" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#4f9eff" />
+        </marker>
+        <marker id="arrow-schema" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#0ea5e9" opacity="0.5" />
+        </marker>
+      </defs>
+      <g id="viewport">
+        <!-- layers and nodes rendered by JS -->
+      </g>
+    </svg>
+    <div class="controls">
+      <button id="zoomOut" title="Zoom out">−</button>
+      <button id="zoomIn" title="Zoom in">+</button>
+      <button id="fit" class="fit" title="Fit to viewport">Fit</button>
+    </div>
+    <div class="legend">
+      <span class="l-skill">Skill</span>
+      <span class="l-contract">Pydantic contract</span>
+      <span class="l-pkg">Shared package</span>
+      <span class="l-store">Persistent store</span>
+      <span class="l-external">External source / sink</span>
+    </div>
+  </div>
+
+  <aside>
+    <div class="detail" id="detail"></div>
+    <div class="scaffold-section">
+      <h3>Scaffold which skill first?</h3>
+      <div class="scaffold-grid" id="scaffoldGrid"></div>
+      <div class="prompt-head">
+        <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.6px;">Scaffolding prompt</div>
+        <button class="copy-btn" id="copyBtn">Copy</button>
+      </div>
+      <pre class="prompt" id="prompt"></pre>
+    </div>
+  </aside>
+</main>
+
+<script>
+// ============ DATA MODEL ============
+
+const LAYERS = [
+  { id: 'input',     label: 'INPUT · SOURCE FILINGS',               y0: 40,   y1: 130,  bg: '#0d1220' },
+  { id: 'extract',   label: 'LAYER 1 · RAW DATA + UNIT VALIDATION', y0: 130,  y1: 320,  bg: '#0a0f1c' },
+  { id: 'reconcile', label: 'LAYER 2 · RECONCILIATION',             y0: 320,  y1: 510,  bg: '#0d1220' },
+  { id: 'validate',  label: 'LAYER 3 · INTEGRITY VALIDATION',       y0: 510,  y1: 700,  bg: '#0a0f1c' },
+  { id: 'output',    label: 'LAYER 4 · VIZ · WRITE · CALC',         y0: 700,  y1: 990,  bg: '#0d1220' },
+  { id: 'storage',   label: 'LAYER 5 · SHARED SCHEMA',              y0: 990,  y1: 1110, bg: '#0a0f1c' }
+];
+
+// x = center, y = center, w/h in SVG units. Grid-aligned for readability.
+// Column convention: skills in left column (x=380), contracts in right column (x=870).
+// Layer 4 output skills spread across 4 columns.
+// Layer 5 storage has two sub-rows (contracts/stores, then external I/O).
+const NODES = [
+  // Layer 1
+  { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 620,  y: 225, w: 240, h: 56, label: 'financials-extract',
+    purpose: 'Parse SEC filing PDFs into Pydantic RawFiling. Detect currency unit (thousands / millions / billions) before emitting.',
+    input: 'PDF path', output: 'RawFiling',
+    ops: [
+      'Locate BS/CF/IS pages by heading match (not hardcoded pages)',
+      'Detect unit via phrase regex + plausibility fallback',
+      'Extract table rows with pdfplumber, preserve raw filing labels',
+      'Attach (page, line_hint) citation to every value',
+      'Reject Unit.UNKNOWN at Statement model_validator'
+    ],
+    deps: ['pymupdf', 'pdfplumber', 'pydantic', 'rapidfuzz']
+  },
+  { id: 'RawFiling', layer: 'extract', kind: 'contract', x: 940, y: 225, w: 200, h: 56, label: 'RawFiling',
+    purpose: 'Pydantic model for an extracted filing. Contains Statement[] (BS/CF/IS), each with Unit + RawLineItem[].',
+    fields: ['ticker: str', 'filing_type: FilingType', 'filing_date: date', 'source_path: Path', 'statements: list[Statement]'],
+    validators: ['at_least_one_statement', 'press_release_has_only_income_statement']
+  },
+
+  // Layer 2
+  { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 415, w: 240, h: 56, label: 'financials-reconcile',
+    purpose: 'Map raw filing labels to canonical model rows via the decisions ledger. Auto-apply known rules, prompt only for novel items.',
+    input: 'RawFiling + ledger', output: 'MappedFiling',
+    ops: [
+      'Normalize labels (case, whitespace, punctuation collapsed)',
+      'Lookup ledger; auto-apply if matched',
+      'rapidfuzz-score novel items against ledger for suggested matches',
+      'Prompt user for novel items only',
+      'Append new decisions to ledger (append-only, dated)'
+    ],
+    deps: ['pydantic', 'pyyaml', 'rapidfuzz']
+  },
+  { id: 'MappedFiling', layer: 'reconcile', kind: 'contract', x: 940, y: 415, w: 200, h: 56, label: 'MappedFiling',
+    purpose: 'RawFiling with each line item mapped to (model_sheet, model_row, model_label). Carries list of novel items needing user input.',
+    fields: ['raw: RawFiling', 'mapped_line_items: list[MappedLineItem]', 'novel_items: list[NovelItem]'],
+    validators: ['no_unresolved_novel_items (blocks Layer 3)']
+  },
+
+  // Layer 3
+  { id: 'financials-validate', layer: 'validate', kind: 'skill', built: true, x: 620, y: 605, w: 240, h: 56, label: 'financials-validate',
+    purpose: 'Arithmetic integrity — accounting identities + cross-statement ties as Pydantic validators. Blocks the pipeline on fail.',
+    input: 'MappedFiling', output: 'ValidatedFiling',
+    ops: [
+      'BS-1..BS-7: subtotal sums, accounting equation, RE roll-forward',
+      'CF-1/CF-2: CFO+CFI+CFF+FX = ΔCash; End = Beg + Δ',
+      'X-1..X-4: CF NI = P&L NI, CF CashEnd = BS Cash, Pref Div ties',
+      'Raise ValidationError w/ structured gap list on fail',
+      'Honor ledger Section D override entries'
+    ],
+    deps: ['pydantic', 'decimal']
+  },
+  { id: 'ValidatedFiling', layer: 'validate', kind: 'contract', x: 940, y: 605, w: 200, h: 56, label: 'ValidatedFiling',
+    purpose: 'MappedFiling + list[ValidationResult]. Only emitted when all rules pass (or overrides explain each fail).',
+    fields: ['mapped: MappedFiling', 'results: list[ValidationResult]', 'passed: bool'],
+    validators: ['all_results_pass_or_override']
+  },
+
+  // Layer 4
+  { id: 'financials-playground', layer: 'output', kind: 'skill', x: 180, y: 790, w: 220, h: 56, label: 'financials-playground',
+    purpose: 'Self-contained HTML explorer over a ValidatedFiling. QA step — toggle periods, compare filings, flag anomalies before Excel write.',
+    input: 'ValidatedFiling[]', output: 'explorer.html',
+    ops: [
+      'Render BS/CF/IS tables with period columns',
+      'Flag YoY changes >20%',
+      'Toggle raw filing label vs canonical model row',
+      'Per-line validation status badge',
+      'Copy-out the model-write scaffold prompt'
+    ],
+    deps: ['jinja2', 'pydantic']
+  },
+  { id: 'model-write', layer: 'output', kind: 'skill', x: 440, y: 790, w: 180, h: 56, label: 'model-write',
+    purpose: 'Write ValidatedFiling into the .xlsm model. Preserves macros, honors cross-sheet formulas via Path 3 manual inserts.',
+    input: 'ValidatedFiling + xlsm path', output: '.xlsm_updated',
+    ops: [
+      'Backup original to .bak before any write',
+      'openpyxl load with keep_vba=True; never cell.fill = None',
+      'Emit ManualInsertPlan for new rows (user inserts first)',
+      'Write values only, not formulas',
+      'Verify-after-save: reload + spot-check + grep #REF!'
+    ],
+    deps: ['openpyxl', 'shutil', 'pydantic']
+  },
+  { id: 'model-calc', layer: 'output', kind: 'skill', x: 680, y: 790, w: 180, h: 56, label: 'model-calc',
+    purpose: 'Derived calcs + scenario overlay. Plugs GLP-1 consumption headwind + SNAP ban volume drag into revenue forecast.',
+    input: 'ValidatedFiling + ScenarioInputs', output: 'DerivedCalcs',
+    ops: [
+      'YoY/QoQ growth, margins, DSO/DIO/CCC',
+      'GLP-1 consumption headwind curve overlay',
+      'SNAP state-weighted volume drag overlay',
+      'Base / bull / bear sensitivity grid',
+      'Emit JSON for charting / dashboards'
+    ],
+    deps: ['pydantic', 'pandas', 'numpy']
+  },
+  { id: 'DerivedCalcs', layer: 'output', kind: 'contract', x: 940, y: 790, w: 200, h: 56, label: 'DerivedCalcs',
+    purpose: 'Growth rates, margins, working capital ratios, and scenario grids. Output of model-calc, consumed by the case study deck.',
+    fields: ['growth: GrowthTable', 'margins: MarginTable', 'working_capital: WcRatios', 'scenarios: ScenarioGrid']
+  },
+
+  // Stores positioned next to their consumer skill, in the skill's own layer.
+
+  // Layer 1 — feeds financials-extract
+  { id: 'source-pdfs', layer: 'input', kind: 'external', x: 600, y: 85, w: 260, h: 50, label: 'SEC filing PDFs',
+    purpose: 'Source-of-truth PDFs. 10-K contains BS/CF/IS. Press releases = IS only. Organized by filing type inside the ticker folder.',
+    path: 'Brain/Knowledge/Model Schema/CELH/sources/{10-K, 10-Q, press_releases}/'
+  },
+  { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 310, y: 225, w: 240, h: 50, label: 'pattern_libraries/*.json',
+    purpose: 'YAML pattern files for statement headings, unit phrases, section labels, period phrases, numeric notation. Read by financials-extract; new variants auto-appended on fuzzy match.',
+    path: '~/.claude/skills/financials-extract/references/*.json'
+  },
+
+  // Layer 2 — feeds / is appended-to by financials-reconcile
+  { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 325, w: 240, h: 50, label: 'decisions_ledger.json',
+    purpose: 'Per-ticker mapping + structural-decision store. CELH: 29 mappings + 17 new rows + 7 structural decisions. Lives inside the ticker folder.',
+    path: 'Brain/Knowledge/Model Schema/CELH/decisions_ledger.json'
+  },
+
+  // Layer 3 — written by financials-validate
+  { id: 'citations-doc', layer: 'validate', kind: 'store', x: 310, y: 605, w: 240, h: 50, label: 'source_citations.json',
+    purpose: 'Per-value citation trail (filing, page, line_hint). Output artifact of reconcile+validate. Machine-readable for downstream skills.',
+    path: 'Brain/Knowledge/Model Schema/CELH/source_citations.json'
+  },
+
+  // Layer 4 sub-row (y=830) — xlsm under model-write, glp1/snap feeding model-calc
+  { id: 'xlsm-model', layer: 'output', kind: 'external', x: 400, y: 920, w: 200, h: 50, label: 'CELH Financial Model.xlsm',
+    purpose: 'Target Excel model (10 sheets, VBA macros). Written via model-write; saves to _updated.xlsm, never overwrites.',
+    path: 'Brain/Knowledge/Model Schema/CELH/derived/CELH Financial Model.xlsm'
+  },
+  { id: 'glp1-model', layer: 'output', kind: 'external', x: 610, y: 920, w: 150, h: 50, label: 'GLP-1 output',
+    purpose: 'Energy drink consumption headwind curve from the GLP-1 Projection model. Scenario input to model-calc.',
+    path: 'data/derived/GLP1_Projection Data.xlsx'
+  },
+  { id: 'snap-model', layer: 'output', kind: 'external', x: 770, y: 920, w: 150, h: 50, label: 'SNAP output',
+    purpose: 'State-weighted volume drag from the SNAP energy drink ban model. Scenario input to model-calc.',
+    path: 'data/derived/Celsius_SNAP Data_GR.xlsx'
+  },
+
+  // Layer 5 — shared Pydantic package (used by every skill)
+  { id: 'financials-schema', layer: 'storage', kind: 'pkg', x: 580, y: 1040, w: 260, h: 56, label: 'financials-schema/',
+    purpose: 'Shared Pydantic package imported by every skill. Defines RawFiling, MappedFiling, ValidatedFiling, DerivedCalcs, PatternLibrary.',
+    path: '~/projects/financials-schema/', install: 'pip install -e .'
+  }
+];
+
+const EDGES = [
+  // External → extract
+  { from: 'source-pdfs', to: 'financials-extract', kind: 'data' },
+  // Pattern libraries ↔ extract (read on match, append on novel)
+  { from: 'pattern-libraries', to: 'financials-extract', kind: 'data' },
+  { from: 'financials-extract', to: 'pattern-libraries', kind: 'data' },
+  // extract produces
+  { from: 'financials-extract', to: 'RawFiling', kind: 'data' },
+  // RawFiling → reconcile
+  { from: 'RawFiling', to: 'financials-reconcile', kind: 'data' },
+  // ledger ↔ reconcile
+  { from: 'decisions-ledger', to: 'financials-reconcile', kind: 'data' },
+  { from: 'financials-reconcile', to: 'decisions-ledger', kind: 'data' },
+  // reconcile produces
+  { from: 'financials-reconcile', to: 'MappedFiling', kind: 'data' },
+  // MappedFiling → validate
+  { from: 'MappedFiling', to: 'financials-validate', kind: 'data' },
+  // validate produces
+  { from: 'financials-validate', to: 'ValidatedFiling', kind: 'data' },
+  { from: 'financials-validate', to: 'citations-doc', kind: 'data' },
+  // ValidatedFiling → 3 outputs
+  { from: 'ValidatedFiling', to: 'financials-playground', kind: 'data' },
+  { from: 'ValidatedFiling', to: 'model-write', kind: 'data' },
+  { from: 'ValidatedFiling', to: 'model-calc', kind: 'data' },
+  // model-write → xlsm
+  { from: 'model-write', to: 'xlsm-model', kind: 'data' },
+  // model-calc scenario inputs
+  { from: 'glp1-model', to: 'model-calc', kind: 'data' },
+  { from: 'snap-model', to: 'model-calc', kind: 'data' },
+  // model-calc produces
+  { from: 'model-calc', to: 'DerivedCalcs', kind: 'data' },
+  // Schema package → contracts (dashed, annotated)
+  { from: 'financials-schema', to: 'RawFiling', kind: 'schema' },
+  { from: 'financials-schema', to: 'MappedFiling', kind: 'schema' },
+  { from: 'financials-schema', to: 'ValidatedFiling', kind: 'schema' },
+  { from: 'financials-schema', to: 'DerivedCalcs', kind: 'schema' }
+];
+
+// ============ STATE ============
+
+const state = {
+  schema: 'shared',
+  scope: 'celh',
+  selectedId: 'financials-extract',
+  scaffoldFirst: 'financials-extract',
+  tx: 0, ty: 0, scale: 1
+};
+
+// ============ RENDER: SVG MAP ============
+
+const svg = document.getElementById('svg');
+const viewport = document.getElementById('viewport');
+const mapWrap = document.getElementById('mapWrap');
+
+function nodeById(id) { return NODES.find(n => n.id === id); }
+
+function renderMap() {
+  viewport.innerHTML = '';
+
+  // Layer bands (background) + labels
+  LAYERS.forEach(layer => {
+    const band = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    band.setAttribute('x', 0);
+    band.setAttribute('y', layer.y0);
+    band.setAttribute('width', 1200);
+    band.setAttribute('height', layer.y1 - layer.y0);
+    band.setAttribute('fill', layer.bg);
+    viewport.appendChild(band);
+
+    const div = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    div.setAttribute('x1', 0);
+    div.setAttribute('x2', 1200);
+    div.setAttribute('y1', layer.y1);
+    div.setAttribute('y2', layer.y1);
+    div.setAttribute('class', 'layer-divider');
+    viewport.appendChild(div);
+
+    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    label.setAttribute('x', 16);
+    label.setAttribute('y', layer.y0 + 22);
+    label.setAttribute('class', 'layer-label');
+    label.textContent = layer.label;
+    viewport.appendChild(label);
+  });
+
+  // Edges first (so they sit under nodes)
+  EDGES.forEach(e => {
+    const a = nodeById(e.from), b = nodeById(e.to);
+    if (!a || !b) return;
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', edgePath(a, b));
+    let cls = 'edge';
+    if (e.kind === 'schema') cls += ' schema';
+    if (e.from === state.selectedId || e.to === state.selectedId) cls += ' active';
+    path.setAttribute('class', cls);
+    if (e.kind === 'schema') {
+      path.setAttribute('marker-end', 'url(#arrow-schema)');
+    } else if (e.from === state.selectedId || e.to === state.selectedId) {
+      path.setAttribute('marker-end', 'url(#arrow-active)');
+    } else {
+      path.setAttribute('marker-end', 'url(#arrow)');
+    }
+    viewport.appendChild(path);
+  });
+
+  // Nodes
+  NODES.forEach(n => {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'node-g' + (n.id === state.selectedId ? ' selected' : ''));
+    g.setAttribute('transform', `translate(${n.x - n.w/2}, ${n.y - n.h/2})`);
+    g.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      state.selectedId = n.id;
+      renderMap();
+      renderDetail();
+    });
+
+    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    rect.setAttribute('class', 'node-rect ' + n.kind);
+    rect.setAttribute('width', n.w);
+    rect.setAttribute('height', n.h);
+    g.appendChild(rect);
+
+    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.setAttribute('class', 'node-label');
+    text.setAttribute('x', n.w / 2);
+    text.setAttribute('y', n.h / 2);
+    text.textContent = n.label;
+    g.appendChild(text);
+
+    // Built badge — small green checkmark for skills that are implemented
+    if (n.built) {
+      const badge = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      badge.setAttribute('transform', `translate(${n.w - 12}, -8)`);
+      const badgeCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      badgeCircle.setAttribute('r', 9);
+      badgeCircle.setAttribute('cx', 0);
+      badgeCircle.setAttribute('cy', 0);
+      badgeCircle.setAttribute('fill', '#16a34a');
+      badgeCircle.setAttribute('stroke', '#0a0d14');
+      badgeCircle.setAttribute('stroke-width', 1.5);
+      badge.appendChild(badgeCircle);
+      const check = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      check.setAttribute('x', 0);
+      check.setAttribute('y', 1);
+      check.setAttribute('text-anchor', 'middle');
+      check.setAttribute('dominant-baseline', 'middle');
+      check.setAttribute('fill', '#fff');
+      check.setAttribute('font-size', '11');
+      check.setAttribute('font-weight', '700');
+      check.setAttribute('pointer-events', 'none');
+      check.textContent = '✓';
+      badge.appendChild(check);
+      const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+      title.textContent = 'Built — implementation at ~/.claude/skills/' + n.id + '/';
+      badge.appendChild(title);
+      g.appendChild(badge);
+    }
+
+    viewport.appendChild(g);
+  });
+
+  applyTransform();
+}
+
+function edgePath(a, b) {
+  // Route between node edges, not centers
+  const x1 = a.x;
+  const y1 = a.y + (b.y > a.y ? a.h/2 : -a.h/2);
+  const x2 = b.x;
+  const y2 = b.y + (b.y > a.y ? -b.h/2 : b.h/2);
+  const dy = Math.abs(y2 - y1);
+  const c = Math.max(30, dy * 0.45);
+  if (Math.abs(x2 - x1) > 500 && Math.abs(y2 - y1) < 10) {
+    // mostly horizontal
+    return `M ${x1} ${y1} C ${x1 + 100} ${y1}, ${x2 - 100} ${y2}, ${x2} ${y2}`;
+  }
+  const c1y = b.y > a.y ? y1 + c : y1 - c;
+  const c2y = b.y > a.y ? y2 - c : y2 + c;
+  return `M ${x1} ${y1} C ${x1} ${c1y}, ${x2} ${c2y}, ${x2} ${y2}`;
+}
+
+// ============ PAN + ZOOM ============
+
+function applyTransform() {
+  viewport.setAttribute('transform', `translate(${state.tx} ${state.ty}) scale(${state.scale})`);
+}
+
+let panning = false, startPX, startPY, startTx, startTy;
+mapWrap.addEventListener('mousedown', (e) => {
+  if (e.target.closest('.node-g')) return;
+  if (e.target.closest('.controls')) return;
+  panning = true;
+  mapWrap.classList.add('panning');
+  startPX = e.clientX; startPY = e.clientY;
+  startTx = state.tx; startTy = state.ty;
+});
+window.addEventListener('mousemove', (e) => {
+  if (!panning) return;
+  state.tx = startTx + (e.clientX - startPX);
+  state.ty = startTy + (e.clientY - startPY);
+  applyTransform();
+});
+window.addEventListener('mouseup', () => { panning = false; mapWrap.classList.remove('panning'); });
+
+mapWrap.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const rect = mapWrap.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const factor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
+  const newScale = Math.max(0.4, Math.min(3, state.scale * factor));
+  // zoom around mouse position
+  // svg mouse coords in viewBox:
+  const svgRect = svg.getBoundingClientRect();
+  const viewBox = svg.viewBox.baseVal;
+  const sx = (mx / svgRect.width) * viewBox.width;
+  const sy = (my / svgRect.height) * viewBox.height;
+  state.tx = sx - (sx - state.tx) * (newScale / state.scale);
+  state.ty = sy - (sy - state.ty) * (newScale / state.scale);
+  state.scale = newScale;
+  applyTransform();
+}, { passive: false });
+
+document.getElementById('zoomIn').addEventListener('click', () => {
+  state.scale = Math.min(3, state.scale * 1.2); applyTransform();
+});
+document.getElementById('zoomOut').addEventListener('click', () => {
+  state.scale = Math.max(0.4, state.scale / 1.2); applyTransform();
+});
+document.getElementById('fit').addEventListener('click', () => {
+  state.tx = 0; state.ty = 0; state.scale = 1; applyTransform();
+});
+
+// ============ DETAIL PANEL ============
+
+const detailEl = document.getElementById('detail');
+
+function renderDetail() {
+  const n = nodeById(state.selectedId);
+  if (!n) { detailEl.innerHTML = ''; return; }
+
+  const incoming = EDGES.filter(e => e.to === n.id).map(e => e.from);
+  const outgoing = EDGES.filter(e => e.from === n.id).map(e => e.to);
+
+  let body = `
+    <h2>${n.label}</h2>
+    <div class="kind-tag ${n.kind}">${n.kind}</div>
+    <div class="purpose">${n.purpose || ''}</div>
+  `;
+
+  if (n.input || n.output) {
+    body += `
+      <div class="detail-block">
+        <div class="label">I/O</div>
+        <code>${n.input || ''}</code>
+        <span class="conn-arrow">→</span>
+        <code>${n.output || ''}</code>
+      </div>`;
+  }
+
+  if (n.ops) {
+    body += `<div class="detail-block"><div class="label">Key operations</div><ul>${n.ops.map(o => `<li>${o}</li>`).join('')}</ul></div>`;
+  }
+
+  if (n.fields) {
+    body += `<div class="detail-block"><div class="label">Fields</div><ul>${n.fields.map(f => `<li><code style="font-size:10.5px">${f}</code></li>`).join('')}</ul></div>`;
+  }
+
+  if (n.validators) {
+    body += `<div class="detail-block"><div class="label">Validators</div><ul>${n.validators.map(v => `<li><code style="font-size:10.5px">${v}</code></li>`).join('')}</ul></div>`;
+  }
+
+  if (n.deps) {
+    body += `<div class="detail-block"><div class="label">Dependencies</div>${n.deps.map(d => `<code style="font-size:10.5px; margin-right:4px">${d}</code>`).join('')}</div>`;
+  }
+
+  if (n.path) {
+    body += `<div class="detail-block"><div class="label">Path</div><code style="font-size:10.5px">${n.path}</code></div>`;
+  }
+
+  if (incoming.length) {
+    body += `<div class="detail-block"><div class="label">Consumes from</div><div class="connections">${incoming.map(id => {
+      const m = nodeById(id);
+      return `<div class="conn-pill" data-nav="${id}">← ${m ? m.label : id}</div>`;
+    }).join('')}</div></div>`;
+  }
+
+  if (outgoing.length) {
+    body += `<div class="detail-block"><div class="label">Emits to</div><div class="connections">${outgoing.map(id => {
+      const m = nodeById(id);
+      return `<div class="conn-pill" data-nav="${id}">→ ${m ? m.label : id}</div>`;
+    }).join('')}</div></div>`;
+  }
+
+  detailEl.innerHTML = body;
+  detailEl.querySelectorAll('.conn-pill').forEach(el => {
+    el.addEventListener('click', () => {
+      state.selectedId = el.dataset.nav;
+      renderMap();
+      renderDetail();
+    });
+  });
+}
+
+// ============ SCAFFOLD PROMPT ============
+
+const SKILL_IDS = ['financials-extract', 'financials-reconcile', 'financials-validate', 'financials-playground', 'model-write', 'model-calc'];
+const gridEl = document.getElementById('scaffoldGrid');
+const promptEl = document.getElementById('prompt');
+
+function renderScaffoldGrid() {
+  gridEl.innerHTML = '';
+  SKILL_IDS.forEach(id => {
+    const btn = document.createElement('button');
+    btn.textContent = id;
+    if (id === state.scaffoldFirst) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      state.scaffoldFirst = id;
+      state.selectedId = id;
+      renderMap();
+      renderDetail();
+      renderScaffoldGrid();
+      updatePrompt();
+    });
+    gridEl.appendChild(btn);
+  });
+}
+
+function schemaLine() {
+  return state.schema === 'shared'
+    ? 'Shared Python package at ~/projects/financials-schema/. Every skill declares it as a dependency; schema changes cascade.'
+    : 'Per-skill copy in each skill\'s references/schemas.py with a version number. Looser coupling, drift risk.';
+}
+function scopeLine() {
+  return state.scope === 'celh'
+    ? 'CELH-only. Hardcode CELH-specific anomalies.'
+    : 'Generic-with-CELH-ledger. Skills are ticker-agnostic; CELH specifics live entirely in data/derived/celh_decisions_ledger.md.';
+}
+
+function scaffoldBody(id) {
+  return {
+    'financials-extract': `Input: PDF path (--pdf) + --ticker-root (e.g. Brain/Knowledge/Model Schema/CELH/).
+Output: RawFiling with BalanceSheet, CashFlow, IncomeStatement sub-models. Each RawLineItem carries raw_filing_label (verbatim), value (Decimal, native unit), raw_numeric_text ("(101,726)"), notation_flags (NumericNotation bitmap), citation (page, line_hint). Statement carries unit (Unit enum), raw_unit_phrase, unit_detection_source + confidence, share_unit, eps_unit, dialect.
+Unit detection: use pattern library at references/unit_phrases.json (4-layer ladder: normalize → keyword → fuzzy → user-prompt-append). Plausibility fallback reads tickers/{ticker}/config.json for expected revenue/TA ranges. Unit.UNKNOWN raises.
+Heuristics: locate BS/CF/IS via references/statement_heading_patterns.json (not hardcoded page numbers). Press releases = IS only.
+Reference: Brain/Knowledge/Model Schema/examples/pattern_libraries/*.json has starter templates.
+Acceptance: extract Brain/Knowledge/Model Schema/CELH/sources/10-K/2025_CELH_10-K.pdf → RawFiling whose FY2024 BS totals match Brain/Sessions/CELH Model/04_celh_source_citations.md §2.`,
+
+    'financials-reconcile': `Input: RawFiling + --ticker-root (reads decisions_ledger.json from there).
+Output: MappedFiling — each line item gains model_sheet, model_row, model_label. Unmatched items become NovelItem with rapidfuzz-scored suggestions; MappedFiling refuses to construct if novel_items isn't empty.
+Append new user decisions back to decisions_ledger.json with today's date (append-only, ISO-8601 dates).
+Reference: Brain/Knowledge/Model Schema/examples/celh/decisions_ledger.json has all 29 mappings + 17 new rows + 7 structural decisions already populated.
+Acceptance: round-trip a RawFiling from 2025_CELH_10-K.pdf through the CELH ledger → zero user prompts (all 53 rules auto-apply).`,
+
+    'financials-validate': `Input: MappedFiling + --ticker-root (reads anomalies.json for overrides).
+Output: ValidatedFiling, or raise ValidationError with structured gap list (rule_id, expected, actual, gap, severity).
+Validators: BS-1..BS-7, CF-1/CF-2, X-1..X-4 as pydantic @model_validators. Tolerance $1K absolute, 0.1% relative.
+Honor cash convention from Brain/Knowledge/Model Schema/CELH/anomalies.json (cash_convention_per_year: 2023=cash_plus_restricted, 2024+=cash_only). Override support via anomalies.json validation_overrides.
+Acceptance: run FY2024 BS/CF values from Brain/Sessions/CELH Model/04_celh_source_citations.md §2 → all 11 rules PASS.`,
+
+    'financials-playground': `Input: ValidatedFiling[] (one or more periods).
+Output: self-contained HTML (Jinja2 template) — single file, inlined CSS/JS, dark theme.
+Features: period selector (FY23/FY24/FY25/quarterly), BS/CF/IS tabs, YoY diff with >20% highlighted, toggle raw_filing_label ↔ model_label, citation tooltip on hover (shows page + line_hint), per-row validation badge.
+Copy-out button emits model-write scaffold prompt for selected period.
+Acceptance: FY23+FY24 side-by-side flags both the Inventories -43% drawdown and RE flip (-$12M → +$105M).`,
+
+    'model-write': `Input: ValidatedFiling + --xlsm (target path, usually Brain/Knowledge/Model Schema/CELH/derived/*.xlsm).
+Output: *_updated.xlsm + *.xlsm.bak.
+Excel safety (non-negotiable): keep_vba=True, never cell.fill = None (use PatternFill(fill_type=None)), save to _updated filename, .bak backup before writes, Path 3 manual inserts for new rows (emit ManualInsertPlan for user to action before values are written).
+Verify-after-save: reload, spot-check 10 known cells against source_citations.json, grep for #REF!.
+Acceptance: FY2023 BS cells in _updated file match Brain/Sessions/CELH Model/04_celh_source_citations.md §2.5 exactly.`,
+
+    'model-calc': `Input: ValidatedFiling (multi-period) + ScenarioInputs (glp1_share_curve, snap_ban_drag_by_state, terminal_growth, wacc).
+Output: DerivedCalcs with growth (YoY, CAGR), margins, WC ratios (DSO/DIO/CCC), scenario grid (base/bull/bear).
+Plug in GLP-1 model output (consumption headwind 2026E-2030E) and SNAP model output (state-weighted volume drag from 2026 bans).
+Acceptance: produce FY2026E-2028E scenario table for the case study deliverable.`
+  }[id];
+}
+
+function updatePrompt() {
+  const id = state.scaffoldFirst;
+  const ledgerNote = ['financials-reconcile', 'financials-validate', 'model-write'].includes(id)
+    ? '\n\nLoad and respect data/derived/celh_decisions_ledger.md (28 mapping + 16 new row + 4 structural + 11 anomaly entries — do not re-prompt for these).'
+    : '';
+
+  const text = `Scaffold the \`${id}\` skill as part of the CELH multi-skill financial-modeling pipeline.
+
+Pydantic schema hosting: ${schemaLine()}
+Scope: ${scopeLine()}
+
+${scaffoldBody(id)}
+
+Output structure: create the skill at ~/.claude/skills/${id}/ with SKILL.md (frontmatter: name, description, triggers), scripts/ for Python, references/ for lookup tables, and tests/ with at least one E2E test against the cited PDFs / ledger.${ledgerNote}
+
+Before writing any code, propose the Pydantic schema signatures (class names, field types, validators) and wait for approval.`;
+  promptEl.textContent = text;
+}
+
+// ============ WIRING ============
+
+document.querySelectorAll('#seg-schema button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#seg-schema button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.schema = btn.dataset.val;
+    updatePrompt();
+  });
+});
+document.querySelectorAll('#seg-scope button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#seg-scope button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.scope = btn.dataset.val;
+    updatePrompt();
+  });
+});
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(promptEl.textContent);
+    const b = document.getElementById('copyBtn');
+    b.textContent = 'Copied!'; b.classList.add('copied');
+    setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('copied'); }, 1500);
+  } catch (e) {
+    alert('Copy failed — select manually.');
+  }
+});
+
+// Initial render
+renderMap();
+renderDetail();
+renderScaffoldGrid();
+updatePrompt();
+</script>
+</body>
+</html>

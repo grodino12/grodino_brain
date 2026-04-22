@@ -1,0 +1,74 @@
+{
+  "_notes": "CELH quirks that affect extraction and validation. Every entry exists because CELH filings do something non-standard. Do not delete entries without understanding why.",
+  "_last_updated": "2026-04-22",
+  "_cash_convention_note": "Cash convention differs per year. Affects the X-2 cross-statement check. FY2023 10-K reports 'Cash, cash equivalents and restricted cash'; FY2024+ simplified to 'Cash and cash equivalents' only (restricted cash hit $0 at 12/31/23).",
+  "cash_convention_per_year": {
+    "2023": "cash_plus_restricted",
+    "2024": "cash_only",
+    "2025": "cash_only",
+    "2021": "cash_plus_restricted",
+    "2022": "cash_plus_restricted"
+  },
+  "_mezzanine_note": "Series A Convertible Preferred Stock ($824M from PEP investment). Does NOT sum into Total SE. Flows into Total L&E only.",
+  "mezzanine_equity": {
+    "enabled": true,
+    "line_items": [
+      "Series A convertible preferred stock"
+    ],
+    "excluded_from_total_se": true
+  },
+  "_identical_yoy_note": "Straight-line amortization makes some 'current' portions identical YoY. NOT extraction errors. Verify by checking NC bucket drops by same amount and CF amortization line ties.",
+  "identical_yoy_values": [
+    {
+      "line": "Deferred Other Costs (Current)",
+      "value": 14124,
+      "reason": "Annual straight-line amortization of deferred slotting fees",
+      "cross_check": "NC bucket drops by 14124 each year; CF 'Amortization of deferred other costs' ties exactly"
+    },
+    {
+      "line": "Deferred Revenue (Current)",
+      "value": 9513,
+      "reason": "PEP distribution agreement straight-line recognition over ~17.5 more years",
+      "cross_check": "NC bucket drops by 9513 each year"
+    }
+  ],
+  "structural_rules": [
+    {
+      "rule_id": "STRUCT-001",
+      "description": "Convertible Preferred excluded from Total SE sum",
+      "affected_rows": [
+        46,
+        48
+      ],
+      "reason": "Matches CELH's filed BS structure; sell-side standard"
+    },
+    {
+      "rule_id": "STRUCT-002",
+      "description": "Old CF row 24 'Change in Accounts Payable and Accrued Expenses' zeroed out FY2023+",
+      "reason": "Split into \u0394 A/P + \u0394 Accrued Expenses from FY2023 onward",
+      "legacy_values_retained": "2016-2022"
+    },
+    {
+      "rule_id": "STRUCT-003",
+      "description": "FY2024/FY2025 S&M vs G&A split is ESTIMATED from FY2023 ratio (72/28)",
+      "reason": "Press releases report consolidated SG&A only; actual split only available in 10-K MD&A",
+      "flag_for_review": true
+    },
+    {
+      "rule_id": "STRUCT-004",
+      "description": "3-for-1 stock split Nov 13, 2023 \u2014 do NOT auto-update share counts or EPS",
+      "reason": "Pre/post split inconsistency across filings"
+    }
+  ],
+  "_overrides_note": "Empty at start. Append only when a validation failure has a legitimate documented explanation.",
+  "validation_overrides": [],
+  "_caveats_note": "Awareness-only \u2014 no logic tied to these.",
+  "caveats": [
+    "Big Beverages acquisition FY2024 added ~$57M goodwill (FY2023 $14.2M \u2192 FY2024 $71.6M)",
+    "Alani Nu acquisition FY2025 \u2014 goodwill + intangibles expand materially",
+    "FY2025 first non-zero Interest Expense year ($49M) from new convertible debt",
+    "FY2025 introduced Distributor Termination Fees line on P&L ($327M, rolled into S&M per historical treatment)",
+    "Inventory drawdown -43% FY2023\u2192FY2024 alongside flat revenue \u2014 likely distributor destocking",
+    "A/R grew 64% YoY FY2024 \u2014 faster than revenue growth; worth investigating DSO trend"
+  ]
+}

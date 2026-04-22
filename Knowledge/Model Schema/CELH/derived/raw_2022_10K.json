@@ -1,0 +1,346 @@
+{
+  "ticker": "CELH",
+  "filing_type": "10-K",
+  "filing_date": "2022-03-01",
+  "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+  "statements": [
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2021,
+        "fiscal_quarter": null,
+        "period_end_date": "2021-12-31",
+        "raw_period_label": "December 31, 2021",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "actual",
+      "raw_unit_phrase": "(not detected; inferred ACTUAL)",
+      "unit_detection_source": "plausibility_inferred",
+      "unit_detection_confidence": 0.5,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Amortization",
+          "value": "713532",
+          "raw_numeric_text": "713,532",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Amortization | 713,532",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Inventory excess and obsolescence",
+          "value": "2354837",
+          "raw_numeric_text": "2,354,837",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Inventory excess and obsolescence | 2,354,837",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable and accrued expenses",
+          "value": "65186015",
+          "raw_numeric_text": "65,186,015",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Accounts payable and accrued expenses | 65,186,015",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from exercise of stock options",
+          "value": "3720141",
+          "raw_numeric_text": "3,720,141",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Proceeds from exercise of stock options | 3,720,141",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from collection of section 16b short swing profit",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Net proceeds from collection of section 16b short swing profit | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by financing activities",
+          "value": "71395426",
+          "raw_numeric_text": "71,395,426",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Net cash provided by financing activities | 71,395,426",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest",
+          "value": "7431",
+          "raw_numeric_text": "7,431",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Interest | 7,431",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Goodwill | —",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2020,
+        "fiscal_quarter": null,
+        "period_end_date": "2020-12-31",
+        "raw_period_label": "December 31, 2020",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "actual",
+      "raw_unit_phrase": "(not detected; inferred ACTUAL)",
+      "unit_detection_source": "plausibility_inferred",
+      "unit_detection_confidence": 0.5,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Amortization",
+          "value": "1484303",
+          "raw_numeric_text": "1,484,303",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Amortization | 1,484,303",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Inventory excess and obsolescence",
+          "value": "747507",
+          "raw_numeric_text": "747,507",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Inventory excess and obsolescence | 747,507",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable and accrued expenses",
+          "value": "8120106",
+          "raw_numeric_text": "8,120,106",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Accounts payable and accrued expenses | 8,120,106",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from exercise of stock options",
+          "value": "4126791",
+          "raw_numeric_text": "4,126,791",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Proceeds from exercise of stock options | 4,126,791",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from collection of section 16b short swing profit",
+          "value": "90800",
+          "raw_numeric_text": "90,800",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Net proceeds from collection of section 16b short swing profit | 90,800",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by financing activities",
+          "value": "15571488",
+          "raw_numeric_text": "15,571,488",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Net cash provided by financing activities | 15,571,488",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest",
+          "value": "447816",
+          "raw_numeric_text": "447,816",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Interest | 447,816",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "395515",
+          "raw_numeric_text": "395,515",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2022_CELH_10-K.pdf",
+            "page": 43,
+            "line_hint": "Goodwill | 395,515",
+            "note": null
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_metadata": {
+    "extracted_at": "2026-04-22T17:08:22",
+    "page_count": 71,
+    "statement_pages": [
+      {
+        "page": 34,
+        "canonical": "BALANCE_SHEET",
+        "source": "keyword_match",
+        "confidence": 0.9
+      },
+      {
+        "page": 41,
+        "canonical": "INCOME_STATEMENT",
+        "source": "keyword_match",
+        "confidence": 0.9
+      },
+      {
+        "page": 43,
+        "canonical": "CASH_FLOW",
+        "source": "keyword_match",
+        "confidence": 0.9
+      }
+    ]
+  }
+}

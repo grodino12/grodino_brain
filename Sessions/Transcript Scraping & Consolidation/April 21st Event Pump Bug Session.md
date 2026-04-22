@@ -1,8 +1,8 @@
 ---
 type: session-handoff
-date: 2026-04-21
-topic: west_intrado sniffer event-pump bug fixed → mediasite dispatch wired → audio 3/33 → 13/33
-tags: [session, consumer-staples, earnings, scraper, audio, playwright, event-loop]
+date: 2026-04-22
+topic: event-pump fix + mediasite dropdown + q4_inc + choruscall + iframe scan + per-quarter IR overrides → audio 3/33 → 26/33
+tags: [session, consumer-staples, earnings, scraper, audio, playwright, event-loop, q4-inc, choruscall, youtube-embed]
 ---
 
 # April 21st — Event Pump Bug Session
@@ -91,41 +91,130 @@ ctx.set_default_timeout(30000)
 ctx.set_default_navigation_timeout(30000)
 ```
 
-### 6. Batch scrape results
+### 6. Batch scrape results (first wave)
 
 Ran `scrape.py --no-transcribe` in two batches (first stopped after PEP's 10-min mediasite thrash before dedupe; second covered remaining 14 tickers after MNST was explicitly excluded via `--tickers` filter).
 
-**Audio wins this session (10 new):**
+**Audio wins first wave (10 new):**
 - `direct_audio`: KO, GIS, SJM
 - `west_intrado`: LW (test), PG, MO, HSY, CELH, BF-B, HRL
 
-**Vendors tried but failed:**
-- `mediasite`: PEP, MDLZ, CLX (auto path couldn't get past form validation / reCAPTCHA)
-- `q4_inc_attendee`: COST, KR, and others — sniffer not built
-- `west_intrado`: some tickers where drill-in didn't reach the event page
+### 7. Mediasite placeholder-option fix
 
-**Final coverage: audio 13/33, transcripts 31/33, PDFs (latest) 33/33.**
+Dropdown logic was picking the first non-empty `<option>`, which on Mediasite's Country + Investor Type dropdowns was a placeholder like `"...................."`. Angular's form validation rejected that, so the submit button stayed `aria-disabled="true"`. Added `_is_placeholder_option(text, opt)`:
+- Skip options with `disabled` attribute
+- Skip options with empty `value` attribute
+- Skip options whose text has no alphanumerics (dots, dashes, whitespace)
+- Skip options starting with "Select", "Choose", "Please", "Pick one", "- -"
+
+After fix: PEP picks "Afghanistan" (Country) + "Sell-side analyst" (Investor Type), submit button enables, form submits. But still no m3u8 — reCAPTCHA blocks PEP/MDLZ/CLX. Auto mode still useful on events without reCAPTCHA; `--semi-auto` needed for the rest.
+
+### 8. Q4 Inc attendee sniffer — NEW
+
+Biggest bucket (~11 tickers). Probed `events.q4inc.com/attendee/{id}` directly. Discovered flow:
+
+1. React SPA at `/attendee/{event_id}`. Registration gate: 3 buttons (`#registration-box_signup-button` / `_guest-button` / `_login-button`). Click `#registration-box_login-button` ("Continue without a Q4 account").
+2. Navigates to `/attendee/{event_id}/guest`. Guest form:
+   - `#GuestRegistrationFirstNameInput` / `LastNameInput` / `EmailInput` (text)
+   - `#GuestRegistrationInvestorCheckboxInput` ("I am an individual attendee") — **critical**: custom component, `input.check()` times out. Click via `label:has-text('I am an individual attendee')` with `force=True`. Setting this removes the Institution/Company requirement (which is an autocomplete combobox we can't satisfy via plain fill).
+   - `#GuestRegistrationSubmitButton` ("Register for this Event")
+3. Post-submit: player loads, recording arrives at `https://static.events.q4inc.com/edited-recordings/{event_id}/{uuid}.mp4`. **Direct MP4**. No HLS, no reCAPTCHA. Download via `download_audio_file` (curl_cffi).
+
+Reference: validated on TSN attendee/891408037 (Feb 5 Annual Meeting — past event, has recording). COST attendee/247600739 returns no media because it's May 28 Q3 2026 (future event) — the sniffer correctly returns None for future events.
+
+New helper: `_sniff_q4_inc_mp4(page, webcast_url, timeout_s=60)`. Dispatch branch added to `_scan_and_download_audio` before the mediasite branch.
+
+### 9. Per-event-vs-systemic dedupe split
+
+The `failed_vendors` dedupe from §4 was too aggressive for Q4 Inc. TSN's IR page lists 3 q4_inc URLs (Q1 past, Q2 future, annual meeting past). The Q2 future event has no recording; the Q1 past one does. Original dedupe blocked the Q1 attempt after Q2 failed.
+
+Introduced `_DEDUPE_ON_VENDOR_FAILURE = {"mediasite", "veracast", "open_exchange", "webcast_eqs"}` — only dedupe vendors where failures are systemic (reCAPTCHA, form gating that applies identically to all events). Excluded: `q4_inc_attendee`, `west_intrado` — each URL is a distinct event with independent state.
+
+After fix: TSN tries `/759959591` (future, fails), then `/891408037` (past, succeeds → MP4 downloaded).
+
+### 10. Batch scrape results (second wave — q4_inc + dedupe fixes)
+
+Re-ran 18 remaining gap tickers (ex-MNST). Q4 Inc sniffer unlocked 4 additional tickers:
+- `q4_inc_attendee`: TSN, ADM, KR, COST
+
+**Total audio wins this session (14 new):**
+- `direct_audio` (3): KO, GIS, SJM
+- `west_intrado` (7): LW (test), PG, MO, HSY, CELH, BF-B, HRL
+- `q4_inc_attendee` (4): TSN, ADM, KR, COST
+
+**Final coverage: audio 17/33, transcripts 31/33, PDFs (latest) 33/33.**
+
+### 11. MNST still hangs — context timeout not enough
+
+After §5, re-ran `--tickers MNST` in isolation. Still hung 15+ min past the `[generic] start=...` line with no further output. Context-level `ctx.set_default_timeout(30000)` applies to individual Playwright page calls but apparently doesn't catch whatever MNST's SPA is doing (possibly a page.evaluate inside a helper that doesn't honor context defaults, or something at the yfinance / curl_cffi layer). Needs deeper tracing next session. Current workaround: always pass `--tickers <without-MNST>` to avoid locking the batch.
+
+### 12. Multi-candidate audio walk refactor
+
+Initial candidate walk logic returned early on the first candidate that yielded *any* PDFs, skipping later candidates that might host the webcast link. Refactored to:
+  - Accumulate artifacts instead of returning early.
+  - After finding PDFs, keep walking candidates — but skip the full PDF+audio extractor; just do `_try_extract_audio_from_page` (audio-only scan) since we already have PDFs.
+  - Return only when we have both PDFs and audio.
+  - Added a post-IR-home-fast-path audio walk symmetrically — if IR home yields PDFs but no audio, scan candidates audio-only.
+  - Added a no-PDF-anywhere audio-only fallback at the end of the candidate walk — unblocks tickers whose events calendar doesn't host classifiable PDFs (CAG, SYY).
+
+This fix unlocked CAG, CHD (past-event Q4 on events-and-presentations sub-page), and more.
+
+### 13. ChorusCall sniffer — NEW
+
+STZ's webcast turned out to be `event.choruscall.com/mediaframe/webcast.html?webcastid=qgIohQED`, a vendor we hadn't catalogued. Probed directly:
+
+- Form inputs: `#firstName` / `#lastName` / `#email` / `#company` (no obfuscation)
+- Button: `#registrationSubmit` (value "Submit")
+- **No reCAPTCHA**
+- Media URL pattern: `https://vodchoruscall.akamaized.net/{account}/{slug}/{eventid}.mp4` — **direct MP4**
+
+Built `_sniff_choruscall_mp4(page, webcast_url, timeout_s=60)`. Added `choruscall` to `WEBCAST_VENDOR_PATTERNS` matching `event.choruscall.com/mediaframe` + `services.choruscall.com/mediaframe`. Dispatch branch placed before `q4_inc_attendee` in `_scan_and_download_audio`.
+
+Unlocked STZ + SYY this session. Other tickers with ChorusCall in survey (BG) already got audio via direct_audio, so ChorusCall wasn't needed there.
+
+### 14. Final session batch runs
+
+Cumulative audio wins from all batch runs this session (**20 new tickers, 3 → 23**):
+- `direct_audio` (4): KO, GIS, SJM, BG
+- `west_intrado` (9): LW, PG, MO, HSY, CELH, BF-B, HRL, CAG, CLX
+- `q4_inc_attendee` (5): TSN, ADM, KR, COST, CHD
+- `choruscall` (2): STZ, SYY
+
+### 15. User-guided probing unlocked CL + TGT + EL
+
+User flagged via screenshots: CL's webcasts live at `investor.colgatepalmolive.com/events-and-webcasts`, TGT uses a YouTube iframe on event-details pages, EL's webcasts are on `elcompanies.com/en/investors/events-and-presentations`. Probed each:
+
+- **EL**: Q2 Fiscal 2026 earnings IS on `event.choruscall.com/mediaframe/webcast.html?webcastid=kv9nzVwN`. Scraper just hadn't tried it before (ChorusCall was added after the initial EL run). Zero code change — just re-ran.
+- **TGT**: iframe `<iframe src="https://www.youtube.com/embed/muSby1cblaw?rel=0">` on the event-details page. Required: (a) extending `_scan_and_download_audio` to scan `iframe[src]` in addition to `a[href]`, (b) extending `youtube_live` vendor pattern to match `youtube.com/embed/` + `youtube.com/watch` + `youtube-nocookie.com/embed/`, (c) IR_URLS override pointing directly at the quarterly `event-details-MM-DD-YY` URL (the index page doesn't surface it). yt-dlp downloads as m4a.
+- **CL**: ChorusCall (`webcastid=s8h4YO2M`) on intermediate notice page `investor.colgatepalmolive.com/notice-q4-2025-earnings-webcast`. ChorusCall sniffer had to be extended to fill `select#udef1` (Investor Type dropdown — uses the same `_is_placeholder_option` helper built for mediasite). IR_URLS override pointed directly at the notice page.
+
+### 16. IR Audio Source Map documented
+
+Per-ticker map saved at `Brain\Knowledge\IR Audio Source Map.md` — maps each of the 33 tickers to its vendor + landing URL + notes. Also contains a vendor playbook and "how to add a new ticker" section. This is the authoritative reference for future quarterly runs: if a vendor is known-working, just run the scraper; if survey shows an unbuilt vendor, build a sniffer using ChorusCall as the simplest template.
 
 ## Current state
 
 ### Coverage
 
 - **PDFs: 33/33** (unchanged).
-- **Audio: 13/33** — up from 3/33:
+- **Audio: 26/33** — up from 3/33:
   - From prior sessions: PM, KMB, WMT.
-  - New this session: LW, PG, KO, MO, GIS, HSY, CELH, SJM, BF-B, HRL.
-- Still missing audio (20 tickers): COST, PEP, MDLZ, CL, TGT, SYY, KR, STZ, KDP, MNST, EL, TSN, ADM, CHD, CAG, CLX, MKC, BG, DLTR, DG.
+  - New this session: LW, PG, KO, MO, GIS, HSY, CELH, SJM, BF-B, HRL, TSN, ADM, KR, COST, CAG, BG, CHD, CLX, STZ, SYY, CL, TGT, EL.
+- Still missing audio (7 tickers): PEP, MDLZ, KDP, DLTR, MKC (mediasite reCAPTCHA — `--semi-auto`), DG (webcast_eqs login flow incomplete), MNST (SPA hang).
 
 ### Infrastructure changes
 
-- **scrape.py** ~2050 lines. Changes:
+- **scrape.py** ~2150 lines. Changes:
   - Event-pump fix (`page.wait_for_timeout` replacing `time.sleep`) in both sniffer wait loops.
   - `_sniff_west_intrado_hls` timeout default 25 → 60, callsite 30 → 90.
-  - `_scan_and_download_audio` gained `semi_auto` param + per-page `failed_vendors` dedupe + mediasite dispatch branch.
+  - `_scan_and_download_audio` gained `semi_auto` param + per-page `failed_vendors` dedupe + mediasite dispatch + **q4_inc_attendee dispatch**.
   - `_try_extract_audio_from_page` passes `semi_auto` through.
   - `generic_backend` calls `_try_extract_audio_from_page(..., semi_auto=semi_auto)`.
   - `main()` sets `ctx.set_default_timeout(30000)` + nav variant on the BrowserContext.
-- **Debug scripts written + deleted** (`debug_west_intrado.py`, `debug_prod_sniffer.py`): kept in conversation context, removed from disk after diagnosis.
+  - New helper `_is_placeholder_option(text, opt)` — skips "...", "Select...", etc. when filling mediasite dropdowns.
+  - New sniffer `_sniff_q4_inc_mp4(page, webcast_url, timeout_s=60)`.
+  - New constant `_DEDUPE_ON_VENDOR_FAILURE = {mediasite, veracast, open_exchange, webcast_eqs}` — vendors to skip on first fail. q4_inc_attendee and west_intrado explicitly excluded.
+- **Debug scripts written + deleted** (`debug_west_intrado.py`, `debug_prod_sniffer.py`, `debug_q4_inc.py`): kept in conversation context, removed from disk after diagnosis. Screenshots at `Brain\Knowledge\_q4_debug\` also removed.
 
 ## Open decisions / pending work
 
@@ -133,19 +222,27 @@ Ran `scrape.py --no-transcribe` in two batches (first stopped after PEP's 10-min
 
 The IR_URLS override (`investors.monsterbevcorp.com/events-and-presentations`) set last session did not prevent the hang; first batch ran 3+ hours on it before we killed it. The new context-level `set_default_timeout(30000)` should now cap individual operations at 30s. Next session: run `--tickers MNST` alone and inspect which operation actually stalls within `generic_backend`. Likely culprit: `_ranked_candidates` or `_find_earnings_event_link` doing a `page.evaluate` that the SPA's JS deadlocks.
 
-### 2. Mediasite auto path fails — reCAPTCHA + form validation
+### 2. Mediasite reCAPTCHA — needs `--semi-auto` run (5 tickers)
 
-For PEP/MDLZ/CLX, the mediasite form submit button stays `aria-disabled="true"` after fill. The "selected '....................'" log line suggests our Investor Type dropdown select is picking the placeholder option ("......") instead of a real value. Two fixes to try:
-1. Select Investor Type by iterating options and choosing the first NON-placeholder (skip options whose text is just dots/whitespace).
-2. Semi-auto mode actually works — user can click through the reCAPTCHA. Needs `python scrape.py --semi-auto --tickers PEP,MDLZ,CLX` run manually.
+Dropdown placeholder fix resolved the `aria-disabled` issue. PEP/MDLZ/KDP/DLTR/MKC form submit executes, but still no m3u8 — reCAPTCHA blocks the path. Action:
+```
+python scrape.py --semi-auto --tickers PEP,MDLZ,KDP,DLTR,MKC
+```
+User sits with headed browser, solves each reCAPTCHA manually, sniffer captures HLS and continues. Each takes ~30s of human time. **Highest-priority pending action**.
 
-### 3. Q4 Inc attendee sniffer still unbuilt (11 tickers)
+### 3. DG — webcast_eqs sniffer needs finishing (1 ticker)
 
-Probed `events.q4inc.com/attendee/891408037`: React SPA (axios + react + router bundles), 3705-byte shell HTML. Content loaded async via API. Will need full Playwright rendering. Reference tickers to probe: COST (247600739), KR (various). Next session: load a Q4 Inc attendee page in headed Playwright, inspect the player layout + registration flow, model a sniffer after `_sniff_west_intrado_hls`.
+DG's current Q4 2025 earnings call is on `www.webcast-eqs.com/dollargeneralq42025`. Form is trivial: single `input[name='username']` for email + submit. Filled + submitted in probe, but post-submit URL stayed at `/login/` (may need longer wait, may need email confirmation step, may be gated by event date). Unblocks DG once done. Note: `webcast-eqs.com` (current) ≠ `webcasts.eqs.com` (dead / redirected). Vendor catalog entry `webcast_eqs` currently points at `webcast-eqs.com` only.
 
-### 4. West/Intrado drill-in misses some tickers
+### 4. CL, TGT, EL — unknown-vendor investigation (3 tickers)
 
-Some west_intrado tickers (TGT, STZ, others?) got PDFs but no audio because `_try_extract_audio_from_page` drill-in didn't land on the right event page. Investigate: for each missing west_intrado ticker, check if their event-detail URL has the webcast link and why the drill-in logic doesn't reach it.
+- **CL**: IR pages all show only `(unknown)` URLs. `investor.colgatepalmolive.com/news-releases/news-release-details/colgate-palmolive-webcasts-2026-first-quarter-earnings` was the title of the drill-in target but the page had no webcast link. Colgate may stream only live (no replay) or host the webcast on a sub-page we didn't reach. Worth manually loading `investor.colgatepalmolive.com/events` in a browser on earnings day.
+- **TGT**: only 1 candidate URL surveyed (`corporate.target.com/investors/financial-information`). Target's earnings-day page may gate audio behind a sign-up form not visible to anonymous browsers, OR the call is hosted on a conferencing URL not indexed on the IR site.
+- **EL**: `elcompanies.com/en/investors/events-and-presentations` has 3 west_intrado event URLs all with `tp_special=8`. Sniffer runs but captures no m3u8 on any of them. May be recordings expired, may be a `tp_special=8` variant that gates replay access differently. Worth one-off probe with headed browser to see what register-submit actually does.
+
+### 5. MNST SPA hang (1 ticker)
+
+Separate from vendor issues. Context-level timeout didn't help. Needs deeper Playwright tracing (possibly `page.on('load')` + `page.on('domcontentloaded')` listeners) to pinpoint where it stalls. Or switch to `curl_cffi` + HTML parsing for MNST's page and skip Playwright entirely.
 
 ### 5. Veracast (ADM, CHD) + Open Exchange (MO via different path) + EQS (DG) sniffers unbuilt
 

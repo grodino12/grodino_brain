@@ -1,0 +1,3260 @@
+{
+  "ticker": "CELH",
+  "filing_type": "10-K",
+  "filing_date": "2023-03-01",
+  "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+  "statements": [
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": null,
+        "period_end_date": "2022-12-31",
+        "raw_period_label": "December 31, 2022",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands, except par values)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "value": "614159",
+          "raw_numeric_text": "614,159",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Cash and cash equivalents | 614,159",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Restricted cash",
+          "value": "38768",
+          "raw_numeric_text": "38,768",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Restricted cash | 38,768",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable-net",
+          "value": "63311",
+          "raw_numeric_text": "63,311",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accounts receivable-net | 63,311",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Note receivable-current",
+          "value": "2979",
+          "raw_numeric_text": "2,979",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Note receivable-current | 2,979",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Inventories-net",
+          "value": "173289",
+          "raw_numeric_text": "173,289",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Inventories-net | 173,289",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other current assets",
+          "value": "11341",
+          "raw_numeric_text": "11,341",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Prepaid expenses and other current assets | 11,341",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred other costs-current",
+          "value": "14124",
+          "raw_numeric_text": "14,124",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred other costs-current | 14,124",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total current assets",
+          "value": "917971",
+          "raw_numeric_text": "917,971",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total current assets | 917,971",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Note receivable",
+          "value": "3574",
+          "raw_numeric_text": "3,574",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Note receivable | 3,574",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Property and equipment-net",
+          "value": "10185",
+          "raw_numeric_text": "10,185",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Property and equipment-net | 10,185",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred tax asset",
+          "value": "501",
+          "raw_numeric_text": "501",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred tax asset | 501",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Right of use assets-operating leases",
+          "value": "972",
+          "raw_numeric_text": "972",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Right of use assets-operating leases | 972",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Right of use assets-finance leases",
+          "value": "208",
+          "raw_numeric_text": "208",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Right of use assets-finance leases | 208",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Other long-term assets",
+          "value": "263",
+          "raw_numeric_text": "263",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Other long-term assets | 263",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred other costs-non-current",
+          "value": "262462",
+          "raw_numeric_text": "262,462",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred other costs-non-current | 262,462",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Intangibles",
+          "value": "12254",
+          "raw_numeric_text": "12,254",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Intangibles | 12,254",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "13679",
+          "raw_numeric_text": "13,679",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Goodwill | 13,679",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Assets",
+          "value": "1222069",
+          "raw_numeric_text": "1,222,069",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Assets | 1,222,069",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable and accrued expenses",
+          "value": "107340",
+          "raw_numeric_text": "107,340",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accounts payable and accrued expenses | 107,340",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued distributor termination fees",
+          "value": "3986",
+          "raw_numeric_text": "3,986",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accrued distributor termination fees | 3,986",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowance",
+          "value": "35977",
+          "raw_numeric_text": "35,977",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accrued promotional allowance | 35,977",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-operating leases",
+          "value": "661",
+          "raw_numeric_text": "661",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-operating leases | 661",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-finance leases",
+          "value": "70",
+          "raw_numeric_text": "70",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-finance leases | 70",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue-current",
+          "value": "9675",
+          "raw_numeric_text": "9,675",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred revenue-current | 9,675",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Other current liabilities",
+          "value": "3586",
+          "raw_numeric_text": "3,586",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Other current liabilities | 3,586",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total current liabilities",
+          "value": "161295",
+          "raw_numeric_text": "161,295",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total current liabilities | 161,295",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-operating leases",
+          "value": "326",
+          "raw_numeric_text": "326",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-operating leases | 326",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-finance leases",
+          "value": "162",
+          "raw_numeric_text": "162",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-finance leases | 162",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred tax liability",
+          "value": "15919",
+          "raw_numeric_text": "15,919",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred tax liability | 15,919",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue-non-current",
+          "value": "179788",
+          "raw_numeric_text": "179,788",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred revenue-non-current | 179,788",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Liabilities",
+          "value": "357490",
+          "raw_numeric_text": "357,490",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Liabilities | 357,490",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Series A convertible preferred shares, $0.001 par value, 5% cumulative dividends; 1,467 and 0 shares issued and\noutstanding at December 31, 2022 and December 31,2021, respectively, aggregate liquidation preference of\n$550,000 and $0 as of December 31, 2022 and December 31, 2021, respectively",
+          "value": "824488",
+          "raw_numeric_text": "824,488",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "mezzanine",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Series A convertible preferred shares, $0.001 par value, 5% cumulative dividends; 1,467 and 0 shares issued and\noutstanding at December 31, 2022 and December 31,2021, respectively, aggregate liquidation preference of\n$550,000 and $0 as of December 31, 2022 and December 31, 2021, respectively | 824,488",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, $0.001 par value; 100,000 shares authorized, 76,382 and 74,909 shares\nissued and outstanding at December 31, 2022 and December 31, 2021, respectively",
+          "value": "76",
+          "raw_numeric_text": "76",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Common stock, $0.001 par value; 100,000 shares authorized, 76,382 and 74,909 shares\nissued and outstanding at December 31, 2022 and December 31, 2021, respectively | 76",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Additional paid-in capital",
+          "value": "280668",
+          "raw_numeric_text": "280,668",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Additional paid-in capital | 280,668",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Stockholders’ Equity",
+          "value": "40091",
+          "raw_numeric_text": "40,091",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Stockholders’ Equity | 40,091",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Liabilities, Mezzanine Equity and Stockholders’ Equity",
+          "value": "1222069",
+          "raw_numeric_text": "1,222,069",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Liabilities, Mezzanine Equity and Stockholders’ Equity | 1,222,069",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2021,
+        "fiscal_quarter": null,
+        "period_end_date": "2021-12-31",
+        "raw_period_label": "December 31, 2021",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands, except par values)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "value": "16255",
+          "raw_numeric_text": "16,255",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Cash and cash equivalents | 16,255",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Restricted cash",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Restricted cash | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable-net",
+          "value": "38741",
+          "raw_numeric_text": "38,741",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accounts receivable-net | 38,741",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Note receivable-current",
+          "value": "2588",
+          "raw_numeric_text": "2,588",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Note receivable-current | 2,588",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Inventories-net",
+          "value": "191222",
+          "raw_numeric_text": "191,222",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Inventories-net | 191,222",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other current assets",
+          "value": "13555",
+          "raw_numeric_text": "13,555",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Prepaid expenses and other current assets | 13,555",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred other costs-current",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred other costs-current | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total current assets",
+          "value": "262361",
+          "raw_numeric_text": "262,361",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total current assets | 262,361",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Note receivable",
+          "value": "7117",
+          "raw_numeric_text": "7,117",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Note receivable | 7,117",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Property and equipment-net",
+          "value": "3180",
+          "raw_numeric_text": "3,180",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Property and equipment-net | 3,180",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred tax asset",
+          "value": "9019",
+          "raw_numeric_text": "9,019",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred tax asset | 9,019",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Right of use assets-operating leases",
+          "value": "1128",
+          "raw_numeric_text": "1,128",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Right of use assets-operating leases | 1,128",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Right of use assets-finance leases",
+          "value": "86",
+          "raw_numeric_text": "86",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Right of use assets-finance leases | 86",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Other long-term assets",
+          "value": "299",
+          "raw_numeric_text": "299",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Other long-term assets | 299",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred other costs-non-current",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred other costs-non-current | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Intangibles",
+          "value": "16301",
+          "raw_numeric_text": "16,301",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Intangibles | 16,301",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "14527",
+          "raw_numeric_text": "14,527",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Goodwill | 14,527",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Assets",
+          "value": "314018",
+          "raw_numeric_text": "314,018",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Assets | 314,018",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable and accrued expenses",
+          "value": "72442",
+          "raw_numeric_text": "72,442",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accounts payable and accrued expenses | 72,442",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued distributor termination fees",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accrued distributor termination fees | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowance",
+          "value": "19037",
+          "raw_numeric_text": "19,037",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Accrued promotional allowance | 19,037",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-operating leases",
+          "value": "512",
+          "raw_numeric_text": "512",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-operating leases | 512",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-finance leases",
+          "value": "157",
+          "raw_numeric_text": "157",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-finance leases | 157",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue-current",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred revenue-current | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Other current liabilities",
+          "value": "976",
+          "raw_numeric_text": "976",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Other current liabilities | 976",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total current liabilities",
+          "value": "93124",
+          "raw_numeric_text": "93,124",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total current liabilities | 93,124",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-operating leases",
+          "value": "658",
+          "raw_numeric_text": "658",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-operating leases | 658",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Lease liability obligation-finance leases",
+          "value": "45",
+          "raw_numeric_text": "45",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Lease liability obligation-finance leases | 45",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred tax liability",
+          "value": "3146",
+          "raw_numeric_text": "3,146",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred tax liability | 3,146",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue-non-current",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Deferred revenue-non-current | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Liabilities",
+          "value": "96973",
+          "raw_numeric_text": "96,973",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Liabilities | 96,973",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Series A convertible preferred shares, $0.001 par value, 5% cumulative dividends; 1,467 and 0 shares issued and\noutstanding at December 31, 2022 and December 31,2021, respectively, aggregate liquidation preference of\n$550,000 and $0 as of December 31, 2022 and December 31, 2021, respectively",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "mezzanine",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Series A convertible preferred shares, $0.001 par value, 5% cumulative dividends; 1,467 and 0 shares issued and\noutstanding at December 31, 2022 and December 31,2021, respectively, aggregate liquidation preference of\n$550,000 and $0 as of December 31, 2022 and December 31, 2021, respectively | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, $0.001 par value; 100,000 shares authorized, 76,382 and 74,909 shares\nissued and outstanding at December 31, 2022 and December 31, 2021, respectively",
+          "value": "75",
+          "raw_numeric_text": "75",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Common stock, $0.001 par value; 100,000 shares authorized, 76,382 and 74,909 shares\nissued and outstanding at December 31, 2022 and December 31, 2021, respectively | 75",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Additional paid-in capital",
+          "value": "267846",
+          "raw_numeric_text": "267,846",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Additional paid-in capital | 267,846",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Stockholders’ Equity",
+          "value": "217045",
+          "raw_numeric_text": "217,045",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Stockholders’ Equity | 217,045",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total Liabilities, Mezzanine Equity and Stockholders’ Equity",
+          "value": "314018",
+          "raw_numeric_text": "314,018",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 44,
+            "line_hint": "Total Liabilities, Mezzanine Equity and Stockholders’ Equity | 314,018",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": null,
+        "period_end_date": "2022-12-31",
+        "raw_period_label": "For the year ended December 31, 2022",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands, except per share amounts)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "",
+          "value": "2022",
+          "raw_numeric_text": "2022",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": " | 2022",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Revenue",
+          "value": "653604",
+          "raw_numeric_text": "653,604",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Revenue | 653,604",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cost of revenue",
+          "value": "382735",
+          "raw_numeric_text": "382,735",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Cost of revenue | 382,735",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Gross profit",
+          "value": "270869",
+          "raw_numeric_text": "270,869",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Gross profit | 270,869",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Selling and marketing expenses",
+          "value": "352767",
+          "raw_numeric_text": "352,767",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Selling and marketing expenses | 352,767",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "General and administrative expenses",
+          "value": "75903",
+          "raw_numeric_text": "75,903",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "General and administrative expenses | 75,903",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total operating expense",
+          "value": "428670",
+          "raw_numeric_text": "428,670",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Total operating expense | 428,670",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest income on note receivable",
+          "value": "237",
+          "raw_numeric_text": "237",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Interest income on note receivable | 237",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Gain on lease cancellations",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Gain on lease cancellations | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total other income",
+          "value": "5137",
+          "raw_numeric_text": "5,137",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Total other income | 5,137",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "value": "75649",
+          "raw_numeric_text": "75,649",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Basic | 75,649",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Dilutive",
+          "value": "75649",
+          "raw_numeric_text": "75,649",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Dilutive | 75,649",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2021,
+        "fiscal_quarter": null,
+        "period_end_date": "2021-12-31",
+        "raw_period_label": "For the year ended December 31, 2021",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands, except per share amounts)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "",
+          "value": "2021",
+          "raw_numeric_text": "2021",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": " | 2021",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Revenue",
+          "value": "314272",
+          "raw_numeric_text": "314,272",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Revenue | 314,272",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cost of revenue",
+          "value": "186103",
+          "raw_numeric_text": "186,103",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Cost of revenue | 186,103",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Gross profit",
+          "value": "128169",
+          "raw_numeric_text": "128,169",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Gross profit | 128,169",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Selling and marketing expenses",
+          "value": "74739",
+          "raw_numeric_text": "74,739",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Selling and marketing expenses | 74,739",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "General and administrative expenses",
+          "value": "57520",
+          "raw_numeric_text": "57,520",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "General and administrative expenses | 57,520",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total operating expense",
+          "value": "132259",
+          "raw_numeric_text": "132,259",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Total operating expense | 132,259",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest income on note receivable",
+          "value": "315",
+          "raw_numeric_text": "315",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Interest income on note receivable | 315",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Gain on lease cancellations",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Gain on lease cancellations | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total other income",
+          "value": "31",
+          "raw_numeric_text": "31",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Total other income | 31",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "value": "73781",
+          "raw_numeric_text": "73,781",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Basic | 73,781",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Dilutive",
+          "value": "77689",
+          "raw_numeric_text": "77,689",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Dilutive | 77,689",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2020,
+        "fiscal_quarter": null,
+        "period_end_date": "2020-12-31",
+        "raw_period_label": "For the year ended December 31, 2020",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands, except per share amounts)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "",
+          "value": "2020",
+          "raw_numeric_text": "2020",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": " | 2020",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Revenue",
+          "value": "130726",
+          "raw_numeric_text": "130,726",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Revenue | 130,726",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cost of revenue",
+          "value": "69752",
+          "raw_numeric_text": "69,752",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Cost of revenue | 69,752",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Gross profit",
+          "value": "60974",
+          "raw_numeric_text": "60,974",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Gross profit | 60,974",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Selling and marketing expenses",
+          "value": "34875",
+          "raw_numeric_text": "34,875",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Selling and marketing expenses | 34,875",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "General and administrative expenses",
+          "value": "18187",
+          "raw_numeric_text": "18,187",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "General and administrative expenses | 18,187",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total operating expense",
+          "value": "53062",
+          "raw_numeric_text": "53,062",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Total operating expense | 53,062",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest income on note receivable",
+          "value": "356",
+          "raw_numeric_text": "356",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Interest income on note receivable | 356",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Gain on lease cancellations",
+          "value": "152",
+          "raw_numeric_text": "152",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Gain on lease cancellations | 152",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Total other income",
+          "value": "728",
+          "raw_numeric_text": "728",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Total other income | 728",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "value": "70195",
+          "raw_numeric_text": "70,195",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Basic | 70,195",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Dilutive",
+          "value": "74444",
+          "raw_numeric_text": "74,444",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 46,
+            "line_hint": "Dilutive | 74,444",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": null,
+        "period_end_date": "2022-12-31",
+        "raw_period_label": "For the year ended December 31, 2022",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "",
+          "value": "2022",
+          "raw_numeric_text": "2022",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": " | 2022",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation",
+          "value": "1362",
+          "raw_numeric_text": "1,362",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Depreciation | 1,362",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Amortization",
+          "value": "555",
+          "raw_numeric_text": "555",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Amortization | 555",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Impairment of intangible assets",
+          "value": "2379",
+          "raw_numeric_text": "2,379",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Impairment of intangible assets | 2,379",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Bad debt expense",
+          "value": "2352",
+          "raw_numeric_text": "2,352",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Bad debt expense | 2,352",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Amortization of deferred other costs",
+          "value": "5885",
+          "raw_numeric_text": "5,885",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Amortization of deferred other costs | 5,885",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Inventory excess and obsolescence",
+          "value": "6131",
+          "raw_numeric_text": "6,131",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Inventory excess and obsolescence | 6,131",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Share-based payment expense",
+          "value": "20665",
+          "raw_numeric_text": "20,665",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Share-based payment expense | 20,665",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable and accrued expenses",
+          "value": "34908",
+          "raw_numeric_text": "34,908",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accounts payable and accrued expenses | 34,908",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowance",
+          "value": "16940",
+          "raw_numeric_text": "16,940",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accrued promotional allowance | 16,940",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued distributor termination fees",
+          "value": "3986",
+          "raw_numeric_text": "3,986",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accrued distributor termination fees | 3,986",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Other assets",
+          "value": "37",
+          "raw_numeric_text": "37",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Other assets | 37",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "value": "189463",
+          "raw_numeric_text": "189,463",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Deferred revenue | 189,463",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from note receivable",
+          "value": "2592",
+          "raw_numeric_text": "2,592",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from note receivable | 2,592",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from exercise of stock options",
+          "value": "3683",
+          "raw_numeric_text": "3,683",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from exercise of stock options | 3,683",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from issuance of Series A preferred shares, net of issuance costs",
+          "value": "542018",
+          "raw_numeric_text": "542,018",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from issuance of Series A preferred shares, net of issuance costs | 542,018",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from collection of section 16b short swing profit",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net proceeds from collection of section 16b short swing profit | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from sale of common stock",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net proceeds from sale of common stock | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by financing activities",
+          "value": "534112",
+          "raw_numeric_text": "534,112",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net cash provided by financing activities | 534,112",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "value": "16255",
+          "raw_numeric_text": "16,255",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Cash, cash equivalents and restricted cash at beginning of the period | 16,255",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
+          "value": "652927",
+          "raw_numeric_text": "652,927",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Cash, cash equivalents and restricted cash at end of the period | 652,927",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Taxes",
+          "value": "14335",
+          "raw_numeric_text": "14,335",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Taxes | 14,335",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Interest | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Goodwill | —",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2021,
+        "fiscal_quarter": null,
+        "period_end_date": "2021-12-31",
+        "raw_period_label": "For the year ended December 31, 2021",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "",
+          "value": "2021",
+          "raw_numeric_text": "2021",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": " | 2021",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation",
+          "value": "550",
+          "raw_numeric_text": "550",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Depreciation | 550",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Amortization",
+          "value": "714",
+          "raw_numeric_text": "714",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Amortization | 714",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Impairment of intangible assets",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Impairment of intangible assets | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Bad debt expense",
+          "value": "1494",
+          "raw_numeric_text": "1,494",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Bad debt expense | 1,494",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Amortization of deferred other costs",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Amortization of deferred other costs | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Inventory excess and obsolescence",
+          "value": "2355",
+          "raw_numeric_text": "2,355",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Inventory excess and obsolescence | 2,355",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Share-based payment expense",
+          "value": "36475",
+          "raw_numeric_text": "36,475",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Share-based payment expense | 36,475",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable and accrued expenses",
+          "value": "51807",
+          "raw_numeric_text": "51,807",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accounts payable and accrued expenses | 51,807",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowance",
+          "value": "13379",
+          "raw_numeric_text": "13,379",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accrued promotional allowance | 13,379",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued distributor termination fees",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accrued distributor termination fees | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Other assets",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Other assets | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Deferred revenue | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from note receivable",
+          "value": "1886",
+          "raw_numeric_text": "1,886",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from note receivable | 1,886",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from exercise of stock options",
+          "value": "3720",
+          "raw_numeric_text": "3,720",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from exercise of stock options | 3,720",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from issuance of Series A preferred shares, net of issuance costs",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from issuance of Series A preferred shares, net of issuance costs | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from collection of section 16b short swing profit",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net proceeds from collection of section 16b short swing profit | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from sale of common stock",
+          "value": "67769",
+          "raw_numeric_text": "67,769",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net proceeds from sale of common stock | 67,769",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by financing activities",
+          "value": "71395",
+          "raw_numeric_text": "71,395",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net cash provided by financing activities | 71,395",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "value": "43248",
+          "raw_numeric_text": "43,248",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Cash, cash equivalents and restricted cash at beginning of the period | 43,248",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
+          "value": "16255",
+          "raw_numeric_text": "16,255",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Cash, cash equivalents and restricted cash at end of the period | 16,255",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Taxes",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Taxes | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest",
+          "value": "7",
+          "raw_numeric_text": "7",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Interest | 7",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Goodwill | —",
+            "note": null
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2020,
+        "fiscal_quarter": null,
+        "period_end_date": "2020-12-31",
+        "raw_period_label": "For the year ended December 31, 2020",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "(in thousands)",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 0.9,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "",
+          "value": "2020",
+          "raw_numeric_text": "2020",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": " | 2020",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation",
+          "value": "127",
+          "raw_numeric_text": "127",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Depreciation | 127",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Amortization",
+          "value": "1484",
+          "raw_numeric_text": "1,484",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Amortization | 1,484",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Impairment of intangible assets",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Impairment of intangible assets | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Bad debt expense",
+          "value": "257",
+          "raw_numeric_text": "257",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Bad debt expense | 257",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Amortization of deferred other costs",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Amortization of deferred other costs | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Inventory excess and obsolescence",
+          "value": "748",
+          "raw_numeric_text": "748",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Inventory excess and obsolescence | 748",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Share-based payment expense",
+          "value": "6340",
+          "raw_numeric_text": "6,340",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Share-based payment expense | 6,340",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable and accrued expenses",
+          "value": "4743",
+          "raw_numeric_text": "4,743",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accounts payable and accrued expenses | 4,743",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowance",
+          "value": "3377",
+          "raw_numeric_text": "3,377",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accrued promotional allowance | 3,377",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Accrued distributor termination fees",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Accrued distributor termination fees | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Other assets",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Other assets | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Deferred revenue | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from note receivable",
+          "value": "1331",
+          "raw_numeric_text": "1,331",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from note receivable | 1,331",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from exercise of stock options",
+          "value": "4127",
+          "raw_numeric_text": "4,127",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from exercise of stock options | 4,127",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from issuance of Series A preferred shares, net of issuance costs",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Proceeds from issuance of Series A preferred shares, net of issuance costs | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from collection of section 16b short swing profit",
+          "value": "91",
+          "raw_numeric_text": "91",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net proceeds from collection of section 16b short swing profit | 91",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net proceeds from sale of common stock",
+          "value": "21892",
+          "raw_numeric_text": "21,892",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net proceeds from sale of common stock | 21,892",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by financing activities",
+          "value": "15571",
+          "raw_numeric_text": "15,571",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Net cash provided by financing activities | 15,571",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "value": "23091",
+          "raw_numeric_text": "23,091",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Cash, cash equivalents and restricted cash at beginning of the period | 23,091",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
+          "value": "43248",
+          "raw_numeric_text": "43,248",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Cash, cash equivalents and restricted cash at end of the period | 43,248",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Taxes",
+          "value": "0",
+          "raw_numeric_text": "—",
+          "notation_flags": 4,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Taxes | —",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Interest",
+          "value": "448",
+          "raw_numeric_text": "448",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Interest | 448",
+            "note": null
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "396",
+          "raw_numeric_text": "396",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2023_CELH_10-K.pdf",
+            "page": 48,
+            "line_hint": "Goodwill | 396",
+            "note": null
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_metadata": {
+    "extracted_at": "2026-04-22T17:09:37",
+    "page_count": 75,
+    "statement_pages": [
+      {
+        "page": 44,
+        "canonical": "BALANCE_SHEET",
+        "source": "keyword_match",
+        "confidence": 0.9
+      },
+      {
+        "page": 46,
+        "canonical": "INCOME_STATEMENT",
+        "source": "keyword_match",
+        "confidence": 0.9
+      },
+      {
+        "page": 48,
+        "canonical": "CASH_FLOW",
+        "source": "keyword_match",
+        "confidence": 0.9
+      }
+    ]
+  }
+}

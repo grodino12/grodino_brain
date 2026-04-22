@@ -1,0 +1,74 @@
+{
+  "_notes": "Unit phrases → Unit enum. Seeded with SEC filing conventions. Grows automatically as real filings flow through financials-extract: variants scoring ≥95 on fuzzy match auto-append, 70-94 prompt the user. Append-only.",
+
+  "normalization": {
+    "case_insensitive": true,
+    "collapse_whitespace": true,
+    "strip_punctuation": true,
+    "strip_prefixes": ["(", "the"]
+  },
+
+  "entries": {
+    "thousands": {
+      "canonical": "THOUSANDS",
+      "keywords": ["thousand", "thousands"],
+      "variants": [
+        "(in thousands",
+        "(in thousands, except per share",
+        "(in thousands, except per share amounts)",
+        "(in thousands, except per share and share amounts",
+        "(in thousands, except per share data)",
+        "(amounts in thousands",
+        "(dollars in thousands",
+        "$ in thousands",
+        "$ shown in thousands",
+        "dollar amounts in thousands",
+        "(U.S. dollars in thousands",
+        "expressed in thousands",
+        "(except share and per share data; in thousands"
+      ],
+      "fuzzy_threshold": 90
+    },
+
+    "millions": {
+      "canonical": "MILLIONS",
+      "keywords": ["million", "millions"],
+      "variants": [
+        "(in millions",
+        "(in millions, except per share",
+        "(in millions, except per share and share amounts",
+        "(amounts in millions",
+        "(dollars in millions",
+        "$ in millions",
+        "$ shown in millions",
+        "(U.S. dollars in millions",
+        "expressed in millions",
+        "dollar amounts in millions"
+      ],
+      "fuzzy_threshold": 90
+    },
+
+    "billions": {
+      "canonical": "BILLIONS",
+      "keywords": ["billion", "billions"],
+      "variants": [
+        "(in billions",
+        "(amounts in billions",
+        "(dollars in billions",
+        "$ in billions"
+      ],
+      "fuzzy_threshold": 90
+    },
+
+    "actual": {
+      "canonical": "ACTUAL",
+      "keywords": ["actual dollars", "whole dollars"],
+      "variants": [
+        "(in actual dollars",
+        "(whole dollars",
+        "actual dollars"
+      ],
+      "fuzzy_threshold": 90
+    }
+  }
+}

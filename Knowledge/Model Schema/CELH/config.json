@@ -1,0 +1,39 @@
+{
+  "_notes": "CELH ticker metadata. Consumed by every skill. Populated from handoff docs at Brain/Sessions/CELH Model/.",
+  "_last_updated": "2026-04-22",
+
+  "ticker": "CELH",
+  "company_name": "Celsius Holdings, Inc.",
+  "cik": "0001341766",
+  "exchange": "NASDAQ",
+  "sector": "Consumer Staples",
+  "industry": "Non-Alcoholic Beverages",
+  "fiscal_year_end": "12-31",
+  "currency": "USD",
+
+  "_plausibility_note": "Ranges in $thousands. Used by unit_detection fallback when no explicit header phrase is found.",
+  "expected_revenue_range_thousands": [1000000, 3000000],
+  "expected_total_assets_range_thousands": [500000, 2500000],
+
+  "_stock_splits_note": "Do NOT auto-adjust share counts or EPS without verifying the pre/post-split convention of the source filing.",
+  "stock_splits": [
+    { "date": "2023-11-13", "ratio": 3, "note": "3-for-1 split" }
+  ],
+
+  "segments": ["North America", "International", "Alani Nu"],
+
+  "ir_url": "https://ir.celsiusholdingsinc.com/financials/quarterly-results/default.aspx",
+  "sec_cdn": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001341766/",
+
+  "known_filings": {
+    "10-K": [
+      { "file": "2024_CELH_10-K.pdf", "note": "contains FY2023 BS (p.45) + CF (p.48)" },
+      { "file": "2025_CELH_10-K.pdf", "note": "contains FY2024 BS (p.50) + CF (p.53)" }
+    ],
+    "press_releases": [
+      "2023-Q4_CELH_Press_Release.pdf",
+      "2024-Q4_CELH_Press_Release.pdf",
+      "2025-Q4_CELH_Press_Release.pdf"
+    ]
+  }
+}

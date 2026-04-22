@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CELH Pydantic Schema — Class Map</title>
+<style>
+  :root {
+    --bg: #0a0d14;
+    --panel: #131824;
+    --panel-2: #1a2030;
+    --border: #2a3244;
+    --text: #e6e8ef;
+    --text-dim: #7b8294;
+    --text-dim2: #555c6e;
+    --accent: #4f9eff;
+
+    --c-enum:      #0ea5e9;  /* cyan for enums */
+    --c-model:     #14b8a6;  /* teal for contracts */
+    --c-primitive: #9ca3af;  /* gray for str/int/Decimal/date */
+    --c-literal:   #c084fc;  /* purple for Literal types */
+    --c-container: #fbbf24;  /* yellow for list[], tuple[], dict[] brackets */
+
+    --c-inherit:   #ef4444;  /* red for inheritance arrows */
+    --c-compose:   #14b8a6;  /* teal for composition/reference arrows */
+
+    --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    --sys: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    font-family: var(--sys);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header {
+    padding: 14px 24px 10px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    flex: 0 0 auto;
+  }
+  header h1 { margin: 0 0 2px; font-size: 16px; font-weight: 600; }
+  header .sub { color: var(--text-dim); font-size: 12px; }
+  .legend {
+    display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap;
+    font-size: 11px; color: var(--text-dim);
+  }
+  .legend .swatch {
+    display: inline-block; width: 10px; height: 10px;
+    margin-right: 5px; vertical-align: middle; border-radius: 2px;
+  }
+  .legend .line {
+    display: inline-block; width: 22px; height: 2px;
+    margin-right: 5px; vertical-align: middle;
+  }
+
+  main {
+    flex: 1; display: grid; grid-template-columns: 1fr 360px;
+    overflow: hidden; min-height: 0;
+  }
+  .map-wrap {
+    position: relative; overflow: auto; background: var(--bg);
+    cursor: grab;
+  }
+  .map-wrap.panning { cursor: grabbing; }
+  svg.map { display: block; }
+
+  .layer-label {
+    font-family: var(--mono); font-size: 11px;
+    fill: var(--text-dim); letter-spacing: 1.2px;
+  }
+  .layer-band-border {
+    stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 6; fill: none;
+  }
+
+  .arrow-compose { stroke: var(--c-compose); stroke-width: 1.3; fill: none; opacity: 0.55; stroke-dasharray: 4 3; }
+  .arrow-inherit { stroke: var(--c-inherit); stroke-width: 1.5; fill: none; opacity: 0.7; }
+  .arrow-compose.active, .arrow-inherit.active { opacity: 1; stroke-width: 2; stroke-dasharray: none; }
+
+  .card-rect {
+    fill: var(--panel);
+    stroke: var(--border);
+    stroke-width: 1;
+    rx: 6; ry: 6;
+  }
+  .card-rect.enum  { stroke: var(--c-enum); }
+  .card-rect.model { stroke: var(--c-model); }
+  .card-rect.selected { stroke-width: 2.5; filter: brightness(1.25); }
+
+  .card-header-fill.enum  { fill: #0a2030; }
+  .card-header-fill.model { fill: #0d2725; }
+
+  .card-title {
+    font-family: var(--mono); font-weight: 600;
+    font-size: 13px; fill: var(--text); dominant-baseline: middle;
+  }
+  .card-title.enum  { fill: var(--c-enum); }
+  .card-title.model { fill: var(--c-model); }
+  .card-extends {
+    font-family: var(--mono); font-size: 10px;
+    fill: var(--text-dim2); dominant-baseline: middle;
+  }
+  .field-name {
+    font-family: var(--mono); font-size: 11px;
+    fill: var(--text); dominant-baseline: middle;
+  }
+  .field-type {
+    font-family: var(--mono); font-size: 10.5px;
+    dominant-baseline: middle;
+  }
+  .field-type.primitive { fill: var(--c-primitive); }
+  .field-type.enum      { fill: var(--c-enum); cursor: pointer; }
+  .field-type.model     { fill: var(--c-model); cursor: pointer; }
+  .field-type.literal   { fill: var(--c-literal); }
+  .field-type.container { fill: var(--c-container); }
+  .validator-text {
+    font-family: var(--mono); font-size: 10px;
+    fill: var(--c-literal); font-style: italic;
+    dominant-baseline: middle;
+  }
+  .card-g { cursor: pointer; }
+
+  aside {
+    background: var(--panel); border-left: 1px solid var(--border);
+    overflow-y: auto;
+    display: flex; flex-direction: column;
+  }
+  .detail {
+    padding: 16px 18px;
+  }
+  .detail h2 {
+    margin: 0 0 4px;
+    font-family: var(--mono); font-size: 15px;
+  }
+  .detail h2.enum  { color: var(--c-enum); }
+  .detail h2.model { color: var(--c-model); }
+  .detail .extends {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--text-dim); margin-bottom: 8px;
+  }
+  .detail .doc {
+    color: var(--text-dim); font-size: 12.5px;
+    margin-bottom: 12px; line-height: 1.6;
+  }
+  .detail-block { margin-bottom: 12px; }
+  .detail-block .label {
+    font-size: 10px; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px;
+  }
+  .field-row {
+    display: grid;
+    grid-template-columns: minmax(0, auto) 1fr;
+    gap: 8px;
+    font-family: var(--mono); font-size: 11px;
+    padding: 3px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .field-row:last-child { border-bottom: none; }
+  .field-row .name { color: var(--text); }
+  .field-row .tpe { color: var(--text-dim); }
+  .field-row .default { color: var(--text-dim2); }
+  .type-link { cursor: pointer; text-decoration: underline dotted; }
+  .type-link.model { color: var(--c-model); }
+  .type-link.enum  { color: var(--c-enum); }
+  .pyd-code {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--text);
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  .validator-item {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--c-literal); margin-bottom: 3px;
+  }
+  .validator-item code {
+    color: var(--text-dim); font-size: 10px; display: block; margin-left: 12px; margin-top: 1px;
+  }
+
+  .controls {
+    position: absolute; bottom: 14px; right: 14px;
+    display: flex; gap: 4px;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 5px; padding: 4px;
+    z-index: 5;
+  }
+  .controls button {
+    background: transparent; color: var(--text-dim);
+    border: none; width: 26px; height: 26px;
+    cursor: pointer; font-size: 12px; font-family: var(--mono);
+    border-radius: 3px;
+  }
+  .controls button:hover { background: var(--panel-2); color: var(--text); }
+  .controls .fit { width: auto; padding: 0 10px; font-size: 10.5px; }
+
+  .connections-list {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .conn-pill {
+    background: var(--panel-2); border: 1px solid var(--border);
+    border-radius: 4px; padding: 4px 8px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--text-dim); cursor: pointer;
+  }
+  .conn-pill:hover { color: var(--text); border-color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>CELH Pydantic Schema — Class Map</h1>
+  <div class="sub">Every class in <code style="font-family:var(--mono)">financials-schema/</code>. Click any card for field details + Python source. Click a field's type to jump to the referenced class.</div>
+  <div class="legend">
+    <span><span class="swatch" style="background:var(--c-model)"></span>Model (BaseModel)</span>
+    <span><span class="swatch" style="background:var(--c-enum)"></span>Enum</span>
+    <span><span class="swatch" style="background:var(--c-primitive)"></span>Primitive (str, int, Decimal, date, bool, Path)</span>
+    <span><span class="swatch" style="background:var(--c-literal)"></span>Literal[...]</span>
+    <span><span class="swatch" style="background:var(--c-container)"></span>Container (list[], tuple[], dict[])</span>
+    <span><span class="line" style="background:var(--c-compose)"></span>composition (has-a)</span>
+    <span><span class="line" style="background:var(--c-inherit)"></span>inheritance</span>
+  </div>
+</header>
+
+<main>
+  <div class="map-wrap" id="mapWrap">
+    <svg class="map" id="svg" width="1500" height="2000"></svg>
+    <div class="controls">
+      <button id="zoomOut">−</button>
+      <button id="zoomIn">+</button>
+      <button id="fit" class="fit">Fit</button>
+    </div>
+  </div>
+  <aside>
+    <div class="detail" id="detail"></div>
+  </aside>
+</main>
+
+<script>
+// =========================================================================
+// SCHEMA DEFINITION
+// =========================================================================
+
+const SCHEMA = [
+  // ============ ENUMS ============
+  {
+    name: 'Unit', kind: 'enum', extends: 'str, Enum', layer: 'shared',
+    layerLabel: 'SHARED ENUMS',
+    doc: 'Currency/magnitude unit for a Statement. Detected during extraction; UNKNOWN triggers a validator error.',
+    fields: [
+      { name: 'THOUSANDS', type: '"thousands"' },
+      { name: 'MILLIONS',  type: '"millions"' },
+      { name: 'BILLIONS',  type: '"billions"' },
+      { name: 'ACTUAL',    type: '"actual"' },
+      { name: 'UNKNOWN',   type: '"unknown"' }
+    ]
+  },
+  {
+    name: 'StatementType', kind: 'enum', extends: 'str, Enum', layer: 'shared',
+    doc: 'Top-level financial statement categories.',
+    fields: [
+      { name: 'BALANCE_SHEET',    type: '"BS"' },
+      { name: 'CASH_FLOW',        type: '"CF"' },
+      { name: 'INCOME_STATEMENT', type: '"IS"' }
+    ]
+  },
+  {
+    name: 'FilingType', kind: 'enum', extends: 'str, Enum', layer: 'shared',
+    doc: 'SEC filing form types. Press releases treated as IS-only (validator enforces).',
+    fields: [
+      { name: 'TEN_K',         type: '"10-K"' },
+      { name: 'TEN_Q',         type: '"10-Q"' },
+      { name: 'PRESS_RELEASE', type: '"press_release"' },
+      { name: 'EIGHT_K',       type: '"8-K"' }
+    ]
+  },
+  {
+    name: 'NumericNotation', kind: 'enum', extends: 'Flag', layer: 'shared',
+    doc: 'Bitmap flags recording HOW a raw numeric cell was originally written in the PDF ($(x), —, 1,234*, etc.). Preserved on every RawLineItem for audit. Multiple flags can be combined.',
+    fields: [
+      { name: 'NONE',               type: '0' },
+      { name: 'PARENS_NEGATIVE',    type: 'auto()' },
+      { name: 'NEGATIVE_MINUS',     type: 'auto()' },
+      { name: 'ZERO_DASH',          type: 'auto()' },
+      { name: 'DOLLAR_SIGN',        type: 'auto()' },
+      { name: 'TRAILING_ASTERISK',  type: 'auto()' },
+      { name: 'HAS_FOOTNOTE',       type: 'auto()' },
+      { name: 'SUPERSCRIPT_SUFFIX', type: 'auto()' }
+    ]
+  },
+  {
+    name: 'Section', kind: 'enum', extends: 'str, Enum', layer: 'shared',
+    doc: 'Statement sub-section. Line items get classified during extraction; UNCLASSIFIED is the fallback.',
+    fields: [
+      { name: 'CURRENT_ASSETS',          type: '"current_assets"' },
+      { name: 'NON_CURRENT_ASSETS',      type: '"non_current_assets"' },
+      { name: 'CURRENT_LIABILITIES',     type: '"current_liabilities"' },
+      { name: 'NON_CURRENT_LIABILITIES', type: '"non_current_liabilities"' },
+      { name: 'MEZZANINE',               type: '"mezzanine"' },
+      { name: 'EQUITY',                  type: '"equity"' },
+      { name: 'OPERATING',               type: '"operating"' },
+      { name: 'INVESTING',               type: '"investing"' },
+      { name: 'FINANCING',               type: '"financing"' },
+      { name: 'FX_RECONCILIATION',       type: '"fx_reconciliation"' },
+      { name: 'REVENUE_COST',            type: '"revenue_cost"' },
+      { name: 'OPERATING_EXPENSES',      type: '"operating_expenses"' },
+      { name: 'NON_OPERATING',           type: '"non_operating"' },
+      { name: 'TAX',                     type: '"tax"' },
+      { name: 'EPS',                     type: '"eps"' },
+      { name: 'UNCLASSIFIED',            type: '"unclassified"' }
+    ]
+  },
+
+  // ============ SHARED PATTERN LIBRARIES ============
+  {
+    name: 'PatternEntry', kind: 'model', extends: 'BaseModel', layer: 'patterns',
+    layerLabel: 'SHARED PATTERN LIBRARIES',
+    doc: 'One entry in a pattern file — the canonical enum value, keywords for fast match, exact variants for fuzzy match, and the rapidfuzz threshold below which the user gets prompted.',
+    fields: [
+      { name: 'canonical',       type: 'str',       typeKind: 'primitive' },
+      { name: 'keywords',        type: 'list[str]', typeKind: 'container' },
+      { name: 'variants',        type: 'list[str]', typeKind: 'container' },
+      { name: 'fuzzy_threshold', type: 'int',       typeKind: 'primitive', default: 'Field(ge=0, le=100, default=85)' }
+    ]
+  },
+  {
+    name: 'RegexPattern', kind: 'model', extends: 'BaseModel', layer: 'patterns',
+    doc: 'A single regex pattern with named capture groups mapped to target Pydantic field names. Used by RegexPatternEntry for structured extraction (e.g. parsing year + quarter out of "Q1 2025").',
+    fields: [
+      { name: 'pattern',  type: 'str',            typeKind: 'primitive' },
+      { name: 'captures', type: 'dict[int, str]', typeKind: 'container' }
+    ]
+  },
+  {
+    name: 'RegexPatternEntry', kind: 'model', extends: 'BaseModel', layer: 'patterns',
+    doc: 'Regex-based pattern entry for structured extraction. Used where phrase-match is insufficient (like Period, which needs to extract year/quarter from variants like "Q1 2025", "1Q25", "Quarter 1, 2025").',
+    fields: [
+      { name: 'canonical',      type: 'str',                  typeKind: 'primitive' },
+      { name: 'regex_patterns', type: 'list[RegexPattern]',   typeKind: 'container', ref: 'RegexPattern' }
+    ]
+  },
+  {
+    name: 'PatternLibrary', kind: 'model', extends: 'BaseModel', layer: 'patterns',
+    doc: 'A loaded YAML pattern file (e.g. unit_phrases.yaml). Maps canonical slugs to either PatternEntry (phrase match) or RegexPatternEntry (structured regex extraction). Validates that no variant string appears in more than one entry.',
+    fields: [
+      { name: 'entries',      type: 'dict[str, PatternEntry | RegexPatternEntry]', typeKind: 'container', ref: 'PatternEntry' },
+      { name: 'file_path',    type: 'Path',                    typeKind: 'primitive' },
+      { name: 'last_updated', type: 'datetime',                typeKind: 'primitive' }
+    ],
+    validators: [
+      { name: 'no_duplicate_variants', sig: '@model_validator(mode="after")' }
+    ]
+  },
+
+  // ============ LAYER 1 — RAW ============
+  {
+    name: 'Citation', kind: 'model', extends: 'BaseModel', layer: 'raw',
+    layerLabel: 'LAYER 1 · RAW FILING',
+    doc: 'Page + line reference back to the source PDF for any extracted value.',
+    fields: [
+      { name: 'source_path', type: 'Path', typeKind: 'primitive' },
+      { name: 'page',        type: 'int',           typeKind: 'primitive', default: 'Field(ge=1)' },
+      { name: 'line_hint',   type: 'str | None',    typeKind: 'primitive', default: 'None' },
+      { name: 'note',        type: 'str | None',    typeKind: 'primitive', default: 'None' }
+    ]
+  },
+  {
+    name: 'Period', kind: 'model', extends: 'BaseModel', layer: 'raw',
+    doc: 'Fiscal period identity. Resolved from varied filing notations ("Q1 2025", "1Q25", "52 weeks ended Dec 30, 2023") via period_phrase_patterns.yaml.',
+    fields: [
+      { name: 'fiscal_year',         type: 'int',        typeKind: 'primitive', default: 'Field(ge=1990, le=2100)' },
+      { name: 'fiscal_quarter',      type: 'int | None', typeKind: 'primitive', default: 'None, ge=1, le=4' },
+      { name: 'period_end_date',     type: 'date',       typeKind: 'primitive' },
+      { name: 'raw_period_label',    type: 'str',        typeKind: 'primitive' },
+      { name: 'period_length_weeks', type: 'int | None', typeKind: 'primitive', default: 'None' },
+      { name: 'is_comparative',      type: 'bool',       typeKind: 'primitive', default: 'False' }
+    ]
+  },
+  {
+    name: 'RawLineItem', kind: 'model', extends: 'BaseModel', layer: 'raw',
+    config: 'frozen=True',
+    doc: 'A single extracted line item in the native unit of its parent Statement. Preserves raw numeric notation (parens, dashes, footnotes) for audit. Immutable once created.',
+    fields: [
+      { name: 'raw_filing_label', type: 'str',              typeKind: 'primitive' },
+      { name: 'value',            type: 'Decimal',          typeKind: 'primitive' },
+      { name: 'raw_numeric_text', type: 'str',              typeKind: 'primitive' },
+      { name: 'notation_flags',   type: 'NumericNotation',  typeKind: 'enum', ref: 'NumericNotation', default: 'NumericNotation.NONE' },
+      { name: 'footnote_markers', type: 'list[str]',        typeKind: 'container', default: '[]' },
+      { name: 'indent_level',     type: 'int',              typeKind: 'primitive', default: '2' },
+      { name: 'row_type',         type: 'Literal["section_header", "subsection_header", "line_item", "subtotal", "total", "memo"]', typeKind: 'literal', default: '"line_item"' },
+      { name: 'section',          type: 'Section',          typeKind: 'enum', ref: 'Section', default: 'Section.UNCLASSIFIED' },
+      { name: 'sign_convention',  type: 'Literal["as_reported", "parens_negative", "expense_positive", "contra_account", "absolute_from_section_header"]', typeKind: 'literal', default: '"as_reported"' },
+      { name: 'citation',         type: 'Citation',         typeKind: 'model', ref: 'Citation' }
+    ]
+  },
+  {
+    name: 'Statement', kind: 'model', extends: 'BaseModel', layer: 'raw',
+    doc: 'A single financial statement (BS / CF / IS) for one period. Carries statement-wide unit + separate share/EPS units for filings that mix magnitudes.',
+    fields: [
+      { name: 'statement_type',            type: 'StatementType',   typeKind: 'enum',  ref: 'StatementType' },
+      { name: 'period',                    type: 'Period',          typeKind: 'model', ref: 'Period' },
+      { name: 'unit',                      type: 'Unit',            typeKind: 'enum',  ref: 'Unit' },
+      { name: 'raw_unit_phrase',           type: 'str',             typeKind: 'primitive' },
+      { name: 'unit_detection_source',     type: 'Literal["explicit_header", "plausibility_inferred", "ledger_override"]', typeKind: 'literal' },
+      { name: 'unit_detection_confidence', type: 'float',           typeKind: 'primitive', default: 'Field(ge=0, le=1)' },
+      { name: 'share_unit',                type: 'Unit',            typeKind: 'enum',  ref: 'Unit', default: 'Unit.ACTUAL' },
+      { name: 'eps_unit',                  type: 'Unit',            typeKind: 'enum',  ref: 'Unit', default: 'Unit.ACTUAL' },
+      { name: 'currency',                  type: 'str',             typeKind: 'primitive', default: '"USD"' },
+      { name: 'dialect',                   type: 'Literal["US_GAAP", "IFRS", "foreign_20F"]', typeKind: 'literal', default: '"US_GAAP"' },
+      { name: 'line_items',                type: 'list[RawLineItem]', typeKind: 'container', ref: 'RawLineItem' }
+    ],
+    validators: [
+      { name: 'reject_unknown_unit',        sig: '@model_validator(mode="after")' },
+      { name: 'plausibility_check_unit',    sig: '@model_validator(mode="after")' }
+    ]
+  },
+  {
+    name: 'RawFiling', kind: 'model', extends: 'BaseModel', layer: 'raw',
+    doc: 'A full extracted filing. Output of financials-extract. Input to financials-reconcile.',
+    fields: [
+      { name: 'ticker',               type: 'str',              typeKind: 'primitive', default: 'Field(pattern=r"^[A-Z\\.]{1,6}$")' },
+      { name: 'filing_type',          type: 'FilingType',       typeKind: 'enum',      ref: 'FilingType' },
+      { name: 'filing_date',          type: 'date',             typeKind: 'primitive' },
+      { name: 'source_path',          type: 'Path',             typeKind: 'primitive' },
+      { name: 'statements',           type: 'list[Statement]',  typeKind: 'container', ref: 'Statement' },
+      { name: 'extraction_metadata',  type: 'dict',             typeKind: 'primitive', default: 'Field(default_factory=dict)' }
+    ],
+    validators: [
+      { name: 'at_least_one_statement',                  sig: '@model_validator(mode="after")' },
+      { name: 'press_release_has_only_income_statement', sig: '@model_validator(mode="after")' }
+    ]
+  },
+
+  // ============ LAYER 2 — MAPPED ============
+  {
+    name: 'MappedLineItem', kind: 'model', extends: 'RawLineItem', layer: 'mapped',
+    layerLabel: 'LAYER 2 · MAPPED FILING',
+    doc: 'RawLineItem + mapping to a row in the Excel financial model.',
+    fields: [
+      { name: 'model_sheet',      type: 'str',            typeKind: 'primitive' },
+      { name: 'model_row',        type: 'int',            typeKind: 'primitive' },
+      { name: 'model_label',      type: 'str',            typeKind: 'primitive' },
+      { name: 'mapping_source',   type: 'Literal["ledger_auto", "user_decision", "novel"]', typeKind: 'literal' },
+      { name: 'ledger_rule_id',   type: 'str | None',     typeKind: 'primitive', default: 'None' }
+    ],
+    inherited: 'RawLineItem'
+  },
+  {
+    name: 'NovelItem', kind: 'model', extends: 'BaseModel', layer: 'mapped',
+    doc: 'A raw item with no matching ledger rule. Surfaces fuzzy-scored candidates for user to pick from.',
+    fields: [
+      { name: 'raw_item',        type: 'RawLineItem',              typeKind: 'model',     ref: 'RawLineItem' },
+      { name: 'nearest_matches', type: 'list[tuple[str, float]]',  typeKind: 'container' }
+    ]
+  },
+  {
+    name: 'MappedFiling', kind: 'model', extends: 'BaseModel', layer: 'mapped',
+    doc: 'Output of financials-reconcile. Preserves the RawFiling for provenance.',
+    fields: [
+      { name: 'raw',                type: 'RawFiling',             typeKind: 'model', ref: 'RawFiling' },
+      { name: 'mapped_line_items',  type: 'list[MappedLineItem]',  typeKind: 'container', ref: 'MappedLineItem' },
+      { name: 'novel_items',        type: 'list[NovelItem]',       typeKind: 'container', ref: 'NovelItem', default: '[]' }
+    ],
+    validators: [
+      { name: 'no_unresolved_novel_items', sig: '@model_validator(mode="after")' }
+    ]
+  },
+
+  // ============ LAYER 3 — VALIDATED ============
+  {
+    name: 'ValidationResult', kind: 'model', extends: 'BaseModel', layer: 'validated',
+    layerLabel: 'LAYER 3 · VALIDATED FILING',
+    doc: 'Outcome of a single validation rule (BS-1..BS-7, CF-1, CF-2, X-1..X-4).',
+    fields: [
+      { name: 'rule_id',  type: 'str',                              typeKind: 'primitive' },
+      { name: 'expected', type: 'Decimal',                          typeKind: 'primitive' },
+      { name: 'actual',   type: 'Decimal',                          typeKind: 'primitive' },
+      { name: 'gap',      type: 'Decimal',                          typeKind: 'primitive' },
+      { name: 'severity', type: 'Literal["pass", "warning", "fail"]', typeKind: 'literal' },
+      { name: 'message',  type: 'str',                              typeKind: 'primitive' }
+    ]
+  },
+  {
+    name: 'ValidatedFiling', kind: 'model', extends: 'BaseModel', layer: 'validated',
+    doc: 'Output of financials-validate. Only emitted when all rules pass (or every fail has an override entry in the decisions ledger).',
+    fields: [
+      { name: 'mapped',   type: 'MappedFiling',            typeKind: 'model',     ref: 'MappedFiling' },
+      { name: 'results',  type: 'list[ValidationResult]',  typeKind: 'container', ref: 'ValidationResult' },
+      { name: 'passed',   type: 'bool',                    typeKind: 'primitive' }
+    ],
+    validators: [
+      { name: 'all_results_pass_or_override', sig: '@model_validator(mode="after")' }
+    ]
+  },
+
+  // ============ LAYER 4 — DERIVED ============
+  {
+    name: 'DerivedCalcs', kind: 'model', extends: 'BaseModel', layer: 'derived',
+    layerLabel: 'LAYER 4 · DERIVED CALCULATIONS',
+    doc: 'Output of model-calc. Growth rates, margins, WC ratios, and scenario grid with GLP-1 / SNAP overlays.',
+    fields: [
+      { name: 'growth',           type: 'GrowthTable',    typeKind: 'model' },
+      { name: 'margins',          type: 'MarginTable',    typeKind: 'model' },
+      { name: 'working_capital',  type: 'WcRatios',       typeKind: 'model' },
+      { name: 'scenarios',        type: 'ScenarioGrid',   typeKind: 'model' }
+    ]
+  }
+];
+
+// =========================================================================
+// LAYOUT
+// =========================================================================
+// Fixed-column layout with cards snapped to a 3-column grid per layer.
+// Layer bands stacked top-to-bottom; card height varies by field count.
+
+const LAYERS = [
+  { id: 'shared',    label: 'SHARED ENUMS',                 y0: 40 },
+  { id: 'patterns',  label: 'SHARED PATTERN LIBRARIES',     y0: 560 },
+  { id: 'raw',       label: 'LAYER 1 · RAW FILING',         y0: 830 },
+  { id: 'mapped',    label: 'LAYER 2 · MAPPED FILING',      y0: 1500 },
+  { id: 'validated', label: 'LAYER 3 · VALIDATED FILING',   y0: 1730 },
+  { id: 'derived',   label: 'LAYER 4 · DERIVED CALCS',      y0: 1990 }
+];
+
+const COL_X = [60, 430, 800, 1170];
+const CARD_W = 310;
+const HEADER_H = 42;
+const ROW_H = 20;
+const PAD_Y = 14;
+const VALIDATOR_ROW_H = 16;
+
+// manual column assignment per class (0..3) and optional row within layer
+const LAYOUT = {
+  'Unit':             { col: 0, row: 0 },
+  'StatementType':    { col: 1, row: 0 },
+  'FilingType':       { col: 2, row: 0 },
+  'Section':          { col: 0, row: 1 },
+  'NumericNotation':  { col: 2, row: 1 },
+
+  'PatternEntry':      { col: 0, row: 0 },
+  'RegexPattern':      { col: 1, row: 0 },
+  'RegexPatternEntry': { col: 2, row: 0 },
+  'PatternLibrary':    { col: 1, row: 1 },
+
+  'Citation':         { col: 0, row: 0 },
+  'Period':           { col: 1, row: 0 },
+  'RawLineItem':      { col: 2, row: 0 },
+  'Statement':        { col: 0, row: 1 },
+  'RawFiling':        { col: 2, row: 1 },
+
+  'MappedLineItem':   { col: 0, row: 0 },
+  'NovelItem':        { col: 1, row: 0 },
+  'MappedFiling':     { col: 2, row: 0 },
+
+  'ValidationResult': { col: 0, row: 0 },
+  'ValidatedFiling':  { col: 2, row: 0 },
+
+  'DerivedCalcs':     { col: 1, row: 0 }
+};
+
+// =========================================================================
+// RENDER
+// =========================================================================
+
+const svg = document.getElementById('svg');
+const mapWrap = document.getElementById('mapWrap');
+const detailEl = document.getElementById('detail');
+
+const state = {
+  selected: 'RawFiling',
+  scale: 1
+};
+
+// Truncate long type strings so they don't overflow the card.
+// Keeps common shapes readable; hover tooltip shows the full type.
+function formatTypeForCard(t, maxLen = 32) {
+  if (t.length <= maxLen) return t;
+
+  // Literal["a", "b", "c"] → Literal[N options]
+  const litMatch = t.match(/^Literal\[(.+)\]$/);
+  if (litMatch) {
+    const options = litMatch[1].split(',').length;
+    return `Literal[${options} options]`;
+  }
+
+  // dict[str, LongType | AlsoLong] → dict[str, ...]
+  const dictMatch = t.match(/^dict\[([^,]+),/);
+  if (dictMatch) return `dict[${dictMatch[1].trim()}, ...]`;
+
+  // Otherwise ellipsis
+  return t.substring(0, maxLen - 3) + '...';
+}
+
+// Compute card bounding box based on field count
+function cardHeight(cls) {
+  const fields = cls.fields ? cls.fields.length : 0;
+  const validators = cls.validators ? cls.validators.length : 0;
+  const h = HEADER_H + fields * ROW_H + (validators ? validators * VALIDATOR_ROW_H + 8 : 0) + PAD_Y;
+  return Math.max(h, 80);
+}
+
+// Compute card position
+const POSITIONS = {};
+function computePositions() {
+  // For each layer, find max row
+  const layerOf = {};
+  SCHEMA.forEach(c => { layerOf[c.name] = c.layer; });
+
+  // Get layer y0
+  const yStart = {};
+  LAYERS.forEach(l => { yStart[l.id] = l.y0 + 40; });
+
+  // Group by layer, then by row
+  const byLayer = {};
+  SCHEMA.forEach(c => {
+    if (!byLayer[c.layer]) byLayer[c.layer] = [];
+    byLayer[c.layer].push(c);
+  });
+
+  Object.keys(byLayer).forEach(layerId => {
+    const classes = byLayer[layerId];
+    // group by row within layer
+    const rows = {};
+    classes.forEach(c => {
+      const r = (LAYOUT[c.name] || {}).row || 0;
+      if (!rows[r]) rows[r] = [];
+      rows[r].push(c);
+    });
+    let y = yStart[layerId];
+    Object.keys(rows).sort((a,b)=>a-b).forEach(rIdx => {
+      const rowClasses = rows[rIdx];
+      let maxH = 0;
+      rowClasses.forEach(c => {
+        const col = (LAYOUT[c.name] || {}).col || 0;
+        const x = COL_X[col];
+        const h = cardHeight(c);
+        POSITIONS[c.name] = { x, y, w: CARD_W, h };
+        if (h > maxH) maxH = h;
+      });
+      y += maxH + 30;
+    });
+    // update layer y1 to track end
+    const layer = LAYERS.find(l => l.id === layerId);
+    layer.y1 = y;
+  });
+}
+
+function svgEl(tag, attrs = {}, text) {
+  const e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+
+function renderLayerBands() {
+  LAYERS.forEach(l => {
+    const rect = svgEl('rect', {
+      x: 20, y: l.y0, width: 1460, height: (l.y1 || l.y0 + 300) - l.y0 - 5,
+      class: 'layer-band-border', rx: 8, ry: 8
+    });
+    svg.appendChild(rect);
+
+    const label = svgEl('text', {
+      x: 34, y: l.y0 + 22, class: 'layer-label'
+    }, l.label);
+    svg.appendChild(label);
+  });
+}
+
+function renderCards() {
+  SCHEMA.forEach(cls => {
+    const pos = POSITIONS[cls.name];
+    if (!pos) return;
+
+    const g = svgEl('g', { class: 'card-g', 'data-class': cls.name });
+    g.addEventListener('click', (e) => {
+      e.stopPropagation();
+      state.selected = cls.name;
+      renderAll();
+    });
+
+    // Card background
+    const selected = state.selected === cls.name;
+    const rect = svgEl('rect', {
+      x: pos.x, y: pos.y, width: pos.w, height: pos.h,
+      class: 'card-rect ' + cls.kind + (selected ? ' selected' : '')
+    });
+    g.appendChild(rect);
+
+    // Header band
+    const hdr = svgEl('rect', {
+      x: pos.x, y: pos.y, width: pos.w, height: HEADER_H,
+      class: 'card-header-fill ' + cls.kind,
+      rx: 6, ry: 6
+    });
+    g.appendChild(hdr);
+    // cover bottom rounding of header
+    const hdrCover = svgEl('rect', {
+      x: pos.x, y: pos.y + HEADER_H - 6, width: pos.w, height: 6,
+      class: 'card-header-fill ' + cls.kind
+    });
+    g.appendChild(hdrCover);
+
+    // Title
+    g.appendChild(svgEl('text', {
+      x: pos.x + 14, y: pos.y + 16,
+      class: 'card-title ' + cls.kind
+    }, cls.name));
+
+    // extends
+    g.appendChild(svgEl('text', {
+      x: pos.x + 14, y: pos.y + 32,
+      class: 'card-extends'
+    }, `extends ${cls.extends}${cls.config ? '   (' + cls.config + ')' : ''}`));
+
+    // Divider under header
+    g.appendChild(svgEl('line', {
+      x1: pos.x, y1: pos.y + HEADER_H,
+      x2: pos.x + pos.w, y2: pos.y + HEADER_H,
+      stroke: 'var(--border)', 'stroke-width': 1
+    }));
+
+    // Fields
+    (cls.fields || []).forEach((f, i) => {
+      const fy = pos.y + HEADER_H + i * ROW_H + 14;
+      // field name
+      g.appendChild(svgEl('text', {
+        x: pos.x + 14, y: fy, class: 'field-name'
+      }, f.name));
+      // colon + type (right-aligned) — truncate to fit card width
+      const typeText = ':  ' + formatTypeForCard(f.type);
+      const tt = svgEl('text', {
+        x: pos.x + pos.w - 14, y: fy,
+        'text-anchor': 'end',
+        class: 'field-type ' + (f.typeKind || 'primitive')
+      }, typeText);
+      // Native tooltip on hover shows the full type
+      const titleEl = svgEl('title', {}, f.type);
+      tt.appendChild(titleEl);
+      if (f.ref) {
+        tt.addEventListener('click', (e) => {
+          e.stopPropagation();
+          state.selected = f.ref;
+          renderAll();
+        });
+        tt.style.cursor = 'pointer';
+      }
+      g.appendChild(tt);
+    });
+
+    // Validators
+    if (cls.validators && cls.validators.length) {
+      const vY0 = pos.y + HEADER_H + (cls.fields || []).length * ROW_H + 10;
+      g.appendChild(svgEl('line', {
+        x1: pos.x + 10, y1: vY0 - 4,
+        x2: pos.x + pos.w - 10, y2: vY0 - 4,
+        stroke: 'var(--border)', 'stroke-width': 1, 'stroke-dasharray': '2 3'
+      }));
+      cls.validators.forEach((v, i) => {
+        g.appendChild(svgEl('text', {
+          x: pos.x + 14, y: vY0 + 8 + i * VALIDATOR_ROW_H,
+          class: 'validator-text'
+        }, '⚙ ' + v.name));
+      });
+    }
+
+    svg.appendChild(g);
+  });
+}
+
+function cardEdge(from, to) {
+  // Connect from middle-of-appropriate-side to middle-of-appropriate-side
+  const fromC = { x: from.x + from.w/2, y: from.y + from.h/2 };
+  const toC   = { x: to.x + to.w/2,     y: to.y + to.h/2 };
+  const dx = toC.x - fromC.x, dy = toC.y - fromC.y;
+  let x1, y1, x2, y2;
+  if (Math.abs(dy) > Math.abs(dx)) {
+    // vertical preference
+    if (dy > 0) { y1 = from.y + from.h; y2 = to.y; }
+    else        { y1 = from.y;          y2 = to.y + to.h; }
+    x1 = fromC.x; x2 = toC.x;
+  } else {
+    if (dx > 0) { x1 = from.x + from.w; x2 = to.x; }
+    else        { x1 = from.x;          x2 = to.x + to.w; }
+    y1 = fromC.y; y2 = toC.y;
+  }
+  return { x1, y1, x2, y2 };
+}
+
+function renderArrows() {
+  // First pass: composition arrows
+  SCHEMA.forEach(cls => {
+    const fromPos = POSITIONS[cls.name];
+    if (!fromPos) return;
+    (cls.fields || []).forEach(f => {
+      if (!f.ref) return;
+      const toPos = POSITIONS[f.ref];
+      if (!toPos) return;
+      const e = cardEdge(fromPos, toPos);
+      const dx = e.x2 - e.x1, dy = e.y2 - e.y1;
+      const midX = (e.x1 + e.x2) / 2;
+      const midY = (e.y1 + e.y2) / 2;
+      const path = svgEl('path', {
+        d: `M ${e.x1} ${e.y1} C ${e.x1} ${midY}, ${e.x2} ${midY}, ${e.x2} ${e.y2}`,
+        class: 'arrow-compose' + (cls.name === state.selected || f.ref === state.selected ? ' active' : ''),
+        'marker-end': 'url(#arrowC)'
+      });
+      svg.appendChild(path);
+    });
+    // Inheritance
+    if (cls.extends && cls.extends !== 'BaseModel' && cls.extends !== 'str, Enum') {
+      // It's a class inheritance
+      const parent = cls.extends.split(',')[0].trim();
+      const toPos = POSITIONS[parent];
+      if (toPos) {
+        const e = cardEdge(fromPos, toPos);
+        const midY = (e.y1 + e.y2) / 2;
+        const path = svgEl('path', {
+          d: `M ${e.x1} ${e.y1} C ${e.x1} ${midY}, ${e.x2} ${midY}, ${e.x2} ${e.y2}`,
+          class: 'arrow-inherit' + (cls.name === state.selected || parent === state.selected ? ' active' : ''),
+          'marker-end': 'url(#arrowI)'
+        });
+        svg.appendChild(path);
+      }
+    }
+  });
+}
+
+function renderDefs() {
+  const defs = svgEl('defs');
+  const mkArrow = (id, color) => {
+    const m = svgEl('marker', {
+      id: id, viewBox: '0 0 10 10', refX: 8, refY: 5,
+      markerWidth: 6, markerHeight: 6, orient: 'auto-start-reverse'
+    });
+    m.appendChild(svgEl('path', { d: 'M0,0 L10,5 L0,10 z', fill: color }));
+    defs.appendChild(m);
+  };
+  mkArrow('arrowC', '#14b8a6');
+  mkArrow('arrowI', '#ef4444');
+  svg.appendChild(defs);
+}
+
+function renderAll() {
+  svg.innerHTML = '';
+  renderDefs();
+  renderLayerBands();
+  renderArrows();  // arrows first (behind cards)
+  renderCards();
+  renderDetail();
+  // Fit height
+  const maxY = LAYERS.reduce((m, l) => Math.max(m, l.y1 || 0), 0);
+  svg.setAttribute('height', maxY + 40);
+  svg.setAttribute('width', 1500);
+}
+
+// =========================================================================
+// DETAIL PANEL
+// =========================================================================
+
+function renderDetail() {
+  const cls = SCHEMA.find(c => c.name === state.selected);
+  if (!cls) { detailEl.innerHTML = ''; return; }
+
+  // find incoming references
+  const incoming = [];
+  SCHEMA.forEach(c => {
+    (c.fields || []).forEach(f => {
+      if (f.ref === cls.name) incoming.push({ from: c.name, via: f.name });
+    });
+    if (c.extends === cls.name) incoming.push({ from: c.name, via: '(inherits)' });
+  });
+
+  const outgoing = [];
+  (cls.fields || []).forEach(f => {
+    if (f.ref) outgoing.push({ to: f.ref, via: f.name });
+  });
+  if (cls.extends && cls.extends !== 'BaseModel' && cls.extends !== 'str, Enum') {
+    outgoing.push({ to: cls.extends.split(',')[0].trim(), via: '(inherits from)' });
+  }
+
+  let body = `
+    <h2 class="${cls.kind}">${cls.name}</h2>
+    <div class="extends">extends ${cls.extends}${cls.config ? '  ·  ' + cls.config : ''}</div>
+    <div class="doc">${cls.doc || ''}</div>
+  `;
+
+  if (cls.fields && cls.fields.length) {
+    body += `<div class="detail-block"><div class="label">Fields</div>`;
+    cls.fields.forEach(f => {
+      const typeClass = f.typeKind || 'primitive';
+      const typeSpan = f.ref
+        ? `<span class="type-link ${typeClass}" data-ref="${f.ref}">${f.type}</span>`
+        : `<span class="tpe" style="color: var(--c-${typeClass === 'primitive' ? 'primitive' : typeClass})">${f.type}</span>`;
+      body += `<div class="field-row">
+        <span class="name">${f.name}:</span>
+        <span>${typeSpan}${f.default ? ` <span class="default">= ${f.default}</span>` : ''}</span>
+      </div>`;
+    });
+    body += `</div>`;
+  }
+
+  if (cls.validators && cls.validators.length) {
+    body += `<div class="detail-block"><div class="label">Validators</div>`;
+    cls.validators.forEach(v => {
+      body += `<div class="validator-item">${v.name}<code>${v.sig}</code></div>`;
+    });
+    body += `</div>`;
+  }
+
+  if (incoming.length) {
+    body += `<div class="detail-block"><div class="label">Referenced by</div><div class="connections-list">`;
+    incoming.forEach(i => {
+      body += `<div class="conn-pill" data-nav="${i.from}">← ${i.from} . ${i.via}</div>`;
+    });
+    body += `</div></div>`;
+  }
+
+  if (outgoing.length) {
+    body += `<div class="detail-block"><div class="label">References</div><div class="connections-list">`;
+    outgoing.forEach(o => {
+      body += `<div class="conn-pill" data-nav="${o.to}">→ ${o.to} <span style="color:var(--text-dim2)">(${o.via})</span></div>`;
+    });
+    body += `</div></div>`;
+  }
+
+  // Python code
+  body += `<div class="detail-block"><div class="label">Python source</div><pre class="pyd-code">${pythonSource(cls)}</pre></div>`;
+
+  detailEl.innerHTML = body;
+
+  detailEl.querySelectorAll('[data-ref]').forEach(el => {
+    el.addEventListener('click', () => {
+      state.selected = el.dataset.ref; renderAll();
+    });
+  });
+  detailEl.querySelectorAll('[data-nav]').forEach(el => {
+    el.addEventListener('click', () => {
+      state.selected = el.dataset.nav; renderAll();
+    });
+  });
+}
+
+function pythonSource(cls) {
+  if (cls.kind === 'enum') {
+    let code = `class ${cls.name}(${cls.extends}):\n`;
+    cls.fields.forEach(f => {
+      code += `    ${f.name} = ${f.type}\n`;
+    });
+    return code;
+  }
+  let code = `class ${cls.name}(${cls.extends}):\n`;
+  if (cls.config) {
+    code += `    model_config = ConfigDict(${cls.config})\n`;
+  }
+  cls.fields.forEach(f => {
+    const dflt = f.default ? ` = ${f.default}` : '';
+    code += `    ${f.name}: ${f.type}${dflt}\n`;
+  });
+  if (cls.validators && cls.validators.length) {
+    code += '\n';
+    cls.validators.forEach(v => {
+      code += `    ${v.sig}\n    def ${v.name}(self):\n        ...\n        return self\n\n`;
+    });
+  }
+  return code;
+}
+
+// =========================================================================
+// PAN + ZOOM (map scroll is native; we scale the SVG via transform)
+// =========================================================================
+
+document.getElementById('zoomIn').addEventListener('click', () => {
+  state.scale = Math.min(2, state.scale * 1.15);
+  svg.style.transformOrigin = '0 0';
+  svg.style.transform = `scale(${state.scale})`;
+});
+document.getElementById('zoomOut').addEventListener('click', () => {
+  state.scale = Math.max(0.4, state.scale / 1.15);
+  svg.style.transformOrigin = '0 0';
+  svg.style.transform = `scale(${state.scale})`;
+});
+document.getElementById('fit').addEventListener('click', () => {
+  state.scale = 1;
+  svg.style.transform = '';
+  mapWrap.scrollTop = 0;
+  mapWrap.scrollLeft = 0;
+});
+
+// =========================================================================
+// INIT
+// =========================================================================
+
+computePositions();
+renderAll();
+</script>
+</body>
+</html>
