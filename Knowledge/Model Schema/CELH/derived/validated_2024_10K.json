@@ -10978,6 +10978,30 @@
       "message": "Cash End (755981) = Cash Beg (652927) + NetChange (103054)"
     },
     {
+      "rule_id": "CF-3 @ FY2023",
+      "expected": "141218",
+      "actual": "141218",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 23 operating items = Net cash from operating (141218)"
+    },
+    {
+      "rule_id": "CF-4 @ FY2023",
+      "expected": "-14200",
+      "actual": "-14200",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 2 investing items = Net cash from investing (-14200)"
+    },
+    {
+      "rule_id": "CF-5 @ FY2023",
+      "expected": "-25221",
+      "actual": "-25221",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 5 financing items = Net cash from financing (-25221)"
+    },
+    {
       "rule_id": "CF-1 @ FY2022",
       "expected": "636672",
       "actual": "636672",
@@ -10994,6 +11018,30 @@
       "message": "Cash End (652927) = Cash Beg (16255) + NetChange (636672)"
     },
     {
+      "rule_id": "CF-3 @ FY2022",
+      "expected": "108182",
+      "actual": "108182",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 23 operating items = Net cash from operating (108182)"
+    },
+    {
+      "rule_id": "CF-4 @ FY2022",
+      "expected": "-5672",
+      "actual": "-5672",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 2 investing items = Net cash from investing (-5672)"
+    },
+    {
+      "rule_id": "CF-5 @ FY2022",
+      "expected": "534112",
+      "actual": "534112",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 5 financing items = Net cash from financing (534112)"
+    },
+    {
       "rule_id": "CF-1 @ FY2021",
       "expected": "-26993",
       "actual": "-26993",
@@ -11008,6 +11056,30 @@
       "gap": "0",
       "severity": "pass",
       "message": "Cash End (16255) = Cash Beg (43248) + NetChange (-26993)"
+    },
+    {
+      "rule_id": "CF-3 @ FY2021",
+      "expected": "-96586",
+      "actual": "-96586",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 23 operating items = Net cash from operating (-96586)"
+    },
+    {
+      "rule_id": "CF-4 @ FY2021",
+      "expected": "-1264",
+      "actual": "-1264",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 2 investing items = Net cash from investing (-1264)"
+    },
+    {
+      "rule_id": "CF-5 @ FY2021",
+      "expected": "71395",
+      "actual": "71395",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Sum of 5 financing items = Net cash from financing (71395)"
     },
     {
       "rule_id": "X-1 @ FY2021",
