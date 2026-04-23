@@ -3,7 +3,7 @@ type: roadmap
 date: 2026-04-23
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + GLP-1 + SNAP + cross-model integration
-last_session: "April 23rd Generic Library Migration Session"
+last_session: "April 23rd Generic Migration Phases 3-7 Session"
 ---
 
 # Celsius HF Case Study — Roadmap
@@ -16,13 +16,13 @@ Living document. Update after each session. Three workstreams feed one final que
 
 | Workstream | State | Next action |
 |---|---|---|
-| **CELH financial pipeline** (6 skills) | **5 of 6 built**, 2 filings end-to-end through the xlsx | Finish generic-library migration (Phases 3–7), then `model-calc` |
-| **Generic cross-ticker library** | **Phases 1–2 shipped** (file created, reconcile loads it) | Phase 3: strip model_row + label renames in CELH ledger |
+| **CELH financial pipeline** (6 skills) | **5 of 6 built**, 2 filings end-to-end through the xlsx | Build `model-calc` (driver tabs + forecast) |
+| **Generic cross-ticker library** | **Phases 1–7 shipped** — migration complete | Maintain; audit aliases as new tickers land |
 | **GLP-1 projection model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (later) |
 | **SNAP / demographics model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (later) |
 | **Cross-model integration** | Not started | Blocked until `model-calc` exposes forecast rows |
 
-**Critical path to a defensible case study:** ~~`model-write` → verify historicals~~ ✓ → finish generic-library migration (Phases 3–7) → `model-calc` (growth/margins/WC ratios + forecast columns) → cross-model integration of GLP-1 + SNAP into the revenue forecast.
+**Critical path to a defensible case study:** ~~`model-write` → verify historicals~~ ✓ → ~~finish generic-library migration (Phases 3–7)~~ ✓ → `model-calc` (growth/margins/WC ratios + forecast columns) → cross-model integration of GLP-1 + SNAP into the revenue forecast.
 
 ---
 
@@ -54,6 +54,7 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 - **End-to-end runs:** FY2023 10-K + FY2024 10-K **48/48 PASS** (36 original + IS-1..4 × 3 periods per filing, gap = 0 on every rule, both filings). `CELH_model.xlsx` generated with 315+ cells, IS + BS + CF live subtotal formulas, accountant-style number formats with `$--` on zero.
 - **Meta-playgrounds refreshed:** `playground_architecture.html` is now **interactive** (drag nodes / add + remove arrows / localStorage autosave / export JSON / reset). `playground_schema.html` (Pydantic classes).
 - **Design docs** (01–04) at `Brain\Knowledge\Model Schema\`.
+- **Generic-library migration complete (2026-04-23):** CELH ledger cut from 150 → 10 entries; generic library is the source of truth. 3 architectural wins: (1) reconcile's `select_entry` only enforces `filing_section` on ambiguous aliases, unblocking single-candidate label matches; (2) model-write row layout derives from the latest filing's document order; (3) validate uses canonical-label lookups, no more hardcoded model_row. Tax sign flip (expense-positive convention) shipped. **48/48 PASS on both filings.**
 - **Memory feedback saved this session:**
   - `feedback_ledger_ordering.md` — align ledger ordering to the latest filing when filings differ.
   - `feedback_sign_agnostic_labels.md` — canonical labels use parentheticals for the alternative sign.
@@ -75,19 +76,9 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 
 ## Active — current objective
 
-### Finish the generic-library migration (Phases 3–7), THEN `model-calc`
+### `model-calc` (Layer 4, part 3) — UNBLOCKED
 
-A cross-ticker canonical nomenclature library was introduced this session to lift ~80% of line-item mappings out of the per-ticker CELH ledger. Phases 1–2 are shipped (file created at `pattern_libraries/generic_line_item_mappings.json` with 89 entries; `reconcile.py` loads + merges with tier-based ticker precedence; pipeline still 48/48 PASS). Phases 3–7 remain:
-
-- **Phase 3** — Strip `model_row` from CELH `decisions_ledger.json`, mark generic-covered entries `superseded_by: "generic"`, apply ~30 label renames (sign-agnostic convention — `Net Income (Loss)`, `Interest Income (Expense)`, etc.). Keep 7 CELH-specific entries (Deferred Other Costs pair, Accrued Distributor Termination, Amortization of Deferred Other Costs, Big Beverages acquisition, Gain (Loss) on Lease Cancellations, Interest Income on Note Receivable).
-- **Phase 4** — Refactor `model-write/scripts/write.py` row layout. Row order no longer pinned in the ledger — derived from the latest filing's raw `line_items` document order. Older-filing-only items append preserving their prior-filing position.
-- **Phase 5** — Refactor `validate.py` cross-statement rules. `_find_by_model_row` → `_find_by_canonical_label` / `_find_by_rule_id`.
-- **Phase 6** — Income Tax sign flip (scope B: all expense-convention items). `sign_convention: "expense_positive"` on Interest Income (Expense), FX Gain (Loss), Other Income (Expense), Income Tax (Benefit) Expense. `model-write` negates at write time; IS subtotal formulas become `=PT−SUM(non_op)` and `=PT−Tax`.
-- **Phase 7** — Regression on CELH FY2023 + FY2024 10-Ks, confirm 48/48 still PASS, inspect xlsx output.
-
-Once migration lands, `model-calc` resumes with its deferred scope:
-
-### `model-calc` (Layer 4, part 3) — deferred until migration complete
+Migration Phases 3–7 all shipped this session (see `April 23rd Generic Migration Phases 3-7 Session.md` handoff). `model-calc` is the next thing.
 
 Per earlier user direction:
 - **Growth:** YoY per line item; project forward.
@@ -102,9 +93,11 @@ Design note: since BS/CF + IS subtotals are already live formulas, `model-calc` 
 
 ## Near horizon — next milestones
 
-1. **Finish generic-library migration (Phases 3–7).** See Active above. The handoff at `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Library Migration Session.md` has the complete rename list + queued work detail.
+1. **Build `model-calc`.** Unblocked. See Active above.
 2. **Pull FY2025 10-K from EDGAR.** Accession `0001341766-26-000024`, HTML-only at `https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm`. Needs one of: `weasyprint` HTML→PDF, `playwright`-driven headless print, or an HTML-aware branch in `financials-extract`. After conversion, run full pipeline; expect a handful of novels from FY2025 10-K wording drift.
 3. **Cross-model integration — first cut.** Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2028E (extend through FY2030E per original plan). Requires `model-calc` live first so the forecast rows are driven by formulas.
+4. **CF orphan-row slotting (polish).** Older-only items (`Gain (Loss) on Lease Cancellations`, `Proceeds from Issuance of Common Stock`) currently append at the end of the CF sheet on the xlsx. Two-pass insertion using `filing_section` / section_hint would slot them into their natural operating / financing section. Low-priority cleanup.
+5. **Extractor section-tagging fix.** Root-cause fix for ROU + Deferred Revenue NC mis-tagging. Would remove the workarounds in `reconcile.select_entry` (unique-candidate filter skip) and `model-write` (filing_section bucketing hint).
 
 ---
 
@@ -146,7 +139,8 @@ Design note: since BS/CF + IS subtotals are already live formulas, `model-calc` 
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Library Migration Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Migration Phases 3-7 Session.md` |
+| Prior handoff (Phases 1–2) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Library Migration Session.md` |
 | Prior handoff (model-write shipped) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Model-Write Shipped Session.md` |
 | Prior handoff (playground polish) | `Brain\Sessions\CELH Model\Handoffs\April 22nd Playground Polish Session.md` |
 | **Generic cross-ticker library** | `Brain\Knowledge\Model Schema\pattern_libraries\generic_line_item_mappings.json` |
