@@ -141,29 +141,29 @@ source financials-schema/.venv/Scripts/activate
 PYTHONIOENCODING=utf-8 python "C:/Users/rodin/.claude/skills/financials-extract/scripts/extract.py" \
     --ticker-root "CELH/" \
     --pdf "C:/Users/rodin/Desktop/Pl3 Celsius Case Study/data/CELH Reporting/Financial Statements/2024_CELH_10-K.pdf" \
-    --out "CELH/derived/raw_2024_10K.json" \
+    --out "CELH/Model Output/raw_2024_10K.json" \
     --filing-type "10-K" --filing-date "2024-02-29"
 PYTHONIOENCODING=utf-8 python "C:/Users/rodin/.claude/skills/financials-reconcile/scripts/reconcile.py" \
-    --ticker-root "CELH/" --in "CELH/derived/raw_2024_10K.json" --out "CELH/derived/mapped_2024_10K.json"
+    --ticker-root "CELH/" --in "CELH/Model Output/raw_2024_10K.json" --out "CELH/Model Output/mapped_2024_10K.json"
 PYTHONIOENCODING=utf-8 python "C:/Users/rodin/.claude/skills/financials-validate/scripts/validate.py" \
-    --ticker-root "CELH/" --in "CELH/derived/mapped_2024_10K.json" --out "CELH/derived/validated_2024_10K.json"
+    --ticker-root "CELH/" --in "CELH/Model Output/mapped_2024_10K.json" --out "CELH/Model Output/validated_2024_10K.json"
 
 # Extract + reconcile + validate FY2024 10-K (file: 2025_CELH_10-K.pdf)
 PYTHONIOENCODING=utf-8 python "C:/Users/rodin/.claude/skills/financials-extract/scripts/extract.py" \
     --ticker-root "CELH/" \
     --pdf "C:/Users/rodin/Desktop/Pl3 Celsius Case Study/data/CELH Reporting/Financial Statements/2025_CELH_10-K.pdf" \
-    --out "CELH/derived/raw_2025_10K.json" \
+    --out "CELH/Model Output/raw_2025_10K.json" \
     --filing-type "10-K" --filing-date "2025-02-27"
 PYTHONIOENCODING=utf-8 python "C:/Users/rodin/.claude/skills/financials-reconcile/scripts/reconcile.py" \
-    --ticker-root "CELH/" --in "CELH/derived/raw_2025_10K.json" --out "CELH/derived/mapped_2025_10K.json"
+    --ticker-root "CELH/" --in "CELH/Model Output/raw_2025_10K.json" --out "CELH/Model Output/mapped_2025_10K.json"
 PYTHONIOENCODING=utf-8 python "C:/Users/rodin/.claude/skills/financials-validate/scripts/validate.py" \
-    --ticker-root "CELH/" --in "CELH/derived/mapped_2025_10K.json" --out "CELH/derived/validated_2025_10K.json"
+    --ticker-root "CELH/" --in "CELH/Model Output/mapped_2025_10K.json" --out "CELH/Model Output/validated_2025_10K.json"
 
 # Multi-filing playground
 python "C:/Users/rodin/.claude/skills/financials-playground/scripts/build_playground.py" \
-    --in "CELH/derived/validated_2024_10K.json" \
-    --in "CELH/derived/validated_2025_10K.json" \
-    --out "CELH/derived/explorer_multi.html"
+    --in "CELH/Model Output/validated_2024_10K.json" \
+    --in "CELH/Model Output/validated_2025_10K.json" \
+    --out "CELH/Model Output/explorer_multi.html"
 ```
 
 ## Open decisions / pending work
@@ -189,8 +189,8 @@ python "C:/Users/rodin/.claude/skills/financials-playground/scripts/build_playgr
 | CELH ticker config | `C:/Users/rodin/Desktop/Brain/Knowledge/Model Schema/CELH/config.json` |
 | CELH anomalies | `C:/Users/rodin/Desktop/Brain/Knowledge/Model Schema/CELH/anomalies.json` |
 | CELH decisions ledger | `C:/Users/rodin/Desktop/Brain/Knowledge/Model Schema/CELH/decisions_ledger.json` |
-| CELH derived outputs (raw/mapped/validated/novels) | `C:/Users/rodin/Desktop/Brain/Knowledge/Model Schema/CELH/derived/` |
-| Multi-filing explorer HTML (today's output) | `C:/Users/rodin/Desktop/Brain/Knowledge/Model Schema/CELH/derived/explorer_multi.html` |
+| CELH derived outputs (raw/mapped/validated/novels) | `C:/Users/rodin/Desktop/Brain/Knowledge/Model Schema/CELH/Model Output/` |
+| Multi-filing explorer HTML (today's output) | `C:/Users/rodin/Desktop/Brain/Knowledge/Model Schema/CELH/Model Output/explorer_multi.html` |
 | Extract skill | `C:/Users/rodin/.claude/skills/financials-extract/` |
 | Reconcile skill | `C:/Users/rodin/.claude/skills/financials-reconcile/` |
 | Validate skill | `C:/Users/rodin/.claude/skills/financials-validate/` |

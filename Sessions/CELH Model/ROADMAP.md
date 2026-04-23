@@ -139,6 +139,6 @@ Takes validated JSONs + the xlsm, writes values into the CELH model. First run i
 | Design docs (01–04) | `Brain\Knowledge\Model Schema\0{1..4}_*.md` |
 | Shared schema package | `Brain\Knowledge\Model Schema\financials-schema\` |
 | CELH config / anomalies / ledger | `Brain\Knowledge\Model Schema\CELH\{config,anomalies,decisions_ledger}.json` |
-| CELH derived outputs | `Brain\Knowledge\Model Schema\CELH\derived\` |
+| CELH model outputs | `Brain\Knowledge\Model Schema\CELH\Model Output\` |
 | Target xlsm | `Pl3 Celsius Case Study\data\derived\CELH Financial Model.xlsm` |
 | Source PDFs | `Pl3 Celsius Case Study\data\CELH Reporting\Financial Statements\` |

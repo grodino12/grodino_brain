@@ -504,7 +504,7 @@ const NODES = [
   // Layer 4 sub-row (y=830) — xlsm under model-write, glp1/snap feeding model-calc
   { id: 'xlsm-model', layer: 'output', kind: 'external', x: 400, y: 920, w: 200, h: 50, label: 'CELH Financial Model.xlsm',
     purpose: 'Target Excel model (10 sheets, VBA macros). Written via model-write; saves to _updated.xlsm, never overwrites.',
-    path: 'Brain/Knowledge/Model Schema/CELH/derived/CELH Financial Model.xlsm'
+    path: 'Brain/Knowledge/Model Schema/CELH/Model Output/CELH Financial Model.xlsm'
   },
   { id: 'glp1-model', layer: 'output', kind: 'external', x: 610, y: 920, w: 150, h: 50, label: 'GLP-1 output',
     purpose: 'Energy drink consumption headwind curve from the GLP-1 Projection model. Scenario input to model-calc.',
@@ -889,7 +889,7 @@ Features: period selector (FY23/FY24/FY25/quarterly), BS/CF/IS tabs, YoY diff wi
 Copy-out button emits model-write scaffold prompt for selected period.
 Acceptance: FY23+FY24 side-by-side flags both the Inventories -43% drawdown and RE flip (-$12M → +$105M).`,
 
-    'model-write': `Input: ValidatedFiling + --xlsm (target path, usually Brain/Knowledge/Model Schema/CELH/derived/*.xlsm).
+    'model-write': `Input: ValidatedFiling + --xlsm (target path, usually Brain/Knowledge/Model Schema/CELH/Model Output/*.xlsm).
 Output: *_updated.xlsm + *.xlsm.bak.
 Excel safety (non-negotiable): keep_vba=True, never cell.fill = None (use PatternFill(fill_type=None)), save to _updated filename, .bak backup before writes, Path 3 manual inserts for new rows (emit ManualInsertPlan for user to action before values are written).
 Verify-after-save: reload, spot-check 10 known cells against source_citations.json, grep for #REF!.
