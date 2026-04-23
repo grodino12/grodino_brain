@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ticker": "CELH",
-  "last_updated": "2026-04-22T00:00:00Z",
+  "last_updated": "2026-04-23T00:00:00Z",
   "source_md": "Brain/Sessions/CELH Model/03_celh_decisions_ledger.md",
   "notes": "Converted from markdown handoff. Append-only; to supersede a rule, add a new entry and set the old one's superseded_by field.",
   "mappings": [
@@ -1048,6 +1048,26 @@
       "model_label": "Net Change in Cash",
       "decided_date": "2026-04-22",
       "note": "FY2024 10-K wording (#13 user third-fuzzy): simpler vs MAP-CF-046 (which had 'net increase decrease ... and restricted cash')"
+    },
+    {
+      "rule_id": "MAP-BS-034",
+      "filing_term_normalized": "lease liability operating leases",
+      "filing_section": "current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 33,
+      "model_label": "Lease Liability - Operating Current",
+      "decided_date": "2026-04-23",
+      "note": "FY2024 10-K dropped the (current)/(non-current) qualifier on operating lease lines. filing_section disambiguates — mirrors MAP-BS-031 pattern for finance leases."
+    },
+    {
+      "rule_id": "MAP-BS-035",
+      "filing_term_normalized": "lease liability operating leases",
+      "filing_section": "non_current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 39,
+      "model_label": "Lease Liability - Operating NC",
+      "decided_date": "2026-04-23",
+      "note": "Sibling of MAP-BS-034 — routes the non-current occurrence of the same raw label."
     }
   ],
   "renames": [
@@ -1340,5 +1360,5 @@
     }
   ],
   "validation_overrides": [],
-  "_last_updated": "2026-04-22"
+  "_last_updated": "2026-04-23"
 }

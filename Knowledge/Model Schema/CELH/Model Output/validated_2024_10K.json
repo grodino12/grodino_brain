@@ -11082,6 +11082,14 @@
       "message": "Sum of 5 financing items = Net cash from financing (71395)"
     },
     {
+      "rule_id": "M-1",
+      "expected": "0",
+      "actual": "0",
+      "gap": "0",
+      "severity": "pass",
+      "message": "All 91 ledger_rule_ids in use have consistent section tags."
+    },
+    {
       "rule_id": "X-1 @ FY2021",
       "expected": "3937",
       "actual": "3937",
