@@ -386,7 +386,7 @@ const SCHEMA = [
   {
     name: 'RawLineItem', kind: 'model', extends: 'BaseModel', layer: 'raw',
     config: 'frozen=True',
-    doc: 'A single extracted line item in the native unit of its parent Statement. Preserves raw numeric notation (parens, dashes, footnotes) for audit. Immutable once created.',
+    doc: 'A single extracted line item in the native unit of its parent Statement. Preserves raw numeric notation (parens, dashes, footnotes) for audit. subsection_context is stamped by extract when the row is under a subsection header like "Earnings per share" or "Weighted average shares outstanding" — reconcile uses it to disambiguate repeated labels (e.g. Basic / Diluted appears in both EPS and shares). Immutable once created.',
     fields: [
       { name: 'raw_filing_label', type: 'str',              typeKind: 'primitive' },
       { name: 'value',            type: 'Decimal',          typeKind: 'primitive' },
@@ -403,7 +403,7 @@ const SCHEMA = [
   },
   {
     name: 'Statement', kind: 'model', extends: 'BaseModel', layer: 'raw',
-    doc: 'A single financial statement (BS / CF / IS) for one period. Carries statement-wide unit + separate share/EPS units for filings that mix magnitudes.',
+    doc: 'A single financial statement (BS / CF / IS) for one period. Carries statement-wide unit + separate share/EPS units for filings that mix magnitudes. share_unit and eps_unit are derived from the raw_unit_phrase exclusions: "(in thousands, except per share amounts)" → share_unit=THOUSANDS, eps_unit=ACTUAL; "except share and per share" → both ACTUAL.',
     fields: [
       { name: 'statement_type',            type: 'StatementType',   typeKind: 'enum',  ref: 'StatementType' },
       { name: 'period',                    type: 'Period',          typeKind: 'model', ref: 'Period' },
@@ -455,7 +455,7 @@ const SCHEMA = [
   },
   {
     name: 'NovelItem', kind: 'model', extends: 'BaseModel', layer: 'mapped',
-    doc: 'A raw item with no matching ledger rule. Surfaces fuzzy-scored candidates for user to pick from.',
+    doc: 'A raw item with no matching ledger rule. Surfaces fuzzy-scored candidates for user to pick from. reconcile --novels-out dumps these (plus per-period context) as a NovelReport JSON that the playground renders in a NOVELS tab for walkthrough.',
     fields: [
       { name: 'raw_item',        type: 'RawLineItem',              typeKind: 'model',     ref: 'RawLineItem' },
       { name: 'nearest_matches', type: 'list[tuple[str, float]]',  typeKind: 'container' }
@@ -478,7 +478,7 @@ const SCHEMA = [
   {
     name: 'ValidationResult', kind: 'model', extends: 'BaseModel', layer: 'validated',
     layerLabel: 'LAYER 3 · VALIDATED FILING',
-    doc: 'Outcome of a single validation rule (BS-1..BS-7, CF-1, CF-2, X-1..X-4).',
+    doc: 'Outcome of a single validation rule. Families: BS-1..BS-6 (subtotal sums + accounting equation; BS-7 RE roll-forward deferred), CF-1/CF-2 (Δcash + rollforward), CF-3/CF-4/CF-5 (section-sum to Net Cash from Op/Inv/Fin), X-1/X-2/X-4 (cross-statement ties).',
     fields: [
       { name: 'rule_id',  type: 'str',                              typeKind: 'primitive' },
       { name: 'expected', type: 'Decimal',                          typeKind: 'primitive' },
