@@ -4899,10 +4899,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 9,
+        "model_row": 0,
         "model_label": "Cash & Cash Equivalents",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-001"
+        "ledger_rule_id": "GEN-BS-001"
       },
       {
         "raw_filing_label": "Restricted cash",
@@ -4922,10 +4922,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 10,
+        "model_row": 0,
         "model_label": "Restricted Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-023"
+        "ledger_rule_id": "GEN-BS-002"
       },
       {
         "raw_filing_label": "Accounts receivable-net",
@@ -4945,10 +4945,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 11,
+        "model_row": 0,
         "model_label": "Accounts Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-002"
+        "ledger_rule_id": "GEN-BS-003"
       },
       {
         "raw_filing_label": "Note receivable-current-net",
@@ -4968,10 +4968,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 12,
-        "model_label": "Note Receivable",
+        "model_row": 0,
+        "model_label": "Note Receivable - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-024"
+        "ledger_rule_id": "GEN-BS-004"
       },
       {
         "raw_filing_label": "Inventories-net",
@@ -4991,10 +4991,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 13,
+        "model_row": 0,
         "model_label": "Inventories",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-004"
+        "ledger_rule_id": "GEN-BS-005"
       },
       {
         "raw_filing_label": "Prepaid expenses and other current assets",
@@ -5014,10 +5014,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 15,
+        "model_row": 0,
         "model_label": "Prepaid Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-006"
+        "ledger_rule_id": "GEN-BS-006"
       },
       {
         "raw_filing_label": "Deferred other costs-current",
@@ -5037,8 +5037,8 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 14,
-        "model_label": "Deferred Other Costs (Current)",
+        "model_row": 0,
+        "model_label": "Deferred Other Costs - Current",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-BS-005"
       },
@@ -5083,10 +5083,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 12,
-        "model_label": "Note Receivable",
+        "model_row": 0,
+        "model_label": "Note Receivable - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-003"
+        "ledger_rule_id": "GEN-BS-004"
       },
       {
         "raw_filing_label": "Property and equipment-net",
@@ -5106,10 +5106,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 19,
+        "model_row": 0,
         "model_label": "Net PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-007"
+        "ledger_rule_id": "GEN-BS-007"
       },
       {
         "raw_filing_label": "Deferred tax assets",
@@ -5129,10 +5129,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 20,
+        "model_row": 0,
         "model_label": "Deferred Tax Assets",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-013"
+        "ledger_rule_id": "GEN-BS-008"
       },
       {
         "raw_filing_label": "Right of use assets-operating leases",
@@ -5152,10 +5152,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 21,
-        "model_label": "ROU Assets - Operating",
+        "model_row": 0,
+        "model_label": "ROU Assets - Operating - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-008"
+        "ledger_rule_id": "GEN-BS-009"
       },
       {
         "raw_filing_label": "Right of use assets-finance leases",
@@ -5175,10 +5175,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 22,
-        "model_label": "ROU Assets - Finance",
+        "model_row": 0,
+        "model_label": "ROU Assets - Finance - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-009"
+        "ledger_rule_id": "GEN-BS-010"
       },
       {
         "raw_filing_label": "Other long-term assets",
@@ -5199,9 +5199,9 @@
         },
         "model_sheet": "BALANCE SHEET",
         "model_row": 0,
-        "model_label": "Other Long-Term Assets",
+        "model_label": "Other Non-Current Assets",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-001"
+        "ledger_rule_id": "GEN-BS-014"
       },
       {
         "raw_filing_label": "Deferred other costs-non-current",
@@ -5221,8 +5221,8 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 24,
-        "model_label": "Deferred Other Costs (NC)",
+        "model_row": 0,
+        "model_label": "Deferred Other Costs - Non-Current",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-BS-012"
       },
@@ -5244,10 +5244,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 25,
-        "model_label": "Intangibles",
+        "model_row": 0,
+        "model_label": "Intangible Assets",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-010"
+        "ledger_rule_id": "GEN-BS-012"
       },
       {
         "raw_filing_label": "Goodwill",
@@ -5267,10 +5267,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 26,
+        "model_row": 0,
         "model_label": "Goodwill",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-011"
+        "ledger_rule_id": "GEN-BS-013"
       },
       {
         "raw_filing_label": "Total Assets",
@@ -5313,10 +5313,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 29,
+        "model_row": 0,
         "model_label": "Accounts Payable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-025"
+        "ledger_rule_id": "GEN-BS-015"
       },
       {
         "raw_filing_label": "Accrued expenses",
@@ -5339,7 +5339,7 @@
         "model_row": 0,
         "model_label": "Accrued Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-002"
+        "ledger_rule_id": "GEN-BS-016"
       },
       {
         "raw_filing_label": "Income taxes payable",
@@ -5362,7 +5362,7 @@
         "model_row": 0,
         "model_label": "Income Taxes Payable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-003"
+        "ledger_rule_id": "GEN-BS-017"
       },
       {
         "raw_filing_label": "Accrued distributor termination fees",
@@ -5405,10 +5405,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 32,
+        "model_row": 0,
         "model_label": "Accrued Promotional Allowance",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-014"
+        "ledger_rule_id": "GEN-BS-018"
       },
       {
         "raw_filing_label": "Lease liability obligation-operating leases",
@@ -5428,10 +5428,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 33,
-        "model_label": "Lease Liability - Operating Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Operating - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-026"
+        "ledger_rule_id": "GEN-BS-019"
       },
       {
         "raw_filing_label": "Lease liability obligation-finance leases",
@@ -5451,10 +5451,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 34,
-        "model_label": "Lease Liability - Finance Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Finance - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-027"
+        "ledger_rule_id": "GEN-BS-020"
       },
       {
         "raw_filing_label": "Deferred revenue-current",
@@ -5474,10 +5474,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 35,
-        "model_label": "Deferred Revenue (Current)",
+        "model_row": 0,
+        "model_label": "Deferred Revenue - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-017"
+        "ledger_rule_id": "GEN-BS-021"
       },
       {
         "raw_filing_label": "Other current liabilities",
@@ -5497,10 +5497,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 36,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-018"
+        "ledger_rule_id": "GEN-BS-022"
       },
       {
         "raw_filing_label": "Total current liabilities",
@@ -5543,10 +5543,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 33,
-        "model_label": "Lease Liability - Operating Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Operating - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-026"
+        "ledger_rule_id": "GEN-BS-019"
       },
       {
         "raw_filing_label": "Lease liability obligation-finance leases",
@@ -5566,10 +5566,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 34,
-        "model_label": "Lease Liability - Finance Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Finance - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-027"
+        "ledger_rule_id": "GEN-BS-020"
       },
       {
         "raw_filing_label": "Deferred tax liability",
@@ -5589,10 +5589,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 41,
+        "model_row": 0,
         "model_label": "Deferred Tax Liability",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-021"
+        "ledger_rule_id": "GEN-BS-025"
       },
       {
         "raw_filing_label": "Deferred revenue-non-current",
@@ -5612,10 +5612,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 42,
-        "model_label": "Deferred Revenue (NC)",
+        "model_row": 0,
+        "model_label": "Deferred Revenue - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-022"
+        "ledger_rule_id": "MAP-BS-036"
       },
       {
         "raw_filing_label": "Total Liabilities",
@@ -5661,7 +5661,7 @@
         "model_row": 0,
         "model_label": "Convertible Preferred Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-004"
+        "ledger_rule_id": "GEN-BS-027"
       },
       {
         "raw_filing_label": "Common stock, $0.001 par value; 300,000,000 shares authorized, 231,787,482 and 229,146,788 shares issued and outstanding at December 31, 2023 and December 31, 2022,\nrespectively(1)",
@@ -5684,7 +5684,7 @@
         "model_row": 0,
         "model_label": "Common Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-005"
+        "ledger_rule_id": "GEN-BS-028"
       },
       {
         "raw_filing_label": "Additional paid-in capital",
@@ -5707,7 +5707,7 @@
         "model_row": 0,
         "model_label": "Additional Paid-in Capital",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-006"
+        "ledger_rule_id": "GEN-BS-029"
       },
       {
         "raw_filing_label": "Accumulated other comprehensive loss",
@@ -5728,9 +5728,9 @@
         },
         "model_sheet": "BALANCE SHEET",
         "model_row": 0,
-        "model_label": "Accumulated Other Comprehensive Loss",
+        "model_label": "Accumulated Other Comprehensive Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-007"
+        "ledger_rule_id": "GEN-BS-030"
       },
       {
         "raw_filing_label": "Accumulated deficit",
@@ -5753,7 +5753,7 @@
         "model_row": 0,
         "model_label": "Retained Earnings (Accumulated Deficit)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-028"
+        "ledger_rule_id": "GEN-BS-031"
       },
       {
         "raw_filing_label": "Total Stockholders’ Equity",
@@ -5819,10 +5819,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 9,
+        "model_row": 0,
         "model_label": "Cash & Cash Equivalents",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-001"
+        "ledger_rule_id": "GEN-BS-001"
       },
       {
         "raw_filing_label": "Restricted cash",
@@ -5842,10 +5842,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 10,
+        "model_row": 0,
         "model_label": "Restricted Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-023"
+        "ledger_rule_id": "GEN-BS-002"
       },
       {
         "raw_filing_label": "Accounts receivable-net",
@@ -5865,10 +5865,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 11,
+        "model_row": 0,
         "model_label": "Accounts Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-002"
+        "ledger_rule_id": "GEN-BS-003"
       },
       {
         "raw_filing_label": "Note receivable-current-net",
@@ -5888,10 +5888,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 12,
-        "model_label": "Note Receivable",
+        "model_row": 0,
+        "model_label": "Note Receivable - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-024"
+        "ledger_rule_id": "GEN-BS-004"
       },
       {
         "raw_filing_label": "Inventories-net",
@@ -5911,10 +5911,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 13,
+        "model_row": 0,
         "model_label": "Inventories",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-004"
+        "ledger_rule_id": "GEN-BS-005"
       },
       {
         "raw_filing_label": "Prepaid expenses and other current assets",
@@ -5934,10 +5934,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 15,
+        "model_row": 0,
         "model_label": "Prepaid Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-006"
+        "ledger_rule_id": "GEN-BS-006"
       },
       {
         "raw_filing_label": "Deferred other costs-current",
@@ -5957,8 +5957,8 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 14,
-        "model_label": "Deferred Other Costs (Current)",
+        "model_row": 0,
+        "model_label": "Deferred Other Costs - Current",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-BS-005"
       },
@@ -6003,10 +6003,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 12,
-        "model_label": "Note Receivable",
+        "model_row": 0,
+        "model_label": "Note Receivable - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-003"
+        "ledger_rule_id": "GEN-BS-004"
       },
       {
         "raw_filing_label": "Property and equipment-net",
@@ -6026,10 +6026,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 19,
+        "model_row": 0,
         "model_label": "Net PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-007"
+        "ledger_rule_id": "GEN-BS-007"
       },
       {
         "raw_filing_label": "Deferred tax assets",
@@ -6049,10 +6049,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 20,
+        "model_row": 0,
         "model_label": "Deferred Tax Assets",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-013"
+        "ledger_rule_id": "GEN-BS-008"
       },
       {
         "raw_filing_label": "Right of use assets-operating leases",
@@ -6072,10 +6072,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 21,
-        "model_label": "ROU Assets - Operating",
+        "model_row": 0,
+        "model_label": "ROU Assets - Operating - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-008"
+        "ledger_rule_id": "GEN-BS-009"
       },
       {
         "raw_filing_label": "Right of use assets-finance leases",
@@ -6095,10 +6095,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 22,
-        "model_label": "ROU Assets - Finance",
+        "model_row": 0,
+        "model_label": "ROU Assets - Finance - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-009"
+        "ledger_rule_id": "GEN-BS-010"
       },
       {
         "raw_filing_label": "Other long-term assets",
@@ -6119,9 +6119,9 @@
         },
         "model_sheet": "BALANCE SHEET",
         "model_row": 0,
-        "model_label": "Other Long-Term Assets",
+        "model_label": "Other Non-Current Assets",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-001"
+        "ledger_rule_id": "GEN-BS-014"
       },
       {
         "raw_filing_label": "Deferred other costs-non-current",
@@ -6141,8 +6141,8 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 24,
-        "model_label": "Deferred Other Costs (NC)",
+        "model_row": 0,
+        "model_label": "Deferred Other Costs - Non-Current",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-BS-012"
       },
@@ -6164,10 +6164,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 25,
-        "model_label": "Intangibles",
+        "model_row": 0,
+        "model_label": "Intangible Assets",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-010"
+        "ledger_rule_id": "GEN-BS-012"
       },
       {
         "raw_filing_label": "Goodwill",
@@ -6187,10 +6187,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 26,
+        "model_row": 0,
         "model_label": "Goodwill",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-011"
+        "ledger_rule_id": "GEN-BS-013"
       },
       {
         "raw_filing_label": "Total Assets",
@@ -6233,10 +6233,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 29,
+        "model_row": 0,
         "model_label": "Accounts Payable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-025"
+        "ledger_rule_id": "GEN-BS-015"
       },
       {
         "raw_filing_label": "Accrued expenses",
@@ -6259,7 +6259,7 @@
         "model_row": 0,
         "model_label": "Accrued Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-002"
+        "ledger_rule_id": "GEN-BS-016"
       },
       {
         "raw_filing_label": "Income taxes payable",
@@ -6282,7 +6282,7 @@
         "model_row": 0,
         "model_label": "Income Taxes Payable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-003"
+        "ledger_rule_id": "GEN-BS-017"
       },
       {
         "raw_filing_label": "Accrued distributor termination fees",
@@ -6325,10 +6325,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 32,
+        "model_row": 0,
         "model_label": "Accrued Promotional Allowance",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-014"
+        "ledger_rule_id": "GEN-BS-018"
       },
       {
         "raw_filing_label": "Lease liability obligation-operating leases",
@@ -6348,10 +6348,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 33,
-        "model_label": "Lease Liability - Operating Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Operating - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-026"
+        "ledger_rule_id": "GEN-BS-019"
       },
       {
         "raw_filing_label": "Lease liability obligation-finance leases",
@@ -6371,10 +6371,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 34,
-        "model_label": "Lease Liability - Finance Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Finance - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-027"
+        "ledger_rule_id": "GEN-BS-020"
       },
       {
         "raw_filing_label": "Deferred revenue-current",
@@ -6394,10 +6394,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 35,
-        "model_label": "Deferred Revenue (Current)",
+        "model_row": 0,
+        "model_label": "Deferred Revenue - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-017"
+        "ledger_rule_id": "GEN-BS-021"
       },
       {
         "raw_filing_label": "Other current liabilities",
@@ -6417,10 +6417,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 36,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-018"
+        "ledger_rule_id": "GEN-BS-022"
       },
       {
         "raw_filing_label": "Total current liabilities",
@@ -6463,10 +6463,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 33,
-        "model_label": "Lease Liability - Operating Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Operating - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-026"
+        "ledger_rule_id": "GEN-BS-019"
       },
       {
         "raw_filing_label": "Lease liability obligation-finance leases",
@@ -6486,10 +6486,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 34,
-        "model_label": "Lease Liability - Finance Current",
+        "model_row": 0,
+        "model_label": "Lease Liability - Finance - Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-027"
+        "ledger_rule_id": "GEN-BS-020"
       },
       {
         "raw_filing_label": "Deferred tax liability",
@@ -6509,10 +6509,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 41,
+        "model_row": 0,
         "model_label": "Deferred Tax Liability",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-021"
+        "ledger_rule_id": "GEN-BS-025"
       },
       {
         "raw_filing_label": "Deferred revenue-non-current",
@@ -6532,10 +6532,10 @@
           "note": null
         },
         "model_sheet": "BALANCE SHEET",
-        "model_row": 42,
-        "model_label": "Deferred Revenue (NC)",
+        "model_row": 0,
+        "model_label": "Deferred Revenue - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-022"
+        "ledger_rule_id": "MAP-BS-036"
       },
       {
         "raw_filing_label": "Total Liabilities",
@@ -6581,7 +6581,7 @@
         "model_row": 0,
         "model_label": "Convertible Preferred Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-004"
+        "ledger_rule_id": "GEN-BS-027"
       },
       {
         "raw_filing_label": "Common stock, $0.001 par value; 300,000,000 shares authorized, 231,787,482 and 229,146,788 shares issued and outstanding at December 31, 2023 and December 31, 2022,\nrespectively(1)",
@@ -6604,7 +6604,7 @@
         "model_row": 0,
         "model_label": "Common Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-005"
+        "ledger_rule_id": "GEN-BS-028"
       },
       {
         "raw_filing_label": "Additional paid-in capital",
@@ -6627,7 +6627,7 @@
         "model_row": 0,
         "model_label": "Additional Paid-in Capital",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-006"
+        "ledger_rule_id": "GEN-BS-029"
       },
       {
         "raw_filing_label": "Accumulated other comprehensive loss",
@@ -6648,9 +6648,9 @@
         },
         "model_sheet": "BALANCE SHEET",
         "model_row": 0,
-        "model_label": "Accumulated Other Comprehensive Loss",
+        "model_label": "Accumulated Other Comprehensive Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-BS-007"
+        "ledger_rule_id": "GEN-BS-030"
       },
       {
         "raw_filing_label": "Accumulated deficit",
@@ -6673,7 +6673,7 @@
         "model_row": 0,
         "model_label": "Retained Earnings (Accumulated Deficit)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-028"
+        "ledger_rule_id": "GEN-BS-031"
       },
       {
         "raw_filing_label": "Total Stockholders’ Equity",
@@ -6739,10 +6739,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 9,
-        "model_label": "Net Sales (Revenue)",
+        "model_row": 0,
+        "model_label": "Net Sales / Revenue",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-007"
+        "ledger_rule_id": "GEN-IS-001"
       },
       {
         "raw_filing_label": "Cost of revenue",
@@ -6761,11 +6761,11 @@
           "line_hint": "Cost of revenue | 684,875",
           "note": null
         },
-        "model_sheet": "ANNL P&L / QTR P&L",
-        "model_row": 10,
+        "model_sheet": "ANNL P&L",
+        "model_row": 0,
         "model_label": "COGS",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-001"
+        "ledger_rule_id": "GEN-IS-002"
       },
       {
         "raw_filing_label": "Gross profit",
@@ -6785,10 +6785,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 11,
-        "model_label": "Gross Profit",
+        "model_row": 0,
+        "model_label": "Gross Profit (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-008"
+        "ledger_rule_id": "GEN-IS-003"
       },
       {
         "raw_filing_label": "Selling, general and administrative expenses",
@@ -6808,10 +6808,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 12,
-        "model_label": "Selling and Marketing Expenses",
+        "model_row": 0,
+        "model_label": "SG&A",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-009"
+        "ledger_rule_id": "GEN-IS-004"
       },
       {
         "raw_filing_label": "Income (loss) from operations",
@@ -6830,11 +6830,11 @@
           "line_hint": "Income (loss) from operations | 266,366",
           "note": null
         },
-        "model_sheet": "ANNL P&L / QTR P&L",
-        "model_row": 15,
-        "model_label": "Operating Profit",
+        "model_sheet": "ANNL P&L",
+        "model_row": 0,
+        "model_label": "Income (Loss) from Operations",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-002"
+        "ledger_rule_id": "GEN-IS-005"
       },
       {
         "raw_filing_label": "Interest income (expense), net",
@@ -6854,10 +6854,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 17,
-        "model_label": "Interest Income",
+        "model_row": 0,
+        "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-010"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Interest income on note receivable",
@@ -6877,8 +6877,8 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 17,
-        "model_label": "Interest Income",
+        "model_row": 0,
+        "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-IS-011"
       },
@@ -6900,10 +6900,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 18,
-        "model_label": "Foreign exchange gain (loss)",
+        "model_row": 0,
+        "model_label": "Foreign Currency Gain (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-030"
+        "ledger_rule_id": "GEN-IS-007"
       },
       {
         "raw_filing_label": "Total other income",
@@ -6946,10 +6946,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 20,
-        "model_label": "Pre-Tax Income",
+        "model_row": 0,
+        "model_label": "Pre-Tax Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-012"
+        "ledger_rule_id": "GEN-IS-009"
       },
       {
         "raw_filing_label": "Income tax (expense) benefit",
@@ -6969,10 +6969,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 21,
-        "model_label": "Income Taxes",
+        "model_row": 0,
+        "model_label": "Income Tax (Benefit) Expense",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-013"
+        "ledger_rule_id": "GEN-IS-010"
       },
       {
         "raw_filing_label": "Net income (loss)",
@@ -6992,10 +6992,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 22,
-        "model_label": "Net Income",
+        "model_row": 0,
+        "model_label": "Net Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-014"
+        "ledger_rule_id": "GEN-IS-011"
       },
       {
         "raw_filing_label": "Dividends on Series A convertible preferred shares",
@@ -7015,10 +7015,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 23,
-        "model_label": "Dividends on Series A Pref",
+        "model_row": 0,
+        "model_label": "Dividends",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-015"
+        "ledger_rule_id": "GEN-IS-012"
       },
       {
         "raw_filing_label": "Income allocated to participating preferred shares",
@@ -7038,10 +7038,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 25,
-        "model_label": "Income Allocated to Participating",
+        "model_row": 0,
+        "model_label": "Income Allocated to Participating Preferred",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-016"
+        "ledger_rule_id": "GEN-IS-013"
       },
       {
         "raw_filing_label": "Net income (loss) attributable to common stockholders",
@@ -7061,10 +7061,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 24,
-        "model_label": "Net Income to Common Shareholders",
+        "model_row": 0,
+        "model_label": "Net Income (Loss) Attributable to Common Shareholders",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-017"
+        "ledger_rule_id": "GEN-IS-014"
       },
       {
         "raw_filing_label": "Foreign currency translation gain (loss), net of income tax",
@@ -7084,10 +7084,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 18,
-        "model_label": "Foreign exchange gain (loss)",
+        "model_row": 0,
+        "model_label": "Foreign Currency Translation (OCI)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-018"
+        "ledger_rule_id": "GEN-IS-020"
       },
       {
         "raw_filing_label": "Comprehensive income (loss)",
@@ -7108,9 +7108,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Comprehensive Income (memo)",
+        "model_label": "Total Comprehensive Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-019"
+        "ledger_rule_id": "GEN-IS-015"
       },
       {
         "raw_filing_label": "Basic",
@@ -7130,10 +7130,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 31,
-        "model_label": "GAAP EPS (Basic)",
+        "model_row": 0,
+        "model_label": "Basic Earnings (Loss) per Share",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-020"
+        "ledger_rule_id": "GEN-IS-016"
       },
       {
         "raw_filing_label": "Diluted",
@@ -7153,10 +7153,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 32,
-        "model_label": "GAAP EPS (Diluted)",
+        "model_row": 0,
+        "model_label": "Diluted Earnings (Loss) per Share",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-021"
+        "ledger_rule_id": "GEN-IS-017"
       },
       {
         "raw_filing_label": "Basic",
@@ -7177,9 +7177,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Weighted Avg Shares Outstanding (Basic)",
+        "model_label": "Weighted Average Shares Outstanding (Basic)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-IS-001"
+        "ledger_rule_id": "GEN-IS-018"
       },
       {
         "raw_filing_label": "Diluted",
@@ -7200,9 +7200,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Weighted Avg Shares Outstanding (Diluted)",
+        "model_label": "Weighted Average Shares Outstanding (Diluted)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-IS-002"
+        "ledger_rule_id": "GEN-IS-019"
       },
       {
         "raw_filing_label": "Revenue",
@@ -7222,10 +7222,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 9,
-        "model_label": "Net Sales (Revenue)",
+        "model_row": 0,
+        "model_label": "Net Sales / Revenue",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-007"
+        "ledger_rule_id": "GEN-IS-001"
       },
       {
         "raw_filing_label": "Cost of revenue",
@@ -7244,11 +7244,11 @@
           "line_hint": "Cost of revenue | 382,735",
           "note": null
         },
-        "model_sheet": "ANNL P&L / QTR P&L",
-        "model_row": 10,
+        "model_sheet": "ANNL P&L",
+        "model_row": 0,
         "model_label": "COGS",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-001"
+        "ledger_rule_id": "GEN-IS-002"
       },
       {
         "raw_filing_label": "Gross profit",
@@ -7268,10 +7268,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 11,
-        "model_label": "Gross Profit",
+        "model_row": 0,
+        "model_label": "Gross Profit (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-008"
+        "ledger_rule_id": "GEN-IS-003"
       },
       {
         "raw_filing_label": "Selling, general and administrative expenses",
@@ -7291,10 +7291,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 12,
-        "model_label": "Selling and Marketing Expenses",
+        "model_row": 0,
+        "model_label": "SG&A",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-009"
+        "ledger_rule_id": "GEN-IS-004"
       },
       {
         "raw_filing_label": "Income (loss) from operations",
@@ -7313,11 +7313,11 @@
           "line_hint": "Income (loss) from operations | (157,801)",
           "note": null
         },
-        "model_sheet": "ANNL P&L / QTR P&L",
-        "model_row": 15,
-        "model_label": "Operating Profit",
+        "model_sheet": "ANNL P&L",
+        "model_row": 0,
+        "model_label": "Income (Loss) from Operations",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-002"
+        "ledger_rule_id": "GEN-IS-005"
       },
       {
         "raw_filing_label": "Interest income (expense), net",
@@ -7337,10 +7337,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 17,
-        "model_label": "Interest Income",
+        "model_row": 0,
+        "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-010"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Interest income on note receivable",
@@ -7360,8 +7360,8 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 17,
-        "model_label": "Interest Income",
+        "model_row": 0,
+        "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-IS-011"
       },
@@ -7383,10 +7383,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 18,
-        "model_label": "Foreign exchange gain (loss)",
+        "model_row": 0,
+        "model_label": "Foreign Currency Gain (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-030"
+        "ledger_rule_id": "GEN-IS-007"
       },
       {
         "raw_filing_label": "Total other income",
@@ -7429,10 +7429,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 20,
-        "model_label": "Pre-Tax Income",
+        "model_row": 0,
+        "model_label": "Pre-Tax Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-012"
+        "ledger_rule_id": "GEN-IS-009"
       },
       {
         "raw_filing_label": "Income tax (expense) benefit",
@@ -7452,10 +7452,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 21,
-        "model_label": "Income Taxes",
+        "model_row": 0,
+        "model_label": "Income Tax (Benefit) Expense",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-013"
+        "ledger_rule_id": "GEN-IS-010"
       },
       {
         "raw_filing_label": "Net income (loss)",
@@ -7475,10 +7475,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 22,
-        "model_label": "Net Income",
+        "model_row": 0,
+        "model_label": "Net Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-014"
+        "ledger_rule_id": "GEN-IS-011"
       },
       {
         "raw_filing_label": "Dividends on Series A convertible preferred shares",
@@ -7498,10 +7498,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 23,
-        "model_label": "Dividends on Series A Pref",
+        "model_row": 0,
+        "model_label": "Dividends",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-015"
+        "ledger_rule_id": "GEN-IS-012"
       },
       {
         "raw_filing_label": "Income allocated to participating preferred shares",
@@ -7521,10 +7521,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 25,
-        "model_label": "Income Allocated to Participating",
+        "model_row": 0,
+        "model_label": "Income Allocated to Participating Preferred",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-016"
+        "ledger_rule_id": "GEN-IS-013"
       },
       {
         "raw_filing_label": "Net income (loss) attributable to common stockholders",
@@ -7544,10 +7544,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 24,
-        "model_label": "Net Income to Common Shareholders",
+        "model_row": 0,
+        "model_label": "Net Income (Loss) Attributable to Common Shareholders",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-017"
+        "ledger_rule_id": "GEN-IS-014"
       },
       {
         "raw_filing_label": "Foreign currency translation gain (loss), net of income tax",
@@ -7567,10 +7567,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 18,
-        "model_label": "Foreign exchange gain (loss)",
+        "model_row": 0,
+        "model_label": "Foreign Currency Translation (OCI)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-018"
+        "ledger_rule_id": "GEN-IS-020"
       },
       {
         "raw_filing_label": "Comprehensive income (loss)",
@@ -7591,9 +7591,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Comprehensive Income (memo)",
+        "model_label": "Total Comprehensive Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-019"
+        "ledger_rule_id": "GEN-IS-015"
       },
       {
         "raw_filing_label": "Basic",
@@ -7613,10 +7613,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 31,
-        "model_label": "GAAP EPS (Basic)",
+        "model_row": 0,
+        "model_label": "Basic Earnings (Loss) per Share",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-020"
+        "ledger_rule_id": "GEN-IS-016"
       },
       {
         "raw_filing_label": "Diluted",
@@ -7636,10 +7636,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 32,
-        "model_label": "GAAP EPS (Diluted)",
+        "model_row": 0,
+        "model_label": "Diluted Earnings (Loss) per Share",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-021"
+        "ledger_rule_id": "GEN-IS-017"
       },
       {
         "raw_filing_label": "Basic",
@@ -7660,9 +7660,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Weighted Avg Shares Outstanding (Basic)",
+        "model_label": "Weighted Average Shares Outstanding (Basic)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-IS-001"
+        "ledger_rule_id": "GEN-IS-018"
       },
       {
         "raw_filing_label": "Diluted",
@@ -7683,9 +7683,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Weighted Avg Shares Outstanding (Diluted)",
+        "model_label": "Weighted Average Shares Outstanding (Diluted)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-IS-002"
+        "ledger_rule_id": "GEN-IS-019"
       },
       {
         "raw_filing_label": "Revenue",
@@ -7705,10 +7705,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 9,
-        "model_label": "Net Sales (Revenue)",
+        "model_row": 0,
+        "model_label": "Net Sales / Revenue",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-007"
+        "ledger_rule_id": "GEN-IS-001"
       },
       {
         "raw_filing_label": "Cost of revenue",
@@ -7727,11 +7727,11 @@
           "line_hint": "Cost of revenue | 186,103",
           "note": null
         },
-        "model_sheet": "ANNL P&L / QTR P&L",
-        "model_row": 10,
+        "model_sheet": "ANNL P&L",
+        "model_row": 0,
         "model_label": "COGS",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-001"
+        "ledger_rule_id": "GEN-IS-002"
       },
       {
         "raw_filing_label": "Gross profit",
@@ -7751,10 +7751,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 11,
-        "model_label": "Gross Profit",
+        "model_row": 0,
+        "model_label": "Gross Profit (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-008"
+        "ledger_rule_id": "GEN-IS-003"
       },
       {
         "raw_filing_label": "Selling, general and administrative expenses",
@@ -7774,10 +7774,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 12,
-        "model_label": "Selling and Marketing Expenses",
+        "model_row": 0,
+        "model_label": "SG&A",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-009"
+        "ledger_rule_id": "GEN-IS-004"
       },
       {
         "raw_filing_label": "Income (loss) from operations",
@@ -7796,11 +7796,11 @@
           "line_hint": "Income (loss) from operations | (4,090)",
           "note": null
         },
-        "model_sheet": "ANNL P&L / QTR P&L",
-        "model_row": 15,
-        "model_label": "Operating Profit",
+        "model_sheet": "ANNL P&L",
+        "model_row": 0,
+        "model_label": "Income (Loss) from Operations",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-002"
+        "ledger_rule_id": "GEN-IS-005"
       },
       {
         "raw_filing_label": "Interest income (expense), net",
@@ -7820,10 +7820,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 17,
-        "model_label": "Interest Income",
+        "model_row": 0,
+        "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-010"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Interest income on note receivable",
@@ -7843,8 +7843,8 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 17,
-        "model_label": "Interest Income",
+        "model_row": 0,
+        "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-IS-011"
       },
@@ -7866,10 +7866,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 18,
-        "model_label": "Foreign exchange gain (loss)",
+        "model_row": 0,
+        "model_label": "Foreign Currency Gain (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-030"
+        "ledger_rule_id": "GEN-IS-007"
       },
       {
         "raw_filing_label": "Total other income",
@@ -7912,10 +7912,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 20,
-        "model_label": "Pre-Tax Income",
+        "model_row": 0,
+        "model_label": "Pre-Tax Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-012"
+        "ledger_rule_id": "GEN-IS-009"
       },
       {
         "raw_filing_label": "Income tax (expense) benefit",
@@ -7935,10 +7935,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 21,
-        "model_label": "Income Taxes",
+        "model_row": 0,
+        "model_label": "Income Tax (Benefit) Expense",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-013"
+        "ledger_rule_id": "GEN-IS-010"
       },
       {
         "raw_filing_label": "Net income (loss)",
@@ -7958,10 +7958,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 22,
-        "model_label": "Net Income",
+        "model_row": 0,
+        "model_label": "Net Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-014"
+        "ledger_rule_id": "GEN-IS-011"
       },
       {
         "raw_filing_label": "Dividends on Series A convertible preferred shares",
@@ -7981,10 +7981,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 23,
-        "model_label": "Dividends on Series A Pref",
+        "model_row": 0,
+        "model_label": "Dividends",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-015"
+        "ledger_rule_id": "GEN-IS-012"
       },
       {
         "raw_filing_label": "Income allocated to participating preferred shares",
@@ -8004,10 +8004,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 25,
-        "model_label": "Income Allocated to Participating",
+        "model_row": 0,
+        "model_label": "Income Allocated to Participating Preferred",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-016"
+        "ledger_rule_id": "GEN-IS-013"
       },
       {
         "raw_filing_label": "Net income (loss) attributable to common stockholders",
@@ -8027,10 +8027,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 24,
-        "model_label": "Net Income to Common Shareholders",
+        "model_row": 0,
+        "model_label": "Net Income (Loss) Attributable to Common Shareholders",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-017"
+        "ledger_rule_id": "GEN-IS-014"
       },
       {
         "raw_filing_label": "Foreign currency translation gain (loss), net of income tax",
@@ -8050,10 +8050,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 18,
-        "model_label": "Foreign exchange gain (loss)",
+        "model_row": 0,
+        "model_label": "Foreign Currency Translation (OCI)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-018"
+        "ledger_rule_id": "GEN-IS-020"
       },
       {
         "raw_filing_label": "Comprehensive income (loss)",
@@ -8074,9 +8074,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Comprehensive Income (memo)",
+        "model_label": "Total Comprehensive Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-019"
+        "ledger_rule_id": "GEN-IS-015"
       },
       {
         "raw_filing_label": "Basic",
@@ -8096,10 +8096,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 31,
-        "model_label": "GAAP EPS (Basic)",
+        "model_row": 0,
+        "model_label": "Basic Earnings (Loss) per Share",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-020"
+        "ledger_rule_id": "GEN-IS-016"
       },
       {
         "raw_filing_label": "Diluted",
@@ -8119,10 +8119,10 @@
           "note": null
         },
         "model_sheet": "ANNL P&L",
-        "model_row": 32,
-        "model_label": "GAAP EPS (Diluted)",
+        "model_row": 0,
+        "model_label": "Diluted Earnings (Loss) per Share",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-021"
+        "ledger_rule_id": "GEN-IS-017"
       },
       {
         "raw_filing_label": "Basic",
@@ -8143,9 +8143,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Weighted Avg Shares Outstanding (Basic)",
+        "model_label": "Weighted Average Shares Outstanding (Basic)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-IS-001"
+        "ledger_rule_id": "GEN-IS-018"
       },
       {
         "raw_filing_label": "Diluted",
@@ -8166,9 +8166,9 @@
         },
         "model_sheet": "ANNL P&L",
         "model_row": 0,
-        "model_label": "Weighted Avg Shares Outstanding (Diluted)",
+        "model_label": "Weighted Average Shares Outstanding (Diluted)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-IS-002"
+        "ledger_rule_id": "GEN-IS-019"
       },
       {
         "raw_filing_label": "Net income (loss)",
@@ -8188,10 +8188,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 12,
-        "model_label": "Net Income",
+        "model_row": 0,
+        "model_label": "Net Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-030"
+        "ledger_rule_id": "GEN-CF-001"
       },
       {
         "raw_filing_label": "Depreciation and amortization",
@@ -8211,10 +8211,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 13,
+        "model_row": 0,
         "model_label": "Depreciation & Amortization",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-002"
+        "ledger_rule_id": "GEN-CF-002"
       },
       {
         "raw_filing_label": "Impairment of intangible assets",
@@ -8234,10 +8234,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 14,
+        "model_row": 0,
         "model_label": "Impairment of Intangibles",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-003"
+        "ledger_rule_id": "GEN-CF-003"
       },
       {
         "raw_filing_label": "Allowance for credit losses",
@@ -8257,10 +8257,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 15,
+        "model_row": 0,
         "model_label": "Allowance for Credit Losses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-004"
+        "ledger_rule_id": "GEN-CF-004"
       },
       {
         "raw_filing_label": "Amortization of deferred other costs",
@@ -8280,7 +8280,7 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 16,
+        "model_row": 0,
         "model_label": "Amortization of Deferred Other Costs",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-005"
@@ -8303,10 +8303,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 17,
-        "model_label": "Inventory Obsolescence",
+        "model_row": 0,
+        "model_label": "Inventory Write-Down",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-006"
+        "ledger_rule_id": "GEN-CF-005"
       },
       {
         "raw_filing_label": "Loss on disposal of property and equipment",
@@ -8327,9 +8327,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Loss on Disposal of PP&E",
+        "model_label": "Gain (Loss) on Disposal of PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-031"
+        "ledger_rule_id": "GEN-CF-007"
       },
       {
         "raw_filing_label": "Stock-based compensation expense",
@@ -8349,10 +8349,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 18,
+        "model_row": 0,
         "model_label": "Stock-Based Compensation",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-007"
+        "ledger_rule_id": "GEN-CF-006"
       },
       {
         "raw_filing_label": "Deferred income taxes-net",
@@ -8373,9 +8373,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Deferred Income Taxes-Net",
+        "model_label": "(Benefit) Provision for Deferred Income Taxes",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-CF-002"
+        "ledger_rule_id": "GEN-CF-008"
       },
       {
         "raw_filing_label": "Foreign exchange loss",
@@ -8395,10 +8395,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 19,
-        "model_label": "Foreign Exchange Loss",
+        "model_row": 0,
+        "model_label": "Foreign Currency Gain (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-008"
+        "ledger_rule_id": "GEN-CF-009"
       },
       {
         "raw_filing_label": "Gain on lease cancellations",
@@ -8419,7 +8419,7 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Gain on Lease Cancellations (new)",
+        "model_label": "Gain (Loss) on Lease Cancellations",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-060"
       },
@@ -8441,10 +8441,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 21,
+        "model_row": 0,
         "model_label": "Accounts Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-033"
+        "ledger_rule_id": "GEN-CF-011"
       },
       {
         "raw_filing_label": "Inventories-net",
@@ -8464,10 +8464,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 22,
+        "model_row": 0,
         "model_label": "Inventories",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-034"
+        "ledger_rule_id": "GEN-CF-012"
       },
       {
         "raw_filing_label": "Prepaid expenses and other current assets",
@@ -8487,10 +8487,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 23,
+        "model_row": 0,
         "model_label": "Prepaid Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-035"
+        "ledger_rule_id": "GEN-CF-013"
       },
       {
         "raw_filing_label": "Accounts payable",
@@ -8510,10 +8510,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 24,
+        "model_row": 0,
         "model_label": "Accounts Payable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-070"
+        "ledger_rule_id": "GEN-CF-014"
       },
       {
         "raw_filing_label": "Accrued expenses",
@@ -8533,10 +8533,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 25,
+        "model_row": 0,
         "model_label": "Accrued Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-071"
+        "ledger_rule_id": "GEN-CF-015"
       },
       {
         "raw_filing_label": "Income taxes payable",
@@ -8556,10 +8556,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 27,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-039"
+        "ledger_rule_id": "GEN-CF-017"
       },
       {
         "raw_filing_label": "Accrued promotional allowance",
@@ -8579,10 +8579,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 26,
-        "model_label": "Accrued Promo",
+        "model_row": 0,
+        "model_label": "Accrued Promotional Allowance",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-037"
+        "ledger_rule_id": "GEN-CF-016"
       },
       {
         "raw_filing_label": "Accrued distributor termination fees",
@@ -8602,7 +8602,7 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 30,
+        "model_row": 0,
         "model_label": "Accrued Distributor Termination",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-038"
@@ -8625,10 +8625,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 27,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-072"
+        "ledger_rule_id": "GEN-CF-017"
       },
       {
         "raw_filing_label": "Change in right of use and lease obligation-net",
@@ -8648,10 +8648,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 28,
-        "model_label": "ROU/Lease",
+        "model_row": 0,
+        "model_label": "ROU & Lease Liability, Net",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-061"
+        "ledger_rule_id": "GEN-CF-018"
       },
       {
         "raw_filing_label": "Deferred revenue",
@@ -8671,10 +8671,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 29,
+        "model_row": 0,
         "model_label": "Deferred Revenue",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-041"
+        "ledger_rule_id": "GEN-CF-019"
       },
       {
         "raw_filing_label": "Other assets",
@@ -8694,10 +8694,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 20,
-        "model_label": "Other Items",
+        "model_row": 0,
+        "model_label": "Other Operating Items",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-043"
+        "ledger_rule_id": "GEN-CF-010"
       },
       {
         "raw_filing_label": "Net cash provided by (used in) operating activities",
@@ -8717,10 +8717,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 31,
+        "model_row": 0,
         "model_label": "Cash Flow from Operations",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-017"
+        "ledger_rule_id": "GEN-CF-022"
       },
       {
         "raw_filing_label": "Collections from note receivable",
@@ -8740,10 +8740,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 34,
+        "model_row": 0,
         "model_label": "Collections from Note Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-018"
+        "ledger_rule_id": "GEN-CF-023"
       },
       {
         "raw_filing_label": "Purchase of property and equipment",
@@ -8763,10 +8763,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 35,
+        "model_row": 0,
         "model_label": "Purchase of PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-019"
+        "ledger_rule_id": "GEN-CF-024"
       },
       {
         "raw_filing_label": "Net cash (used in) investing activities",
@@ -8786,10 +8786,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 38,
+        "model_row": 0,
         "model_label": "Cash Flow from Investing",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-020"
+        "ledger_rule_id": "GEN-CF-026"
       },
       {
         "raw_filing_label": "Principal payments on finance lease obligations",
@@ -8809,10 +8809,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 40,
+        "model_row": 0,
         "model_label": "Finance Lease Payments",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-021"
+        "ledger_rule_id": "GEN-CF-027"
       },
       {
         "raw_filing_label": "Proceeds from exercise of stock options",
@@ -8832,10 +8832,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 41,
-        "model_label": "Proceeds from Stock Options",
+        "model_row": 0,
+        "model_label": "Proceeds from Exercise of Stock Options",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-022"
+        "ledger_rule_id": "GEN-CF-028"
       },
       {
         "raw_filing_label": "Proceeds from issuance of Series A preferred shares, net of issuance costs",
@@ -8855,10 +8855,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 42,
-        "model_label": "Proceeds from Preferred",
+        "model_row": 0,
+        "model_label": "Proceeds from Issuance of Preferred Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-062"
+        "ledger_rule_id": "GEN-CF-029"
       },
       {
         "raw_filing_label": "Dividends paid on preferred shares",
@@ -8878,10 +8878,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 43,
-        "model_label": "Dividends Paid on Preferred",
+        "model_row": 0,
+        "model_label": "Dividends Paid",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-048"
+        "ledger_rule_id": "GEN-CF-030"
       },
       {
         "raw_filing_label": "Net proceeds from sale of common stock",
@@ -8902,9 +8902,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Proceeds from Common",
+        "model_label": "Proceeds from Issuance of Common Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-063"
+        "ledger_rule_id": "GEN-CF-031"
       },
       {
         "raw_filing_label": "Net cash (used in) provided by financing activities",
@@ -8924,10 +8924,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 45,
+        "model_row": 0,
         "model_label": "Cash Flow from Financing",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-064"
+        "ledger_rule_id": "GEN-CF-033"
       },
       {
         "raw_filing_label": "Effect on exchange rate changes on cash and cash equivalents",
@@ -8947,10 +8947,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 47,
+        "model_row": 0,
         "model_label": "FX Effect on Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-065"
+        "ledger_rule_id": "GEN-CF-034"
       },
       {
         "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
@@ -8970,10 +8970,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 48,
+        "model_row": 0,
         "model_label": "Net Change in Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-046"
+        "ledger_rule_id": "GEN-CF-035"
       },
       {
         "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
@@ -8993,10 +8993,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 50,
-        "model_label": "Cash at Beginning",
+        "model_row": 0,
+        "model_label": "Cash at Beginning of Period",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-044"
+        "ledger_rule_id": "GEN-CF-036"
       },
       {
         "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
@@ -9016,10 +9016,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 51,
-        "model_label": "Cash at End",
+        "model_row": 0,
+        "model_label": "Cash at End of Period",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-045"
+        "ledger_rule_id": "GEN-CF-037"
       },
       {
         "raw_filing_label": "Taxes",
@@ -9040,9 +9040,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Supplemental: Cash Paid for Taxes",
+        "model_label": "Cash Paid for Taxes",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-066"
+        "ledger_rule_id": "GEN-CF-039"
       },
       {
         "raw_filing_label": "Interest",
@@ -9063,9 +9063,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Supplemental: Cash Paid for Interest",
+        "model_label": "Cash Paid for Interest",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-067"
+        "ledger_rule_id": "GEN-CF-038"
       },
       {
         "raw_filing_label": "Net income (loss)",
@@ -9085,10 +9085,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 12,
-        "model_label": "Net Income",
+        "model_row": 0,
+        "model_label": "Net Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-030"
+        "ledger_rule_id": "GEN-CF-001"
       },
       {
         "raw_filing_label": "Depreciation and amortization",
@@ -9108,10 +9108,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 13,
+        "model_row": 0,
         "model_label": "Depreciation & Amortization",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-002"
+        "ledger_rule_id": "GEN-CF-002"
       },
       {
         "raw_filing_label": "Impairment of intangible assets",
@@ -9131,10 +9131,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 14,
+        "model_row": 0,
         "model_label": "Impairment of Intangibles",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-003"
+        "ledger_rule_id": "GEN-CF-003"
       },
       {
         "raw_filing_label": "Allowance for credit losses",
@@ -9154,10 +9154,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 15,
+        "model_row": 0,
         "model_label": "Allowance for Credit Losses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-004"
+        "ledger_rule_id": "GEN-CF-004"
       },
       {
         "raw_filing_label": "Amortization of deferred other costs",
@@ -9177,7 +9177,7 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 16,
+        "model_row": 0,
         "model_label": "Amortization of Deferred Other Costs",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-005"
@@ -9200,10 +9200,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 17,
-        "model_label": "Inventory Obsolescence",
+        "model_row": 0,
+        "model_label": "Inventory Write-Down",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-006"
+        "ledger_rule_id": "GEN-CF-005"
       },
       {
         "raw_filing_label": "Loss on disposal of property and equipment",
@@ -9224,9 +9224,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Loss on Disposal of PP&E",
+        "model_label": "Gain (Loss) on Disposal of PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-031"
+        "ledger_rule_id": "GEN-CF-007"
       },
       {
         "raw_filing_label": "Stock-based compensation expense",
@@ -9246,10 +9246,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 18,
+        "model_row": 0,
         "model_label": "Stock-Based Compensation",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-007"
+        "ledger_rule_id": "GEN-CF-006"
       },
       {
         "raw_filing_label": "Deferred income taxes-net",
@@ -9270,9 +9270,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Deferred Income Taxes-Net",
+        "model_label": "(Benefit) Provision for Deferred Income Taxes",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-CF-002"
+        "ledger_rule_id": "GEN-CF-008"
       },
       {
         "raw_filing_label": "Foreign exchange loss",
@@ -9292,10 +9292,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 19,
-        "model_label": "Foreign Exchange Loss",
+        "model_row": 0,
+        "model_label": "Foreign Currency Gain (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-008"
+        "ledger_rule_id": "GEN-CF-009"
       },
       {
         "raw_filing_label": "Gain on lease cancellations",
@@ -9316,7 +9316,7 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Gain on Lease Cancellations (new)",
+        "model_label": "Gain (Loss) on Lease Cancellations",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-060"
       },
@@ -9338,10 +9338,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 21,
+        "model_row": 0,
         "model_label": "Accounts Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-033"
+        "ledger_rule_id": "GEN-CF-011"
       },
       {
         "raw_filing_label": "Inventories-net",
@@ -9361,10 +9361,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 22,
+        "model_row": 0,
         "model_label": "Inventories",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-034"
+        "ledger_rule_id": "GEN-CF-012"
       },
       {
         "raw_filing_label": "Prepaid expenses and other current assets",
@@ -9384,10 +9384,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 23,
+        "model_row": 0,
         "model_label": "Prepaid Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-035"
+        "ledger_rule_id": "GEN-CF-013"
       },
       {
         "raw_filing_label": "Accounts payable",
@@ -9407,10 +9407,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 24,
+        "model_row": 0,
         "model_label": "Accounts Payable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-070"
+        "ledger_rule_id": "GEN-CF-014"
       },
       {
         "raw_filing_label": "Accrued expenses",
@@ -9430,10 +9430,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 25,
+        "model_row": 0,
         "model_label": "Accrued Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-071"
+        "ledger_rule_id": "GEN-CF-015"
       },
       {
         "raw_filing_label": "Income taxes payable",
@@ -9453,10 +9453,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 27,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-039"
+        "ledger_rule_id": "GEN-CF-017"
       },
       {
         "raw_filing_label": "Accrued promotional allowance",
@@ -9476,10 +9476,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 26,
-        "model_label": "Accrued Promo",
+        "model_row": 0,
+        "model_label": "Accrued Promotional Allowance",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-037"
+        "ledger_rule_id": "GEN-CF-016"
       },
       {
         "raw_filing_label": "Accrued distributor termination fees",
@@ -9499,7 +9499,7 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 30,
+        "model_row": 0,
         "model_label": "Accrued Distributor Termination",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-038"
@@ -9522,10 +9522,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 27,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-072"
+        "ledger_rule_id": "GEN-CF-017"
       },
       {
         "raw_filing_label": "Change in right of use and lease obligation-net",
@@ -9545,10 +9545,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 28,
-        "model_label": "ROU/Lease",
+        "model_row": 0,
+        "model_label": "ROU & Lease Liability, Net",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-061"
+        "ledger_rule_id": "GEN-CF-018"
       },
       {
         "raw_filing_label": "Deferred revenue",
@@ -9568,10 +9568,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 29,
+        "model_row": 0,
         "model_label": "Deferred Revenue",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-041"
+        "ledger_rule_id": "GEN-CF-019"
       },
       {
         "raw_filing_label": "Other assets",
@@ -9591,10 +9591,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 20,
-        "model_label": "Other Items",
+        "model_row": 0,
+        "model_label": "Other Operating Items",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-043"
+        "ledger_rule_id": "GEN-CF-010"
       },
       {
         "raw_filing_label": "Net cash provided by (used in) operating activities",
@@ -9614,10 +9614,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 31,
+        "model_row": 0,
         "model_label": "Cash Flow from Operations",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-017"
+        "ledger_rule_id": "GEN-CF-022"
       },
       {
         "raw_filing_label": "Collections from note receivable",
@@ -9637,10 +9637,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 34,
+        "model_row": 0,
         "model_label": "Collections from Note Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-018"
+        "ledger_rule_id": "GEN-CF-023"
       },
       {
         "raw_filing_label": "Purchase of property and equipment",
@@ -9660,10 +9660,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 35,
+        "model_row": 0,
         "model_label": "Purchase of PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-019"
+        "ledger_rule_id": "GEN-CF-024"
       },
       {
         "raw_filing_label": "Net cash (used in) investing activities",
@@ -9683,10 +9683,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 38,
+        "model_row": 0,
         "model_label": "Cash Flow from Investing",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-020"
+        "ledger_rule_id": "GEN-CF-026"
       },
       {
         "raw_filing_label": "Principal payments on finance lease obligations",
@@ -9706,10 +9706,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 40,
+        "model_row": 0,
         "model_label": "Finance Lease Payments",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-021"
+        "ledger_rule_id": "GEN-CF-027"
       },
       {
         "raw_filing_label": "Proceeds from exercise of stock options",
@@ -9729,10 +9729,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 41,
-        "model_label": "Proceeds from Stock Options",
+        "model_row": 0,
+        "model_label": "Proceeds from Exercise of Stock Options",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-022"
+        "ledger_rule_id": "GEN-CF-028"
       },
       {
         "raw_filing_label": "Proceeds from issuance of Series A preferred shares, net of issuance costs",
@@ -9752,10 +9752,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 42,
-        "model_label": "Proceeds from Preferred",
+        "model_row": 0,
+        "model_label": "Proceeds from Issuance of Preferred Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-062"
+        "ledger_rule_id": "GEN-CF-029"
       },
       {
         "raw_filing_label": "Dividends paid on preferred shares",
@@ -9775,10 +9775,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 43,
-        "model_label": "Dividends Paid on Preferred",
+        "model_row": 0,
+        "model_label": "Dividends Paid",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-048"
+        "ledger_rule_id": "GEN-CF-030"
       },
       {
         "raw_filing_label": "Net proceeds from sale of common stock",
@@ -9799,9 +9799,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Proceeds from Common",
+        "model_label": "Proceeds from Issuance of Common Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-063"
+        "ledger_rule_id": "GEN-CF-031"
       },
       {
         "raw_filing_label": "Net cash (used in) provided by financing activities",
@@ -9821,10 +9821,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 45,
+        "model_row": 0,
         "model_label": "Cash Flow from Financing",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-064"
+        "ledger_rule_id": "GEN-CF-033"
       },
       {
         "raw_filing_label": "Effect on exchange rate changes on cash and cash equivalents",
@@ -9844,10 +9844,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 47,
+        "model_row": 0,
         "model_label": "FX Effect on Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-065"
+        "ledger_rule_id": "GEN-CF-034"
       },
       {
         "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
@@ -9867,10 +9867,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 48,
+        "model_row": 0,
         "model_label": "Net Change in Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-046"
+        "ledger_rule_id": "GEN-CF-035"
       },
       {
         "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
@@ -9890,10 +9890,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 50,
-        "model_label": "Cash at Beginning",
+        "model_row": 0,
+        "model_label": "Cash at Beginning of Period",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-044"
+        "ledger_rule_id": "GEN-CF-036"
       },
       {
         "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
@@ -9913,10 +9913,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 51,
-        "model_label": "Cash at End",
+        "model_row": 0,
+        "model_label": "Cash at End of Period",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-045"
+        "ledger_rule_id": "GEN-CF-037"
       },
       {
         "raw_filing_label": "Taxes",
@@ -9937,9 +9937,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Supplemental: Cash Paid for Taxes",
+        "model_label": "Cash Paid for Taxes",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-066"
+        "ledger_rule_id": "GEN-CF-039"
       },
       {
         "raw_filing_label": "Interest",
@@ -9960,9 +9960,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Supplemental: Cash Paid for Interest",
+        "model_label": "Cash Paid for Interest",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-067"
+        "ledger_rule_id": "GEN-CF-038"
       },
       {
         "raw_filing_label": "Net income (loss)",
@@ -9982,10 +9982,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 12,
-        "model_label": "Net Income",
+        "model_row": 0,
+        "model_label": "Net Income (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-030"
+        "ledger_rule_id": "GEN-CF-001"
       },
       {
         "raw_filing_label": "Depreciation and amortization",
@@ -10005,10 +10005,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 13,
+        "model_row": 0,
         "model_label": "Depreciation & Amortization",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-002"
+        "ledger_rule_id": "GEN-CF-002"
       },
       {
         "raw_filing_label": "Impairment of intangible assets",
@@ -10028,10 +10028,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 14,
+        "model_row": 0,
         "model_label": "Impairment of Intangibles",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-003"
+        "ledger_rule_id": "GEN-CF-003"
       },
       {
         "raw_filing_label": "Allowance for credit losses",
@@ -10051,10 +10051,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 15,
+        "model_row": 0,
         "model_label": "Allowance for Credit Losses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-004"
+        "ledger_rule_id": "GEN-CF-004"
       },
       {
         "raw_filing_label": "Amortization of deferred other costs",
@@ -10074,7 +10074,7 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 16,
+        "model_row": 0,
         "model_label": "Amortization of Deferred Other Costs",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-005"
@@ -10097,10 +10097,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 17,
-        "model_label": "Inventory Obsolescence",
+        "model_row": 0,
+        "model_label": "Inventory Write-Down",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-006"
+        "ledger_rule_id": "GEN-CF-005"
       },
       {
         "raw_filing_label": "Loss on disposal of property and equipment",
@@ -10121,9 +10121,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Loss on Disposal of PP&E",
+        "model_label": "Gain (Loss) on Disposal of PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-031"
+        "ledger_rule_id": "GEN-CF-007"
       },
       {
         "raw_filing_label": "Stock-based compensation expense",
@@ -10143,10 +10143,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 18,
+        "model_row": 0,
         "model_label": "Stock-Based Compensation",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-007"
+        "ledger_rule_id": "GEN-CF-006"
       },
       {
         "raw_filing_label": "Deferred income taxes-net",
@@ -10167,9 +10167,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Deferred Income Taxes-Net",
+        "model_label": "(Benefit) Provision for Deferred Income Taxes",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "NEW-CF-002"
+        "ledger_rule_id": "GEN-CF-008"
       },
       {
         "raw_filing_label": "Foreign exchange loss",
@@ -10189,10 +10189,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 19,
-        "model_label": "Foreign Exchange Loss",
+        "model_row": 0,
+        "model_label": "Foreign Currency Gain (Loss)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-008"
+        "ledger_rule_id": "GEN-CF-009"
       },
       {
         "raw_filing_label": "Gain on lease cancellations",
@@ -10213,7 +10213,7 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Gain on Lease Cancellations (new)",
+        "model_label": "Gain (Loss) on Lease Cancellations",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-060"
       },
@@ -10235,10 +10235,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 21,
+        "model_row": 0,
         "model_label": "Accounts Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-033"
+        "ledger_rule_id": "GEN-CF-011"
       },
       {
         "raw_filing_label": "Inventories-net",
@@ -10258,10 +10258,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 22,
+        "model_row": 0,
         "model_label": "Inventories",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-034"
+        "ledger_rule_id": "GEN-CF-012"
       },
       {
         "raw_filing_label": "Prepaid expenses and other current assets",
@@ -10281,10 +10281,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 23,
+        "model_row": 0,
         "model_label": "Prepaid Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-035"
+        "ledger_rule_id": "GEN-CF-013"
       },
       {
         "raw_filing_label": "Accounts payable",
@@ -10304,10 +10304,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 24,
+        "model_row": 0,
         "model_label": "Accounts Payable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-070"
+        "ledger_rule_id": "GEN-CF-014"
       },
       {
         "raw_filing_label": "Accrued expenses",
@@ -10327,10 +10327,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 25,
+        "model_row": 0,
         "model_label": "Accrued Expenses",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-071"
+        "ledger_rule_id": "GEN-CF-015"
       },
       {
         "raw_filing_label": "Income taxes payable",
@@ -10350,10 +10350,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 27,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-039"
+        "ledger_rule_id": "GEN-CF-017"
       },
       {
         "raw_filing_label": "Accrued promotional allowance",
@@ -10373,10 +10373,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 26,
-        "model_label": "Accrued Promo",
+        "model_row": 0,
+        "model_label": "Accrued Promotional Allowance",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-037"
+        "ledger_rule_id": "GEN-CF-016"
       },
       {
         "raw_filing_label": "Accrued distributor termination fees",
@@ -10396,7 +10396,7 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 30,
+        "model_row": 0,
         "model_label": "Accrued Distributor Termination",
         "mapping_source": "ledger_auto",
         "ledger_rule_id": "MAP-CF-038"
@@ -10419,10 +10419,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 27,
+        "model_row": 0,
         "model_label": "Other Current Liabilities",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-072"
+        "ledger_rule_id": "GEN-CF-017"
       },
       {
         "raw_filing_label": "Change in right of use and lease obligation-net",
@@ -10442,10 +10442,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 28,
-        "model_label": "ROU/Lease",
+        "model_row": 0,
+        "model_label": "ROU & Lease Liability, Net",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-061"
+        "ledger_rule_id": "GEN-CF-018"
       },
       {
         "raw_filing_label": "Deferred revenue",
@@ -10465,10 +10465,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 29,
+        "model_row": 0,
         "model_label": "Deferred Revenue",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-041"
+        "ledger_rule_id": "GEN-CF-019"
       },
       {
         "raw_filing_label": "Other assets",
@@ -10488,10 +10488,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 20,
-        "model_label": "Other Items",
+        "model_row": 0,
+        "model_label": "Other Operating Items",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-043"
+        "ledger_rule_id": "GEN-CF-010"
       },
       {
         "raw_filing_label": "Net cash provided by (used in) operating activities",
@@ -10511,10 +10511,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 31,
+        "model_row": 0,
         "model_label": "Cash Flow from Operations",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-017"
+        "ledger_rule_id": "GEN-CF-022"
       },
       {
         "raw_filing_label": "Collections from note receivable",
@@ -10534,10 +10534,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 34,
+        "model_row": 0,
         "model_label": "Collections from Note Receivable",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-018"
+        "ledger_rule_id": "GEN-CF-023"
       },
       {
         "raw_filing_label": "Purchase of property and equipment",
@@ -10557,10 +10557,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 35,
+        "model_row": 0,
         "model_label": "Purchase of PP&E",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-019"
+        "ledger_rule_id": "GEN-CF-024"
       },
       {
         "raw_filing_label": "Net cash (used in) investing activities",
@@ -10580,10 +10580,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 38,
+        "model_row": 0,
         "model_label": "Cash Flow from Investing",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-020"
+        "ledger_rule_id": "GEN-CF-026"
       },
       {
         "raw_filing_label": "Principal payments on finance lease obligations",
@@ -10603,10 +10603,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 40,
+        "model_row": 0,
         "model_label": "Finance Lease Payments",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-021"
+        "ledger_rule_id": "GEN-CF-027"
       },
       {
         "raw_filing_label": "Proceeds from exercise of stock options",
@@ -10626,10 +10626,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 41,
-        "model_label": "Proceeds from Stock Options",
+        "model_row": 0,
+        "model_label": "Proceeds from Exercise of Stock Options",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-022"
+        "ledger_rule_id": "GEN-CF-028"
       },
       {
         "raw_filing_label": "Proceeds from issuance of Series A preferred shares, net of issuance costs",
@@ -10649,10 +10649,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 42,
-        "model_label": "Proceeds from Preferred",
+        "model_row": 0,
+        "model_label": "Proceeds from Issuance of Preferred Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-062"
+        "ledger_rule_id": "GEN-CF-029"
       },
       {
         "raw_filing_label": "Dividends paid on preferred shares",
@@ -10672,10 +10672,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 43,
-        "model_label": "Dividends Paid on Preferred",
+        "model_row": 0,
+        "model_label": "Dividends Paid",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-048"
+        "ledger_rule_id": "GEN-CF-030"
       },
       {
         "raw_filing_label": "Net proceeds from sale of common stock",
@@ -10696,9 +10696,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Proceeds from Common",
+        "model_label": "Proceeds from Issuance of Common Stock",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-063"
+        "ledger_rule_id": "GEN-CF-031"
       },
       {
         "raw_filing_label": "Net cash (used in) provided by financing activities",
@@ -10718,10 +10718,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 45,
+        "model_row": 0,
         "model_label": "Cash Flow from Financing",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-064"
+        "ledger_rule_id": "GEN-CF-033"
       },
       {
         "raw_filing_label": "Effect on exchange rate changes on cash and cash equivalents",
@@ -10741,10 +10741,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 47,
+        "model_row": 0,
         "model_label": "FX Effect on Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-065"
+        "ledger_rule_id": "GEN-CF-034"
       },
       {
         "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
@@ -10764,10 +10764,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 48,
+        "model_row": 0,
         "model_label": "Net Change in Cash",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-046"
+        "ledger_rule_id": "GEN-CF-035"
       },
       {
         "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
@@ -10787,10 +10787,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 50,
-        "model_label": "Cash at Beginning",
+        "model_row": 0,
+        "model_label": "Cash at Beginning of Period",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-044"
+        "ledger_rule_id": "GEN-CF-036"
       },
       {
         "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
@@ -10810,10 +10810,10 @@
           "note": null
         },
         "model_sheet": "CASH FLOW",
-        "model_row": 51,
-        "model_label": "Cash at End",
+        "model_row": 0,
+        "model_label": "Cash at End of Period",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-045"
+        "ledger_rule_id": "GEN-CF-037"
       },
       {
         "raw_filing_label": "Taxes",
@@ -10834,9 +10834,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Supplemental: Cash Paid for Taxes",
+        "model_label": "Cash Paid for Taxes",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-066"
+        "ledger_rule_id": "GEN-CF-039"
       },
       {
         "raw_filing_label": "Interest",
@@ -10857,9 +10857,9 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Supplemental: Cash Paid for Interest",
+        "model_label": "Cash Paid for Interest",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-CF-067"
+        "ledger_rule_id": "GEN-CF-038"
       }
     ],
     "novel_items": []
@@ -11067,11 +11067,11 @@
     },
     {
       "rule_id": "CF-2 @ FY2023",
-      "expected": "755981",
-      "actual": "755981",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "Cash End (755981) = Cash Beg (652927) + NetChange (103054)"
+      "severity": "warning",
+      "message": "inconclusive — Cash begin (row 50), end (row 51), or net change (row 48) missing"
     },
     {
       "rule_id": "CF-3 @ FY2023",
@@ -11107,11 +11107,11 @@
     },
     {
       "rule_id": "CF-2 @ FY2022",
-      "expected": "652927",
-      "actual": "652927",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "Cash End (652927) = Cash Beg (16255) + NetChange (636672)"
+      "severity": "warning",
+      "message": "inconclusive — Cash begin (row 50), end (row 51), or net change (row 48) missing"
     },
     {
       "rule_id": "CF-3 @ FY2022",
@@ -11147,11 +11147,11 @@
     },
     {
       "rule_id": "CF-2 @ FY2021",
-      "expected": "16255",
-      "actual": "16255",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "Cash End (16255) = Cash Beg (43248) + NetChange (-26993)"
+      "severity": "warning",
+      "message": "inconclusive — Cash begin (row 50), end (row 51), or net change (row 48) missing"
     },
     {
       "rule_id": "CF-3 @ FY2021",
@@ -11183,15 +11183,15 @@
       "actual": "0",
       "gap": "0",
       "severity": "pass",
-      "message": "All 91 ledger_rule_ids in use have consistent section tags."
+      "message": "All 89 ledger_rule_ids in use have consistent section tags."
     },
     {
       "rule_id": "X-1 @ FY2021",
-      "expected": "3937",
-      "actual": "3937",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "CF NI (3937) = P&L NI (3937)"
+      "severity": "warning",
+      "message": "inconclusive — NI line missing on IS or CF"
     },
     {
       "rule_id": "X-4 @ FY2021",
@@ -11203,11 +11203,11 @@
     },
     {
       "rule_id": "X-1 @ FY2022",
-      "expected": "-187282",
-      "actual": "-187282",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "CF NI (-187282) = P&L NI (-187282)"
+      "severity": "warning",
+      "message": "inconclusive — NI line missing on IS or CF"
     },
     {
       "rule_id": "X-4 @ FY2022",
@@ -11219,19 +11219,19 @@
     },
     {
       "rule_id": "X-2 @ FY2022",
-      "expected": "652927",
-      "actual": "652927",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "CF CashEnd (652927) = BS Cash (652927) [convention: cash_plus_restricted]"
+      "severity": "warning",
+      "message": "inconclusive — BS cash (row 9) or CF cash-end (row 51) missing"
     },
     {
       "rule_id": "X-1 @ FY2023",
-      "expected": "226801",
-      "actual": "226801",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "CF NI (226801) = P&L NI (226801)"
+      "severity": "warning",
+      "message": "inconclusive — NI line missing on IS or CF"
     },
     {
       "rule_id": "X-4 @ FY2023",
@@ -11243,11 +11243,11 @@
     },
     {
       "rule_id": "X-2 @ FY2023",
-      "expected": "755981",
-      "actual": "755981",
+      "expected": "0",
+      "actual": "0",
       "gap": "0",
-      "severity": "pass",
-      "message": "CF CashEnd (755981) = BS Cash (755981) [convention: cash_plus_restricted]"
+      "severity": "warning",
+      "message": "inconclusive — BS cash (row 9) or CF cash-end (row 51) missing"
     }
   ],
   "passed": true

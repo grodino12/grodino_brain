@@ -221,6 +221,22 @@
       ]
     },
     {
+      "rule_id": "GEN-IS-020",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Foreign Currency Translation (OCI)",
+      "memo": true,
+      "note": "OCI component — recognized but not displayed on xlsx. Below-NI, not part of operating results.",
+      "aliases": [
+        "foreign currency translation gain (loss), net of income",
+        "foreign currency translation gain loss net of income",
+        "foreign currency translation adjustment",
+        "foreign currency translation adjustments",
+        "foreign currency translation gain (loss)",
+        "foreign currency translation",
+        "translation adjustment"
+      ]
+    },
+    {
       "rule_id": "GEN-IS-016",
       "model_sheet": "ANNL P&L",
       "model_label": "Basic Earnings (Loss) per Share",
@@ -367,7 +383,7 @@
       "rule_id": "GEN-BS-009",
       "model_sheet": "BALANCE SHEET",
       "model_label": "ROU Assets - Operating - Non-Current",
-      "filing_section": "non_current_assets",
+      "note": "No filing_section filter — ROU operating is always non-current. If a filing ever reports a current ROU, the ticker adds an override.",
       "aliases": [
         "right of use assets-operating leases",
         "operating lease right-of-use assets",
@@ -379,7 +395,7 @@
       "rule_id": "GEN-BS-010",
       "model_sheet": "BALANCE SHEET",
       "model_label": "ROU Assets - Finance - Non-Current",
-      "filing_section": "non_current_assets",
+      "note": "No filing_section filter — ROU finance is always non-current. If a filing ever reports a current ROU, the ticker adds an override.",
       "aliases": [
         "right of use assets-finance leases-net",
         "right of use assets-finance leases",
