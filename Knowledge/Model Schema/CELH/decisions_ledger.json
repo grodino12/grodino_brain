@@ -666,7 +666,8 @@
       "model_sheet": "CASH FLOW",
       "model_row": 0,
       "model_label": "Loss on Disposal of PP&E",
-      "decided_date": "2026-04-22"
+      "decided_date": "2026-04-22",
+      "superseded_by": "NEW-CF-001"
     },
     {
       "rule_id": "MAP-CF-032",
@@ -722,7 +723,7 @@
       "rule_id": "MAP-CF-038",
       "filing_term_normalized": "accrued distributor termination fees",
       "model_sheet": "CASH FLOW",
-      "model_row": 0,
+      "model_row": 30,
       "model_label": "Accrued Distributor Termination",
       "decided_date": "2026-04-22"
     },
@@ -855,7 +856,8 @@
       "model_row": 0,
       "model_label": "Proceeds from Common",
       "decided_date": "2026-04-22",
-      "note": "User: create new row above Proceeds from Preferred (row 42). model-write should insert and reassign model_row."
+      "note": "User: create new row above Proceeds from Preferred (row 42). model-write should insert and reassign model_row.",
+      "superseded_by": "NEW-CF-011"
     },
     {
       "rule_id": "MAP-CF-064",
@@ -1149,7 +1151,7 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Deferred Income Taxes-Net",
       "section": "operating",
-      "position_note": "After Loss on Disposal",
+      "position_note": "After Loss on Disposal of PP&E (18)",
       "decided_date": "2026-04-16"
     },
     {
@@ -1159,7 +1161,8 @@
       "new_row_label": "Note Receivable",
       "section": "operating",
       "position_note": "In WC changes block",
-      "decided_date": "2026-04-16"
+      "decided_date": "2026-04-16",
+      "superseded_by": "NEW-CF-010"
     },
     {
       "rule_id": "NEW-CF-004",
@@ -1168,7 +1171,8 @@
       "new_row_label": "Accounts Payable",
       "section": "operating",
       "position_note": "Replaces old combined row 24",
-      "decided_date": "2026-04-16"
+      "decided_date": "2026-04-16",
+      "superseded_by": "MAP-CF-070"
     },
     {
       "rule_id": "NEW-CF-005",
@@ -1177,7 +1181,8 @@
       "new_row_label": "Accrued Expenses",
       "section": "operating",
       "position_note": "After Δ A/P",
-      "decided_date": "2026-04-16"
+      "decided_date": "2026-04-16",
+      "superseded_by": "MAP-CF-071"
     },
     {
       "rule_id": "NEW-CF-006",
@@ -1185,7 +1190,7 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Other Long-Term Assets",
       "section": "operating",
-      "position_note": "In WC changes block",
+      "position_note": "In WC changes block, after Deferred Revenue (29)",
       "decided_date": "2026-04-16"
     },
     {
@@ -1194,7 +1199,7 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Purchase of Non-Marketable Equity Securities",
       "section": "investing",
-      "position_note": "In investing block",
+      "position_note": "In investing block, after Collections from Note Receivable (34)",
       "decided_date": "2026-04-16"
     },
     {
@@ -1203,17 +1208,17 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Acquisition of [entity]",
       "section": "investing",
-      "position_note": "In investing block",
+      "position_note": "In investing block, after Collections from Note Receivable (34)",
       "decided_date": "2026-04-16",
       "note": "Generic pattern: each acquisition gets its own row named Acquisition of [name]"
     },
     {
-      "rule_id": "NEW-CF-009",
+      "rule_id": "NEW-CF-012",
       "filing_term_normalized": "repurchase of common stock related to tax withholdings",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Repurchase of Common Stock (Tax Withholdings)",
       "section": "financing",
-      "position_note": "In financing block",
+      "position_note": "In financing block, after Finance Lease Payments (40)",
       "decided_date": "2026-04-16"
     },
     {
@@ -1264,7 +1269,7 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Acquisition of Big Beverages",
       "section": "investing",
-      "position_note": "In investing activities; per anomalies.json caveat about FY2024 Big Beverages acquisition adding ~$57M goodwill",
+      "position_note": "In investing block, after Collections from Note Receivable (34); per anomalies.json Big Beverages caveat",
       "decided_date": "2026-04-22",
       "note": "FY2024 10-K new line (#7 user: new row). pdfplumber truncated label to 'L.L' — fix later"
     },
@@ -1274,7 +1279,7 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Note Receivable",
       "section": "operating",
-      "position_note": "Same concept as NEW-CF-003 (Note Receivable-Net Change) — FY2024 10-K dropped the 'change' word",
+      "position_note": "In WC changes block, after Deferred Revenue (29) — same concept as (superseded) NEW-CF-003",
       "decided_date": "2026-04-22",
       "note": "FY2024 10-K wording (#14 user first-fuzzy maps to note receivable-net change = NEW-CF-003). Kept as separate entry since different normalized form."
     },
@@ -1284,7 +1289,7 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Proceeds from Common",
       "section": "financing",
-      "position_note": "Insert as new row immediately ABOVE Proceeds from Preferred (currently row 42). After insert, model-write should bump existing rows 42+ down by 1 and assign model_row to this entry.",
+      "position_note": "Insert after Proceeds from Stock Options (41), before Proceeds from Preferred",
       "decided_date": "2026-04-22",
       "note": "User wants this as a new row, not reuse of an existing one. MAP-CF-063 carries a duplicate placeholder for the same concept — kept for backward compat but this NEW-CF entry is the source of truth for model-write placement."
     }
