@@ -375,12 +375,14 @@ const LAYERS = [
 const NODES = [
   // Layer 1
   { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 620,  y: 225, w: 240, h: 56, label: 'financials-extract',
-    purpose: 'Parse SEC filing PDFs into Pydantic RawFiling. Detect currency unit (thousands / millions / billions) before emitting.',
+    purpose: 'Parse SEC filing PDFs into Pydantic RawFiling. Detect currency unit + parse exclusions to derive per-section share_unit / eps_unit.',
     input: 'PDF path', output: 'RawFiling',
     ops: [
       'Locate BS/CF/IS pages by heading match (not hardcoded pages)',
-      'Detect unit via phrase regex + plausibility fallback',
-      'Extract table rows with pdfplumber, preserve raw filing labels',
+      'Detect Unit via phrase regex; parse "except per share / share and per share" → share_unit, eps_unit',
+      'Subsection detect: EPS, Weighted Avg Shares Outstanding → subsection_context',
+      'BS subtotal-flip: "Total current assets/liabilities" → flips section to NCA/NCL',
+      'IS keyword classifier: revenue_cost / operating_expenses / non_operating / eps',
       'Attach (page, line_hint) citation to every value',
       'Reject Unit.UNKNOWN at Statement model_validator'
     ],
@@ -394,33 +396,35 @@ const NODES = [
 
   // Layer 2
   { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 415, w: 240, h: 56, label: 'financials-reconcile',
-    purpose: 'Map raw filing labels to canonical model rows via the decisions ledger. Auto-apply known rules, prompt only for novel items.',
+    purpose: 'Map raw filing labels to canonical model rows via the decisions ledger. Entry precedence: (label, sheet, subsection, section). Emits NovelReport for blocked items.',
     input: 'RawFiling + ledger', output: 'MappedFiling',
     ops: [
-      'Normalize labels (case, whitespace, punctuation collapsed)',
-      'Lookup ledger; auto-apply if matched',
-      'rapidfuzz-score novel items against ledger for suggested matches',
-      'Prompt user for novel items only',
+      'Normalize labels: strip footnote markers ([2], (1)), par-value clutter, punctuation',
+      'Lookup index keyed (label, sheet) → list of candidate entries',
+      'select_entry scores by filing_subsection (+2) and filing_section (+1) match',
+      'rapidfuzz fuzzy at ≥85 when no exact; novel below',
+      '--novels-out emits a NovelReport JSON for the playground NOVELS tab',
       'Append new decisions to ledger (append-only, dated)'
     ],
     deps: ['pydantic', 'rapidfuzz']
   },
   { id: 'MappedFiling', layer: 'reconcile', kind: 'contract', x: 940, y: 415, w: 200, h: 56, label: 'MappedFiling',
-    purpose: 'RawFiling with each line item mapped to (model_sheet, model_row, model_label). Carries list of novel items needing user input.',
+    purpose: 'RawFiling with each line item mapped to (model_sheet, model_row, model_label). Carries list of novel items needing user input. RawLineItem now has subsection_context to disambiguate repeated labels (EPS vs shares Basic/Diluted).',
     fields: ['raw: RawFiling', 'mapped_line_items: list[MappedLineItem]', 'novel_items: list[NovelItem]'],
     validators: ['no_unresolved_novel_items (blocks Layer 3)']
   },
 
   // Layer 3
   { id: 'financials-validate', layer: 'validate', kind: 'skill', built: true, x: 620, y: 605, w: 240, h: 56, label: 'financials-validate',
-    purpose: 'Arithmetic integrity — accounting identities + cross-statement ties as Pydantic validators. Blocks the pipeline on fail.',
-    input: 'MappedFiling', output: 'ValidatedFiling',
+    purpose: 'Arithmetic integrity — accounting identities + cross-statement ties + section-sum validations. Blocks the pipeline on fail.',
+    input: 'MappedFiling + anomalies.json', output: 'ValidatedFiling',
     ops: [
-      'BS-1..BS-7: subtotal sums, accounting equation, RE roll-forward',
-      'CF-1/CF-2: CFO+CFI+CFF+FX = ΔCash; End = Beg + Δ',
-      'X-1..X-4: CF NI = P&L NI, CF CashEnd = BS Cash, Pref Div ties',
-      'Raise ValidationError w/ structured gap list on fail',
-      'Honor ledger Section D override entries'
+      'BS-1..BS-6: subtotal sums (TCA/NCA/TCL/NCL/TSE) + accounting equation',
+      'CF-1/CF-2: CFO+CFI+CFF+FX = ΔCash; CashEnd = Beg + Δ',
+      'CF-3/CF-4/CF-5: sum of items per section = Net Cash from (Op/Inv/Fin)',
+      'X-1/X-2/X-4: CF NI = P&L NI; CF CashEnd = BS Cash (cash_convention_per_year); Pref Div ties',
+      'Raise ValidationError with structured gap list on fail',
+      'BS-7 (RE roll-forward) deferred — needs prior-period BS'
     ],
     deps: ['pydantic', 'decimal']
   },
@@ -431,17 +435,18 @@ const NODES = [
   },
 
   // Layer 4
-  { id: 'financials-playground', layer: 'output', kind: 'skill', x: 180, y: 790, w: 220, h: 56, label: 'financials-playground',
-    purpose: 'Self-contained HTML explorer over a ValidatedFiling. QA step — toggle periods, compare filings, flag anomalies before Excel write.',
-    input: 'ValidatedFiling[]', output: 'explorer.html',
+  { id: 'financials-playground', layer: 'output', kind: 'skill', built: true, x: 180, y: 790, w: 220, h: 56, label: 'financials-playground',
+    purpose: 'Self-contained HTML explorer over one or more ValidatedFiling JSONs. QA step before Excel write. stdlib-only, no external deps.',
+    input: 'ValidatedFiling[] + NovelReport?', output: 'explorer.html',
     ops: [
-      'Render BS/CF/IS tables with period columns',
-      'Flag YoY changes >20%',
-      'Toggle raw filing label vs canonical model row',
-      'Per-line validation status badge',
-      'Copy-out the model-write scaffold prompt'
+      'Tabs: BALANCE SHEET / INCOME STATEMENT / CASH FLOW / VALIDATION / NOVELS',
+      'Period dedup across filings (newer filing wins per period)',
+      'Section order canonical; visual subtotal promotion for CF sums (Cash Flow from X)',
+      'YoY shading: >20% orange, >50% red; citation tooltip on hover',
+      'Orange (actual) / (thousands) unit hint when row unit differs from statement',
+      'Novels tab: grouped by (sheet, label, subsection) with fuzzy candidates'
     ],
-    deps: ['jinja2', 'pydantic']
+    deps: ['python stdlib only']
   },
   { id: 'model-write', layer: 'output', kind: 'skill', x: 440, y: 790, w: 180, h: 56, label: 'model-write',
     purpose: 'Write ValidatedFiling into the .xlsm model. Preserves macros, honors cross-sheet formulas via Path 3 manual inserts.',
@@ -486,7 +491,7 @@ const NODES = [
 
   // Layer 2 — feeds / is appended-to by financials-reconcile
   { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 325, w: 240, h: 50, label: 'decisions_ledger.json',
-    purpose: 'Per-ticker mapping + structural-decision store. CELH: 29 mappings + 17 new rows + 7 structural decisions. Lives inside the ticker folder.',
+    purpose: 'Per-ticker mapping + structural-decision store. CELH: 124 mappings + 24 new rows + 7 structural + 1 rename. Entries may specify filing_subsection / filing_section for multi-match disambiguation.',
     path: 'Brain/Knowledge/Model Schema/CELH/decisions_ledger.json'
   },
 

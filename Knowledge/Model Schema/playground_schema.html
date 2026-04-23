@@ -396,6 +396,7 @@ const SCHEMA = [
       { name: 'indent_level',     type: 'int',              typeKind: 'primitive', default: '2' },
       { name: 'row_type',         type: 'Literal["section_header", "subsection_header", "line_item", "subtotal", "total", "memo"]', typeKind: 'literal', default: '"line_item"' },
       { name: 'section',          type: 'Section',          typeKind: 'enum', ref: 'Section', default: 'Section.UNCLASSIFIED' },
+      { name: 'subsection_context', type: 'str | None',     typeKind: 'primitive', default: 'None' },
       { name: 'sign_convention',  type: 'Literal["as_reported", "parens_negative", "expense_positive", "contra_account", "absolute_from_section_header"]', typeKind: 'literal', default: '"as_reported"' },
       { name: 'citation',         type: 'Citation',         typeKind: 'model', ref: 'Citation' }
     ]
