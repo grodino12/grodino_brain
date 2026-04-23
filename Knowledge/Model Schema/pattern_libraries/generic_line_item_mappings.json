@@ -170,8 +170,8 @@
     {
       "rule_id": "GEN-IS-012",
       "model_sheet": "ANNL P&L",
-      "model_label": "Dividends",
-      "note": "Single row captures all dividend expenses (preferred + common). If a ticker has both, they collapse on this row.",
+      "model_label": "Preferred Dividends",
+      "note": "Declared preferred dividends; reduces Net Income available to common stockholders.",
       "aliases": [
         "dividends on series a convertible preferred shares",
         "dividends on series a convertible preferred stock",
@@ -179,10 +179,24 @@
         "preferred dividends",
         "cumulative preferred dividends",
         "dividends on preferred stock",
-        "dividends",
+        "preferred dividends declared",
+        "cumulative dividends on preferred stock"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-021",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Common Dividends",
+      "note": "Declared common dividends. Ambiguous aliases (e.g. unmodified 'dividends') default here, since most public-company filings refer to common. If a ticker has preferred-only, its filing typically uses preferred-qualified labels that route to GEN-IS-012.",
+      "aliases": [
         "common stock dividends",
         "dividends declared on common stock",
-        "cash dividends declared"
+        "cash dividends declared",
+        "dividends",
+        "common dividends",
+        "common dividends declared",
+        "cash dividends on common stock",
+        "dividends declared"
       ]
     },
     {
@@ -1022,17 +1036,32 @@
     {
       "rule_id": "GEN-CF-030",
       "model_sheet": "CASH FLOW",
-      "model_label": "Dividends",
+      "model_label": "Preferred Dividends",
+      "note": "Cash dividends paid to preferred stockholders. Paired with GEN-IS-012.",
       "aliases": [
         "dividends paid on series a preferred",
         "dividends paid on preferred shares",
         "cash dividends paid on series a convertible preferred stock",
+        "cash dividends paid on preferred stock",
+        "preferred dividends paid",
+        "dividends paid on preferred stock",
+        "cash dividends paid on preferred shares"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-040",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Common Dividends",
+      "note": "Cash dividends paid to common stockholders. Ambiguous aliases (unmodified 'dividends paid') default here — most public-company filings refer to common. Paired with GEN-IS-021.",
+      "aliases": [
+        "dividends paid on common stock",
+        "cash dividends paid on common stock",
         "dividends paid",
         "cash dividends paid",
         "dividends paid to stockholders",
         "payment of dividends",
-        "dividends paid on common stock",
-        "cash dividends paid on common stock"
+        "common dividends paid",
+        "cash dividends on common stock"
       ]
     },
     {
