@@ -90,19 +90,40 @@
     stroke-width: 1.2;
     stroke-dasharray: 3 3;
     opacity: 0.6;
+    pointer-events: none;
   }
   .edge.active { stroke: var(--accent); opacity: 1; stroke-dasharray: none; stroke-width: 1.8; }
   .edge.schema { stroke: var(--c-pkg); stroke-dasharray: 1 4; opacity: 0.4; }
+  .edge.selected { stroke: #f5c842; opacity: 1; stroke-dasharray: none; stroke-width: 2.2; }
+  /* Invisible wide hit-path behind each edge for easier clicking */
+  .edge-hit {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 14;
+    cursor: pointer;
+    pointer-events: stroke;
+  }
+  /* Arrow-mode preview line from selected source to cursor */
+  .arrow-preview {
+    fill: none;
+    stroke: #f5c842;
+    stroke-width: 1.8;
+    stroke-dasharray: 5 4;
+    opacity: 0.8;
+    pointer-events: none;
+  }
 
   .node-g { cursor: pointer; }
+  .node-g.draggable { cursor: move; }
   .node-rect {
     rx: 6; ry: 6;
     stroke-width: 1.5;
     fill: var(--panel-2);
-    transition: all 0.15s;
+    transition: stroke-width 0.15s, filter 0.15s;
   }
   .node-g:hover .node-rect { filter: brightness(1.3); }
   .node-g.selected .node-rect { stroke-width: 2.5; filter: brightness(1.4); }
+  .node-g.arrow-source .node-rect { stroke: #f5c842 !important; stroke-width: 3; filter: brightness(1.4); }
 
   .node-rect.skill    { stroke: var(--c-skill);    fill: #2a1a0a; }
   .node-rect.contract { stroke: var(--c-contract); fill: #0d2725; }
@@ -125,6 +146,42 @@
     fill: var(--text-dim);
     text-anchor: middle;
     pointer-events: none;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    gap: 4px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px;
+    align-items: center;
+    z-index: 5;
+  }
+  .toolbar button {
+    background: transparent;
+    color: var(--text-dim);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: var(--sys);
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .toolbar button:hover:not(.active):not(:disabled) { background: var(--panel-2); color: var(--text); }
+  .toolbar button.active { background: #2a1f0a; color: #f5c842; }
+  .toolbar button:disabled { opacity: 0.3; cursor: not-allowed; }
+  .toolbar .sep { width: 1px; background: var(--border); align-self: stretch; margin: 0 3px; }
+  .toolbar .status {
+    font-size: 10px;
+    color: var(--text-dim);
+    padding: 0 8px;
+    font-family: var(--mono);
+    letter-spacing: 0.3px;
   }
 
   .controls {
@@ -328,6 +385,16 @@
         <!-- layers and nodes rendered by JS -->
       </g>
     </svg>
+    <div class="toolbar">
+      <button id="mode-select" class="active" title="Select / drag nodes (default)">↖ Select</button>
+      <button id="mode-arrow" title="Add a new arrow between two nodes (click source, then target)">↯ Add Arrow</button>
+      <div class="sep"></div>
+      <button id="btn-delete" title="Delete the currently selected node or arrow (shortcut: Delete key)">🗑 Delete</button>
+      <div class="sep"></div>
+      <button id="btn-export" title="Copy the current NODES + EDGES JSON to clipboard so you can paste changes back into the HTML source">⬇ Export</button>
+      <button id="btn-reset" title="Discard all local edits, reload the baked-in defaults">↺ Reset</button>
+      <div class="status" id="edit-status"></div>
+    </div>
     <div class="controls">
       <button id="zoomOut" title="Zoom out">−</button>
       <button id="zoomIn" title="Zoom in">+</button>
