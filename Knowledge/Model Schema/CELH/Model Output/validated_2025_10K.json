@@ -11085,6 +11085,102 @@
       "message": "Accounting equation: TA (1536396) = TL (447868) + Mezz (824488) + TSE (264040)"
     },
     {
+      "rule_id": "IS-1 @ FY2024",
+      "expected": "680207",
+      "actual": "680207",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (680207) = Revenue (1355630) - COGS (675423)"
+    },
+    {
+      "rule_id": "IS-2 @ FY2024",
+      "expected": "155728",
+      "actual": "155728",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (155728) = Gross Profit (680207) - OpEx (524479 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ FY2024",
+      "expected": "195050",
+      "actual": "195050",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (195050) = Operating Income (155728) + NonOp (39322 across 4 rows)"
+    },
+    {
+      "rule_id": "IS-4 @ FY2024",
+      "expected": "145074",
+      "actual": "145074",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Net Income (145074) = Pre-Tax (195050) + Tax (-49976 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-1 @ FY2023",
+      "expected": "633139",
+      "actual": "633139",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (633139) = Revenue (1318014) - COGS (684875)"
+    },
+    {
+      "rule_id": "IS-2 @ FY2023",
+      "expected": "266366",
+      "actual": "266366",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (266366) = Gross Profit (633139) - OpEx (366773 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ FY2023",
+      "expected": "291749",
+      "actual": "291749",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (291749) = Operating Income (266366) + NonOp (25383 across 4 rows)"
+    },
+    {
+      "rule_id": "IS-4 @ FY2023",
+      "expected": "226801",
+      "actual": "226801",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Net Income (226801) = Pre-Tax (291749) + Tax (-64948 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-1 @ FY2022",
+      "expected": "270869",
+      "actual": "270869",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (270869) = Revenue (653604) - COGS (382735)"
+    },
+    {
+      "rule_id": "IS-2 @ FY2022",
+      "expected": "-157801",
+      "actual": "-157801",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (-157801) = Gross Profit (270869) - OpEx (428670 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ FY2022",
+      "expected": "-152664",
+      "actual": "-152664",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (-152664) = Operating Income (-157801) + NonOp (5137 across 4 rows)"
+    },
+    {
+      "rule_id": "IS-4 @ FY2022",
+      "expected": "-187282",
+      "actual": "-187282",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Net Income (-187282) = Pre-Tax (-152664) + Tax (-34618 across 1 rows)"
+    },
+    {
       "rule_id": "CF-1 @ FY2024",
       "expected": "134209",
       "actual": "134209",

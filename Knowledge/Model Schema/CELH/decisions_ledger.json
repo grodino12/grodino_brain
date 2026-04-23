@@ -39,7 +39,8 @@
       "model_row": 18,
       "model_label": "Foreign exchange gain (loss)",
       "decided_date": "2026-04-15",
-      "note": "Sign convention preserved"
+      "note": "Sign convention preserved",
+      "superseded_by": "MAP-IS-030"
     },
     {
       "rule_id": "MAP-IS-005",
@@ -622,7 +623,9 @@
       "model_sheet": "ANNL P&L",
       "model_row": 18,
       "model_label": "Foreign exchange gain (loss)",
-      "decided_date": "2026-04-22"
+      "decided_date": "2026-04-22",
+      "note": "Foreign currency translation is an OCI/comprehensive-income line (below Net Income), NOT a non-operating pre-tax item. Previously mis-mapped to row 18 alongside the above-NI FX loss (MAP-IS-030), causing a collision in model-write that clobbered the real FX loss value.",
+      "superseded_by": "not_modeled"
     },
     {
       "rule_id": "MAP-IS-019",
