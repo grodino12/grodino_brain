@@ -75,6 +75,7 @@
       "rule_id": "GEN-IS-006",
       "model_sheet": "ANNL P&L",
       "model_label": "Interest Income (Expense)",
+      "sign_convention": "expense_positive",
       "aliases": [
         "interest income (expense), net",
         "interest income, net",
@@ -91,6 +92,7 @@
       "rule_id": "GEN-IS-007",
       "model_sheet": "ANNL P&L",
       "model_label": "Foreign Currency Gain (Loss)",
+      "sign_convention": "expense_positive",
       "aliases": [
         "foreign exchange loss",
         "foreign exchange gain",
@@ -105,6 +107,7 @@
       "rule_id": "GEN-IS-008",
       "model_sheet": "ANNL P&L",
       "model_label": "Other Income (Expense)",
+      "sign_convention": "expense_positive",
       "aliases": [
         "other income",
         "other income, net",

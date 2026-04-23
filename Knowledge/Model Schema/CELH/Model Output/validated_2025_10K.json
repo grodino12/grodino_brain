@@ -11190,11 +11190,11 @@
     },
     {
       "rule_id": "CF-2 @ FY2024",
-      "expected": "0",
-      "actual": "0",
+      "expected": "890190",
+      "actual": "890190",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Cash begin (row 50), end (row 51), or net change (row 48) missing"
+      "severity": "pass",
+      "message": "Cash End (890190) = Cash Beg (755981) + NetChange (134209)"
     },
     {
       "rule_id": "CF-3 @ FY2024",
@@ -11230,11 +11230,11 @@
     },
     {
       "rule_id": "CF-2 @ FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "755981",
+      "actual": "755981",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Cash begin (row 50), end (row 51), or net change (row 48) missing"
+      "severity": "pass",
+      "message": "Cash End (755981) = Cash Beg (652927) + NetChange (103054)"
     },
     {
       "rule_id": "CF-3 @ FY2023",
@@ -11270,11 +11270,11 @@
     },
     {
       "rule_id": "CF-2 @ FY2022",
-      "expected": "0",
-      "actual": "0",
+      "expected": "652927",
+      "actual": "652927",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Cash begin (row 50), end (row 51), or net change (row 48) missing"
+      "severity": "pass",
+      "message": "Cash End (652927) = Cash Beg (16255) + NetChange (636672)"
     },
     {
       "rule_id": "CF-3 @ FY2022",
@@ -11310,11 +11310,11 @@
     },
     {
       "rule_id": "X-1 @ FY2022",
-      "expected": "0",
-      "actual": "0",
+      "expected": "-187282",
+      "actual": "-187282",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — NI line missing on IS or CF"
+      "severity": "pass",
+      "message": "CF NI (-187282) = P&L NI (-187282)"
     },
     {
       "rule_id": "X-4 @ FY2022",
@@ -11326,11 +11326,11 @@
     },
     {
       "rule_id": "X-1 @ FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "226801",
+      "actual": "226801",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — NI line missing on IS or CF"
+      "severity": "pass",
+      "message": "CF NI (226801) = P&L NI (226801)"
     },
     {
       "rule_id": "X-4 @ FY2023",
@@ -11342,19 +11342,19 @@
     },
     {
       "rule_id": "X-2 @ FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "755981",
+      "actual": "755981",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — BS cash (row 9) or CF cash-end (row 51) missing"
+      "severity": "pass",
+      "message": "CF CashEnd (755981) = BS Cash (755981) [convention: cash_plus_restricted]"
     },
     {
       "rule_id": "X-1 @ FY2024",
-      "expected": "0",
-      "actual": "0",
+      "expected": "145074",
+      "actual": "145074",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — NI line missing on IS or CF"
+      "severity": "pass",
+      "message": "CF NI (145074) = P&L NI (145074)"
     },
     {
       "rule_id": "X-4 @ FY2024",
@@ -11366,11 +11366,11 @@
     },
     {
       "rule_id": "X-2 @ FY2024",
-      "expected": "0",
-      "actual": "0",
+      "expected": "890190",
+      "actual": "890190",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — BS cash (row 9) or CF cash-end (row 51) missing"
+      "severity": "pass",
+      "message": "CF CashEnd (890190) = BS Cash (890190) [convention: cash_only]"
     }
   ],
   "passed": true
