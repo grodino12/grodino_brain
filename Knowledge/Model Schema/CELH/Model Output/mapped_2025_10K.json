@@ -6745,11 +6745,11 @@
         "line_hint": "Income (loss) from operations | 155,728",
         "note": null
       },
-      "model_sheet": "ANNL P&L / QTR P&L",
-      "model_row": 15,
-      "model_label": "Operating Profit",
+      "model_sheet": "ANNL P&L",
+      "model_row": 0,
+      "model_label": "Income (Loss) from Operations",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-002"
+      "ledger_rule_id": "GEN-IS-005"
     },
     {
       "raw_filing_label": "Interest income on note receivable",
@@ -6953,10 +6953,10 @@
         "note": null
       },
       "model_sheet": "ANNL P&L",
-      "model_row": 23,
-      "model_label": "Dividends on Series A Pref",
+      "model_row": 0,
+      "model_label": "Dividends",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-015"
+      "ledger_rule_id": "GEN-IS-012"
     },
     {
       "raw_filing_label": "Income allocated to participating preferred stock[3]",
@@ -6976,10 +6976,10 @@
         "note": null
       },
       "model_sheet": "ANNL P&L",
-      "model_row": 25,
-      "model_label": "Income Allocated to Participating",
+      "model_row": 0,
+      "model_label": "Income Allocated to Participating Preferred",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-016"
+      "ledger_rule_id": "GEN-IS-013"
     },
     {
       "raw_filing_label": "Net income (loss) attributable to common stockholders",
@@ -7251,11 +7251,11 @@
         "line_hint": "Income (loss) from operations | 266,366",
         "note": null
       },
-      "model_sheet": "ANNL P&L / QTR P&L",
-      "model_row": 15,
-      "model_label": "Operating Profit",
+      "model_sheet": "ANNL P&L",
+      "model_row": 0,
+      "model_label": "Income (Loss) from Operations",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-002"
+      "ledger_rule_id": "GEN-IS-005"
     },
     {
       "raw_filing_label": "Interest income on note receivable",
@@ -7459,10 +7459,10 @@
         "note": null
       },
       "model_sheet": "ANNL P&L",
-      "model_row": 23,
-      "model_label": "Dividends on Series A Pref",
+      "model_row": 0,
+      "model_label": "Dividends",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-015"
+      "ledger_rule_id": "GEN-IS-012"
     },
     {
       "raw_filing_label": "Income allocated to participating preferred stock[3]",
@@ -7482,10 +7482,10 @@
         "note": null
       },
       "model_sheet": "ANNL P&L",
-      "model_row": 25,
-      "model_label": "Income Allocated to Participating",
+      "model_row": 0,
+      "model_label": "Income Allocated to Participating Preferred",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-016"
+      "ledger_rule_id": "GEN-IS-013"
     },
     {
       "raw_filing_label": "Net income (loss) attributable to common stockholders",
@@ -7757,11 +7757,11 @@
         "line_hint": "Income (loss) from operations | (157,801)",
         "note": null
       },
-      "model_sheet": "ANNL P&L / QTR P&L",
-      "model_row": 15,
-      "model_label": "Operating Profit",
+      "model_sheet": "ANNL P&L",
+      "model_row": 0,
+      "model_label": "Income (Loss) from Operations",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-002"
+      "ledger_rule_id": "GEN-IS-005"
     },
     {
       "raw_filing_label": "Interest income on note receivable",
@@ -7965,10 +7965,10 @@
         "note": null
       },
       "model_sheet": "ANNL P&L",
-      "model_row": 23,
-      "model_label": "Dividends on Series A Pref",
+      "model_row": 0,
+      "model_label": "Dividends",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-015"
+      "ledger_rule_id": "GEN-IS-012"
     },
     {
       "raw_filing_label": "Income allocated to participating preferred stock[3]",
@@ -7988,10 +7988,10 @@
         "note": null
       },
       "model_sheet": "ANNL P&L",
-      "model_row": 25,
-      "model_label": "Income Allocated to Participating",
+      "model_row": 0,
+      "model_label": "Income Allocated to Participating Preferred",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-IS-016"
+      "ledger_rule_id": "GEN-IS-013"
     },
     {
       "raw_filing_label": "Net income (loss) attributable to common stockholders",
@@ -8425,10 +8425,10 @@
         "note": null
       },
       "model_sheet": "CASH FLOW",
-      "model_row": 21,
+      "model_row": 0,
       "model_label": "Accounts Receivable",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-CF-033"
+      "ledger_rule_id": "GEN-CF-011"
     },
     {
       "raw_filing_label": "Note receivable-net",
@@ -8702,9 +8702,9 @@
       },
       "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Other Long-Term Assets",
+      "model_label": "Other Non-Current Assets",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "NEW-CF-006"
+      "ledger_rule_id": "GEN-CF-020"
     },
     {
       "raw_filing_label": "Net cash provided by operating activities",
@@ -9368,10 +9368,10 @@
         "note": null
       },
       "model_sheet": "CASH FLOW",
-      "model_row": 21,
+      "model_row": 0,
       "model_label": "Accounts Receivable",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-CF-033"
+      "ledger_rule_id": "GEN-CF-011"
     },
     {
       "raw_filing_label": "Note receivable-net",
@@ -9645,9 +9645,9 @@
       },
       "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Other Long-Term Assets",
+      "model_label": "Other Non-Current Assets",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "NEW-CF-006"
+      "ledger_rule_id": "GEN-CF-020"
     },
     {
       "raw_filing_label": "Net cash provided by operating activities",
@@ -10311,10 +10311,10 @@
         "note": null
       },
       "model_sheet": "CASH FLOW",
-      "model_row": 21,
+      "model_row": 0,
       "model_label": "Accounts Receivable",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "MAP-CF-033"
+      "ledger_rule_id": "GEN-CF-011"
     },
     {
       "raw_filing_label": "Note receivable-net",
@@ -10588,9 +10588,9 @@
       },
       "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Other Long-Term Assets",
+      "model_label": "Other Non-Current Assets",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "NEW-CF-006"
+      "ledger_rule_id": "GEN-CF-020"
     },
     {
       "raw_filing_label": "Net cash provided by operating activities",
