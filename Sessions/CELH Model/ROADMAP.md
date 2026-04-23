@@ -96,8 +96,8 @@ Design note: since BS/CF + IS subtotals are already live formulas, `model-calc` 
 1. **Build `model-calc`.** Unblocked. See Active above.
 2. **Pull FY2025 10-K from EDGAR.** Accession `0001341766-26-000024`, HTML-only at `https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm`. Needs one of: `weasyprint` HTML→PDF, `playwright`-driven headless print, or an HTML-aware branch in `financials-extract`. After conversion, run full pipeline; expect a handful of novels from FY2025 10-K wording drift.
 3. **Cross-model integration — first cut.** Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2028E (extend through FY2030E per original plan). Requires `model-calc` live first so the forecast rows are driven by formulas.
-4. **CF orphan-row slotting (polish).** Older-only items (`Gain (Loss) on Lease Cancellations`, `Proceeds from Issuance of Common Stock`) currently append at the end of the CF sheet on the xlsx. Two-pass insertion using `filing_section` / section_hint would slot them into their natural operating / financing section. Low-priority cleanup.
-5. **Extractor section-tagging fix.** Root-cause fix for ROU + Deferred Revenue NC mis-tagging. Would remove the workarounds in `reconcile.select_entry` (unique-candidate filter skip) and `model-write` (filing_section bucketing hint).
+4. ~~CF orphan-row slotting~~ — shipped. Older-only items are now slotted next to the item that preceded them in the filing where they last appeared, via a per-filing advancing anchor in `resolve_row_positions`.
+5. ~~Extractor section-tagging fix~~ — not needed. The "mis-tagging" was a stale `raw_2024_10K.json` left over from an older extract.py. Re-extracted fresh; sections are correct. Reconcile + model-write workarounds retained as defensive.
 
 ---
 
