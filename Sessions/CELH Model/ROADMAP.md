@@ -100,6 +100,7 @@ Takes validated JSONs + the xlsm, writes values into the CELH model. First run i
    - Explicit filing-era normalization adapter run BEFORE ledger lookup.
    - Multi-variant entries (one ledger row lists multiple equivalent labels).
    - Semantic / LLM-assisted matching for unknowns.
+2. **Pivot extract from label-matching to semantic line-item recognition.** (Late-stage, not near-term — current label-matching architecture is fine for now.) Instead of the ledger carrying an ever-growing library of label variants for each model row, rework `financials-extract` so it classifies each line item semantically into a canonical Pydantic shape (e.g. `CashAndEquivalents`, `AccountsReceivable`, `InterestExpense`) regardless of filing-era wording. Reconcile would then match by canonical type, not by string similarity. Shifts complexity from ledger curation → extractor intelligence. Likely subsumes the multi-era drift TODO above — may end up being the same solution.
 2. **FY2021 / FY2022 BS coverage.** Blocked on 39 older-era-wording reconcile novels in `2022_CELH_10-K.pdf`. Would close once multi-era handling lands.
 3. **BS-7 RE roll-forward validator** (`RE(t) = RE(t-1) + NI(t) − PrefDiv(t)`). Needs cross-filing prior-period BS data — best addressed as part of a "cross-filing" validation mode.
 4. **10-Q quarterly pipeline support.** Current extract assumes annual periods; quarterly filings need a period-detection branch plus adjustments to validators that assume a 12-month frame.
