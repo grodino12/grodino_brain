@@ -620,6 +620,8 @@ let EDGES = [
   { from: 'snap-model', to: 'model-calc', kind: 'data' },
   // model-calc produces
   { from: 'model-calc', to: 'DerivedCalcs', kind: 'data' },
+  // DerivedCalcs feeds the xlsx forecast columns (model-calc writes them in)
+  { from: 'DerivedCalcs', to: 'xlsm-model', kind: 'data' },
   // Schema package → contracts (dashed, annotated)
   { from: 'financials-schema', to: 'RawFiling', kind: 'schema' },
   { from: 'financials-schema', to: 'MappedFiling', kind: 'schema' },
