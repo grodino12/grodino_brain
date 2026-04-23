@@ -439,7 +439,7 @@ const LAYERS = [
 // Column convention: skills in left column (x=380), contracts in right column (x=870).
 // Layer 4 output skills spread across 4 columns.
 // Layer 5 storage has two sub-rows (contracts/stores, then external I/O).
-const NODES = [
+let NODES = [
   // Layer 1
   { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 620,  y: 225, w: 240, h: 56, label: 'financials-extract',
     purpose: 'Parse SEC filing PDFs into Pydantic RawFiling. Detect currency unit + parse exclusions to derive per-section share_unit / eps_unit.',
@@ -589,7 +589,7 @@ const NODES = [
   }
 ];
 
-const EDGES = [
+let EDGES = [
   // External → extract
   { from: 'source-pdfs', to: 'financials-extract', kind: 'data' },
   // Pattern libraries ↔ extract (read on match, append on novel)
@@ -633,9 +633,56 @@ const state = {
   schema: 'shared',
   scope: 'celh',
   selectedId: 'financials-extract',
+  selectedEdgeIdx: null,
   scaffoldFirst: 'financials-extract',
-  tx: 0, ty: 0, scale: 1
+  tx: 0, ty: 0, scale: 1,
+  mode: 'select',           // 'select' | 'addArrow'
+  arrowSource: null,        // node id once user clicks first node in addArrow mode
+  isDirty: false            // true once user has mutated defaults
 };
+
+// Baked-in defaults so "Reset" can restore them.
+const DEFAULT_NODES = JSON.parse(JSON.stringify(NODES));
+const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
+
+// ============ LOCAL PERSISTENCE ============
+
+const LS_KEY = 'celh-architecture-playground-v1';
+
+function saveState() {
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify({ nodes: NODES, edges: EDGES }));
+    state.isDirty = true;
+    updateStatus();
+  } catch (e) { /* ignore quota */ }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if (!raw) return;
+    const { nodes, edges } = JSON.parse(raw);
+    if (Array.isArray(nodes) && Array.isArray(edges)) {
+      NODES = nodes;
+      EDGES = edges;
+      state.isDirty = true;
+    }
+  } catch (e) { /* ignore corrupt */ }
+}
+
+function updateStatus() {
+  const el = document.getElementById('edit-status');
+  if (!el) return;
+  if (state.mode === 'addArrow') {
+    el.textContent = state.arrowSource
+      ? `click target (esc to cancel) — source: ${state.arrowSource}`
+      : 'click a source node…';
+  } else if (state.isDirty) {
+    el.textContent = '● unsaved edits (export to persist)';
+  } else {
+    el.textContent = '';
+  }
+}
 
 // ============ RENDER: SVG MAP ============
 
@@ -674,19 +721,40 @@ function renderMap() {
     viewport.appendChild(label);
   });
 
-  // Edges first (so they sit under nodes)
-  EDGES.forEach(e => {
+  // Edges first (so they sit under nodes). Each edge is a two-path group:
+  // an invisible wide hit-path for click targeting, plus the visible stroke.
+  EDGES.forEach((e, idx) => {
     const a = nodeById(e.from), b = nodeById(e.to);
     if (!a || !b) return;
+    const d = edgePath(a, b);
+    const isSelected = (state.selectedEdgeIdx === idx);
+    const isActiveEndpoint = (e.from === state.selectedId || e.to === state.selectedId);
+
+    // Hit-path (invisible, catches clicks)
+    const hit = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    hit.setAttribute('d', d);
+    hit.setAttribute('class', 'edge-hit');
+    hit.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      if (state.mode === 'addArrow') return;
+      state.selectedEdgeIdx = idx;
+      state.selectedId = null;
+      renderMap();
+      renderDetail();
+    });
+    viewport.appendChild(hit);
+
+    // Visible stroke
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', edgePath(a, b));
+    path.setAttribute('d', d);
     let cls = 'edge';
     if (e.kind === 'schema') cls += ' schema';
-    if (e.from === state.selectedId || e.to === state.selectedId) cls += ' active';
+    if (isActiveEndpoint) cls += ' active';
+    if (isSelected) cls += ' selected';
     path.setAttribute('class', cls);
     if (e.kind === 'schema') {
       path.setAttribute('marker-end', 'url(#arrow-schema)');
-    } else if (e.from === state.selectedId || e.to === state.selectedId) {
+    } else if (isActiveEndpoint || isSelected) {
       path.setAttribute('marker-end', 'url(#arrow-active)');
     } else {
       path.setAttribute('marker-end', 'url(#arrow)');
@@ -697,13 +765,30 @@ function renderMap() {
   // Nodes
   NODES.forEach(n => {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    g.setAttribute('class', 'node-g' + (n.id === state.selectedId ? ' selected' : ''));
+    let cls = 'node-g';
+    if (n.id === state.selectedId) cls += ' selected';
+    if (state.mode === 'select') cls += ' draggable';
+    if (state.mode === 'addArrow' && state.arrowSource === n.id) cls += ' arrow-source';
+    g.setAttribute('class', cls);
     g.setAttribute('transform', `translate(${n.x - n.w/2}, ${n.y - n.h/2})`);
-    g.addEventListener('click', (ev) => {
-      ev.stopPropagation();
-      state.selectedId = n.id;
-      renderMap();
-      renderDetail();
+
+    // All node interaction is mousedown + mouseup based (no `click`), because
+    // dragging calls renderMap on each mousemove — the browser won't fire a
+    // `click` when the mousedown target is destroyed mid-drag. Mousedown sets
+    // the drag, mouseup decides: if the cursor moved, it was a drag (commit
+    // position); otherwise treat it as a click and run the mode's action.
+    g.addEventListener('mousedown', (ev) => {
+      if (ev.button !== 0) return;
+      ev.stopPropagation();  // don't start panning
+      drag = {
+        nodeId: n.id,
+        startClientX: ev.clientX,
+        startClientY: ev.clientY,
+        origX: n.x,
+        origY: n.y,
+        moved: false,
+        mode: state.mode
+      };
     });
 
     const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -771,28 +856,107 @@ function edgePath(a, b) {
   return `M ${x1} ${y1} C ${x1} ${c1y}, ${x2} ${c2y}, ${x2} ${y2}`;
 }
 
-// ============ PAN + ZOOM ============
+// ============ PAN + ZOOM + DRAG + ARROW MODE ============
 
 function applyTransform() {
   viewport.setAttribute('transform', `translate(${state.tx} ${state.ty}) scale(${state.scale})`);
 }
 
+// Drag-to-reposition state (set by node mousedown, cleared on mouseup)
+let drag = null;
+
+// Convert a client-pixel delta into SVG-viewBox units, accounting for the
+// current zoom (state.scale) and the viewBox-to-viewport ratio.
+function clientDeltaToSvg(dxPx, dyPx) {
+  const svgRect = svg.getBoundingClientRect();
+  const vb = svg.viewBox.baseVal;
+  const ratioX = vb.width / svgRect.width;
+  const ratioY = vb.height / svgRect.height;
+  return {
+    dx: dxPx * ratioX / state.scale,
+    dy: dyPx * ratioY / state.scale
+  };
+}
+
+function handleArrowModeClick(nodeId) {
+  if (!state.arrowSource) {
+    state.arrowSource = nodeId;
+    updateStatus();
+    renderMap();
+    return;
+  }
+  if (state.arrowSource === nodeId) {
+    // Clicked source again — treat as cancel
+    state.arrowSource = null;
+    updateStatus();
+    renderMap();
+    return;
+  }
+  // Create the new edge
+  EDGES.push({ from: state.arrowSource, to: nodeId, kind: 'data' });
+  state.arrowSource = null;
+  saveState();
+  updateStatus();
+  renderMap();
+  renderDetail();
+}
+
 let panning = false, startPX, startPY, startTx, startTy;
 mapWrap.addEventListener('mousedown', (e) => {
-  if (e.target.closest('.node-g')) return;
+  if (e.target.closest('.node-g')) return;     // node handles its own mousedown
+  if (e.target.closest('.edge-hit')) return;   // edge click shouldn't start pan
   if (e.target.closest('.controls')) return;
+  if (e.target.closest('.toolbar')) return;
   panning = true;
   mapWrap.classList.add('panning');
   startPX = e.clientX; startPY = e.clientY;
   startTx = state.tx; startTy = state.ty;
 });
 window.addEventListener('mousemove', (e) => {
+  if (drag) {
+    const { dx, dy } = clientDeltaToSvg(e.clientX - drag.startClientX, e.clientY - drag.startClientY);
+    const n = nodeById(drag.nodeId);
+    if (!n) return;
+    n.x = drag.origX + dx;
+    n.y = drag.origY + dy;
+    if (Math.abs(e.clientX - drag.startClientX) + Math.abs(e.clientY - drag.startClientY) > 3) {
+      drag.moved = true;
+    }
+    renderMap();
+    return;
+  }
   if (!panning) return;
   state.tx = startTx + (e.clientX - startPX);
   state.ty = startTy + (e.clientY - startPY);
   applyTransform();
 });
-window.addEventListener('mouseup', () => { panning = false; mapWrap.classList.remove('panning'); });
+window.addEventListener('mouseup', () => {
+  if (drag) {
+    if (drag.moved) {
+      // Drag — position already updated during mousemove. Just persist.
+      if (drag.mode === 'select') saveState();
+      else {
+        // Dragged a node while in addArrow mode — revert to origin.
+        // (Arrow mode is for clicking, not moving.)
+        const n = nodeById(drag.nodeId);
+        if (n) { n.x = drag.origX; n.y = drag.origY; renderMap(); }
+      }
+    } else {
+      // No motion — treat as a click on the node.
+      if (drag.mode === 'addArrow') {
+        handleArrowModeClick(drag.nodeId);
+      } else {
+        state.selectedId = drag.nodeId;
+        state.selectedEdgeIdx = null;
+        renderMap();
+        renderDetail();
+      }
+    }
+    drag = null;
+  }
+  panning = false;
+  mapWrap.classList.remove('panning');
+});
 
 mapWrap.addEventListener('wheel', (e) => {
   e.preventDefault();
@@ -828,6 +992,35 @@ document.getElementById('fit').addEventListener('click', () => {
 const detailEl = document.getElementById('detail');
 
 function renderDetail() {
+  // Edge selected — render a lightweight edge-detail block
+  if (state.selectedEdgeIdx !== null) {
+    const e = EDGES[state.selectedEdgeIdx];
+    if (!e) { detailEl.innerHTML = ''; return; }
+    const a = nodeById(e.from), b = nodeById(e.to);
+    detailEl.innerHTML = `
+      <h2>Arrow</h2>
+      <div class="kind-tag" style="background:#1a1a2a;color:#f5c842;border:1px solid #f5c842">edge · ${e.kind || 'data'}</div>
+      <div class="purpose">${a ? a.label : e.from} → ${b ? b.label : e.to}</div>
+      <div class="detail-block">
+        <div class="label">Kind</div>
+        <select id="edge-kind" style="background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:4px 8px;font-family:var(--mono);font-size:11px">
+          <option value="data" ${e.kind === 'data' ? 'selected' : ''}>data (solid arrow)</option>
+          <option value="schema" ${e.kind === 'schema' ? 'selected' : ''}>schema (dashed, Pydantic)</option>
+        </select>
+      </div>
+      <div class="detail-block" style="color:var(--text-dim);font-size:11px">
+        Press <code>Delete</code> to remove this arrow.
+      </div>`;
+    const sel = document.getElementById('edge-kind');
+    if (sel) sel.addEventListener('change', () => {
+      e.kind = sel.value;
+      saveState();
+      renderMap();
+      renderDetail();
+    });
+    return;
+  }
+
   const n = nodeById(state.selectedId);
   if (!n) { detailEl.innerHTML = ''; return; }
 
@@ -1018,11 +1211,102 @@ document.getElementById('copyBtn').addEventListener('click', async () => {
   }
 });
 
-// Initial render
+// ============ TOOLBAR + KEYBOARD ============
+
+function setMode(mode) {
+  state.mode = mode;
+  state.arrowSource = null;
+  document.getElementById('mode-select').classList.toggle('active', mode === 'select');
+  document.getElementById('mode-arrow').classList.toggle('active', mode === 'addArrow');
+  updateStatus();
+  renderMap();
+}
+
+document.getElementById('mode-select').addEventListener('click', () => setMode('select'));
+document.getElementById('mode-arrow').addEventListener('click', () => setMode('addArrow'));
+
+function deleteSelection() {
+  if (state.selectedEdgeIdx !== null) {
+    EDGES.splice(state.selectedEdgeIdx, 1);
+    state.selectedEdgeIdx = null;
+    saveState();
+    renderMap();
+    renderDetail();
+    return;
+  }
+  if (state.selectedId) {
+    // Remove the node and any edges that reference it
+    const id = state.selectedId;
+    NODES = NODES.filter(n => n.id !== id);
+    EDGES = EDGES.filter(e => e.from !== id && e.to !== id);
+    state.selectedId = null;
+    saveState();
+    renderMap();
+    renderDetail();
+  }
+}
+
+document.getElementById('btn-delete').addEventListener('click', deleteSelection);
+
+document.getElementById('btn-export').addEventListener('click', async () => {
+  const payload = { nodes: NODES, edges: EDGES };
+  const text = JSON.stringify(payload, null, 2);
+  const btn = document.getElementById('btn-export');
+  try {
+    await navigator.clipboard.writeText(text);
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied';
+    setTimeout(() => { btn.textContent = orig; }, 1500);
+  } catch (e) {
+    // Fallback — open a prompt so the user can copy manually
+    window.prompt('Copy the JSON below (Ctrl+C):', text);
+  }
+});
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+  if (!confirm('Discard all local edits and restore the baked-in defaults?')) return;
+  NODES = JSON.parse(JSON.stringify(DEFAULT_NODES));
+  EDGES = JSON.parse(JSON.stringify(DEFAULT_EDGES));
+  state.selectedEdgeIdx = null;
+  state.selectedId = 'financials-extract';
+  state.isDirty = false;
+  state.arrowSource = null;
+  try { localStorage.removeItem(LS_KEY); } catch (e) {}
+  updateStatus();
+  renderMap();
+  renderDetail();
+});
+
+document.addEventListener('keydown', (e) => {
+  // Don't hijack keys while typing in a form element
+  const t = e.target;
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return;
+
+  if (e.key === 'Delete' || e.key === 'Backspace') {
+    if (state.selectedId || state.selectedEdgeIdx !== null) {
+      e.preventDefault();
+      deleteSelection();
+    }
+  } else if (e.key === 'Escape') {
+    if (state.mode === 'addArrow') {
+      setMode('select');
+    } else {
+      state.selectedEdgeIdx = null;
+      state.arrowSource = null;
+      renderMap();
+      renderDetail();
+    }
+  }
+});
+
+// ============ INITIAL RENDER ============
+
+loadState();          // restore from localStorage if present
 renderMap();
 renderDetail();
 renderScaffoldGrid();
 updatePrompt();
+updateStatus();
 </script>
 </body>
 </html>
