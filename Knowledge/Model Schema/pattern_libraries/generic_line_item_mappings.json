@@ -1,0 +1,1138 @@
+{
+  "version": "1.0",
+  "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order — this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
+  "last_updated": "2026-04-23",
+  "source_reference": "CELH FY2024 10-K (latest available at migration time)",
+  "conventions": {
+    "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
+    "filing_section_discriminator": "For items that exist as both current and non-current (Note Receivable, Lease Liability, Deferred Revenue, etc.), paired entries share the same aliases and are disambiguated at reconcile time by the item's section tag.",
+    "filing_subsection_discriminator": "For items with identical raw labels in different subsections (IS 'Basic'/'Diluted' as EPS vs shares_outstanding), filing_subsection picks the right entry.",
+    "memo": "true means reconcile recognizes the item but model-write does NOT render it on the xlsx.",
+    "row_type_subtotal": "true means model-write will overwrite the extracted value with a live SUM / cascade formula at render time."
+  },
+  "mappings": [
+
+    {
+      "rule_id": "GEN-IS-001",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Net Sales / Revenue",
+      "aliases": [
+        "revenue",
+        "net sales",
+        "net revenues",
+        "revenues",
+        "net sales (revenue)"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-002",
+      "model_sheet": "ANNL P&L",
+      "model_label": "COGS",
+      "aliases": [
+        "cost of revenue",
+        "cost of goods sold",
+        "cost of sales",
+        "cost of products sold"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-003",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Gross Profit (Loss)",
+      "row_type": "subtotal",
+      "aliases": [
+        "gross profit",
+        "gross margin",
+        "gross profit (loss)"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-004",
+      "model_sheet": "ANNL P&L",
+      "model_label": "SG&A",
+      "aliases": [
+        "selling, general and administrative expenses",
+        "selling and marketing expenses",
+        "general and administrative expenses",
+        "sg&a",
+        "selling general and administrative expenses"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-005",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Income (Loss) from Operations",
+      "row_type": "subtotal",
+      "aliases": [
+        "income from operations",
+        "income (loss) from operations",
+        "operating income",
+        "operating loss",
+        "operating income (loss)",
+        "loss from operations"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-006",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Interest Income (Expense)",
+      "aliases": [
+        "interest income (expense), net",
+        "interest income, net",
+        "interest expense, net",
+        "interest income expense net",
+        "interest income net",
+        "net interest income",
+        "net interest expense"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-007",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Foreign Currency Gain (Loss)",
+      "aliases": [
+        "foreign exchange loss",
+        "foreign exchange gain",
+        "foreign exchange gain (loss)",
+        "foreign currency exchange loss",
+        "foreign currency exchange gain (loss)",
+        "foreign currency transaction gain (loss)",
+        "net foreign exchange gain (loss)"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-008",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Other Income (Expense)",
+      "aliases": [
+        "other income",
+        "other income, net",
+        "other expense",
+        "other expense, net",
+        "other income (expense), net",
+        "other non-operating income",
+        "other non-operating income (expense)",
+        "miscellaneous income",
+        "other, net"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-009",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Pre-Tax Income (Loss)",
+      "row_type": "subtotal",
+      "aliases": [
+        "net income (loss) before income taxes",
+        "net income (loss) before provision for income taxes",
+        "income (loss) before income taxes",
+        "income before income taxes",
+        "income before taxes",
+        "loss before income taxes",
+        "earnings before taxes",
+        "pre-tax income"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-010",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Income Tax (Benefit) Expense",
+      "sign_convention": "expense_positive",
+      "note": "User-requested: store with expense positive, benefit negative (opposite of filing's natural sign). Sign flip applied during reconcile or model-write — TBD.",
+      "aliases": [
+        "income tax (expense) benefit",
+        "income tax expense benefit",
+        "provision for income taxes",
+        "provision (benefit) for income taxes",
+        "provision for taxes",
+        "income taxes",
+        "tax expense",
+        "tax benefit",
+        "income tax expense"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-011",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Net Income (Loss)",
+      "row_type": "subtotal",
+      "aliases": [
+        "net income (loss)",
+        "net income",
+        "net loss",
+        "net earnings (loss)",
+        "net earnings"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-012",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Dividends",
+      "note": "Single row captures all dividend expenses (preferred + common). If a ticker has both, they collapse on this row.",
+      "aliases": [
+        "dividends on series a convertible preferred shares",
+        "dividends on series a convertible preferred stock",
+        "preferred stock dividends",
+        "preferred dividends",
+        "cumulative preferred dividends",
+        "dividends on preferred stock",
+        "dividends",
+        "common stock dividends",
+        "dividends declared on common stock",
+        "cash dividends declared"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-013",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Income Allocated to Participating Preferred",
+      "aliases": [
+        "income allocated to participating preferred shares",
+        "income allocated to participating preferred stock",
+        "earnings allocated to participating securities",
+        "undistributed earnings allocated to participating securities",
+        "income (loss) allocated to participating preferred"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-014",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Net Income (Loss) Attributable to Common Shareholders",
+      "row_type": "subtotal",
+      "aliases": [
+        "net income (loss) attributable to common stockholders",
+        "net income attributable to common stockholders",
+        "net loss attributable to common stockholders",
+        "net income (loss) available to common shareholders",
+        "net income available to common stockholders",
+        "net income to common"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-015",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Total Comprehensive Income (Loss)",
+      "memo": true,
+      "note": "Recognized but not displayed on xlsx. Comprehensive income = NI + OCI; lives in a parallel section of the filing we don't model directly.",
+      "aliases": [
+        "comprehensive income (loss)",
+        "comprehensive income",
+        "comprehensive loss",
+        "total comprehensive income (loss)",
+        "total comprehensive income"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-016",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Basic Earnings (Loss) per Share",
+      "filing_subsection": "eps",
+      "aliases": [
+        "basic",
+        "basic earnings per share",
+        "basic earnings (loss) per share",
+        "basic earnings per common share",
+        "basic net income per share",
+        "basic net income (loss) per share"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-017",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Diluted Earnings (Loss) per Share",
+      "filing_subsection": "eps",
+      "aliases": [
+        "diluted",
+        "diluted earnings per share",
+        "diluted earnings (loss) per share",
+        "diluted earnings per common share",
+        "diluted net income per share",
+        "diluted net income (loss) per share"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-018",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Weighted Average Shares Outstanding (Basic)",
+      "filing_subsection": "shares_outstanding",
+      "aliases": [
+        "basic",
+        "weighted average shares outstanding basic",
+        "weighted average common shares outstanding basic",
+        "weighted average shares outstanding - basic"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-019",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Weighted Average Shares Outstanding (Diluted)",
+      "filing_subsection": "shares_outstanding",
+      "aliases": [
+        "diluted",
+        "weighted average shares outstanding diluted",
+        "weighted average common shares outstanding diluted",
+        "weighted average shares outstanding - diluted"
+      ]
+    },
+
+    {
+      "rule_id": "GEN-BS-001",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Cash & Cash Equivalents",
+      "aliases": [
+        "cash and cash equivalents",
+        "cash equivalents",
+        "cash"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-002",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Restricted Cash",
+      "aliases": [
+        "restricted cash",
+        "restricted cash and cash equivalents"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-003",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Accounts Receivable",
+      "aliases": [
+        "accounts receivable",
+        "accounts receivable-net",
+        "accounts receivable, net",
+        "trade receivables",
+        "trade receivables, net"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-004",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Note Receivable - Current",
+      "filing_section": "current_assets",
+      "aliases": [
+        "note receivable-net",
+        "note receivable-current-net",
+        "note receivable-net (current)",
+        "notes receivable",
+        "notes receivable, net",
+        "note receivable"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-005",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Inventories",
+      "aliases": [
+        "inventories-net",
+        "inventories",
+        "inventory",
+        "inventories, net"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-006",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Prepaid Expenses",
+      "aliases": [
+        "prepaid expenses and other current assets",
+        "prepaid expenses",
+        "prepayments",
+        "prepaid expenses, net"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-007",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Net PP&E",
+      "aliases": [
+        "property, plant and equipment-net",
+        "property, plant and equipment, net",
+        "property and equipment, net",
+        "property and equipment-net",
+        "pp&e",
+        "net property, plant and equipment"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-008",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Deferred Tax Assets",
+      "aliases": [
+        "deferred tax assets",
+        "deferred tax assets, net",
+        "deferred income tax assets",
+        "deferred income taxes"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-009",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "ROU Assets - Operating - Non-Current",
+      "filing_section": "non_current_assets",
+      "aliases": [
+        "right of use assets-operating leases",
+        "operating lease right-of-use assets",
+        "operating lease rou assets",
+        "right-of-use assets, operating"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-010",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "ROU Assets - Finance - Non-Current",
+      "filing_section": "non_current_assets",
+      "aliases": [
+        "right of use assets-finance leases-net",
+        "right of use assets-finance leases",
+        "finance lease right-of-use assets",
+        "finance lease rou assets"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-011",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Note Receivable - Non-Current",
+      "filing_section": "non_current_assets",
+      "aliases": [
+        "note receivable-net",
+        "note receivable-current-net",
+        "note receivable-net (current)",
+        "notes receivable",
+        "notes receivable, net",
+        "note receivable"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-012",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Intangible Assets",
+      "aliases": [
+        "intangibles-net",
+        "intangible assets, net",
+        "intangible assets-net",
+        "intangibles, net",
+        "other intangible assets",
+        "other intangibles, net"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-013",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Goodwill",
+      "aliases": [
+        "goodwill",
+        "goodwill, net",
+        "goodwill-net"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-014",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Other Non-Current Assets",
+      "aliases": [
+        "other long-term assets",
+        "other non-current assets",
+        "other assets",
+        "other long-term assets, net",
+        "other non-current assets, net"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-015",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Accounts Payable",
+      "aliases": [
+        "accounts payable",
+        "accounts payable, net",
+        "trade payables",
+        "accounts payable and accrued expenses"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-016",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Accrued Expenses",
+      "aliases": [
+        "accrued expenses",
+        "accrued liabilities",
+        "accrued expenses and other current liabilities",
+        "accrued liabilities and other"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-017",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Income Taxes Payable",
+      "aliases": [
+        "income taxes payable",
+        "income tax payable",
+        "taxes payable",
+        "accrued income taxes"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-018",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Accrued Promotional Allowance",
+      "aliases": [
+        "accrued promotional allowance",
+        "promotional allowance",
+        "trade promotion allowance",
+        "promotional allowances"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-019",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Lease Liability - Operating - Current",
+      "filing_section": "current_liabilities",
+      "aliases": [
+        "lease liability operating leases",
+        "lease liability operating (current)",
+        "lease liability obligation-operating leases",
+        "operating lease liabilities",
+        "operating lease liability, current"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-020",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Lease Liability - Finance - Current",
+      "filing_section": "current_liabilities",
+      "aliases": [
+        "lease liability finance leases",
+        "lease liability finance (current)",
+        "lease liability obligation-finance leases",
+        "finance lease liabilities",
+        "finance lease liability, current"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-021",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Deferred Revenue - Current",
+      "filing_section": "current_liabilities",
+      "aliases": [
+        "deferred revenue",
+        "deferred revenue (current)",
+        "contract liabilities",
+        "contract liabilities, current",
+        "unearned revenue"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-022",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Other Current Liabilities",
+      "aliases": [
+        "other current liabilities",
+        "other accrued liabilities",
+        "other liabilities, current"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-023",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Lease Liability - Operating - Non-Current",
+      "filing_section": "non_current_liabilities",
+      "aliases": [
+        "lease liability operating leases",
+        "lease liability operating (non-current)",
+        "lease liability obligation-operating leases",
+        "operating lease liabilities",
+        "operating lease liability, non-current"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-024",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Lease Liability - Finance - Non-Current",
+      "filing_section": "non_current_liabilities",
+      "aliases": [
+        "lease liability finance leases",
+        "lease liability finance (non-current)",
+        "lease liability obligation-finance leases",
+        "finance lease liabilities",
+        "finance lease liability, non-current"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-025",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Deferred Tax Liability",
+      "aliases": [
+        "deferred tax liability",
+        "deferred tax liabilities",
+        "deferred income tax liabilities",
+        "deferred income tax liability"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-026",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Deferred Revenue - Non-Current",
+      "filing_section": "non_current_liabilities",
+      "aliases": [
+        "deferred revenue",
+        "deferred revenue (non-current)",
+        "contract liabilities",
+        "contract liabilities, non-current",
+        "unearned revenue"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-027",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Convertible Preferred Stock",
+      "aliases": [
+        "series a convertible preferred stock",
+        "convertible preferred stock",
+        "redeemable preferred stock",
+        "redeemable convertible preferred stock",
+        "series a preferred stock"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-028",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Common Stock",
+      "aliases": [
+        "common stock",
+        "common shares",
+        "class a common stock",
+        "class b common stock"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-029",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Additional Paid-in Capital",
+      "aliases": [
+        "additional paid-in capital",
+        "additional paid in capital",
+        "paid-in capital",
+        "capital in excess of par value",
+        "apic"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-030",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Accumulated Other Comprehensive Income (Loss)",
+      "aliases": [
+        "accumulated other comprehensive loss",
+        "accumulated other comprehensive income",
+        "accumulated other comprehensive income (loss)",
+        "aoci"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-031",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Retained Earnings (Accumulated Deficit)",
+      "aliases": [
+        "retained earnings (accumulated deficit)",
+        "retained earnings",
+        "accumulated deficit",
+        "retained earnings / (accumulated deficit)"
+      ]
+    },
+
+    {
+      "rule_id": "GEN-CF-001",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Net Income (Loss)",
+      "aliases": [
+        "net income",
+        "net income (loss)",
+        "net loss",
+        "net earnings",
+        "net income loss",
+        "net earnings (loss)"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-002",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Depreciation & Amortization",
+      "aliases": [
+        "depreciation and amortization",
+        "depreciation and amortization expense",
+        "depreciation, amortization and accretion",
+        "d&a"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-003",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Impairment of Intangibles",
+      "aliases": [
+        "impairment of intangible assets",
+        "impairment of intangibles",
+        "intangible asset impairment",
+        "goodwill and intangibles impairment",
+        "impairment charges"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-004",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Allowance for Credit Losses",
+      "aliases": [
+        "allowance for credit losses",
+        "bad debt expense",
+        "provision for credit losses",
+        "provision for doubtful accounts",
+        "provision for bad debt",
+        "allowance for doubtful accounts"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-005",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Inventory Write-Down",
+      "aliases": [
+        "inventory excess and obsolescence",
+        "inventory obsolescence",
+        "inventory write-downs",
+        "inventory write-down",
+        "provision for inventory obsolescence",
+        "inventory reserve",
+        "excess and obsolete inventory"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-006",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Stock-Based Compensation",
+      "aliases": [
+        "stock-based compensation expense",
+        "stock-based compensation",
+        "share-based compensation",
+        "share-based compensation expense",
+        "equity-based compensation",
+        "sbc"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-007",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Gain (Loss) on Disposal of PP&E",
+      "aliases": [
+        "loss on disposal of property, plant and equipment",
+        "loss on disposal of property and equipment",
+        "(gain) loss on disposal of property and equipment",
+        "gain (loss) on disposal of property, plant and equipment",
+        "loss (gain) on disposal of pp&e"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-008",
+      "model_sheet": "CASH FLOW",
+      "model_label": "(Benefit) Provision for Deferred Income Taxes",
+      "aliases": [
+        "deferred income taxes-net",
+        "deferred income taxes, net",
+        "deferred income taxes",
+        "deferred tax provision",
+        "(benefit) provision for deferred income taxes"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-009",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Foreign Currency Gain (Loss)",
+      "aliases": [
+        "foreign exchange loss",
+        "unrealized exchange losses",
+        "unrealized foreign exchange loss",
+        "foreign currency transaction loss",
+        "foreign exchange (gain) loss",
+        "unrealized foreign currency gain (loss)"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-010",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Other Operating Items",
+      "aliases": [
+        "other operating activities",
+        "other operating assets",
+        "other assets",
+        "other non-cash items",
+        "other, net",
+        "other"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-011",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Accounts Receivable",
+      "aliases": [
+        "accounts receivable-net (change)",
+        "accounts receivable-net",
+        "accounts receivable",
+        "accounts receivable, net",
+        "change in accounts receivable",
+        "(increase) decrease in accounts receivable",
+        "trade receivables"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-012",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Inventories",
+      "aliases": [
+        "inventories-net (change)",
+        "inventories-net",
+        "inventories",
+        "inventory",
+        "change in inventories",
+        "(increase) decrease in inventories"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-013",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Prepaid Expenses",
+      "aliases": [
+        "prepaid expenses (change)",
+        "prepaid expenses and other current assets",
+        "prepaid expenses",
+        "change in prepaid expenses",
+        "(increase) decrease in prepaid expenses"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-014",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Accounts Payable",
+      "aliases": [
+        "accounts payable",
+        "accounts payable and accrued expenses",
+        "change in accounts payable",
+        "increase (decrease) in accounts payable",
+        "trade payables"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-015",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Accrued Expenses",
+      "aliases": [
+        "accrued expenses",
+        "accrued liabilities",
+        "change in accrued expenses",
+        "change in accrued liabilities",
+        "increase (decrease) in accrued expenses"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-016",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Accrued Promotional Allowance",
+      "aliases": [
+        "accrued promotional allowance (change)",
+        "accrued promotional allowance",
+        "change in accrued promotional allowance",
+        "promotional allowance",
+        "trade promotion allowance"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-017",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Other Current Liabilities",
+      "aliases": [
+        "other current liabilities (change)",
+        "other current liabilities",
+        "income taxes payable",
+        "change in other current liabilities",
+        "other accrued liabilities"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-018",
+      "model_sheet": "CASH FLOW",
+      "model_label": "ROU & Lease Liability, Net",
+      "aliases": [
+        "right of use assets and lease liabilities, net (change)",
+        "right of use assets and lease liabilities-net",
+        "change in right of use and lease obligation-net",
+        "change in right of use asset and lease liability-net",
+        "net change in rou and lease liability"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-019",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Deferred Revenue",
+      "aliases": [
+        "deferred revenue (change)",
+        "deferred revenue",
+        "change in deferred revenue",
+        "contract liabilities",
+        "change in contract liabilities",
+        "unearned revenue"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-020",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Other Non-Current Assets",
+      "aliases": [
+        "other long-term assets (change)",
+        "other long-term assets",
+        "other non-current assets",
+        "change in other non-current assets",
+        "change in other assets"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-021",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Note Receivable",
+      "aliases": [
+        "note receivable-net",
+        "note receivable",
+        "notes receivable",
+        "change in note receivable",
+        "change in notes receivable"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-022",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash Flow from Operations",
+      "row_type": "subtotal",
+      "aliases": [
+        "net cash provided by operating activities",
+        "net cash used in operating activities",
+        "net cash provided by (used in) operating activities",
+        "cash flows from operating activities"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-023",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Collections from Note Receivable",
+      "aliases": [
+        "collections from note receivable",
+        "collections on note receivable",
+        "collections from notes receivable",
+        "proceeds from notes receivable",
+        "principal payments received on notes receivable"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-024",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Purchase of PP&E",
+      "aliases": [
+        "purchase of property, plant and equipment",
+        "purchase of property and equipment",
+        "purchases of property, plant and equipment",
+        "capital expenditures",
+        "additions to property, plant and equipment",
+        "capex"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-025",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Purchase of Non-Marketable Equity Securities",
+      "aliases": [
+        "purchase of non-marketable equity securities",
+        "purchase of equity investments",
+        "investment in non-marketable equity securities",
+        "equity investments",
+        "investments in equity securities"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-026",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash Flow from Investing",
+      "row_type": "subtotal",
+      "aliases": [
+        "net cash used in investing activities",
+        "net cash provided by investing activities",
+        "net cash provided by (used in) investing activities",
+        "cash flows from investing activities"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-027",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Finance Lease Payments",
+      "aliases": [
+        "principal payments on finance lease obligations",
+        "principal payments on finance leases",
+        "finance lease principal payments",
+        "payments on finance lease obligations",
+        "repayments of finance lease obligations"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-028",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Exercise of Stock Options",
+      "aliases": [
+        "proceeds from exercise of stock options",
+        "proceeds from stock option exercises",
+        "proceeds from exercise of options",
+        "stock option exercise proceeds",
+        "proceeds from issuance of common stock under employee plans"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-029",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Issuance of Preferred Stock",
+      "aliases": [
+        "proceeds from issuance of preferred shares",
+        "proceeds from the issuance of series a preferred shares",
+        "proceeds from issuance of series a preferred shares net",
+        "proceeds from issuance of preferred stock",
+        "proceeds from preferred stock issuance",
+        "net proceeds from issuance of preferred stock"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-030",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Dividends Paid",
+      "aliases": [
+        "dividends paid on series a preferred",
+        "dividends paid on preferred shares",
+        "cash dividends paid on series a convertible preferred stock",
+        "dividends paid",
+        "cash dividends paid",
+        "dividends paid to stockholders",
+        "payment of dividends",
+        "dividends paid on common stock",
+        "cash dividends paid on common stock"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-031",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Issuance of Common Stock",
+      "aliases": [
+        "net proceeds from sale of common stock",
+        "proceeds from issuance of common stock",
+        "proceeds from common stock offering",
+        "proceeds from sale of common stock",
+        "net proceeds from issuance of common stock"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-032",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Share Repurchases",
+      "note": "Captures both open-market buybacks and RSU tax-withholding repurchases. If a ticker wants them broken out, they add ticker-specific overrides.",
+      "aliases": [
+        "repurchase of common stock related to tax withholdings",
+        "shares repurchased for tax withholdings",
+        "tax withholdings on vested restricted stock units",
+        "payments for taxes related to net share settlement of equity awards",
+        "shares withheld for taxes",
+        "repurchase of common stock",
+        "common stock repurchases",
+        "share repurchases",
+        "treasury stock purchases",
+        "purchase of treasury stock",
+        "accelerated share repurchase"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-033",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash Flow from Financing",
+      "row_type": "subtotal",
+      "aliases": [
+        "net cash used in financing activities",
+        "net cash provided by financing activities",
+        "net cash used in provided by financing activities",
+        "net cash provided by (used in) financing activities",
+        "cash flows from financing activities"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-034",
+      "model_sheet": "CASH FLOW",
+      "model_label": "FX Effect on Cash",
+      "aliases": [
+        "effect of exchange rate on cash",
+        "effect on exchange rate changes on cash and cash equivalents",
+        "effect of exchange rate changes on cash",
+        "effect of exchange rate changes on cash and cash equivalents",
+        "foreign currency translation effect on cash"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-035",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Net Change in Cash",
+      "aliases": [
+        "net increase in cash",
+        "net decrease in cash",
+        "net increase decrease in cash cash equivalents and restricted cash",
+        "net increase in cash and cash equivalents",
+        "net change in cash",
+        "net increase (decrease) in cash"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-036",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash at Beginning of Period",
+      "aliases": [
+        "cash and cash equivalents, beginning",
+        "cash cash equivalents and restricted cash beginning of period",
+        "cash and cash equivalents at beginning of the period",
+        "cash at beginning of period",
+        "cash, cash equivalents and restricted cash, beginning of period"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-037",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash at End of Period",
+      "aliases": [
+        "cash and cash equivalents, end",
+        "cash cash equivalents and restricted cash end of period",
+        "cash and cash equivalents at end of the period",
+        "cash at end of period",
+        "cash, cash equivalents and restricted cash, end of period"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-038",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash Paid for Interest",
+      "memo": true,
+      "aliases": [
+        "cash paid for interest",
+        "interest paid",
+        "interest",
+        "cash paid during the period for interest"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-039",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash Paid for Taxes",
+      "memo": true,
+      "aliases": [
+        "cash paid for taxes",
+        "taxes paid",
+        "taxes",
+        "cash paid during the period for taxes",
+        "cash paid for income taxes",
+        "income taxes paid"
+      ]
+    }
+  ]
+}
