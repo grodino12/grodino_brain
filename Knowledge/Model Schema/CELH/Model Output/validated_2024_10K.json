@@ -5615,7 +5615,7 @@
         "model_row": 0,
         "model_label": "Deferred Revenue - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-036"
+        "ledger_rule_id": "GEN-BS-026"
       },
       {
         "raw_filing_label": "Total Liabilities",
@@ -6535,7 +6535,7 @@
         "model_row": 0,
         "model_label": "Deferred Revenue - Non-Current",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-BS-036"
+        "ledger_rule_id": "GEN-BS-026"
       },
       {
         "raw_filing_label": "Total Liabilities",
@@ -6880,7 +6880,7 @@
         "model_row": 0,
         "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-011"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Foreign exchange loss",
@@ -7363,7 +7363,7 @@
         "model_row": 0,
         "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-011"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Foreign exchange loss",
@@ -7846,7 +7846,7 @@
         "model_row": 0,
         "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-011"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Foreign exchange loss",
@@ -11183,7 +11183,7 @@
       "actual": "0",
       "gap": "0",
       "severity": "pass",
-      "message": "All 89 ledger_rule_ids in use have consistent section tags."
+      "message": "All 88 ledger_rule_ids in use have consistent section tags."
     },
     {
       "rule_id": "X-1 @ FY2021",

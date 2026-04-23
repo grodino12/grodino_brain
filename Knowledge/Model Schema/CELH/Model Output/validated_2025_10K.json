@@ -6773,7 +6773,7 @@
         "model_row": 0,
         "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-011"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Interest income, net",
@@ -7279,7 +7279,7 @@
         "model_row": 0,
         "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-011"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Interest income, net",
@@ -7785,7 +7785,7 @@
         "model_row": 0,
         "model_label": "Interest Income (Expense)",
         "mapping_source": "ledger_auto",
-        "ledger_rule_id": "MAP-IS-011"
+        "ledger_rule_id": "GEN-IS-006"
       },
       {
         "raw_filing_label": "Interest income, net",
@@ -11306,7 +11306,7 @@
       "actual": "0",
       "gap": "0",
       "severity": "pass",
-      "message": "All 92 ledger_rule_ids in use have consistent section tags."
+      "message": "All 91 ledger_rule_ids in use have consistent section tags."
     },
     {
       "rule_id": "X-1 @ FY2022",

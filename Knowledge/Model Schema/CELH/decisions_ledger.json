@@ -20,27 +20,11 @@
       "decided_date": "2026-04-16"
     },
     {
-      "rule_id": "MAP-BS-036",
-      "filing_term_normalized": "deferred revenue-non-current",
-      "model_sheet": "BALANCE SHEET",
-      "model_label": "Deferred Revenue - Non-Current",
-      "decided_date": "2026-04-23",
-      "note": "Extract-quirk workaround: raw label is unambiguously non-current, but extract mis-tags section=current_liabilities on this item (subtotal-flip detection doesn't fire for this BS layout). No filing_section here lets it win via ticker-tier precedence over GEN-BS-026 (which would be filtered out). Revisit once extract's section detection is fixed."
-    },
-    {
       "rule_id": "MAP-CF-005",
       "filing_term_normalized": "amortization of deferred other costs",
       "model_sheet": "CASH FLOW",
       "model_label": "Amortization of Deferred Other Costs",
       "decided_date": "2026-04-16"
-    },
-    {
-      "rule_id": "MAP-IS-011",
-      "filing_term_normalized": "interest income on note receivable",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Interest Income (Expense)",
-      "decided_date": "2026-04-22",
-      "note": "Combined with Interest Income net"
     },
     {
       "rule_id": "MAP-CF-036",
