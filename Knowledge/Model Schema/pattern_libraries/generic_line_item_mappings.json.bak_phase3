@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order \u2014 this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
+  "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order — this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
   "last_updated": "2026-04-23",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
@@ -11,6 +11,7 @@
     "row_type_subtotal": "true means model-write will overwrite the extracted value with a live SUM / cascade formula at render time."
   },
   "mappings": [
+
     {
       "rule_id": "GEN-IS-001",
       "model_sheet": "ANNL P&L",
@@ -136,7 +137,7 @@
       "model_sheet": "ANNL P&L",
       "model_label": "Income Tax (Benefit) Expense",
       "sign_convention": "expense_positive",
-      "note": "User-requested: store with expense positive, benefit negative (opposite of filing's natural sign). Sign flip applied during reconcile or model-write \u2014 TBD.",
+      "note": "User-requested: store with expense positive, benefit negative (opposite of filing's natural sign). Sign flip applied during reconcile or model-write — TBD.",
       "aliases": [
         "income tax (expense) benefit",
         "income tax expense benefit",
@@ -272,6 +273,7 @@
         "weighted average shares outstanding - diluted"
       ]
     },
+
     {
       "rule_id": "GEN-BS-001",
       "model_sheet": "BALANCE SHEET",
@@ -636,6 +638,7 @@
         "retained earnings / (accumulated deficit)"
       ]
     },
+
     {
       "rule_id": "GEN-CF-001",
       "model_sheet": "CASH FLOW",

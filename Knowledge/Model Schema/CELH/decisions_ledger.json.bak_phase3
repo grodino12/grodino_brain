@@ -1,0 +1,1367 @@
+{
+  "version": "1.0",
+  "ticker": "CELH",
+  "last_updated": "2026-04-23T00:00:00Z",
+  "source_md": "Brain/Sessions/CELH Model/03_celh_decisions_ledger.md",
+  "notes": "Converted from markdown handoff. Append-only; to supersede a rule, add a new entry and set the old one's superseded_by field.",
+  "mappings": [
+    {
+      "rule_id": "MAP-IS-001",
+      "filing_term_normalized": "cost of revenue",
+      "model_sheet": "ANNL P&L / QTR P&L",
+      "model_row": 10,
+      "model_label": "COGS",
+      "decided_date": "2026-04-15",
+      "note": "Direct synonym"
+    },
+    {
+      "rule_id": "MAP-IS-002",
+      "filing_term_normalized": "income from operations",
+      "model_sheet": "ANNL P&L / QTR P&L",
+      "model_row": 15,
+      "model_label": "Operating Profit",
+      "decided_date": "2026-04-15",
+      "note": "Direct synonym"
+    },
+    {
+      "rule_id": "MAP-IS-003",
+      "filing_term_normalized": "provision for income taxes",
+      "model_sheet": "ANNL P&L / QTR P&L",
+      "model_row": 21,
+      "model_label": "Income Taxes",
+      "decided_date": "2026-04-15",
+      "note": "Direct synonym"
+    },
+    {
+      "rule_id": "MAP-IS-004",
+      "filing_term_normalized": "foreign currency exchange (loss) gain",
+      "model_sheet": "ANNL P&L / QTR P&L",
+      "model_row": 18,
+      "model_label": "Foreign exchange gain (loss)",
+      "decided_date": "2026-04-15",
+      "note": "Sign convention preserved",
+      "superseded_by": "MAP-IS-030"
+    },
+    {
+      "rule_id": "MAP-IS-005",
+      "filing_term_normalized": "bad debt expense",
+      "model_sheet": "CASH FLOW",
+      "model_row": 15,
+      "model_label": "Allowance for Credit Losses",
+      "decided_date": "2026-04-15",
+      "note": "Renamed model row"
+    },
+    {
+      "rule_id": "MAP-IS-006",
+      "filing_term_normalized": "unrealized exchange losses",
+      "model_sheet": "CASH FLOW",
+      "model_row": 19,
+      "model_label": "Foreign Exchange Loss",
+      "decided_date": "2026-04-15",
+      "note": "Renamed model row"
+    },
+    {
+      "rule_id": "MAP-BS-001",
+      "filing_term_normalized": "cash and cash equivalents",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 9,
+      "model_label": "Cash & Cash Equivalents",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-002",
+      "filing_term_normalized": "accounts receivable-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 11,
+      "model_label": "Accounts Receivable",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-003",
+      "filing_term_normalized": "note receivable-net (current)",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 12,
+      "model_label": "Note Receivable",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-004",
+      "filing_term_normalized": "inventories-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 13,
+      "model_label": "Inventories",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-005",
+      "filing_term_normalized": "deferred other costs-current",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 14,
+      "model_label": "Deferred Other Costs (Current)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-006",
+      "filing_term_normalized": "prepaid expenses and other current assets",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 15,
+      "model_label": "Prepaid Expenses",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-007",
+      "filing_term_normalized": "property, plant and equipment-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 19,
+      "model_label": "Net PP&E",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-008",
+      "filing_term_normalized": "right of use assets-operating leases",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 21,
+      "model_label": "ROU Assets - Operating",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-009",
+      "filing_term_normalized": "right of use assets-finance leases-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 22,
+      "model_label": "ROU Assets - Finance",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-010",
+      "filing_term_normalized": "intangibles-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 25,
+      "model_label": "Intangibles",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-011",
+      "filing_term_normalized": "goodwill",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 26,
+      "model_label": "Goodwill",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-012",
+      "filing_term_normalized": "deferred other costs-non-current",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 24,
+      "model_label": "Deferred Other Costs (NC)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-013",
+      "filing_term_normalized": "deferred tax assets",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 20,
+      "model_label": "Deferred Tax Assets",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-014",
+      "filing_term_normalized": "accrued promotional allowance",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 32,
+      "model_label": "Accrued Promotional Allowance",
+      "decided_date": "2026-04-16",
+      "note": "Post row-inserts"
+    },
+    {
+      "rule_id": "MAP-BS-015",
+      "filing_term_normalized": "lease liability operating (current)",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 33,
+      "model_label": "Lease Liability - Operating Current",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-016",
+      "filing_term_normalized": "lease liability finance (current)",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 34,
+      "model_label": "Lease Liability - Finance Current",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-017",
+      "filing_term_normalized": "deferred revenue (current)",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 35,
+      "model_label": "Deferred Revenue (Current)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-018",
+      "filing_term_normalized": "other current liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 36,
+      "model_label": "Other Current Liabilities",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-019",
+      "filing_term_normalized": "lease liability operating (non-current)",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 39,
+      "model_label": "Lease Liability - Operating NC",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-020",
+      "filing_term_normalized": "lease liability finance (non-current)",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 40,
+      "model_label": "Lease Liability - Finance NC",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-021",
+      "filing_term_normalized": "deferred tax liability",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 41,
+      "model_label": "Deferred Tax Liability",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-022",
+      "filing_term_normalized": "deferred revenue (non-current)",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 42,
+      "model_label": "Deferred Revenue (NC)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-001",
+      "filing_term_normalized": "net income",
+      "model_sheet": "CASH FLOW",
+      "model_row": 12,
+      "model_label": "Net Income",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-002",
+      "filing_term_normalized": "depreciation and amortization",
+      "model_sheet": "CASH FLOW",
+      "model_row": 13,
+      "model_label": "Depreciation & Amortization",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-003",
+      "filing_term_normalized": "impairment of intangible assets",
+      "model_sheet": "CASH FLOW",
+      "model_row": 14,
+      "model_label": "Impairment of Intangibles",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-004",
+      "filing_term_normalized": "allowance for credit losses",
+      "model_sheet": "CASH FLOW",
+      "model_row": 15,
+      "model_label": "Allowance for Credit Losses",
+      "decided_date": "2026-04-16",
+      "note": "Renamed from Bad Debt Expense"
+    },
+    {
+      "rule_id": "MAP-CF-005",
+      "filing_term_normalized": "amortization of deferred other costs",
+      "model_sheet": "CASH FLOW",
+      "model_row": 16,
+      "model_label": "Amortization of Deferred Other Costs",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-006",
+      "filing_term_normalized": "inventory excess and obsolescence",
+      "model_sheet": "CASH FLOW",
+      "model_row": 17,
+      "model_label": "Inventory Obsolescence",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-007",
+      "filing_term_normalized": "stock-based compensation expense",
+      "model_sheet": "CASH FLOW",
+      "model_row": 18,
+      "model_label": "Stock-Based Compensation",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-008",
+      "filing_term_normalized": "foreign exchange loss",
+      "model_sheet": "CASH FLOW",
+      "model_row": 19,
+      "model_label": "Foreign Exchange Loss",
+      "decided_date": "2026-04-16",
+      "note": "Renamed from Unrealized Exchange Losses"
+    },
+    {
+      "rule_id": "MAP-CF-009",
+      "filing_term_normalized": "other operating activities",
+      "model_sheet": "CASH FLOW",
+      "model_row": 20,
+      "model_label": "Other Items",
+      "decided_date": "2026-04-16",
+      "note": "User decision: roll into Other instead of new row"
+    },
+    {
+      "rule_id": "MAP-CF-010",
+      "filing_term_normalized": "accounts receivable-net (change)",
+      "model_sheet": "CASH FLOW",
+      "model_row": 21,
+      "model_label": "Accounts Receivable",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-011",
+      "filing_term_normalized": "inventories-net (change)",
+      "model_sheet": "CASH FLOW",
+      "model_row": 22,
+      "model_label": "Inventories",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-012",
+      "filing_term_normalized": "prepaid expenses (change)",
+      "model_sheet": "CASH FLOW",
+      "model_row": 23,
+      "model_label": "Prepaid Expenses",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-013",
+      "filing_term_normalized": "accrued promotional allowance (change)",
+      "model_sheet": "CASH FLOW",
+      "model_row": 26,
+      "model_label": "Accrued Promo",
+      "decided_date": "2026-04-16",
+      "note": "Row 27a in original"
+    },
+    {
+      "rule_id": "MAP-CF-014",
+      "filing_term_normalized": "other current liabilities (change)",
+      "model_sheet": "CASH FLOW",
+      "model_row": 27,
+      "model_label": "Other Current Liabilities",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-015",
+      "filing_term_normalized": "right of use assets and lease liabilities, net (change)",
+      "model_sheet": "CASH FLOW",
+      "model_row": 28,
+      "model_label": "ROU/Lease",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-016",
+      "filing_term_normalized": "deferred revenue (change)",
+      "model_sheet": "CASH FLOW",
+      "model_row": 29,
+      "model_label": "Deferred Revenue",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-017",
+      "filing_term_normalized": "net cash provided by operating activities",
+      "model_sheet": "CASH FLOW",
+      "model_row": 31,
+      "model_label": "Cash Flow from Operations",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-018",
+      "filing_term_normalized": "collections from note receivable",
+      "model_sheet": "CASH FLOW",
+      "model_row": 34,
+      "model_label": "Collections from Note Receivable",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-019",
+      "filing_term_normalized": "purchase of property, plant and equipment",
+      "model_sheet": "CASH FLOW",
+      "model_row": 35,
+      "model_label": "Purchase of PP&E",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-020",
+      "filing_term_normalized": "net cash used in investing activities",
+      "model_sheet": "CASH FLOW",
+      "model_row": 38,
+      "model_label": "Cash Flow from Investing",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-021",
+      "filing_term_normalized": "principal payments on finance lease obligations",
+      "model_sheet": "CASH FLOW",
+      "model_row": 40,
+      "model_label": "Finance Lease Payments",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-022",
+      "filing_term_normalized": "proceeds from exercise of stock options",
+      "model_sheet": "CASH FLOW",
+      "model_row": 41,
+      "model_label": "Proceeds from Stock Options",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-023",
+      "filing_term_normalized": "proceeds from issuance of preferred shares",
+      "model_sheet": "CASH FLOW",
+      "model_row": 42,
+      "model_label": "Proceeds from Preferred",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-024",
+      "filing_term_normalized": "dividends paid on series a preferred",
+      "model_sheet": "CASH FLOW",
+      "model_row": 43,
+      "model_label": "Dividends Paid on Preferred",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-025",
+      "filing_term_normalized": "net cash used in financing activities",
+      "model_sheet": "CASH FLOW",
+      "model_row": 45,
+      "model_label": "Cash Flow from Financing",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-026",
+      "filing_term_normalized": "effect of exchange rate on cash",
+      "model_sheet": "CASH FLOW",
+      "model_row": 47,
+      "model_label": "FX Effect on Cash",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-027",
+      "filing_term_normalized": "net increase in cash",
+      "model_sheet": "CASH FLOW",
+      "model_row": 48,
+      "model_label": "Net Change in Cash",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-028",
+      "filing_term_normalized": "cash and cash equivalents, beginning",
+      "model_sheet": "CASH FLOW",
+      "model_row": 50,
+      "model_label": "Cash at Beginning",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-CF-029",
+      "filing_term_normalized": "cash and cash equivalents, end",
+      "model_sheet": "CASH FLOW",
+      "model_row": 51,
+      "model_label": "Cash at End",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "MAP-BS-023",
+      "filing_term_normalized": "restricted cash",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 10,
+      "model_label": "Restricted Cash",
+      "decided_date": "2026-04-22",
+      "note": "Auto-added from first reconcile run. FY2023 value was $0 (restricted cash dropped to zero by year-end)."
+    },
+    {
+      "rule_id": "MAP-BS-024",
+      "filing_term_normalized": "note receivable-current-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 12,
+      "model_label": "Note Receivable",
+      "decided_date": "2026-04-22",
+      "note": "Filing word-order variant of MAP-BS-003"
+    },
+    {
+      "rule_id": "MAP-BS-025",
+      "filing_term_normalized": "accounts payable",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 29,
+      "model_label": "Accounts Payable",
+      "decided_date": "2026-04-22",
+      "note": "Standalone A/P on BS (not the CF Δ entry)"
+    },
+    {
+      "rule_id": "MAP-BS-026",
+      "filing_term_normalized": "lease liability obligation-operating leases",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 33,
+      "model_label": "Lease Liability - Operating Current",
+      "decided_date": "2026-04-22",
+      "note": "Filing variant with 'obligation' prefix"
+    },
+    {
+      "rule_id": "MAP-BS-027",
+      "filing_term_normalized": "lease liability obligation-finance leases",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 34,
+      "model_label": "Lease Liability - Finance Current",
+      "decided_date": "2026-04-22",
+      "note": "Filing variant with 'obligation' prefix; current position"
+    },
+    {
+      "rule_id": "MAP-BS-028",
+      "filing_term_normalized": "accumulated deficit",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Retained Earnings (Accumulated Deficit)",
+      "decided_date": "2026-04-22",
+      "note": "Filing uses 'accumulated deficit' when RE is negative; maps to NEW-BS-008 row"
+    },
+    {
+      "rule_id": "MAP-IS-007",
+      "filing_term_normalized": "revenue",
+      "model_sheet": "ANNL P&L",
+      "model_row": 9,
+      "model_label": "Net Sales (Revenue)",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-008",
+      "filing_term_normalized": "gross profit",
+      "model_sheet": "ANNL P&L",
+      "model_row": 11,
+      "model_label": "Gross Profit",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-009",
+      "filing_term_normalized": "selling general and administrative expenses",
+      "model_sheet": "ANNL P&L",
+      "model_row": 12,
+      "model_label": "Selling and Marketing Expenses",
+      "decided_date": "2026-04-22",
+      "note": "Pre-FY2024 combined SG&A; split into S&M/G&A per STRUCT-IS-001"
+    },
+    {
+      "rule_id": "MAP-IS-010",
+      "filing_term_normalized": "interest income expense net",
+      "model_sheet": "ANNL P&L",
+      "model_row": 17,
+      "model_label": "Interest Income",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-011",
+      "filing_term_normalized": "interest income on note receivable",
+      "model_sheet": "ANNL P&L",
+      "model_row": 17,
+      "model_label": "Interest Income",
+      "decided_date": "2026-04-22",
+      "note": "Combined with Interest Income net"
+    },
+    {
+      "rule_id": "MAP-IS-012",
+      "filing_term_normalized": "net income loss before income taxes",
+      "model_sheet": "ANNL P&L",
+      "model_row": 20,
+      "model_label": "Pre-Tax Income",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-013",
+      "filing_term_normalized": "income tax expense benefit",
+      "model_sheet": "ANNL P&L",
+      "model_row": 21,
+      "model_label": "Income Taxes",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-014",
+      "filing_term_normalized": "net income loss",
+      "model_sheet": "ANNL P&L",
+      "model_row": 22,
+      "model_label": "Net Income",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-015",
+      "filing_term_normalized": "dividends on series a convertible preferred shares",
+      "model_sheet": "ANNL P&L",
+      "model_row": 23,
+      "model_label": "Dividends on Series A Pref",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-016",
+      "filing_term_normalized": "income allocated to participating preferred shares",
+      "model_sheet": "ANNL P&L",
+      "model_row": 25,
+      "model_label": "Income Allocated to Participating",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-017",
+      "filing_term_normalized": "net income loss attributable to common stockholders",
+      "model_sheet": "ANNL P&L",
+      "model_row": 24,
+      "model_label": "Net Income to Common Shareholders",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-018",
+      "filing_term_normalized": "foreign currency translation gain loss net of income",
+      "model_sheet": "ANNL P&L",
+      "model_row": 18,
+      "model_label": "Foreign exchange gain (loss)",
+      "decided_date": "2026-04-22",
+      "note": "Foreign currency translation is an OCI/comprehensive-income line (below Net Income), NOT a non-operating pre-tax item. Previously mis-mapped to row 18 alongside the above-NI FX loss (MAP-IS-030), causing a collision in model-write that clobbered the real FX loss value.",
+      "superseded_by": "not_modeled"
+    },
+    {
+      "rule_id": "MAP-IS-019",
+      "filing_term_normalized": "comprehensive income loss",
+      "model_sheet": "ANNL P&L",
+      "model_row": 0,
+      "model_label": "Comprehensive Income (memo)",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-IS-020",
+      "filing_term_normalized": "basic",
+      "filing_subsection": "eps",
+      "model_sheet": "ANNL P&L",
+      "model_row": 31,
+      "model_label": "GAAP EPS (Basic)",
+      "decided_date": "2026-04-22",
+      "note": "filing_subsection=eps disambiguates from share-count Basic"
+    },
+    {
+      "rule_id": "MAP-IS-021",
+      "filing_term_normalized": "diluted",
+      "filing_subsection": "eps",
+      "model_sheet": "ANNL P&L",
+      "model_row": 32,
+      "model_label": "GAAP EPS (Diluted)",
+      "decided_date": "2026-04-22",
+      "note": "filing_subsection=eps disambiguates from share-count Diluted"
+    },
+    {
+      "rule_id": "MAP-CF-030",
+      "filing_term_normalized": "net income loss",
+      "model_sheet": "CASH FLOW",
+      "model_row": 12,
+      "model_label": "Net Income",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-031",
+      "filing_term_normalized": "loss on disposal of property and equipment",
+      "model_sheet": "CASH FLOW",
+      "model_row": 0,
+      "model_label": "Loss on Disposal of PP&E",
+      "decided_date": "2026-04-22",
+      "superseded_by": "NEW-CF-001"
+    },
+    {
+      "rule_id": "MAP-CF-032",
+      "filing_term_normalized": "unrealized exchange losses",
+      "model_sheet": "CASH FLOW",
+      "model_row": 19,
+      "model_label": "Foreign Exchange Loss",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-033",
+      "filing_term_normalized": "accounts receivable-net",
+      "model_sheet": "CASH FLOW",
+      "model_row": 21,
+      "model_label": "Accounts Receivable",
+      "decided_date": "2026-04-22",
+      "note": "In CF WC-changes block"
+    },
+    {
+      "rule_id": "MAP-CF-034",
+      "filing_term_normalized": "inventories-net",
+      "model_sheet": "CASH FLOW",
+      "model_row": 22,
+      "model_label": "Inventories",
+      "decided_date": "2026-04-22",
+      "note": "In CF WC-changes block"
+    },
+    {
+      "rule_id": "MAP-CF-035",
+      "filing_term_normalized": "prepaid expenses and other current assets",
+      "model_sheet": "CASH FLOW",
+      "model_row": 23,
+      "model_label": "Prepaid Expenses",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-036",
+      "filing_term_normalized": "accounts payable and accrued expenses",
+      "model_sheet": "CASH FLOW",
+      "model_row": 24,
+      "model_label": "Change in A/P and Accrued (legacy)",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-037",
+      "filing_term_normalized": "accrued promotional allowance",
+      "model_sheet": "CASH FLOW",
+      "model_row": 26,
+      "model_label": "Accrued Promo",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-038",
+      "filing_term_normalized": "accrued distributor termination fees",
+      "model_sheet": "CASH FLOW",
+      "model_row": 30,
+      "model_label": "Accrued Distributor Termination",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-039",
+      "filing_term_normalized": "income taxes payable",
+      "model_sheet": "CASH FLOW",
+      "model_row": 27,
+      "model_label": "Other Current Liabilities",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-040",
+      "filing_term_normalized": "right of use assets and lease liabilities-net",
+      "model_sheet": "CASH FLOW",
+      "model_row": 28,
+      "model_label": "ROU/Lease",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-041",
+      "filing_term_normalized": "deferred revenue",
+      "model_sheet": "CASH FLOW",
+      "model_row": 29,
+      "model_label": "Deferred Revenue",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-042",
+      "filing_term_normalized": "other operating assets",
+      "model_sheet": "CASH FLOW",
+      "model_row": 20,
+      "model_label": "Other Items",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-043",
+      "filing_term_normalized": "other assets",
+      "model_sheet": "CASH FLOW",
+      "model_row": 20,
+      "model_label": "Other Items",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-044",
+      "filing_term_normalized": "cash cash equivalents and restricted cash beginning of period",
+      "model_sheet": "CASH FLOW",
+      "model_row": 50,
+      "model_label": "Cash at Beginning",
+      "decided_date": "2026-04-22",
+      "note": "FY2023 cash convention"
+    },
+    {
+      "rule_id": "MAP-CF-045",
+      "filing_term_normalized": "cash cash equivalents and restricted cash end of period",
+      "model_sheet": "CASH FLOW",
+      "model_row": 51,
+      "model_label": "Cash at End",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-046",
+      "filing_term_normalized": "net increase decrease in cash cash equivalents and restricted cash",
+      "model_sheet": "CASH FLOW",
+      "model_row": 48,
+      "model_label": "Net Change in Cash",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-047",
+      "filing_term_normalized": "proceeds from the issuance of series a preferred shares",
+      "model_sheet": "CASH FLOW",
+      "model_row": 42,
+      "model_label": "Proceeds from Preferred",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-048",
+      "filing_term_normalized": "dividends paid on preferred shares",
+      "model_sheet": "CASH FLOW",
+      "model_row": 43,
+      "model_label": "Dividends Paid on Preferred",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-049",
+      "filing_term_normalized": "cash paid for interest",
+      "model_sheet": "CASH FLOW",
+      "model_row": 0,
+      "model_label": "Supplemental: Cash Paid for Interest",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-050",
+      "filing_term_normalized": "cash paid for taxes",
+      "model_sheet": "CASH FLOW",
+      "model_row": 0,
+      "model_label": "Supplemental: Cash Paid for Taxes",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-060",
+      "filing_term_normalized": "gain on lease cancellations",
+      "model_sheet": "CASH FLOW",
+      "model_row": 0,
+      "model_label": "Gain on Lease Cancellations (new)",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-061",
+      "filing_term_normalized": "change in right of use and lease obligation-net",
+      "model_sheet": "CASH FLOW",
+      "model_row": 28,
+      "model_label": "ROU/Lease",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-062",
+      "filing_term_normalized": "proceeds from issuance of series a preferred shares net",
+      "model_sheet": "CASH FLOW",
+      "model_row": 42,
+      "model_label": "Proceeds from Preferred",
+      "decided_date": "2026-04-22",
+      "note": "Alias: with 'net' suffix"
+    },
+    {
+      "rule_id": "MAP-CF-063",
+      "filing_term_normalized": "net proceeds from sale of common stock",
+      "model_sheet": "CASH FLOW",
+      "model_row": 0,
+      "model_label": "Proceeds from Common",
+      "decided_date": "2026-04-22",
+      "note": "User: create new row above Proceeds from Preferred (row 42). model-write should insert and reassign model_row.",
+      "superseded_by": "NEW-CF-011"
+    },
+    {
+      "rule_id": "MAP-CF-064",
+      "filing_term_normalized": "net cash used in provided by financing activities",
+      "model_sheet": "CASH FLOW",
+      "model_row": 45,
+      "model_label": "Cash Flow from Financing",
+      "decided_date": "2026-04-22",
+      "note": "Alias when CF can be either sign"
+    },
+    {
+      "rule_id": "MAP-CF-065",
+      "filing_term_normalized": "effect on exchange rate changes on cash and cash equivalents",
+      "model_sheet": "CASH FLOW",
+      "model_row": 47,
+      "model_label": "FX Effect on Cash",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-066",
+      "filing_term_normalized": "taxes",
+      "model_sheet": "CASH FLOW",
+      "model_row": 0,
+      "model_label": "Supplemental: Cash Paid for Taxes",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-067",
+      "filing_term_normalized": "interest",
+      "model_sheet": "CASH FLOW",
+      "model_row": 0,
+      "model_label": "Supplemental: Cash Paid for Interest",
+      "decided_date": "2026-04-22"
+    },
+    {
+      "rule_id": "MAP-CF-070",
+      "filing_term_normalized": "accounts payable",
+      "model_sheet": "CASH FLOW",
+      "model_row": 24,
+      "model_label": "Accounts Payable",
+      "decided_date": "2026-04-22",
+      "note": "CF-context alias; filing just says 'Accounts payable' under WC changes block"
+    },
+    {
+      "rule_id": "MAP-CF-071",
+      "filing_term_normalized": "accrued expenses",
+      "model_sheet": "CASH FLOW",
+      "model_row": 25,
+      "model_label": "Accrued Expenses",
+      "decided_date": "2026-04-22",
+      "note": "CF-context alias"
+    },
+    {
+      "rule_id": "MAP-CF-072",
+      "filing_term_normalized": "other current liabilities",
+      "model_sheet": "CASH FLOW",
+      "model_row": 27,
+      "model_label": "Other Current Liabilities",
+      "decided_date": "2026-04-22",
+      "note": "CF-context alias"
+    },
+    {
+      "rule_id": "MAP-IS-030",
+      "filing_term_normalized": "foreign exchange loss",
+      "model_sheet": "ANNL P&L",
+      "model_row": 18,
+      "model_label": "Foreign exchange gain (loss)",
+      "decided_date": "2026-04-22",
+      "note": "IS alias"
+    },
+    {
+      "rule_id": "MAP-BS-029",
+      "filing_term_normalized": "deferred revenue",
+      "filing_section": "current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 35,
+      "model_label": "Deferred Revenue (Current)",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K uses 'Deferred revenue[2]' without current/NC qualifier. filing_section disambiguates: above TCL subtotal -> current (#1 user designation)"
+    },
+    {
+      "rule_id": "MAP-BS-030",
+      "filing_term_normalized": "deferred revenue",
+      "filing_section": "non_current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 42,
+      "model_label": "Deferred Revenue (NC)",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K companion entry to MAP-BS-029: below TCL subtotal -> non-current"
+    },
+    {
+      "rule_id": "MAP-BS-031",
+      "filing_term_normalized": "lease liability finance leases",
+      "filing_section": "current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 34,
+      "model_label": "Lease Liability - Finance Current",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K consolidated wording (#2 user designation): above TCL -> current"
+    },
+    {
+      "rule_id": "MAP-BS-032",
+      "filing_term_normalized": "lease liability finance leases",
+      "filing_section": "non_current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 40,
+      "model_label": "Lease Liability - Finance NC",
+      "decided_date": "2026-04-22",
+      "note": "Companion to MAP-BS-031: below TCL -> non-current"
+    },
+    {
+      "rule_id": "MAP-BS-033",
+      "filing_term_normalized": "note receivable-net",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 12,
+      "model_label": "Note Receivable",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K dropped qualifier (#3 user: same row as note receivable-net current / note receivable-current-net)"
+    },
+    {
+      "rule_id": "MAP-IS-031",
+      "filing_term_normalized": "interest income net",
+      "model_sheet": "ANNL P&L",
+      "model_row": 17,
+      "model_label": "Interest Income",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#4 user): (expense) notation dropped since value is positive; same row as MAP-IS-010"
+    },
+    {
+      "rule_id": "MAP-IS-032",
+      "filing_term_normalized": "net income loss before provision for income taxes",
+      "model_sheet": "ANNL P&L",
+      "model_row": 20,
+      "model_label": "Pre-Tax Income",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#5 user, implied top-fuzzy): added 'provision for' vs MAP-IS-012"
+    },
+    {
+      "rule_id": "MAP-CF-073",
+      "filing_term_normalized": "cash and cash equivalents at beginning of the period",
+      "model_sheet": "CASH FLOW",
+      "model_row": 50,
+      "model_label": "Cash at Beginning",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#8 user top-fuzzy): adds 'at ... of the period' vs MAP-CF-028"
+    },
+    {
+      "rule_id": "MAP-CF-074",
+      "filing_term_normalized": "cash and cash equivalents at end of the period",
+      "model_sheet": "CASH FLOW",
+      "model_row": 51,
+      "model_label": "Cash at End",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#9 user top-fuzzy): adds 'at ... of the period' vs MAP-CF-029"
+    },
+    {
+      "rule_id": "MAP-CF-075",
+      "filing_term_normalized": "cash dividends paid on series a convertible preferred stock",
+      "model_sheet": "CASH FLOW",
+      "model_row": 43,
+      "model_label": "Dividends Paid on Preferred",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#10 user top-fuzzy): adds 'cash' prefix and 'convertible ... stock' suffix vs MAP-CF-024"
+    },
+    {
+      "rule_id": "MAP-CF-076",
+      "filing_term_normalized": "change in right of use asset and lease liability-net",
+      "model_sheet": "CASH FLOW",
+      "model_row": 28,
+      "model_label": "ROU/Lease",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#11 user top-fuzzy): singular 'asset'/'liability' vs MAP-CF-040"
+    },
+    {
+      "rule_id": "MAP-CF-077",
+      "filing_term_normalized": "inventories",
+      "model_sheet": "CASH FLOW",
+      "model_row": 22,
+      "model_label": "Inventories",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#12 user top-fuzzy): bare 'Inventories' on CF — maps to Δ Inventories per MAP-CF-034 row"
+    },
+    {
+      "rule_id": "MAP-CF-078",
+      "filing_term_normalized": "net increase in cash and cash equivalents",
+      "model_sheet": "CASH FLOW",
+      "model_row": 48,
+      "model_label": "Net Change in Cash",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#13 user third-fuzzy): simpler vs MAP-CF-046 (which had 'net increase decrease ... and restricted cash')"
+    },
+    {
+      "rule_id": "MAP-BS-034",
+      "filing_term_normalized": "lease liability operating leases",
+      "filing_section": "current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 33,
+      "model_label": "Lease Liability - Operating Current",
+      "decided_date": "2026-04-23",
+      "note": "FY2024 10-K dropped the (current)/(non-current) qualifier on operating lease lines. filing_section disambiguates — mirrors MAP-BS-031 pattern for finance leases."
+    },
+    {
+      "rule_id": "MAP-BS-035",
+      "filing_term_normalized": "lease liability operating leases",
+      "filing_section": "non_current_liabilities",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 39,
+      "model_label": "Lease Liability - Operating NC",
+      "decided_date": "2026-04-23",
+      "note": "Sibling of MAP-BS-034 — routes the non-current occurrence of the same raw label."
+    }
+  ],
+  "renames": [
+    {
+      "rule_id": "REN-BS-001",
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 29,
+      "old_label": "Acc't Payable and Accrued Expenses",
+      "new_label": "Accounts Payable",
+      "decided_date": "2026-04-16",
+      "reason": "Splitting into A/P + Accrued separately to match filing"
+    }
+  ],
+  "new_rows": [
+    {
+      "rule_id": "NEW-BS-001",
+      "filing_term_normalized": "other long-term assets",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Other Long-Term Assets",
+      "section": "non_current_assets",
+      "position_note": "Between Goodwill (26) and Total Assets",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-BS-002",
+      "filing_term_normalized": "accrued expenses",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Accrued Expenses",
+      "section": "current_liabilities",
+      "position_note": "After Accounts Payable (29)",
+      "decided_date": "2026-04-16",
+      "note": "Created by splitting old combined row"
+    },
+    {
+      "rule_id": "NEW-BS-003",
+      "filing_term_normalized": "income taxes payable",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Income Taxes Payable",
+      "section": "current_liabilities",
+      "position_note": "After Accrued Expenses",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-BS-004",
+      "filing_term_normalized": "series a convertible preferred stock",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Convertible Preferred Stock",
+      "section": "mezzanine",
+      "position_note": "Between Total Liabilities and Total SE",
+      "decided_date": "2026-04-16",
+      "note": "Does NOT sum into row 46 Total SE. Flows into Total L&E (48) only."
+    },
+    {
+      "rule_id": "NEW-BS-005",
+      "filing_term_normalized": "common stock",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Common Stock",
+      "section": "equity",
+      "position_note": "First row in equity breakout",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-BS-006",
+      "filing_term_normalized": "additional paid-in capital",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Additional Paid-in Capital",
+      "section": "equity",
+      "position_note": "After Common Stock",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-BS-007",
+      "filing_term_normalized": "accumulated other comprehensive loss",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Accumulated Other Comprehensive Loss",
+      "section": "equity",
+      "position_note": "After APIC",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-BS-008",
+      "filing_term_normalized": "retained earnings (accumulated deficit)",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Retained Earnings (Accumulated Deficit)",
+      "section": "equity",
+      "position_note": "After AOCI",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-CF-001",
+      "filing_term_normalized": "loss on disposal of property, plant and equipment",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Loss on Disposal of PP&E",
+      "section": "operating",
+      "position_note": "After SBC (18)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-CF-002",
+      "filing_term_normalized": "deferred income taxes-net",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Deferred Income Taxes-Net",
+      "section": "operating",
+      "position_note": "After Loss on Disposal of PP&E (18)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-CF-003",
+      "filing_term_normalized": "note receivable-net (change)",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Note Receivable",
+      "section": "operating",
+      "position_note": "In WC changes block",
+      "decided_date": "2026-04-16",
+      "superseded_by": "NEW-CF-010"
+    },
+    {
+      "rule_id": "NEW-CF-004",
+      "filing_term_normalized": "accounts payable (change)",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Accounts Payable",
+      "section": "operating",
+      "position_note": "Replaces old combined row 24",
+      "decided_date": "2026-04-16",
+      "superseded_by": "MAP-CF-070"
+    },
+    {
+      "rule_id": "NEW-CF-005",
+      "filing_term_normalized": "accrued expenses (change)",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Accrued Expenses",
+      "section": "operating",
+      "position_note": "After Δ A/P",
+      "decided_date": "2026-04-16",
+      "superseded_by": "MAP-CF-071"
+    },
+    {
+      "rule_id": "NEW-CF-006",
+      "filing_term_normalized": "other long-term assets (change)",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Other Long-Term Assets",
+      "section": "operating",
+      "position_note": "In WC changes block, after Deferred Revenue (29)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-CF-007",
+      "filing_term_normalized": "purchase of non-marketable equity securities",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Purchase of Non-Marketable Equity Securities",
+      "section": "investing",
+      "position_note": "In investing block, after Purchase of PP&E (35) — matches FY2024 10-K order",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-CF-008",
+      "filing_term_normalized": "acquisition of [entity], net of cash acquired",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Acquisition of [entity]",
+      "section": "investing",
+      "position_note": "In investing block, after Collections from Note Receivable (34)",
+      "decided_date": "2026-04-16",
+      "note": "Generic pattern: each acquisition gets its own row named Acquisition of [name] | Superseded 2026-04-22 — placeholder template row; real acquisitions get named entries (NEW-CF-009 = Big Beverages).",
+      "superseded_by": "NEW-CF-009"
+    },
+    {
+      "rule_id": "NEW-CF-012",
+      "filing_term_normalized": "repurchase of common stock related to tax withholdings",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Repurchase of Common Stock (Tax Withholdings)",
+      "section": "financing",
+      "position_note": "In financing block, after Finance Lease Payments (40)",
+      "decided_date": "2026-04-16"
+    },
+    {
+      "rule_id": "NEW-BS-009",
+      "filing_term_normalized": "accrued distributor termination fees",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Accrued Distributor Termination Fees",
+      "section": "current_liabilities",
+      "position_note": "Current liabilities, after Accrued Expenses",
+      "decided_date": "2026-04-22",
+      "note": "Non-zero in some years per anomalies.json"
+    },
+    {
+      "rule_id": "NEW-IS-001",
+      "filing_term_normalized": "basic",
+      "filing_subsection": "shares_outstanding",
+      "model_sheet": "ANNL P&L",
+      "new_row_label": "Weighted Avg Shares Outstanding (Basic)",
+      "section": "eps",
+      "position_note": "Below GAAP EPS (Basic) at row 31; share counts in thousands per 'Weighted Average Shares Outstanding (in thousands)' filing header",
+      "decided_date": "2026-04-22",
+      "note": "Disambiguated from EPS Basic via filing_subsection=shares_outstanding"
+    },
+    {
+      "rule_id": "NEW-IS-002",
+      "filing_term_normalized": "diluted",
+      "filing_subsection": "shares_outstanding",
+      "model_sheet": "ANNL P&L",
+      "new_row_label": "Weighted Avg Shares Outstanding (Diluted)",
+      "section": "eps",
+      "position_note": "Below GAAP EPS (Diluted) at row 32; share counts in thousands",
+      "decided_date": "2026-04-22",
+      "note": "Disambiguated from EPS Diluted via filing_subsection=shares_outstanding"
+    },
+    {
+      "rule_id": "NEW-IS-003",
+      "filing_term_normalized": "other income",
+      "model_sheet": "ANNL P&L",
+      "new_row_label": "Other Income",
+      "section": "non_operating",
+      "position_note": "After Foreign exchange gain (loss) at row 18",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K added a consolidated 'Other income' line (#6 user: new line item)"
+    },
+    {
+      "rule_id": "NEW-CF-009",
+      "filing_term_normalized": "acquisition of big beverages contract manufacturing l l c net of cash acquired",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Acquisition of Big Beverages",
+      "section": "investing",
+      "position_note": "In investing block, after Purchase of Non-Marketable Equity Securities (35) — matches FY2024 10-K order: Collections → PP&E → Non-Marketable → Big Beverages",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K new line (#7 user: new row). pdfplumber truncated label to 'L.L' — fix later"
+    },
+    {
+      "rule_id": "NEW-CF-010",
+      "filing_term_normalized": "note receivable-net",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Note Receivable",
+      "section": "operating",
+      "position_note": "In WC changes block, after Deferred Revenue (29) — same concept as (superseded) NEW-CF-003",
+      "decided_date": "2026-04-22",
+      "note": "FY2024 10-K wording (#14 user first-fuzzy maps to note receivable-net change = NEW-CF-003). Kept as separate entry since different normalized form."
+    },
+    {
+      "rule_id": "NEW-CF-011",
+      "filing_term_normalized": "net proceeds from sale of common stock",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Proceeds from Common",
+      "section": "financing",
+      "position_note": "Insert after Proceeds from Stock Options (41), before Proceeds from Preferred",
+      "decided_date": "2026-04-22",
+      "note": "User wants this as a new row, not reuse of an existing one. MAP-CF-063 carries a duplicate placeholder for the same concept — kept for backward compat but this NEW-CF entry is the source of truth for model-write placement."
+    }
+  ],
+  "structural_decisions": [
+    {
+      "rule_id": "STRUCT-IS-001",
+      "description": "FY2024/FY2025 S&M vs G&A split estimated 72/28 using FY2023 ratio when only consolidated SG&A reported",
+      "decided_date": "2026-04-15",
+      "reason": "Press releases don't break out S&M/G&A; actual split only in 10-K MD&A"
+    },
+    {
+      "rule_id": "STRUCT-IS-002",
+      "description": "Distributor termination fees roll into Selling and Marketing Expenses (row 12)",
+      "decided_date": "2026-04-15",
+      "reason": "Filing footnote says historically classified as S&M"
+    },
+    {
+      "rule_id": "STRUCT-IS-003",
+      "description": "Do NOT update share counts or EPS without verification (3-for-1 stock split Nov 13, 2023)",
+      "decided_date": "2026-04-15",
+      "reason": "Pre/post split inconsistency across filings"
+    },
+    {
+      "rule_id": "STRUCT-BS-001",
+      "description": "Convertible Preferred Stock placement: mezzanine row between Liab and SE",
+      "decided_date": "2026-04-16",
+      "reason": "Matches CELH's filed BS structure; Total SE sums equity components only ($399,929K FY2024)"
+    },
+    {
+      "rule_id": "STRUCT-BS-002",
+      "description": "Equity section breakout: 4 rows (Common, APIC, AOCI, RE) summing to Total SE row 46",
+      "decided_date": "2026-04-16",
+      "reason": "User requested full breakout"
+    },
+    {
+      "rule_id": "STRUCT-CF-001",
+      "description": "Old row 24 (Change in A/P and Accrued Expenses) zeroed out FY2023+ as memo; new split rows added",
+      "decided_date": "2026-04-16",
+      "reason": "Cleaner audit trail than repurposing; older years 2016-2022 keep combined value"
+    },
+    {
+      "rule_id": "STRUCT-CF-002",
+      "description": "Cash convention year-dependent: FY2023 cash+restricted, FY2024+ cash only",
+      "decided_date": "2026-04-16",
+      "reason": "Confirmed via 2024 10-K (FY2023) and 2025 10-K (FY2024) extractions"
+    }
+  ],
+  "validation_overrides": [],
+  "_last_updated": "2026-04-23"
+}
