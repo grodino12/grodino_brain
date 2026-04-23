@@ -316,7 +316,7 @@
       "filing_term_normalized": "accounts receivable-net (change)",
       "model_sheet": "CASH FLOW",
       "model_row": 21,
-      "model_label": "\u0394 Receivables",
+      "model_label": "Receivables",
       "decided_date": "2026-04-16"
     },
     {
@@ -324,7 +324,7 @@
       "filing_term_normalized": "inventories-net (change)",
       "model_sheet": "CASH FLOW",
       "model_row": 22,
-      "model_label": "\u0394 Inventories",
+      "model_label": "Inventories",
       "decided_date": "2026-04-16"
     },
     {
@@ -332,15 +332,15 @@
       "filing_term_normalized": "prepaid expenses (change)",
       "model_sheet": "CASH FLOW",
       "model_row": 23,
-      "model_label": "\u0394 Prepaids",
+      "model_label": "Prepaids",
       "decided_date": "2026-04-16"
     },
     {
       "rule_id": "MAP-CF-013",
       "filing_term_normalized": "accrued promotional allowance (change)",
       "model_sheet": "CASH FLOW",
-      "model_row": 27,
-      "model_label": "\u0394 Accrued Promo Allowance",
+      "model_row": 26,
+      "model_label": "Accrued Promo",
       "decided_date": "2026-04-16",
       "note": "Row 27a in original"
     },
@@ -349,7 +349,7 @@
       "filing_term_normalized": "other current liabilities (change)",
       "model_sheet": "CASH FLOW",
       "model_row": 27,
-      "model_label": "\u0394 Other Current Liabilities",
+      "model_label": "Other Current Liabilities",
       "decided_date": "2026-04-16"
     },
     {
@@ -357,7 +357,7 @@
       "filing_term_normalized": "right of use assets and lease liabilities, net (change)",
       "model_sheet": "CASH FLOW",
       "model_row": 28,
-      "model_label": "\u0394 ROU/Lease",
+      "model_label": "ROU/Lease",
       "decided_date": "2026-04-16"
     },
     {
@@ -365,7 +365,7 @@
       "filing_term_normalized": "deferred revenue (change)",
       "model_sheet": "CASH FLOW",
       "model_row": 29,
-      "model_label": "\u0394 Deferred Revenue",
+      "model_label": "Deferred Revenue",
       "decided_date": "2026-04-16"
     },
     {
@@ -497,7 +497,7 @@
       "model_row": 29,
       "model_label": "Accounts Payable",
       "decided_date": "2026-04-22",
-      "note": "Standalone A/P on BS (not the CF \u0394 entry)"
+      "note": "Standalone A/P on BS (not the CF Δ entry)"
     },
     {
       "rule_id": "MAP-BS-026",
@@ -681,7 +681,7 @@
       "filing_term_normalized": "accounts receivable-net",
       "model_sheet": "CASH FLOW",
       "model_row": 21,
-      "model_label": "Delta Receivables",
+      "model_label": "Receivables",
       "decided_date": "2026-04-22",
       "note": "In CF WC-changes block"
     },
@@ -690,7 +690,7 @@
       "filing_term_normalized": "inventories-net",
       "model_sheet": "CASH FLOW",
       "model_row": 22,
-      "model_label": "Delta Inventories",
+      "model_label": "Inventories",
       "decided_date": "2026-04-22",
       "note": "In CF WC-changes block"
     },
@@ -699,7 +699,7 @@
       "filing_term_normalized": "prepaid expenses and other current assets",
       "model_sheet": "CASH FLOW",
       "model_row": 23,
-      "model_label": "Delta Prepaids",
+      "model_label": "Prepaids",
       "decided_date": "2026-04-22"
     },
     {
@@ -714,8 +714,8 @@
       "rule_id": "MAP-CF-037",
       "filing_term_normalized": "accrued promotional allowance",
       "model_sheet": "CASH FLOW",
-      "model_row": 27,
-      "model_label": "Delta Accrued Promo",
+      "model_row": 26,
+      "model_label": "Accrued Promo",
       "decided_date": "2026-04-22"
     },
     {
@@ -723,7 +723,7 @@
       "filing_term_normalized": "accrued distributor termination fees",
       "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Delta Accrued Distributor Termination",
+      "model_label": "Accrued Distributor Termination",
       "decided_date": "2026-04-22"
     },
     {
@@ -731,7 +731,7 @@
       "filing_term_normalized": "income taxes payable",
       "model_sheet": "CASH FLOW",
       "model_row": 27,
-      "model_label": "Delta Other Current Liab (incl taxes)",
+      "model_label": "Other Current Liabilities",
       "decided_date": "2026-04-22"
     },
     {
@@ -739,7 +739,7 @@
       "filing_term_normalized": "right of use assets and lease liabilities-net",
       "model_sheet": "CASH FLOW",
       "model_row": 28,
-      "model_label": "Delta ROU/Lease",
+      "model_label": "ROU/Lease",
       "decided_date": "2026-04-22"
     },
     {
@@ -747,7 +747,7 @@
       "filing_term_normalized": "deferred revenue",
       "model_sheet": "CASH FLOW",
       "model_row": 29,
-      "model_label": "Delta Deferred Revenue",
+      "model_label": "Deferred Revenue",
       "decided_date": "2026-04-22"
     },
     {
@@ -836,7 +836,7 @@
       "filing_term_normalized": "change in right of use and lease obligation-net",
       "model_sheet": "CASH FLOW",
       "model_row": 28,
-      "model_label": "Delta ROU/Lease",
+      "model_label": "ROU/Lease",
       "decided_date": "2026-04-22"
     },
     {
@@ -895,7 +895,7 @@
       "filing_term_normalized": "accounts payable",
       "model_sheet": "CASH FLOW",
       "model_row": 24,
-      "model_label": "Delta Accounts Payable (change)",
+      "model_label": "Accounts Payable",
       "decided_date": "2026-04-22",
       "note": "CF-context alias; filing just says 'Accounts payable' under WC changes block"
     },
@@ -904,7 +904,7 @@
       "filing_term_normalized": "accrued expenses",
       "model_sheet": "CASH FLOW",
       "model_row": 25,
-      "model_label": "Delta Accrued Expenses (change)",
+      "model_label": "Accrued Expenses",
       "decided_date": "2026-04-22",
       "note": "CF-context alias"
     },
@@ -913,7 +913,7 @@
       "filing_term_normalized": "other current liabilities",
       "model_sheet": "CASH FLOW",
       "model_row": 27,
-      "model_label": "Delta Other Current Liabilities (change)",
+      "model_label": "Other Current Liabilities",
       "decided_date": "2026-04-22",
       "note": "CF-context alias"
     },
@@ -1025,7 +1025,7 @@
       "filing_term_normalized": "change in right of use asset and lease liability-net",
       "model_sheet": "CASH FLOW",
       "model_row": 28,
-      "model_label": "Delta ROU/Lease",
+      "model_label": "ROU/Lease",
       "decided_date": "2026-04-22",
       "note": "FY2024 10-K wording (#11 user top-fuzzy): singular 'asset'/'liability' vs MAP-CF-040"
     },
@@ -1034,7 +1034,7 @@
       "filing_term_normalized": "inventories",
       "model_sheet": "CASH FLOW",
       "model_row": 22,
-      "model_label": "Delta Inventories",
+      "model_label": "Inventories",
       "decided_date": "2026-04-22",
       "note": "FY2024 10-K wording (#12 user top-fuzzy): bare 'Inventories' on CF — maps to Δ Inventories per MAP-CF-034 row"
     },
@@ -1156,7 +1156,7 @@
       "rule_id": "NEW-CF-003",
       "filing_term_normalized": "note receivable-net (change)",
       "model_sheet": "CASH FLOW",
-      "new_row_label": "\u0394 Note Receivable",
+      "new_row_label": "Note Receivable",
       "section": "operating",
       "position_note": "In WC changes block",
       "decided_date": "2026-04-16"
@@ -1165,7 +1165,7 @@
       "rule_id": "NEW-CF-004",
       "filing_term_normalized": "accounts payable (change)",
       "model_sheet": "CASH FLOW",
-      "new_row_label": "\u0394 Accounts Payable",
+      "new_row_label": "Accounts Payable",
       "section": "operating",
       "position_note": "Replaces old combined row 24",
       "decided_date": "2026-04-16"
@@ -1174,16 +1174,16 @@
       "rule_id": "NEW-CF-005",
       "filing_term_normalized": "accrued expenses (change)",
       "model_sheet": "CASH FLOW",
-      "new_row_label": "\u0394 Accrued Expenses",
+      "new_row_label": "Accrued Expenses",
       "section": "operating",
-      "position_note": "After \u0394 A/P",
+      "position_note": "After Δ A/P",
       "decided_date": "2026-04-16"
     },
     {
       "rule_id": "NEW-CF-006",
       "filing_term_normalized": "other long-term assets (change)",
       "model_sheet": "CASH FLOW",
-      "new_row_label": "\u0394 Other Long-Term Assets",
+      "new_row_label": "Other Long-Term Assets",
       "section": "operating",
       "position_note": "In WC changes block",
       "decided_date": "2026-04-16"
@@ -1272,7 +1272,7 @@
       "rule_id": "NEW-CF-010",
       "filing_term_normalized": "note receivable-net",
       "model_sheet": "CASH FLOW",
-      "new_row_label": "Delta Note Receivable",
+      "new_row_label": "Note Receivable",
       "section": "operating",
       "position_note": "Same concept as NEW-CF-003 (Note Receivable-Net Change) — FY2024 10-K dropped the 'change' word",
       "decided_date": "2026-04-22",
@@ -1334,5 +1334,5 @@
     }
   ],
   "validation_overrides": [],
-  "_last_updated": "2026-04-22T18:00:00Z"
+  "_last_updated": "2026-04-22"
 }
