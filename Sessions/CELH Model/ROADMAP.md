@@ -3,7 +3,7 @@ type: roadmap
 date: 2026-04-24
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 24th SEC EDGAR + Quarterly Pipeline Session"
+last_session: "April 24th PG Novel Triage + Library Expansion Session"
 ---
 
 # Celsius HF Case Study — Roadmap
@@ -17,16 +17,16 @@ Living document. Update after each session. **Current project focus: build a uni
 | Workstream | State | Next action |
 |---|---|---|
 | **Financials pipeline** (8 skills) | **7 of 8 built** — sec-edgar-fetch, iXBRL extractor, reconcile, validate, playground, model-write all shipped + filing-type-aware; model-calc still annual-only | Extend model-calc to quarterly after first PG ValidatedFiling produced |
-| **Quarterly pipeline** | Shipped 2026-04-24 — reconcile filters 10-Q to 3-month durations, routes to QTR P&L / QTR BS / QTR CF; model-write emits parallel QTR sheet family when 10-Q inputs present | Smoke-test produced 107 novel items for PG Q2 FY26 — triage before hand-resolution (see §Active) |
+| **Quarterly pipeline** | Shipped 2026-04-24 (prior session) — reconcile filters 10-Q to 3-month durations, routes to QTR P&L / QTR BS / QTR CF; model-write emits parallel QTR sheet family when 10-Q inputs present | PG reconcile 107 → 0 novels (2026-04-24 second session); ready for validate → model-write |
 | **SEC EDGAR ingestion** | Shipped 2026-04-24 — `sec-edgar-fetch` + `--all` historical flag. PG: 99 10-Q folders (1993→2026) + companyfacts.json | Pull more tickers on demand; deferred until second ticker onboarding begins |
-| **Generic cross-ticker library (mappings)** | **Phases 1–7 shipped** — 92 entries, PDF-label-keyed | Evaluate whether an iXBRL-concept-keyed layer is needed (depends on §1 PG novel triage) |
+| **Generic cross-ticker library (mappings)** | **109 entries** (was 92; +17 this session for PG) — PDF-label + us-gaap concept aliases; reconcile now supports both via CamelCase normalization | Grow as each new ticker surfaces gaps; user-decided scope each time (see Novel Triage Protocol memory) |
 | **Generic forecast-rules library** | Not started | Extract from `calc.py` after second-ticker run |
 | **Ticker onboarding doc** | Not started | One-page guide once universal architecture stabilizes |
 | **GLP-1 projection model** | Built standalone, live in xlsx | Integrate once architecture is universal (deferred) |
 | **SNAP / demographics model** | Built standalone, live in xlsx | Integrate once architecture is universal (deferred) |
 | **Cross-model integration** | Deferred per user direction | Revisit after universal architecture ships |
 
-**Revised critical path:** ~~`model-write`~~ ✓ → ~~generic-library migration~~ ✓ → ~~`model-calc` drivers + forecast~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → ~~SEC EDGAR ingestion + iXBRL extractor~~ ✓ → ~~quarterly pipeline (reconcile + validate + model-write)~~ ✓ → **triage the 107-novel PG count (dedup + generic-library re-run + decide iXBRL-aware overlay vs. hand-resolve)** → **populate PG decisions_ledger.json + run end-to-end to a first QTR xlsx** → **extend model-calc to quarterly drivers** → **extract generic forecast-rules JSON** → **formalize ticker onboarding flow** → (later) cross-model integration.
+**Revised critical path:** ~~`model-write`~~ ✓ → ~~generic-library migration~~ ✓ → ~~`model-calc` drivers + forecast~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → ~~SEC EDGAR ingestion + iXBRL extractor~~ ✓ → ~~quarterly pipeline (reconcile + validate + model-write)~~ ✓ → ~~triage PG 107-novel count~~ ✓ (2026-04-24 second session: 107 → 0 via reconcile fixes + library expansion; PG ledger has 1 company-specific entry) → **run PG end-to-end to a first QTR xlsx (validate → playground → model-write)** → **answer LTM-period validation question for quarterlies** → **break OCI into its own worksheet (4th statement)** → **extend model-calc to quarterly drivers** → **extract generic forecast-rules JSON** → **formalize ticker onboarding flow** → (later) cross-model integration.
 
 **Active propagating rule:** every structural change to the financials pipeline must update `playground_architecture.html` + `playground_schema.html`. Bump `LS_KEY` when NODES/EDGES change so the user's browser picks up fresh defaults instead of cached state. Carry this into every future handoff under "Open decisions / pending work." (User explicitly asked this rule propagate.)
 
@@ -73,6 +73,19 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 - **Memory feedback saved this session:**
   - `feedback_ledger_ordering.md` — align ledger ordering to the latest filing when filings differ.
   - `feedback_sign_agnostic_labels.md` — canonical labels use parentheticals for the alternative sign.
+
+### PG novel triage + generic library expansion (2026-04-24 — third session same day)
+
+- **PG reconcile 107 → 0 novels.** Root-caused 5 issues in reconcile/library: variant bug (generic library keyed only to ANNL; invisible to 10-Qs), no CamelCase normalization (us-gaap concept names couldn't match PDF-label aliases), iXBRL subtotal concept names missed by `is_subtotal_label` regex, library gaps (no Long-Term Debt / Treasury Stock / NCI / OCI components / Other NC Liabilities canonical rows), subsection filter too strict for iXBRL items (EPS filing_subsection="eps" rejected iXBRL items with subsection_context=None).
+- **Reconcile fixes shipped.** `normalize_label` now splits CamelCase (iXBRL concept names tokenize properly). `build_lookup_index` indexes generic library entries under BOTH ANNL + QTR variants (canonical concepts are variant-agnostic; ticker entries stay variant-specific). `is_subtotal_label` has `IXBRL_SUBTOTAL_CONCEPTS` allowlist (9 concept names: Assets, AssetsCurrent, Liabilities, LiabilitiesCurrent, LiabilitiesAndStockholdersEquity, StockholdersEquity/…IncludingNCI, etc.). `select_entry` single-candidate fallback when item has no subsection context. CELH FY2024+FY2025 10-Ks regression-tested: both still 0 novels.
+- **Library: 92 → 109 entries.** 15 us-gaap concept-name aliases added to existing entries. 15 new canonical entries: Short-Term Debt + Current Portion of Long-Term Debt (user-chosen split; `DebtCurrent` aggregate aliased under Current Portion), Other Non-Current Liabilities, Treasury Stock, Noncontrolling Interest (BS), Common Stock Shares Issued (memo), collapsed Inventory detail memo (Raw+WIP+Finished into one entry labeled "Inventories"), Long-Term Debt, NI Including NCI, NI Attributable to NCI, OCI - Total Net of Tax (rendered on IS as placeholder for deferred OCI statement), OCI - AFS Securities / Pension / CI Attributable-to-NCI / CI Including NCI (all memo).
+- **PG ticker ledger: 1 new entry.** `NEW-BS-001 "ESOP Debt Retirement Reserve"` as QTR BS contra-equity (`expense_positive`, section=equity). Company-specific per user (most filers don't have a legacy leveraged ESOP). Note flags that parallel ANNL entry needed when first PG 10-K runs.
+- **`mapped_2026_Q2.json` written and ready for validate.** Final reconcile stats: 95 mapped + 12 subtotals + 0 novels + 0 fuzzy fallbacks.
+- **Architectural tangent: "move library to extract time?"** User proposed routing generic library through extractors so RawFiling carries canonical labels. Scoped refactor (4 skills, new source_label/canonical_label fields, shared helper). Pushed back with peer-inputs-to-reconcile symmetry argument; user agreed, reverted.
+- **Playground scaffolds refreshed.** `scaffoldBody()` entries for financials-extract / financials-reconcile / financials-validate / financials-playground / model-write / model-calc all rewritten — the text was stale (CELH-only language, pre-library-migration references, xlsm/VBA assumptions). `schemaLine()` + `scopeLine()` + `updatePrompt()` ledgerNote updated. `pattern-libraries` node consolidated (single node serves both PDF extract + reconcile, reflecting physical single-folder reality). LS_KEY bumped v5 → v6 → v7 → v8.
+- **Memory feedback saved this session:**
+  - `feedback_novel_triage_protocol.md` — when reconcile surfaces novels: check generic library → check ticker ledger → escalate to user with scope/disposition/model_label/render questions. Claude does NOT pick labels.
+  - `feedback_token_efficiency.md` — 8 habits for efficient long sessions (short default responses, one question at a time, no unilateral decisions needing retroactive review, Grep before Read, trim command output, no intermediate artifacts).
 
 ### SEC EDGAR + iXBRL + quarterly pipeline (2026-04-24 — second session same day)
 
