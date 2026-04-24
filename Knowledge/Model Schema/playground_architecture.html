@@ -480,17 +480,18 @@ let NODES = [
 
   // Layer 2
   { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 505, w: 240, h: 56, label: 'financials-reconcile',
-    purpose: 'Map raw filing labels to canonical model rows via the decisions ledger. Filing-type aware: 10-K → ANNL sheet family, 10-Q → QTR sheet family (separate ledger entries per variant). Entry precedence: (label, sheet_group, sheet_variant, subsection, section). Emits NovelReport for blocked items.',
-    input: 'RawFiling + ledger', output: 'MappedFiling',
+    purpose: 'Map raw filing labels to canonical model rows via (a) the cross-ticker generic library and (b) the per-ticker decisions ledger. Filing-type aware: 10-K → ANNL sheet family, 10-Q → QTR sheet family. Entry precedence: ticker ledger (tier 10) > generic library (tier 0). Emits NovelReport for blocked items. PG Q2 FY26 smoke test: 107 → 2 novels (98.1% auto-resolution) with only generic library + empty ticker ledger.',
+    input: 'RawFiling + generic library + ticker ledger', output: 'MappedFiling',
     ops: [
-      'Normalize labels: strip footnote markers ([2], (1)), par-value clutter, punctuation',
-      'Lookup index keyed (label, sheet_group, sheet_variant=ANNL|QTR)',
+      'Normalize labels: split CamelCase (us-gaap concept names), strip footnote markers, clutter, punctuation',
+      'Lookup index keyed (label, sheet_group, sheet_variant=ANNL|QTR). Generic entries indexed under BOTH variants (canonical concepts are variant-agnostic); ticker entries stay variant-specific',
       'For 10-Qs: filter statements to 3-month duration IS/CF (period_length_weeks ∈ [11,15]) + BS instants; YTD 6mo/9mo dropped',
       'target_variant derived from FilingType: TEN_Q → QTR, everything else → ANNL',
-      'select_entry scores by filing_subsection (+2) and filing_section (+1) match',
+      'iXBRL subtotal concept allowlist (Assets, Liabilities, LiabilitiesAndStockholdersEquity, StockholdersEquityIncluding…) routed to _subtotal pseudo-sheet — model-write generates canonical Total rows at section boundaries',
+      'select_entry: subsection filter strict when item has subsection; for iXBRL items (subsection_context=None) with a single-candidate key, accept despite filing_subsection mismatch',
       'rapidfuzz fuzzy at ≥85 when no exact; novel below',
       '--novels-out emits a NovelReport JSON for the playground NOVELS tab',
-      'Append new decisions to ledger (append-only, dated). New tickers onboarding 10-Q need both ANNL + QTR ledger entries.'
+      'Append new decisions to ledger (append-only, dated). New tickers onboarding 10-Q need only ticker-specific anomalies in their ledger — generic library resolves standard GAAP concepts.'
     ],
     deps: ['pydantic', 'rapidfuzz']
   },
@@ -604,9 +605,13 @@ let NODES = [
   },
 
   // Layer 2 — feeds / is appended-to by financials-reconcile
-  { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 508, w: 240, h: 50, label: 'decisions_ledger.json',
-    purpose: 'Per-ticker mapping + structural-decision store. CELH: 124 mappings + 24 new rows + 7 structural + 1 rename. Entries may specify filing_subsection / filing_section for multi-match disambiguation.',
-    path: 'Brain/Knowledge/Model Schema/CELH/decisions_ledger.json'
+  { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 470, w: 240, h: 50, label: 'decisions_ledger.json',
+    purpose: 'Per-ticker mapping + structural-decision store. Post-migration: CELH has ~10 ticker-specific entries (generic library is source of truth for standard GAAP concepts). Entries may specify filing_subsection / filing_section / filing_type for multi-match disambiguation.',
+    path: 'Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json'
+  },
+  { id: 'generic-library', layer: 'reconcile', kind: 'store', x: 310, y: 540, w: 240, h: 50, label: 'generic_line_item_mappings.json',
+    purpose: 'Cross-ticker canonical mappings (~108 entries post-PG-triage). Supports both PDF-text aliases and us-gaap iXBRL concept names (CamelCase-split by normalize_label). Includes BS/IS/CF standard items + PG additions (Long-Term Debt, Treasury Stock, NCI, OCI components, inventory detail memos). Loaded by reconcile alongside the ticker ledger; ticker entries win on conflicts via tier scoring.',
+    path: 'Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json'
   },
 
   // Layer 3 — written by financials-validate
@@ -655,9 +660,11 @@ let EDGES = [
   { from: 'financials-extract', to: 'RawFiling', kind: 'data' },
   // RawFiling → reconcile
   { from: 'RawFiling', to: 'financials-reconcile', kind: 'data' },
-  // ledger ↔ reconcile
+  // ledger ↔ reconcile (ticker-specific; append-only)
   { from: 'decisions-ledger', to: 'financials-reconcile', kind: 'data' },
   { from: 'financials-reconcile', to: 'decisions-ledger', kind: 'data' },
+  // generic library → reconcile (cross-ticker canonical mappings; read-only at reconcile time)
+  { from: 'generic-library', to: 'financials-reconcile', kind: 'data' },
   // reconcile produces
   { from: 'financials-reconcile', to: 'MappedFiling', kind: 'data' },
   // MappedFiling → validate
@@ -705,7 +712,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v5';
+const LS_KEY = 'financials-architecture-playground-v6';
 
 function saveState() {
   try {
