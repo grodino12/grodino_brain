@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CELH Pipeline — Architecture Map</title>
+<title>Financials Pipeline — Architecture Map</title>
 <style>
   :root {
     --bg: #0a0d14;
@@ -346,9 +346,9 @@
 </head>
 <body>
 <header>
-  <h1>CELH Pipeline — Architecture Map</h1>
-  <div class="sub">Top-down: raw extraction → reconciliation → validation → viz/write/calc. Bottom row = contracts + external sources. Drag to pan, scroll to zoom, click a node for details.</div>
-  <div class="sub" style="margin-top: 4px;"><span style="color: #16a34a; font-weight: 600;">✓</span> <span style="color: var(--text);">3 of 6 skills built:</span> <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-reconcile</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-validate</code> <span style="color: var(--text-dim);">— full pipeline run on CELH 2024 10-K (BS + IS + CF): 260 extracted → 260 mapped → <strong style="color: #16a34a">26 of 26 validation rules PASS</strong> (BS-1..BS-6 × 2 periods, CF-1/CF-2 × 3 periods, X-1/X-2/X-4 × 3 periods) with all gaps = 0 and cash-convention anomaly handled.</span></div>
+  <h1>Financials Pipeline — Architecture Map</h1>
+  <div class="sub">Top-down: fetch → extract → reconcile → validate → viz/write/calc. Two extract paths feed the same RawFiling contract: iXBRL HTML (SEC native) and PDF (IR press releases + legacy). Drag to pan, scroll to zoom, click a node for details.</div>
+  <div class="sub" style="margin-top: 4px;"><span style="color: #16a34a; font-weight: 600;">✓</span> <span style="color: var(--text);">5 of 8 skills built:</span> <code style="font-family: var(--mono); color: var(--c-skill);">sec-edgar-fetch</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract-ixbrl</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-reconcile</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-validate</code> <span style="color: var(--text-dim);">— iXBRL path (PG Q2 FY26 10-Q): 854 tagged facts → 199 line items / 10 statements via the SEC presentation linkbase; PDF path (CELH 2024 10-K): 260 extracted → 260 mapped → <strong style="color: #16a34a">26 of 26 validation rules PASS</strong>.</span></div>
   <div class="toggles">
     <div class="toggle-group">
       <div class="toggle-label">Schema Hosting</div>
