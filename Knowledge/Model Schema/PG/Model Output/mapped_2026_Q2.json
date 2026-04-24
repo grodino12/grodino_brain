@@ -25,7 +25,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+            "raw_filing_label": "Cash and cash equivalents",
+            "canonical_label": "Cash & Cash Equivalents",
+            "ledger_rule_id": "GEN-BS-001",
             "value": "10825",
             "raw_numeric_text": "10,825",
             "notation_flags": 0,
@@ -43,7 +45,9 @@
             }
           },
           {
-            "raw_filing_label": "AccountsReceivableNetCurrent",
+            "raw_filing_label": "Accounts receivable",
+            "canonical_label": "Accounts Receivable",
+            "ledger_rule_id": "GEN-BS-003",
             "value": "6279",
             "raw_numeric_text": "6,279",
             "notation_flags": 0,
@@ -61,7 +65,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryRawMaterialsAndSuppliesNetOfReserves",
+            "raw_filing_label": "Materials and supplies",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-BS-038",
             "value": "2139",
             "raw_numeric_text": "2,139",
             "notation_flags": 0,
@@ -79,7 +85,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryWorkInProcessNetOfReserves",
+            "raw_filing_label": "Work in process",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-BS-038",
             "value": "1007",
             "raw_numeric_text": "1,007",
             "notation_flags": 0,
@@ -97,7 +105,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
+            "raw_filing_label": "Finished goods",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-BS-038",
             "value": "4672",
             "raw_numeric_text": "4,672",
             "notation_flags": 0,
@@ -115,7 +125,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryNet",
+            "raw_filing_label": "Total inventories",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "7817",
             "raw_numeric_text": "7,817",
             "notation_flags": 0,
@@ -133,7 +145,9 @@
             }
           },
           {
-            "raw_filing_label": "PrepaidExpenseAndOtherAssetsCurrent",
+            "raw_filing_label": "Prepaid expenses and other current assets",
+            "canonical_label": "Prepaid Expenses",
+            "ledger_rule_id": "GEN-BS-006",
             "value": "1666",
             "raw_numeric_text": "1,666",
             "notation_flags": 0,
@@ -151,7 +165,9 @@
             }
           },
           {
-            "raw_filing_label": "AssetsCurrent",
+            "raw_filing_label": "TOTAL CURRENT ASSETS",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "26588",
             "raw_numeric_text": "26,588",
             "notation_flags": 0,
@@ -169,7 +185,9 @@
             }
           },
           {
-            "raw_filing_label": "PropertyPlantAndEquipmentNet",
+            "raw_filing_label": "PROPERTY, PLANT AND EQUIPMENT, NET",
+            "canonical_label": "Net PP&E",
+            "ledger_rule_id": "GEN-BS-007",
             "value": "24487",
             "raw_numeric_text": "24,487",
             "notation_flags": 0,
@@ -187,7 +205,9 @@
             }
           },
           {
-            "raw_filing_label": "Goodwill",
+            "raw_filing_label": "GOODWILL",
+            "canonical_label": "Goodwill",
+            "ledger_rule_id": "GEN-BS-013",
             "value": "41665",
             "raw_numeric_text": "41,665",
             "notation_flags": 0,
@@ -205,7 +225,9 @@
             }
           },
           {
-            "raw_filing_label": "IntangibleAssetsNetExcludingGoodwill",
+            "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+            "canonical_label": "Intangible Assets",
+            "ledger_rule_id": "GEN-BS-012",
             "value": "21737",
             "raw_numeric_text": "21,737",
             "notation_flags": 0,
@@ -223,7 +245,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherAssetsNoncurrent",
+            "raw_filing_label": "OTHER NONCURRENT ASSETS",
+            "canonical_label": "Other Non-Current Assets",
+            "ledger_rule_id": "GEN-BS-014",
             "value": "12809",
             "raw_numeric_text": "12,809",
             "notation_flags": 0,
@@ -241,7 +265,9 @@
             }
           },
           {
-            "raw_filing_label": "Assets",
+            "raw_filing_label": "TOTAL ASSETS",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "127286",
             "raw_numeric_text": "127,286",
             "notation_flags": 0,
@@ -259,7 +285,9 @@
             }
           },
           {
-            "raw_filing_label": "AccountsPayableCurrent",
+            "raw_filing_label": "Accounts payable",
+            "canonical_label": "Accounts Payable",
+            "ledger_rule_id": "GEN-BS-015",
             "value": "15173",
             "raw_numeric_text": "15,173",
             "notation_flags": 0,
@@ -277,7 +305,9 @@
             }
           },
           {
-            "raw_filing_label": "AccruedLiabilitiesCurrent",
+            "raw_filing_label": "Accrued and other liabilities",
+            "canonical_label": "Accrued Expenses",
+            "ledger_rule_id": "GEN-BS-016",
             "value": "10463",
             "raw_numeric_text": "10,463",
             "notation_flags": 0,
@@ -295,7 +325,9 @@
             }
           },
           {
-            "raw_filing_label": "DebtCurrent",
+            "raw_filing_label": "Debt due within one year",
+            "canonical_label": "Current Portion of Long-Term Debt",
+            "ledger_rule_id": "GEN-BS-033",
             "value": "11062",
             "raw_numeric_text": "11,062",
             "notation_flags": 0,
@@ -313,7 +345,9 @@
             }
           },
           {
-            "raw_filing_label": "LiabilitiesCurrent",
+            "raw_filing_label": "TOTAL CURRENT LIABILITIES",
+            "canonical_label": "Other Current Liabilities",
+            "ledger_rule_id": "GEN-BS-022",
             "value": "36699",
             "raw_numeric_text": "36,699",
             "notation_flags": 0,
@@ -331,7 +365,9 @@
             }
           },
           {
-            "raw_filing_label": "LongTermDebtNoncurrent",
+            "raw_filing_label": "LONG-TERM DEBT",
+            "canonical_label": "Long-Term Debt",
+            "ledger_rule_id": "GEN-BS-041",
             "value": "25577",
             "raw_numeric_text": "25,577",
             "notation_flags": 0,
@@ -349,7 +385,9 @@
             }
           },
           {
-            "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",
+            "raw_filing_label": "DEFERRED INCOME TAXES",
+            "canonical_label": "Deferred Tax Assets",
+            "ledger_rule_id": "GEN-BS-008",
             "value": "5974",
             "raw_numeric_text": "5,974",
             "notation_flags": 0,
@@ -367,7 +405,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherLiabilitiesNoncurrent",
+            "raw_filing_label": "OTHER NONCURRENT LIABILITIES",
+            "canonical_label": "Other Non-Current Liabilities",
+            "ledger_rule_id": "GEN-BS-034",
             "value": "5719",
             "raw_numeric_text": "5,719",
             "notation_flags": 0,
@@ -385,7 +425,9 @@
             }
           },
           {
-            "raw_filing_label": "Liabilities",
+            "raw_filing_label": "TOTAL LIABILITIES",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "73969",
             "raw_numeric_text": "73,969",
             "notation_flags": 0,
@@ -403,7 +445,9 @@
             }
           },
           {
-            "raw_filing_label": "PreferredStockValue",
+            "raw_filing_label": "Preferred stock",
+            "canonical_label": "Convertible Preferred Stock",
+            "ledger_rule_id": "GEN-BS-027",
             "value": "767",
             "raw_numeric_text": "767",
             "notation_flags": 0,
@@ -421,7 +465,9 @@
             }
           },
           {
-            "raw_filing_label": "CommonStockSharesIssued",
+            "raw_filing_label": "Common stock, issued (in shares)",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
             "value": "4009.2",
             "raw_numeric_text": "4,009.2",
             "notation_flags": 0,
@@ -439,7 +485,9 @@
             }
           },
           {
-            "raw_filing_label": "CommonStockValue",
+            "raw_filing_label": "Common stock",
+            "canonical_label": "Common Stock",
+            "ledger_rule_id": "GEN-BS-028",
             "value": "4009",
             "raw_numeric_text": "4,009",
             "notation_flags": 0,
@@ -457,7 +505,9 @@
             }
           },
           {
-            "raw_filing_label": "AdditionalPaidInCapital",
+            "raw_filing_label": "Additional paid-in capital",
+            "canonical_label": "Additional Paid-in Capital",
+            "ledger_rule_id": "GEN-BS-029",
             "value": "69010",
             "raw_numeric_text": "69,010",
             "notation_flags": 0,
@@ -475,7 +525,9 @@
             }
           },
           {
-            "raw_filing_label": "ReserveForEsopDebtRetirement",
+            "raw_filing_label": "Reserve for ESOP debt retirement",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "637",
             "raw_numeric_text": "637",
             "notation_flags": 0,
@@ -493,7 +545,9 @@
             }
           },
           {
-            "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+            "raw_filing_label": "Accumulated other comprehensive loss",
+            "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-BS-030",
             "value": "-12108",
             "raw_numeric_text": "12,108",
             "notation_flags": 0,
@@ -511,7 +565,9 @@
             }
           },
           {
-            "raw_filing_label": "TreasuryStockCommonValue",
+            "raw_filing_label": "Treasury stock",
+            "canonical_label": "Treasury Stock",
+            "ledger_rule_id": "GEN-BS-035",
             "value": "141981",
             "raw_numeric_text": "141,981",
             "notation_flags": 0,
@@ -529,7 +585,9 @@
             }
           },
           {
-            "raw_filing_label": "RetainedEarningsAccumulatedDeficit",
+            "raw_filing_label": "Retained earnings",
+            "canonical_label": "Retained Earnings (Accumulated Deficit)",
+            "ledger_rule_id": "GEN-BS-031",
             "value": "133981",
             "raw_numeric_text": "133,981",
             "notation_flags": 0,
@@ -547,7 +605,9 @@
             }
           },
           {
-            "raw_filing_label": "MinorityInterest",
+            "raw_filing_label": "Noncontrolling interest",
+            "canonical_label": "Noncontrolling Interest",
+            "ledger_rule_id": "GEN-BS-036",
             "value": "276",
             "raw_numeric_text": "276",
             "notation_flags": 0,
@@ -565,7 +625,9 @@
             }
           },
           {
-            "raw_filing_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "TOTAL SHAREHOLDERS’ EQUITY",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "53317",
             "raw_numeric_text": "53,317",
             "notation_flags": 0,
@@ -583,7 +645,9 @@
             }
           },
           {
-            "raw_filing_label": "LiabilitiesAndStockholdersEquity",
+            "raw_filing_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "127286",
             "raw_numeric_text": "127,286",
             "notation_flags": 0,
@@ -622,7 +686,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+            "raw_filing_label": "Cash and cash equivalents",
+            "canonical_label": "Cash & Cash Equivalents",
+            "ledger_rule_id": "GEN-BS-001",
             "value": "9556",
             "raw_numeric_text": "9,556",
             "notation_flags": 0,
@@ -640,7 +706,9 @@
             }
           },
           {
-            "raw_filing_label": "AccountsReceivableNetCurrent",
+            "raw_filing_label": "Accounts receivable",
+            "canonical_label": "Accounts Receivable",
+            "ledger_rule_id": "GEN-BS-003",
             "value": "6185",
             "raw_numeric_text": "6,185",
             "notation_flags": 0,
@@ -658,7 +726,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryRawMaterialsAndSuppliesNetOfReserves",
+            "raw_filing_label": "Materials and supplies",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-BS-038",
             "value": "2022",
             "raw_numeric_text": "2,022",
             "notation_flags": 0,
@@ -676,7 +746,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryWorkInProcessNetOfReserves",
+            "raw_filing_label": "Work in process",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-BS-038",
             "value": "1012",
             "raw_numeric_text": "1,012",
             "notation_flags": 0,
@@ -694,7 +766,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
+            "raw_filing_label": "Finished goods",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-BS-038",
             "value": "4516",
             "raw_numeric_text": "4,516",
             "notation_flags": 0,
@@ -712,7 +786,9 @@
             }
           },
           {
-            "raw_filing_label": "InventoryNet",
+            "raw_filing_label": "Total inventories",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "7551",
             "raw_numeric_text": "7,551",
             "notation_flags": 0,
@@ -730,7 +806,9 @@
             }
           },
           {
-            "raw_filing_label": "PrepaidExpenseAndOtherAssetsCurrent",
+            "raw_filing_label": "Prepaid expenses and other current assets",
+            "canonical_label": "Prepaid Expenses",
+            "ledger_rule_id": "GEN-BS-006",
             "value": "2100",
             "raw_numeric_text": "2,100",
             "notation_flags": 0,
@@ -748,7 +826,9 @@
             }
           },
           {
-            "raw_filing_label": "AssetsCurrent",
+            "raw_filing_label": "TOTAL CURRENT ASSETS",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "25392",
             "raw_numeric_text": "25,392",
             "notation_flags": 0,
@@ -766,7 +846,9 @@
             }
           },
           {
-            "raw_filing_label": "PropertyPlantAndEquipmentNet",
+            "raw_filing_label": "PROPERTY, PLANT AND EQUIPMENT, NET",
+            "canonical_label": "Net PP&E",
+            "ledger_rule_id": "GEN-BS-007",
             "value": "23897",
             "raw_numeric_text": "23,897",
             "notation_flags": 0,
@@ -784,7 +866,9 @@
             }
           },
           {
-            "raw_filing_label": "Goodwill",
+            "raw_filing_label": "GOODWILL",
+            "canonical_label": "Goodwill",
+            "ledger_rule_id": "GEN-BS-013",
             "value": "41650",
             "raw_numeric_text": "41,650",
             "notation_flags": 0,
@@ -802,7 +886,9 @@
             }
           },
           {
-            "raw_filing_label": "IntangibleAssetsNetExcludingGoodwill",
+            "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+            "canonical_label": "Intangible Assets",
+            "ledger_rule_id": "GEN-BS-012",
             "value": "21910",
             "raw_numeric_text": "21,910",
             "notation_flags": 0,
@@ -820,7 +906,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherAssetsNoncurrent",
+            "raw_filing_label": "OTHER NONCURRENT ASSETS",
+            "canonical_label": "Other Non-Current Assets",
+            "ledger_rule_id": "GEN-BS-014",
             "value": "12381",
             "raw_numeric_text": "12,381",
             "notation_flags": 0,
@@ -838,7 +926,9 @@
             }
           },
           {
-            "raw_filing_label": "Assets",
+            "raw_filing_label": "TOTAL ASSETS",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "125231",
             "raw_numeric_text": "125,231",
             "notation_flags": 0,
@@ -856,7 +946,9 @@
             }
           },
           {
-            "raw_filing_label": "AccountsPayableCurrent",
+            "raw_filing_label": "Accounts payable",
+            "canonical_label": "Accounts Payable",
+            "ledger_rule_id": "GEN-BS-015",
             "value": "15227",
             "raw_numeric_text": "15,227",
             "notation_flags": 0,
@@ -874,7 +966,9 @@
             }
           },
           {
-            "raw_filing_label": "AccruedLiabilitiesCurrent",
+            "raw_filing_label": "Accrued and other liabilities",
+            "canonical_label": "Accrued Expenses",
+            "ledger_rule_id": "GEN-BS-016",
             "value": "11318",
             "raw_numeric_text": "11,318",
             "notation_flags": 0,
@@ -892,7 +986,9 @@
             }
           },
           {
-            "raw_filing_label": "DebtCurrent",
+            "raw_filing_label": "Debt due within one year",
+            "canonical_label": "Current Portion of Long-Term Debt",
+            "ledger_rule_id": "GEN-BS-033",
             "value": "9513",
             "raw_numeric_text": "9,513",
             "notation_flags": 0,
@@ -910,7 +1006,9 @@
             }
           },
           {
-            "raw_filing_label": "LiabilitiesCurrent",
+            "raw_filing_label": "TOTAL CURRENT LIABILITIES",
+            "canonical_label": "Other Current Liabilities",
+            "ledger_rule_id": "GEN-BS-022",
             "value": "36058",
             "raw_numeric_text": "36,058",
             "notation_flags": 0,
@@ -928,7 +1026,9 @@
             }
           },
           {
-            "raw_filing_label": "LongTermDebtNoncurrent",
+            "raw_filing_label": "LONG-TERM DEBT",
+            "canonical_label": "Long-Term Debt",
+            "ledger_rule_id": "GEN-BS-041",
             "value": "24995",
             "raw_numeric_text": "24,995",
             "notation_flags": 0,
@@ -946,7 +1046,9 @@
             }
           },
           {
-            "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",
+            "raw_filing_label": "DEFERRED INCOME TAXES",
+            "canonical_label": "Deferred Tax Assets",
+            "ledger_rule_id": "GEN-BS-008",
             "value": "5774",
             "raw_numeric_text": "5,774",
             "notation_flags": 0,
@@ -964,7 +1066,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherLiabilitiesNoncurrent",
+            "raw_filing_label": "OTHER NONCURRENT LIABILITIES",
+            "canonical_label": "Other Non-Current Liabilities",
+            "ledger_rule_id": "GEN-BS-034",
             "value": "6120",
             "raw_numeric_text": "6,120",
             "notation_flags": 0,
@@ -982,7 +1086,9 @@
             }
           },
           {
-            "raw_filing_label": "Liabilities",
+            "raw_filing_label": "TOTAL LIABILITIES",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "72946",
             "raw_numeric_text": "72,946",
             "notation_flags": 0,
@@ -1000,7 +1106,9 @@
             }
           },
           {
-            "raw_filing_label": "PreferredStockValue",
+            "raw_filing_label": "Preferred stock",
+            "canonical_label": "Convertible Preferred Stock",
+            "ledger_rule_id": "GEN-BS-027",
             "value": "777",
             "raw_numeric_text": "777",
             "notation_flags": 0,
@@ -1018,7 +1126,9 @@
             }
           },
           {
-            "raw_filing_label": "CommonStockSharesIssued",
+            "raw_filing_label": "Common stock, issued (in shares)",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
             "value": "4009.2",
             "raw_numeric_text": "4,009.2",
             "notation_flags": 0,
@@ -1036,7 +1146,9 @@
             }
           },
           {
-            "raw_filing_label": "CommonStockValue",
+            "raw_filing_label": "Common stock",
+            "canonical_label": "Common Stock",
+            "ledger_rule_id": "GEN-BS-028",
             "value": "4009",
             "raw_numeric_text": "4,009",
             "notation_flags": 0,
@@ -1054,7 +1166,9 @@
             }
           },
           {
-            "raw_filing_label": "AdditionalPaidInCapital",
+            "raw_filing_label": "Additional paid-in capital",
+            "canonical_label": "Additional Paid-in Capital",
+            "ledger_rule_id": "GEN-BS-029",
             "value": "68770",
             "raw_numeric_text": "68,770",
             "notation_flags": 0,
@@ -1072,7 +1186,9 @@
             }
           },
           {
-            "raw_filing_label": "ReserveForEsopDebtRetirement",
+            "raw_filing_label": "Reserve for ESOP debt retirement",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "672",
             "raw_numeric_text": "672",
             "notation_flags": 0,
@@ -1090,7 +1206,9 @@
             }
           },
           {
-            "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+            "raw_filing_label": "Accumulated other comprehensive loss",
+            "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-BS-030",
             "value": "-12143",
             "raw_numeric_text": "12,143",
             "notation_flags": 0,
@@ -1108,7 +1226,9 @@
             }
           },
           {
-            "raw_filing_label": "TreasuryStockCommonValue",
+            "raw_filing_label": "Treasury stock",
+            "canonical_label": "Treasury Stock",
+            "ledger_rule_id": "GEN-BS-035",
             "value": "138702",
             "raw_numeric_text": "138,702",
             "notation_flags": 0,
@@ -1126,7 +1246,9 @@
             }
           },
           {
-            "raw_filing_label": "RetainedEarningsAccumulatedDeficit",
+            "raw_filing_label": "Retained earnings",
+            "canonical_label": "Retained Earnings (Accumulated Deficit)",
+            "ledger_rule_id": "GEN-BS-031",
             "value": "129973",
             "raw_numeric_text": "129,973",
             "notation_flags": 0,
@@ -1144,7 +1266,9 @@
             }
           },
           {
-            "raw_filing_label": "MinorityInterest",
+            "raw_filing_label": "Noncontrolling interest",
+            "canonical_label": "Noncontrolling Interest",
+            "ledger_rule_id": "GEN-BS-036",
             "value": "272",
             "raw_numeric_text": "272",
             "notation_flags": 0,
@@ -1162,7 +1286,9 @@
             }
           },
           {
-            "raw_filing_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "TOTAL SHAREHOLDERS’ EQUITY",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "52284",
             "raw_numeric_text": "52,284",
             "notation_flags": 0,
@@ -1180,7 +1306,9 @@
             }
           },
           {
-            "raw_filing_label": "LiabilitiesAndStockholdersEquity",
+            "raw_filing_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "125231",
             "raw_numeric_text": "125,231",
             "notation_flags": 0,
@@ -1219,7 +1347,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "Revenues",
+            "raw_filing_label": "NET SALES",
+            "canonical_label": "Net Sales / Revenue",
+            "ledger_rule_id": "GEN-IS-001",
             "value": "22208",
             "raw_numeric_text": "22,208",
             "notation_flags": 0,
@@ -1237,7 +1367,9 @@
             }
           },
           {
-            "raw_filing_label": "CostOfGoodsAndServicesSold",
+            "raw_filing_label": "Cost of products sold",
+            "canonical_label": "COGS",
+            "ledger_rule_id": "GEN-IS-002",
             "value": "10834",
             "raw_numeric_text": "10,834",
             "notation_flags": 0,
@@ -1255,7 +1387,9 @@
             }
           },
           {
-            "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+            "raw_filing_label": "Selling, general and administrative expense",
+            "canonical_label": "SG&A",
+            "ledger_rule_id": "GEN-IS-004",
             "value": "6008",
             "raw_numeric_text": "6,008",
             "notation_flags": 0,
@@ -1273,7 +1407,9 @@
             }
           },
           {
-            "raw_filing_label": "OperatingIncomeLoss",
+            "raw_filing_label": "OPERATING INCOME",
+            "canonical_label": "Income (Loss) from Operations",
+            "ledger_rule_id": "GEN-IS-005",
             "value": "5366",
             "raw_numeric_text": "5,366",
             "notation_flags": 0,
@@ -1291,7 +1427,9 @@
             }
           },
           {
-            "raw_filing_label": "InterestExpenseNonoperating",
+            "raw_filing_label": "Interest expense",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "220",
             "raw_numeric_text": "220",
             "notation_flags": 0,
@@ -1309,7 +1447,9 @@
             }
           },
           {
-            "raw_filing_label": "InvestmentIncomeInterest",
+            "raw_filing_label": "Interest income",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "115",
             "raw_numeric_text": "115",
             "notation_flags": 0,
@@ -1327,7 +1467,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherNonoperatingIncomeExpense",
+            "raw_filing_label": "Other non-operating income/(expense), net",
+            "canonical_label": "Other Income (Expense)",
+            "ledger_rule_id": "GEN-IS-008",
             "value": "160",
             "raw_numeric_text": "160",
             "notation_flags": 0,
@@ -1345,7 +1487,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+            "canonical_label": "Net Income (Loss) Including NCI",
+            "ledger_rule_id": "GEN-IS-022",
             "value": "5421",
             "raw_numeric_text": "5,421",
             "notation_flags": 0,
@@ -1363,7 +1507,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeTaxExpenseBenefit",
+            "raw_filing_label": "Income taxes",
+            "canonical_label": "Income Tax (Benefit) Expense",
+            "ledger_rule_id": "GEN-IS-010",
             "value": "1090",
             "raw_numeric_text": "1,090",
             "notation_flags": 0,
@@ -1381,7 +1527,9 @@
             }
           },
           {
-            "raw_filing_label": "ProfitLoss",
+            "raw_filing_label": "NET EARNINGS",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "4331",
             "raw_numeric_text": "4,331",
             "notation_flags": 0,
@@ -1399,7 +1547,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+            "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+            "ledger_rule_id": "GEN-IS-023",
             "value": "12",
             "raw_numeric_text": "12",
             "notation_flags": 0,
@@ -1417,7 +1567,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLoss",
+            "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "4319",
             "raw_numeric_text": "4,319",
             "notation_flags": 0,
@@ -1435,7 +1587,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareBasic",
+            "raw_filing_label": "Basic (in dollars per share)",
+            "canonical_label": "Basic Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-016",
             "value": "0.00000182",
             "raw_numeric_text": "1.82",
             "notation_flags": 0,
@@ -1453,7 +1607,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareDiluted",
+            "raw_filing_label": "Diluted (in dollars per share)",
+            "canonical_label": "Diluted Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-017",
             "value": "0.00000178",
             "raw_numeric_text": "1.78",
             "notation_flags": 0,
@@ -1471,7 +1627,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+            "raw_filing_label": "Foreign currency translation",
+            "canonical_label": "Foreign Currency Translation (OCI)",
+            "ledger_rule_id": "GEN-IS-020",
             "value": "45",
             "raw_numeric_text": "45",
             "notation_flags": 0,
@@ -1489,7 +1647,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+            "raw_filing_label": "Unrealized gains/(losses) on investment securities",
+            "canonical_label": "OCI - AFS Securities",
+            "ledger_rule_id": "GEN-IS-025",
             "value": "2",
             "raw_numeric_text": "2",
             "notation_flags": 0,
@@ -1507,7 +1667,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+            "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+            "canonical_label": "OCI - Pension & Postretirement",
+            "ledger_rule_id": "GEN-IS-026",
             "value": "2",
             "raw_numeric_text": "2",
             "notation_flags": 0,
@@ -1525,7 +1687,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+            "raw_filing_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+            "canonical_label": "OCI - Total Net of Tax",
+            "ledger_rule_id": "GEN-IS-024",
             "value": "46",
             "raw_numeric_text": "46",
             "notation_flags": 0,
@@ -1543,7 +1707,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "4377",
             "raw_numeric_text": "4,377",
             "notation_flags": 0,
@@ -1561,7 +1727,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Comprehensive income attributable to noncontrolling interests",
+            "canonical_label": "Comprehensive Income Attributable to NCI",
+            "ledger_rule_id": "GEN-IS-027",
             "value": "10",
             "raw_numeric_text": "10",
             "notation_flags": 0,
@@ -1579,7 +1747,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "4367",
             "raw_numeric_text": "4,367",
             "notation_flags": 0,
@@ -1618,7 +1788,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "Revenues",
+            "raw_filing_label": "NET SALES",
+            "canonical_label": "Net Sales / Revenue",
+            "ledger_rule_id": "GEN-IS-001",
             "value": "44594",
             "raw_numeric_text": "44,594",
             "notation_flags": 0,
@@ -1636,7 +1808,9 @@
             }
           },
           {
-            "raw_filing_label": "CostOfGoodsAndServicesSold",
+            "raw_filing_label": "Cost of products sold",
+            "canonical_label": "COGS",
+            "ledger_rule_id": "GEN-IS-002",
             "value": "21721",
             "raw_numeric_text": "21,721",
             "notation_flags": 0,
@@ -1654,7 +1828,9 @@
             }
           },
           {
-            "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+            "raw_filing_label": "Selling, general and administrative expense",
+            "canonical_label": "SG&A",
+            "ledger_rule_id": "GEN-IS-004",
             "value": "11651",
             "raw_numeric_text": "11,651",
             "notation_flags": 0,
@@ -1672,7 +1848,9 @@
             }
           },
           {
-            "raw_filing_label": "OperatingIncomeLoss",
+            "raw_filing_label": "OPERATING INCOME",
+            "canonical_label": "Income (Loss) from Operations",
+            "ledger_rule_id": "GEN-IS-005",
             "value": "11222",
             "raw_numeric_text": "11,222",
             "notation_flags": 0,
@@ -1690,7 +1868,9 @@
             }
           },
           {
-            "raw_filing_label": "InterestExpenseNonoperating",
+            "raw_filing_label": "Interest expense",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "417",
             "raw_numeric_text": "417",
             "notation_flags": 0,
@@ -1708,7 +1888,9 @@
             }
           },
           {
-            "raw_filing_label": "InvestmentIncomeInterest",
+            "raw_filing_label": "Interest income",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "222",
             "raw_numeric_text": "222",
             "notation_flags": 0,
@@ -1726,7 +1908,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherNonoperatingIncomeExpense",
+            "raw_filing_label": "Other non-operating income/(expense), net",
+            "canonical_label": "Other Income (Expense)",
+            "ledger_rule_id": "GEN-IS-008",
             "value": "427",
             "raw_numeric_text": "427",
             "notation_flags": 0,
@@ -1744,7 +1928,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+            "canonical_label": "Net Income (Loss) Including NCI",
+            "ledger_rule_id": "GEN-IS-022",
             "value": "11455",
             "raw_numeric_text": "11,455",
             "notation_flags": 0,
@@ -1762,7 +1948,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeTaxExpenseBenefit",
+            "raw_filing_label": "Income taxes",
+            "canonical_label": "Income Tax (Benefit) Expense",
+            "ledger_rule_id": "GEN-IS-010",
             "value": "2343",
             "raw_numeric_text": "2,343",
             "notation_flags": 0,
@@ -1780,7 +1968,9 @@
             }
           },
           {
-            "raw_filing_label": "ProfitLoss",
+            "raw_filing_label": "NET EARNINGS",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "9112",
             "raw_numeric_text": "9,112",
             "notation_flags": 0,
@@ -1798,7 +1988,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+            "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+            "ledger_rule_id": "GEN-IS-023",
             "value": "42",
             "raw_numeric_text": "42",
             "notation_flags": 0,
@@ -1816,7 +2008,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLoss",
+            "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "9070",
             "raw_numeric_text": "9,070",
             "notation_flags": 0,
@@ -1834,7 +2028,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareBasic",
+            "raw_filing_label": "Basic (in dollars per share)",
+            "canonical_label": "Basic Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-016",
             "value": "0.00000382",
             "raw_numeric_text": "3.82",
             "notation_flags": 0,
@@ -1852,7 +2048,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareDiluted",
+            "raw_filing_label": "Diluted (in dollars per share)",
+            "canonical_label": "Diluted Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-017",
             "value": "0.00000373",
             "raw_numeric_text": "3.73",
             "notation_flags": 0,
@@ -1870,7 +2068,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+            "raw_filing_label": "Foreign currency translation",
+            "canonical_label": "Foreign Currency Translation (OCI)",
+            "ledger_rule_id": "GEN-IS-020",
             "value": "25",
             "raw_numeric_text": "25",
             "notation_flags": 0,
@@ -1888,7 +2088,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+            "raw_filing_label": "Unrealized gains/(losses) on investment securities",
+            "canonical_label": "OCI - AFS Securities",
+            "ledger_rule_id": "GEN-IS-025",
             "value": "1",
             "raw_numeric_text": "1",
             "notation_flags": 0,
@@ -1906,7 +2108,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+            "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+            "canonical_label": "OCI - Pension & Postretirement",
+            "ledger_rule_id": "GEN-IS-026",
             "value": "-1",
             "raw_numeric_text": "1",
             "notation_flags": 0,
@@ -1924,7 +2128,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+            "raw_filing_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+            "canonical_label": "OCI - Total Net of Tax",
+            "ledger_rule_id": "GEN-IS-024",
             "value": "27",
             "raw_numeric_text": "27",
             "notation_flags": 0,
@@ -1942,7 +2148,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "9139",
             "raw_numeric_text": "9,139",
             "notation_flags": 0,
@@ -1960,7 +2168,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Comprehensive income attributable to noncontrolling interests",
+            "canonical_label": "Comprehensive Income Attributable to NCI",
+            "ledger_rule_id": "GEN-IS-027",
             "value": "34",
             "raw_numeric_text": "34",
             "notation_flags": 0,
@@ -1978,7 +2188,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "9105",
             "raw_numeric_text": "9,105",
             "notation_flags": 0,
@@ -2017,7 +2229,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "Revenues",
+            "raw_filing_label": "NET SALES",
+            "canonical_label": "Net Sales / Revenue",
+            "ledger_rule_id": "GEN-IS-001",
             "value": "21882",
             "raw_numeric_text": "21,882",
             "notation_flags": 0,
@@ -2035,7 +2249,9 @@
             }
           },
           {
-            "raw_filing_label": "CostOfGoodsAndServicesSold",
+            "raw_filing_label": "Cost of products sold",
+            "canonical_label": "COGS",
+            "ledger_rule_id": "GEN-IS-002",
             "value": "10418",
             "raw_numeric_text": "10,418",
             "notation_flags": 0,
@@ -2053,7 +2269,9 @@
             }
           },
           {
-            "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+            "raw_filing_label": "Selling, general and administrative expense",
+            "canonical_label": "SG&A",
+            "ledger_rule_id": "GEN-IS-004",
             "value": "5723",
             "raw_numeric_text": "5,723",
             "notation_flags": 0,
@@ -2071,7 +2289,9 @@
             }
           },
           {
-            "raw_filing_label": "OperatingIncomeLoss",
+            "raw_filing_label": "OPERATING INCOME",
+            "canonical_label": "Income (Loss) from Operations",
+            "ledger_rule_id": "GEN-IS-005",
             "value": "5741",
             "raw_numeric_text": "5,741",
             "notation_flags": 0,
@@ -2089,7 +2309,9 @@
             }
           },
           {
-            "raw_filing_label": "InterestExpenseNonoperating",
+            "raw_filing_label": "Interest expense",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "240",
             "raw_numeric_text": "240",
             "notation_flags": 0,
@@ -2107,7 +2329,9 @@
             }
           },
           {
-            "raw_filing_label": "InvestmentIncomeInterest",
+            "raw_filing_label": "Interest income",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "119",
             "raw_numeric_text": "119",
             "notation_flags": 0,
@@ -2125,7 +2349,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherNonoperatingIncomeExpense",
+            "raw_filing_label": "Other non-operating income/(expense), net",
+            "canonical_label": "Other Income (Expense)",
+            "ledger_rule_id": "GEN-IS-008",
             "value": "224",
             "raw_numeric_text": "224",
             "notation_flags": 0,
@@ -2143,7 +2369,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+            "canonical_label": "Net Income (Loss) Including NCI",
+            "ledger_rule_id": "GEN-IS-022",
             "value": "5845",
             "raw_numeric_text": "5,845",
             "notation_flags": 0,
@@ -2161,7 +2389,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeTaxExpenseBenefit",
+            "raw_filing_label": "Income taxes",
+            "canonical_label": "Income Tax (Benefit) Expense",
+            "ledger_rule_id": "GEN-IS-010",
             "value": "1187",
             "raw_numeric_text": "1,187",
             "notation_flags": 0,
@@ -2179,7 +2409,9 @@
             }
           },
           {
-            "raw_filing_label": "ProfitLoss",
+            "raw_filing_label": "NET EARNINGS",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "4659",
             "raw_numeric_text": "4,659",
             "notation_flags": 0,
@@ -2197,7 +2429,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+            "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+            "ledger_rule_id": "GEN-IS-023",
             "value": "29",
             "raw_numeric_text": "29",
             "notation_flags": 0,
@@ -2215,7 +2449,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLoss",
+            "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "4630",
             "raw_numeric_text": "4,630",
             "notation_flags": 0,
@@ -2233,7 +2469,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareBasic",
+            "raw_filing_label": "Basic (in dollars per share)",
+            "canonical_label": "Basic Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-016",
             "value": "0.00000194",
             "raw_numeric_text": "1.94",
             "notation_flags": 0,
@@ -2251,7 +2489,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareDiluted",
+            "raw_filing_label": "Diluted (in dollars per share)",
+            "canonical_label": "Diluted Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-017",
             "value": "0.00000188",
             "raw_numeric_text": "1.88",
             "notation_flags": 0,
@@ -2269,7 +2509,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+            "raw_filing_label": "Foreign currency translation",
+            "canonical_label": "Foreign Currency Translation (OCI)",
+            "ledger_rule_id": "GEN-IS-020",
             "value": "-770",
             "raw_numeric_text": "770",
             "notation_flags": 0,
@@ -2287,7 +2529,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+            "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+            "canonical_label": "OCI - Pension & Postretirement",
+            "ledger_rule_id": "GEN-IS-026",
             "value": "-24",
             "raw_numeric_text": "24",
             "notation_flags": 0,
@@ -2305,7 +2549,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+            "raw_filing_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+            "canonical_label": "OCI - Total Net of Tax",
+            "ledger_rule_id": "GEN-IS-024",
             "value": "-747",
             "raw_numeric_text": "747",
             "notation_flags": 0,
@@ -2323,7 +2569,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "3912",
             "raw_numeric_text": "3,912",
             "notation_flags": 0,
@@ -2341,7 +2589,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Comprehensive income attributable to noncontrolling interests",
+            "canonical_label": "Comprehensive Income Attributable to NCI",
+            "ledger_rule_id": "GEN-IS-027",
             "value": "26",
             "raw_numeric_text": "26",
             "notation_flags": 0,
@@ -2359,7 +2609,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "3887",
             "raw_numeric_text": "3,887",
             "notation_flags": 0,
@@ -2398,7 +2650,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "Revenues",
+            "raw_filing_label": "NET SALES",
+            "canonical_label": "Net Sales / Revenue",
+            "ledger_rule_id": "GEN-IS-001",
             "value": "43619",
             "raw_numeric_text": "43,619",
             "notation_flags": 0,
@@ -2416,7 +2670,9 @@
             }
           },
           {
-            "raw_filing_label": "CostOfGoodsAndServicesSold",
+            "raw_filing_label": "Cost of products sold",
+            "canonical_label": "COGS",
+            "ledger_rule_id": "GEN-IS-002",
             "value": "20839",
             "raw_numeric_text": "20,839",
             "notation_flags": 0,
@@ -2434,7 +2690,9 @@
             }
           },
           {
-            "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+            "raw_filing_label": "Selling, general and administrative expense",
+            "canonical_label": "SG&A",
+            "ledger_rule_id": "GEN-IS-004",
             "value": "11242",
             "raw_numeric_text": "11,242",
             "notation_flags": 0,
@@ -2452,7 +2710,9 @@
             }
           },
           {
-            "raw_filing_label": "OperatingIncomeLoss",
+            "raw_filing_label": "OPERATING INCOME",
+            "canonical_label": "Income (Loss) from Operations",
+            "ledger_rule_id": "GEN-IS-005",
             "value": "11538",
             "raw_numeric_text": "11,538",
             "notation_flags": 0,
@@ -2470,7 +2730,9 @@
             }
           },
           {
-            "raw_filing_label": "InterestExpenseNonoperating",
+            "raw_filing_label": "Interest expense",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "478",
             "raw_numeric_text": "478",
             "notation_flags": 0,
@@ -2488,7 +2750,9 @@
             }
           },
           {
-            "raw_filing_label": "InvestmentIncomeInterest",
+            "raw_filing_label": "Interest income",
+            "canonical_label": "Interest Income (Expense)",
+            "ledger_rule_id": "GEN-IS-006",
             "value": "254",
             "raw_numeric_text": "254",
             "notation_flags": 0,
@@ -2506,7 +2770,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherNonoperatingIncomeExpense",
+            "raw_filing_label": "Other non-operating income/(expense), net",
+            "canonical_label": "Other Income (Expense)",
+            "ledger_rule_id": "GEN-IS-008",
             "value": "-330",
             "raw_numeric_text": "330",
             "notation_flags": 0,
@@ -2524,7 +2790,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+            "canonical_label": "Net Income (Loss) Including NCI",
+            "ledger_rule_id": "GEN-IS-022",
             "value": "10985",
             "raw_numeric_text": "10,985",
             "notation_flags": 0,
@@ -2542,7 +2810,9 @@
             }
           },
           {
-            "raw_filing_label": "IncomeTaxExpenseBenefit",
+            "raw_filing_label": "Income taxes",
+            "canonical_label": "Income Tax (Benefit) Expense",
+            "ledger_rule_id": "GEN-IS-010",
             "value": "2339",
             "raw_numeric_text": "2,339",
             "notation_flags": 0,
@@ -2560,7 +2830,9 @@
             }
           },
           {
-            "raw_filing_label": "ProfitLoss",
+            "raw_filing_label": "NET EARNINGS",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "8646",
             "raw_numeric_text": "8,646",
             "notation_flags": 0,
@@ -2578,7 +2850,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+            "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+            "ledger_rule_id": "GEN-IS-023",
             "value": "56",
             "raw_numeric_text": "56",
             "notation_flags": 0,
@@ -2596,7 +2870,9 @@
             }
           },
           {
-            "raw_filing_label": "NetIncomeLoss",
+            "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "8589",
             "raw_numeric_text": "8,589",
             "notation_flags": 0,
@@ -2614,7 +2890,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareBasic",
+            "raw_filing_label": "Basic (in dollars per share)",
+            "canonical_label": "Basic Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-016",
             "value": "0.00000359",
             "raw_numeric_text": "3.59",
             "notation_flags": 0,
@@ -2632,7 +2910,9 @@
             }
           },
           {
-            "raw_filing_label": "EarningsPerShareDiluted",
+            "raw_filing_label": "Diluted (in dollars per share)",
+            "canonical_label": "Diluted Earnings (Loss) per Share",
+            "ledger_rule_id": "GEN-IS-017",
             "value": "0.00000349",
             "raw_numeric_text": "3.49",
             "notation_flags": 0,
@@ -2650,7 +2930,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+            "raw_filing_label": "Foreign currency translation",
+            "canonical_label": "Foreign Currency Translation (OCI)",
+            "ledger_rule_id": "GEN-IS-020",
             "value": "256",
             "raw_numeric_text": "256",
             "notation_flags": 0,
@@ -2668,7 +2950,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+            "raw_filing_label": "Unrealized gains/(losses) on investment securities",
+            "canonical_label": "OCI - AFS Securities",
+            "ledger_rule_id": "GEN-IS-025",
             "value": "1",
             "raw_numeric_text": "1",
             "notation_flags": 0,
@@ -2686,7 +2970,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+            "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+            "canonical_label": "OCI - Pension & Postretirement",
+            "ledger_rule_id": "GEN-IS-026",
             "value": "-3",
             "raw_numeric_text": "3",
             "notation_flags": 0,
@@ -2704,7 +2990,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+            "raw_filing_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+            "canonical_label": "OCI - Total Net of Tax",
+            "ledger_rule_id": "GEN-IS-024",
             "value": "260",
             "raw_numeric_text": "260",
             "notation_flags": 0,
@@ -2722,7 +3010,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "8906",
             "raw_numeric_text": "8,906",
             "notation_flags": 0,
@@ -2740,7 +3030,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+            "raw_filing_label": "Less: Comprehensive income attributable to noncontrolling interests",
+            "canonical_label": "Comprehensive Income Attributable to NCI",
+            "ledger_rule_id": "GEN-IS-027",
             "value": "54",
             "raw_numeric_text": "54",
             "notation_flags": 0,
@@ -2758,7 +3050,9 @@
             }
           },
           {
-            "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+            "raw_filing_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+            "canonical_label": "Total Comprehensive Income (Loss)",
+            "ledger_rule_id": "GEN-IS-015",
             "value": "8852",
             "raw_numeric_text": "8,852",
             "notation_flags": 0,
@@ -2797,7 +3091,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "DepreciationDepletionAndAmortization",
+            "raw_filing_label": "Depreciation and amortization",
+            "canonical_label": "Depreciation & Amortization",
+            "ledger_rule_id": "GEN-CF-002",
             "value": "1563",
             "raw_numeric_text": "1,563",
             "notation_flags": 0,
@@ -2815,7 +3111,9 @@
             }
           },
           {
-            "raw_filing_label": "ShareBasedCompensation",
+            "raw_filing_label": "Share-based compensation expense",
+            "canonical_label": "Stock-Based Compensation",
+            "ledger_rule_id": "GEN-CF-006",
             "value": "262",
             "raw_numeric_text": "262",
             "notation_flags": 0,
@@ -2833,7 +3131,9 @@
             }
           },
           {
-            "raw_filing_label": "DeferredIncomeTaxExpenseBenefit",
+            "raw_filing_label": "Deferred income taxes",
+            "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+            "ledger_rule_id": "GEN-CF-008",
             "value": "196",
             "raw_numeric_text": "196",
             "notation_flags": 0,
@@ -2851,7 +3151,9 @@
             }
           },
           {
-            "raw_filing_label": "GainLossOnDispositionOfAssets1",
+            "raw_filing_label": "(Gain)/loss on sale of assets",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "-1",
             "raw_numeric_text": "1",
             "notation_flags": 0,
@@ -2869,7 +3171,9 @@
             }
           },
           {
-            "raw_filing_label": "IncreaseDecreaseInAccountsReceivable",
+            "raw_filing_label": "Change in accounts receivable",
+            "canonical_label": "Accounts Receivable",
+            "ledger_rule_id": "GEN-CF-011",
             "value": "92",
             "raw_numeric_text": "92",
             "notation_flags": 0,
@@ -2887,7 +3191,9 @@
             }
           },
           {
-            "raw_filing_label": "IncreaseDecreaseInInventories",
+            "raw_filing_label": "Change in inventories",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-CF-012",
             "value": "255",
             "raw_numeric_text": "255",
             "notation_flags": 0,
@@ -2905,7 +3211,9 @@
             }
           },
           {
-            "raw_filing_label": "IncreaseDecreaseInAccountsPayable",
+            "raw_filing_label": "Change in accounts payable",
+            "canonical_label": "Accounts Payable",
+            "ledger_rule_id": "GEN-CF-014",
             "value": "239",
             "raw_numeric_text": "239",
             "notation_flags": 0,
@@ -2923,7 +3231,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherNoncashIncomeExpense",
+            "raw_filing_label": "Other",
+            "canonical_label": "Other Operating Items",
+            "ledger_rule_id": "GEN-CF-010",
             "value": "645",
             "raw_numeric_text": "645",
             "notation_flags": 0,
@@ -2941,7 +3251,9 @@
             }
           },
           {
-            "raw_filing_label": "NetCashProvidedByUsedInOperatingActivities",
+            "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "10380",
             "raw_numeric_text": "10,380",
             "notation_flags": 0,
@@ -2959,7 +3271,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "raw_filing_label": "Capital expenditures",
+            "canonical_label": "Purchase of PP&E",
+            "ledger_rule_id": "GEN-CF-024",
             "value": "2367",
             "raw_numeric_text": "2,367",
             "notation_flags": 0,
@@ -2977,7 +3291,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromSaleOfProductiveAssets",
+            "raw_filing_label": "Proceeds from asset sales",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "16",
             "raw_numeric_text": "16",
             "notation_flags": 0,
@@ -2995,7 +3311,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+            "raw_filing_label": "Acquisitions, net of cash acquired",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "5",
             "raw_numeric_text": "5",
             "notation_flags": 0,
@@ -3013,7 +3331,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsForProceedsFromInvestments",
+            "raw_filing_label": "Other investing activity",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "408",
             "raw_numeric_text": "408",
             "notation_flags": 0,
@@ -3031,7 +3351,9 @@
             }
           },
           {
-            "raw_filing_label": "NetCashProvidedByUsedInInvestingActivities",
+            "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-2763",
             "raw_numeric_text": "2,763",
             "notation_flags": 0,
@@ -3049,7 +3371,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsOfDividends",
+            "raw_filing_label": "Dividends to shareholders",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "5093",
             "raw_numeric_text": "5,093",
             "notation_flags": 0,
@@ -3067,7 +3391,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths",
+            "raw_filing_label": "Additions to short-term debt with original maturities of more than three months",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "4180",
             "raw_numeric_text": "4,180",
             "notation_flags": 0,
@@ -3085,7 +3411,9 @@
             }
           },
           {
-            "raw_filing_label": "RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths",
+            "raw_filing_label": "Reductions in short-term debt with original maturities of more than three months",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "3270",
             "raw_numeric_text": "3,270",
             "notation_flags": 0,
@@ -3103,7 +3431,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess",
+            "raw_filing_label": "Net additions/(reductions) to other short-term debt",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "-471",
             "raw_numeric_text": "471",
             "notation_flags": 0,
@@ -3121,7 +3451,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromIssuanceOfLongTermDebt",
+            "raw_filing_label": "Additions to long-term debt",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "2652",
             "raw_numeric_text": "2,652",
             "notation_flags": 0,
@@ -3139,7 +3471,9 @@
             }
           },
           {
-            "raw_filing_label": "RepaymentsOfLongTermDebt",
+            "raw_filing_label": "Reductions in long-term debt",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "1005",
             "raw_numeric_text": "1,005",
             "notation_flags": 0,
@@ -3157,7 +3491,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsForRepurchaseOfCommonStock",
+            "raw_filing_label": "Treasury stock purchases",
+            "canonical_label": "Share Repurchases",
+            "ledger_rule_id": "GEN-CF-032",
             "value": "3528",
             "raw_numeric_text": "3,528",
             "notation_flags": 0,
@@ -3175,7 +3511,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromStockOptionsExercisedAndOtherFinancingActivities",
+            "raw_filing_label": "Impact of stock options and other",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "208",
             "raw_numeric_text": "208",
             "notation_flags": 0,
@@ -3193,7 +3531,9 @@
             }
           },
           {
-            "raw_filing_label": "NetCashProvidedByUsedInFinancingActivities",
+            "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "-6327",
             "raw_numeric_text": "6,327",
             "notation_flags": 0,
@@ -3211,7 +3551,9 @@
             }
           },
           {
-            "raw_filing_label": "EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+            "raw_filing_label": "EFFECT OF EXCHANGE RATE CHANGES ON CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "-21",
             "raw_numeric_text": "21",
             "notation_flags": 0,
@@ -3229,7 +3571,9 @@
             }
           },
           {
-            "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+            "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "1269",
             "raw_numeric_text": "1,269",
             "notation_flags": 0,
@@ -3268,7 +3612,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "DepreciationDepletionAndAmortization",
+            "raw_filing_label": "Depreciation and amortization",
+            "canonical_label": "Depreciation & Amortization",
+            "ledger_rule_id": "GEN-CF-002",
             "value": "803",
             "raw_numeric_text": "803",
             "notation_flags": 0,
@@ -3307,7 +3653,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "DepreciationDepletionAndAmortization",
+            "raw_filing_label": "Depreciation and amortization",
+            "canonical_label": "Depreciation & Amortization",
+            "ledger_rule_id": "GEN-CF-002",
             "value": "1434",
             "raw_numeric_text": "1,434",
             "notation_flags": 0,
@@ -3325,7 +3673,9 @@
             }
           },
           {
-            "raw_filing_label": "ShareBasedCompensation",
+            "raw_filing_label": "Share-based compensation expense",
+            "canonical_label": "Stock-Based Compensation",
+            "ledger_rule_id": "GEN-CF-006",
             "value": "241",
             "raw_numeric_text": "241",
             "notation_flags": 0,
@@ -3343,7 +3693,9 @@
             }
           },
           {
-            "raw_filing_label": "DeferredIncomeTaxExpenseBenefit",
+            "raw_filing_label": "Deferred income taxes",
+            "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+            "ledger_rule_id": "GEN-CF-008",
             "value": "221",
             "raw_numeric_text": "221",
             "notation_flags": 0,
@@ -3361,7 +3713,9 @@
             }
           },
           {
-            "raw_filing_label": "GainLossOnDispositionOfAssets1",
+            "raw_filing_label": "(Gain)/loss on sale of assets",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "-787",
             "raw_numeric_text": "787",
             "notation_flags": 0,
@@ -3379,7 +3733,9 @@
             }
           },
           {
-            "raw_filing_label": "IncreaseDecreaseInAccountsReceivable",
+            "raw_filing_label": "Change in accounts receivable",
+            "canonical_label": "Accounts Receivable",
+            "ledger_rule_id": "GEN-CF-011",
             "value": "262",
             "raw_numeric_text": "262",
             "notation_flags": 0,
@@ -3397,7 +3753,9 @@
             }
           },
           {
-            "raw_filing_label": "IncreaseDecreaseInInventories",
+            "raw_filing_label": "Change in inventories",
+            "canonical_label": "Inventories",
+            "ledger_rule_id": "GEN-CF-012",
             "value": "170",
             "raw_numeric_text": "170",
             "notation_flags": 0,
@@ -3415,7 +3773,9 @@
             }
           },
           {
-            "raw_filing_label": "IncreaseDecreaseInAccountsPayable",
+            "raw_filing_label": "Change in accounts payable",
+            "canonical_label": "Accounts Payable",
+            "ledger_rule_id": "GEN-CF-014",
             "value": "-286",
             "raw_numeric_text": "286",
             "notation_flags": 0,
@@ -3433,7 +3793,9 @@
             }
           },
           {
-            "raw_filing_label": "OtherNoncashIncomeExpense",
+            "raw_filing_label": "Other",
+            "canonical_label": "Other Operating Items",
+            "ledger_rule_id": "GEN-CF-010",
             "value": "1484",
             "raw_numeric_text": "1,484",
             "notation_flags": 0,
@@ -3451,7 +3813,9 @@
             }
           },
           {
-            "raw_filing_label": "NetCashProvidedByUsedInOperatingActivities",
+            "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "9127",
             "raw_numeric_text": "9,127",
             "notation_flags": 0,
@@ -3469,7 +3833,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "raw_filing_label": "Capital expenditures",
+            "canonical_label": "Purchase of PP&E",
+            "ledger_rule_id": "GEN-CF-024",
             "value": "1918",
             "raw_numeric_text": "1,918",
             "notation_flags": 0,
@@ -3487,7 +3853,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromSaleOfProductiveAssets",
+            "raw_filing_label": "Proceeds from asset sales",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "47",
             "raw_numeric_text": "47",
             "notation_flags": 0,
@@ -3505,7 +3873,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+            "raw_filing_label": "Acquisitions, net of cash acquired",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "6",
             "raw_numeric_text": "6",
             "notation_flags": 0,
@@ -3523,7 +3893,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsForProceedsFromInvestments",
+            "raw_filing_label": "Other investing activity",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "153",
             "raw_numeric_text": "153",
             "notation_flags": 0,
@@ -3541,7 +3913,9 @@
             }
           },
           {
-            "raw_filing_label": "NetCashProvidedByUsedInInvestingActivities",
+            "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-2029",
             "raw_numeric_text": "2,029",
             "notation_flags": 0,
@@ -3559,7 +3933,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsOfDividends",
+            "raw_filing_label": "Dividends to shareholders",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "4886",
             "raw_numeric_text": "4,886",
             "notation_flags": 0,
@@ -3577,7 +3953,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths",
+            "raw_filing_label": "Additions to short-term debt with original maturities of more than three months",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "5905",
             "raw_numeric_text": "5,905",
             "notation_flags": 0,
@@ -3595,7 +3973,9 @@
             }
           },
           {
-            "raw_filing_label": "RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths",
+            "raw_filing_label": "Reductions in short-term debt with original maturities of more than three months",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "571",
             "raw_numeric_text": "571",
             "notation_flags": 0,
@@ -3613,7 +3993,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess",
+            "raw_filing_label": "Net additions/(reductions) to other short-term debt",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "-2705",
             "raw_numeric_text": "2,705",
             "notation_flags": 0,
@@ -3631,7 +4013,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromIssuanceOfLongTermDebt",
+            "raw_filing_label": "Additions to long-term debt",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "995",
             "raw_numeric_text": "995",
             "notation_flags": 0,
@@ -3649,7 +4033,9 @@
             }
           },
           {
-            "raw_filing_label": "RepaymentsOfLongTermDebt",
+            "raw_filing_label": "Reductions in long-term debt",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "1478",
             "raw_numeric_text": "1,478",
             "notation_flags": 0,
@@ -3667,7 +4053,9 @@
             }
           },
           {
-            "raw_filing_label": "PaymentsForRepurchaseOfCommonStock",
+            "raw_filing_label": "Treasury stock purchases",
+            "canonical_label": "Share Repurchases",
+            "ledger_rule_id": "GEN-CF-032",
             "value": "4449",
             "raw_numeric_text": "4,449",
             "notation_flags": 0,
@@ -3685,7 +4073,9 @@
             }
           },
           {
-            "raw_filing_label": "ProceedsFromStockOptionsExercisedAndOtherFinancingActivities",
+            "raw_filing_label": "Impact of stock options and other",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "985",
             "raw_numeric_text": "985",
             "notation_flags": 0,
@@ -3703,7 +4093,9 @@
             }
           },
           {
-            "raw_filing_label": "NetCashProvidedByUsedInFinancingActivities",
+            "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "-6205",
             "raw_numeric_text": "6,205",
             "notation_flags": 0,
@@ -3721,7 +4113,9 @@
             }
           },
           {
-            "raw_filing_label": "EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+            "raw_filing_label": "EFFECT OF EXCHANGE RATE CHANGES ON CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "-144",
             "raw_numeric_text": "144",
             "notation_flags": 0,
@@ -3739,7 +4133,9 @@
             }
           },
           {
-            "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+            "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "748",
             "raw_numeric_text": "748",
             "notation_flags": 0,
@@ -3778,7 +4174,9 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
-            "raw_filing_label": "DepreciationDepletionAndAmortization",
+            "raw_filing_label": "Depreciation and amortization",
+            "canonical_label": "Depreciation & Amortization",
+            "ledger_rule_id": "GEN-CF-002",
             "value": "706",
             "raw_numeric_text": "706",
             "notation_flags": 0,
@@ -3812,7 +4210,9 @@
   },
   "mapped_line_items": [
     {
-      "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "raw_filing_label": "Cash and cash equivalents",
+      "canonical_label": "Cash & Cash Equivalents",
+      "ledger_rule_id": "GEN-BS-001",
       "value": "10825",
       "raw_numeric_text": "10,825",
       "notation_flags": 0,
@@ -3828,14 +4228,15 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Cash & Cash Equivalents",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-001"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccountsReceivableNetCurrent",
+      "raw_filing_label": "Accounts receivable",
+      "canonical_label": "Accounts Receivable",
+      "ledger_rule_id": "GEN-BS-003",
       "value": "6279",
       "raw_numeric_text": "6,279",
       "notation_flags": 0,
@@ -3851,14 +4252,15 @@
         "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accounts Receivable",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-003"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryRawMaterialsAndSuppliesNetOfReserves",
+      "raw_filing_label": "Materials and supplies",
+      "canonical_label": "Inventories",
+      "ledger_rule_id": "GEN-BS-038",
       "value": "2139",
       "raw_numeric_text": "2,139",
       "notation_flags": 0,
@@ -3874,14 +4276,15 @@
         "line_hint": "us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-038"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryWorkInProcessNetOfReserves",
+      "raw_filing_label": "Work in process",
+      "canonical_label": "Inventories",
+      "ledger_rule_id": "GEN-BS-038",
       "value": "1007",
       "raw_numeric_text": "1,007",
       "notation_flags": 0,
@@ -3897,14 +4300,15 @@
         "line_hint": "us-gaap:InventoryWorkInProcessNetOfReserves | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-038"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
+      "raw_filing_label": "Finished goods",
+      "canonical_label": "Inventories",
+      "ledger_rule_id": "GEN-BS-038",
       "value": "4672",
       "raw_numeric_text": "4,672",
       "notation_flags": 0,
@@ -3920,20 +4324,21 @@
         "line_hint": "us-gaap:InventoryFinishedGoodsNetOfReserves | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-038"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryNet",
+      "raw_filing_label": "Total inventories",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "7817",
       "raw_numeric_text": "7,817",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "non_current_assets",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -3943,14 +4348,15 @@
         "line_hint": "us-gaap:InventoryNet | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-005"
+      "model_label": "Total inventories",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "PrepaidExpenseAndOtherAssetsCurrent",
+      "raw_filing_label": "Prepaid expenses and other current assets",
+      "canonical_label": "Prepaid Expenses",
+      "ledger_rule_id": "GEN-BS-006",
       "value": "1666",
       "raw_numeric_text": "1,666",
       "notation_flags": 0,
@@ -3966,14 +4372,15 @@
         "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Prepaid Expenses",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-006"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AssetsCurrent",
+      "raw_filing_label": "TOTAL CURRENT ASSETS",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "26588",
       "raw_numeric_text": "26,588",
       "notation_flags": 0,
@@ -3991,12 +4398,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "AssetsCurrent",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL CURRENT ASSETS",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "PropertyPlantAndEquipmentNet",
+      "raw_filing_label": "PROPERTY, PLANT AND EQUIPMENT, NET",
+      "canonical_label": "Net PP&E",
+      "ledger_rule_id": "GEN-BS-007",
       "value": "24487",
       "raw_numeric_text": "24,487",
       "notation_flags": 0,
@@ -4012,14 +4420,15 @@
         "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Net PP&E",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-007"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Goodwill",
+      "raw_filing_label": "GOODWILL",
+      "canonical_label": "Goodwill",
+      "ledger_rule_id": "GEN-BS-013",
       "value": "41665",
       "raw_numeric_text": "41,665",
       "notation_flags": 0,
@@ -4035,14 +4444,15 @@
         "line_hint": "us-gaap:Goodwill | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Goodwill",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-013"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "IntangibleAssetsNetExcludingGoodwill",
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "canonical_label": "Intangible Assets",
+      "ledger_rule_id": "GEN-BS-012",
       "value": "21737",
       "raw_numeric_text": "21,737",
       "notation_flags": 0,
@@ -4058,14 +4468,15 @@
         "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Intangible Assets",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-012"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherAssetsNoncurrent",
+      "raw_filing_label": "OTHER NONCURRENT ASSETS",
+      "canonical_label": "Other Non-Current Assets",
+      "ledger_rule_id": "GEN-BS-014",
       "value": "12809",
       "raw_numeric_text": "12,809",
       "notation_flags": 0,
@@ -4081,14 +4492,15 @@
         "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Other Non-Current Assets",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-014"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Assets",
+      "raw_filing_label": "TOTAL ASSETS",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "127286",
       "raw_numeric_text": "127,286",
       "notation_flags": 0,
@@ -4106,12 +4518,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Assets",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL ASSETS",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccountsPayableCurrent",
+      "raw_filing_label": "Accounts payable",
+      "canonical_label": "Accounts Payable",
+      "ledger_rule_id": "GEN-BS-015",
       "value": "15173",
       "raw_numeric_text": "15,173",
       "notation_flags": 0,
@@ -4127,14 +4540,15 @@
         "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accounts Payable",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-015"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccruedLiabilitiesCurrent",
+      "raw_filing_label": "Accrued and other liabilities",
+      "canonical_label": "Accrued Expenses",
+      "ledger_rule_id": "GEN-BS-016",
       "value": "10463",
       "raw_numeric_text": "10,463",
       "notation_flags": 0,
@@ -4150,14 +4564,15 @@
         "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accrued Expenses",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-016"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "DebtCurrent",
+      "raw_filing_label": "Debt due within one year",
+      "canonical_label": "Current Portion of Long-Term Debt",
+      "ledger_rule_id": "GEN-BS-033",
       "value": "11062",
       "raw_numeric_text": "11,062",
       "notation_flags": 0,
@@ -4173,14 +4588,15 @@
         "line_hint": "us-gaap:DebtCurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Current Portion of Long-Term Debt",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-033"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "LiabilitiesCurrent",
+      "raw_filing_label": "TOTAL CURRENT LIABILITIES",
+      "canonical_label": "Other Current Liabilities",
+      "ledger_rule_id": "GEN-BS-022",
       "value": "36699",
       "raw_numeric_text": "36,699",
       "notation_flags": 0,
@@ -4198,12 +4614,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "LiabilitiesCurrent",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL CURRENT LIABILITIES",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "LongTermDebtNoncurrent",
+      "raw_filing_label": "LONG-TERM DEBT",
+      "canonical_label": "Long-Term Debt",
+      "ledger_rule_id": "GEN-BS-041",
       "value": "25577",
       "raw_numeric_text": "25,577",
       "notation_flags": 0,
@@ -4219,14 +4636,15 @@
         "line_hint": "us-gaap:LongTermDebtNoncurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Long-Term Debt",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-041"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",
+      "raw_filing_label": "DEFERRED INCOME TAXES",
+      "canonical_label": "Deferred Tax Assets",
+      "ledger_rule_id": "GEN-BS-008",
       "value": "5974",
       "raw_numeric_text": "5,974",
       "notation_flags": 0,
@@ -4242,14 +4660,15 @@
         "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
-      "model_label": "Deferred Tax Liability",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-025"
+      "model_label": "Deferred Tax Assets",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherLiabilitiesNoncurrent",
+      "raw_filing_label": "OTHER NONCURRENT LIABILITIES",
+      "canonical_label": "Other Non-Current Liabilities",
+      "ledger_rule_id": "GEN-BS-034",
       "value": "5719",
       "raw_numeric_text": "5,719",
       "notation_flags": 0,
@@ -4265,14 +4684,15 @@
         "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Other Non-Current Liabilities",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-034"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Liabilities",
+      "raw_filing_label": "TOTAL LIABILITIES",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "73969",
       "raw_numeric_text": "73,969",
       "notation_flags": 0,
@@ -4290,12 +4710,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Liabilities",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL LIABILITIES",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "PreferredStockValue",
+      "raw_filing_label": "Preferred stock",
+      "canonical_label": "Convertible Preferred Stock",
+      "ledger_rule_id": "GEN-BS-027",
       "value": "767",
       "raw_numeric_text": "767",
       "notation_flags": 0,
@@ -4311,14 +4732,15 @@
         "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Convertible Preferred Stock",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-027"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "CommonStockSharesIssued",
+      "raw_filing_label": "Common stock, issued (in shares)",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
       "value": "4009.2",
       "raw_numeric_text": "4,009.2",
       "notation_flags": 0,
@@ -4334,14 +4756,15 @@
         "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Common Stock - Shares Issued",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-037"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "CommonStockValue",
+      "raw_filing_label": "Common stock",
+      "canonical_label": "Common Stock",
+      "ledger_rule_id": "GEN-BS-028",
       "value": "4009",
       "raw_numeric_text": "4,009",
       "notation_flags": 0,
@@ -4357,14 +4780,15 @@
         "line_hint": "us-gaap:CommonStockValue | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Common Stock",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-028"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AdditionalPaidInCapital",
+      "raw_filing_label": "Additional paid-in capital",
+      "canonical_label": "Additional Paid-in Capital",
+      "ledger_rule_id": "GEN-BS-029",
       "value": "69010",
       "raw_numeric_text": "69,010",
       "notation_flags": 0,
@@ -4380,14 +4804,15 @@
         "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Additional Paid-in Capital",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-029"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ReserveForEsopDebtRetirement",
+      "raw_filing_label": "Reserve for ESOP debt retirement",
+      "canonical_label": "ESOP Debt Retirement Reserve",
+      "ledger_rule_id": "NEW-BS-001",
       "value": "637",
       "raw_numeric_text": "637",
       "notation_flags": 0,
@@ -4406,11 +4831,12 @@
       "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "ESOP Debt Retirement Reserve",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "NEW-BS-001"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+      "raw_filing_label": "Accumulated other comprehensive loss",
+      "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+      "ledger_rule_id": "GEN-BS-030",
       "value": "-12108",
       "raw_numeric_text": "12,108",
       "notation_flags": 0,
@@ -4426,14 +4852,15 @@
         "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accumulated Other Comprehensive Income (Loss)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-030"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "TreasuryStockCommonValue",
+      "raw_filing_label": "Treasury stock",
+      "canonical_label": "Treasury Stock",
+      "ledger_rule_id": "GEN-BS-035",
       "value": "141981",
       "raw_numeric_text": "141,981",
       "notation_flags": 0,
@@ -4449,14 +4876,15 @@
         "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Treasury Stock",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-035"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "RetainedEarningsAccumulatedDeficit",
+      "raw_filing_label": "Retained earnings",
+      "canonical_label": "Retained Earnings (Accumulated Deficit)",
+      "ledger_rule_id": "GEN-BS-031",
       "value": "133981",
       "raw_numeric_text": "133,981",
       "notation_flags": 0,
@@ -4472,14 +4900,15 @@
         "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Retained Earnings (Accumulated Deficit)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-031"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "MinorityInterest",
+      "raw_filing_label": "Noncontrolling interest",
+      "canonical_label": "Noncontrolling Interest",
+      "ledger_rule_id": "GEN-BS-036",
       "value": "276",
       "raw_numeric_text": "276",
       "notation_flags": 0,
@@ -4495,14 +4924,15 @@
         "line_hint": "us-gaap:MinorityInterest | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Noncontrolling Interest",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-036"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+      "raw_filing_label": "TOTAL SHAREHOLDERS’ EQUITY",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "53317",
       "raw_numeric_text": "53,317",
       "notation_flags": 0,
@@ -4520,12 +4950,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL SHAREHOLDERS’ EQUITY",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "LiabilitiesAndStockholdersEquity",
+      "raw_filing_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "127286",
       "raw_numeric_text": "127,286",
       "notation_flags": 0,
@@ -4543,12 +4974,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "LiabilitiesAndStockholdersEquity",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "raw_filing_label": "Cash and cash equivalents",
+      "canonical_label": "Cash & Cash Equivalents",
+      "ledger_rule_id": "GEN-BS-001",
       "value": "9556",
       "raw_numeric_text": "9,556",
       "notation_flags": 0,
@@ -4564,14 +4996,15 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Cash & Cash Equivalents",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-001"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccountsReceivableNetCurrent",
+      "raw_filing_label": "Accounts receivable",
+      "canonical_label": "Accounts Receivable",
+      "ledger_rule_id": "GEN-BS-003",
       "value": "6185",
       "raw_numeric_text": "6,185",
       "notation_flags": 0,
@@ -4587,14 +5020,15 @@
         "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accounts Receivable",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-003"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryRawMaterialsAndSuppliesNetOfReserves",
+      "raw_filing_label": "Materials and supplies",
+      "canonical_label": "Inventories",
+      "ledger_rule_id": "GEN-BS-038",
       "value": "2022",
       "raw_numeric_text": "2,022",
       "notation_flags": 0,
@@ -4610,14 +5044,15 @@
         "line_hint": "us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-038"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryWorkInProcessNetOfReserves",
+      "raw_filing_label": "Work in process",
+      "canonical_label": "Inventories",
+      "ledger_rule_id": "GEN-BS-038",
       "value": "1012",
       "raw_numeric_text": "1,012",
       "notation_flags": 0,
@@ -4633,14 +5068,15 @@
         "line_hint": "us-gaap:InventoryWorkInProcessNetOfReserves | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-038"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
+      "raw_filing_label": "Finished goods",
+      "canonical_label": "Inventories",
+      "ledger_rule_id": "GEN-BS-038",
       "value": "4516",
       "raw_numeric_text": "4,516",
       "notation_flags": 0,
@@ -4656,20 +5092,21 @@
         "line_hint": "us-gaap:InventoryFinishedGoodsNetOfReserves | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-038"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InventoryNet",
+      "raw_filing_label": "Total inventories",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "7551",
       "raw_numeric_text": "7,551",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "non_current_assets",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -4679,14 +5116,15 @@
         "line_hint": "us-gaap:InventoryNet | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Inventories",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-005"
+      "model_label": "Total inventories",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "PrepaidExpenseAndOtherAssetsCurrent",
+      "raw_filing_label": "Prepaid expenses and other current assets",
+      "canonical_label": "Prepaid Expenses",
+      "ledger_rule_id": "GEN-BS-006",
       "value": "2100",
       "raw_numeric_text": "2,100",
       "notation_flags": 0,
@@ -4702,14 +5140,15 @@
         "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Prepaid Expenses",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-006"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AssetsCurrent",
+      "raw_filing_label": "TOTAL CURRENT ASSETS",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "25392",
       "raw_numeric_text": "25,392",
       "notation_flags": 0,
@@ -4727,12 +5166,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "AssetsCurrent",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL CURRENT ASSETS",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "PropertyPlantAndEquipmentNet",
+      "raw_filing_label": "PROPERTY, PLANT AND EQUIPMENT, NET",
+      "canonical_label": "Net PP&E",
+      "ledger_rule_id": "GEN-BS-007",
       "value": "23897",
       "raw_numeric_text": "23,897",
       "notation_flags": 0,
@@ -4748,14 +5188,15 @@
         "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Net PP&E",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-007"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Goodwill",
+      "raw_filing_label": "GOODWILL",
+      "canonical_label": "Goodwill",
+      "ledger_rule_id": "GEN-BS-013",
       "value": "41650",
       "raw_numeric_text": "41,650",
       "notation_flags": 0,
@@ -4771,14 +5212,15 @@
         "line_hint": "us-gaap:Goodwill | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Goodwill",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-013"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "IntangibleAssetsNetExcludingGoodwill",
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "canonical_label": "Intangible Assets",
+      "ledger_rule_id": "GEN-BS-012",
       "value": "21910",
       "raw_numeric_text": "21,910",
       "notation_flags": 0,
@@ -4794,14 +5236,15 @@
         "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Intangible Assets",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-012"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherAssetsNoncurrent",
+      "raw_filing_label": "OTHER NONCURRENT ASSETS",
+      "canonical_label": "Other Non-Current Assets",
+      "ledger_rule_id": "GEN-BS-014",
       "value": "12381",
       "raw_numeric_text": "12,381",
       "notation_flags": 0,
@@ -4817,14 +5260,15 @@
         "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Other Non-Current Assets",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-014"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Assets",
+      "raw_filing_label": "TOTAL ASSETS",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "125231",
       "raw_numeric_text": "125,231",
       "notation_flags": 0,
@@ -4842,12 +5286,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Assets",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL ASSETS",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccountsPayableCurrent",
+      "raw_filing_label": "Accounts payable",
+      "canonical_label": "Accounts Payable",
+      "ledger_rule_id": "GEN-BS-015",
       "value": "15227",
       "raw_numeric_text": "15,227",
       "notation_flags": 0,
@@ -4863,14 +5308,15 @@
         "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accounts Payable",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-015"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccruedLiabilitiesCurrent",
+      "raw_filing_label": "Accrued and other liabilities",
+      "canonical_label": "Accrued Expenses",
+      "ledger_rule_id": "GEN-BS-016",
       "value": "11318",
       "raw_numeric_text": "11,318",
       "notation_flags": 0,
@@ -4886,14 +5332,15 @@
         "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accrued Expenses",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-016"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "DebtCurrent",
+      "raw_filing_label": "Debt due within one year",
+      "canonical_label": "Current Portion of Long-Term Debt",
+      "ledger_rule_id": "GEN-BS-033",
       "value": "9513",
       "raw_numeric_text": "9,513",
       "notation_flags": 0,
@@ -4909,14 +5356,15 @@
         "line_hint": "us-gaap:DebtCurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Current Portion of Long-Term Debt",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-033"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "LiabilitiesCurrent",
+      "raw_filing_label": "TOTAL CURRENT LIABILITIES",
+      "canonical_label": "Other Current Liabilities",
+      "ledger_rule_id": "GEN-BS-022",
       "value": "36058",
       "raw_numeric_text": "36,058",
       "notation_flags": 0,
@@ -4934,12 +5382,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "LiabilitiesCurrent",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL CURRENT LIABILITIES",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "LongTermDebtNoncurrent",
+      "raw_filing_label": "LONG-TERM DEBT",
+      "canonical_label": "Long-Term Debt",
+      "ledger_rule_id": "GEN-BS-041",
       "value": "24995",
       "raw_numeric_text": "24,995",
       "notation_flags": 0,
@@ -4955,14 +5404,15 @@
         "line_hint": "us-gaap:LongTermDebtNoncurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Long-Term Debt",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-041"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",
+      "raw_filing_label": "DEFERRED INCOME TAXES",
+      "canonical_label": "Deferred Tax Assets",
+      "ledger_rule_id": "GEN-BS-008",
       "value": "5774",
       "raw_numeric_text": "5,774",
       "notation_flags": 0,
@@ -4978,14 +5428,15 @@
         "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
-      "model_label": "Deferred Tax Liability",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-025"
+      "model_label": "Deferred Tax Assets",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherLiabilitiesNoncurrent",
+      "raw_filing_label": "OTHER NONCURRENT LIABILITIES",
+      "canonical_label": "Other Non-Current Liabilities",
+      "ledger_rule_id": "GEN-BS-034",
       "value": "6120",
       "raw_numeric_text": "6,120",
       "notation_flags": 0,
@@ -5001,14 +5452,15 @@
         "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Other Non-Current Liabilities",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-034"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Liabilities",
+      "raw_filing_label": "TOTAL LIABILITIES",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "72946",
       "raw_numeric_text": "72,946",
       "notation_flags": 0,
@@ -5026,12 +5478,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Liabilities",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL LIABILITIES",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "PreferredStockValue",
+      "raw_filing_label": "Preferred stock",
+      "canonical_label": "Convertible Preferred Stock",
+      "ledger_rule_id": "GEN-BS-027",
       "value": "777",
       "raw_numeric_text": "777",
       "notation_flags": 0,
@@ -5047,14 +5500,15 @@
         "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Convertible Preferred Stock",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-027"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "CommonStockSharesIssued",
+      "raw_filing_label": "Common stock, issued (in shares)",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
       "value": "4009.2",
       "raw_numeric_text": "4,009.2",
       "notation_flags": 0,
@@ -5070,14 +5524,15 @@
         "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Common Stock - Shares Issued",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-037"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "CommonStockValue",
+      "raw_filing_label": "Common stock",
+      "canonical_label": "Common Stock",
+      "ledger_rule_id": "GEN-BS-028",
       "value": "4009",
       "raw_numeric_text": "4,009",
       "notation_flags": 0,
@@ -5093,14 +5548,15 @@
         "line_hint": "us-gaap:CommonStockValue | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Common Stock",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-028"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AdditionalPaidInCapital",
+      "raw_filing_label": "Additional paid-in capital",
+      "canonical_label": "Additional Paid-in Capital",
+      "ledger_rule_id": "GEN-BS-029",
       "value": "68770",
       "raw_numeric_text": "68,770",
       "notation_flags": 0,
@@ -5116,14 +5572,15 @@
         "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Additional Paid-in Capital",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-029"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ReserveForEsopDebtRetirement",
+      "raw_filing_label": "Reserve for ESOP debt retirement",
+      "canonical_label": "ESOP Debt Retirement Reserve",
+      "ledger_rule_id": "NEW-BS-001",
       "value": "672",
       "raw_numeric_text": "672",
       "notation_flags": 0,
@@ -5142,11 +5599,12 @@
       "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "ESOP Debt Retirement Reserve",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "NEW-BS-001"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+      "raw_filing_label": "Accumulated other comprehensive loss",
+      "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+      "ledger_rule_id": "GEN-BS-030",
       "value": "-12143",
       "raw_numeric_text": "12,143",
       "notation_flags": 0,
@@ -5162,14 +5620,15 @@
         "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Accumulated Other Comprehensive Income (Loss)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-030"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "TreasuryStockCommonValue",
+      "raw_filing_label": "Treasury stock",
+      "canonical_label": "Treasury Stock",
+      "ledger_rule_id": "GEN-BS-035",
       "value": "138702",
       "raw_numeric_text": "138,702",
       "notation_flags": 0,
@@ -5185,14 +5644,15 @@
         "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Treasury Stock",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-035"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "RetainedEarningsAccumulatedDeficit",
+      "raw_filing_label": "Retained earnings",
+      "canonical_label": "Retained Earnings (Accumulated Deficit)",
+      "ledger_rule_id": "GEN-BS-031",
       "value": "129973",
       "raw_numeric_text": "129,973",
       "notation_flags": 0,
@@ -5208,14 +5668,15 @@
         "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Retained Earnings (Accumulated Deficit)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-031"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "MinorityInterest",
+      "raw_filing_label": "Noncontrolling interest",
+      "canonical_label": "Noncontrolling Interest",
+      "ledger_rule_id": "GEN-BS-036",
       "value": "272",
       "raw_numeric_text": "272",
       "notation_flags": 0,
@@ -5231,14 +5692,15 @@
         "line_hint": "us-gaap:MinorityInterest | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Noncontrolling Interest",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-036"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+      "raw_filing_label": "TOTAL SHAREHOLDERS’ EQUITY",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "52284",
       "raw_numeric_text": "52,284",
       "notation_flags": 0,
@@ -5256,12 +5718,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL SHAREHOLDERS’ EQUITY",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "LiabilitiesAndStockholdersEquity",
+      "raw_filing_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "125231",
       "raw_numeric_text": "125,231",
       "notation_flags": 0,
@@ -5279,12 +5742,13 @@
       },
       "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "LiabilitiesAndStockholdersEquity",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": null
+      "model_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Revenues",
+      "raw_filing_label": "NET SALES",
+      "canonical_label": "Net Sales / Revenue",
+      "ledger_rule_id": "GEN-IS-001",
       "value": "22208",
       "raw_numeric_text": "22,208",
       "notation_flags": 0,
@@ -5300,14 +5764,15 @@
         "line_hint": "us-gaap:Revenues | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Sales / Revenue",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-001"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "CostOfGoodsAndServicesSold",
+      "raw_filing_label": "Cost of products sold",
+      "canonical_label": "COGS",
+      "ledger_rule_id": "GEN-IS-002",
       "value": "10834",
       "raw_numeric_text": "10,834",
       "notation_flags": 0,
@@ -5323,14 +5788,15 @@
         "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "COGS",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-002"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+      "raw_filing_label": "Selling, general and administrative expense",
+      "canonical_label": "SG&A",
+      "ledger_rule_id": "GEN-IS-004",
       "value": "6008",
       "raw_numeric_text": "6,008",
       "notation_flags": 0,
@@ -5346,14 +5812,15 @@
         "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "SG&A",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-004"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OperatingIncomeLoss",
+      "raw_filing_label": "OPERATING INCOME",
+      "canonical_label": "Income (Loss) from Operations",
+      "ledger_rule_id": "GEN-IS-005",
       "value": "5366",
       "raw_numeric_text": "5,366",
       "notation_flags": 0,
@@ -5369,14 +5836,15 @@
         "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Income (Loss) from Operations",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-005"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InterestExpenseNonoperating",
+      "raw_filing_label": "Interest expense",
+      "canonical_label": "Interest Income (Expense)",
+      "ledger_rule_id": "GEN-IS-006",
       "value": "220",
       "raw_numeric_text": "220",
       "notation_flags": 0,
@@ -5392,14 +5860,15 @@
         "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Interest Income (Expense)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-006"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InvestmentIncomeInterest",
+      "raw_filing_label": "Interest income",
+      "canonical_label": "Interest Income (Expense)",
+      "ledger_rule_id": "GEN-IS-006",
       "value": "115",
       "raw_numeric_text": "115",
       "notation_flags": 0,
@@ -5415,14 +5884,15 @@
         "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Interest Income (Expense)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-006"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherNonoperatingIncomeExpense",
+      "raw_filing_label": "Other non-operating income/(expense), net",
+      "canonical_label": "Other Income (Expense)",
+      "ledger_rule_id": "GEN-IS-008",
       "value": "160",
       "raw_numeric_text": "160",
       "notation_flags": 0,
@@ -5438,14 +5908,15 @@
         "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Other Income (Expense)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-008"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+      "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+      "canonical_label": "Net Income (Loss) Including NCI",
+      "ledger_rule_id": "GEN-IS-022",
       "value": "5421",
       "raw_numeric_text": "5,421",
       "notation_flags": 0,
@@ -5461,14 +5932,15 @@
         "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Income (Loss) Including NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-022"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "IncomeTaxExpenseBenefit",
+      "raw_filing_label": "Income taxes",
+      "canonical_label": "Income Tax (Benefit) Expense",
+      "ledger_rule_id": "GEN-IS-010",
       "value": "1090",
       "raw_numeric_text": "1,090",
       "notation_flags": 0,
@@ -5484,14 +5956,15 @@
         "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Income Tax (Benefit) Expense",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-010"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ProfitLoss",
+      "raw_filing_label": "NET EARNINGS",
+      "canonical_label": "Net Income (Loss)",
+      "ledger_rule_id": "GEN-IS-011",
       "value": "4331",
       "raw_numeric_text": "4,331",
       "notation_flags": 0,
@@ -5507,14 +5980,15 @@
         "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss) Including NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-022"
+      "model_label": "Net Income (Loss)",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+      "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+      "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+      "ledger_rule_id": "GEN-IS-023",
       "value": "12",
       "raw_numeric_text": "12",
       "notation_flags": 0,
@@ -5530,14 +6004,15 @@
         "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-023"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "NetIncomeLoss",
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "canonical_label": "Net Income (Loss)",
+      "ledger_rule_id": "GEN-IS-011",
       "value": "4319",
       "raw_numeric_text": "4,319",
       "notation_flags": 0,
@@ -5553,14 +6028,15 @@
         "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Income (Loss)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-011"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "EarningsPerShareBasic",
+      "raw_filing_label": "Basic (in dollars per share)",
+      "canonical_label": "Basic Earnings (Loss) per Share",
+      "ledger_rule_id": "GEN-IS-016",
       "value": "0.00000182",
       "raw_numeric_text": "1.82",
       "notation_flags": 0,
@@ -5576,14 +6052,15 @@
         "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Basic Earnings (Loss) per Share",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-016"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "EarningsPerShareDiluted",
+      "raw_filing_label": "Diluted (in dollars per share)",
+      "canonical_label": "Diluted Earnings (Loss) per Share",
+      "ledger_rule_id": "GEN-IS-017",
       "value": "0.00000178",
       "raw_numeric_text": "1.78",
       "notation_flags": 0,
@@ -5599,14 +6076,15 @@
         "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Diluted Earnings (Loss) per Share",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-017"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+      "raw_filing_label": "Foreign currency translation",
+      "canonical_label": "Foreign Currency Translation (OCI)",
+      "ledger_rule_id": "GEN-IS-020",
       "value": "45",
       "raw_numeric_text": "45",
       "notation_flags": 0,
@@ -5622,14 +6100,15 @@
         "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Foreign Currency Translation (OCI)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-020"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+      "raw_filing_label": "Unrealized gains/(losses) on investment securities",
+      "canonical_label": "OCI - AFS Securities",
+      "ledger_rule_id": "GEN-IS-025",
       "value": "2",
       "raw_numeric_text": "2",
       "notation_flags": 0,
@@ -5645,14 +6124,15 @@
         "line_hint": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "OCI - AFS Securities",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-025"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+      "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+      "canonical_label": "OCI - Pension & Postretirement",
+      "ledger_rule_id": "GEN-IS-026",
       "value": "2",
       "raw_numeric_text": "2",
       "notation_flags": 0,
@@ -5668,20 +6148,21 @@
         "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "OCI - Pension & Postretirement",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-026"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+      "raw_filing_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+      "canonical_label": "OCI - Total Net of Tax",
+      "ledger_rule_id": "GEN-IS-024",
       "value": "46",
       "raw_numeric_text": "46",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -5691,20 +6172,21 @@
         "line_hint": "us-gaap:OtherComprehensiveIncomeLossNetOfTax | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "OCI - Total Net of Tax",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-024"
+      "model_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+      "raw_filing_label": "TOTAL COMPREHENSIVE INCOME",
+      "canonical_label": "Total Comprehensive Income (Loss)",
+      "ledger_rule_id": "GEN-IS-015",
       "value": "4377",
       "raw_numeric_text": "4,377",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -5714,14 +6196,15 @@
         "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Comprehensive Income Including NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-028"
+      "model_label": "TOTAL COMPREHENSIVE INCOME",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+      "raw_filing_label": "Less: Comprehensive income attributable to noncontrolling interests",
+      "canonical_label": "Comprehensive Income Attributable to NCI",
+      "ledger_rule_id": "GEN-IS-027",
       "value": "10",
       "raw_numeric_text": "10",
       "notation_flags": 0,
@@ -5737,20 +6220,21 @@
         "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Comprehensive Income Attributable to NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-027"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+      "raw_filing_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "canonical_label": "Total Comprehensive Income (Loss)",
+      "ledger_rule_id": "GEN-IS-015",
       "value": "4367",
       "raw_numeric_text": "4,367",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -5760,14 +6244,15 @@
         "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Total Comprehensive Income (Loss)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-015"
+      "model_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Revenues",
+      "raw_filing_label": "NET SALES",
+      "canonical_label": "Net Sales / Revenue",
+      "ledger_rule_id": "GEN-IS-001",
       "value": "21882",
       "raw_numeric_text": "21,882",
       "notation_flags": 0,
@@ -5783,14 +6268,15 @@
         "line_hint": "us-gaap:Revenues | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Sales / Revenue",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-001"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "CostOfGoodsAndServicesSold",
+      "raw_filing_label": "Cost of products sold",
+      "canonical_label": "COGS",
+      "ledger_rule_id": "GEN-IS-002",
       "value": "10418",
       "raw_numeric_text": "10,418",
       "notation_flags": 0,
@@ -5806,14 +6292,15 @@
         "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "COGS",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-002"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+      "raw_filing_label": "Selling, general and administrative expense",
+      "canonical_label": "SG&A",
+      "ledger_rule_id": "GEN-IS-004",
       "value": "5723",
       "raw_numeric_text": "5,723",
       "notation_flags": 0,
@@ -5829,14 +6316,15 @@
         "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "SG&A",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-004"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OperatingIncomeLoss",
+      "raw_filing_label": "OPERATING INCOME",
+      "canonical_label": "Income (Loss) from Operations",
+      "ledger_rule_id": "GEN-IS-005",
       "value": "5741",
       "raw_numeric_text": "5,741",
       "notation_flags": 0,
@@ -5852,14 +6340,15 @@
         "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Income (Loss) from Operations",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-005"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InterestExpenseNonoperating",
+      "raw_filing_label": "Interest expense",
+      "canonical_label": "Interest Income (Expense)",
+      "ledger_rule_id": "GEN-IS-006",
       "value": "240",
       "raw_numeric_text": "240",
       "notation_flags": 0,
@@ -5875,14 +6364,15 @@
         "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Interest Income (Expense)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-006"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "InvestmentIncomeInterest",
+      "raw_filing_label": "Interest income",
+      "canonical_label": "Interest Income (Expense)",
+      "ledger_rule_id": "GEN-IS-006",
       "value": "119",
       "raw_numeric_text": "119",
       "notation_flags": 0,
@@ -5898,14 +6388,15 @@
         "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Interest Income (Expense)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-006"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherNonoperatingIncomeExpense",
+      "raw_filing_label": "Other non-operating income/(expense), net",
+      "canonical_label": "Other Income (Expense)",
+      "ledger_rule_id": "GEN-IS-008",
       "value": "224",
       "raw_numeric_text": "224",
       "notation_flags": 0,
@@ -5921,14 +6412,15 @@
         "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Other Income (Expense)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-008"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+      "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+      "canonical_label": "Net Income (Loss) Including NCI",
+      "ledger_rule_id": "GEN-IS-022",
       "value": "5845",
       "raw_numeric_text": "5,845",
       "notation_flags": 0,
@@ -5944,14 +6436,15 @@
         "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Income (Loss) Including NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-022"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "IncomeTaxExpenseBenefit",
+      "raw_filing_label": "Income taxes",
+      "canonical_label": "Income Tax (Benefit) Expense",
+      "ledger_rule_id": "GEN-IS-010",
       "value": "1187",
       "raw_numeric_text": "1,187",
       "notation_flags": 0,
@@ -5967,14 +6460,15 @@
         "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Income Tax (Benefit) Expense",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-010"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ProfitLoss",
+      "raw_filing_label": "NET EARNINGS",
+      "canonical_label": "Net Income (Loss)",
+      "ledger_rule_id": "GEN-IS-011",
       "value": "4659",
       "raw_numeric_text": "4,659",
       "notation_flags": 0,
@@ -5990,14 +6484,15 @@
         "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss) Including NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-022"
+      "model_label": "Net Income (Loss)",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+      "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+      "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+      "ledger_rule_id": "GEN-IS-023",
       "value": "29",
       "raw_numeric_text": "29",
       "notation_flags": 0,
@@ -6013,14 +6508,15 @@
         "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-023"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "NetIncomeLoss",
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "canonical_label": "Net Income (Loss)",
+      "ledger_rule_id": "GEN-IS-011",
       "value": "4630",
       "raw_numeric_text": "4,630",
       "notation_flags": 0,
@@ -6036,14 +6532,15 @@
         "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Net Income (Loss)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-011"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "EarningsPerShareBasic",
+      "raw_filing_label": "Basic (in dollars per share)",
+      "canonical_label": "Basic Earnings (Loss) per Share",
+      "ledger_rule_id": "GEN-IS-016",
       "value": "0.00000194",
       "raw_numeric_text": "1.94",
       "notation_flags": 0,
@@ -6059,14 +6556,15 @@
         "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Basic Earnings (Loss) per Share",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-016"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "EarningsPerShareDiluted",
+      "raw_filing_label": "Diluted (in dollars per share)",
+      "canonical_label": "Diluted Earnings (Loss) per Share",
+      "ledger_rule_id": "GEN-IS-017",
       "value": "0.00000188",
       "raw_numeric_text": "1.88",
       "notation_flags": 0,
@@ -6082,14 +6580,15 @@
         "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Earnings"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Diluted Earnings (Loss) per Share",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-017"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+      "raw_filing_label": "Foreign currency translation",
+      "canonical_label": "Foreign Currency Translation (OCI)",
+      "ledger_rule_id": "GEN-IS-020",
       "value": "-770",
       "raw_numeric_text": "770",
       "notation_flags": 0,
@@ -6105,14 +6604,15 @@
         "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Foreign Currency Translation (OCI)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-020"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+      "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+      "canonical_label": "OCI - Pension & Postretirement",
+      "ledger_rule_id": "GEN-IS-026",
       "value": "-24",
       "raw_numeric_text": "24",
       "notation_flags": 0,
@@ -6128,20 +6628,21 @@
         "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "OCI - Pension & Postretirement",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-026"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+      "raw_filing_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+      "canonical_label": "OCI - Total Net of Tax",
+      "ledger_rule_id": "GEN-IS-024",
       "value": "-747",
       "raw_numeric_text": "747",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -6151,20 +6652,21 @@
         "line_hint": "us-gaap:OtherComprehensiveIncomeLossNetOfTax | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "OCI - Total Net of Tax",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-024"
+      "model_label": "TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+      "raw_filing_label": "TOTAL COMPREHENSIVE INCOME",
+      "canonical_label": "Total Comprehensive Income (Loss)",
+      "ledger_rule_id": "GEN-IS-015",
       "value": "3912",
       "raw_numeric_text": "3,912",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -6174,14 +6676,15 @@
         "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Comprehensive Income Including NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-028"
+      "model_label": "TOTAL COMPREHENSIVE INCOME",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+      "raw_filing_label": "Less: Comprehensive income attributable to noncontrolling interests",
+      "canonical_label": "Comprehensive Income Attributable to NCI",
+      "ledger_rule_id": "GEN-IS-027",
       "value": "26",
       "raw_numeric_text": "26",
       "notation_flags": 0,
@@ -6197,20 +6700,21 @@
         "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "QTR P&L",
       "model_row": 0,
       "model_label": "Comprehensive Income Attributable to NCI",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-027"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+      "raw_filing_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "canonical_label": "Total Comprehensive Income (Loss)",
+      "ledger_rule_id": "GEN-IS-015",
       "value": "3887",
       "raw_numeric_text": "3,887",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
+      "row_type": "subtotal",
       "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -6220,14 +6724,15 @@
         "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Comprehensive Income"
       },
-      "model_sheet": "ANNL P&L",
+      "model_sheet": "_subtotal",
       "model_row": 0,
-      "model_label": "Total Comprehensive Income (Loss)",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-IS-015"
+      "model_label": "TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "DepreciationDepletionAndAmortization",
+      "raw_filing_label": "Depreciation and amortization",
+      "canonical_label": "Depreciation & Amortization",
+      "ledger_rule_id": "GEN-CF-002",
       "value": "803",
       "raw_numeric_text": "803",
       "notation_flags": 0,
@@ -6243,14 +6748,15 @@
         "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2025-12-31",
         "note": "iXBRL | Consolidated Statements of Cash Flows"
       },
-      "model_sheet": "CASH FLOW",
+      "model_sheet": "QTR CF",
       "model_row": 0,
       "model_label": "Depreciation & Amortization",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-CF-002"
+      "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "DepreciationDepletionAndAmortization",
+      "raw_filing_label": "Depreciation and amortization",
+      "canonical_label": "Depreciation & Amortization",
+      "ledger_rule_id": "GEN-CF-002",
       "value": "706",
       "raw_numeric_text": "706",
       "notation_flags": 0,
@@ -6266,11 +6772,10 @@
         "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2024-12-31",
         "note": "iXBRL | Consolidated Statements of Cash Flows"
       },
-      "model_sheet": "CASH FLOW",
+      "model_sheet": "QTR CF",
       "model_row": 0,
       "model_label": "Depreciation & Amortization",
-      "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-CF-002"
+      "mapping_source": "ledger_auto"
     }
   ],
   "novel_items": []
