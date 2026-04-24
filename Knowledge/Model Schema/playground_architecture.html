@@ -708,7 +708,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v7';
+const LS_KEY = 'financials-architecture-playground-v8';
 
 function saveState() {
   try {
@@ -1174,13 +1174,13 @@ function renderScaffoldGrid() {
 
 function schemaLine() {
   return state.schema === 'shared'
-    ? 'Shared Python package at ~/projects/financials-schema/. Every skill declares it as a dependency; schema changes cascade.'
-    : 'Per-skill copy in each skill\'s references/schemas.py with a version number. Looser coupling, drift risk.';
+    ? 'Shared Python package at Brain/Knowledge/Model Schema/financials-schema/. Every skill declares it as a dependency; schema changes cascade. 13 Pydantic classes; 16/16 pytest pass.'
+    : 'Per-skill copy in each skill\'s references/schemas.py with a version number. Looser coupling, drift risk. Not the current architecture.';
 }
 function scopeLine() {
   return state.scope === 'celh'
-    ? 'CELH-only. Hardcode CELH-specific anomalies.'
-    : 'Generic-with-CELH-ledger. Skills are ticker-agnostic; CELH specifics live entirely in data/derived/celh_decisions_ledger.md.';
+    ? 'CELH-first bootstrap. Original library + ledger seeded from CELH FY2024 10-K. Architecture is multi-ticker — PG onboarded 2026-04-24 as second ticker.'
+    : 'Multi-ticker. Cross-ticker canonical mappings live in pattern_libraries/generic_line_item_mappings.json (~109 entries); ticker-specific anomalies + new_rows live in {TICKER}/decisions_ledger.json. Reconcile merges both at lookup time; ticker entries win on conflicts via tier scoring.';
 }
 
 function scaffoldBody(id) {
@@ -1202,48 +1202,58 @@ fiscal_quarter: only set for single-quarter durations (11-15 weeks) or BS. YTD a
 Reference: already built at ~/.claude/skills/financials-extract-ixbrl/. Venv: Brain/Knowledge/Model Schema/financials-schema/.venv/.
 Acceptance: PG 2026-Q2 10-Q extracts 10 Statements / 199 line items cleanly; RawFiling.model_validate() passes.`,
 
-    'financials-extract': `Input: PDF path (--pdf) + --ticker-root (e.g. Brain/Knowledge/Model Schema/CELH/).
-Output: RawFiling with BalanceSheet, CashFlow, IncomeStatement sub-models. Each RawLineItem carries raw_filing_label (verbatim), value (Decimal, native unit), raw_numeric_text ("(101,726)"), notation_flags (NumericNotation bitmap), citation (page, line_hint). Statement carries unit (Unit enum), raw_unit_phrase, unit_detection_source + confidence, share_unit, eps_unit, dialect.
-Unit detection: use pattern library at references/unit_phrases.json (4-layer ladder: normalize → keyword → fuzzy → user-prompt-append). Plausibility fallback reads tickers/{ticker}/config.json for expected revenue/TA ranges. Unit.UNKNOWN raises.
-Heuristics: locate BS/CF/IS via references/statement_heading_patterns.json (not hardcoded page numbers). Press releases = IS only.
-Reference: Brain/Knowledge/Model Schema/examples/pattern_libraries/*.json has starter templates.
-Acceptance: extract Brain/Knowledge/Model Schema/CELH/sources/10-K/2025_CELH_10-K.pdf → RawFiling whose FY2024 BS totals match Brain/Sessions/CELH Model/04_celh_source_citations.md §2.`,
+    'financials-extract': `Input: PDF path (--in) + output path (--out) + --ticker-root (e.g. Brain/Knowledge/Model Schema/CELH/) for config.json (expected revenue/TA ranges) and anomalies.json. PDF-only path — iXBRL filings from SEC use financials-extract-ixbrl instead.
+Output: RawFiling JSON with Statement[] (BS/CF/IS). Each RawLineItem carries raw_filing_label (verbatim PDF text), value (Decimal, native unit), raw_numeric_text ("(101,726)"), notation_flags (NumericNotation bitmap), section (classified), subsection_context (EPS vs shares_outstanding), citation (page, line_hint).
+Unit detection: pattern library at references/unit_phrases.json (4-layer ladder: normalize → keyword → fuzzy → user-prompt-append). Plausibility fallback reads tickers/{TICKER}/config.json for expected revenue/TA ranges. Unit.UNKNOWN raises.
+Statement location heuristics: references/{statement_heading_patterns, section_heading_patterns, period_phrase_patterns, numeric_notation_patterns, filing_type_patterns}.json — 5 parsing aids. Bundled with the skill as read-only copies of masters at Brain/Knowledge/Model Schema/pattern_libraries/*.json. Press releases = IS only.
+What this skill does NOT do: semantic alias→canonical mapping. Raw labels flow through to financials-reconcile unchanged; reconcile consults generic_line_item_mappings.json (not used here).
+Acceptance: extract CELH FY2025 10-K PDF → RawFiling whose BS totals match the source citations doc.`,
 
-    'financials-reconcile': `Input: RawFiling + --ticker-root (reads decisions_ledger.json from there).
-Output: MappedFiling — each line item gains model_sheet, model_row, model_label. Unmatched items become NovelItem with rapidfuzz-scored suggestions; MappedFiling refuses to construct if novel_items isn't empty.
-Append new user decisions back to decisions_ledger.json with today's date (append-only, ISO-8601 dates).
-Reference: Brain/Knowledge/Model Schema/examples/celh/decisions_ledger.json has all 29 mappings + 17 new rows + 7 structural decisions already populated.
-Acceptance: round-trip a RawFiling from 2025_CELH_10-K.pdf through the CELH ledger → zero user prompts (all 53 rules auto-apply).`,
+    'financials-reconcile': `Input: RawFiling + --ticker-root (reads {TICKER}/decisions_ledger.json) + --generic-library (defaults to --ticker-root/../pattern_libraries/generic_line_item_mappings.json). --dry-run prints report only, --novels-out writes NovelReport JSON for playground QA.
+Output: MappedFiling — each line item gains model_sheet, model_row, model_label, ledger_rule_id. Unmatched items raise unless --dry-run (novel surfacing).
+Lookup: build index keyed (normalized_label, sheet_group IS|BS|CF, sheet_variant ANNL|QTR). Generic entries indexed under BOTH variants (canonical concepts are variant-agnostic); ticker entries stay variant-specific. Ticker tier 10 > generic tier 0; ticker wins on alias conflicts.
+Filing-type aware: 10-K → ANNL sheets (ANNL P&L / BALANCE SHEET / CASH FLOW); 10-Q → QTR sheets (QTR P&L / QTR BS / QTR CF). 10-Q statements filtered to 3-month duration IS/CF (period_length_weeks ∈ [11,15]) + BS instants; YTD 6mo/9mo dropped.
+Label normalization: lowercase, strip footnote markers + par-value clutter + punctuation, AND split CamelCase (us-gaap concept names like "AccountsReceivableNetCurrent" tokenize to "accounts receivable net current" to match library aliases).
+Subtotal detection: labels starting with "Total"/"Subtotal" OR matching the iXBRL concept allowlist (Assets, AssetsCurrent, Liabilities, LiabilitiesCurrent, LiabilitiesAndStockholdersEquity, StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest) routed to _subtotal pseudo-sheet; model-write generates canonical "Total X" rows at section boundaries.
+Subsection filter: strict when item.subsection_context is set (PDF EPS vs shares disambiguation); for iXBRL items (subsection_context=None) with exactly one candidate for the alias key, accept despite filing_subsection mismatch.
+Section-collision guard: refuses to emit if one rule_id matched items across multiple sections (indicates ambiguous ledger entry needing filing_section split).
+Reference: Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (~109 entries). Brain/Knowledge/Model Schema/CELH/decisions_ledger.json (6 mappings + 2 new_rows + 7 structural, post-migration).
+Acceptance: PG Q2 FY26 10-Q → 0 novels; CELH FY2024 + FY2025 10-Ks → 0 novels.`,
 
     'financials-validate': `Input: MappedFiling + --ticker-root (reads anomalies.json for overrides).
 Output: ValidatedFiling, or raise ValidationError with structured gap list (rule_id, expected, actual, gap, severity).
-Validators: BS-1..BS-7, CF-1/CF-2, X-1..X-4 as pydantic @model_validators. Tolerance $1K absolute, 0.1% relative.
-Honor cash convention from Brain/Knowledge/Model Schema/CELH/anomalies.json (cash_convention_per_year: 2023=cash_plus_restricted, 2024+=cash_only). Override support via anomalies.json validation_overrides.
-Acceptance: run FY2024 BS/CF values from Brain/Sessions/CELH Model/04_celh_source_citations.md §2 → all 11 rules PASS.`,
+Validators (period-agnostic — apply to both 10-K and 10-Q): BS-1..BS-6 (subtotal sums: TCA/NCA/TCL/NCL/TSE + accounting equation); CF-1/CF-2 (CFO+CFI+CFF+FX=ΔCash; CashEnd=Beg+Δ); CF-3/CF-4/CF-5 (section sums); IS-1..IS-4 (gross profit, operating income, pre-tax, net income cascades); X-1/X-2/X-4 (cross-statement: CF NI=P&L NI; CF CashEnd=BS Cash per cash_convention; Pref Div ties); M-1 (mapping consistency — all items on one rule_id must agree on section). BS-7 (RE roll-forward) deferred — needs prior-period BS.
+Tolerance: $1K absolute, 0.1% relative. Period label format: FY{year} for annual, Q{N} FY{year} for quarterly.
+Cash convention: honor {TICKER}/anomalies.json.cash_convention_per_year (e.g. CELH 2023=cash_plus_restricted, 2024+=cash_only). Override support via validation_overrides.
+Acceptance: CELH FY2024 + FY2025 10-Ks → 48/48 PASS (36 original + IS-1..4 × 3 periods per filing).`,
 
-    'financials-playground': `Input: ValidatedFiling[] (one or more periods).
-Output: self-contained HTML (Jinja2 template) — single file, inlined CSS/JS, dark theme.
-Features: period selector (FY23/FY24/FY25/quarterly), BS/CF/IS tabs, YoY diff with >20% highlighted, toggle raw_filing_label ↔ model_label, citation tooltip on hover (shows page + line_hint), per-row validation badge.
-Copy-out button emits model-write scaffold prompt for selected period.
-Acceptance: FY23+FY24 side-by-side flags both the Inventories -43% drawdown and RE flip (-$12M → +$105M).`,
+    'financials-playground': `Input: ValidatedFiling[] (one or more periods, 10-K and/or 10-Q) + optional NovelReport JSON.
+Output: self-contained HTML — single file, inlined CSS/JS, dark theme, stdlib-only (no Jinja2).
+Features: tabs BALANCE SHEET / INCOME STATEMENT / CASH FLOW / VALIDATION / NOVELS. Period dedup across filings (newer wins per period). Canonical section ordering; visual subtotal promotion for CF sums. YoY shading >20% orange, >50% red. Citation tooltip dispatches on source_path extension: .htm/.html renders iXBRL format (Concept: us-gaap:X | From: R-file role | Period: ...); PDF renders filing text + page. Orange (actual) / (thousands) unit hint when row unit differs from statement.
+Acceptance: CELH FY2024+FY2025 side-by-side; YoY shading + citation tooltip + NOVELS tab all functional.`,
 
-    'model-write': `Input: ValidatedFiling + --xlsm (target path, usually Brain/Knowledge/Model Schema/CELH/Model Output/*.xlsm).
-Output: *_updated.xlsm + *.xlsm.bak.
-Excel safety (non-negotiable): keep_vba=True, never cell.fill = None (use PatternFill(fill_type=None)), save to _updated filename, .bak backup before writes, Path 3 manual inserts for new rows (emit ManualInsertPlan for user to action before values are written).
-Verify-after-save: reload, spot-check 10 known cells against source_citations.json, grep for #REF!.
-Acceptance: FY2023 BS cells in _updated file match Brain/Sessions/CELH Model/04_celh_source_citations.md §2.5 exactly.`,
+    'model-write': `Input: ValidatedFiling[] (one or more, 10-K and/or 10-Q) + --ticker-root (reads decisions_ledger.json + config.json) + --out {TICKER}_model.xlsx.
+Output: Fresh .xlsx built from scratch (no template, no VBA). 10-K inputs → ANNL P&L / BALANCE SHEET / CASH FLOW sheets (FY columns + forecast FY{Y}E..FY{Y+5}E); 10-Q inputs → QTR P&L / QTR BS / QTR CF (Q{N} FY{YYYY} columns, no forecast — deferred to model-calc). Mixed inputs emit both sheet families; empty sheets suppressed.
+Row layout: derived at write-time from the latest filing's document order (NOT stored in ledger as model_row). Section-boundary subtotals inserted: Total CA, Total NCA, Total CL, Total NCL, Total SE, grand total. IS cascade subtotals: Gross Profit → Operating Income → Pre-Tax → Net Income. CF section subtotals: CFO, CFI, CFF, ΔCash.
+Column labels: annual FY{year} (e.g. FY2024), quarterly Q{fiscal_quarter} FY{fiscal_year} (e.g. Q2 FY2026 — disambiguates quarters within a fiscal year).
+Number formats: subtotal $#,##0_);($#,##0);"$--"_); line items #,##0;(#,##0);"--"; EPS $#,##0.00. Top black border on every sum-formula row. Yellow tint on user-input cells (Revenue Growth %), grey on formula-forecast cells.
+Historical dedup: per-filing sum + newer-filing-wins across filings. Zero-fill empty cells. Honors superseded_by, memo, sign_convention from ledger.
+Acceptance: CELH FY2024 + FY2025 10-Ks → CELH_model.xlsx with 327+ cells, IS+BS+CF live subtotal formulas, no circular refs (verified via formulas package).`,
 
-    'model-calc': `Input: ValidatedFiling (multi-period) + ScenarioInputs (glp1_share_curve, snap_ban_drag_by_state, terminal_growth, wacc).
-Output: DerivedCalcs with growth (YoY, CAGR), margins, WC ratios (DSO/DIO/CCC), scenario grid (base/bull/bear).
-Plug in GLP-1 model output (consumption headwind 2026E-2030E) and SNAP model output (state-weighted volume drag from 2026 bans).
-Acceptance: produce FY2026E-2028E scenario table for the case study deliverable.`
+    'model-calc': `Input: path to {TICKER}_model.xlsx (built by model-write) + --ticker-root (config.json for assumption defaults). Base-case only — GLP-1 / SNAP scenario overlays deferred per user.
+Output: same xlsx with new tabs added in-place: ASSUMPTIONS (Days in Year, Share Repurchases $, etc. — all forecast constants live here, NO magic numbers in formulas), IS DRIVERS + BS DRIVERS + CF DRIVERS (historical formulas + projection rules), and full forecast formulas on ANNL P&L / BALANCE SHEET / CASH FLOW rows (yellow-tinted input cells, grey formula cells).
+Driver kinds: growth, ratio, lagged_ratio, days_ratio, dollar, dollar_sum, net_debt — with projection rules hold_last, input, assumption_ref, derived.
+Forecast kinds: revenue_growth, ratio_of_rev/cogs, days_driven_rev/cogs, tax, cash_rollforward, pp_e_rollforward, apic_rollforward, re_rollforward, aoci_rollforward, amortize, cf_wc_asset/liability/combined, capex, d_a, dividends_preferred/common, cf_net_change, cash_beg, cash_end, ni_attrib_common, zero (27 total).
+Cross-sheet column lookups by period label (not index) — correctly handles BS having fewer historical columns than P&L/CF.
+Quarterly drivers: NOT YET IMPLEMENTED. Annual-only in v1; QTR P&L / QTR BS / QTR CF sheets get no forecast columns. Extend when a ticker accumulates ≥2 quarters of data.
+Acceptance: CELH FY2024 10-K + FY2025 10-K → 2 assumptions + 258 driver cells + 492 forecast cells; no circular refs; BS balanced at $0 gap FY2022 → FY2030E.`
   }[id];
 }
 
 function updatePrompt() {
   const id = state.scaffoldFirst;
   const ledgerNote = ['financials-reconcile', 'financials-validate', 'model-write'].includes(id)
-    ? '\n\nLoad and respect data/derived/celh_decisions_ledger.md (28 mapping + 16 new row + 4 structural + 11 anomaly entries — do not re-prompt for these).'
+    ? '\n\nLoad cross-ticker generic library from Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (~109 canonical entries) AND per-ticker decisions_ledger.json from --ticker-root. Ticker entries override generic on conflicts via tier scoring. Append-only, ISO-8601 dates when recording new user decisions.'
     : '';
 
   const text = `Scaffold the \`${id}\` skill as part of the CELH multi-skill financial-modeling pipeline.
