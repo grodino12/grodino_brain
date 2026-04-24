@@ -12,7 +12,71 @@
       "period_end_date": "2025-12-31",
       "fiscal_year": 2026,
       "target_variant": "QTR",
-      "raw_filing_label": "DebtCurrent",
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "value": "21737",
+      "raw_numeric_text": "21,737",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-12-31",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "nearest_matches": [
+        [
+          "other intangible assets",
+          0.7076923076923076
+        ],
+        [
+          "intangible assets net",
+          0.6666666666666667
+        ],
+        [
+          "other intangibles net",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Accrued and other liabilities",
+      "value": "10463",
+      "raw_numeric_text": "10,463",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2025-12-31",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "nearest_matches": [
+        [
+          "accrued liabilities",
+          0.7916666666666665
+        ],
+        [
+          "accrued expenses and other current liabilities",
+          0.7733333333333333
+        ],
+        [
+          "other liabilities",
+          0.7391304347826086
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Debt due within one year",
       "value": "11062",
       "raw_numeric_text": "11,062",
       "section": "current_liabilities",
@@ -23,18 +87,37 @@
         "line_hint": "us-gaap:DebtCurrent | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Common stock, issued (in shares)",
+      "value": "4009.2",
+      "raw_numeric_text": "4,009.2",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-12-31",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+      },
       "nearest_matches": [
         [
-          "long-term debt current",
-          0.7058823529411764
+          "common stock shares issued",
+          0.6909090909090909
         ],
         [
-          "long-term debt noncurrent",
-          0.6486486486486487
+          "common stock value",
+          0.6382978723404256
         ],
         [
-          "other liabilities current",
-          0.5945945945945945
+          "common shares",
+          0.6190476190476191
         ]
       ]
     },
@@ -44,7 +127,71 @@
       "period_end_date": "2025-06-30",
       "fiscal_year": 2025,
       "target_variant": "QTR",
-      "raw_filing_label": "DebtCurrent",
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "value": "21910",
+      "raw_numeric_text": "21,910",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "nearest_matches": [
+        [
+          "other intangible assets",
+          0.7076923076923076
+        ],
+        [
+          "intangible assets net",
+          0.6666666666666667
+        ],
+        [
+          "other intangibles net",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2025",
+      "period_end_date": "2025-06-30",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Accrued and other liabilities",
+      "value": "11318",
+      "raw_numeric_text": "11,318",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2025-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "nearest_matches": [
+        [
+          "accrued liabilities",
+          0.7916666666666665
+        ],
+        [
+          "accrued expenses and other current liabilities",
+          0.7733333333333333
+        ],
+        [
+          "other liabilities",
+          0.7391304347826086
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2025",
+      "period_end_date": "2025-06-30",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Debt due within one year",
       "value": "9513",
       "raw_numeric_text": "9,513",
       "section": "current_liabilities",
@@ -55,18 +202,325 @@
         "line_hint": "us-gaap:DebtCurrent | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2025",
+      "period_end_date": "2025-06-30",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Common stock, issued (in shares)",
+      "value": "4009.2",
+      "raw_numeric_text": "4,009.2",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+      },
       "nearest_matches": [
         [
-          "long-term debt current",
-          0.7058823529411764
+          "common stock shares issued",
+          0.6909090909090909
         ],
         [
-          "long-term debt noncurrent",
-          0.6486486486486487
+          "common stock value",
+          0.6382978723404256
         ],
         [
-          "other liabilities current",
-          0.5945945945945945
+          "common shares",
+          0.6190476190476191
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "value": "4319",
+      "raw_numeric_text": "4,319",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "net earnings attributable to noncontrolling interests",
+          0.7291666666666667
+        ],
+        [
+          "net income attributable to noncontrolling interest",
+          0.6236559139784946
+        ],
+        [
+          "net income loss attributable to noncontrolling interest",
+          0.6122448979591837
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Basic (in dollars per share)",
+      "value": "0.00000182",
+      "raw_numeric_text": "1.82",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "basic earnings loss per share",
+          0.7636363636363638
+        ],
+        [
+          "basic earnings per share",
+          0.76
+        ],
+        [
+          "basic net income loss per share",
+          0.736842105263158
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Diluted (in dollars per share)",
+      "value": "0.00000178",
+      "raw_numeric_text": "1.78",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "diluted earnings loss per share",
+          0.7796610169491526
+        ],
+        [
+          "diluted earnings per share",
+          0.7777777777777779
+        ],
+        [
+          "diluted net income loss per share",
+          0.7540983606557377
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Unrealized gains/(losses) on investment securities",
+      "value": "2",
+      "raw_numeric_text": "2",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+      },
+      "nearest_matches": [
+        [
+          "unrealized gains losses on available-for-sale securities",
+          0.8076923076923077
+        ],
+        [
+          "undistributed earnings allocated to participating securities",
+          0.5925925925925926
+        ],
+        [
+          "earnings allocated to participating securities",
+          0.5531914893617021
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+      "value": "2",
+      "raw_numeric_text": "2",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+      },
+      "nearest_matches": [
+        [
+          "unrealized gains losses on available-for-sale securities",
+          0.6386554621848739
+        ],
+        [
+          "pension and other postretirement benefit plans adjustment",
+          0.5166666666666666
+        ],
+        [
+          "other comprehensive income loss pension and other postretirement benefit plans adjustment net of tax",
+          0.5153374233128835
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "value": "4630",
+      "raw_numeric_text": "4,630",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "net earnings attributable to noncontrolling interests",
+          0.7291666666666667
+        ],
+        [
+          "net income attributable to noncontrolling interest",
+          0.6236559139784946
+        ],
+        [
+          "net income loss attributable to noncontrolling interest",
+          0.6122448979591837
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Basic (in dollars per share)",
+      "value": "0.00000194",
+      "raw_numeric_text": "1.94",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "basic earnings loss per share",
+          0.7636363636363638
+        ],
+        [
+          "basic earnings per share",
+          0.76
+        ],
+        [
+          "basic net income loss per share",
+          0.736842105263158
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Diluted (in dollars per share)",
+      "value": "0.00000188",
+      "raw_numeric_text": "1.88",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "diluted earnings loss per share",
+          0.7796610169491526
+        ],
+        [
+          "diluted earnings per share",
+          0.7777777777777779
+        ],
+        [
+          "diluted net income loss per share",
+          0.7540983606557377
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Unrealized gains/(losses) on defined benefit postretirement plans",
+      "value": "-24",
+      "raw_numeric_text": "24",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+      },
+      "nearest_matches": [
+        [
+          "unrealized gains losses on available-for-sale securities",
+          0.6386554621848739
+        ],
+        [
+          "pension and other postretirement benefit plans adjustment",
+          0.5166666666666666
+        ],
+        [
+          "other comprehensive income loss pension and other postretirement benefit plans adjustment net of tax",
+          0.5153374233128835
         ]
       ]
     }
