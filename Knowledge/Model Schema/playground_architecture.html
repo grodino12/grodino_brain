@@ -440,9 +440,9 @@ const LAYERS = [
 // Layer 4 output skills spread across 4 columns.
 // Layer 5 storage has two sub-rows (contracts/stores, then external I/O).
 let NODES = [
-  // Layer 1
-  { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 620,  y: 225, w: 240, h: 56, label: 'financials-extract',
-    purpose: 'Parse SEC filing PDFs into Pydantic RawFiling. Detect currency unit + parse exclusions to derive per-section share_unit / eps_unit.',
+  // Layer 1 — extract (two parallel extractors feeding the same RawFiling)
+  { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 430,  y: 225, w: 220, h: 56, label: 'financials-extract',
+    purpose: 'Parse filing PDFs (IR press releases, legacy sources) into Pydantic RawFiling. Fallback path for non-iXBRL sources.',
     input: 'PDF path', output: 'RawFiling',
     ops: [
       'Locate BS/CF/IS pages by heading match (not hardcoded pages)',
@@ -455,9 +455,26 @@ let NODES = [
     ],
     deps: ['pymupdf', 'pdfplumber', 'pydantic', 'rapidfuzz']
   },
-  { id: 'RawFiling', layer: 'extract', kind: 'contract', x: 940, y: 225, w: 200, h: 56, label: 'RawFiling',
-    purpose: 'Pydantic model for an extracted filing. Contains Statement[] (BS/CF/IS), each with Unit + RawLineItem[].',
-    fields: ['ticker: str', 'filing_type: FilingType', 'filing_date: date', 'source_path: Path', 'statements: list[Statement]'],
+  { id: 'financials-extract-ixbrl', layer: 'extract', kind: 'skill', built: true, x: 710, y: 225, w: 240, h: 56, label: 'financials-extract-ixbrl',
+    purpose: 'Parse SEC iXBRL HTML into RawFiling using the SEC presentation linkbase (FilingSummary.xml + R{n}.htm) for authoritative statement classification. Near-perfect extraction — every number is pre-tagged with concept / period / unit / scale.',
+    input: 'iXBRL HTML + .meta.json', output: 'RawFiling',
+    ops: [
+      'XML-parse iXBRL (lxml — HTMLParser mangles namespaces)',
+      'Build {context_id → Period + segments} and {unit_id → measure} maps',
+      'Iterate <ix:nonFraction> elements → tagged IxFact[] with explicit scale / unit / period / sign',
+      'Fetch FilingSummary.xml + Statement R-files (MenuCategory="Statements") — cached per accession',
+      'Build {concept → statement_code} from R-file concept references (IS / CI / BS / CF / SE)',
+      'Group consolidated (non-segment) facts by (statement_type, period) → Statement[]; merge CI into IS, skip SE+DETAIL for v1',
+      'Detect Unit from dominant scale of USD facts in each statement (scale=6 → Unit.MILLIONS etc.)',
+      'Filter BS instants to the top-2 most-populated dates (drops SE roll-forward reference balances)',
+      'Resolve fiscal_year / fiscal_quarter from periodOfReport + fiscal-year-end month',
+      'Emit RawFiling identical to PDF pipeline output — plug-compatible downstream'
+    ],
+    deps: ['lxml', 'requests', 'pydantic']
+  },
+  { id: 'RawFiling', layer: 'extract', kind: 'contract', x: 1000, y: 225, w: 180, h: 56, label: 'RawFiling',
+    purpose: 'Pydantic model for an extracted filing. Contains Statement[] (BS/CF/IS), each with Unit + RawLineItem[]. Same shape regardless of extraction source — both financials-extract (PDF) and financials-extract-ixbrl (iXBRL) emit this.',
+    fields: ['ticker: str', 'filing_type: FilingType', 'filing_date: date', 'source_path: Path', 'statements: list[Statement]', 'extraction_metadata: dict'],
     validators: ['at_least_one_statement', 'press_release_has_only_income_statement']
   },
 
@@ -546,13 +563,39 @@ let NODES = [
 
   // Stores positioned next to their consumer skill, in the skill's own layer.
 
-  // Layer 1 — feeds financials-extract
-  { id: 'source-pdfs', layer: 'input', kind: 'external', x: 600, y: 85, w: 260, h: 50, label: 'SEC filing PDFs',
-    purpose: 'Source-of-truth PDFs. 10-K contains BS/CF/IS. Press releases = IS only. Organized by filing type inside the ticker folder.',
-    path: 'Brain/Knowledge/Model Schema/CELH/sources/{10-K, 10-Q, press_releases}/'
+  // Layer 0 — fetch + source filings (feeds both extractors)
+  { id: 'sec-edgar-api', layer: 'input', kind: 'external', x: 40, y: 85, w: 170, h: 50, label: 'SEC EDGAR API',
+    purpose: 'Public data.sec.gov endpoints: submissions, companyfacts, filing archives. No API key — requires User-Agent header identifying the requester. Rate limit: 10 req/sec (skill runs at 5).',
+    path: 'data.sec.gov + www.sec.gov/Archives/edgar/data/{cik}/'
   },
-  { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 310, y: 225, w: 240, h: 50, label: 'pattern_libraries/*.json',
-    purpose: 'JSON pattern files for statement headings, unit phrases, section labels, period phrases, numeric notation. Read by financials-extract; new variants auto-appended on fuzzy match.',
+  { id: 'sec-edgar-fetch', layer: 'input', kind: 'skill', built: true, x: 240, y: 85, w: 200, h: 50, label: 'sec-edgar-fetch',
+    purpose: 'Pull 10-K / 10-Q primary iXBRL HTMLs + Financial_Report.xlsx + cumulative companyfacts.json from EDGAR into ticker-organized folders. Gap-fills: skips files already on disk. Writes .meta.json sidecar per filing so downstream extractor can locate FilingSummary.xml.',
+    input: 'ticker[] (defaults to Consumer Staples list)', output: 'iXBRL HTML + meta.json + companyfacts.json',
+    ops: [
+      'Resolve ticker → CIK via company_tickers.json (cached 7d)',
+      'Parse submissions.json + filter to requested forms, apply --limit / --since',
+      'Derive fiscal quarter label from fiscalYearEnd + periodOfReport (e.g. "2026-Q2", "2025-FY")',
+      'Download primary .htm + Financial_Report.xlsx per filing (graceful skip when xlsx not yet generated)',
+      'Refresh companyfacts.json at ticker root (full XBRL time series, ~3-30 MB per ticker)',
+      'Write {filing}.meta.json sidecar: accession, CIK, archive_base_url, quarter, form',
+      'Idempotent — re-running only fetches missing artifacts'
+    ],
+    deps: ['requests']
+  },
+  { id: 'ixbrl-htm-store', layer: 'input', kind: 'store', x: 470, y: 85, w: 200, h: 50, label: 'iXBRL HTML + meta.json',
+    purpose: 'SEC iXBRL primary documents + per-filing metadata sidecars. Produced by sec-edgar-fetch, consumed by financials-extract-ixbrl. Every number in the .htm is tagged with concept / context / unit / scale — the .meta.json carries the accession so the extractor can fetch FilingSummary.xml.',
+    path: 'Brain/Sources/{TICKER}/{QUARTER}/filings/{TICKER}_{YYYY-MM-DD}_{form}.htm + .meta.json'
+  },
+  { id: 'companyfacts-store', layer: 'input', kind: 'store', x: 700, y: 85, w: 190, h: 50, label: 'companyfacts.json',
+    purpose: 'SEC-pre-processed XBRL facts for ALL historical periods of a given ticker. One file per ticker; every GAAP concept with full time series. Direct-query alternative to per-filing extraction for standard line items — covers ~80% of modeling needs with zero extraction machinery.',
+    path: 'Brain/Sources/{TICKER}/companyfacts.json'
+  },
+  { id: 'source-pdfs', layer: 'input', kind: 'external', x: 920, y: 85, w: 250, h: 50, label: 'IR press release PDFs',
+    purpose: 'Non-iXBRL PDFs — primarily IR-site press releases downloaded by the investor-relations-data-scraper skill. Press releases = IS-only; 10-K/10-Q PDFs are a legacy path now superseded by the iXBRL extractor for SEC-filed documents.',
+    path: 'Brain/Sources/{TICKER}/{QUARTER}/transcripts/*_press_release.pdf'
+  },
+  { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 170, y: 225, w: 220, h: 50, label: 'pattern_libraries/*.json',
+    purpose: 'JSON pattern files for statement headings, unit phrases, section labels, period phrases, numeric notation. Read by financials-extract (PDF pipeline) — not used by financials-extract-ixbrl, which relies on the XBRL taxonomy instead. New variants auto-appended on fuzzy match.',
     path: '~/.claude/skills/financials-extract/references/*.json'
   },
 
@@ -590,12 +633,21 @@ let NODES = [
 ];
 
 let EDGES = [
-  // External → extract
+  // Layer 0: fetch — SEC EDGAR → sec-edgar-fetch → local stores
+  { from: 'sec-edgar-api', to: 'sec-edgar-fetch', kind: 'data' },
+  { from: 'sec-edgar-fetch', to: 'ixbrl-htm-store', kind: 'data' },
+  { from: 'sec-edgar-fetch', to: 'companyfacts-store', kind: 'data' },
+  // iXBRL path: HTML store → ixbrl extractor → RawFiling
+  { from: 'ixbrl-htm-store', to: 'financials-extract-ixbrl', kind: 'data' },
+  { from: 'financials-extract-ixbrl', to: 'RawFiling', kind: 'data' },
+  // companyfacts is also consulted by the ixbrl extractor (sanity-check / fallback for missing concepts)
+  { from: 'companyfacts-store', to: 'financials-extract-ixbrl', kind: 'data' },
+  // PDF path (legacy + IR press releases): PDFs → financials-extract → RawFiling
   { from: 'source-pdfs', to: 'financials-extract', kind: 'data' },
-  // Pattern libraries ↔ extract (read on match, append on novel)
+  // Pattern libraries ↔ PDF extract (read on match, append on novel)
   { from: 'pattern-libraries', to: 'financials-extract', kind: 'data' },
   { from: 'financials-extract', to: 'pattern-libraries', kind: 'data' },
-  // extract produces
+  // PDF extract produces
   { from: 'financials-extract', to: 'RawFiling', kind: 'data' },
   // RawFiling → reconcile
   { from: 'RawFiling', to: 'financials-reconcile', kind: 'data' },
@@ -1091,7 +1143,7 @@ function renderDetail() {
 
 // ============ SCAFFOLD PROMPT ============
 
-const SKILL_IDS = ['financials-extract', 'financials-reconcile', 'financials-validate', 'financials-playground', 'model-write', 'model-calc'];
+const SKILL_IDS = ['sec-edgar-fetch', 'financials-extract-ixbrl', 'financials-extract', 'financials-reconcile', 'financials-validate', 'financials-playground', 'model-write', 'model-calc'];
 const gridEl = document.getElementById('scaffoldGrid');
 const promptEl = document.getElementById('prompt');
 
@@ -1126,6 +1178,23 @@ function scopeLine() {
 
 function scaffoldBody(id) {
   return {
+    'sec-edgar-fetch': `Input: --tickers PG,KO,... (comma-separated) OR --ticker PG (single) OR no args = all Consumer Staples. Optional: --forms 10-K,10-Q (default), --limit N (default 8), --since YYYY-MM-DD, --companyfacts-only, --no-companyfacts, --dry-run.
+Output: iXBRL HTML + Financial_Report.xlsx per filing at Brain/Sources/{TICKER}/{QUARTER}/filings/, plus companyfacts.json per ticker at Brain/Sources/{TICKER}/. Every filing also gets a sibling .meta.json sidecar containing accession, CIK, archive_base_url — consumed by financials-extract-ixbrl to locate the presentation linkbase.
+Compliance: SEC-polite User-Agent (rodinogj12@gmail.com ...), 5 req/sec throttle, retry on 429/5xx.
+Fiscal-quarter labels derived from submissions.json fiscalYearEnd + periodOfReport, not from IR-page titles — may diverge slightly from IR scraper labels; each path files under its own label.
+Reference: already built at ~/.claude/skills/sec-edgar-fetch/. CLI entrypoint: scripts/fetch.py.
+Acceptance: ran --ticker PG → PG_2025-12-31_10-Q.htm + companyfacts.json (3.6 MB) landed at expected paths.`,
+
+    'financials-extract-ixbrl': `Input: --htm <iXBRL HTML path> + --out <RawFiling JSON path>. Optional: --ticker-root (config.json ticker guard).
+Output: RawFiling JSON identical in shape to financials-extract (PDF) — plug-compatible with financials-reconcile / financials-validate / financials-playground / model-write downstream.
+Classification: uses the SEC presentation linkbase. Fetches FilingSummary.xml + each R{n}.htm with MenuCategory="Statements" from the filing's archive (cached per accession in .cache/reports/{accession-nodash}/), parses concept → statement_code from the rendered R-files, groups facts by (statement_type, period). No fuzzy heuristics.
+iXBRL parsing: lxml XML mode (not HTMLParser — namespaces get mangled). Parse <ix:nonFraction> elements with explicit scale / unit / context attributes; resolve contexts to (period_kind, start, end, segments); resolve units to measure names.
+Unit: dominant scale of USD facts per statement (scale=6 → Unit.MILLIONS). confidence = share of facts at the dominant scale.
+BS filtering: keep only top-2 most-populated instant dates per filing (drops SE roll-forward reference balances that leak in via shared concepts).
+fiscal_quarter: only set for single-quarter durations (11-15 weeks) or BS. YTD and full-year durations get fiscal_quarter=None.
+Reference: already built at ~/.claude/skills/financials-extract-ixbrl/. Venv: Brain/Knowledge/Model Schema/financials-schema/.venv/.
+Acceptance: PG 2026-Q2 10-Q extracts 10 Statements / 199 line items cleanly; RawFiling.model_validate() passes.`,
+
     'financials-extract': `Input: PDF path (--pdf) + --ticker-root (e.g. Brain/Knowledge/Model Schema/CELH/).
 Output: RawFiling with BalanceSheet, CashFlow, IncomeStatement sub-models. Each RawLineItem carries raw_filing_label (verbatim), value (Decimal, native unit), raw_numeric_text ("(101,726)"), notation_flags (NumericNotation bitmap), citation (page, line_hint). Statement carries unit (Unit enum), raw_unit_phrase, unit_detection_source + confidence, share_unit, eps_unit, dialect.
 Unit detection: use pattern library at references/unit_phrases.json (4-layer ladder: normalize → keyword → fuzzy → user-prompt-append). Plausibility fallback reads tickers/{ticker}/config.json for expected revenue/TA ranges. Unit.UNKNOWN raises.
