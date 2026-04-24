@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PG — Financials Explorer</title>
+<style>
+:root {
+  --bg: #0a0d14;
+  --panel: #131824;
+  --panel-2: #1a2030;
+  --border: #2a3244;
+  --text: #e6e8ef;
+  --text-dim: #7b8294;
+  --accent: #4f9eff;
+  --good: #14b8a6;
+  --warn: #e97c2b;
+  --bad:  #ef4444;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --sys:  -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  font-family: var(--sys);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  padding: 14px 24px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+  flex: 0 0 auto;
+}
+header .row1 { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+header h1 { margin: 0; font-size: 16px; font-weight: 600; }
+header .sub { color: var(--text-dim); font-size: 12px; font-family: var(--mono); }
+header .badge {
+  display: inline-block; padding: 2px 9px; border-radius: 10px;
+  font-size: 11px; font-weight: 500; font-family: var(--mono);
+  border: 1px solid;
+}
+.badge.pass { color: var(--good); border-color: var(--good); background: rgba(20,184,166,0.08); }
+.badge.fail { color: var(--bad);  border-color: var(--bad);  background: rgba(239,68,68,0.08); }
+
+.tabs {
+  display: flex; gap: 0; margin-top: 12px;
+}
+.tabs button {
+  background: transparent;
+  color: var(--text-dim);
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 9px 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.tabs button:hover { color: var(--text); }
+.tabs button.active { color: var(--text); border-bottom-color: var(--accent); }
+
+.toolbar {
+  padding: 8px 24px; border-bottom: 1px solid var(--border);
+  background: var(--panel); display: flex; gap: 16px; align-items: center;
+  font-size: 11px; color: var(--text-dim);
+  font-family: var(--mono);
+}
+.toolbar label { display: flex; gap: 6px; align-items: center; cursor: pointer; }
+
+main { flex: 1 1 auto; overflow: auto; padding: 16px 24px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+table.statement {
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 12px;
+  width: 100%;
+  max-width: 1400px;
+}
+table.statement th, table.statement td {
+  padding: 4px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+table.statement th {
+  text-align: right;
+  color: var(--text-dim);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  position: sticky; top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+table.statement th.label-col, table.statement td.label-col {
+  text-align: left;
+  white-space: normal;
+}
+table.statement td.row-num {
+  color: var(--text-dim);
+  text-align: right;
+  font-size: 10px;
+  width: 38px;
+}
+table.statement td.value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+td.value.neg { color: var(--bad); }
+td.value.zero, td.value.empty { color: var(--text-dim); }
+td.value.yoy-warn { background: rgba(233,124,43,0.12); }
+td.value.yoy-bad  { background: rgba(239,68,68,0.16); }
+
+tr.section td {
+  background: var(--panel-2);
+  color: var(--accent);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+tr.subtotal td {
+  background: rgba(79,158,255,0.05);
+  font-weight: 600;
+  border-top: 1px solid var(--border);
+}
+tr.subtotal td.label-col { color: var(--accent); }
+
+.raw-label { display: none; color: var(--text-dim); font-size: 10px; }
+body.show-raw .raw-label { display: block; }
+body.show-raw .model-label { color: var(--text-dim); }
+.unit-hint { color: var(--warn); font-size: 10px; font-weight: 400; margin-left: 4px; }
+
+table.validation {
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 12px;
+  width: 100%;
+  max-width: 1400px;
+}
+table.validation th, table.validation td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+table.validation th { color: var(--text-dim); font-weight: 500; font-size: 11px; }
+table.validation td.gap { text-align: right; font-variant-numeric: tabular-nums; }
+table.validation td.sev { font-weight: 600; }
+td.sev.pass { color: var(--good); }
+td.sev.warning { color: var(--warn); }
+td.sev.fail { color: var(--bad); }
+table.validation tr.fam-divider td {
+  background: var(--panel-2);
+  color: var(--accent);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tab-badge {
+  display: inline-block;
+  padding: 0 6px;
+  margin-left: 4px;
+  border-radius: 8px;
+  background: var(--bad);
+  color: #fff;
+  font-size: 10px;
+  font-family: var(--mono);
+}
+
+table.novels {
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 12px;
+  width: 100%;
+  max-width: 1500px;
+}
+table.novels th, table.novels td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+table.novels th {
+  color: var(--text-dim);
+  font-weight: 500;
+  font-size: 11px;
+  position: sticky; top: 0;
+  background: var(--bg);
+}
+.novel-id { color: var(--accent); font-weight: 600; width: 38px; }
+.novel-label { font-weight: 500; }
+.sheet-tag {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 11px; font-weight: 600;
+  border: 1px solid;
+}
+.sheet-tag.sheet-BS { color: var(--c-pkg, #0ea5e9); border-color: var(--c-pkg, #0ea5e9); background: rgba(14,165,233,0.08); }
+.sheet-tag.sheet-IS { color: var(--good); border-color: var(--good); background: rgba(20,184,166,0.08); }
+.sheet-tag.sheet-CF { color: var(--warn); border-color: var(--warn); background: rgba(233,124,43,0.08); }
+.section-tag { color: var(--text-dim); font-size: 11px; }
+.occ-period { color: var(--accent); }
+.occ-val { color: var(--text); font-variant-numeric: tabular-nums; }
+.occ-cite { color: var(--text-dim); font-size: 10px; margin-left: 6px; }
+.fuzzy-cand { color: var(--text); }
+.fuzzy-score { color: var(--warn); font-variant-numeric: tabular-nums; margin-left: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="row1">
+    <h1>PG — Financials Explorer</h1>
+    <span class="badge pass">17/49 validation rules pass</span>
+  </div>
+  <div class="sub">10-Q (2026-01-23) -&gt; PG_2025-12-31_10-Q.htm</div>
+  <div class="tabs">
+    <button class="active" data-tab="bs" onclick="showTab('bs')">BALANCE SHEET</button>
+    <button data-tab="is" onclick="showTab('is')">INCOME STATEMENT</button>
+    <button data-tab="cf" onclick="showTab('cf')">CASH FLOW</button>
+    <button data-tab="val" onclick="showTab('val')">VALIDATION</button>
+    <button data-tab="novels" onclick="showTab('novels')">NOVELS <span class="tab-badge">0</span></button>
+  </div>
+</header>
+<div class="toolbar">
+  <label><input type="checkbox" onchange="toggleRawLabels(this.checked)"> Show raw filing labels + sheet tags</label>
+  <span>·</span>
+  <span>YoY shading: &gt;20% orange · &gt;50% red</span>
+</div>
+<main>
+  <div id="tab-bs" class="tab-panel active"><div style="margin-bottom: 8px; color: var(--text-dim); font-family: var(--mono); font-size: 11px;">Values in millions. Hover a cell for source citation.</div><table class="statement"><thead><tr><th class="label-col">Line item</th><th>Row</th><th>Q2 FY2026</th><th>Q4 FY2025</th></tr></thead><tbody><tr class="section"><td colspan="4">Current Assets</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Accounts Receivable</div>  <div class="raw-label">Accounts receivable · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:AccountsReceivableNetCurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">6,279</td><td class="value pos " title="Concept: us-gaap:AccountsReceivableNetCurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">6,185</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Prepaid Expenses</div>  <div class="raw-label">Prepaid expenses and other current assets · QTR BS</div></td><td class="row-num">0</td><td class="value pos yoy-warn" title="Concept: us-gaap:PrepaidExpenseAndOtherAssetsCurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">1,666</td><td class="value pos " title="Concept: us-gaap:PrepaidExpenseAndOtherAssetsCurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">2,100</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL CURRENT ASSETS</div>  <div class="raw-label">TOTAL CURRENT ASSETS</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:AssetsCurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">26,588</td><td class="value pos " title="Concept: us-gaap:AssetsCurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">25,392</td></tr><tr class="section"><td colspan="4">Non-Current Assets</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Cash &amp; Cash Equivalents</div>  <div class="raw-label">Cash and cash equivalents · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">10,825</td><td class="value pos " title="Concept: us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">9,556</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Inventories</div>  <div class="raw-label">Materials and supplies · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">2,139</td><td class="value pos " title="Concept: us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">2,022</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Net PP&amp;E</div>  <div class="raw-label">PROPERTY, PLANT AND EQUIPMENT, NET · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:PropertyPlantAndEquipmentNet | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">24,487</td><td class="value pos " title="Concept: us-gaap:PropertyPlantAndEquipmentNet | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">23,897</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Goodwill</div>  <div class="raw-label">GOODWILL · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:Goodwill | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">41,665</td><td class="value pos " title="Concept: us-gaap:Goodwill | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">41,650</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Intangible Assets</div>  <div class="raw-label">TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:IntangibleAssetsNetExcludingGoodwill | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">21,737</td><td class="value pos " title="Concept: us-gaap:IntangibleAssetsNetExcludingGoodwill | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">21,910</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">Total inventories</div>  <div class="raw-label">Total inventories</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:InventoryNet | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">7,817</td><td class="value pos " title="Concept: us-gaap:InventoryNet | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">7,551</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL ASSETS</div>  <div class="raw-label">TOTAL ASSETS</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:Assets | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">127,286</td><td class="value pos " title="Concept: us-gaap:Assets | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">125,231</td></tr><tr class="section"><td colspan="4">Current Liabilities</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Accounts Payable</div>  <div class="raw-label">Accounts payable · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:AccountsPayableCurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">15,173</td><td class="value pos " title="Concept: us-gaap:AccountsPayableCurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">15,227</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Accrued Expenses</div>  <div class="raw-label">Accrued and other liabilities · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:AccruedLiabilitiesCurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">10,463</td><td class="value pos " title="Concept: us-gaap:AccruedLiabilitiesCurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">11,318</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Current Portion of Long-Term Debt</div>  <div class="raw-label">Debt due within one year · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:DebtCurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">11,062</td><td class="value pos " title="Concept: us-gaap:DebtCurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">9,513</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL CURRENT LIABILITIES</div>  <div class="raw-label">TOTAL CURRENT LIABILITIES</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:LiabilitiesCurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">36,699</td><td class="value pos " title="Concept: us-gaap:LiabilitiesCurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">36,058</td></tr><tr class="section"><td colspan="4">Non-Current Liabilities</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Long-Term Debt</div>  <div class="raw-label">LONG-TERM DEBT · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:LongTermDebtNoncurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">25,577</td><td class="value pos " title="Concept: us-gaap:LongTermDebtNoncurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">24,995</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL LIABILITIES</div>  <div class="raw-label">TOTAL LIABILITIES</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:Liabilities | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">73,969</td><td class="value pos " title="Concept: us-gaap:Liabilities | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">72,946</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY</div>  <div class="raw-label">TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:LiabilitiesAndStockholdersEquity | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">127,286</td><td class="value pos " title="Concept: us-gaap:LiabilitiesAndStockholdersEquity | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">125,231</td></tr><tr class="section"><td colspan="4">Stockholders&#x27; Equity</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Convertible Preferred Stock</div>  <div class="raw-label">Preferred stock · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:PreferredStockValue | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">767</td><td class="value pos " title="Concept: us-gaap:PreferredStockValue | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">777</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Common Stock - Shares Issued</div>  <div class="raw-label">Common stock, issued (in shares) · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:CommonStockSharesIssued | From: Consolidated Balance Sheets (Parenthetical) | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">4,009.20</td><td class="value pos " title="Concept: us-gaap:CommonStockSharesIssued | From: Consolidated Balance Sheets (Parenthetical) | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">4,009.20</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Common Stock</div>  <div class="raw-label">Common stock · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:CommonStockValue | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">4,009</td><td class="value pos " title="Concept: us-gaap:CommonStockValue | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">4,009</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Additional Paid-in Capital</div>  <div class="raw-label">Additional paid-in capital · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:AdditionalPaidInCapital | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">69,010</td><td class="value pos " title="Concept: us-gaap:AdditionalPaidInCapital | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">68,770</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Accumulated Other Comprehensive Income (Loss)</div>  <div class="raw-label">Accumulated other comprehensive loss · QTR BS</div></td><td class="row-num">0</td><td class="value neg " title="Concept: us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">(12,108)</td><td class="value neg " title="Concept: us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">(12,143)</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Treasury Stock</div>  <div class="raw-label">Treasury stock · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:TreasuryStockCommonValue | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">141,981</td><td class="value pos " title="Concept: us-gaap:TreasuryStockCommonValue | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">138,702</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Retained Earnings (Accumulated Deficit)</div>  <div class="raw-label">Retained earnings · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:RetainedEarningsAccumulatedDeficit | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">133,981</td><td class="value pos " title="Concept: us-gaap:RetainedEarningsAccumulatedDeficit | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">129,973</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL SHAREHOLDERS’ EQUITY</div>  <div class="raw-label">TOTAL SHAREHOLDERS’ EQUITY</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">53,317</td><td class="value pos " title="Concept: us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">52,284</td></tr><tr class="section"><td colspan="4">Operating Activities</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Deferred Tax Assets</div>  <div class="raw-label">DEFERRED INCOME TAXES · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:DeferredIncomeTaxLiabilitiesNet | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">5,974</td><td class="value pos " title="Concept: us-gaap:DeferredIncomeTaxLiabilitiesNet | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">5,774</td></tr><tr class="section"><td colspan="4">Unclassified</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Other Non-Current Assets</div>  <div class="raw-label">OTHER NONCURRENT ASSETS · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:OtherAssetsNoncurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">12,809</td><td class="value pos " title="Concept: us-gaap:OtherAssetsNoncurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">12,381</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Other Non-Current Liabilities</div>  <div class="raw-label">OTHER NONCURRENT LIABILITIES · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:OtherLiabilitiesNoncurrent | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">5,719</td><td class="value pos " title="Concept: us-gaap:OtherLiabilitiesNoncurrent | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">6,120</td></tr><tr class="item"><td class="label-col">  <div class="model-label">ESOP Debt Retirement Reserve</div>  <div class="raw-label">Reserve for ESOP debt retirement · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: pg:ReserveForEsopDebtRetirement | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">637</td><td class="value pos " title="Concept: pg:ReserveForEsopDebtRetirement | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">672</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Noncontrolling Interest</div>  <div class="raw-label">Noncontrolling interest · QTR BS</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:MinorityInterest | From: Consolidated Balance Sheets | Period: as of 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">276</td><td class="value pos " title="Concept: us-gaap:MinorityInterest | From: Consolidated Balance Sheets | Period: as of 2025-06-30 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">272</td></tr></tbody></table></div>
+  <div id="tab-is" class="tab-panel"><div style="margin-bottom: 8px; color: var(--text-dim); font-family: var(--mono); font-size: 11px;">Values in millions. Hover a cell for source citation.</div><table class="statement"><thead><tr><th class="label-col">Line item</th><th>Row</th><th>Q2 FY2026</th><th>Q2 FY2025</th></tr></thead><tbody><tr class="section"><td colspan="4">Operating Activities</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Depreciation &amp; Amortization</div>  <div class="raw-label">Depreciation and amortization · QTR CF</div></td><td class="row-num">0</td><td class="value empty ">—</td><td class="value pos " title="Concept: us-gaap:DepreciationDepletionAndAmortization | From: Consolidated Statements of Cash Flows | Period: ending 2024-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">706</td></tr><tr class="section"><td colspan="4">Top Line</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Net Sales / Revenue</div>  <div class="raw-label">NET SALES · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:Revenues | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">22,208</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">COGS</div>  <div class="raw-label">Cost of products sold · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:CostOfGoodsAndServicesSold | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">10,834</td><td class="value empty ">—</td></tr><tr class="section"><td colspan="4">Operating Expenses</td></tr><tr class="item"><td class="label-col">  <div class="model-label">SG&amp;A</div>  <div class="raw-label">Selling, general and administrative expense · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:SellingGeneralAndAdministrativeExpense | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">6,008</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Income (Loss) from Operations</div>  <div class="raw-label">OPERATING INCOME · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:OperatingIncomeLoss | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">5,366</td><td class="value empty ">—</td></tr><tr class="section"><td colspan="4">Non-Operating</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Interest Expense</div>  <div class="raw-label">Interest expense · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:InterestExpenseNonoperating | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">220</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Interest Income</div>  <div class="raw-label">Interest income · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:InvestmentIncomeInterest | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">115</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Other Income (Expense)</div>  <div class="raw-label">Other non-operating income/(expense), net · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:OtherNonoperatingIncomeExpense | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">160</td><td class="value empty ">—</td></tr><tr class="section"><td colspan="4">Tax</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Income Tax (Benefit) Expense</div>  <div class="raw-label">Income taxes · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:IncomeTaxExpenseBenefit | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">1,090</td><td class="value empty ">—</td></tr><tr class="section"><td colspan="4">Per Share &amp; Shares Outstanding</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Basic Earnings (Loss) per Share</div>  <div class="raw-label">Basic (in dollars per share) · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:EarningsPerShareBasic | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">0.00</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Diluted Earnings (Loss) per Share</div>  <div class="raw-label">Diluted (in dollars per share) · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:EarningsPerShareDiluted | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">0.00</td><td class="value empty ">—</td></tr><tr class="section"><td colspan="4">Unclassified</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Pre-Tax Income (Loss)</div>  <div class="raw-label">EARNINGS BEFORE INCOME TAXES · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">5,421</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Net Income (Loss)</div>  <div class="raw-label">NET EARNINGS · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:ProfitLoss | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">4,331</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Net Income (Loss) Attributable to Noncontrolling Interest</div>  <div class="raw-label">Less: Net earnings attributable to noncontrolling interests · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | From: Consolidated Statements of Earnings | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">12</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Foreign Currency Translation (OCI)</div>  <div class="raw-label">Foreign currency translation · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | From: Consolidated Statements of Comprehensive Income | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">45</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">OCI - AFS Securities</div>  <div class="raw-label">Unrealized gains/(losses) on investment securities · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax | From: Consolidated Statements of Comprehensive Income | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">2</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">OCI - Pension &amp; Postretirement</div>  <div class="raw-label">Unrealized gains/(losses) on defined benefit postretirement plans · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | From: Consolidated Statements of Comprehensive Income | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">2</td><td class="value empty ">—</td></tr><tr class="item"><td class="label-col">  <div class="model-label">Comprehensive Income Attributable to NCI</div>  <div class="raw-label">Less: Comprehensive income attributable to noncontrolling interests · QTR P&amp;L</div></td><td class="row-num">0</td><td class="value pos " title="Concept: us-gaap:ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest | From: Consolidated Statements of Comprehensive Income | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">10</td><td class="value empty ">—</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX</div>  <div class="raw-label">TOTAL OTHER COMPREHENSIVE INCOME/(LOSS), NET OF TAX</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:OtherComprehensiveIncomeLossNetOfTax | From: Consolidated Statements of Comprehensive Income | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">46</td><td class="value empty ">—</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL COMPREHENSIVE INCOME</div>  <div class="raw-label">TOTAL COMPREHENSIVE INCOME</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest | From: Consolidated Statements of Comprehensive Income | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">4,377</td><td class="value empty ">—</td></tr><tr class="subtotal"><td class="label-col">  <div class="model-label">TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER &amp; GAMBLE</div>  <div class="raw-label">TOTAL COMPREHENSIVE INCOME ATTRIBUTABLE TO PROCTER &amp; GAMBLE</div></td><td class="row-num"></td><td class="value pos " title="Concept: us-gaap:ComprehensiveIncomeNetOfTax | From: Consolidated Statements of Comprehensive Income | Period: ending 2025-12-31 | Source: PG_2025-12-31_10-Q.htm | Unit: millions">4,367</td><td class="value empty ">—</td></tr></tbody></table></div>
+  <div id="tab-cf" class="tab-panel"><div style="margin-bottom: 8px; color: var(--text-dim); font-family: var(--mono); font-size: 11px;">Values in millions. Hover a cell for source citation.</div><table class="statement"><thead><tr><th class="label-col">Line item</th><th>Row</th><th>FY2026</th><th>FY2025</th></tr></thead><tbody></tbody></table></div>
+  <div id="tab-val" class="tab-panel"><div style="margin-bottom: 12px; font-family: var(--mono); font-size: 12px;"><span class="badge pass">17/49 PASS · 32 WARN · 0 FAIL</span></div><table class="validation"><thead><tr><th>Rule</th><th>Severity</th><th class='gap'>Expected</th><th class='gap'>Actual</th><th class='gap'>Gap</th><th>Message</th></tr></thead><tbody><tr class="fam-divider"><td colspan="6">BS-rules</td></tr><tr><td>BS-1 @ Q2 FY2026</td><td class="sev pass">PASS</td><td class="gap">26,587</td><td class="gap">26,588</td><td class="gap">1</td><td>TCA = sum of 4 current-asset line items</td></tr><tr><td>BS-2 @ Q2 FY2026</td><td class="sev pass">PASS</td><td class="gap">127,286</td><td class="gap">127,286</td><td class="gap">0</td><td>TA = TCA (26588) + sum(4 NCA items = 100698)</td></tr><tr><td>BS-3 @ Q2 FY2026</td><td class="sev pass">PASS</td><td class="gap">36,698</td><td class="gap">36,699</td><td class="gap">1</td><td>TCL = sum of 3 current-liability line items</td></tr><tr><td>BS-4 @ Q2 FY2026</td><td class="sev pass">PASS</td><td class="gap">73,969</td><td class="gap">73,969</td><td class="gap">0</td><td>TL = TCL (36699) + sum(3 NCL items = 37270)</td></tr><tr><td>BS-5 @ Q2 FY2026</td><td class="sev pass">PASS</td><td class="gap">53,317</td><td class="gap">53,317</td><td class="gap">0</td><td>TSE = sum of 8 equity components</td></tr><tr><td>BS-6 @ Q2 FY2026</td><td class="sev pass">PASS</td><td class="gap">127,286</td><td class="gap">127,286</td><td class="gap">0</td><td>Accounting equation: TA (127286) = TL (73969) + Mezz (0) + TSE (53317)</td></tr><tr><td>BS-1 @ Q4 FY2025</td><td class="sev pass">PASS</td><td class="gap">25,392</td><td class="gap">25,392</td><td class="gap">0</td><td>TCA = sum of 4 current-asset line items</td></tr><tr><td>BS-2 @ Q4 FY2025</td><td class="sev pass">PASS</td><td class="gap">125,230</td><td class="gap">125,231</td><td class="gap">1</td><td>TA = TCA (25392) + sum(4 NCA items = 99838)</td></tr><tr><td>BS-3 @ Q4 FY2025</td><td class="sev pass">PASS</td><td class="gap">36,058</td><td class="gap">36,058</td><td class="gap">0</td><td>TCL = sum of 3 current-liability line items</td></tr><tr><td>BS-4 @ Q4 FY2025</td><td class="sev pass">PASS</td><td class="gap">72,947</td><td class="gap">72,946</td><td class="gap">-1</td><td>TL = TCL (36058) + sum(3 NCL items = 36889)</td></tr><tr><td>BS-5 @ Q4 FY2025</td><td class="sev pass">PASS</td><td class="gap">52,284</td><td class="gap">52,284</td><td class="gap">0</td><td>TSE = sum of 8 equity components</td></tr><tr><td>BS-6 @ Q4 FY2025</td><td class="sev pass">PASS</td><td class="gap">125,230</td><td class="gap">125,231</td><td class="gap">1</td><td>Accounting equation: TA (125231) = TL (72946) + Mezz (0) + TSE (52284)</td></tr><tr class="fam-divider"><td colspan="6">CF-rules</td></tr><tr><td>CF-1 @ FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — missing: CFO, CFI, CFF, NetΔ</td></tr><tr><td>CF-2 @ FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash</td></tr><tr><td>CF-3 @ FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from operating activities not found</td></tr><tr><td>CF-4 @ FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from investing activities not found</td></tr><tr><td>CF-5 @ FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from financing activities not found</td></tr><tr><td>CF-1 @ Q2 FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — missing: CFO, CFI, CFF, NetΔ</td></tr><tr><td>CF-2 @ Q2 FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash</td></tr><tr><td>CF-3 @ Q2 FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from operating activities not found</td></tr><tr><td>CF-4 @ Q2 FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from investing activities not found</td></tr><tr><td>CF-5 @ Q2 FY2026</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from financing activities not found</td></tr><tr><td>CF-1 @ FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — missing: CFO, CFI, CFF, NetΔ</td></tr><tr><td>CF-2 @ FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash</td></tr><tr><td>CF-3 @ FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from operating activities not found</td></tr><tr><td>CF-4 @ FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from investing activities not found</td></tr><tr><td>CF-5 @ FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from financing activities not found</td></tr><tr><td>CF-1 @ Q2 FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — missing: CFO, CFI, CFF, NetΔ</td></tr><tr><td>CF-2 @ Q2 FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash</td></tr><tr><td>CF-3 @ Q2 FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from operating activities not found</td></tr><tr><td>CF-4 @ Q2 FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from investing activities not found</td></tr><tr><td>CF-5 @ Q2 FY2025</td><td class="sev warning">WARNING</td><td class="gap">0</td><td class="gap">0</td><td class="gap">0</td><td>inconclusive — Net cash from financing activities not found</td></tr></tbody></table></div>
+  <div id="tab-novels" class="tab-panel"><div style="margin-bottom: 12px; font-family: var(--mono); font-size: 12px;"><span class="badge fail">0 unique novel labels</span> <span style="color: var(--text-dim); margin-left: 8px;">across 0 period-occurrences. Tell the assistant the # and target row to add a ledger entry.</span></div><table class="novels"><thead><tr><th class='novel-id'>#</th><th>Sheet</th><th>Section / Subsection</th><th>Raw filing label</th><th>Periods + values</th><th>Top fuzzy matches</th></tr></thead><tbody></tbody></table></div>
+</main>
+<script>
+function showTab(tabId) {
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + tabId));
+}
+function toggleRawLabels(checked) {
+  document.body.classList.toggle('show-raw', checked);
+}
+</script>
+</body>
+</html>
