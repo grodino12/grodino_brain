@@ -564,11 +564,11 @@ let NODES = [
   // Stores positioned next to their consumer skill, in the skill's own layer.
 
   // Layer 0 — fetch + source filings (feeds both extractors)
-  { id: 'sec-edgar-api', layer: 'input', kind: 'external', x: 40, y: 85, w: 170, h: 50, label: 'SEC EDGAR API',
+  { id: 'sec-edgar-api', layer: 'input', kind: 'external', x: 80, y: 85, w: 200, h: 50, label: 'SEC EDGAR API',
     purpose: 'Public data.sec.gov endpoints: submissions, companyfacts, filing archives. No API key — requires User-Agent header identifying the requester. Rate limit: 10 req/sec (skill runs at 5).',
     path: 'data.sec.gov + www.sec.gov/Archives/edgar/data/{cik}/'
   },
-  { id: 'sec-edgar-fetch', layer: 'input', kind: 'skill', built: true, x: 240, y: 85, w: 200, h: 50, label: 'sec-edgar-fetch',
+  { id: 'sec-edgar-fetch', layer: 'input', kind: 'skill', built: true, x: 330, y: 85, w: 220, h: 50, label: 'sec-edgar-fetch',
     purpose: 'Pull 10-K / 10-Q primary iXBRL HTMLs + Financial_Report.xlsx + cumulative companyfacts.json from EDGAR into ticker-organized folders. Gap-fills: skips files already on disk. Writes .meta.json sidecar per filing so downstream extractor can locate FilingSummary.xml.',
     input: 'ticker[] (defaults to Consumer Staples list)', output: 'iXBRL HTML + meta.json + companyfacts.json',
     ops: [
@@ -582,15 +582,15 @@ let NODES = [
     ],
     deps: ['requests']
   },
-  { id: 'ixbrl-htm-store', layer: 'input', kind: 'store', x: 470, y: 85, w: 200, h: 50, label: 'iXBRL HTML + meta.json',
+  { id: 'ixbrl-htm-store', layer: 'input', kind: 'store', x: 600, y: 85, w: 240, h: 50, label: 'iXBRL HTML + meta.json',
     purpose: 'SEC iXBRL primary documents + per-filing metadata sidecars. Produced by sec-edgar-fetch, consumed by financials-extract-ixbrl. Every number in the .htm is tagged with concept / context / unit / scale — the .meta.json carries the accession so the extractor can fetch FilingSummary.xml.',
     path: 'Brain/Sources/{TICKER}/{QUARTER}/filings/{TICKER}_{YYYY-MM-DD}_{form}.htm + .meta.json'
   },
-  { id: 'companyfacts-store', layer: 'input', kind: 'store', x: 700, y: 85, w: 190, h: 50, label: 'companyfacts.json',
-    purpose: 'SEC-pre-processed XBRL facts for ALL historical periods of a given ticker. One file per ticker; every GAAP concept with full time series. Direct-query alternative to per-filing extraction for standard line items — covers ~80% of modeling needs with zero extraction machinery.',
+  { id: 'companyfacts-store', layer: 'storage', kind: 'store', x: 280, y: 1040, w: 240, h: 56, label: 'companyfacts.json',
+    purpose: 'SEC-pre-processed XBRL facts for ALL historical periods of a given ticker. One file per ticker; every GAAP concept with full time series. Produced by sec-edgar-fetch at the ticker root; durable cache — refreshed on each fetch run. Direct-query alternative to per-filing extraction for standard line items.',
     path: 'Brain/Sources/{TICKER}/companyfacts.json'
   },
-  { id: 'source-pdfs', layer: 'input', kind: 'external', x: 920, y: 85, w: 250, h: 50, label: 'IR press release PDFs',
+  { id: 'source-pdfs', layer: 'input', kind: 'external', x: 890, y: 85, w: 240, h: 50, label: 'IR press release PDFs',
     purpose: 'Non-iXBRL PDFs — primarily IR-site press releases downloaded by the investor-relations-data-scraper skill. Press releases = IS-only; 10-K/10-Q PDFs are a legacy path now superseded by the iXBRL extractor for SEC-filed documents.',
     path: 'Brain/Sources/{TICKER}/{QUARTER}/transcripts/*_press_release.pdf'
   },
@@ -701,7 +701,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v2';
+const LS_KEY = 'financials-architecture-playground-v3';
 
 function saveState() {
   try {
