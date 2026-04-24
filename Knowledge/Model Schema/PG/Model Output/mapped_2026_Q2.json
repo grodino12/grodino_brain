@@ -3876,7 +3876,7 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Inventory - Raw Materials & Supplies",
+      "model_label": "Inventories",
       "mapping_source": "ledger_auto",
       "ledger_rule_id": "GEN-BS-038"
     },
@@ -3899,9 +3899,9 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Inventory - Work in Process",
+      "model_label": "Inventories",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-039"
+      "ledger_rule_id": "GEN-BS-038"
     },
     {
       "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
@@ -3922,9 +3922,9 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Inventory - Finished Goods",
+      "model_label": "Inventories",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-040"
+      "ledger_rule_id": "GEN-BS-038"
     },
     {
       "raw_filing_label": "InventoryNet",
@@ -4612,7 +4612,7 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Inventory - Raw Materials & Supplies",
+      "model_label": "Inventories",
       "mapping_source": "ledger_auto",
       "ledger_rule_id": "GEN-BS-038"
     },
@@ -4635,9 +4635,9 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Inventory - Work in Process",
+      "model_label": "Inventories",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-039"
+      "ledger_rule_id": "GEN-BS-038"
     },
     {
       "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
@@ -4658,9 +4658,9 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Inventory - Finished Goods",
+      "model_label": "Inventories",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-040"
+      "ledger_rule_id": "GEN-BS-038"
     },
     {
       "raw_filing_label": "InventoryNet",

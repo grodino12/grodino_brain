@@ -789,35 +789,17 @@
     {
       "rule_id": "GEN-BS-038",
       "model_sheet": "BALANCE SHEET",
-      "model_label": "Inventory - Raw Materials & Supplies",
+      "model_label": "Inventories",
       "memo": true,
-      "note": "Detail row of Inventories (GEN-BS-005). Many filers disclose on-face; model rolls up to the Net figure so this is memo-only.",
+      "note": "Inventory detail breakdown (Raw Materials, WIP, Finished Goods) — recognized from on-face disclosures but not rendered on xlsx. The Net roll-up renders via GEN-BS-005. Shared model_label intentional: the detail concepts conceptually belong to the same Inventories line, just at a finer granularity we don't model.",
       "aliases": [
         "inventory raw materials and supplies net of reserves",
         "raw materials",
         "raw materials and supplies",
-        "inventory, raw materials"
-      ]
-    },
-    {
-      "rule_id": "GEN-BS-039",
-      "model_sheet": "BALANCE SHEET",
-      "model_label": "Inventory - Work in Process",
-      "memo": true,
-      "note": "Detail row of Inventories (GEN-BS-005).",
-      "aliases": [
+        "inventory, raw materials",
         "inventory work in process net of reserves",
         "work in process",
-        "inventory, work in process"
-      ]
-    },
-    {
-      "rule_id": "GEN-BS-040",
-      "model_sheet": "BALANCE SHEET",
-      "model_label": "Inventory - Finished Goods",
-      "memo": true,
-      "note": "Detail row of Inventories (GEN-BS-005).",
-      "aliases": [
+        "inventory, work in process",
         "inventory finished goods net of reserves",
         "finished goods",
         "inventory, finished goods"
