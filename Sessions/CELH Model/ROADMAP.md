@@ -16,13 +16,13 @@ Living document. Update after each session. Three workstreams feed one final que
 
 | Workstream | State | Next action |
 |---|---|---|
-| **CELH financial pipeline** (6 skills) | **6 of 6 built**, full pipeline runs end-to-end | Fix forecast BS balance gap in model-calc |
+| **CELH financial pipeline** (6 skills) | **6 of 6 built**, forecast BS balances end-to-end | Plug FY2025 10-K, then cross-model integration |
 | **Generic cross-ticker library** | **Phases 1–7 shipped** — migration complete | Maintain; audit aliases as new tickers land |
-| **GLP-1 projection model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (later) |
-| **SNAP / demographics model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (later) |
-| **Cross-model integration** | Not started | Blocked until forecast balance gap is fixed |
+| **GLP-1 projection model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (next) |
+| **SNAP / demographics model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (next) |
+| **Cross-model integration** | Not started — unblocked | Wire GLP-1/SNAP into CELH revenue rows FY2026E–FY2030E |
 
-**Critical path to a defensible case study:** ~~`model-write` → verify historicals~~ ✓ → ~~finish generic-library migration (Phases 3–7)~~ ✓ → ~~`model-calc` (drivers + forecast)~~ ✓ → fix forecast BS balance gap → cross-model integration of GLP-1 + SNAP into the revenue forecast.
+**Critical path to a defensible case study:** ~~`model-write` → verify historicals~~ ✓ → ~~finish generic-library migration (Phases 3–7)~~ ✓ → ~~`model-calc` (drivers + forecast)~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → cross-model integration of GLP-1 + SNAP into the revenue forecast.
 
 ---
 
@@ -82,25 +82,29 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 
 ## Active — current objective
 
-### Fix forecast BS balance gap in `model-calc`
+### Cross-model integration — first cut
 
-Pipeline verification on 2026-04-24 revealed: forecast BS doesn't balance. Gap is $0 at FY2024 (historical, validators confirm), then grows ~$13,710/yr in forecast (FY2025E = +$13,710, FY2030E = +$82,260). Two sources isolated by row-level delta analysis:
+With the forecast BS now balancing end-to-end, cross-model integration is unblocked. Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2030E. The IS DRIVERS tab's `Revenue Growth %` is already an `input` forecast rule (yellow cells), so the integration can flow via that driver row (or via a new "Revenue headwind adjustment" line below it).
 
-1. **Amortization of Deferred Other Costs** (~$14,124/yr). The IS amort expense is embedded inside `COGS % of Revenue` / `SG&A % of Revenue` driver ratios (because there's no explicit Amort row on the P&L — it flows through COGS/SG&A). In the forecast, COGS/SG&A are ratio-driven off Revenue, so NI implicitly contains `-Amort`. On the CF tab, `Amortization of Deferred Other Costs` is `flat` (hold-last) and flows into CFO as an addback — so Cash grows by +Amort each year via `cash_rollforward`. On the BS, `Deferred Other Costs - Non-Current` shrinks by Amort via the `amortize` rule. Asset side nets to zero (Cash +Amort, DefCosts -Amort), but equity side goes -Amort (via RE via NI). So TA − TLSE = +Amort each year. Fix options:
-   - **Option A:** Set CF!Amort to 0 in the forecast (don't add it back) — but then historicals don't match.
-   - **Option B:** Stop amortizing the BS DefCosts asset in the forecast (flat instead of decreasing) — but that's economically wrong.
-   - **Option C (preferred):** Explicitly back out Amort from the COGS/SG&A forecast — subtract `CF!Amort` from the `ratio_of_rev` result for the cost rows. Or add an explicit `Amortization of Deferred Other Costs` line to the IS forecast spec and remove it from COGS/SG&A.
-   - **Option D:** Drive DefCosts NC as `flat` rather than `amortize` until a full amortization schedule is built.
+### ~~Fix forecast BS balance gap~~ — SHIPPED 2026-04-24
 
-2. **FX Effect on Cash** (~$414/yr). Flat hold-last on CF adds to Cash via `cf_net_change`, with no matching AOCI offset on the equity side (AOCI is flat). Fix: drive AOCI as `prior + CF!FX Effect on Cash` in the forecast, or force FX Effect on Cash to 0 in the forecast.
+Diagnosis: nine flat CF items had no matching BS rollforward in the forecast, so their FY2024 values bled into Cash each year without an equity-side offset. Sum = $13,710/yr, matched the empirical gap exactly. Amort of Deferred Other Costs was a red herring — it cancels correctly (CF addback paired with DefCosts decrement).
 
-Both fixes are small — probably <30 lines of calc.py changes each. Bundle them + regression-test BS balance cross forecast years.
+Fix (calc.py):
+- Added `zero` forecast kind → `=0` for non-recurring items in steady-state.
+- Added `aoci_rollforward` kind → `AOCI[t] = AOCI[t−1] + CF!FX Effect on Cash[t]`.
+- Flipped 9 items to `zero`: IS `Foreign Currency Gain (Loss)`; CF `Allowance for Credit Losses`, `Inventory Write-Down`, `Gain (Loss) on Disposal of PP&E`, `(Benefit) Provision for Deferred Income Taxes`, `Foreign Currency Gain (Loss)`, `Gain (Loss) on Lease Cancellations`, `Other Operating Items`, `ROU & Lease Liability Net`, `Finance Lease Payments`.
+- Flipped BS `Accumulated Other Comprehensive Income (Loss)` from `flat` to `aoci_rollforward`.
+
+Result: BS balances at $0 gap across FY2022 → FY2030E. Historicals untouched, validators 48/48 PASS.
+
+Known v2 polish (deferred): properly pair Deferred Tax Provision with DTA/DTL rollforward; build an explicit lease-amortization schedule; PP&E disposal schedule for `Gain (Loss) on Disposal of PP&E`. All non-blocking for the case study's base scenario.
 
 ---
 
 ## Near horizon — next milestones
 
-1. **Fix forecast BS balance gap.** See Active above. Once fixed, BS should balance across all forecast years.
+1. ~~**Fix forecast BS balance gap**~~ — shipped 2026-04-24. See Active above.
 2. **Pull FY2025 10-K from EDGAR.** Accession `0001341766-26-000024`, HTML-only at `https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm`. Needs one of: `weasyprint` HTML→PDF, `playwright`-driven headless print, or an HTML-aware branch in `financials-extract`. After conversion, run full pipeline; expect a handful of novels from FY2025 10-K wording drift.
 3. **Cross-model integration — first cut.** Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2028E (extend through FY2030E per original plan). Blocked until balance gap is fixed.
 4. ~~Build `model-calc`~~ — shipped. Historical driver formulas + full three-statement forecast formulas live; verified via `formulas` package.
