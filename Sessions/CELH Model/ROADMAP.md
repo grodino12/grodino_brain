@@ -126,12 +126,15 @@ Cross-model integration (GLP-1 + SNAP into CELH Revenue) is deferred per user di
 
 Concrete critical path:
 
-1. **Triage PG's 107 novel items.** Before any hand-resolution, break the list into buckets — duplicates across the current-Q + prior-year-comp-Q (expected dedup to ~54 unique concepts), concepts that would auto-apply if the **generic library** (`pattern_libraries/generic_line_item_mappings.json`) were passed via `--generic-library` (dry-run did not pass the flag), and concepts that are genuinely new. **Note:** the generic library is keyed on PDF-label text (e.g. `"revenue"`, `"net sales"`); iXBRL raw_filing_labels are US-GAAP concept names (e.g. `"Revenues"`, `"CostOfGoodsAndServicesSold"`). The match rate may be low even with the flag, in which case the real gap is an **iXBRL-concept-keyed generic layer**. User specifically flagged that "107 feels way too high" — capture which bucket each novel falls into before deciding whether to hand-resolve or invest in the generic overlay. The **pattern_libraries at extract-layer** (`~\.claude\skills\financials-extract\references\*.json`) do NOT apply to iXBRL — those are PDF-only. Clarify this distinction before diagnosing.
-2. **Populate `Brain\Knowledge\Model Schema\PG\decisions_ledger.json`** from the triage output. Entries will be QTR-variant (`model_sheet: "QTR P&L" | "QTR BS" | "QTR CF"`) since the test filing is a 10-Q. Annual entries come later when a PG 10-K runs through.
-3. **Run PG end-to-end to a first QTR xlsx.** Extract → reconcile (0 novels) → validate (period-agnostic rules must pass) → model-write (QTR sheet family). This is the first full quarterly model produced by the pipeline; the actual output xlsx will surface any remaining integration gaps.
-4. **Extend `model-calc` to quarterly drivers.** Currently annual-only (`FORECAST_STATEMENT_SPECS` assumes FY columns). Quarterly forecast requires either duplicate spec tables or a mode parameter. Likely deferred until at least two quarters of PG are modeled so the forecast surface area is evidence-driven.
-5. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`'s `FORECAST_STATEMENT_SPECS` + `DRIVER_SPECS`. Mirror the existing `generic_line_item_mappings.json` pattern: generic library + per-ticker overrides under `{TICKER}/forecast_overrides.json`. Precedence: ticker override → generic → engine fallback. The `kind` vocabulary (revenue_growth, ratio_of_rev, aoci_rollforward, etc.) stays in Python — it's the dispatch logic, not data. Only **line → kind+driver assignments** move to JSON.
-6. **Formalize the ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`. One page: directory scaffold, pipeline invocation (10-K path vs 10-Q path), novel triage, forecast review, override conventions. Short — no speculative flexibility docs.
+1. ~~**Triage PG's 107 novel items.**~~ **Shipped 2026-04-24 (third session).** 107 → 0 novels via reconcile fixes (4 logic changes) + library expansion (92 → 109 entries) + 1 PG-specific ledger entry (ESOP Debt Retirement Reserve). See "Done" §PG novel triage for details.
+2. ~~**Populate PG decisions_ledger.json.**~~ **Shipped 2026-04-24.** One entry (`NEW-BS-001`) for PG's ESOP reserve; everything else auto-resolved via generic library.
+3. **Run PG end-to-end to a first QTR xlsx.** `mapped_2026_Q2.json` is ready → next: `financials-validate` (expect clean — rules are period-agnostic per prior session's validate fix) → `financials-playground` QA → `model-write` producing PG's first QTR P&L / QTR BS / QTR CF workbook. Watch for surface-area issues (number formats on NCI lines, sign conventions on Treasury / ESOP / OCI placeholder, subsection handling on EPS since we loosened the filter).
+4. **Answer LTM-period validation question for quarterlies.** User raised mid-session then pumped the brakes. Concrete question: for 10-Q BS items (point-in-time), is there any validation that needs an LTM-reconstructed IS (sum of current Q + prior 3 Qs) as the counterparty? If yes, this is a cross-filing validation mode that doesn't exist. Flagged for next session.
+5. **Break OCI into its own worksheet (4th statement).** User-ratified follow-up. Currently `GEN-IS-024 OCI - Total Net of Tax` renders on IS as placeholder; detail components are memo. Scope (~half-day): add `COMPREHENSIVE_INCOME` to StatementType enum, un-merge CI from IS in iXBRL extractor, move OCI library entries from ANNL P&L to ANNL OCI (+ QTR OCI variant), add OCI-1 + X-5 validators, add ANNL OCI / QTR OCI sheet family to model-write with cross-sheet pull from `OCI!TotalOCI` back to IS.
+6. **Extend `model-calc` to quarterly drivers.** Currently annual-only. Quarterly forecast needs either duplicate spec tables or a mode parameter. Deferred until PG has ≥2 quarters modeled.
+7. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`'s `FORECAST_STATEMENT_SPECS` + `DRIVER_SPECS`. Mirror the `generic_line_item_mappings.json` pattern. Blocked on §3 (PG first xlsx).
+8. **Formalize the ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`. Blocked on §3.
+9. **PG first 10-K onboarding** — when PG's annual flow is run, parallel ANNL BS entry for `NEW-BS-001 ESOP Debt Retirement Reserve` needs to be added to PG ledger.
 
 Surface area to watch when running PEP:
 - `FORECAST_STATEMENT_SPECS` references CELH-specific canonical labels: `Deferred Other Costs - Current/Non-Current`, `Accrued Distributor Termination Fees`, `Note Receivable - Current/Non-Current`, `Convertible Preferred Stock`, `Acquisition of Big Beverages`. PEP will not have these; labels referenced by spec but missing on sheet simply skip (via the `if label not in sheet_rows: continue` guard), but CELH has specs for items PEP doesn't have that still surface other issues.
@@ -143,19 +146,20 @@ Surface area to watch when running PEP:
 
 ## Near horizon — next milestones
 
-1. ~~**Fix forecast BS balance gap**~~ — shipped 2026-04-24. See Active above.
+1. ~~**Fix forecast BS balance gap**~~ — shipped 2026-04-24 (first session).
 2. ~~**Number format propagation to forecast cells**~~ — shipped 2026-04-24.
 3. ~~**Allowance for Credit Losses as `ratio_of_rev`**~~ — shipped 2026-04-24.
-4. **Run PG through the pipeline to a first QTR xlsx.** Second ticker since CELH (replacing earlier PEP recommendation — PG is already on disk with 99 historical 10-Qs and scaffolded). Current blocker is the 107 novel triage + ledger population (see Active §1–2).
-5. **~~Pull FY2025 CELH 10-K from EDGAR~~** — superseded by `sec-edgar-fetch`. Re-run whenever CELH FY2025 needs a refresh; the old note about needing HTML→PDF conversion is obsolete (iXBRL extractor handles the HTML directly).
-6. **Extract `pattern_libraries/generic_forecast_rules.json`.** Blocked on item 4. Per Active §5.
-7. **Ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`. Blocked on item 4. Per Active §6.
-8. **Close the Allowance-driven BS gap** — optional polish. Either an explicit BS `Allowance for Doubtful Accounts` contra-AR line that accumulates BDE, or an SG&A forecast offset that subtracts the forecast Allowance. Low priority (<1% of TA at CELH).
-13. **iXBRL-concept-keyed generic library layer** — depends on Active §1 diagnosis. If the 107 PG novels are mostly concepts that SHOULD auto-resolve (but the PDF-label generic library can't see them because the label vocabulary differs), the right fix is a parallel generic library keyed on US-GAAP concept names (stable across every iXBRL filer). Would dramatically reduce novel counts for future ticker onboarding. Not needed if most of the 107 are genuinely ticker-specific.
-9. **Cross-model integration (GLP-1 + SNAP → CELH Revenue Growth %).** Deferred indefinitely per user. IS DRIVERS `Revenue Growth %` is already a user-editable input cell (yellow-tinted), ready to receive external-model values when the time comes.
-10. ~~Build `model-calc`~~ — shipped. Historical driver formulas + full three-statement forecast formulas live; verified via `formulas` package.
-11. ~~CF orphan-row slotting~~ — shipped.
-12. ~~Extractor section-tagging fix~~ — not needed.
+4. ~~**iXBRL-concept-keyed generic library layer**~~ — shipped 2026-04-24 (third session) as reconcile-side CamelCase normalization + us-gaap aliases on existing library entries. Novel count diagnosis resolved: PDF-label mismatch WAS the main issue; CamelCase splitter in `normalize_label` bridges the vocabulary gap; no separate library needed.
+5. **Run PG through the pipeline to a first QTR xlsx.** `mapped_2026_Q2.json` ready → validate → playground → model-write. See Active §3.
+6. **Answer LTM-period validation question.** See Active §4.
+7. **Break OCI into its own worksheet.** See Active §5.
+8. **Extract `pattern_libraries/generic_forecast_rules.json`.** Blocked on item 5.
+9. **Ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`. Blocked on item 5.
+10. **Close the Allowance-driven BS gap** — optional polish. Either explicit BS Allowance for Doubtful Accounts contra-AR, or SG&A forecast offset. Low priority (<1% of TA at CELH).
+11. **Cross-model integration (GLP-1 + SNAP → CELH Revenue Growth %).** Deferred indefinitely per user. IS DRIVERS Revenue Growth % is already user-editable (yellow-tinted), ready for external values.
+12. ~~Build `model-calc`~~ — shipped.
+13. ~~CF orphan-row slotting~~ — shipped.
+14. ~~Extractor section-tagging fix~~ — not needed.
 
 ---
 
@@ -197,7 +201,8 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 24th SEC EDGAR + Quarterly Pipeline Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 24th PG Novel Triage + Library Expansion Session.md` |
+| Prior handoff (quarterly pipeline) | `Brain\Sessions\CELH Model\Handoffs\April 24th SEC EDGAR + Quarterly Pipeline Session.md` |
 | Prior handoff (model-calc forecast balance) | `Brain\Sessions\CELH Model\Handoffs\April 24th Model-Calc Forecast Balance Session.md` |
 | Prior handoff (Phases 3–7) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Migration Phases 3-7 Session.md` |
 | Prior handoff (Phases 1–2) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Library Migration Session.md` |
@@ -205,10 +210,11 @@ Surface area to watch when running PEP:
 | Prior handoff (playground polish) | `Brain\Sessions\CELH Model\Handoffs\April 22nd Playground Polish Session.md` |
 | **sec-edgar-fetch skill** | `~\.claude\skills\sec-edgar-fetch\` |
 | **financials-extract-ixbrl skill** | `~\.claude\skills\financials-extract-ixbrl\` |
-| PG ticker root (scaffolded, empty ledger) | `Brain\Knowledge\Model Schema\PG\` |
+| PG ticker root (1 ticker-specific entry for ESOP reserve) | `Brain\Knowledge\Model Schema\PG\` |
 | PG filing archive (99 10-Qs) | `Brain\Sources\PG\` |
-| PG NovelReport (107 items, awaiting triage) | `Brain\Knowledge\Model Schema\PG\Model Output\novels_2026_Q2.json` |
-| **Generic cross-ticker library** | `Brain\Knowledge\Model Schema\pattern_libraries\generic_line_item_mappings.json` |
+| PG MappedFiling (ready for validate) | `Brain\Knowledge\Model Schema\PG\Model Output\mapped_2026_Q2.json` |
+| PG NovelReport (0 novels) | `Brain\Knowledge\Model Schema\PG\Model Output\novels_2026_Q2.json` |
+| **Generic cross-ticker library (109 entries)** | `Brain\Knowledge\Model Schema\pattern_libraries\generic_line_item_mappings.json` |
 | Three-model overview | `Brain\Sessions\CELH Model\01_three_model_overview.md` |
 | Pipeline architecture playground | `Brain\Knowledge\Model Schema\playground_architecture.html` |
 | Pydantic schema playground | `Brain\Knowledge\Model Schema\playground_schema.html` |
