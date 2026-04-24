@@ -1647,8 +1647,8 @@
         },
         {
           "raw_filing_label": "Interest income on note receivable",
-          "canonical_label": "Interest Income (Expense)",
-          "ledger_rule_id": "GEN-IS-006",
+          "canonical_label": "Interest Income",
+          "ledger_rule_id": "GEN-IS-029",
           "value": "0",
           "raw_numeric_text": "—",
           "notation_flags": 4,
@@ -1657,7 +1657,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -1677,7 +1677,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -1687,8 +1687,8 @@
         },
         {
           "raw_filing_label": "Foreign exchange loss",
-          "canonical_label": "Foreign Currency Gain (Loss)",
-          "ledger_rule_id": "GEN-IS-007",
+          "canonical_label": "Foreign Currency Loss",
+          "ledger_rule_id": "GEN-IS-032",
           "value": "-1734",
           "raw_numeric_text": "(1,734)",
           "notation_flags": 1,
@@ -1707,8 +1707,8 @@
         },
         {
           "raw_filing_label": "Other income",
-          "canonical_label": "Other Income (Expense)",
-          "ledger_rule_id": "GEN-IS-008",
+          "canonical_label": "Other Non-Operating Income",
+          "ledger_rule_id": "GEN-IS-033",
           "value": "1793",
           "raw_numeric_text": "1,793",
           "notation_flags": 0,
@@ -1717,7 +1717,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -2108,8 +2108,8 @@
         },
         {
           "raw_filing_label": "Interest income on note receivable",
-          "canonical_label": "Interest Income (Expense)",
-          "ledger_rule_id": "GEN-IS-006",
+          "canonical_label": "Interest Income",
+          "ledger_rule_id": "GEN-IS-029",
           "value": "128",
           "raw_numeric_text": "128",
           "notation_flags": 0,
@@ -2118,7 +2118,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -2138,7 +2138,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -2148,8 +2148,8 @@
         },
         {
           "raw_filing_label": "Foreign exchange loss",
-          "canonical_label": "Foreign Currency Gain (Loss)",
-          "ledger_rule_id": "GEN-IS-007",
+          "canonical_label": "Foreign Currency Loss",
+          "ledger_rule_id": "GEN-IS-032",
           "value": "-1246",
           "raw_numeric_text": "(1,246)",
           "notation_flags": 1,
@@ -2168,8 +2168,8 @@
         },
         {
           "raw_filing_label": "Other income",
-          "canonical_label": "Other Income (Expense)",
-          "ledger_rule_id": "GEN-IS-008",
+          "canonical_label": "Other Non-Operating Income",
+          "ledger_rule_id": "GEN-IS-033",
           "value": "0",
           "raw_numeric_text": "—",
           "notation_flags": 4,
@@ -2178,7 +2178,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -2569,8 +2569,8 @@
         },
         {
           "raw_filing_label": "Interest income on note receivable",
-          "canonical_label": "Interest Income (Expense)",
-          "ledger_rule_id": "GEN-IS-006",
+          "canonical_label": "Interest Income",
+          "ledger_rule_id": "GEN-IS-029",
           "value": "237",
           "raw_numeric_text": "237",
           "notation_flags": 0,
@@ -2579,7 +2579,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -2599,7 +2599,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -2609,8 +2609,8 @@
         },
         {
           "raw_filing_label": "Foreign exchange loss",
-          "canonical_label": "Foreign Currency Gain (Loss)",
-          "ledger_rule_id": "GEN-IS-007",
+          "canonical_label": "Foreign Currency Loss",
+          "ledger_rule_id": "GEN-IS-032",
           "value": "-392",
           "raw_numeric_text": "(392)",
           "notation_flags": 1,
@@ -2629,8 +2629,8 @@
         },
         {
           "raw_filing_label": "Other income",
-          "canonical_label": "Other Income (Expense)",
-          "ledger_rule_id": "GEN-IS-008",
+          "canonical_label": "Other Non-Operating Income",
+          "ledger_rule_id": "GEN-IS-033",
           "value": "0",
           "raw_numeric_text": "—",
           "notation_flags": 4,
@@ -2639,7 +2639,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "expense_positive",
+          "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Pl3 Celsius Case Study\\data\\CELH Reporting\\Financial Statements\\2025_CELH_10-K.pdf",
             "page": 51,
@@ -5434,7 +5434,7 @@
     }
   ],
   "extraction_metadata": {
-    "extracted_at": "2026-04-24T17:13:00",
+    "extracted_at": "2026-04-24T17:17:17",
     "page_count": 123,
     "statement_pages": [
       {

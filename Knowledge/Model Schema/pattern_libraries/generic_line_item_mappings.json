@@ -76,7 +76,6 @@
       "rule_id": "GEN-IS-006",
       "model_sheet": "ANNL P&L",
       "model_label": "Interest Income (Expense)",
-      "sign_convention": "expense_positive",
       "aliases": [
         "interest income (expense), net",
         "interest income, net",
@@ -84,24 +83,15 @@
         "interest income expense net",
         "interest income net",
         "net interest income",
-        "net interest expense",
-        "interest income on note receivable",
-        "interest income on notes receivable",
-        "interest expense nonoperating",
-        "interest expense",
-        "investment income interest"
+        "net interest expense"
       ]
     },
     {
       "rule_id": "GEN-IS-007",
       "model_sheet": "ANNL P&L",
       "model_label": "Foreign Currency Gain (Loss)",
-      "sign_convention": "expense_positive",
       "aliases": [
-        "foreign exchange loss",
-        "foreign exchange gain",
         "foreign exchange gain (loss)",
-        "foreign currency exchange loss",
         "foreign currency exchange gain (loss)",
         "foreign currency transaction gain (loss)",
         "net foreign exchange gain (loss)"
@@ -111,17 +101,14 @@
       "rule_id": "GEN-IS-008",
       "model_sheet": "ANNL P&L",
       "model_label": "Other Income (Expense)",
-      "sign_convention": "expense_positive",
       "aliases": [
-        "other income",
         "other income, net",
-        "other expense",
         "other expense, net",
         "other income (expense), net",
-        "other non-operating income",
         "other non-operating income (expense)",
-        "miscellaneous income",
-        "other, net"
+        "other non-operating income/(expense), net",
+        "other, net",
+        "miscellaneous income, net"
       ]
     },
     {
@@ -249,7 +236,7 @@
       "model_sheet": "ANNL P&L",
       "model_label": "Foreign Currency Translation (OCI)",
       "memo": true,
-      "note": "OCI component — recognized but not displayed on xlsx. Below-NI, not part of operating results.",
+      "note": "OCI component \u2014 recognized but not displayed on xlsx. Below-NI, not part of operating results.",
       "aliases": [
         "foreign currency translation gain (loss), net of income",
         "foreign currency translation gain loss net of income",
@@ -791,7 +778,7 @@
       "model_sheet": "BALANCE SHEET",
       "model_label": "Inventories",
       "memo": true,
-      "note": "Inventory detail breakdown (Raw Materials, WIP, Finished Goods) — recognized from on-face disclosures but not rendered on xlsx. The Net roll-up renders via GEN-BS-005. Shared model_label intentional: the detail concepts conceptually belong to the same Inventories line, just at a finer granularity we don't model.",
+      "note": "Inventory detail breakdown (Raw Materials, WIP, Finished Goods) \u2014 recognized from on-face disclosures but not rendered on xlsx. The Net roll-up renders via GEN-BS-005. Shared model_label intentional: the detail concepts conceptually belong to the same Inventories line, just at a finer granularity we don't model.",
       "aliases": [
         "inventory raw materials and supplies net of reserves",
         "raw materials",
@@ -833,7 +820,7 @@
       "rule_id": "GEN-IS-024",
       "model_sheet": "ANNL P&L",
       "model_label": "OCI - Total Net of Tax",
-      "note": "Consolidated OCI value rendered on IS below Net Income. Full OCI statement (AFS / Translation / Pension components broken out on their own worksheet) deferred — when shipped, this line will become a cross-sheet pull from OCI!TotalOCI. Detail components (GEN-IS-020, GEN-IS-025, GEN-IS-026) remain memo until then.",
+      "note": "Consolidated OCI value rendered on IS below Net Income. Full OCI statement (AFS / Translation / Pension components broken out on their own worksheet) deferred \u2014 when shipped, this line will become a cross-sheet pull from OCI!TotalOCI. Detail components (GEN-IS-020, GEN-IS-025, GEN-IS-026) remain memo until then.",
       "aliases": [
         "other comprehensive income loss net of tax",
         "other comprehensive income (loss), net of tax",
@@ -1263,7 +1250,7 @@
       "rule_id": "GEN-CF-040",
       "model_sheet": "CASH FLOW",
       "model_label": "Common Dividends",
-      "note": "Cash dividends paid to common stockholders. Ambiguous aliases (unmodified 'dividends paid') default here — most public-company filings refer to common. Paired with GEN-IS-021.",
+      "note": "Cash dividends paid to common stockholders. Ambiguous aliases (unmodified 'dividends paid') default here \u2014 most public-company filings refer to common. Paired with GEN-IS-021.",
       "aliases": [
         "dividends paid on common stock",
         "cash dividends paid on common stock",
@@ -1392,6 +1379,73 @@
         "cash paid during the period for taxes",
         "cash paid for income taxes",
         "income taxes paid"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-029",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Interest Income",
+      "aliases": [
+        "interest income",
+        "investment income interest",
+        "interest income on note receivable",
+        "interest income on notes receivable",
+        "interest earned"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-030",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Interest Expense",
+      "sign_convention": "expense_positive",
+      "aliases": [
+        "interest expense",
+        "interest expense nonoperating",
+        "interest and debt expense"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-031",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Foreign Currency Gain",
+      "aliases": [
+        "foreign exchange gain",
+        "foreign currency exchange gain",
+        "foreign currency transaction gain"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-032",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Foreign Currency Loss",
+      "sign_convention": "expense_positive",
+      "aliases": [
+        "foreign exchange loss",
+        "foreign currency exchange loss",
+        "foreign currency transaction loss"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-033",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Other Non-Operating Income",
+      "aliases": [
+        "other income",
+        "other non-operating income",
+        "miscellaneous income",
+        "other nonoperating income"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-034",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Other Non-Operating Expense",
+      "sign_convention": "expense_positive",
+      "aliases": [
+        "other expense",
+        "other non-operating expense",
+        "miscellaneous expense",
+        "other nonoperating expense"
       ]
     }
   ]
