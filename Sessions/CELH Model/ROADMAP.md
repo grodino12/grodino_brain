@@ -108,11 +108,17 @@ Surface area to watch when running PEP:
 ## Near horizon — next milestones
 
 1. ~~**Fix forecast BS balance gap**~~ — shipped 2026-04-24. See Active above.
-2. **Pull FY2025 10-K from EDGAR.** Accession `0001341766-26-000024`, HTML-only at `https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm`. Needs one of: `weasyprint` HTML→PDF, `playwright`-driven headless print, or an HTML-aware branch in `financials-extract`. After conversion, run full pipeline; expect a handful of novels from FY2025 10-K wording drift.
-3. **Cross-model integration — first cut.** Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2028E (extend through FY2030E per original plan). Blocked until balance gap is fixed.
-4. ~~Build `model-calc`~~ — shipped. Historical driver formulas + full three-statement forecast formulas live; verified via `formulas` package.
-5. ~~CF orphan-row slotting~~ — shipped. Older-only items are now slotted next to the item that preceded them in the filing where they last appeared, via a per-filing advancing anchor in `resolve_row_positions`.
-6. ~~Extractor section-tagging fix~~ — not needed. The "mis-tagging" was a stale `raw_2024_10K.json` left over from an older extract.py. Re-extracted fresh; sections are correct. Reconcile + model-write workarounds retained as defensive.
+2. ~~**Number format propagation to forecast cells**~~ — shipped 2026-04-24.
+3. ~~**Allowance for Credit Losses as `ratio_of_rev`**~~ — shipped 2026-04-24.
+4. **Run PEP through the pipeline.** First ticker since CELH. Surfaces real divergence that drives items 5–6 below. Without real evidence of "what's universal vs. what's CELH accident," the generic library is speculative.
+5. **Extract `pattern_libraries/generic_forecast_rules.json`.** Blocked on item 4.
+6. **Ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`. Blocked on item 4.
+7. **Close the Allowance-driven BS gap** — optional polish. Either an explicit BS `Allowance for Doubtful Accounts` contra-AR line that accumulates BDE, or an SG&A forecast offset that subtracts the forecast Allowance. Low priority (<1% of TA at CELH).
+8. **Pull FY2025 10-K from EDGAR.** Accession `0001341766-26-000024`, HTML-only at `https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm`. Needs `weasyprint` HTML→PDF, `playwright`-driven headless print, or an HTML-aware branch in `financials-extract`.
+9. **Cross-model integration (GLP-1 + SNAP → CELH Revenue Growth %).** Deferred indefinitely per user. IS DRIVERS `Revenue Growth %` is already a user-editable input cell (yellow-tinted), ready to receive external-model values when the time comes.
+10. ~~Build `model-calc`~~ — shipped. Historical driver formulas + full three-statement forecast formulas live; verified via `formulas` package.
+11. ~~CF orphan-row slotting~~ — shipped.
+12. ~~Extractor section-tagging fix~~ — not needed.
 
 ---
 
@@ -154,7 +160,8 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Migration Phases 3-7 Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 24th Model-Calc Forecast Balance Session.md` |
+| Prior handoff (Phases 3–7) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Migration Phases 3-7 Session.md` |
 | Prior handoff (Phases 1–2) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Library Migration Session.md` |
 | Prior handoff (model-write shipped) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Model-Write Shipped Session.md` |
 | Prior handoff (playground polish) | `Brain\Sessions\CELH Model\Handoffs\April 22nd Playground Polish Session.md` |
