@@ -956,7 +956,10 @@
         "loss on disposal of property and equipment",
         "(gain) loss on disposal of property and equipment",
         "gain (loss) on disposal of property, plant and equipment",
-        "loss (gain) on disposal of pp&e"
+        "loss (gain) on disposal of pp&e",
+        "gain/loss on sale of assets",
+        "(gain)/loss on sale of assets",
+        "gain loss on disposition of assets"
       ]
     },
     {
@@ -1259,7 +1262,10 @@
         "dividends paid to stockholders",
         "payment of dividends",
         "common dividends paid",
-        "cash dividends on common stock"
+        "cash dividends on common stock",
+        "dividends to shareholders",
+        "dividends to stockholders",
+        "payments of dividends"
       ]
     },
     {
@@ -1315,7 +1321,9 @@
         "effect on exchange rate changes on cash and cash equivalents",
         "effect of exchange rate changes on cash",
         "effect of exchange rate changes on cash and cash equivalents",
-        "foreign currency translation effect on cash"
+        "foreign currency translation effect on cash",
+        "effect of exchange rate changes on cash, cash equivalents and restricted cash",
+        "effect of exchange rate on cash cash equivalents restricted cash and restricted cash equivalents"
       ]
     },
     {
@@ -1328,7 +1336,9 @@
         "net increase decrease in cash cash equivalents and restricted cash",
         "net increase in cash and cash equivalents",
         "net change in cash",
-        "net increase (decrease) in cash"
+        "net increase (decrease) in cash",
+        "change in cash, cash equivalents and restricted cash",
+        "cash cash equivalents restricted cash and restricted cash equivalents period increase decrease including exchange rate effect"
       ]
     },
     {
@@ -1446,6 +1456,112 @@
         "other non-operating expense",
         "miscellaneous expense",
         "other nonoperating expense"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-041",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Sale of Assets",
+      "aliases": [
+        "proceeds from asset sales",
+        "proceeds from sale of assets",
+        "proceeds from sale of productive assets",
+        "proceeds from sale of property plant and equipment",
+        "proceeds from disposal of property"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-042",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Acquisitions, Net of Cash Acquired",
+      "sign_convention": "expense_positive",
+      "aliases": [
+        "acquisitions, net of cash acquired",
+        "acquisition of businesses, net of cash acquired",
+        "payments to acquire businesses net of cash acquired",
+        "cash paid for acquisitions",
+        "business acquisitions net of cash"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-043",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Other Investing Activities",
+      "aliases": [
+        "other investing activity",
+        "other investing activities",
+        "other investing activities, net",
+        "payments for proceeds from investments"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-044",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Short-Term Debt",
+      "aliases": [
+        "additions to short-term debt",
+        "additions to short-term debt with original maturities of more than three months",
+        "proceeds from short-term debt",
+        "proceeds from short term debt maturing in more than three months",
+        "issuance of short-term debt"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-045",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Repayments of Short-Term Debt",
+      "sign_convention": "expense_positive",
+      "aliases": [
+        "reductions in short-term debt",
+        "reductions in short-term debt with original maturities of more than three months",
+        "repayments of short-term debt",
+        "repayments of short term debt maturing in more than three months"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-046",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Net Change in Other Short-Term Debt",
+      "aliases": [
+        "net additions/(reductions) to other short-term debt",
+        "proceeds from (repayments of) short-term debt",
+        "proceeds from repayments of short term debt maturing in three months or less"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-047",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Issuance of Long-Term Debt",
+      "aliases": [
+        "additions to long-term debt",
+        "proceeds from issuance of long-term debt",
+        "proceeds from issuance of long term debt",
+        "issuance of long-term debt",
+        "proceeds from long-term borrowings"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-048",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Repayments of Long-Term Debt",
+      "sign_convention": "expense_positive",
+      "aliases": [
+        "reductions in long-term debt",
+        "repayments of long-term debt",
+        "repayments of long term debt",
+        "principal payments on long-term debt",
+        "long-term debt repayments"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-049",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Stock Options & Other Financing Activities",
+      "aliases": [
+        "impact of stock options and other",
+        "stock options and other financing activities",
+        "proceeds from stock options exercised and other financing activities",
+        "stock option exercise proceeds and other"
       ]
     }
   ]
