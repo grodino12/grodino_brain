@@ -2,13 +2,13 @@
 type: roadmap
 date: 2026-04-24
 project: Celsius HF Case Study
-scope: CELH financial model pipeline + GLP-1 + SNAP + cross-model integration
-last_session: "April 23rd Generic Migration Phases 3-7 Session"
+scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
+last_session: "April 24th Model-Calc Forecast Balance Session"
 ---
 
 # Celsius HF Case Study — Roadmap
 
-Living document. Update after each session. Three workstreams feed one final question: **"What's the net impact on CELH revenue from GLP-1 headwinds + SNAP energy-drink bans + demographic trends?"**
+Living document. Update after each session. **Current project focus: build a universal model creation architecture** that works across any consumer-staples ticker, not just CELH. The original case-study question ("What's the net impact on CELH revenue from GLP-1 headwinds + SNAP energy-drink bans + demographic trends?") is deferred — the pipeline will answer it once the architecture is generalized.
 
 ---
 
@@ -16,13 +16,15 @@ Living document. Update after each session. Three workstreams feed one final que
 
 | Workstream | State | Next action |
 |---|---|---|
-| **CELH financial pipeline** (6 skills) | **6 of 6 built**, forecast BS balances end-to-end | Plug FY2025 10-K, then cross-model integration |
-| **Generic cross-ticker library** | **Phases 1–7 shipped** — migration complete | Maintain; audit aliases as new tickers land |
-| **GLP-1 projection model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (next) |
-| **SNAP / demographics model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (next) |
-| **Cross-model integration** | Not started — unblocked | Wire GLP-1/SNAP into CELH revenue rows FY2026E–FY2030E |
+| **CELH financial pipeline** (6 skills) | **6 of 6 built**, forecast BS balances end-to-end | Stress-test with a second ticker (recommended: PEP) |
+| **Generic cross-ticker library (mappings)** | **Phases 1–7 shipped** — 92 entries | Maintain; expand aliases as new tickers land |
+| **Generic forecast-rules library** | Not started | Extract from `calc.py` after second-ticker run |
+| **Ticker onboarding doc** | Not started | One-page guide once universal architecture stabilizes |
+| **GLP-1 projection model** | Built standalone, live in xlsx | Integrate once architecture is universal (deferred) |
+| **SNAP / demographics model** | Built standalone, live in xlsx | Integrate once architecture is universal (deferred) |
+| **Cross-model integration** | Deferred per user direction | Revisit after universal architecture ships |
 
-**Critical path to a defensible case study:** ~~`model-write` → verify historicals~~ ✓ → ~~finish generic-library migration (Phases 3–7)~~ ✓ → ~~`model-calc` (drivers + forecast)~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → cross-model integration of GLP-1 + SNAP into the revenue forecast.
+**Revised critical path:** ~~`model-write`~~ ✓ → ~~generic-library migration~~ ✓ → ~~`model-calc` drivers + forecast~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → **bring a second ticker online (PEP)** → **extract generic forecast-rules JSON** → **formalize ticker onboarding flow** → (later) cross-model integration.
 
 ---
 
@@ -55,6 +57,9 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 - **Meta-playgrounds refreshed:** `playground_architecture.html` is now **interactive** (drag nodes / add + remove arrows / localStorage autosave / export JSON / reset). `playground_schema.html` (Pydantic classes).
 - **Design docs** (01–04) at `Brain\Knowledge\Model Schema\`.
 - **Generic-library migration complete (2026-04-23):** CELH ledger cut from 150 → 10 entries; generic library is the source of truth. 3 architectural wins: (1) reconcile's `select_entry` only enforces `filing_section` on ambiguous aliases, unblocking single-candidate label matches; (2) model-write row layout derives from the latest filing's document order; (3) validate uses canonical-label lookups, no more hardcoded model_row. Tax sign flip (expense-positive convention) shipped. **48/48 PASS on both filings.**
+- **Forecast BS balance fix (2026-04-24):** empirically diagnosed gap = sum of 9 `flat` CF items with no BS offset in the forecast (Allowance, Inv Write-Down, Gain/Loss Disposal, Deferred Tax, FX Gain/Loss, Gain/Loss Lease, Other Op, ROU Lease Net, Finance Lease Payments, FX Effect on Cash). Amort of Deferred Costs was a red herring — cancels symmetrically. Fix: added `zero` and `aoci_rollforward` kinds; flipped 10 specs. BS balances at $0 gap FY2022 → FY2030E.
+- **Number format propagation (2026-04-24):** forecast cells on ANNL P&L / BS / CF were rendering with `General` format instead of the historical accounting format. `write_statement_forecasts` now samples the format from the last historical column and applies it to every forecast cell in the row (including subtotals whose formulas came from model-write).
+- **Allowance for Credit Losses driver (2026-04-24):** per user request, added `Allowance for Credit Losses % of Revenue` (0.243% historical for CELH) to `CF DRIVERS`. CF forecast line flipped from `zero` to `ratio_of_rev`. Reopens a small BS gap (~$3.3k/yr growing to ~$20k at FY2030E; ~1.1% of TA) — flagged as acceptable v1 simplification. Proper fix requires either a BS Allowance-for-Doubtful-Accounts contra-AR line or an SG&A-ex-BDE forecast offset.
 - **`model-calc` shipped (discovered 2026-04-24 — `scripts/calc.py` contains the full build; no session handoff captured it):**
   - **ASSUMPTIONS tab** with `Days in Year = 365` and `Share Repurchases $ = 0`; every formula references these cells, no magic numbers.
   - **IS / BS / CF DRIVERS tabs** with historical formulas (kinds: `growth`, `ratio`, `lagged_ratio`, `days_ratio`, `dollar`, `dollar_sum`, `net_debt`) and projection-period rules (`hold_last`, `input`, `assumption_ref`, `derived`). 7 IS + 14 BS + 7 CF drivers. Yellow tint on user-input cells (Revenue Growth %), grey on formula-forecast cells.
@@ -82,23 +87,21 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 
 ## Active — current objective
 
-### Cross-model integration — first cut
+### Universal model creation architecture
 
-With the forecast BS now balancing end-to-end, cross-model integration is unblocked. Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2030E. The IS DRIVERS tab's `Revenue Growth %` is already an `input` forecast rule (yellow cells), so the integration can flow via that driver row (or via a new "Revenue headwind adjustment" line below it).
+Cross-model integration (GLP-1 + SNAP into CELH Revenue) is deferred per user direction (2026-04-24). The project pivots to generalizing the pipeline so any consumer-staples ticker can run through it with minimal per-ticker work.
 
-### ~~Fix forecast BS balance gap~~ — SHIPPED 2026-04-24
+Concrete critical path:
 
-Diagnosis: nine flat CF items had no matching BS rollforward in the forecast, so their FY2024 values bled into Cash each year without an equity-side offset. Sum = $13,710/yr, matched the empirical gap exactly. Amort of Deferred Other Costs was a red herring — it cancels correctly (CF addback paired with DefCosts decrement).
+1. **Bring a second ticker online.** Recommended: **PEP** (debt-heavy, dividend payer, share repurchases, real FX exposure — meaningfully different shape from CELH). Alternatives: KO, CL. Run the existing pipeline as-is; every failure, novel, and hardcoded-CELH label is a concrete TODO. **Do not build speculative abstractions before this step** — the second ticker's surface area is the evidence base.
+2. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`'s `FORECAST_STATEMENT_SPECS` + `DRIVER_SPECS`. Mirror the existing `generic_line_item_mappings.json` pattern: generic library + per-ticker overrides under `{TICKER}/forecast_overrides.json`. Precedence: ticker override → generic → engine fallback. The `kind` vocabulary (revenue_growth, ratio_of_rev, aoci_rollforward, etc.) stays in Python — it's the dispatch logic, not data. Only **line → kind+driver assignments** move to JSON.
+3. **Formalize the ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`. One page: directory scaffold, pipeline invocation, novel triage, forecast review, override conventions. Short — no speculative flexibility docs.
 
-Fix (calc.py):
-- Added `zero` forecast kind → `=0` for non-recurring items in steady-state.
-- Added `aoci_rollforward` kind → `AOCI[t] = AOCI[t−1] + CF!FX Effect on Cash[t]`.
-- Flipped 9 items to `zero`: IS `Foreign Currency Gain (Loss)`; CF `Allowance for Credit Losses`, `Inventory Write-Down`, `Gain (Loss) on Disposal of PP&E`, `(Benefit) Provision for Deferred Income Taxes`, `Foreign Currency Gain (Loss)`, `Gain (Loss) on Lease Cancellations`, `Other Operating Items`, `ROU & Lease Liability Net`, `Finance Lease Payments`.
-- Flipped BS `Accumulated Other Comprehensive Income (Loss)` from `flat` to `aoci_rollforward`.
-
-Result: BS balances at $0 gap across FY2022 → FY2030E. Historicals untouched, validators 48/48 PASS.
-
-Known v2 polish (deferred): properly pair Deferred Tax Provision with DTA/DTL rollforward; build an explicit lease-amortization schedule; PP&E disposal schedule for `Gain (Loss) on Disposal of PP&E`. All non-blocking for the case study's base scenario.
+Surface area to watch when running PEP:
+- `FORECAST_STATEMENT_SPECS` references CELH-specific canonical labels: `Deferred Other Costs - Current/Non-Current`, `Accrued Distributor Termination Fees`, `Note Receivable - Current/Non-Current`, `Convertible Preferred Stock`, `Acquisition of Big Beverages`. PEP will not have these; labels referenced by spec but missing on sheet simply skip (via the `if label not in sheet_rows: continue` guard), but CELH has specs for items PEP doesn't have that still surface other issues.
+- `DRIVER_SPECS` references some CELH-specific lines (`Preferred Dividends % of Preferred Balance`, specific lease sub-lines). PEP may or may not have matching rows.
+- `apic_rollforward`, `re_rollforward`, `pp_e_rollforward`, `cash_rollforward` should generalize fine — they reference universal canonical labels.
+- FX treatment: PEP has real international exposure. The current `zero` treatment for IS/CFO FX Gain (Loss) will understate NI swing; the `aoci_rollforward` for translation FX will be meaningful. Worth revisiting both if PEP's FX is material.
 
 ---
 
