@@ -833,8 +833,7 @@
       "rule_id": "GEN-IS-024",
       "model_sheet": "ANNL P&L",
       "model_label": "OCI - Total Net of Tax",
-      "memo": true,
-      "note": "Sum of all OCI components. Displayed on CI statement but not modeled on xlsx.",
+      "note": "Consolidated OCI value rendered on IS below Net Income. Full OCI statement (AFS / Translation / Pension components broken out on their own worksheet) deferred — when shipped, this line will become a cross-sheet pull from OCI!TotalOCI. Detail components (GEN-IS-020, GEN-IS-025, GEN-IS-026) remain memo until then.",
       "aliases": [
         "other comprehensive income loss net of tax",
         "other comprehensive income (loss), net of tax",
