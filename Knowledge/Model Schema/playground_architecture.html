@@ -600,18 +600,14 @@ let NODES = [
     path: 'Brain/Sources/{TICKER}/{QUARTER}/transcripts/*_press_release.pdf'
   },
   { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 170, y: 315, w: 220, h: 50, label: 'pattern_libraries/*.json',
-    purpose: 'JSON pattern files for statement headings, unit phrases, section labels, period phrases, numeric notation. Read by financials-extract (PDF pipeline) — not used by financials-extract-ixbrl, which relies on the XBRL taxonomy instead. New variants auto-appended on fuzzy match.',
-    path: '~/.claude/skills/financials-extract/references/*.json'
+    purpose: 'Shared cross-ticker JSON store with two roles. Extract-time (6 files: statement_heading_patterns, section_heading_patterns, unit_phrases, period_phrase_patterns, filing_type_patterns, numeric_notation_patterns) — read by financials-extract (PDF pipeline); iXBRL extractor uses the XBRL taxonomy instead. Reconcile-time (1 file: generic_line_item_mappings.json, ~107 entries) — cross-ticker alias→canonical-row mappings consumed by financials-reconcile alongside the per-ticker ledger. The 6 PDF patterns are also bundled as read-only copies in the extract skill under ~/.claude/skills/financials-extract/references/; Brain folder is the canonical source.',
+    path: 'Brain/Knowledge/Model Schema/pattern_libraries/'
   },
 
   // Layer 2 — feeds / is appended-to by financials-reconcile
-  { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 470, w: 240, h: 50, label: 'decisions_ledger.json',
+  { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 508, w: 240, h: 50, label: 'decisions_ledger.json',
     purpose: 'Per-ticker mapping + structural-decision store. Post-migration: CELH has ~10 ticker-specific entries (generic library is source of truth for standard GAAP concepts). Entries may specify filing_subsection / filing_section / filing_type for multi-match disambiguation.',
     path: 'Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json'
-  },
-  { id: 'generic-library', layer: 'reconcile', kind: 'store', x: 310, y: 540, w: 240, h: 50, label: 'generic_line_item_mappings.json',
-    purpose: 'Cross-ticker canonical mappings (~108 entries post-PG-triage). Supports both PDF-text aliases and us-gaap iXBRL concept names (CamelCase-split by normalize_label). Includes BS/IS/CF standard items + PG additions (Long-Term Debt, Treasury Stock, NCI, OCI components, inventory detail memos). Loaded by reconcile alongside the ticker ledger; ticker entries win on conflicts via tier scoring.',
-    path: 'Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json'
   },
 
   // Layer 3 — written by financials-validate
@@ -663,8 +659,8 @@ let EDGES = [
   // ledger ↔ reconcile (ticker-specific; append-only)
   { from: 'decisions-ledger', to: 'financials-reconcile', kind: 'data' },
   { from: 'financials-reconcile', to: 'decisions-ledger', kind: 'data' },
-  // generic library → reconcile (cross-ticker canonical mappings; read-only at reconcile time)
-  { from: 'generic-library', to: 'financials-reconcile', kind: 'data' },
+  // pattern_libraries/generic_line_item_mappings.json → reconcile (cross-ticker canonical mappings; read-only at reconcile time). Same folder as the PDF-extract patterns; functional dual-role.
+  { from: 'pattern-libraries', to: 'financials-reconcile', kind: 'data' },
   // reconcile produces
   { from: 'financials-reconcile', to: 'MappedFiling', kind: 'data' },
   // MappedFiling → validate
@@ -712,7 +708,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v6';
+const LS_KEY = 'financials-architecture-playground-v7';
 
 function saveState() {
   try {
