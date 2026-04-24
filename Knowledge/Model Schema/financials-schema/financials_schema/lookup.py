@@ -215,34 +215,36 @@ def match_raw_item(
     statement_type: StatementType,
     index: dict[tuple[str, str], list[dict]],
     fuzzy_threshold: int = 85,
-) -> tuple[str | None, str | None]:
+) -> dict | None:
     """Look up a raw line item in the generic library.
 
-    Returns (rule_id, canonical_label) on match, or (None, None) on miss.
+    Returns the matching library entry dict (with keys `rule_id`,
+    `model_label`, `model_sheet`, `filing_section`, `filing_subsection`,
+    `sign_convention`, `memo`, `row_type`, ...) on match, or None on miss.
 
-    Match order:
-      1. Exact-normalized match on raw_filing_label
-      2. Exact-normalized match on concept (iXBRL us-gaap local name) — fallback
-         for filers whose display wording isn't in the library yet
-      3. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold)
+    Match order (display label is semantically authoritative — the filer
+    chose it for human readers. us-gaap concept names can be mis-tagged or
+    overloaded, so they're the LAST resort):
+      1. Exact-normalized match on raw_filing_label (filer display)
+      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold)
+      3. Exact-normalized match on concept (iXBRL us-gaap local name) —
+         fallback for filers whose display wording isn't in the library yet
+
+    Example of why display > concept: PG tags "EARNINGS BEFORE INCOME TAXES"
+    with us-gaap concept `IncomeLossIncludingPortionAttributableToNoncontrollingInterest`,
+    which other filers use for consolidated net income. The display label
+    disambiguates — we follow it.
     """
     group = STMT_TO_GROUP[statement_type]
+    normalized = normalize_label(raw_filing_label)
 
     # (1) raw label exact
-    candidates = index.get((normalize_label(raw_filing_label), group), [])
+    candidates = index.get((normalized, group), [])
     entry = select_entry(candidates, subsection_context, section)
     if entry is not None:
-        return entry["rule_id"], entry["model_label"]
+        return entry
 
-    # (2) concept fallback
-    if concept:
-        candidates = index.get((normalize_label(concept), group), [])
-        entry = select_entry(candidates, subsection_context, section)
-        if entry is not None:
-            return entry["rule_id"], entry["model_label"]
-
-    # (3) fuzzy on raw label
-    normalized = normalize_label(raw_filing_label)
+    # (2) fuzzy on raw label
     group_keys = [k for (k, sg) in index if sg == group]
     matches = process.extract(normalized, group_keys, scorer=fuzz.ratio, limit=3)
     if matches and matches[0][1] >= fuzzy_threshold:
@@ -250,9 +252,16 @@ def match_raw_item(
         entry = select_entry(index.get((best_key, group), []),
                              subsection_context, section)
         if entry is not None:
-            return entry["rule_id"], entry["model_label"]
+            return entry
 
-    return None, None
+    # (3) concept fallback (iXBRL only — raw source of truth)
+    if concept:
+        candidates = index.get((normalize_label(concept), group), [])
+        entry = select_entry(candidates, subsection_context, section)
+        if entry is not None:
+            return entry
+
+    return None
 
 
 def nearest_matches(
