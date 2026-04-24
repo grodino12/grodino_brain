@@ -1,0 +1,186 @@
+{
+  "filing": {
+    "ticker": "PG",
+    "filing_type": "10-Q",
+    "filing_date": "2026-01-23",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "ReserveForEsopDebtRetirement",
+      "value": "637",
+      "raw_numeric_text": "637",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2025-12-31",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "nearest_matches": [
+        [
+          "deferred revenue current",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2025",
+      "period_end_date": "2025-06-30",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "ReserveForEsopDebtRetirement",
+      "value": "672",
+      "raw_numeric_text": "672",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2025-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "nearest_matches": [
+        [
+          "deferred revenue current",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "EarningsPerShareBasic",
+      "value": "0.00000182",
+      "raw_numeric_text": "1.82",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "earnings per share basic",
+          1.0
+        ],
+        [
+          "earnings per share diluted",
+          0.8
+        ],
+        [
+          "basic earnings per share",
+          0.75
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "EarningsPerShareDiluted",
+      "value": "0.00000178",
+      "raw_numeric_text": "1.78",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "earnings per share diluted",
+          1.0
+        ],
+        [
+          "earnings per share basic",
+          0.8
+        ],
+        [
+          "basic earnings per share",
+          0.72
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "EarningsPerShareBasic",
+      "value": "0.00000194",
+      "raw_numeric_text": "1.94",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "earnings per share basic",
+          1.0
+        ],
+        [
+          "earnings per share diluted",
+          0.8
+        ],
+        [
+          "basic earnings per share",
+          0.75
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "EarningsPerShareDiluted",
+      "value": "0.00000188",
+      "raw_numeric_text": "1.88",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "earnings per share diluted",
+          1.0
+        ],
+        [
+          "earnings per share basic",
+          0.8
+        ],
+        [
+          "basic earnings per share",
+          0.72
+        ]
+      ]
+    }
+  ]
+}

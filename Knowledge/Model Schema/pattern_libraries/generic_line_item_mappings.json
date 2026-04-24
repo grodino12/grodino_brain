@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order \u2014 this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
-  "last_updated": "2026-04-23",
+  "last_updated": "2026-04-24",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
     "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
@@ -31,7 +31,8 @@
         "cost of revenue",
         "cost of goods sold",
         "cost of sales",
-        "cost of products sold"
+        "cost of products sold",
+        "cost of goods and services sold"
       ]
     },
     {
@@ -85,7 +86,10 @@
         "net interest income",
         "net interest expense",
         "interest income on note receivable",
-        "interest income on notes receivable"
+        "interest income on notes receivable",
+        "interest expense nonoperating",
+        "interest expense",
+        "investment income interest"
       ]
     },
     {
@@ -236,7 +240,8 @@
         "comprehensive income",
         "comprehensive loss",
         "total comprehensive income (loss)",
-        "total comprehensive income"
+        "total comprehensive income",
+        "comprehensive income net of tax"
       ]
     },
     {
@@ -252,7 +257,8 @@
         "foreign currency translation adjustments",
         "foreign currency translation gain (loss)",
         "foreign currency translation",
-        "translation adjustment"
+        "translation adjustment",
+        "other comprehensive income loss foreign currency transaction and translation adjustment net of tax"
       ]
     },
     {
@@ -266,7 +272,8 @@
         "basic earnings (loss) per share",
         "basic earnings per common share",
         "basic net income per share",
-        "basic net income (loss) per share"
+        "basic net income (loss) per share",
+        "earnings per share basic"
       ]
     },
     {
@@ -280,7 +287,8 @@
         "diluted earnings (loss) per share",
         "diluted earnings per common share",
         "diluted net income per share",
-        "diluted net income (loss) per share"
+        "diluted net income (loss) per share",
+        "earnings per share diluted"
       ]
     },
     {
@@ -314,7 +322,8 @@
       "aliases": [
         "cash and cash equivalents",
         "cash equivalents",
-        "cash"
+        "cash",
+        "cash cash equivalents restricted cash and restricted cash equivalents"
       ]
     },
     {
@@ -371,7 +380,8 @@
         "prepaid expenses and other current assets",
         "prepaid expenses",
         "prepayments",
-        "prepaid expenses, net"
+        "prepaid expenses, net",
+        "prepaid expense and other assets current"
       ]
     },
     {
@@ -448,7 +458,8 @@
         "intangible assets-net",
         "intangibles, net",
         "other intangible assets",
-        "other intangibles, net"
+        "other intangibles, net",
+        "intangible assets net excluding goodwill"
       ]
     },
     {
@@ -470,7 +481,8 @@
         "other non-current assets",
         "other assets",
         "other long-term assets, net",
-        "other non-current assets, net"
+        "other non-current assets, net",
+        "other assets noncurrent"
       ]
     },
     {
@@ -492,7 +504,8 @@
         "accrued expenses",
         "accrued liabilities",
         "accrued expenses and other current liabilities",
-        "accrued liabilities and other"
+        "accrued liabilities and other",
+        "accrued liabilities current"
       ]
     },
     {
@@ -625,7 +638,9 @@
         "convertible preferred stock",
         "redeemable preferred stock",
         "redeemable convertible preferred stock",
-        "series a preferred stock"
+        "series a preferred stock",
+        "preferred stock value",
+        "preferred stock"
       ]
     },
     {
@@ -636,7 +651,8 @@
         "common stock",
         "common shares",
         "class a common stock",
-        "class b common stock"
+        "class b common stock",
+        "common stock value"
       ]
     },
     {
@@ -671,6 +687,206 @@
         "retained earnings",
         "accumulated deficit",
         "retained earnings / (accumulated deficit)"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-032",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Short-Term Debt / Current Portion of LT Debt",
+      "filing_section": "current_liabilities",
+      "aliases": [
+        "debt current",
+        "short-term debt",
+        "short-term borrowings",
+        "current portion of long-term debt",
+        "current maturities of long-term debt",
+        "notes payable",
+        "commercial paper"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-033",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Long-Term Debt",
+      "filing_section": "non_current_liabilities",
+      "aliases": [
+        "long-term debt",
+        "long-term debt noncurrent",
+        "long-term debt, net",
+        "long-term debt, excluding current portion",
+        "senior notes",
+        "notes payable non-current"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-034",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Other Non-Current Liabilities",
+      "filing_section": "non_current_liabilities",
+      "aliases": [
+        "other non-current liabilities",
+        "other long-term liabilities",
+        "other liabilities noncurrent",
+        "other liabilities",
+        "other long-term liabilities, net"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-035",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Treasury Stock",
+      "filing_section": "equity",
+      "sign_convention": "expense_positive",
+      "note": "Contra-equity line; typically reported as negative on BS. Stored expense_positive so value reads naturally.",
+      "aliases": [
+        "treasury stock",
+        "treasury stock common value",
+        "treasury stock, at cost",
+        "treasury shares",
+        "treasury stock, common"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-036",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Noncontrolling Interest",
+      "filing_section": "equity",
+      "aliases": [
+        "minority interest",
+        "noncontrolling interest",
+        "noncontrolling interests",
+        "non-controlling interest",
+        "stockholders equity attributable to noncontrolling interest"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-037",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Common Stock - Shares Issued",
+      "filing_section": "equity",
+      "memo": true,
+      "note": "Share count (not dollar). Tagged alongside CommonStockValue in iXBRL filings. Recognized but not rendered on xlsx.",
+      "aliases": [
+        "common stock shares issued",
+        "common shares issued",
+        "shares issued"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-038",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Inventory - Raw Materials & Supplies",
+      "memo": true,
+      "note": "Detail row of Inventories (GEN-BS-005). Many filers disclose on-face; model rolls up to the Net figure so this is memo-only.",
+      "aliases": [
+        "inventory raw materials and supplies net of reserves",
+        "raw materials",
+        "raw materials and supplies",
+        "inventory, raw materials"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-039",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Inventory - Work in Process",
+      "memo": true,
+      "note": "Detail row of Inventories (GEN-BS-005).",
+      "aliases": [
+        "inventory work in process net of reserves",
+        "work in process",
+        "inventory, work in process"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-040",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Inventory - Finished Goods",
+      "memo": true,
+      "note": "Detail row of Inventories (GEN-BS-005).",
+      "aliases": [
+        "inventory finished goods net of reserves",
+        "finished goods",
+        "inventory, finished goods"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-022",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Net Income (Loss) Including NCI",
+      "note": "Consolidated net income BEFORE splitting the NCI portion. For filers with noncontrolling interests, this is the line that gets split into parent (GEN-IS-011) + NCI (GEN-IS-023).",
+      "aliases": [
+        "profit loss",
+        "income loss including portion attributable to noncontrolling interest",
+        "consolidated net income",
+        "consolidated net earnings",
+        "net income including noncontrolling interest"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-023",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+      "aliases": [
+        "net income loss attributable to noncontrolling interest",
+        "net income attributable to noncontrolling interest",
+        "less: net income attributable to noncontrolling interests",
+        "net earnings attributable to noncontrolling interests"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-024",
+      "model_sheet": "ANNL P&L",
+      "model_label": "OCI - Total Net of Tax",
+      "memo": true,
+      "note": "Sum of all OCI components. Displayed on CI statement but not modeled on xlsx.",
+      "aliases": [
+        "other comprehensive income loss net of tax",
+        "other comprehensive income (loss), net of tax",
+        "total other comprehensive income loss net of tax"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-025",
+      "model_sheet": "ANNL P&L",
+      "model_label": "OCI - AFS Securities",
+      "memo": true,
+      "note": "Available-for-sale securities adjustment, OCI component.",
+      "aliases": [
+        "other comprehensive income loss available for sale securities adjustment net of tax",
+        "unrealized gains (losses) on available-for-sale securities",
+        "afs securities adjustment"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-026",
+      "model_sheet": "ANNL P&L",
+      "model_label": "OCI - Pension & Postretirement",
+      "memo": true,
+      "note": "Pension and other postretirement benefit plans adjustment, OCI component.",
+      "aliases": [
+        "other comprehensive income loss pension and other postretirement benefit plans adjustment net of tax",
+        "pension and other postretirement benefit plans adjustment",
+        "pension adjustment"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-027",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Comprehensive Income Attributable to NCI",
+      "memo": true,
+      "aliases": [
+        "comprehensive income net of tax attributable to noncontrolling interest",
+        "comprehensive income attributable to noncontrolling interest"
+      ]
+    },
+    {
+      "rule_id": "GEN-IS-028",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Comprehensive Income Including NCI",
+      "memo": true,
+      "aliases": [
+        "comprehensive income net of tax including portion attributable to noncontrolling interest",
+        "total comprehensive income including noncontrolling interest"
       ]
     },
     {
