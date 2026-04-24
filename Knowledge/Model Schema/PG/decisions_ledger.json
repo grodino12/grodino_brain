@@ -3,7 +3,17 @@
   "_last_updated": "2026-04-24",
   "ticker": "PG",
   "mappings": [],
-  "new_rows": [],
+  "new_rows": [
+    {
+      "rule_id": "NEW-BS-001",
+      "filing_term_normalized": "reserve for esop debt retirement",
+      "model_sheet": "QTR BS",
+      "new_row_label": "ESOP Debt Retirement Reserve",
+      "filing_section": "equity",
+      "sign_convention": "expense_positive",
+      "note": "Contra-equity reserve offsetting PG's guarantee of the ESOP trust's debt. Presented as a negative number reducing TSE on the filing; stored expense_positive so value reads naturally in the model. ~$637M at Q2 FY2026, declining as ESOP amortizes. Company-specific (legacy leveraged ESOP from 1989) — not promoted to generic library. When PG's first 10-K is run, add a parallel ANNL BS entry."
+    }
+  ],
   "superseded_rule_ids": [],
   "memo_rule_ids": []
 }

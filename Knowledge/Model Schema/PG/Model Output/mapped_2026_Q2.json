@@ -4403,11 +4403,11 @@
         "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2025-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
-      "model_label": "Reserve for ESOP Debt Retirement",
+      "model_label": "ESOP Debt Retirement Reserve",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-041"
+      "ledger_rule_id": "NEW-BS-001"
     },
     {
       "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
@@ -5139,11 +5139,11 @@
         "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2025-06-30",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
-      "model_sheet": "BALANCE SHEET",
+      "model_sheet": "QTR BS",
       "model_row": 0,
-      "model_label": "Reserve for ESOP Debt Retirement",
+      "model_label": "ESOP Debt Retirement Reserve",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-041"
+      "ledger_rule_id": "NEW-BS-001"
     },
     {
       "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",

@@ -692,20 +692,33 @@
     {
       "rule_id": "GEN-BS-032",
       "model_sheet": "BALANCE SHEET",
-      "model_label": "Short-Term Debt / Current Portion of LT Debt",
+      "model_label": "Short-Term Debt",
       "filing_section": "current_liabilities",
+      "note": "Debt with original maturity < 1 year (commercial paper, revolving credit drawings, short-term notes). Distinct from GEN-BS-033 Current Portion of LT Debt, which is the <1yr slice of longer-dated instruments.",
       "aliases": [
-        "debt current",
         "short-term debt",
         "short-term borrowings",
-        "current portion of long-term debt",
-        "current maturities of long-term debt",
         "notes payable",
-        "commercial paper"
+        "commercial paper",
+        "short term borrowings"
       ]
     },
     {
       "rule_id": "GEN-BS-033",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Current Portion of Long-Term Debt",
+      "filing_section": "current_liabilities",
+      "note": "The <1yr slice of originally-long-term debt instruments. Distinct from GEN-BS-032 Short-Term Debt. us-gaap:LongTermDebtCurrent.",
+      "aliases": [
+        "long-term debt current",
+        "long-term debt current portion",
+        "current portion of long-term debt",
+        "current maturities of long-term debt",
+        "current portion of long term debt"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-041",
       "model_sheet": "BALANCE SHEET",
       "model_label": "Long-Term Debt",
       "filing_section": "non_current_liabilities",
@@ -807,20 +820,6 @@
         "inventory finished goods net of reserves",
         "finished goods",
         "inventory, finished goods"
-      ]
-    },
-    {
-      "rule_id": "GEN-BS-041",
-      "model_sheet": "BALANCE SHEET",
-      "model_label": "Reserve for ESOP Debt Retirement",
-      "filing_section": "equity",
-      "sign_convention": "expense_positive",
-      "note": "Contra-equity reserve offsetting the guarantee of ESOP-related debt. Conventionally presented as a negative number reducing TSE. Uncommon outside large multinationals with legacy ESOPs (PG, JNJ, KO).",
-      "aliases": [
-        "reserve for esop debt retirement",
-        "reserve for esop related debt retirement",
-        "esop related debt",
-        "reserve for esop debt"
       ]
     },
     {
