@@ -19,10 +19,21 @@ from financials_schema.patterns import (
     RegexPattern,
     RegexPatternEntry,
 )
+from financials_schema.lookup import (
+    IXBRL_SUBTOTAL_CONCEPTS,
+    build_generic_index,
+    is_subtotal_label,
+    load_generic_library,
+    match_raw_item,
+    nearest_matches,
+    normalize_label,
+    select_entry,
+)
 
 __all__ = [
     "Citation",
     "FilingType",
+    "IXBRL_SUBTOTAL_CONCEPTS",
     "MappedFiling",
     "MappedLineItem",
     "NovelItem",
@@ -40,6 +51,13 @@ __all__ = [
     "Unit",
     "ValidatedFiling",
     "ValidationResult",
+    "build_generic_index",
+    "is_subtotal_label",
+    "load_generic_library",
+    "match_raw_item",
+    "nearest_matches",
+    "normalize_label",
+    "select_entry",
 ]
 
 __version__ = "0.1.0"
