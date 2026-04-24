@@ -369,7 +369,7 @@
 
 <main>
   <div class="map-wrap" id="mapWrap">
-    <svg class="map" id="svg" viewBox="0 0 1200 1150" preserveAspectRatio="xMidYMin meet">
+    <svg class="map" id="svg" viewBox="0 0 1200 1240" preserveAspectRatio="xMidYMin meet">
       <defs>
         <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M0,0 L10,5 L0,10 z" fill="#3a4358" />
@@ -427,12 +427,12 @@
 // ============ DATA MODEL ============
 
 const LAYERS = [
-  { id: 'input',     label: 'INPUT · SOURCE FILINGS',               y0: 40,   y1: 130,  bg: '#0d1220' },
-  { id: 'extract',   label: 'LAYER 1 · RAW DATA + UNIT VALIDATION', y0: 130,  y1: 320,  bg: '#0a0f1c' },
-  { id: 'reconcile', label: 'LAYER 2 · RECONCILIATION',             y0: 320,  y1: 510,  bg: '#0d1220' },
-  { id: 'validate',  label: 'LAYER 3 · INTEGRITY VALIDATION',       y0: 510,  y1: 700,  bg: '#0a0f1c' },
-  { id: 'output',    label: 'LAYER 4 · VIZ · WRITE · CALC',         y0: 700,  y1: 990,  bg: '#0d1220' },
-  { id: 'storage',   label: 'LAYER 5 · SHARED SCHEMA',              y0: 990,  y1: 1110, bg: '#0a0f1c' }
+  { id: 'input',     label: 'INPUT · FETCH + SOURCE FILINGS',       y0: 40,   y1: 220,  bg: '#0d1220' },
+  { id: 'extract',   label: 'LAYER 1 · RAW DATA + UNIT VALIDATION', y0: 220,  y1: 410,  bg: '#0a0f1c' },
+  { id: 'reconcile', label: 'LAYER 2 · RECONCILIATION',             y0: 410,  y1: 600,  bg: '#0d1220' },
+  { id: 'validate',  label: 'LAYER 3 · INTEGRITY VALIDATION',       y0: 600,  y1: 790,  bg: '#0a0f1c' },
+  { id: 'output',    label: 'LAYER 4 · VIZ · WRITE · CALC',         y0: 790,  y1: 1080, bg: '#0d1220' },
+  { id: 'storage',   label: 'LAYER 5 · SHARED SCHEMA',              y0: 1080, y1: 1200, bg: '#0a0f1c' }
 ];
 
 // x = center, y = center, w/h in SVG units. Grid-aligned for readability.
@@ -441,7 +441,7 @@ const LAYERS = [
 // Layer 5 storage has two sub-rows (contracts/stores, then external I/O).
 let NODES = [
   // Layer 1 — extract (two parallel extractors feeding the same RawFiling)
-  { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 430,  y: 225, w: 220, h: 56, label: 'financials-extract',
+  { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 430,  y: 315, w: 220, h: 56, label: 'financials-extract',
     purpose: 'Parse filing PDFs (IR press releases, legacy sources) into Pydantic RawFiling. Fallback path for non-iXBRL sources.',
     input: 'PDF path', output: 'RawFiling',
     ops: [
@@ -455,7 +455,7 @@ let NODES = [
     ],
     deps: ['pymupdf', 'pdfplumber', 'pydantic', 'rapidfuzz']
   },
-  { id: 'financials-extract-ixbrl', layer: 'extract', kind: 'skill', built: true, x: 710, y: 225, w: 240, h: 56, label: 'financials-extract-ixbrl',
+  { id: 'financials-extract-ixbrl', layer: 'extract', kind: 'skill', built: true, x: 710, y: 315, w: 240, h: 56, label: 'financials-extract-ixbrl',
     purpose: 'Parse SEC iXBRL HTML into RawFiling using the SEC presentation linkbase (FilingSummary.xml + R{n}.htm) for authoritative statement classification. Near-perfect extraction — every number is pre-tagged with concept / period / unit / scale.',
     input: 'iXBRL HTML + .meta.json', output: 'RawFiling',
     ops: [
@@ -472,14 +472,14 @@ let NODES = [
     ],
     deps: ['lxml', 'requests', 'pydantic']
   },
-  { id: 'RawFiling', layer: 'extract', kind: 'contract', x: 1000, y: 225, w: 180, h: 56, label: 'RawFiling',
+  { id: 'RawFiling', layer: 'extract', kind: 'contract', x: 1000, y: 315, w: 180, h: 56, label: 'RawFiling',
     purpose: 'Pydantic model for an extracted filing. Contains Statement[] (BS/CF/IS), each with Unit + RawLineItem[]. Same shape regardless of extraction source — both financials-extract (PDF) and financials-extract-ixbrl (iXBRL) emit this.',
     fields: ['ticker: str', 'filing_type: FilingType', 'filing_date: date', 'source_path: Path', 'statements: list[Statement]', 'extraction_metadata: dict'],
     validators: ['at_least_one_statement', 'press_release_has_only_income_statement']
   },
 
   // Layer 2
-  { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 415, w: 240, h: 56, label: 'financials-reconcile',
+  { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 505, w: 240, h: 56, label: 'financials-reconcile',
     purpose: 'Map raw filing labels to canonical model rows via the decisions ledger. Entry precedence: (label, sheet, subsection, section). Emits NovelReport for blocked items.',
     input: 'RawFiling + ledger', output: 'MappedFiling',
     ops: [
@@ -492,14 +492,14 @@ let NODES = [
     ],
     deps: ['pydantic', 'rapidfuzz']
   },
-  { id: 'MappedFiling', layer: 'reconcile', kind: 'contract', x: 940, y: 415, w: 200, h: 56, label: 'MappedFiling',
+  { id: 'MappedFiling', layer: 'reconcile', kind: 'contract', x: 940, y: 505, w: 200, h: 56, label: 'MappedFiling',
     purpose: 'RawFiling with each line item mapped to (model_sheet, model_row, model_label). Carries list of novel items needing user input. RawLineItem now has subsection_context to disambiguate repeated labels (EPS vs shares Basic/Diluted).',
     fields: ['raw: RawFiling', 'mapped_line_items: list[MappedLineItem]', 'novel_items: list[NovelItem]'],
     validators: ['no_unresolved_novel_items (blocks Layer 3)']
   },
 
   // Layer 3
-  { id: 'financials-validate', layer: 'validate', kind: 'skill', built: true, x: 620, y: 605, w: 240, h: 56, label: 'financials-validate',
+  { id: 'financials-validate', layer: 'validate', kind: 'skill', built: true, x: 620, y: 695, w: 240, h: 56, label: 'financials-validate',
     purpose: 'Arithmetic integrity — accounting identities + cross-statement ties + section-sum validations. Blocks the pipeline on fail.',
     input: 'MappedFiling + anomalies.json', output: 'ValidatedFiling',
     ops: [
@@ -512,14 +512,14 @@ let NODES = [
     ],
     deps: ['pydantic', 'decimal']
   },
-  { id: 'ValidatedFiling', layer: 'validate', kind: 'contract', x: 940, y: 605, w: 200, h: 56, label: 'ValidatedFiling',
+  { id: 'ValidatedFiling', layer: 'validate', kind: 'contract', x: 940, y: 695, w: 200, h: 56, label: 'ValidatedFiling',
     purpose: 'MappedFiling + list[ValidationResult]. Only emitted when all rules pass (or overrides explain each fail).',
     fields: ['mapped: MappedFiling', 'results: list[ValidationResult]', 'passed: bool'],
     validators: ['all_results_pass_or_override']
   },
 
   // Layer 4
-  { id: 'financials-playground', layer: 'output', kind: 'skill', built: true, x: 180, y: 790, w: 220, h: 56, label: 'financials-playground',
+  { id: 'financials-playground', layer: 'output', kind: 'skill', built: true, x: 180, y: 880, w: 220, h: 56, label: 'financials-playground',
     purpose: 'Self-contained HTML explorer over one or more ValidatedFiling JSONs. QA step before Excel write. stdlib-only, no external deps.',
     input: 'ValidatedFiling[] + NovelReport?', output: 'explorer.html',
     ops: [
@@ -532,7 +532,7 @@ let NODES = [
     ],
     deps: ['python stdlib only']
   },
-  { id: 'model-write', layer: 'output', kind: 'skill', x: 440, y: 790, w: 180, h: 56, label: 'model-write',
+  { id: 'model-write', layer: 'output', kind: 'skill', x: 440, y: 880, w: 180, h: 56, label: 'model-write',
     purpose: 'Write ValidatedFiling into the .xlsm model. Preserves macros, honors cross-sheet formulas via Path 3 manual inserts.',
     input: 'ValidatedFiling + xlsm path', output: '.xlsm_updated',
     ops: [
@@ -544,7 +544,7 @@ let NODES = [
     ],
     deps: ['openpyxl', 'shutil', 'pydantic']
   },
-  { id: 'model-calc', layer: 'output', kind: 'skill', x: 680, y: 790, w: 180, h: 56, label: 'model-calc',
+  { id: 'model-calc', layer: 'output', kind: 'skill', x: 680, y: 880, w: 180, h: 56, label: 'model-calc',
     purpose: 'Derived calcs + scenario overlay. Plugs GLP-1 consumption headwind + SNAP ban volume drag into revenue forecast.',
     input: 'ValidatedFiling + ScenarioInputs', output: 'DerivedCalcs',
     ops: [
@@ -556,7 +556,7 @@ let NODES = [
     ],
     deps: ['pydantic', 'pandas', 'numpy']
   },
-  { id: 'DerivedCalcs', layer: 'output', kind: 'contract', x: 940, y: 790, w: 200, h: 56, label: 'DerivedCalcs',
+  { id: 'DerivedCalcs', layer: 'output', kind: 'contract', x: 940, y: 880, w: 200, h: 56, label: 'DerivedCalcs',
     purpose: 'Growth rates, margins, working capital ratios, and scenario grids. Output of model-calc, consumed by the case study deck.',
     fields: ['growth: GrowthTable', 'margins: MarginTable', 'working_capital: WcRatios', 'scenarios: ScenarioGrid']
   },
@@ -564,11 +564,11 @@ let NODES = [
   // Stores positioned next to their consumer skill, in the skill's own layer.
 
   // Layer 0 — fetch + source filings (feeds both extractors)
-  { id: 'sec-edgar-api', layer: 'input', kind: 'external', x: 80, y: 85, w: 200, h: 50, label: 'SEC EDGAR API',
+  { id: 'sec-edgar-api', layer: 'input', kind: 'external', x: 150, y: 80, w: 200, h: 50, label: 'SEC EDGAR API',
     purpose: 'Public data.sec.gov endpoints: submissions, companyfacts, filing archives. No API key — requires User-Agent header identifying the requester. Rate limit: 10 req/sec (skill runs at 5).',
     path: 'data.sec.gov + www.sec.gov/Archives/edgar/data/{cik}/'
   },
-  { id: 'sec-edgar-fetch', layer: 'input', kind: 'skill', built: true, x: 330, y: 85, w: 220, h: 50, label: 'sec-edgar-fetch',
+  { id: 'sec-edgar-fetch', layer: 'input', kind: 'skill', built: true, x: 80, y: 175, w: 220, h: 50, label: 'sec-edgar-fetch',
     purpose: 'Pull 10-K / 10-Q primary iXBRL HTMLs + Financial_Report.xlsx + cumulative companyfacts.json from EDGAR into ticker-organized folders. Gap-fills: skips files already on disk. Writes .meta.json sidecar per filing so downstream extractor can locate FilingSummary.xml.',
     input: 'ticker[] (defaults to Consumer Staples list)', output: 'iXBRL HTML + meta.json + companyfacts.json',
     ops: [
@@ -582,51 +582,51 @@ let NODES = [
     ],
     deps: ['requests']
   },
-  { id: 'ixbrl-htm-store', layer: 'input', kind: 'store', x: 600, y: 85, w: 240, h: 50, label: 'iXBRL HTML + meta.json',
+  { id: 'ixbrl-htm-store', layer: 'input', kind: 'store', x: 340, y: 175, w: 240, h: 50, label: 'iXBRL HTML + meta.json',
     purpose: 'SEC iXBRL primary documents + per-filing metadata sidecars. Produced by sec-edgar-fetch, consumed by financials-extract-ixbrl. Every number in the .htm is tagged with concept / context / unit / scale — the .meta.json carries the accession so the extractor can fetch FilingSummary.xml.',
     path: 'Brain/Sources/{TICKER}/{QUARTER}/filings/{TICKER}_{YYYY-MM-DD}_{form}.htm + .meta.json'
   },
-  { id: 'companyfacts-store', layer: 'storage', kind: 'store', x: 280, y: 1040, w: 240, h: 56, label: 'companyfacts.json',
-    purpose: 'SEC-pre-processed XBRL facts for ALL historical periods of a given ticker. One file per ticker; every GAAP concept with full time series. Produced by sec-edgar-fetch at the ticker root; durable cache — refreshed on each fetch run. Direct-query alternative to per-filing extraction for standard line items.',
+  { id: 'companyfacts-store', layer: 'input', kind: 'store', x: 620, y: 175, w: 220, h: 50, label: 'companyfacts.json',
+    purpose: 'SEC-pre-processed XBRL facts for ALL historical periods of a given ticker. One file per ticker; every GAAP concept with full time series. Produced by sec-edgar-fetch at the ticker root; refreshed on each fetch run. Direct-query alternative to per-filing extraction for standard line items — covers ~80% of modeling needs with zero extraction machinery.',
     path: 'Brain/Sources/{TICKER}/companyfacts.json'
   },
-  { id: 'source-pdfs', layer: 'input', kind: 'external', x: 890, y: 85, w: 240, h: 50, label: 'IR press release PDFs',
+  { id: 'source-pdfs', layer: 'input', kind: 'external', x: 900, y: 80, w: 230, h: 50, label: 'IR press release PDFs',
     purpose: 'Non-iXBRL PDFs — primarily IR-site press releases downloaded by the investor-relations-data-scraper skill. Press releases = IS-only; 10-K/10-Q PDFs are a legacy path now superseded by the iXBRL extractor for SEC-filed documents.',
     path: 'Brain/Sources/{TICKER}/{QUARTER}/transcripts/*_press_release.pdf'
   },
-  { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 170, y: 225, w: 220, h: 50, label: 'pattern_libraries/*.json',
+  { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 170, y: 315, w: 220, h: 50, label: 'pattern_libraries/*.json',
     purpose: 'JSON pattern files for statement headings, unit phrases, section labels, period phrases, numeric notation. Read by financials-extract (PDF pipeline) — not used by financials-extract-ixbrl, which relies on the XBRL taxonomy instead. New variants auto-appended on fuzzy match.',
     path: '~/.claude/skills/financials-extract/references/*.json'
   },
 
   // Layer 2 — feeds / is appended-to by financials-reconcile
-  { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 418, w: 240, h: 50, label: 'decisions_ledger.json',
+  { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 508, w: 240, h: 50, label: 'decisions_ledger.json',
     purpose: 'Per-ticker mapping + structural-decision store. CELH: 124 mappings + 24 new rows + 7 structural + 1 rename. Entries may specify filing_subsection / filing_section for multi-match disambiguation.',
     path: 'Brain/Knowledge/Model Schema/CELH/decisions_ledger.json'
   },
 
   // Layer 3 — written by financials-validate
-  { id: 'citations-doc', layer: 'validate', kind: 'store', x: 310, y: 605, w: 240, h: 50, label: 'source_citations.json',
+  { id: 'citations-doc', layer: 'validate', kind: 'store', x: 310, y: 695, w: 240, h: 50, label: 'source_citations.json',
     purpose: 'Per-value citation trail (filing, page, line_hint). Output artifact of reconcile+validate. Machine-readable for downstream skills.',
     path: 'Brain/Knowledge/Model Schema/CELH/source_citations.json'
   },
 
   // Layer 4 sub-row (y=830) — xlsm under model-write, glp1/snap feeding model-calc
-  { id: 'xlsm-model', layer: 'output', kind: 'external', x: 400, y: 920, w: 200, h: 50, label: 'CELH Financial Model.xlsm',
+  { id: 'xlsm-model', layer: 'output', kind: 'external', x: 400, y: 1010, w: 200, h: 50, label: 'CELH Financial Model.xlsm',
     purpose: 'Target Excel model (10 sheets, VBA macros). Written via model-write; saves to _updated.xlsm, never overwrites.',
     path: 'Brain/Knowledge/Model Schema/CELH/Model Output/CELH Financial Model.xlsm'
   },
-  { id: 'glp1-model', layer: 'output', kind: 'external', x: 610, y: 920, w: 150, h: 50, label: 'GLP-1 output',
+  { id: 'glp1-model', layer: 'output', kind: 'external', x: 610, y: 1010, w: 150, h: 50, label: 'GLP-1 output',
     purpose: 'Energy drink consumption headwind curve from the GLP-1 Projection model. Scenario input to model-calc.',
     path: 'data/derived/GLP1_Projection Data.xlsx'
   },
-  { id: 'snap-model', layer: 'output', kind: 'external', x: 770, y: 920, w: 150, h: 50, label: 'SNAP output',
+  { id: 'snap-model', layer: 'output', kind: 'external', x: 770, y: 1010, w: 150, h: 50, label: 'SNAP output',
     purpose: 'State-weighted volume drag from the SNAP energy drink ban model. Scenario input to model-calc.',
     path: 'data/derived/Celsius_SNAP Data_GR.xlsx'
   },
 
   // Layer 5 — shared Pydantic package (used by every skill)
-  { id: 'financials-schema', layer: 'storage', kind: 'pkg', x: 580, y: 1040, w: 260, h: 56, label: 'financials-schema/',
+  { id: 'financials-schema', layer: 'storage', kind: 'pkg', x: 580, y: 1130, w: 260, h: 56, label: 'financials-schema/',
     purpose: 'Shared Pydantic package imported by every skill. Defines RawFiling, MappedFiling, ValidatedFiling, DerivedCalcs, PatternLibrary.',
     path: '~/projects/financials-schema/', install: 'pip install -e .'
   }
@@ -701,7 +701,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v3';
+const LS_KEY = 'financials-architecture-playground-v4';
 
 function saveState() {
   try {
