@@ -1,0 +1,3811 @@
+{
+  "ticker": "PG",
+  "filing_type": "10-Q",
+  "filing_date": "2026-01-23",
+  "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+  "statements": [
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2026,
+        "fiscal_quarter": 2,
+        "period_end_date": "2025-12-31",
+        "raw_period_label": "as of 2025-12-31",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "value": "10825",
+          "raw_numeric_text": "10,825",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccountsReceivableNetCurrent",
+          "value": "6279",
+          "raw_numeric_text": "6,279",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryRawMaterialsAndSuppliesNetOfReserves",
+          "value": "2139",
+          "raw_numeric_text": "2,139",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryWorkInProcessNetOfReserves",
+          "value": "1007",
+          "raw_numeric_text": "1,007",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryWorkInProcessNetOfReserves | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
+          "value": "4672",
+          "raw_numeric_text": "4,672",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryFinishedGoodsNetOfReserves | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryNet",
+          "value": "7817",
+          "raw_numeric_text": "7,817",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "PrepaidExpenseAndOtherAssetsCurrent",
+          "value": "1666",
+          "raw_numeric_text": "1,666",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AssetsCurrent",
+          "value": "26588",
+          "raw_numeric_text": "26,588",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "PropertyPlantAndEquipmentNet",
+          "value": "24487",
+          "raw_numeric_text": "24,487",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "41665",
+          "raw_numeric_text": "41,665",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "IntangibleAssetsNetExcludingGoodwill",
+          "value": "21737",
+          "raw_numeric_text": "21,737",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "OtherAssetsNoncurrent",
+          "value": "12809",
+          "raw_numeric_text": "12,809",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Assets",
+          "value": "127286",
+          "raw_numeric_text": "127,286",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccountsPayableCurrent",
+          "value": "15173",
+          "raw_numeric_text": "15,173",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccruedLiabilitiesCurrent",
+          "value": "10463",
+          "raw_numeric_text": "10,463",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "DebtCurrent",
+          "value": "11062",
+          "raw_numeric_text": "11,062",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DebtCurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "LiabilitiesCurrent",
+          "value": "36699",
+          "raw_numeric_text": "36,699",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "LongTermDebtNoncurrent",
+          "value": "25577",
+          "raw_numeric_text": "25,577",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermDebtNoncurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",
+          "value": "5974",
+          "raw_numeric_text": "5,974",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "OtherLiabilitiesNoncurrent",
+          "value": "5719",
+          "raw_numeric_text": "5,719",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Liabilities",
+          "value": "73969",
+          "raw_numeric_text": "73,969",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Liabilities | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "PreferredStockValue",
+          "value": "767",
+          "raw_numeric_text": "767",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "CommonStockSharesIssued",
+          "value": "4009.2",
+          "raw_numeric_text": "4,009.2",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
+          "raw_filing_label": "CommonStockValue",
+          "value": "4009",
+          "raw_numeric_text": "4,009",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AdditionalPaidInCapital",
+          "value": "69010",
+          "raw_numeric_text": "69,010",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "ReserveForEsopDebtRetirement",
+          "value": "637",
+          "raw_numeric_text": "637",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+          "value": "-12108",
+          "raw_numeric_text": "12,108",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "TreasuryStockCommonValue",
+          "value": "141981",
+          "raw_numeric_text": "141,981",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "RetainedEarningsAccumulatedDeficit",
+          "value": "133981",
+          "raw_numeric_text": "133,981",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "MinorityInterest",
+          "value": "276",
+          "raw_numeric_text": "276",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:MinorityInterest | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "53317",
+          "raw_numeric_text": "53,317",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "LiabilitiesAndStockholdersEquity",
+          "value": "127286",
+          "raw_numeric_text": "127,286",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 4,
+        "period_end_date": "2025-06-30",
+        "raw_period_label": "as of 2025-06-30",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "value": "9556",
+          "raw_numeric_text": "9,556",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccountsReceivableNetCurrent",
+          "value": "6185",
+          "raw_numeric_text": "6,185",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryRawMaterialsAndSuppliesNetOfReserves",
+          "value": "2022",
+          "raw_numeric_text": "2,022",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryWorkInProcessNetOfReserves",
+          "value": "1012",
+          "raw_numeric_text": "1,012",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryWorkInProcessNetOfReserves | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryFinishedGoodsNetOfReserves",
+          "value": "4516",
+          "raw_numeric_text": "4,516",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryFinishedGoodsNetOfReserves | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "InventoryNet",
+          "value": "7551",
+          "raw_numeric_text": "7,551",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "PrepaidExpenseAndOtherAssetsCurrent",
+          "value": "2100",
+          "raw_numeric_text": "2,100",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AssetsCurrent",
+          "value": "25392",
+          "raw_numeric_text": "25,392",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "PropertyPlantAndEquipmentNet",
+          "value": "23897",
+          "raw_numeric_text": "23,897",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "value": "41650",
+          "raw_numeric_text": "41,650",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "IntangibleAssetsNetExcludingGoodwill",
+          "value": "21910",
+          "raw_numeric_text": "21,910",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "OtherAssetsNoncurrent",
+          "value": "12381",
+          "raw_numeric_text": "12,381",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Assets",
+          "value": "125231",
+          "raw_numeric_text": "125,231",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccountsPayableCurrent",
+          "value": "15227",
+          "raw_numeric_text": "15,227",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccruedLiabilitiesCurrent",
+          "value": "11318",
+          "raw_numeric_text": "11,318",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "DebtCurrent",
+          "value": "9513",
+          "raw_numeric_text": "9,513",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DebtCurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "LiabilitiesCurrent",
+          "value": "36058",
+          "raw_numeric_text": "36,058",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "LongTermDebtNoncurrent",
+          "value": "24995",
+          "raw_numeric_text": "24,995",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermDebtNoncurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",
+          "value": "5774",
+          "raw_numeric_text": "5,774",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "OtherLiabilitiesNoncurrent",
+          "value": "6120",
+          "raw_numeric_text": "6,120",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Liabilities",
+          "value": "72946",
+          "raw_numeric_text": "72,946",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Liabilities | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "PreferredStockValue",
+          "value": "777",
+          "raw_numeric_text": "777",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "CommonStockSharesIssued",
+          "value": "4009.2",
+          "raw_numeric_text": "4,009.2",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
+          "raw_filing_label": "CommonStockValue",
+          "value": "4009",
+          "raw_numeric_text": "4,009",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AdditionalPaidInCapital",
+          "value": "68770",
+          "raw_numeric_text": "68,770",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "ReserveForEsopDebtRetirement",
+          "value": "672",
+          "raw_numeric_text": "672",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+          "value": "-12143",
+          "raw_numeric_text": "12,143",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "TreasuryStockCommonValue",
+          "value": "138702",
+          "raw_numeric_text": "138,702",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "RetainedEarningsAccumulatedDeficit",
+          "value": "129973",
+          "raw_numeric_text": "129,973",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "MinorityInterest",
+          "value": "272",
+          "raw_numeric_text": "272",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:MinorityInterest | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "52284",
+          "raw_numeric_text": "52,284",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "LiabilitiesAndStockholdersEquity",
+          "value": "125231",
+          "raw_numeric_text": "125,231",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2026,
+        "fiscal_quarter": 2,
+        "period_end_date": "2025-12-31",
+        "raw_period_label": "2025-10-01 to 2025-12-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Revenues",
+          "value": "22208",
+          "raw_numeric_text": "22,208",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "CostOfGoodsAndServicesSold",
+          "value": "10834",
+          "raw_numeric_text": "10,834",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+          "value": "6008",
+          "raw_numeric_text": "6,008",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OperatingIncomeLoss",
+          "value": "5366",
+          "raw_numeric_text": "5,366",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InterestExpenseNonoperating",
+          "value": "220",
+          "raw_numeric_text": "220",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InvestmentIncomeInterest",
+          "value": "115",
+          "raw_numeric_text": "115",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherNonoperatingIncomeExpense",
+          "value": "160",
+          "raw_numeric_text": "160",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "5421",
+          "raw_numeric_text": "5,421",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeTaxExpenseBenefit",
+          "value": "1090",
+          "raw_numeric_text": "1,090",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "ProfitLoss",
+          "value": "4331",
+          "raw_numeric_text": "4,331",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+          "value": "12",
+          "raw_numeric_text": "12",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLoss",
+          "value": "4319",
+          "raw_numeric_text": "4,319",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareBasic",
+          "value": "0.00000182",
+          "raw_numeric_text": "1.82",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareDiluted",
+          "value": "0.00000178",
+          "raw_numeric_text": "1.78",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+          "value": "45",
+          "raw_numeric_text": "45",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+          "value": "2",
+          "raw_numeric_text": "2",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+          "value": "2",
+          "raw_numeric_text": "2",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+          "value": "46",
+          "raw_numeric_text": "46",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "4377",
+          "raw_numeric_text": "4,377",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+          "value": "10",
+          "raw_numeric_text": "10",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+          "value": "4367",
+          "raw_numeric_text": "4,367",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2026,
+        "fiscal_quarter": null,
+        "period_end_date": "2025-12-31",
+        "raw_period_label": "2025-07-01 to 2025-12-31 (26wk)",
+        "period_length_weeks": 26,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Revenues",
+          "value": "44594",
+          "raw_numeric_text": "44,594",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "CostOfGoodsAndServicesSold",
+          "value": "21721",
+          "raw_numeric_text": "21,721",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+          "value": "11651",
+          "raw_numeric_text": "11,651",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OperatingIncomeLoss",
+          "value": "11222",
+          "raw_numeric_text": "11,222",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InterestExpenseNonoperating",
+          "value": "417",
+          "raw_numeric_text": "417",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InvestmentIncomeInterest",
+          "value": "222",
+          "raw_numeric_text": "222",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherNonoperatingIncomeExpense",
+          "value": "427",
+          "raw_numeric_text": "427",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "11455",
+          "raw_numeric_text": "11,455",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeTaxExpenseBenefit",
+          "value": "2343",
+          "raw_numeric_text": "2,343",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "ProfitLoss",
+          "value": "9112",
+          "raw_numeric_text": "9,112",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+          "value": "42",
+          "raw_numeric_text": "42",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLoss",
+          "value": "9070",
+          "raw_numeric_text": "9,070",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareBasic",
+          "value": "0.00000382",
+          "raw_numeric_text": "3.82",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareDiluted",
+          "value": "0.00000373",
+          "raw_numeric_text": "3.73",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+          "value": "25",
+          "raw_numeric_text": "25",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+          "value": "1",
+          "raw_numeric_text": "1",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+          "value": "-1",
+          "raw_numeric_text": "1",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+          "value": "27",
+          "raw_numeric_text": "27",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "9139",
+          "raw_numeric_text": "9,139",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+          "value": "34",
+          "raw_numeric_text": "34",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+          "value": "9105",
+          "raw_numeric_text": "9,105",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 2,
+        "period_end_date": "2024-12-31",
+        "raw_period_label": "2024-10-01 to 2024-12-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Revenues",
+          "value": "21882",
+          "raw_numeric_text": "21,882",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "CostOfGoodsAndServicesSold",
+          "value": "10418",
+          "raw_numeric_text": "10,418",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+          "value": "5723",
+          "raw_numeric_text": "5,723",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OperatingIncomeLoss",
+          "value": "5741",
+          "raw_numeric_text": "5,741",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InterestExpenseNonoperating",
+          "value": "240",
+          "raw_numeric_text": "240",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InvestmentIncomeInterest",
+          "value": "119",
+          "raw_numeric_text": "119",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherNonoperatingIncomeExpense",
+          "value": "224",
+          "raw_numeric_text": "224",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "5845",
+          "raw_numeric_text": "5,845",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeTaxExpenseBenefit",
+          "value": "1187",
+          "raw_numeric_text": "1,187",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "ProfitLoss",
+          "value": "4659",
+          "raw_numeric_text": "4,659",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+          "value": "29",
+          "raw_numeric_text": "29",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLoss",
+          "value": "4630",
+          "raw_numeric_text": "4,630",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareBasic",
+          "value": "0.00000194",
+          "raw_numeric_text": "1.94",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareDiluted",
+          "value": "0.00000188",
+          "raw_numeric_text": "1.88",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+          "value": "-770",
+          "raw_numeric_text": "770",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+          "value": "-24",
+          "raw_numeric_text": "24",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+          "value": "-747",
+          "raw_numeric_text": "747",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "3912",
+          "raw_numeric_text": "3,912",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+          "value": "26",
+          "raw_numeric_text": "26",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+          "value": "3887",
+          "raw_numeric_text": "3,887",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": null,
+        "period_end_date": "2024-12-31",
+        "raw_period_label": "2024-07-01 to 2024-12-31 (26wk)",
+        "period_length_weeks": 26,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Revenues",
+          "value": "43619",
+          "raw_numeric_text": "43,619",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "CostOfGoodsAndServicesSold",
+          "value": "20839",
+          "raw_numeric_text": "20,839",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "SellingGeneralAndAdministrativeExpense",
+          "value": "11242",
+          "raw_numeric_text": "11,242",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OperatingIncomeLoss",
+          "value": "11538",
+          "raw_numeric_text": "11,538",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InterestExpenseNonoperating",
+          "value": "478",
+          "raw_numeric_text": "478",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "InvestmentIncomeInterest",
+          "value": "254",
+          "raw_numeric_text": "254",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherNonoperatingIncomeExpense",
+          "value": "-330",
+          "raw_numeric_text": "330",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeLossIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "10985",
+          "raw_numeric_text": "10,985",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "IncomeTaxExpenseBenefit",
+          "value": "2339",
+          "raw_numeric_text": "2,339",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "ProfitLoss",
+          "value": "8646",
+          "raw_numeric_text": "8,646",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLossAttributableToNoncontrollingInterest",
+          "value": "56",
+          "raw_numeric_text": "56",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "NetIncomeLoss",
+          "value": "8589",
+          "raw_numeric_text": "8,589",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareBasic",
+          "value": "0.00000359",
+          "raw_numeric_text": "3.59",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "EarningsPerShareDiluted",
+          "value": "0.00000349",
+          "raw_numeric_text": "3.49",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+          "value": "256",
+          "raw_numeric_text": "256",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+          "value": "1",
+          "raw_numeric_text": "1",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+          "value": "-3",
+          "raw_numeric_text": "3",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "OtherComprehensiveIncomeLossNetOfTax",
+          "value": "260",
+          "raw_numeric_text": "260",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherComprehensiveIncomeLossNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest",
+          "value": "8906",
+          "raw_numeric_text": "8,906",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest",
+          "value": "54",
+          "raw_numeric_text": "54",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        },
+        {
+          "raw_filing_label": "ComprehensiveIncomeNetOfTax",
+          "value": "8852",
+          "raw_numeric_text": "8,852",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Comprehensive Income"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2026,
+        "fiscal_quarter": null,
+        "period_end_date": "2025-12-31",
+        "raw_period_label": "2025-07-01 to 2025-12-31 (26wk)",
+        "period_length_weeks": 26,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "DepreciationDepletionAndAmortization",
+          "value": "1563",
+          "raw_numeric_text": "1,563",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ShareBasedCompensation",
+          "value": "262",
+          "raw_numeric_text": "262",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "DeferredIncomeTaxExpenseBenefit",
+          "value": "196",
+          "raw_numeric_text": "196",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxExpenseBenefit | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "GainLossOnDispositionOfAssets1",
+          "value": "-1",
+          "raw_numeric_text": "1",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GainLossOnDispositionOfAssets1 | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "IncreaseDecreaseInAccountsReceivable",
+          "value": "92",
+          "raw_numeric_text": "92",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "IncreaseDecreaseInInventories",
+          "value": "255",
+          "raw_numeric_text": "255",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInInventories | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "IncreaseDecreaseInAccountsPayable",
+          "value": "239",
+          "raw_numeric_text": "239",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayable | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "OtherNoncashIncomeExpense",
+          "value": "645",
+          "raw_numeric_text": "645",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNoncashIncomeExpense | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "NetCashProvidedByUsedInOperatingActivities",
+          "value": "10380",
+          "raw_numeric_text": "10,380",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "value": "2367",
+          "raw_numeric_text": "2,367",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromSaleOfProductiveAssets",
+          "value": "16",
+          "raw_numeric_text": "16",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfProductiveAssets | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+          "value": "5",
+          "raw_numeric_text": "5",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsForProceedsFromInvestments",
+          "value": "408",
+          "raw_numeric_text": "408",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromInvestments | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "NetCashProvidedByUsedInInvestingActivities",
+          "value": "-2763",
+          "raw_numeric_text": "2,763",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsOfDividends",
+          "value": "5093",
+          "raw_numeric_text": "5,093",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsOfDividends | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths",
+          "value": "4180",
+          "raw_numeric_text": "4,180",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths",
+          "value": "3270",
+          "raw_numeric_text": "3,270",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess",
+          "value": "-471",
+          "raw_numeric_text": "471",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromIssuanceOfLongTermDebt",
+          "value": "2652",
+          "raw_numeric_text": "2,652",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromIssuanceOfLongTermDebt | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "RepaymentsOfLongTermDebt",
+          "value": "1005",
+          "raw_numeric_text": "1,005",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfLongTermDebt | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsForRepurchaseOfCommonStock",
+          "value": "3528",
+          "raw_numeric_text": "3,528",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromStockOptionsExercisedAndOtherFinancingActivities",
+          "value": "208",
+          "raw_numeric_text": "208",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ProceedsFromStockOptionsExercisedAndOtherFinancingActivities | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "NetCashProvidedByUsedInFinancingActivities",
+          "value": "-6327",
+          "raw_numeric_text": "6,327",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "value": "-21",
+          "raw_numeric_text": "21",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "fx_reconciliation",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+          "value": "1269",
+          "raw_numeric_text": "1,269",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2026,
+        "fiscal_quarter": 2,
+        "period_end_date": "2025-12-31",
+        "raw_period_label": "2025-10-01 to 2025-12-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "DepreciationDepletionAndAmortization",
+          "value": "803",
+          "raw_numeric_text": "803",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": null,
+        "period_end_date": "2024-12-31",
+        "raw_period_label": "2024-07-01 to 2024-12-31 (26wk)",
+        "period_length_weeks": 26,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "DepreciationDepletionAndAmortization",
+          "value": "1434",
+          "raw_numeric_text": "1,434",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ShareBasedCompensation",
+          "value": "241",
+          "raw_numeric_text": "241",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "DeferredIncomeTaxExpenseBenefit",
+          "value": "221",
+          "raw_numeric_text": "221",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxExpenseBenefit | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "GainLossOnDispositionOfAssets1",
+          "value": "-787",
+          "raw_numeric_text": "787",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GainLossOnDispositionOfAssets1 | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "IncreaseDecreaseInAccountsReceivable",
+          "value": "262",
+          "raw_numeric_text": "262",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "IncreaseDecreaseInInventories",
+          "value": "170",
+          "raw_numeric_text": "170",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInInventories | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "IncreaseDecreaseInAccountsPayable",
+          "value": "-286",
+          "raw_numeric_text": "286",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayable | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "OtherNoncashIncomeExpense",
+          "value": "1484",
+          "raw_numeric_text": "1,484",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNoncashIncomeExpense | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "NetCashProvidedByUsedInOperatingActivities",
+          "value": "9127",
+          "raw_numeric_text": "9,127",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "value": "1918",
+          "raw_numeric_text": "1,918",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromSaleOfProductiveAssets",
+          "value": "47",
+          "raw_numeric_text": "47",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfProductiveAssets | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+          "value": "6",
+          "raw_numeric_text": "6",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsForProceedsFromInvestments",
+          "value": "153",
+          "raw_numeric_text": "153",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromInvestments | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "NetCashProvidedByUsedInInvestingActivities",
+          "value": "-2029",
+          "raw_numeric_text": "2,029",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsOfDividends",
+          "value": "4886",
+          "raw_numeric_text": "4,886",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsOfDividends | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths",
+          "value": "5905",
+          "raw_numeric_text": "5,905",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths",
+          "value": "571",
+          "raw_numeric_text": "571",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess",
+          "value": "-2705",
+          "raw_numeric_text": "2,705",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromIssuanceOfLongTermDebt",
+          "value": "995",
+          "raw_numeric_text": "995",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromIssuanceOfLongTermDebt | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "RepaymentsOfLongTermDebt",
+          "value": "1478",
+          "raw_numeric_text": "1,478",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfLongTermDebt | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "PaymentsForRepurchaseOfCommonStock",
+          "value": "4449",
+          "raw_numeric_text": "4,449",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "ProceedsFromStockOptionsExercisedAndOtherFinancingActivities",
+          "value": "985",
+          "raw_numeric_text": "985",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ProceedsFromStockOptionsExercisedAndOtherFinancingActivities | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "NetCashProvidedByUsedInFinancingActivities",
+          "value": "-6205",
+          "raw_numeric_text": "6,205",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "value": "-144",
+          "raw_numeric_text": "144",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "fx_reconciliation",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
+          "raw_filing_label": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+          "value": "748",
+          "raw_numeric_text": "748",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 2,
+        "period_end_date": "2024-12-31",
+        "raw_period_label": "2024-10-01 to 2024-12-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "DepreciationDepletionAndAmortization",
+          "value": "706",
+          "raw_numeric_text": "706",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_metadata": {
+    "extractor": "financials-extract-ixbrl/1.0",
+    "accession": "0000080424-26-000011",
+    "report_date": "2025-12-31",
+    "quarter_label": "2026-Q2",
+    "fact_counts": {
+      "total_in_file": 854,
+      "consolidated_used": 255,
+      "concepts_mapped": 94
+    }
+  }
+}

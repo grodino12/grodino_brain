@@ -348,7 +348,7 @@
 <header>
   <h1>Financials Pipeline — Architecture Map</h1>
   <div class="sub">Top-down: fetch → extract → reconcile → validate → viz/write/calc. Two extract paths feed the same RawFiling contract: iXBRL HTML (SEC native) and PDF (IR press releases + legacy). Drag to pan, scroll to zoom, click a node for details.</div>
-  <div class="sub" style="margin-top: 4px;"><span style="color: #16a34a; font-weight: 600;">✓</span> <span style="color: var(--text);">5 of 8 skills built:</span> <code style="font-family: var(--mono); color: var(--c-skill);">sec-edgar-fetch</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract-ixbrl</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-reconcile</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-validate</code> <span style="color: var(--text-dim);">— iXBRL path (PG Q2 FY26 10-Q): 854 tagged facts → 199 line items / 10 statements via the SEC presentation linkbase; PDF path (CELH 2024 10-K): 260 extracted → 260 mapped → <strong style="color: #16a34a">26 of 26 validation rules PASS</strong>.</span></div>
+  <div class="sub" style="margin-top: 4px;"><span style="color: #16a34a; font-weight: 600;">✓</span> <span style="color: var(--text);">7 of 8 skills built:</span> <code style="font-family: var(--mono); color: var(--c-skill);">sec-edgar-fetch</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract-ixbrl</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-extract</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-reconcile</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-validate</code>, <code style="font-family: var(--mono); color: var(--c-skill);">financials-playground</code>, <code style="font-family: var(--mono); color: var(--c-skill);">model-write</code> <span style="color: var(--text-dim);">— iXBRL path (PG Q2 FY26 10-Q): 854 tagged facts → 199 line items / 10 statements via the SEC presentation linkbase. PDF path (CELH 2024 10-K): 260 extracted → 260 mapped → <strong style="color: #16a34a">26 of 26 validation rules PASS</strong>. Reconcile + model-write now filing-type aware: 10-Q → QTR P&L / QTR BS / QTR CF sheet family (3-month data only, YTD dropped).</span></div>
   <div class="toggles">
     <div class="toggle-group">
       <div class="toggle-label">Schema Hosting</div>
@@ -480,15 +480,17 @@ let NODES = [
 
   // Layer 2
   { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 505, w: 240, h: 56, label: 'financials-reconcile',
-    purpose: 'Map raw filing labels to canonical model rows via the decisions ledger. Entry precedence: (label, sheet, subsection, section). Emits NovelReport for blocked items.',
+    purpose: 'Map raw filing labels to canonical model rows via the decisions ledger. Filing-type aware: 10-K → ANNL sheet family, 10-Q → QTR sheet family (separate ledger entries per variant). Entry precedence: (label, sheet_group, sheet_variant, subsection, section). Emits NovelReport for blocked items.',
     input: 'RawFiling + ledger', output: 'MappedFiling',
     ops: [
       'Normalize labels: strip footnote markers ([2], (1)), par-value clutter, punctuation',
-      'Lookup index keyed (label, sheet) → list of candidate entries',
+      'Lookup index keyed (label, sheet_group, sheet_variant=ANNL|QTR)',
+      'For 10-Qs: filter statements to 3-month duration IS/CF (period_length_weeks ∈ [11,15]) + BS instants; YTD 6mo/9mo dropped',
+      'target_variant derived from FilingType: TEN_Q → QTR, everything else → ANNL',
       'select_entry scores by filing_subsection (+2) and filing_section (+1) match',
       'rapidfuzz fuzzy at ≥85 when no exact; novel below',
       '--novels-out emits a NovelReport JSON for the playground NOVELS tab',
-      'Append new decisions to ledger (append-only, dated)'
+      'Append new decisions to ledger (append-only, dated). New tickers onboarding 10-Q need both ANNL + QTR ledger entries.'
     ],
     deps: ['pydantic', 'rapidfuzz']
   },
@@ -532,17 +534,19 @@ let NODES = [
     ],
     deps: ['python stdlib only']
   },
-  { id: 'model-write', layer: 'output', kind: 'skill', x: 440, y: 880, w: 180, h: 56, label: 'model-write',
-    purpose: 'Write ValidatedFiling into the .xlsm model. Preserves macros, honors cross-sheet formulas via Path 3 manual inserts.',
-    input: 'ValidatedFiling + xlsm path', output: '.xlsm_updated',
+  { id: 'model-write', layer: 'output', kind: 'skill', built: true, x: 440, y: 880, w: 180, h: 56, label: 'model-write',
+    purpose: 'Build a fresh .xlsx from one or more ValidatedFiling JSONs. Filing-type aware: 10-K inputs → ANNL P&L / BALANCE SHEET / CASH FLOW sheets (FY columns + forecast FY2025E..FY2030E); 10-Q inputs → QTR P&L / QTR BS / QTR CF sheets (Q{N} FY{YYYY} columns, no forecast — deferred to model-calc). Mixed input set emits both sheet families. Sheets with zero rows are skipped.',
+    input: 'ValidatedFiling[] + ledger', output: '.xlsx',
     ops: [
-      'Backup original to .bak before any write',
-      'openpyxl load with keep_vba=True; never cell.fill = None',
-      'Emit ManualInsertPlan for new rows (user inserts first)',
-      'Write values only, not formulas',
-      'Verify-after-save: reload + spot-check + grep #REF!'
+      'Dispatch each statement to its target sheet via stmt_to_sheet(stmt_type, filing_type)',
+      'QTR column labels = Q{fiscal_quarter} FY{fiscal_year} (disambiguates quarters within fiscal year)',
+      'ANNL column labels = FY{fiscal_year}; forecast columns FY2025E..FY2030E pre-allocated empty',
+      'Row layout from decisions ledger — separate entries for ANNL and QTR variants (reconcile already routed)',
+      'Period dedup: newer filing wins when the same period appears in multiple inputs',
+      'Emit only sheets with ≥1 row or historical column (empty QTR sheets suppressed when no 10-Q input, vice versa for ANNL)',
+      '_subtotal items skipped (no live SUM formulas in v1 — model-calc adds driver tabs later)'
     ],
-    deps: ['openpyxl', 'shutil', 'pydantic']
+    deps: ['openpyxl', 'pydantic']
   },
   { id: 'model-calc', layer: 'output', kind: 'skill', x: 680, y: 880, w: 180, h: 56, label: 'model-calc',
     purpose: 'Derived calcs + scenario overlay. Plugs GLP-1 consumption headwind + SNAP ban volume drag into revenue forecast.',
@@ -701,7 +705,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v4';
+const LS_KEY = 'financials-architecture-playground-v5';
 
 function saveState() {
   try {

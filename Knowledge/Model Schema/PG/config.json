@@ -1,0 +1,20 @@
+{
+  "_notes": "PG ticker metadata. Populated 2026-04-24 when quarterly pipeline support landed. Consumed by every skill for ticker guards + fiscal-year-end + plausibility ranges.",
+  "_last_updated": "2026-04-24",
+
+  "ticker": "PG",
+  "company_name": "Procter & Gamble",
+  "cik": "0000080424",
+  "exchange": "NYSE",
+  "sector": "Consumer Staples",
+  "industry": "Household & Personal Products",
+  "fiscal_year_end": "06-30",
+  "currency": "USD",
+
+  "_plausibility_note": "Ranges in $millions (PG reports all USD facts at scale=6). Used by unit_detection fallback when no explicit header phrase is found.",
+  "expected_revenue_range_millions": [70000, 90000],
+  "expected_total_assets_range_millions": [120000, 150000],
+
+  "_stock_splits_note": "No recent PG splits. The 1997 2-for-1 is pre-iXBRL; any pre-1997 filings use pre-split share counts.",
+  "stock_splits": []
+}
