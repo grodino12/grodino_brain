@@ -4175,9 +4175,9 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Short-Term Debt / Current Portion of LT Debt",
+      "model_label": "Current Portion of Long-Term Debt",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-032"
+      "ledger_rule_id": "GEN-BS-033"
     },
     {
       "raw_filing_label": "LiabilitiesCurrent",
@@ -4223,7 +4223,7 @@
       "model_row": 0,
       "model_label": "Long-Term Debt",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-033"
+      "ledger_rule_id": "GEN-BS-041"
     },
     {
       "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",
@@ -4911,9 +4911,9 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Short-Term Debt / Current Portion of LT Debt",
+      "model_label": "Current Portion of Long-Term Debt",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-032"
+      "ledger_rule_id": "GEN-BS-033"
     },
     {
       "raw_filing_label": "LiabilitiesCurrent",
@@ -4959,7 +4959,7 @@
       "model_row": 0,
       "model_label": "Long-Term Debt",
       "mapping_source": "ledger_auto",
-      "ledger_rule_id": "GEN-BS-033"
+      "ledger_rule_id": "GEN-BS-041"
     },
     {
       "raw_filing_label": "DeferredIncomeTaxLiabilitiesNet",

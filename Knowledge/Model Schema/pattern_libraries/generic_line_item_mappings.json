@@ -708,13 +708,14 @@
       "model_sheet": "BALANCE SHEET",
       "model_label": "Current Portion of Long-Term Debt",
       "filing_section": "current_liabilities",
-      "note": "The <1yr slice of originally-long-term debt instruments. Distinct from GEN-BS-032 Short-Term Debt. us-gaap:LongTermDebtCurrent.",
+      "note": "The <1yr slice of originally-long-term debt instruments. Distinct from GEN-BS-032 Short-Term Debt. us-gaap:LongTermDebtCurrent. Aggregate 'DebtCurrent' (filers who don't split short-term vs current-portion on the BS face, e.g. PG) also routed here by convention.",
       "aliases": [
         "long-term debt current",
         "long-term debt current portion",
         "current portion of long-term debt",
         "current maturities of long-term debt",
-        "current portion of long term debt"
+        "current portion of long term debt",
+        "debt current"
       ]
     },
     {
