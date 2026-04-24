@@ -810,6 +810,20 @@
       ]
     },
     {
+      "rule_id": "GEN-BS-041",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Reserve for ESOP Debt Retirement",
+      "filing_section": "equity",
+      "sign_convention": "expense_positive",
+      "note": "Contra-equity reserve offsetting the guarantee of ESOP-related debt. Conventionally presented as a negative number reducing TSE. Uncommon outside large multinationals with legacy ESOPs (PG, JNJ, KO).",
+      "aliases": [
+        "reserve for esop debt retirement",
+        "reserve for esop related debt retirement",
+        "esop related debt",
+        "reserve for esop debt"
+      ]
+    },
+    {
       "rule_id": "GEN-IS-022",
       "model_sheet": "ANNL P&L",
       "model_label": "Net Income (Loss) Including NCI",
