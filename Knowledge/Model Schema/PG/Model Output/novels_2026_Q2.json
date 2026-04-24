@@ -5,5 +5,744 @@
     "filing_date": "2026-01-23",
     "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm"
   },
-  "novels": []
+  "novels": [
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "(Gain)/loss on sale of assets",
+      "value": "-1",
+      "raw_numeric_text": "1",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:GainLossOnDispositionOfAssets1 | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "gain loss on disposal of property and equipment",
+          0.6216216216216216
+        ],
+        [
+          "impairment of intangible assets",
+          0.5862068965517242
+        ],
+        [
+          "gain loss on disposal of property plant and equipment",
+          0.575
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Proceeds from asset sales",
+      "value": "16",
+      "raw_numeric_text": "16",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromSaleOfProductiveAssets | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from notes receivable",
+          0.6909090909090909
+        ],
+        [
+          "proceeds from issuance of preferred shares",
+          0.6567164179104478
+        ],
+        [
+          "proceeds from stock option exercises",
+          0.6557377049180328
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Acquisitions, net of cash acquired",
+      "value": "5",
+      "raw_numeric_text": "5",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "additions to property plant and equipment",
+          0.5135135135135135
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Other investing activity",
+      "value": "408",
+      "raw_numeric_text": "408",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsForProceedsFromInvestments | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "other operating activities",
+          0.76
+        ],
+        [
+          "net cash used in investing activities",
+          0.6885245901639344
+        ],
+        [
+          "cash flows from investing activities",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Dividends to shareholders",
+      "value": "5093",
+      "raw_numeric_text": "5,093",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsOfDividends | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "dividends paid to stockholders",
+          0.7636363636363638
+        ],
+        [
+          "dividends paid",
+          0.6153846153846154
+        ],
+        [
+          "dividends paid on preferred shares",
+          0.6101694915254237
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Additions to short-term debt with original maturities of more than three months",
+      "value": "4180",
+      "raw_numeric_text": "4,180",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Reductions in short-term debt with original maturities of more than three months",
+      "value": "3270",
+      "raw_numeric_text": "3,270",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Net additions/(reductions) to other short-term debt",
+      "value": "-471",
+      "raw_numeric_text": "471",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Additions to long-term debt",
+      "value": "2652",
+      "raw_numeric_text": "2,652",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromIssuanceOfLongTermDebt | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "other long-term assets",
+          0.6122448979591837
+        ],
+        [
+          "additions to property plant and equipment",
+          0.5882352941176471
+        ],
+        [
+          "other long-term assets change",
+          0.5357142857142857
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Reductions in long-term debt",
+      "value": "1005",
+      "raw_numeric_text": "1,005",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:RepaymentsOfLongTermDebt | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "other long-term assets",
+          0.56
+        ],
+        [
+          "collections on note receivable",
+          0.5517241379310345
+        ],
+        [
+          "provision for bad debt",
+          0.52
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "Impact of stock options and other",
+      "value": "208",
+      "raw_numeric_text": "208",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "pg:ProceedsFromStockOptionsExercisedAndOtherFinancingActivities | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from stock option exercises",
+          0.5797101449275363
+        ],
+        [
+          "proceeds from exercise of stock options",
+          0.5277777777777778
+        ],
+        [
+          "stock option exercise proceeds",
+          0.5079365079365079
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "EFFECT OF EXCHANGE RATE CHANGES ON CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+      "value": "-21",
+      "raw_numeric_text": "21",
+      "section": "fx_reconciliation",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "effect of exchange rate changes on cash and cash equivalents",
+          0.8235294117647058
+        ],
+        [
+          "effect on exchange rate changes on cash and cash equivalents",
+          0.8088235294117648
+        ],
+        [
+          "net increase decrease in cash cash equivalents and restricted cash",
+          0.7746478873239436
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2026",
+      "period_end_date": "2025-12-31",
+      "fiscal_year": 2026,
+      "target_variant": "QTR",
+      "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+      "value": "1269",
+      "raw_numeric_text": "1,269",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2025-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "net increase decrease in cash cash equivalents and restricted cash",
+          0.8205128205128205
+        ],
+        [
+          "cash cash equivalents and restricted cash end of period",
+          0.7735849056603774
+        ],
+        [
+          "cash cash equivalents and restricted cash beginning of period",
+          0.7321428571428572
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "(Gain)/loss on sale of assets",
+      "value": "-787",
+      "raw_numeric_text": "787",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:GainLossOnDispositionOfAssets1 | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "gain loss on disposal of property and equipment",
+          0.6216216216216216
+        ],
+        [
+          "impairment of intangible assets",
+          0.5862068965517242
+        ],
+        [
+          "gain loss on disposal of property plant and equipment",
+          0.575
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Proceeds from asset sales",
+      "value": "47",
+      "raw_numeric_text": "47",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromSaleOfProductiveAssets | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from notes receivable",
+          0.6909090909090909
+        ],
+        [
+          "proceeds from issuance of preferred shares",
+          0.6567164179104478
+        ],
+        [
+          "proceeds from stock option exercises",
+          0.6557377049180328
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Acquisitions, net of cash acquired",
+      "value": "6",
+      "raw_numeric_text": "6",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "additions to property plant and equipment",
+          0.5135135135135135
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Other investing activity",
+      "value": "153",
+      "raw_numeric_text": "153",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsForProceedsFromInvestments | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "other operating activities",
+          0.76
+        ],
+        [
+          "net cash used in investing activities",
+          0.6885245901639344
+        ],
+        [
+          "cash flows from investing activities",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Dividends to shareholders",
+      "value": "4886",
+      "raw_numeric_text": "4,886",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsOfDividends | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "dividends paid to stockholders",
+          0.7636363636363638
+        ],
+        [
+          "dividends paid",
+          0.6153846153846154
+        ],
+        [
+          "dividends paid on preferred shares",
+          0.6101694915254237
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Additions to short-term debt with original maturities of more than three months",
+      "value": "5905",
+      "raw_numeric_text": "5,905",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Reductions in short-term debt with original maturities of more than three months",
+      "value": "571",
+      "raw_numeric_text": "571",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Net additions/(reductions) to other short-term debt",
+      "value": "-2705",
+      "raw_numeric_text": "2,705",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Additions to long-term debt",
+      "value": "995",
+      "raw_numeric_text": "995",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromIssuanceOfLongTermDebt | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "other long-term assets",
+          0.6122448979591837
+        ],
+        [
+          "additions to property plant and equipment",
+          0.5882352941176471
+        ],
+        [
+          "other long-term assets change",
+          0.5357142857142857
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Reductions in long-term debt",
+      "value": "1478",
+      "raw_numeric_text": "1,478",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:RepaymentsOfLongTermDebt | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "other long-term assets",
+          0.56
+        ],
+        [
+          "collections on note receivable",
+          0.5517241379310345
+        ],
+        [
+          "provision for bad debt",
+          0.52
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "Impact of stock options and other",
+      "value": "985",
+      "raw_numeric_text": "985",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "pg:ProceedsFromStockOptionsExercisedAndOtherFinancingActivities | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from stock option exercises",
+          0.5797101449275363
+        ],
+        [
+          "proceeds from exercise of stock options",
+          0.5277777777777778
+        ],
+        [
+          "stock option exercise proceeds",
+          0.5079365079365079
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "EFFECT OF EXCHANGE RATE CHANGES ON CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+      "value": "-144",
+      "raw_numeric_text": "144",
+      "section": "fx_reconciliation",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "effect of exchange rate changes on cash and cash equivalents",
+          0.8235294117647058
+        ],
+        [
+          "effect on exchange rate changes on cash and cash equivalents",
+          0.8088235294117648
+        ],
+        [
+          "net increase decrease in cash cash equivalents and restricted cash",
+          0.7746478873239436
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2025,
+      "target_variant": "QTR",
+      "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+      "value": "748",
+      "raw_numeric_text": "748",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2024-12-31",
+        "note": "iXBRL | Consolidated Statements of Cash Flows"
+      },
+      "nearest_matches": [
+        [
+          "net increase decrease in cash cash equivalents and restricted cash",
+          0.8205128205128205
+        ],
+        [
+          "cash cash equivalents and restricted cash end of period",
+          0.7735849056603774
+        ],
+        [
+          "cash cash equivalents and restricted cash beginning of period",
+          0.7321428571428572
+        ]
+      ]
+    }
+  ]
 }
