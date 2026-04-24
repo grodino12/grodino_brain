@@ -1,6 +1,6 @@
 ---
 type: roadmap
-date: 2026-04-23
+date: 2026-04-24
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + GLP-1 + SNAP + cross-model integration
 last_session: "April 23rd Generic Migration Phases 3-7 Session"
@@ -16,13 +16,13 @@ Living document. Update after each session. Three workstreams feed one final que
 
 | Workstream | State | Next action |
 |---|---|---|
-| **CELH financial pipeline** (6 skills) | **5 of 6 built**, 2 filings end-to-end through the xlsx | Build `model-calc` (driver tabs + forecast) |
+| **CELH financial pipeline** (6 skills) | **6 of 6 built**, full pipeline runs end-to-end | Fix forecast BS balance gap in model-calc |
 | **Generic cross-ticker library** | **Phases 1–7 shipped** — migration complete | Maintain; audit aliases as new tickers land |
 | **GLP-1 projection model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (later) |
 | **SNAP / demographics model** | Built standalone, live in xlsx | Integrate into CELH revenue forecast (later) |
-| **Cross-model integration** | Not started | Blocked until `model-calc` exposes forecast rows |
+| **Cross-model integration** | Not started | Blocked until forecast balance gap is fixed |
 
-**Critical path to a defensible case study:** ~~`model-write` → verify historicals~~ ✓ → ~~finish generic-library migration (Phases 3–7)~~ ✓ → `model-calc` (growth/margins/WC ratios + forecast columns) → cross-model integration of GLP-1 + SNAP into the revenue forecast.
+**Critical path to a defensible case study:** ~~`model-write` → verify historicals~~ ✓ → ~~finish generic-library migration (Phases 3–7)~~ ✓ → ~~`model-calc` (drivers + forecast)~~ ✓ → fix forecast BS balance gap → cross-model integration of GLP-1 + SNAP into the revenue forecast.
 
 ---
 
@@ -42,7 +42,7 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 
 ### CELH pipeline (6-skill architecture)
 
-- **Shipped 5 of 6 skills** — all ticker-agnostic, CELH specifics live as JSON under `Brain\Knowledge\Model Schema\CELH\`.
+- **Shipped 6 of 6 skills** — all ticker-agnostic, CELH specifics live as JSON under `Brain\Knowledge\Model Schema\CELH\`.
   - `financials-extract` — PDF → `RawFiling`; unit detection, 3-pass period detection, subtotal-driven BS section flips, IS section classifier, EPS/shares disambiguation via `subsection_context`.
   - `financials-reconcile` — `RawFiling` + ledger → `MappedFiling`; sheet-aware lookup, `filing_section`/`filing_subsection` discriminators, fuzzy auto-apply ≥ 85, novels surface as `NovelItem` with top-3 candidates. **Section-collision guard refuses ambiguous mappings** (blocks collisions like Operating lease current/NC sharing one rule_id).
   - `financials-validate` — `MappedFiling` → `ValidatedFiling`; 48 rule instances across BS-1..6, CF-1..5, **IS-1..4 (new April 23 2026)**, X-1/2/4, and M-1 (mapping-consistency: all items on one rule_id must agree on section).
@@ -55,6 +55,12 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 - **Meta-playgrounds refreshed:** `playground_architecture.html` is now **interactive** (drag nodes / add + remove arrows / localStorage autosave / export JSON / reset). `playground_schema.html` (Pydantic classes).
 - **Design docs** (01–04) at `Brain\Knowledge\Model Schema\`.
 - **Generic-library migration complete (2026-04-23):** CELH ledger cut from 150 → 10 entries; generic library is the source of truth. 3 architectural wins: (1) reconcile's `select_entry` only enforces `filing_section` on ambiguous aliases, unblocking single-candidate label matches; (2) model-write row layout derives from the latest filing's document order; (3) validate uses canonical-label lookups, no more hardcoded model_row. Tax sign flip (expense-positive convention) shipped. **48/48 PASS on both filings.**
+- **`model-calc` shipped (discovered 2026-04-24 — `scripts/calc.py` contains the full build; no session handoff captured it):**
+  - **ASSUMPTIONS tab** with `Days in Year = 365` and `Share Repurchases $ = 0`; every formula references these cells, no magic numbers.
+  - **IS / BS / CF DRIVERS tabs** with historical formulas (kinds: `growth`, `ratio`, `lagged_ratio`, `days_ratio`, `dollar`, `dollar_sum`, `net_debt`) and projection-period rules (`hold_last`, `input`, `assumption_ref`, `derived`). 7 IS + 14 BS + 7 CF drivers. Yellow tint on user-input cells (Revenue Growth %), grey on formula-forecast cells.
+  - **Full three-statement forecast formulas** on ANNL P&L / BALANCE SHEET / CASH FLOW — 27 distinct kinds including `revenue_growth`, `ratio_of_rev/cogs`, `days_driven_rev/cogs`, `tax`, `cash_rollforward`, `pp_e_rollforward`, `apic_rollforward`, `re_rollforward`, `amortize`, `cf_wc_asset`/`liability`/`combined`, `capex`, `d_a`, `dividends_preferred/common`, `cf_net_change`, `cash_beg`, `cash_end`, `ni_attrib_common`.
+  - Cross-sheet column lookups done by period label per target sheet (not index) — correctly handles BS having fewer historical columns than P&L/CF.
+- **End-to-end pipeline verification (2026-04-24):** reconcile → validate → model-write → model-calc all ran clean on FY2023 10-K + FY2024 10-K. Reconcile 0 novels on both. Validate 48/48 PASS / 0 WARN / 0 FAIL on both. model-write 327 cells. model-calc 2 assumptions + 258 driver cells + 492 forecast cells. Workbook computes without circular refs or broken references (verified via `formulas` package).
 - **Memory feedback saved this session:**
   - `feedback_ledger_ordering.md` — align ledger ordering to the latest filing when filings differ.
   - `feedback_sign_agnostic_labels.md` — canonical labels use parentheticals for the alternative sign.
@@ -76,28 +82,30 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
 
 ## Active — current objective
 
-### `model-calc` (Layer 4, part 3) — UNBLOCKED
+### Fix forecast BS balance gap in `model-calc`
 
-Migration Phases 3–7 all shipped this session (see `April 23rd Generic Migration Phases 3-7 Session.md` handoff). `model-calc` is the next thing.
+Pipeline verification on 2026-04-24 revealed: forecast BS doesn't balance. Gap is $0 at FY2024 (historical, validators confirm), then grows ~$13,710/yr in forecast (FY2025E = +$13,710, FY2030E = +$82,260). Two sources isolated by row-level delta analysis:
 
-Per earlier user direction:
-- **Growth:** YoY per line item; project forward.
-- **Margins:** GP / OP / NI as % of revenue to project cost lines.
-- **Working-capital ratios:** DSO / DIO / DPO.
-- **Three driver tabs:** IS DRIVERS, BS DRIVERS, CF DRIVERS.
-- **Base scenario only** — GLP-1 and SNAP overlays explicitly deferred.
+1. **Amortization of Deferred Other Costs** (~$14,124/yr). The IS amort expense is embedded inside `COGS % of Revenue` / `SG&A % of Revenue` driver ratios (because there's no explicit Amort row on the P&L — it flows through COGS/SG&A). In the forecast, COGS/SG&A are ratio-driven off Revenue, so NI implicitly contains `-Amort`. On the CF tab, `Amortization of Deferred Other Costs` is `flat` (hold-last) and flows into CFO as an addback — so Cash grows by +Amort each year via `cash_rollforward`. On the BS, `Deferred Other Costs - Non-Current` shrinks by Amort via the `amortize` rule. Asset side nets to zero (Cash +Amort, DefCosts -Amort), but equity side goes -Amort (via RE via NI). So TA − TLSE = +Amort each year. Fix options:
+   - **Option A:** Set CF!Amort to 0 in the forecast (don't add it back) — but then historicals don't match.
+   - **Option B:** Stop amortizing the BS DefCosts asset in the forecast (flat instead of decreasing) — but that's economically wrong.
+   - **Option C (preferred):** Explicitly back out Amort from the COGS/SG&A forecast — subtract `CF!Amort` from the `ratio_of_rev` result for the cost rows. Or add an explicit `Amortization of Deferred Other Costs` line to the IS forecast spec and remove it from COGS/SG&A.
+   - **Option D:** Drive DefCosts NC as `flat` rather than `amortize` until a full amortization schedule is built.
 
-Design note: since BS/CF + IS subtotals are already live formulas, `model-calc` only has to populate line items — subtotals recompute automatically.
+2. **FX Effect on Cash** (~$414/yr). Flat hold-last on CF adds to Cash via `cf_net_change`, with no matching AOCI offset on the equity side (AOCI is flat). Fix: drive AOCI as `prior + CF!FX Effect on Cash` in the forecast, or force FX Effect on Cash to 0 in the forecast.
+
+Both fixes are small — probably <30 lines of calc.py changes each. Bundle them + regression-test BS balance cross forecast years.
 
 ---
 
 ## Near horizon — next milestones
 
-1. **Build `model-calc`.** Unblocked. See Active above.
+1. **Fix forecast BS balance gap.** See Active above. Once fixed, BS should balance across all forecast years.
 2. **Pull FY2025 10-K from EDGAR.** Accession `0001341766-26-000024`, HTML-only at `https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm`. Needs one of: `weasyprint` HTML→PDF, `playwright`-driven headless print, or an HTML-aware branch in `financials-extract`. After conversion, run full pipeline; expect a handful of novels from FY2025 10-K wording drift.
-3. **Cross-model integration — first cut.** Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2028E (extend through FY2030E per original plan). Requires `model-calc` live first so the forecast rows are driven by formulas.
-4. ~~CF orphan-row slotting~~ — shipped. Older-only items are now slotted next to the item that preceded them in the filing where they last appeared, via a per-filing advancing anchor in `resolve_row_positions`.
-5. ~~Extractor section-tagging fix~~ — not needed. The "mis-tagging" was a stale `raw_2024_10K.json` left over from an older extract.py. Re-extracted fresh; sections are correct. Reconcile + model-write workarounds retained as defensive.
+3. **Cross-model integration — first cut.** Wire GLP-1 % and SNAP-ban volume at-risk into CELH revenue rows FY2026E–FY2028E (extend through FY2030E per original plan). Blocked until balance gap is fixed.
+4. ~~Build `model-calc`~~ — shipped. Historical driver formulas + full three-statement forecast formulas live; verified via `formulas` package.
+5. ~~CF orphan-row slotting~~ — shipped. Older-only items are now slotted next to the item that preceded them in the filing where they last appeared, via a per-filing advancing anchor in `resolve_row_positions`.
+6. ~~Extractor section-tagging fix~~ — not needed. The "mis-tagging" was a stale `raw_2024_10K.json` left over from an older extract.py. Re-extracted fresh; sections are correct. Reconcile + model-write workarounds retained as defensive.
 
 ---
 
@@ -155,3 +163,4 @@ Design note: since BS/CF + IS subtotals are already live formulas, `model-calc` 
 | Old xlsm (reference only, untouched) | `Pl3 Celsius Case Study\data\derived\CELH Financial Model.xlsm` |
 | Source PDFs | `Pl3 Celsius Case Study\data\CELH Reporting\Financial Statements\` |
 | model-write skill | `~\.claude\skills\model-write\` |
+| model-calc skill | `~\.claude\skills\model-calc\` |
