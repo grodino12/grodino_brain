@@ -229,40 +229,6 @@
       ]
     },
     {
-      "rule_id": "GEN-IS-015",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Total Comprehensive Income (Loss)",
-      "memo": true,
-      "note": "Recognized but not displayed on xlsx. Comprehensive income = NI + OCI; lives in a parallel section of the filing we don't model directly.",
-      "aliases": [
-        "comprehensive income (loss)",
-        "comprehensive income",
-        "comprehensive loss",
-        "total comprehensive income (loss)",
-        "total comprehensive income",
-        "comprehensive income net of tax"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-020",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Foreign Currency Translation (OCI)",
-      "memo": true,
-      "note": "OCI component \u2014 recognized but not displayed on xlsx. Below-NI, not part of operating results.",
-      "aliases": [
-        "foreign currency translation gain (loss), net of income",
-        "foreign currency translation gain loss net of income",
-        "foreign currency translation adjustment",
-        "foreign currency translation adjustments",
-        "foreign currency translation gain (loss)",
-        "foreign currency translation",
-        "translation adjustment",
-        "other comprehensive income loss foreign currency transaction and translation adjustment net of tax"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
       "rule_id": "GEN-IS-016",
       "model_sheet": "ANNL P&L",
       "model_label": "Basic Earnings (Loss) per Share",
@@ -857,66 +823,6 @@
         "less: net income attributable to noncontrolling interests",
         "net earnings attributable to noncontrolling interests"
       ]
-    },
-    {
-      "rule_id": "GEN-IS-024",
-      "model_sheet": "ANNL P&L",
-      "model_label": "OCI - Total Net of Tax",
-      "note": "Consolidated OCI value rendered on IS below Net Income. Full OCI statement (AFS / Translation / Pension components broken out on their own worksheet) deferred \u2014 when shipped, this line will become a cross-sheet pull from OCI!TotalOCI. Detail components (GEN-IS-020, GEN-IS-025, GEN-IS-026) remain memo until then.",
-      "aliases": [
-        "other comprehensive income loss net of tax",
-        "other comprehensive income (loss), net of tax",
-        "total other comprehensive income loss net of tax"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-025",
-      "model_sheet": "ANNL P&L",
-      "model_label": "OCI - AFS Securities",
-      "memo": true,
-      "note": "Available-for-sale securities adjustment, OCI component.",
-      "aliases": [
-        "other comprehensive income loss available for sale securities adjustment net of tax",
-        "unrealized gains (losses) on available-for-sale securities",
-        "afs securities adjustment"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-026",
-      "model_sheet": "ANNL P&L",
-      "model_label": "OCI - Pension & Postretirement",
-      "memo": true,
-      "note": "Pension and other postretirement benefit plans adjustment, OCI component.",
-      "aliases": [
-        "other comprehensive income loss pension and other postretirement benefit plans adjustment net of tax",
-        "pension and other postretirement benefit plans adjustment",
-        "pension adjustment"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-027",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Comprehensive Income Attributable to NCI",
-      "memo": true,
-      "aliases": [
-        "comprehensive income net of tax attributable to noncontrolling interest",
-        "comprehensive income attributable to noncontrolling interest"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-028",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Comprehensive Income Including NCI",
-      "memo": true,
-      "aliases": [
-        "comprehensive income net of tax including portion attributable to noncontrolling interest",
-        "total comprehensive income including noncontrolling interest"
-      ],
-      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-CF-001",
