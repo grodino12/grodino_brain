@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order \u2014 this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-04-25",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
     "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
@@ -1562,6 +1562,38 @@
         "stock option exercise proceeds and other"
       ],
       "filing_section": "financing"
+    },
+    {
+      "rule_id": "GEN-CF-050",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Gain (Loss) on Extinguishment of Debt",
+      "filing_section": "operating",
+      "note": "Non-cash add-back when debt is retired early at a premium/discount. Sign read from filer's parens (extract honors visual sign on CF — no library sign_convention).",
+      "aliases": [
+        "gain loss on extinguishment of debt",
+        "gains losses on extinguishment of debt",
+        "loss on extinguishment of debt",
+        "loss on early extinguishment of debt",
+        "gain on extinguishment of debt",
+        "loss on debt extinguishment",
+        "debt extinguishment loss"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-051",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Net Change in Other Working Capital",
+      "filing_section": "operating",
+      "note": "Working-capital catch-all for filers that bucket non-AR/AP/Inventory/Prepaid working-capital deltas into a single line. Distinct from GEN-CF-010 'Other Operating Items' which captures non-cash accruals.",
+      "aliases": [
+        "increase decrease in other operating capital net",
+        "increase decrease in other operating capital",
+        "change in other working capital",
+        "changes in other operating assets and liabilities",
+        "other operating assets and liabilities, net",
+        "other working capital changes",
+        "net change in other operating assets and liabilities"
+      ]
     }
   ]
 }
