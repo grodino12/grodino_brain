@@ -7599,7 +7599,7 @@
       "message": "Net Income (11830) = Pre-Tax (14891) + Tax (-3061 across 1 rows)"
     },
     {
-      "rule_id": "IS-4 @ Q3 FY2024",
+      "rule_id": "IS-4 @ Q3 FY2023",
       "expected": "11346",
       "actual": "11346",
       "gap": "0",
@@ -7607,23 +7607,39 @@
       "message": "Net Income (11346) = Pre-Tax (14120) + Tax (-2774 across 1 rows)"
     },
     {
-      "rule_id": "IS-4 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income or Pre-Tax anchor missing"
-    },
-    {
-      "rule_id": "IS-4 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income or Pre-Tax anchor missing"
-    },
-    {
       "rule_id": "CF-1 @ Q3 FY2024",
+      "expected": "-1418",
+      "actual": "-1418",
+      "gap": "0",
+      "severity": "pass",
+      "message": "CFO (14092) + CFI (-2986) + CFF (-12356) + CashOther (-168) = NetChange"
+    },
+    {
+      "rule_id": "CF-2 @ Q3 FY2024",
+      "expected": "14093",
+      "actual": "14092",
+      "gap": "-1",
+      "severity": "pass",
+      "message": "CFO = sum of 11 operating line items"
+    },
+    {
+      "rule_id": "CF-3 @ Q3 FY2024",
+      "expected": "-2986",
+      "actual": "-2986",
+      "gap": "0",
+      "severity": "pass",
+      "message": "CFI = sum of 4 investing line items"
+    },
+    {
+      "rule_id": "CF-4 @ Q3 FY2024",
+      "expected": "-12356",
+      "actual": "-12356",
+      "gap": "0",
+      "severity": "pass",
+      "message": "CFF = sum of 8 financing line items"
+    },
+    {
+      "rule_id": "CF-1 @ Q3 FY2023",
       "expected": "382",
       "actual": "382",
       "gap": "0",
@@ -7631,7 +7647,7 @@
       "message": "CFO (11507) + CFI (-2702) + CFF (-8253) + CashOther (-170) = NetChange"
     },
     {
-      "rule_id": "CF-2 @ Q3 FY2024",
+      "rule_id": "CF-2 @ Q3 FY2023",
       "expected": "11507",
       "actual": "11507",
       "gap": "0",
@@ -7639,7 +7655,7 @@
       "message": "CFO = sum of 10 operating line items"
     },
     {
-      "rule_id": "CF-3 @ Q3 FY2024",
+      "rule_id": "CF-3 @ Q3 FY2023",
       "expected": "-2702",
       "actual": "-2702",
       "gap": "0",
@@ -7647,236 +7663,12 @@
       "message": "CFI = sum of 4 investing line items"
     },
     {
-      "rule_id": "CF-4 @ Q3 FY2024",
+      "rule_id": "CF-4 @ Q3 FY2023",
       "expected": "-8253",
       "actual": "-8253",
       "gap": "0",
       "severity": "pass",
       "message": "CFF = sum of 8 financing line items"
-    },
-    {
-      "rule_id": "CF-1 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO subtotal"
-    },
-    {
-      "rule_id": "CF-3 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFI subtotal"
-    },
-    {
-      "rule_id": "CF-4 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFF subtotal"
-    },
-    {
-      "rule_id": "CF-1 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO subtotal"
-    },
-    {
-      "rule_id": "CF-3 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFI subtotal"
-    },
-    {
-      "rule_id": "CF-4 @ Q3 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFF subtotal"
-    },
-    {
-      "rule_id": "CF-1 @ Q4 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q4 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO subtotal"
-    },
-    {
-      "rule_id": "CF-3 @ Q4 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFI subtotal"
-    },
-    {
-      "rule_id": "CF-4 @ Q4 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFF subtotal"
-    },
-    {
-      "rule_id": "CF-1 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO subtotal"
-    },
-    {
-      "rule_id": "CF-3 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFI subtotal"
-    },
-    {
-      "rule_id": "CF-4 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFF subtotal"
-    },
-    {
-      "rule_id": "CF-1 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO subtotal"
-    },
-    {
-      "rule_id": "CF-3 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFI subtotal"
-    },
-    {
-      "rule_id": "CF-4 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFF subtotal"
-    },
-    {
-      "rule_id": "CF-1 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO subtotal"
-    },
-    {
-      "rule_id": "CF-3 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFI subtotal"
-    },
-    {
-      "rule_id": "CF-4 @ Q3 FY2023",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFF subtotal"
-    },
-    {
-      "rule_id": "CF-1 @ Q4 FY2022",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q4 FY2022",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO subtotal"
-    },
-    {
-      "rule_id": "CF-3 @ Q4 FY2022",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFI subtotal"
-    },
-    {
-      "rule_id": "CF-4 @ Q4 FY2022",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFF subtotal"
     }
   ],
   "passed": true
