@@ -790,12 +790,12 @@
       "model_label": "Treasury Stock",
       "filing_section": "equity",
       "sign_convention": "negative",
-      "note": "Contra-equity line; typically reported as negative on BS. Stored expense_positive so value reads naturally.",
+      "note": "Contra-equity dollar balance. The bare 'treasury shares' alias is intentionally absent — it conflicts with the share-count concept TreasuryStockCommonShares (memo, GEN-BS-043).",
       "aliases": [
         "treasury stock",
         "treasury stock common value",
         "treasury stock, at cost",
-        "treasury shares",
+        "treasury stock at cost",
         "treasury stock, common"
       ]
     },
@@ -822,7 +822,27 @@
       "aliases": [
         "common stock shares issued",
         "common shares issued",
-        "shares issued"
+        "common stock shares authorized",
+        "common stock shares outstanding",
+        "preferred stock shares issued",
+        "preferred stock shares authorized",
+        "preferred stock shares outstanding",
+        "shares issued",
+        "shares authorized"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-043",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Treasury Stock - Shares Outstanding",
+      "filing_section": "equity",
+      "memo": true,
+      "note": "Treasury share count (not dollar). Distinct from GEN-BS-035 Treasury Stock which is the dollar balance — without this memo entry, share-count concept TreasuryStockCommonShares fuzzy-matches the dollar canonical and gets summed alongside it, double-counting equity.",
+      "aliases": [
+        "treasury stock common shares",
+        "treasury shares",
+        "treasury stock shares",
+        "treasury stock common shares outstanding"
       ]
     },
     {
