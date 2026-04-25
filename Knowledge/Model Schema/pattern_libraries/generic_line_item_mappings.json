@@ -142,7 +142,6 @@
       "rule_id": "GEN-IS-010",
       "model_sheet": "ANNL P&L",
       "model_label": "Income Tax (Benefit) Expense",
-      "sign_convention": "negative",
       "note": "User-requested: store with expense positive, benefit negative (opposite of filing's natural sign). Sign flip applied during reconcile or model-write \u2014 TBD.",
       "aliases": [
         "income tax (expense) benefit",

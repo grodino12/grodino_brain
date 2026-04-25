@@ -204,6 +204,38 @@ def select_entry(
 
 
 # ============================================================================
+# Sign-from-keyword (IS only)
+# ============================================================================
+#
+# IS canonicals encode their default sign in the parenthetical pattern:
+#   "Income Tax (Benefit) Expense" → Expense outside = negative default;
+#                                    Benefit inside = positive alternate
+#   "Foreign Currency Gain (Loss)" → Gain outside = positive default;
+#                                    Loss inside = negative alternate
+#
+# When the matched alias contains one of these keywords we can derive the
+# sign without needing per-entry sign_convention. CF lines are EXCLUDED —
+# on CF, "Depreciation expense" appears positive (non-cash add-back), so
+# the keyword logic would mis-flip.
+
+_NEGATIVE_KEYWORDS = ("expense", "loss", "cost of")
+_POSITIVE_KEYWORDS = ("benefit", "gain", "income", "recovery")
+
+
+def _derive_sign_from_label(label: str) -> str | None:
+    """Detect 'positive' / 'negative' from keywords in a normalized IS label.
+    Returns None if the label is ambiguous (contains both, or neither)."""
+    L = label.lower()
+    has_neg = any(kw in L for kw in _NEGATIVE_KEYWORDS)
+    has_pos = any(kw in L for kw in _POSITIVE_KEYWORDS)
+    if has_neg and not has_pos:
+        return "negative"
+    if has_pos and not has_neg:
+        return "positive"
+    return None
+
+
+# ============================================================================
 # Match API (extract-time entry point)
 # ============================================================================
 
@@ -229,6 +261,11 @@ def match_raw_item(
          labels are inherently noisier vs library prose aliases)
       3. Exact-normalized match on concept (iXBRL us-gaap local name) —
          fallback for filers whose display wording isn't in the library yet
+
+    On a hit, if `statement_type` is INCOME_STATEMENT and the entry has no
+    explicit `sign_convention`, the sign is derived from keywords in the
+    raw_filing_label ("expense"/"loss" → negative; "benefit"/"gain"/"income"
+    → positive). Per-entry sign_convention always wins if set.
     """
     # iXBRL labels are CamelCase-split concept names — high baseline noise
     # vs library aliases written for human prose ("Depreciation Depletion And
@@ -238,30 +275,37 @@ def match_raw_item(
     group = STMT_TO_GROUP[statement_type]
     normalized = normalize_label(raw_filing_label)
 
+    entry: dict | None = None
+
     # (1) raw label exact
     candidates = index.get((normalized, group), [])
     entry = select_entry(candidates, subsection_context, section)
-    if entry is not None:
-        return entry
 
     # (2) fuzzy on raw label
-    group_keys = [k for (k, sg) in index if sg == group]
-    matches = process.extract(normalized, group_keys, scorer=fuzz.ratio, limit=3)
-    if matches and matches[0][1] >= fuzzy_threshold:
-        best_key = matches[0][0]
-        entry = select_entry(index.get((best_key, group), []),
-                             subsection_context, section)
-        if entry is not None:
-            return entry
+    if entry is None:
+        group_keys = [k for (k, sg) in index if sg == group]
+        matches = process.extract(normalized, group_keys, scorer=fuzz.ratio, limit=3)
+        if matches and matches[0][1] >= fuzzy_threshold:
+            best_key = matches[0][0]
+            entry = select_entry(index.get((best_key, group), []),
+                                 subsection_context, section)
 
     # (3) concept fallback (iXBRL only — raw source of truth)
-    if concept:
+    if entry is None and concept:
         candidates = index.get((normalize_label(concept), group), [])
         entry = select_entry(candidates, subsection_context, section)
-        if entry is not None:
-            return entry
 
-    return None
+    if entry is None:
+        return None
+
+    # IS-only keyword sign-detection. Per-entry convention always wins.
+    if (statement_type == StatementType.INCOME_STATEMENT
+            and not entry.get("sign_convention")):
+        derived = _derive_sign_from_label(raw_filing_label)
+        if derived:
+            entry = {**entry, "sign_convention": derived}
+
+    return entry
 
 
 def nearest_matches(
