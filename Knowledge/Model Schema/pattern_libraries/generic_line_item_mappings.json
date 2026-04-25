@@ -158,7 +158,9 @@
         "earnings before taxes",
         "earnings before income taxes",
         "pre-tax income",
-        "income before provision for income taxes"
+        "income before provision for income taxes",
+        "income loss from continuing operations before income taxes",
+        "income loss from continuing operations before income taxes extraordinary items noncontrolling interest"
       ],
       "filing_section": "non_operating"
     },
@@ -752,6 +754,24 @@
       ]
     },
     {
+      "rule_id": "GEN-BS-042",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Par Value of Equity",
+      "filing_section": "equity",
+      "memo": true,
+      "note": "Per-share par/stated value disclosure (parenthetical on the BS, not a balance). Memo entry — recognized at reconcile so it doesn't surface as a novel, but model-write does not render it as a row.",
+      "aliases": [
+        "common stock par or stated value per share",
+        "preferred stock par or stated value per share",
+        "common stock par value",
+        "preferred stock par value",
+        "common stock no par value",
+        "common stock, par value",
+        "par value per share",
+        "par or stated value per share"
+      ]
+    },
+    {
       "rule_id": "GEN-BS-034",
       "model_sheet": "BALANCE SHEET",
       "model_label": "Other Non-Current Liabilities",
@@ -854,6 +874,22 @@
       ]
     },
     {
+      "rule_id": "GEN-IS-024",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Impairment of Intangibles",
+      "filing_section": "operating_expenses",
+      "aliases": [
+        "impairment of intangible assets",
+        "impairment of intangibles",
+        "impairment of intangible assets indefinitelived excluding goodwill",
+        "impairment of intangible assets finitelived",
+        "intangible asset impairment",
+        "goodwill and intangibles impairment",
+        "impairment charges",
+        "asset impairment charges"
+      ]
+    },
+    {
       "rule_id": "GEN-CF-001",
       "model_sheet": "CASH FLOW",
       "model_label": "Net Income (Loss)",
@@ -888,9 +924,12 @@
       "aliases": [
         "impairment of intangible assets",
         "impairment of intangibles",
+        "impairment of intangible assets indefinitelived excluding goodwill",
+        "impairment of intangible assets finitelived",
         "intangible asset impairment",
         "goodwill and intangibles impairment",
-        "impairment charges"
+        "impairment charges",
+        "asset impairment charges"
       ],
       "filing_section": "operating"
     },
