@@ -32,7 +32,7 @@ class Section(str, Enum):
     OPERATING = "operating"
     INVESTING = "investing"
     FINANCING = "financing"
-    FX_RECONCILIATION = "fx_reconciliation"
+    CASH_OTHER = "cash_other"
     REVENUE_COST = "revenue_cost"
     OPERATING_EXPENSES = "operating_expenses"
     NON_OPERATING = "non_operating"
