@@ -1519,7 +1519,7 @@
               "row_type": "line_item",
               "section": "tax",
               "subsection_context": null,
-              "sign_convention": "as_reported",
+              "sign_convention": "negative",
               "citation": {
                 "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
                 "page": 1,
@@ -1820,7 +1820,7 @@
               "row_type": "line_item",
               "section": "tax",
               "subsection_context": null,
-              "sign_convention": "as_reported",
+              "sign_convention": "negative",
               "citation": {
                 "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
                 "page": 1,
@@ -2121,7 +2121,7 @@
               "row_type": "line_item",
               "section": "tax",
               "subsection_context": null,
-              "sign_convention": "as_reported",
+              "sign_convention": "negative",
               "citation": {
                 "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
                 "page": 1,
@@ -2422,7 +2422,7 @@
               "row_type": "line_item",
               "section": "tax",
               "subsection_context": null,
-              "sign_convention": "as_reported",
+              "sign_convention": "negative",
               "citation": {
                 "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
                 "page": 1,
@@ -5654,7 +5654,7 @@
         "row_type": "line_item",
         "section": "tax",
         "subsection_context": null,
-        "sign_convention": "as_reported",
+        "sign_convention": "negative",
         "citation": {
           "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
           "page": 1,
@@ -5990,7 +5990,7 @@
         "row_type": "line_item",
         "section": "tax",
         "subsection_context": null,
-        "sign_convention": "as_reported",
+        "sign_convention": "negative",
         "citation": {
           "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
           "page": 1,
@@ -7496,11 +7496,11 @@
     },
     {
       "rule_id": "IS-4 @ Q2 FY2026",
-      "expected": "13798",
+      "expected": "9112",
       "actual": "9112",
-      "gap": "-4686",
-      "severity": "fail",
-      "message": "Net Income (9112) = Pre-Tax (11455) + Tax (2343 across 1 rows)"
+      "gap": "0",
+      "severity": "pass",
+      "message": "Net Income (9112) = Pre-Tax (11455) + Tax (-2343 across 1 rows)"
     },
     {
       "rule_id": "IS-1 @ Q2 FY2026",
@@ -7528,11 +7528,11 @@
     },
     {
       "rule_id": "IS-4 @ Q2 FY2026",
-      "expected": "13324",
+      "expected": "8646",
       "actual": "8646",
-      "gap": "-4678",
-      "severity": "fail",
-      "message": "Net Income (8646) = Pre-Tax (10985) + Tax (2339 across 1 rows)"
+      "gap": "0",
+      "severity": "pass",
+      "message": "Net Income (8646) = Pre-Tax (10985) + Tax (-2339 across 1 rows)"
     },
     {
       "rule_id": "IS-1 @ Q2 FY2025",

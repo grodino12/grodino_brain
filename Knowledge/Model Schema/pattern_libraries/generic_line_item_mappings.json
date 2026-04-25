@@ -166,7 +166,8 @@
       "rule_id": "GEN-IS-010",
       "model_sheet": "ANNL P&L",
       "model_label": "Income Tax (Expense) Benefit",
-      "note": "User-requested: store with expense positive, benefit negative (opposite of filing's natural sign). Sign flip applied during reconcile or model-write \u2014 TBD.",
+      "sign_convention": "negative",
+      "note": "Income tax stored with natural sign \u2014 expense negative, benefit positive. The IS keyword sign-detection sees BOTH \"expense\" and \"benefit\" in this label, returns ambiguous, and falls back to as_reported. So we set explicit sign_convention=negative because the modal case is expense.",
       "aliases": [
         "income tax (expense) benefit",
         "income tax expense benefit",
