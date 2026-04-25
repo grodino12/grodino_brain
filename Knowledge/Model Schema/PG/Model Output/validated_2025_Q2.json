@@ -26,6 +26,26 @@
           "dialect": "US_GAAP",
           "line_items": [
             {
+              "raw_filing_label": "Common Stock Shares Issued",
+              "canonical_label": "Common Stock - Shares Issued",
+              "ledger_rule_id": "GEN-BS-037",
+              "value": "4009200000.0",
+              "raw_numeric_text": "4,009.2",
+              "notation_flags": 0,
+              "footnote_markers": [],
+              "indent_level": 2,
+              "row_type": "memo",
+              "section": "equity",
+              "subsection_context": null,
+              "sign_convention": "as_reported",
+              "citation": {
+                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
+                "page": 1,
+                "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
+                "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+              }
+            },
+            {
               "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
               "canonical_label": "Cash & Cash Equivalents",
               "ledger_rule_id": "GEN-BS-001",
@@ -466,26 +486,6 @@
               }
             },
             {
-              "raw_filing_label": "Common Stock Shares Issued",
-              "canonical_label": "Common Stock - Shares Issued",
-              "ledger_rule_id": "GEN-BS-037",
-              "value": "4009200000.0",
-              "raw_numeric_text": "4,009.2",
-              "notation_flags": 0,
-              "footnote_markers": [],
-              "indent_level": 2,
-              "row_type": "memo",
-              "section": "equity",
-              "subsection_context": null,
-              "sign_convention": "as_reported",
-              "citation": {
-                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
-                "page": 1,
-                "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
-                "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-              }
-            },
-            {
               "raw_filing_label": "Common Stock Value",
               "canonical_label": "Common Stock",
               "ledger_rule_id": "GEN-BS-028",
@@ -686,6 +686,26 @@
           "currency": "USD",
           "dialect": "US_GAAP",
           "line_items": [
+            {
+              "raw_filing_label": "Common Stock Shares Issued",
+              "canonical_label": "Common Stock - Shares Issued",
+              "ledger_rule_id": "GEN-BS-037",
+              "value": "4009200000.0",
+              "raw_numeric_text": "4,009.2",
+              "notation_flags": 0,
+              "footnote_markers": [],
+              "indent_level": 2,
+              "row_type": "memo",
+              "section": "equity",
+              "subsection_context": null,
+              "sign_convention": "as_reported",
+              "citation": {
+                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
+                "page": 1,
+                "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-06-30",
+                "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+              }
+            },
             {
               "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
               "canonical_label": "Cash & Cash Equivalents",
@@ -1124,26 +1144,6 @@
                 "page": 1,
                 "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2024-06-30",
                 "note": "iXBRL | Consolidated Balance Sheets"
-              }
-            },
-            {
-              "raw_filing_label": "Common Stock Shares Issued",
-              "canonical_label": "Common Stock - Shares Issued",
-              "ledger_rule_id": "GEN-BS-037",
-              "value": "4009200000.0",
-              "raw_numeric_text": "4,009.2",
-              "notation_flags": 0,
-              "footnote_markers": [],
-              "indent_level": 2,
-              "row_type": "memo",
-              "section": "equity",
-              "subsection_context": null,
-              "sign_convention": "as_reported",
-              "citation": {
-                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
-                "page": 1,
-                "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-06-30",
-                "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
               }
             },
             {
@@ -3276,26 +3276,6 @@
           "dialect": "US_GAAP",
           "line_items": [
             {
-              "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
-              "canonical_label": "Impairment of Intangibles",
-              "ledger_rule_id": "GEN-CF-003",
-              "value": "1341",
-              "raw_numeric_text": "1,341",
-              "notation_flags": 0,
-              "footnote_markers": [],
-              "indent_level": 2,
-              "row_type": "line_item",
-              "section": "operating",
-              "subsection_context": null,
-              "sign_convention": "as_reported",
-              "citation": {
-                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
-                "page": 1,
-                "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2023-12-31",
-                "note": "iXBRL | Consolidated Statements of Earnings"
-              }
-            },
-            {
               "raw_filing_label": "Profit Loss",
               "canonical_label": "Net Income (Loss)",
               "ledger_rule_id": "GEN-CF-001",
@@ -3312,6 +3292,26 @@
                 "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
                 "page": 1,
                 "line_hint": "us-gaap:ProfitLoss | ctx:duration:2023-12-31",
+                "note": "iXBRL | Consolidated Statements of Earnings"
+              }
+            },
+            {
+              "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
+              "canonical_label": "Impairment of Intangibles",
+              "ledger_rule_id": "GEN-CF-003",
+              "value": "1341",
+              "raw_numeric_text": "1,341",
+              "notation_flags": 0,
+              "footnote_markers": [],
+              "indent_level": 2,
+              "row_type": "line_item",
+              "section": "operating",
+              "subsection_context": null,
+              "sign_convention": "as_reported",
+              "citation": {
+                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
+                "page": 1,
+                "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2023-12-31",
                 "note": "iXBRL | Consolidated Statements of Earnings"
               }
             }
@@ -3336,26 +3336,6 @@
           "currency": "USD",
           "dialect": "US_GAAP",
           "line_items": [
-            {
-              "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
-              "canonical_label": "Impairment of Intangibles",
-              "ledger_rule_id": "GEN-CF-003",
-              "value": "1341",
-              "raw_numeric_text": "1,341",
-              "notation_flags": 0,
-              "footnote_markers": [],
-              "indent_level": 2,
-              "row_type": "line_item",
-              "section": "operating",
-              "subsection_context": null,
-              "sign_convention": "as_reported",
-              "citation": {
-                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
-                "page": 1,
-                "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2023-12-31",
-                "note": "iXBRL | Consolidated Statements of Earnings"
-              }
-            },
             {
               "raw_filing_label": "Profit Loss",
               "canonical_label": "Net Income (Loss)",
@@ -3454,6 +3434,26 @@
                 "page": 1,
                 "line_hint": "us-gaap:GainLossOnDispositionOfAssets1 | ctx:duration:2023-12-31",
                 "note": "iXBRL | Consolidated Statements of Cash Flows"
+              }
+            },
+            {
+              "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
+              "canonical_label": "Impairment of Intangibles",
+              "ledger_rule_id": "GEN-CF-003",
+              "value": "1341",
+              "raw_numeric_text": "1,341",
+              "notation_flags": 0,
+              "footnote_markers": [],
+              "indent_level": 2,
+              "row_type": "line_item",
+              "section": "operating",
+              "subsection_context": null,
+              "sign_convention": "as_reported",
+              "citation": {
+                "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
+                "page": 1,
+                "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2023-12-31",
+                "note": "iXBRL | Consolidated Statements of Earnings"
               }
             },
             {
@@ -3974,6 +3974,30 @@
       }
     },
     "mapped_line_items": [
+      {
+        "raw_filing_label": "Common Stock Shares Issued",
+        "canonical_label": "Common Stock - Shares Issued",
+        "ledger_rule_id": "GEN-BS-037",
+        "value": "4009200000.0",
+        "raw_numeric_text": "4,009.2",
+        "notation_flags": 0,
+        "footnote_markers": [],
+        "indent_level": 2,
+        "row_type": "memo",
+        "section": "equity",
+        "subsection_context": null,
+        "sign_convention": "as_reported",
+        "citation": {
+          "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
+          "page": 1,
+          "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
+          "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+        },
+        "model_sheet": "QTR BS",
+        "model_row": 0,
+        "model_label": "Common Stock - Shares Issued",
+        "mapping_source": "ledger_auto"
+      },
       {
         "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
         "canonical_label": "Cash & Cash Equivalents",
@@ -4503,30 +4527,6 @@
         "mapping_source": "ledger_auto"
       },
       {
-        "raw_filing_label": "Common Stock Shares Issued",
-        "canonical_label": "Common Stock - Shares Issued",
-        "ledger_rule_id": "GEN-BS-037",
-        "value": "4009200000.0",
-        "raw_numeric_text": "4,009.2",
-        "notation_flags": 0,
-        "footnote_markers": [],
-        "indent_level": 2,
-        "row_type": "memo",
-        "section": "equity",
-        "subsection_context": null,
-        "sign_convention": "as_reported",
-        "citation": {
-          "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
-          "page": 1,
-          "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
-          "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-        },
-        "model_sheet": "QTR BS",
-        "model_row": 0,
-        "model_label": "Common Stock - Shares Issued",
-        "mapping_source": "ledger_auto"
-      },
-      {
         "raw_filing_label": "Common Stock Value",
         "canonical_label": "Common Stock",
         "ledger_rule_id": "GEN-BS-028",
@@ -4740,6 +4740,30 @@
         "model_sheet": "_subtotal",
         "model_row": 0,
         "model_label": "Liabilities And Stockholders Equity",
+        "mapping_source": "ledger_auto"
+      },
+      {
+        "raw_filing_label": "Common Stock Shares Issued",
+        "canonical_label": "Common Stock - Shares Issued",
+        "ledger_rule_id": "GEN-BS-037",
+        "value": "4009200000.0",
+        "raw_numeric_text": "4,009.2",
+        "notation_flags": 0,
+        "footnote_markers": [],
+        "indent_level": 2,
+        "row_type": "memo",
+        "section": "equity",
+        "subsection_context": null,
+        "sign_convention": "as_reported",
+        "citation": {
+          "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
+          "page": 1,
+          "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-06-30",
+          "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+        },
+        "model_sheet": "QTR BS",
+        "model_row": 0,
+        "model_label": "Common Stock - Shares Issued",
         "mapping_source": "ledger_auto"
       },
       {
@@ -5268,30 +5292,6 @@
         "model_sheet": "QTR BS",
         "model_row": 0,
         "model_label": "Convertible Preferred Stock",
-        "mapping_source": "ledger_auto"
-      },
-      {
-        "raw_filing_label": "Common Stock Shares Issued",
-        "canonical_label": "Common Stock - Shares Issued",
-        "ledger_rule_id": "GEN-BS-037",
-        "value": "4009200000.0",
-        "raw_numeric_text": "4,009.2",
-        "notation_flags": 0,
-        "footnote_markers": [],
-        "indent_level": 2,
-        "row_type": "memo",
-        "section": "equity",
-        "subsection_context": null,
-        "sign_convention": "as_reported",
-        "citation": {
-          "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
-          "page": 1,
-          "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-06-30",
-          "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-        },
-        "model_sheet": "QTR BS",
-        "model_row": 0,
-        "model_label": "Common Stock - Shares Issued",
         "mapping_source": "ledger_auto"
       },
       {
@@ -6855,30 +6855,6 @@
         "mapping_source": "ledger_auto"
       },
       {
-        "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
-        "canonical_label": "Impairment of Intangibles",
-        "ledger_rule_id": "GEN-CF-003",
-        "value": "1341",
-        "raw_numeric_text": "1,341",
-        "notation_flags": 0,
-        "footnote_markers": [],
-        "indent_level": 2,
-        "row_type": "line_item",
-        "section": "operating",
-        "subsection_context": null,
-        "sign_convention": "as_reported",
-        "citation": {
-          "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
-          "page": 1,
-          "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2023-12-31",
-          "note": "iXBRL | Consolidated Statements of Earnings"
-        },
-        "model_sheet": "QTR CF",
-        "model_row": 0,
-        "model_label": "Impairment of Intangibles",
-        "mapping_source": "ledger_auto"
-      },
-      {
         "raw_filing_label": "Profit Loss",
         "canonical_label": "Net Income (Loss)",
         "ledger_rule_id": "GEN-CF-001",
@@ -6996,6 +6972,30 @@
         "model_sheet": "QTR CF",
         "model_row": 0,
         "model_label": "Gain (Loss) on Disposal of PP&E",
+        "mapping_source": "ledger_auto"
+      },
+      {
+        "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
+        "canonical_label": "Impairment of Intangibles",
+        "ledger_rule_id": "GEN-CF-003",
+        "value": "1341",
+        "raw_numeric_text": "1,341",
+        "notation_flags": 0,
+        "footnote_markers": [],
+        "indent_level": 2,
+        "row_type": "line_item",
+        "section": "operating",
+        "subsection_context": null,
+        "sign_convention": "as_reported",
+        "citation": {
+          "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q2\\filings\\PG_2024-12-31_10-Q.htm",
+          "page": 1,
+          "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2023-12-31",
+          "note": "iXBRL | Consolidated Statements of Earnings"
+        },
+        "model_sheet": "QTR CF",
+        "model_row": 0,
+        "model_label": "Impairment of Intangibles",
         "mapping_source": "ledger_auto"
       },
       {

@@ -445,26 +445,6 @@
             }
           },
           {
-            "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
-            "canonical_label": "Par Value of Equity",
-            "ledger_rule_id": "GEN-BS-042",
-            "value": "0.000001",
-            "raw_numeric_text": "1",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
             "raw_filing_label": "Preferred Stock Value",
             "canonical_label": "Convertible Preferred Stock",
             "ledger_rule_id": "GEN-BS-027",
@@ -481,66 +461,6 @@
               "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
               "page": 1,
               "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2023-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
-            "raw_filing_label": "Preferred Stock Shares Authorized",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
-            "value": "200",
-            "raw_numeric_text": "200",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2023-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
-            "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
-            "canonical_label": "Par Value of Equity",
-            "ledger_rule_id": "GEN-BS-042",
-            "value": "0.000001",
-            "raw_numeric_text": "1",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
-            "raw_filing_label": "Common Stock Shares Issued",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
-            "value": "4009200000.0",
-            "raw_numeric_text": "4,009.2",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-06-30",
               "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
             }
           },
@@ -621,26 +541,6 @@
               "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
               "page": 1,
               "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2023-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
-            "raw_filing_label": "Treasury Stock Shares",
-            "canonical_label": "Treasury Stock - Shares Outstanding",
-            "ledger_rule_id": "GEN-BS-043",
-            "value": "1647.1",
-            "raw_numeric_text": "1,647.1",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2023-06-30",
               "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
             }
           },
@@ -741,6 +641,106 @@
               "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
               "page": 1,
               "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2023-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
+            "canonical_label": "Par Value of Equity",
+            "ledger_rule_id": "GEN-BS-042",
+            "value": "0.000001",
+            "raw_numeric_text": "1",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Preferred Stock Shares Authorized",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "200",
+            "raw_numeric_text": "200",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2023-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Common Stock Shares Issued",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "4009200000.0",
+            "raw_numeric_text": "4,009.2",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
+            "canonical_label": "Par Value of Equity",
+            "ledger_rule_id": "GEN-BS-042",
+            "value": "0.000001",
+            "raw_numeric_text": "1",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Treasury Stock Shares",
+            "canonical_label": "Treasury Stock - Shares Outstanding",
+            "ledger_rule_id": "GEN-BS-043",
+            "value": "1647.1",
+            "raw_numeric_text": "1,647.1",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2023-06-30",
               "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
             }
           }
@@ -1186,26 +1186,6 @@
             }
           },
           {
-            "raw_filing_label": "Preferred Stock Shares Authorized",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
-            "value": "600",
-            "raw_numeric_text": "600",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2022-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
             "raw_filing_label": "Preferred Stock Value",
             "canonical_label": "Convertible Preferred Stock",
             "ledger_rule_id": "GEN-BS-027",
@@ -1222,46 +1202,6 @@
               "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
               "page": 1,
               "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2022-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
-            "raw_filing_label": "Common Stock Shares Authorized",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
-            "value": "10000",
-            "raw_numeric_text": "10,000",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
-            "raw_filing_label": "Common Stock Shares Issued",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
-            "value": "4009200000.0",
-            "raw_numeric_text": "4,009.2",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-06-30",
               "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
             }
           },
@@ -1342,26 +1282,6 @@
               "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
               "page": 1,
               "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2022-06-30",
-              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-            }
-          },
-          {
-            "raw_filing_label": "Treasury Stock Shares",
-            "canonical_label": "Treasury Stock - Shares Outstanding",
-            "ledger_rule_id": "GEN-BS-043",
-            "value": "1615.4",
-            "raw_numeric_text": "1,615.4",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-              "page": 1,
-              "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2022-06-30",
               "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
             }
           },
@@ -1462,6 +1382,86 @@
               "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
               "page": 1,
               "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2022-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Preferred Stock Shares Authorized",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "600",
+            "raw_numeric_text": "600",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2022-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Common Stock Shares Issued",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "4009200000.0",
+            "raw_numeric_text": "4,009.2",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Common Stock Shares Authorized",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "10000",
+            "raw_numeric_text": "10,000",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-06-30",
+              "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+            }
+          },
+          {
+            "raw_filing_label": "Treasury Stock Shares",
+            "canonical_label": "Treasury Stock - Shares Outstanding",
+            "ledger_rule_id": "GEN-BS-043",
+            "value": "1615.4",
+            "raw_numeric_text": "1,615.4",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2022-06-30",
               "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
             }
           }
@@ -4876,30 +4876,6 @@
       "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
-      "canonical_label": "Par Value of Equity",
-      "ledger_rule_id": "GEN-BS-042",
-      "value": "0.000001",
-      "raw_numeric_text": "1",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Par Value of Equity",
-      "mapping_source": "ledger_auto"
-    },
-    {
       "raw_filing_label": "Preferred Stock Value",
       "canonical_label": "Convertible Preferred Stock",
       "ledger_rule_id": "GEN-BS-027",
@@ -4921,78 +4897,6 @@
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
       "model_label": "Convertible Preferred Stock",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Preferred Stock Shares Authorized",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
-      "value": "200",
-      "raw_numeric_text": "200",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2023-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
-      "canonical_label": "Par Value of Equity",
-      "ledger_rule_id": "GEN-BS-042",
-      "value": "0.000001",
-      "raw_numeric_text": "1",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Par Value of Equity",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Common Stock Shares Issued",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
-      "value": "4009200000.0",
-      "raw_numeric_text": "4,009.2",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5089,30 +4993,6 @@
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
       "model_label": "Accumulated Other Comprehensive Income (Loss)",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Treasury Stock Shares",
-      "canonical_label": "Treasury Stock - Shares Outstanding",
-      "ledger_rule_id": "GEN-BS-043",
-      "value": "1647.1",
-      "raw_numeric_text": "1,647.1",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2023-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Treasury Stock - Shares Outstanding",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5233,6 +5113,126 @@
       "model_sheet": "_subtotal",
       "model_row": 0,
       "model_label": "Liabilities And Stockholders Equity",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
+      "canonical_label": "Par Value of Equity",
+      "ledger_rule_id": "GEN-BS-042",
+      "value": "0.000001",
+      "raw_numeric_text": "1",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Par Value of Equity",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Preferred Stock Shares Authorized",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "200",
+      "raw_numeric_text": "200",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2023-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Common Stock Shares Issued",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "4009200000.0",
+      "raw_numeric_text": "4,009.2",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
+      "canonical_label": "Par Value of Equity",
+      "ledger_rule_id": "GEN-BS-042",
+      "value": "0.000001",
+      "raw_numeric_text": "1",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Par Value of Equity",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Treasury Stock Shares",
+      "canonical_label": "Treasury Stock - Shares Outstanding",
+      "ledger_rule_id": "GEN-BS-043",
+      "value": "1647.1",
+      "raw_numeric_text": "1,647.1",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2023-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Treasury Stock - Shares Outstanding",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5740,30 +5740,6 @@
       "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Preferred Stock Shares Authorized",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
-      "value": "600",
-      "raw_numeric_text": "600",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2022-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
-      "mapping_source": "ledger_auto"
-    },
-    {
       "raw_filing_label": "Preferred Stock Value",
       "canonical_label": "Convertible Preferred Stock",
       "ledger_rule_id": "GEN-BS-027",
@@ -5785,54 +5761,6 @@
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
       "model_label": "Convertible Preferred Stock",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Common Stock Shares Authorized",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
-      "value": "10000",
-      "raw_numeric_text": "10,000",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Common Stock Shares Issued",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
-      "value": "4009200000.0",
-      "raw_numeric_text": "4,009.2",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5929,30 +5857,6 @@
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
       "model_label": "Accumulated Other Comprehensive Income (Loss)",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Treasury Stock Shares",
-      "canonical_label": "Treasury Stock - Shares Outstanding",
-      "ledger_rule_id": "GEN-BS-043",
-      "value": "1615.4",
-      "raw_numeric_text": "1,615.4",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2022-06-30",
-        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
-      },
-      "model_sheet": "BALANCE SHEET",
-      "model_row": 0,
-      "model_label": "Treasury Stock - Shares Outstanding",
       "mapping_source": "ledger_auto"
     },
     {
@@ -6073,6 +5977,102 @@
       "model_sheet": "_subtotal",
       "model_row": 0,
       "model_label": "Liabilities And Stockholders Equity",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Preferred Stock Shares Authorized",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "600",
+      "raw_numeric_text": "600",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2022-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Common Stock Shares Issued",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "4009200000.0",
+      "raw_numeric_text": "4,009.2",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Common Stock Shares Authorized",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "10000",
+      "raw_numeric_text": "10,000",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Treasury Stock Shares",
+      "canonical_label": "Treasury Stock - Shares Outstanding",
+      "ledger_rule_id": "GEN-BS-043",
+      "value": "1615.4",
+      "raw_numeric_text": "1,615.4",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TreasuryStockShares | ctx:instant:2022-06-30",
+        "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Treasury Stock - Shares Outstanding",
       "mapping_source": "ledger_auto"
     },
     {

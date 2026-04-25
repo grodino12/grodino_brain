@@ -25,6 +25,26 @@
         "dialect": "US_GAAP",
         "line_items": [
           {
+            "raw_filing_label": "Common Stock Shares Issued",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "4009200000.0",
+            "raw_numeric_text": "4,009.2",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
+              "page": 1,
+              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-09-30",
+              "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+            }
+          },
+          {
             "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
             "canonical_label": "Cash & Cash Equivalents",
             "ledger_rule_id": "GEN-BS-001",
@@ -465,26 +485,6 @@
             }
           },
           {
-            "raw_filing_label": "Common Stock Shares Issued",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
-            "value": "4009200000.0",
-            "raw_numeric_text": "4,009.2",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
-              "page": 1,
-              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-09-30",
-              "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-            }
-          },
-          {
             "raw_filing_label": "Common Stock Value",
             "canonical_label": "Common Stock",
             "ledger_rule_id": "GEN-BS-028",
@@ -685,6 +685,26 @@
         "currency": "USD",
         "dialect": "US_GAAP",
         "line_items": [
+          {
+            "raw_filing_label": "Common Stock Shares Issued",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "4009200000.0",
+            "raw_numeric_text": "4,009.2",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
+              "page": 1,
+              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-06-30",
+              "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+            }
+          },
           {
             "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
             "canonical_label": "Cash & Cash Equivalents",
@@ -1123,26 +1143,6 @@
               "page": 1,
               "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2025-06-30",
               "note": "iXBRL | Consolidated Balance Sheets"
-            }
-          },
-          {
-            "raw_filing_label": "Common Stock Shares Issued",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
-            "value": "4009200000.0",
-            "raw_numeric_text": "4,009.2",
-            "notation_flags": 0,
-            "footnote_markers": [],
-            "indent_level": 2,
-            "row_type": "memo",
-            "section": "equity",
-            "subsection_context": null,
-            "sign_convention": "as_reported",
-            "citation": {
-              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
-              "page": 1,
-              "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-06-30",
-              "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
             }
           },
           {
@@ -3150,6 +3150,30 @@
   },
   "mapped_line_items": [
     {
+      "raw_filing_label": "Common Stock Shares Issued",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "4009200000.0",
+      "raw_numeric_text": "4,009.2",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-09-30",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+      },
+      "model_sheet": "QTR BS",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
+      "mapping_source": "ledger_auto"
+    },
+    {
       "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
       "canonical_label": "Cash & Cash Equivalents",
       "ledger_rule_id": "GEN-BS-001",
@@ -3678,30 +3702,6 @@
       "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "Common Stock Shares Issued",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
-      "value": "4009200000.0",
-      "raw_numeric_text": "4,009.2",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-09-30",
-        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-      },
-      "model_sheet": "QTR BS",
-      "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
-      "mapping_source": "ledger_auto"
-    },
-    {
       "raw_filing_label": "Common Stock Value",
       "canonical_label": "Common Stock",
       "ledger_rule_id": "GEN-BS-028",
@@ -3915,6 +3915,30 @@
       "model_sheet": "_subtotal",
       "model_row": 0,
       "model_label": "Liabilities And Stockholders Equity",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Common Stock Shares Issued",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "4009200000.0",
+      "raw_numeric_text": "4,009.2",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+      },
+      "model_sheet": "QTR BS",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
       "mapping_source": "ledger_auto"
     },
     {
@@ -4443,30 +4467,6 @@
       "model_sheet": "QTR BS",
       "model_row": 0,
       "model_label": "Convertible Preferred Stock",
-      "mapping_source": "ledger_auto"
-    },
-    {
-      "raw_filing_label": "Common Stock Shares Issued",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
-      "value": "4009200000.0",
-      "raw_numeric_text": "4,009.2",
-      "notation_flags": 0,
-      "footnote_markers": [],
-      "indent_level": 2,
-      "row_type": "memo",
-      "section": "equity",
-      "subsection_context": null,
-      "sign_convention": "as_reported",
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q1\\filings\\PG_2025-09-30_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-06-30",
-        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-      },
-      "model_sheet": "QTR BS",
-      "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
       "mapping_source": "ledger_auto"
     },
     {
