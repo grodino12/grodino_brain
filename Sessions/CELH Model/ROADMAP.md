@@ -27,7 +27,7 @@ Living document. Update after each session. **Current project focus: build a uni
 | **Ticker onboarding doc** | Not started | One-page guide once QTR xlsx polish stabilizes |
 | **GLP-1 / SNAP integration** | Standalone, deferred | Revisit after universal architecture stabilizes |
 
-**Revised critical path:** ~~`model-write`~~ ✓ → ~~generic-library migration~~ ✓ → ~~`model-calc` drivers + forecast~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → ~~SEC EDGAR ingestion + iXBRL extractor~~ ✓ → ~~quarterly pipeline~~ ✓ → ~~triage PG 107-novel count~~ ✓ → ~~Option B architecture~~ ✓ → ~~sign-convention end-to-end~~ ✓ → ~~library splits~~ ✓ → ~~QTR pivot to YTD durations~~ ✓ → ~~model-write QTR parity port~~ ✓ → ~~merge two extract skills into one~~ ✓ → ~~sign-convention reduced to abs-based 3-value with IS keyword detection~~ ✓ → ~~library splits recombined~~ ✓ → ~~validators: state machines + English prose anchors → section-driven + canonical_label~~ ✓ → ~~UNCLASSIFIED enforcement at reconcile~~ ✓ → ~~LibraryEntry Pydantic guard~~ ✓ → ~~framework audit~~ ✓ → **refresh playgrounds (large backlog: extract-merge, lookup.py LibraryEntry, CASH_OTHER, sign 3-value, section-driven partitions, canonical_label-keyed validators)** → **CELH + PG regressions on new architecture** → **PG xlsx polish (NI formula self-reference, CF subtotal rows, preferred-stock canonical)** → **answer LTM-period validation question** → **break OCI into 4th statement** → **extend model-calc to quarterly drivers** → **extract generic forecast-rules JSON** → **formalize ticker onboarding flow** → (later) cross-model integration.
+**Revised critical path:** ~~`model-write`~~ ✓ → ~~generic-library migration~~ ✓ → ~~`model-calc` drivers + forecast~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → ~~SEC EDGAR ingestion + iXBRL extractor~~ ✓ → ~~quarterly pipeline~~ ✓ → ~~triage PG 107-novel count~~ ✓ → ~~Option B architecture~~ ✓ → ~~sign-convention end-to-end~~ ✓ → ~~library splits~~ ✓ → ~~QTR pivot to YTD durations~~ ✓ → ~~model-write QTR parity port~~ ✓ → ~~merge two extract skills into one~~ ✓ → ~~sign-convention reduced to abs-based 3-value with IS keyword detection~~ ✓ → ~~library splits recombined~~ ✓ → ~~validators: state machines + English prose anchors → section-driven + canonical_label~~ ✓ → ~~UNCLASSIFIED enforcement at reconcile~~ ✓ → ~~LibraryEntry Pydantic guard~~ ✓ → ~~framework audit~~ ✓ → ~~refresh playgrounds~~ ✓ → ~~PG end-to-end on new architecture (extract preferredLabel parsing for visual signs, multi-statement concept attribution, IS canonical NI semantics, Pre-Tax override for PG, IS cascade row injection + PLUS-SUM formulas, CF Net Change formula, EPS matcher fix)~~ ✓ → ~~validator trim 18 → 7 filer-tie rules~~ ✓ → **CELH regression on new architecture** → **break OCI into 4th statement** → **extend model-calc to quarterly drivers** → **extract generic forecast-rules JSON** → **formalize ticker onboarding flow** → (later) cross-model integration.
 
 **Active propagating rule:** every structural change to the financials pipeline must update `playground_architecture.html` + `playground_schema.html`. Bump `LS_KEY` when NODES/EDGES change so the user's browser picks up fresh defaults instead of cached state. Carry this into every future handoff under "Open decisions / pending work." (User explicitly asked this rule propagate.)
 
@@ -142,24 +142,19 @@ Concrete critical path:
 
 1. ~~**Run PG end-to-end to a first QTR xlsx.**~~ Shipped 2026-04-24.
 2. ~~**Framework audit (extract merge, sign-convention overhaul, section-driven validators, LibraryEntry guard, dead-code purge).**~~ Shipped 2026-04-25.
-3. **Refresh playgrounds** (active propagating rule, very large backlog from 04-24 + 04-25 sessions):
-   - `playground_architecture.html`: collapse the two extract nodes into one (`financials-extract` only); add LibraryEntry validator step inside lookup; add CASH_OTHER section + 4-section CF; change sign_convention enum to 3-value; reflect section-driven validator architecture.
-   - `playground_schema.html`: SignConvention 3-value enum; Section enum changes (CASH_OTHER added, FX_RECONCILIATION removed); LibraryEntry model.
-   - Bump `LS_KEY`.
-4. **CELH + PG regressions on the new architecture.** Overdue — last clean run was before the merge / sign-convention overhaul / section-driven validators. Expected to surface: fuzzy-threshold-70 false positives, library entries needing concept-name aliases for iXBRL, possibly section-fix triages from the UNCLASSIFIED halt.
-5. **PG xlsx polish (carried from prior handoff):**
-   - **IS "Net Income (Loss)" subtotal formula self-reference**: emits `=B9-SUM(B10:B12)` where row 12 is the NI row itself.
-   - **CF subtotal rows (CFO / CFI / CFF / NetChange) not emitted**: need `insert_cf_subtotal_slots` helper.
-   - **"Convertible Preferred Stock" mis-label**: PG's preferred is ESOP-linked. Split into Preferred Stock vs Convertible Preferred, or rename.
-   - **EPS format branch**: `"EPS" in label.upper()` doesn't match "Basic Earnings (Loss) per Share".
-6. **Add IS D&A library entry** when we hit a filer that breaks D&A out on the IS (PG embeds it in COGS/SG&A).
-7. **Answer LTM-period validation question for quarterlies.** Carried.
-8. **Break OCI into its own worksheet (4th statement).** Carried. Library entries pulled this session, will be restored when sheet exists. Scope: add `COMPREHENSIVE_INCOME` to StatementType enum, un-merge CI from IS, OCI/QTR OCI sheets in model-write, OCI-1 + X-5 validators, restore the 7 GEN-IS entries.
-9. **Extend `model-calc` to quarterly drivers.** Currently annual-only.
-10. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`. Blocked on §9.
-11. **Formalize the ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`.
-12. **PG first 10-K onboarding** — parallel ANNL BS entry for `NEW-BS-001 ESOP Debt Retirement Reserve`.
-13. **PG ledger NEW-BS-001 note text** — still says "stored expense_positive" (cosmetic; encoding quirks blocked auto-edit).
+3. ~~**Refresh playgrounds** (extract-merge collapse, CASH_OTHER, sign 3-value, section-driven validators, LibraryEntry, RawLineItem field updates).~~ Shipped 2026-04-25 (second session). LS_KEY bumped v8 → v9.
+4. ~~**PG end-to-end on new architecture (preferredLabel parsing for visual signs, multi-statement concept attribution, CI dropped from IS, IS canonical NI semantics, Pre-Tax override for PG, IS cascade injection + PLUS-SUM formulas, NI Less NCI formula, CF Net Change formula, EPS matcher).**~~ Shipped 2026-04-25 (second session). PG H1 FY2026 ties to filed IS / BS / CF.
+5. ~~**Validator trim 18 → 7 filer-tie rules.**~~ Shipped 2026-04-25 (second session).
+6. **CELH regression on the new architecture.** Overdue. Architecture changes since last CELH run: extract dispatcher merge, sign-convention 3-value, IS keyword sign detection, section-driven validators, UNCLASSIFIED halt + softening, LibraryEntry Pydantic guard, IS canonical NI renames (Including-NCI → Net Income / NetIncomeLoss → Net Income Less NCI), Tax explicit sign_convention=negative, IS cascade row injection + PLUS-SUM formulas, CF preferredLabel-driven sign negation, validator trim to 7 rules.
+7. **Break OCI into its own worksheet (4th statement).** Carried. CI statements skipped today. Scope: add `COMPREHENSIVE_INCOME` to StatementType enum, route CI in iXBRL extractor, OCI/QTR OCI sheets in model-write, OCI library entries restored.
+8. **Extend `model-calc` to quarterly drivers.** Currently annual-only.
+9. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`. Blocked on §8.
+10. **Formalize the ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`.
+11. **PG first 10-K onboarding** — parallel ANNL P&L entry for `MAP-IS-001` (Pre-Tax override; QTR-only today) and parallel ANNL BS entry for `NEW-BS-001 ESOP Debt Retirement Reserve`.
+12. **iXBRL label linkbase parsing** (long-term) — recover filer's actual visual labels per concept; eliminates need for ticker-specific overrides like PG's MAP-IS-001.
+13. **`financials-validate/SKILL.md` description stale** — still says "BS-1..BS-7, CF-1/CF-2, X-1..X-4". Update to the 7-rule reality.
+14. **Add IS D&A library entry** when we hit a filer that breaks D&A out on the IS (PG embeds it in COGS/SG&A).
+15. **PG ledger NEW-BS-001 note text** — still says "stored expense_positive" (cosmetic).
 
 Surface area to watch when running PEP:
 - `FORECAST_STATEMENT_SPECS` references CELH-specific canonical labels: `Deferred Other Costs - Current/Non-Current`, `Accrued Distributor Termination Fees`, `Note Receivable - Current/Non-Current`, `Convertible Preferred Stock`, `Acquisition of Big Beverages`. PEP will not have these; labels referenced by spec but missing on sheet simply skip (via the `if label not in sheet_rows: continue` guard), but CELH has specs for items PEP doesn't have that still surface other issues.
@@ -176,17 +171,16 @@ Surface area to watch when running PEP:
 3. ~~**Allowance for Credit Losses as `ratio_of_rev`**~~ — shipped 2026-04-24.
 4. ~~**iXBRL-concept-keyed generic library layer**~~ — shipped 2026-04-24 (third session) as reconcile-side CamelCase normalization + us-gaap aliases on existing library entries. Novel count diagnosis resolved: PDF-label mismatch WAS the main issue; CamelCase splitter in `normalize_label` bridges the vocabulary gap; no separate library needed.
 5. ~~**Run PG through the pipeline to a first QTR xlsx.**~~ Shipped 2026-04-24 (fourth session).
-6. **PG xlsx polish.** See Active §4. Specifically: self-ref NI formula, CF subtotal row insertion, preferred-stock label, EPS format branch.
-7. **Refresh playgrounds** (backlog from Option B). See Active §5.
+6. ~~**PG xlsx polish.**~~ Shipped 2026-04-25 (second session). Gross Profit row injection, all IS subtotals as formulas, NI Less NCI formula, CF Net Change formula, EPS matcher fixed.
+7. ~~**Refresh playgrounds.**~~ Shipped 2026-04-25 (second session).
 8. **CELH regression confirmation.** See Active §6.
-9. **Answer LTM-period validation question.** See Active §7.
-10. **Break OCI into its own worksheet.** See Active §8.
-11. **Extract `pattern_libraries/generic_forecast_rules.json`.** Blocked on §9 (model-calc quarterly).
-12. **Ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`.
-13. **Close the Allowance-driven BS gap** — optional polish. Low priority (<1% of TA at CELH).
-14. **Cross-model integration (GLP-1 + SNAP → CELH Revenue Growth %).** Deferred indefinitely per user.
-15. ~~Build `model-calc`~~ — shipped.
-16. ~~CF orphan-row slotting~~ — shipped.
+9. **Break OCI into its own worksheet.** See Active §7.
+10. **Extract `pattern_libraries/generic_forecast_rules.json`.** Blocked on §8 (model-calc quarterly).
+11. **Ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`.
+12. **Close the Allowance-driven BS gap** — optional polish. Low priority (<1% of TA at CELH).
+13. **Cross-model integration (GLP-1 + SNAP → CELH Revenue Growth %).** Deferred indefinitely per user.
+14. ~~Build `model-calc`~~ — shipped.
+15. ~~CF orphan-row slotting~~ — shipped.
 
 ---
 
@@ -228,15 +222,8 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 25th Framework Audit + Section-Driven Architecture Session.md` |
-| Prior handoff (Option B + PG YTD) | `Brain\Sessions\CELH Model\Handoffs\April 24th Option B Migration + PG YTD Quarterly Session.md` |
-| Prior handoff (PG novel triage + library expansion) | `Brain\Sessions\CELH Model\Handoffs\April 24th PG Novel Triage + Library Expansion Session.md` |
-| Prior handoff (quarterly pipeline) | `Brain\Sessions\CELH Model\Handoffs\April 24th SEC EDGAR + Quarterly Pipeline Session.md` |
-| Prior handoff (model-calc forecast balance) | `Brain\Sessions\CELH Model\Handoffs\April 24th Model-Calc Forecast Balance Session.md` |
-| Prior handoff (Phases 3–7) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Migration Phases 3-7 Session.md` |
-| Prior handoff (Phases 1–2) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Generic Library Migration Session.md` |
-| Prior handoff (model-write shipped) | `Brain\Sessions\CELH Model\Handoffs\April 23rd Model-Write Shipped Session.md` |
-| Prior handoff (playground polish) | `Brain\Sessions\CELH Model\Handoffs\April 22nd Playground Polish Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 25th PG Filing Tie-Out + Validator Trim Session.md` |
+| Prior handoffs (rotated) | `Brain\Sessions\CELH Model\Handoffs\Archive\` |
 | **sec-edgar-fetch skill** | `~\.claude\skills\sec-edgar-fetch\` |
 | **financials-extract-ixbrl skill** | `~\.claude\skills\financials-extract-ixbrl\` |
 | PG ticker root (1 ticker-specific entry for ESOP reserve) | `Brain\Knowledge\Model Schema\PG\` |
