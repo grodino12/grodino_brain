@@ -35,7 +35,8 @@
         "cost of products sold",
         "cost of goods and services sold"
       ],
-      "filing_section": "revenue_cost"
+      "filing_section": "revenue_cost",
+      "sign_convention": "negative"
     },
     {
       "rule_id": "GEN-IS-003",
@@ -60,7 +61,8 @@
         "sg&a",
         "selling general and administrative expenses"
       ],
-      "filing_section": "operating_expenses"
+      "filing_section": "operating_expenses",
+      "sign_convention": "negative"
     },
     {
       "rule_id": "GEN-IS-005",
@@ -1471,7 +1473,6 @@
       "rule_id": "GEN-CF-042",
       "model_sheet": "CASH FLOW",
       "model_label": "Acquisitions, Net of Cash Acquired",
-      "sign_convention": "negative",
       "aliases": [
         "acquisitions, net of cash acquired",
         "acquisition of businesses, net of cash acquired",
@@ -1510,7 +1511,6 @@
       "rule_id": "GEN-CF-045",
       "model_sheet": "CASH FLOW",
       "model_label": "Repayments of Short-Term Debt",
-      "sign_convention": "negative",
       "aliases": [
         "reductions in short-term debt",
         "reductions in short-term debt with original maturities of more than three months",
@@ -1547,7 +1547,6 @@
       "rule_id": "GEN-CF-048",
       "model_sheet": "CASH FLOW",
       "model_label": "Repayments of Long-Term Debt",
-      "sign_convention": "negative",
       "aliases": [
         "reductions in long-term debt",
         "repayments of long-term debt",
