@@ -37,6 +37,7 @@ class Section(str, Enum):
     OPERATING_EXPENSES = "operating_expenses"
     NON_OPERATING = "non_operating"
     TAX = "tax"
+    POST_NI_DEDUCTION = "post_ni_deduction"
     EPS = "eps"
     UNCLASSIFIED = "unclassified"
 

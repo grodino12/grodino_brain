@@ -825,6 +825,7 @@
       "rule_id": "GEN-IS-022",
       "model_sheet": "ANNL P&L",
       "model_label": "Net Income (Loss) Including NCI",
+      "row_type": "subtotal",
       "note": "Consolidated net income BEFORE splitting the NCI portion. For filers with noncontrolling interests, this is the line that gets split into parent (GEN-IS-011) + NCI (GEN-IS-023).",
       "aliases": [
         "profit loss",
@@ -840,6 +841,7 @@
       "rule_id": "GEN-IS-023",
       "model_sheet": "ANNL P&L",
       "model_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+      "filing_section": "post_ni_deduction",
       "aliases": [
         "net income loss attributable to noncontrolling interest",
         "net income attributable to noncontrolling interest",
