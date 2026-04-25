@@ -465,7 +465,7 @@ let NODES = [
 
   // Layer 2
   { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 505, w: 240, h: 56, label: 'financials-reconcile',
-    purpose: 'Apply per-ticker overrides on top of what extract already canonicalized, route items to model_sheet by (filing_type, statement_type), and surface novels. Generic-library lookup happens in extract; reconcile is now thin — ticker-ledger overlays + sheet routing + novel surfacing. Halts loudly if any item arrives with Section.UNCLASSIFIED (points to where filing_section needs to be added in the library).',
+    purpose: 'Apply per-ticker overrides on top of what extract already canonicalized, route items to model_sheet by (filing_type, statement_type), and surface novels. Generic-library lookup happens in extract; reconcile is now thin — ticker-ledger overlays + sheet routing + novel surfacing. Ticker-ledger lookup is variant-agnostic (one entry serves both 10-K and 10-Q runs; sheet name comes from SHEET_NAME[(filing_type, statement_type)] at item-reconcile time). Halts loudly if any item arrives with Section.UNCLASSIFIED (points to where filing_section needs to be added in the library).',
     input: 'RawFiling + ticker ledger', output: 'MappedFiling',
     ops: [
       'Apply ticker_index overrides on top of canonical_label / model_sheet from extract (ticker ledger wins on conflicts via tier scoring)',
@@ -529,7 +529,7 @@ let NODES = [
       'Dispatch each statement to its target sheet via stmt_to_sheet(stmt_type, filing_type)',
       'QTR column labels = Q{fiscal_quarter} FY{fiscal_year} (disambiguates quarters within fiscal year)',
       'ANNL column labels = FY{fiscal_year}; forecast columns FY2025E..FY2030E pre-allocated empty',
-      'Row layout from decisions ledger — separate entries for ANNL and QTR variants (reconcile already routed)',
+      'Row layout from decisions ledger — one entry per concept serves both 10-K and 10-Q (variant collapse 2026-04-25); reconcile derives sheet name from filing_type at item time',
       'Period dedup: newer filing wins when the same period appears in multiple inputs',
       'Emit only sheets with ≥1 row or historical column (empty QTR sheets suppressed when no 10-Q input, vice versa for ANNL)',
       '_subtotal items skipped (no live SUM formulas in v1 — model-calc adds driver tabs later)'
@@ -593,7 +593,7 @@ let NODES = [
 
   // Layer 2 — feeds / is appended-to by financials-reconcile
   { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 508, w: 240, h: 50, label: 'decisions_ledger.json',
-    purpose: 'Per-ticker mapping + structural-decision store. Generic library is source of truth for standard GAAP concepts; ticker ledgers carry only company-specific anomalies + new_rows. Current state: PG has 1 entry (NEW-BS-001 ESOP Debt Retirement Reserve, QTR-only); CELH has ~10. Entries may specify filing_subsection / filing_section / filing_type for multi-match disambiguation. Append-only, ISO-8601 dates.',
+    purpose: 'Per-ticker mapping + structural-decision store. Generic library is source of truth for standard GAAP concepts; ticker ledgers carry only company-specific anomalies + new_rows. Current state: PG has 2 entries (MAP-IS-001 Pre-Tax override, NEW-BS-001 ESOP Debt Retirement Reserve — both fire on 10-K and 10-Q after the 2026-04-25 variant collapse); CELH has ~10. Entries may specify filing_subsection / filing_section for multi-match disambiguation. The model_sheet field is informational (sheet_group derivation only) — actual sheet routing comes from SHEET_NAME[(filing_type, statement_type)]. Append-only, ISO-8601 dates.',
     path: 'Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json'
   },
 
@@ -691,7 +691,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v9';
+const LS_KEY = 'financials-architecture-playground-v10';
 
 function saveState() {
   try {

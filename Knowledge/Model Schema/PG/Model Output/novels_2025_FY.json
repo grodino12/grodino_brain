@@ -1,0 +1,82 @@
+{
+  "filing": {
+    "ticker": "PG",
+    "filing_type": "10-K",
+    "filing_date": "2025-08-04",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-FY\\filings\\PG_2025-06-30_10-K.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "FY2024",
+      "period_end_date": "2024-06-30",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
+      "value": "0.000001",
+      "raw_numeric_text": "1",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-FY\\filings\\PG_2025-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2024-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+      },
+      "nearest_matches": [
+        [
+          "common stock value",
+          0.6
+        ],
+        [
+          "common stock shares issued",
+          0.5588235294117647
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "FY2024",
+      "period_end_date": "2024-06-30",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
+      "value": "1341",
+      "raw_numeric_text": "1,341",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-FY\\filings\\PG_2025-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2024-06-30",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2024",
+      "period_end_date": "2024-06-30",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Impairment Of Intangible Assets Indefinitelived Excluding Goodwill",
+      "value": "1341",
+      "raw_numeric_text": "1,341",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-FY\\filings\\PG_2025-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2024-06-30",
+        "note": "iXBRL | Consolidated Statements of Earnings"
+      },
+      "nearest_matches": [
+        [
+          "impairment of intangible assets",
+          0.6391752577319587
+        ],
+        [
+          "impairment of intangibles",
+          0.5494505494505495
+        ]
+      ]
+    }
+  ]
+}
