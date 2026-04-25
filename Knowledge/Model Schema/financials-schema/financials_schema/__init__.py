@@ -9,7 +9,7 @@ from financials_schema.enums import (
 from financials_schema.citation import Citation
 from financials_schema.period import Period
 from financials_schema.line_item import MappedLineItem, RawLineItem
-from financials_schema.statement import Statement
+from financials_schema.statement import Statement, keep_statement_for_pipeline
 from financials_schema.filing import RawFiling
 from financials_schema.mapped import MappedFiling, NovelItem
 from financials_schema.validated import ValidatedFiling, ValidationResult
@@ -53,6 +53,7 @@ __all__ = [
     "ValidationResult",
     "build_generic_index",
     "is_subtotal_label",
+    "keep_statement_for_pipeline",
     "load_generic_library",
     "match_raw_item",
     "nearest_matches",
