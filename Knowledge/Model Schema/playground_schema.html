@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CELH Pydantic Schema — Class Map</title>
+<title>Financials Pipeline — Pydantic Schema Map</title>
 <style>
   :root {
     --bg: #0a0d14;
@@ -216,7 +216,7 @@
 </head>
 <body>
 <header>
-  <h1>CELH Pydantic Schema — Class Map</h1>
+  <h1>Financials Pipeline — Pydantic Schema Map</h1>
   <div class="sub">Every class in <code style="font-family:var(--mono)">financials-schema/</code>. Click any card for field details + Python source. Click a field's type to jump to the referenced class.</div>
   <div class="legend">
     <span><span class="swatch" style="background:var(--c-model)"></span>Model (BaseModel)</span>
@@ -358,6 +358,23 @@ const SCHEMA = [
       { name: 'no_duplicate_variants', sig: '@model_validator(mode="after")' }
     ]
   },
+  {
+    name: 'LibraryEntry', kind: 'model', extends: 'BaseModel', layer: 'patterns',
+    config: 'extra="forbid"',
+    doc: 'Pydantic-validated shape for one entry in the cross-ticker generic library (pattern_libraries/generic_line_item_mappings.json, 109 entries). load_generic_library() runs LibraryEntry.model_validate() on every mapping at LOAD time — the extra="forbid" config catches field-name typos, invalid Section / SignConvention values, and missing required fields immediately, with a message naming the offending rule_id. Replaces the previous "fail at use time when an item happens to match it" model.',
+    fields: [
+      { name: 'rule_id',           type: 'str',                            typeKind: 'primitive' },
+      { name: 'model_sheet',       type: 'str',                            typeKind: 'primitive' },
+      { name: 'model_label',       type: 'str',                            typeKind: 'primitive' },
+      { name: 'aliases',           type: 'list[str]',                      typeKind: 'container', default: 'Field(default_factory=list)' },
+      { name: 'filing_section',    type: 'Section | None',                 typeKind: 'enum', ref: 'Section', default: 'None' },
+      { name: 'filing_subsection', type: 'str | None',                     typeKind: 'primitive', default: 'None' },
+      { name: 'sign_convention',   type: 'Literal["as_reported", "positive", "negative"] | None', typeKind: 'literal', default: 'None' },
+      { name: 'memo',              type: 'bool',                           typeKind: 'primitive', default: 'False' },
+      { name: 'row_type',          type: 'RowType | None',                 typeKind: 'literal', default: 'None' },
+      { name: 'note',              type: 'str | None',                     typeKind: 'primitive', default: 'None' }
+    ]
+  },
 
   // ============ LAYER 1 — RAW ============
   {
@@ -386,9 +403,11 @@ const SCHEMA = [
   {
     name: 'RawLineItem', kind: 'model', extends: 'BaseModel', layer: 'raw',
     config: 'frozen=True',
-    doc: 'A single extracted line item in the native unit of its parent Statement. Preserves raw numeric notation (parens, dashes, footnotes) for audit. subsection_context is stamped by extract when the row is under a subsection header like "Earnings per share" or "Weighted average shares outstanding" — reconcile uses it to disambiguate repeated labels (e.g. Basic / Diluted appears in both EPS and shares). Immutable once created.',
+    doc: 'A single extracted line item in the native unit of its parent Statement. raw_filing_label holds the filer\'s literal wording (audit trail); canonical_label holds the canonical name from the generic library, populated at extract time via lookup.match_raw_item() — None means novel (unmatched). ledger_rule_id captures which library / ticker rule fired. subsection_context is stamped by extract when the row sits under a subsection header (EPS / Weighted avg shares) — used to disambiguate repeated labels. sign_convention is abs-based 3-value (as_reported / positive / negative); validators apply it via _signed_value() (±abs). Immutable once created.',
     fields: [
       { name: 'raw_filing_label', type: 'str',              typeKind: 'primitive' },
+      { name: 'canonical_label',  type: 'str | None',       typeKind: 'primitive', default: 'None' },
+      { name: 'ledger_rule_id',   type: 'str | None',       typeKind: 'primitive', default: 'None' },
       { name: 'value',            type: 'Decimal',          typeKind: 'primitive' },
       { name: 'raw_numeric_text', type: 'str',              typeKind: 'primitive' },
       { name: 'notation_flags',   type: 'NumericNotation',  typeKind: 'enum', ref: 'NumericNotation', default: 'NumericNotation.NONE' },
@@ -397,7 +416,7 @@ const SCHEMA = [
       { name: 'row_type',         type: 'Literal["section_header", "subsection_header", "line_item", "subtotal", "total", "memo"]', typeKind: 'literal', default: '"line_item"' },
       { name: 'section',          type: 'Section',          typeKind: 'enum', ref: 'Section', default: 'Section.UNCLASSIFIED' },
       { name: 'subsection_context', type: 'str | None',     typeKind: 'primitive', default: 'None' },
-      { name: 'sign_convention',  type: 'Literal["as_reported", "parens_negative", "expense_positive", "contra_account", "absolute_from_section_header"]', typeKind: 'literal', default: '"as_reported"' },
+      { name: 'sign_convention',  type: 'Literal["as_reported", "positive", "negative"]', typeKind: 'literal', default: '"as_reported"' },
       { name: 'citation',         type: 'Citation',         typeKind: 'model', ref: 'Citation' }
     ]
   },
@@ -443,13 +462,12 @@ const SCHEMA = [
   {
     name: 'MappedLineItem', kind: 'model', extends: 'RawLineItem', layer: 'mapped',
     layerLabel: 'LAYER 2 · MAPPED FILING',
-    doc: 'RawLineItem + mapping to a row in the Excel financial model.',
+    doc: 'RawLineItem + Excel-positioning metadata. canonical_label / ledger_rule_id are inherited from RawLineItem (set at extract time, possibly overridden by ticker ledger at reconcile). model_label is the rendered row label — usually == canonical_label, but a ticker-ledger override can replace it. model_sheet is routed by reconcile via SHEET_NAME[(filing_type, statement_type)].',
     fields: [
       { name: 'model_sheet',      type: 'str',            typeKind: 'primitive' },
       { name: 'model_row',        type: 'int',            typeKind: 'primitive' },
       { name: 'model_label',      type: 'str',            typeKind: 'primitive' },
-      { name: 'mapping_source',   type: 'Literal["ledger_auto", "user_decision", "novel"]', typeKind: 'literal' },
-      { name: 'ledger_rule_id',   type: 'str | None',     typeKind: 'primitive', default: 'None' }
+      { name: 'mapping_source',   type: 'Literal["ledger_auto", "user_decision", "novel"]', typeKind: 'literal' }
     ],
     inherited: 'RawLineItem'
   },
@@ -549,6 +567,7 @@ const LAYOUT = {
   'RegexPattern':      { col: 1, row: 0 },
   'RegexPatternEntry': { col: 2, row: 0 },
   'PatternLibrary':    { col: 1, row: 1 },
+  'LibraryEntry':      { col: 2, row: 1 },
 
   'Citation':         { col: 0, row: 0 },
   'Period':           { col: 1, row: 0 },
