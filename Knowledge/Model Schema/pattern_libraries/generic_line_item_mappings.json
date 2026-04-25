@@ -853,15 +853,18 @@
       "rule_id": "GEN-CF-001",
       "model_sheet": "CASH FLOW",
       "model_label": "Net Income (Loss)",
+      "row_type": "subtotal",
       "aliases": [
         "net income",
         "net income (loss)",
         "net loss",
         "net earnings",
         "net income loss",
-        "net earnings (loss)"
+        "net earnings (loss)",
+        "profit loss"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "note": "Starting NI line of indirect-method CF. For filers without NCI this is just NI. Filers with NCI may use either consolidated NI (us-gaap:ProfitLoss, includes NCI portion) or attributable-to-parent NI as the CF starting line; we treat both as the same row here since downstream CF arithmetic is unaffected."
     },
     {
       "rule_id": "GEN-CF-002",

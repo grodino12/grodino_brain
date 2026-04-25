@@ -2536,6 +2536,67 @@
         "fiscal_year": 2026,
         "fiscal_quarter": 2,
         "period_end_date": "2025-12-31",
+        "raw_period_label": "2025-10-01 to 2025-12-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Profit Loss",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "4331",
+          "raw_numeric_text": "4,331",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation Depletion And Amortization",
+          "canonical_label": "Depreciation & Amortization",
+          "ledger_rule_id": "GEN-CF-002",
+          "value": "803",
+          "raw_numeric_text": "803",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2026,
+        "fiscal_quarter": 2,
+        "period_end_date": "2025-12-31",
         "raw_period_label": "2025-07-01 to 2025-12-31 (26wk)",
         "period_length_weeks": 26,
         "is_comparative": false
@@ -2549,6 +2610,26 @@
       "currency": "USD",
       "dialect": "US_GAAP",
       "line_items": [
+        {
+          "raw_filing_label": "Profit Loss",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "9112",
+          "raw_numeric_text": "9,112",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
         {
           "raw_filing_label": "Depreciation Depletion And Amortization",
           "canonical_label": "Depreciation & Amortization",
@@ -3057,8 +3138,8 @@
         "fiscal_year": 2026,
         "fiscal_quarter": 2,
         "period_end_date": "2025-12-31",
-        "raw_period_label": "2025-10-01 to 2025-12-31 (13wk)",
-        "period_length_weeks": 13,
+        "raw_period_label": "as of 2025-12-31",
+        "period_length_weeks": null,
         "is_comparative": false
       },
       "unit": "millions",
@@ -3071,11 +3152,113 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
+          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "10825",
+          "raw_numeric_text": "10,825",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 4,
+        "period_end_date": "2025-06-30",
+        "raw_period_label": "as of 2025-06-30",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "9556",
+          "raw_numeric_text": "9,556",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 2,
+        "period_end_date": "2024-12-31",
+        "raw_period_label": "2024-10-01 to 2024-12-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Profit Loss",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "4659",
+          "raw_numeric_text": "4,659",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
+        {
           "raw_filing_label": "Depreciation Depletion And Amortization",
           "canonical_label": "Depreciation & Amortization",
           "ledger_rule_id": "GEN-CF-002",
-          "value": "803",
-          "raw_numeric_text": "803",
+          "value": "706",
+          "raw_numeric_text": "706",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -3086,7 +3269,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2025-12-31",
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2024-12-31",
             "note": "iXBRL | Consolidated Statements of Cash Flows"
           }
         }
@@ -3111,6 +3294,26 @@
       "currency": "USD",
       "dialect": "US_GAAP",
       "line_items": [
+        {
+          "raw_filing_label": "Profit Loss",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "8646",
+          "raw_numeric_text": "8,646",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Earnings"
+          }
+        },
         {
           "raw_filing_label": "Depreciation Depletion And Amortization",
           "canonical_label": "Depreciation & Amortization",
@@ -3619,8 +3822,8 @@
         "fiscal_year": 2025,
         "fiscal_quarter": 2,
         "period_end_date": "2024-12-31",
-        "raw_period_label": "2024-10-01 to 2024-12-31 (13wk)",
-        "period_length_weeks": 13,
+        "raw_period_label": "as of 2024-12-31",
+        "period_length_weeks": null,
         "is_comparative": true
       },
       "unit": "millions",
@@ -3633,23 +3836,64 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Depreciation Depletion And Amortization",
-          "canonical_label": "Depreciation & Amortization",
-          "ledger_rule_id": "GEN-CF-002",
-          "value": "706",
-          "raw_numeric_text": "706",
+          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "10230",
+          "raw_numeric_text": "10,230",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "operating",
+          "section": "cash_other",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2024-12-31",
-            "note": "iXBRL | Consolidated Statements of Cash Flows"
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2024,
+        "fiscal_quarter": 4,
+        "period_end_date": "2024-06-30",
+        "raw_period_label": "as of 2024-06-30",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "9482",
+          "raw_numeric_text": "9,482",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2026-Q2\\filings\\PG_2025-12-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
           }
         }
       ]
@@ -3662,7 +3906,7 @@
     "quarter_label": "2026-Q2",
     "fact_counts": {
       "total_in_file": 854,
-      "consolidated_used": 223,
+      "consolidated_used": 247,
       "concepts_mapped": 94
     }
   }
