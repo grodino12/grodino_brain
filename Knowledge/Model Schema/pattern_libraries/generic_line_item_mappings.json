@@ -140,7 +140,7 @@
       "rule_id": "GEN-IS-010",
       "model_sheet": "ANNL P&L",
       "model_label": "Income Tax (Benefit) Expense",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "note": "User-requested: store with expense positive, benefit negative (opposite of filing's natural sign). Sign flip applied during reconcile or model-write \u2014 TBD.",
       "aliases": [
         "income tax (expense) benefit",
@@ -742,7 +742,7 @@
       "model_sheet": "BALANCE SHEET",
       "model_label": "Treasury Stock",
       "filing_section": "equity",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "note": "Contra-equity line; typically reported as negative on BS. Stored expense_positive so value reads naturally.",
       "aliases": [
         "treasury stock",
@@ -1398,7 +1398,7 @@
       "rule_id": "GEN-IS-030",
       "model_sheet": "ANNL P&L",
       "model_label": "Interest Expense",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "aliases": [
         "interest expense",
         "interest expense nonoperating",
@@ -1421,7 +1421,7 @@
       "rule_id": "GEN-IS-032",
       "model_sheet": "ANNL P&L",
       "model_label": "Foreign Currency Loss",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "aliases": [
         "foreign exchange loss",
         "foreign currency exchange loss",
@@ -1445,7 +1445,7 @@
       "rule_id": "GEN-IS-034",
       "model_sheet": "ANNL P&L",
       "model_label": "Other Non-Operating Expense",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "aliases": [
         "other expense",
         "other non-operating expense",
@@ -1471,7 +1471,7 @@
       "rule_id": "GEN-CF-042",
       "model_sheet": "CASH FLOW",
       "model_label": "Acquisitions, Net of Cash Acquired",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "aliases": [
         "acquisitions, net of cash acquired",
         "acquisition of businesses, net of cash acquired",
@@ -1510,7 +1510,7 @@
       "rule_id": "GEN-CF-045",
       "model_sheet": "CASH FLOW",
       "model_label": "Repayments of Short-Term Debt",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "aliases": [
         "reductions in short-term debt",
         "reductions in short-term debt with original maturities of more than three months",
@@ -1547,7 +1547,7 @@
       "rule_id": "GEN-CF-048",
       "model_sheet": "CASH FLOW",
       "model_label": "Repayments of Long-Term Debt",
-      "sign_convention": "expense_positive",
+      "sign_convention": "negative",
       "aliases": [
         "reductions in long-term debt",
         "repayments of long-term debt",

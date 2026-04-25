@@ -17,11 +17,9 @@ RowType = Literal[
 ]
 
 SignConvention = Literal[
-    "as_reported",
-    "parens_negative",
-    "expense_positive",
-    "contra_account",
-    "absolute_from_section_header",
+    "as_reported",   # default: pass value through as-is
+    "positive",      # always render as +abs(value), regardless of filer's sign
+    "negative",      # always render as -abs(value), regardless of filer's sign
 ]
 
 MappingSource = Literal["ledger_auto", "user_decision", "novel"]

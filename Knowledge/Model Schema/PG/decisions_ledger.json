@@ -1,5 +1,5 @@
 {
-  "_notes": "PG decisions ledger — initially empty. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Annual entries (model_sheet=ANNL P&L / BALANCE SHEET / CASH FLOW) and quarterly entries (model_sheet=QTR P&L / QTR BS / QTR CF) coexist — reconcile picks the variant matching the filing_type.",
+  "_notes": "PG decisions ledger \u00e2\u20ac\u201d initially empty. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Annual entries (model_sheet=ANNL P&L / BALANCE SHEET / CASH FLOW) and quarterly entries (model_sheet=QTR P&L / QTR BS / QTR CF) coexist \u00e2\u20ac\u201d reconcile picks the variant matching the filing_type.",
   "_last_updated": "2026-04-24",
   "ticker": "PG",
   "mappings": [],
@@ -10,8 +10,8 @@
       "model_sheet": "QTR BS",
       "new_row_label": "ESOP Debt Retirement Reserve",
       "filing_section": "equity",
-      "sign_convention": "expense_positive",
-      "note": "Contra-equity reserve offsetting PG's guarantee of the ESOP trust's debt. Presented as a negative number reducing TSE on the filing; stored expense_positive so value reads naturally in the model. ~$637M at Q2 FY2026, declining as ESOP amortizes. Company-specific (legacy leveraged ESOP from 1989) — not promoted to generic library. When PG's first 10-K is run, add a parallel ANNL BS entry."
+      "sign_convention": "negative",
+      "note": "Contra-equity reserve offsetting PG's guarantee of the ESOP trust's debt. Presented as a negative number reducing TSE on the filing; stored expense_positive so value reads naturally in the model. ~$637M at Q2 FY2026, declining as ESOP amortizes. Company-specific (legacy leveraged ESOP from 1989) \u00e2\u20ac\u201d not promoted to generic library. When PG's first 10-K is run, add a parallel ANNL BS entry."
     }
   ],
   "superseded_rule_ids": [],
