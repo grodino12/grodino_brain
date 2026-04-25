@@ -445,6 +445,26 @@
             }
           },
           {
+            "raw_filing_label": "Preferred Stock Value",
+            "canonical_label": "Convertible Preferred Stock",
+            "ledger_rule_id": "GEN-BS-027",
+            "value": "798",
+            "raw_numeric_text": "798",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "line_item",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2024-06-30",
+              "note": "iXBRL | Consolidated Balance Sheets"
+            }
+          },
+          {
             "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
             "canonical_label": "Par Value of Equity",
             "ledger_rule_id": "GEN-BS-042",
@@ -1142,6 +1162,66 @@
               "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
               "page": 1,
               "line_hint": "us-gaap:Liabilities | ctx:instant:2023-06-30",
+              "note": "iXBRL | Consolidated Balance Sheets"
+            }
+          },
+          {
+            "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
+            "canonical_label": "Par Value of Equity",
+            "ledger_rule_id": "GEN-BS-042",
+            "value": "0.000001",
+            "raw_numeric_text": "1",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
+              "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+            }
+          },
+          {
+            "raw_filing_label": "Preferred Stock Shares Authorized",
+            "canonical_label": "Common Stock - Shares Issued",
+            "ledger_rule_id": "GEN-BS-037",
+            "value": "600",
+            "raw_numeric_text": "600",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "memo",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2023-06-30",
+              "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+            }
+          },
+          {
+            "raw_filing_label": "Preferred Stock Value",
+            "canonical_label": "Convertible Preferred Stock",
+            "ledger_rule_id": "GEN-BS-027",
+            "value": "819",
+            "raw_numeric_text": "819",
+            "notation_flags": 0,
+            "footnote_markers": [],
+            "indent_level": 2,
+            "row_type": "line_item",
+            "section": "equity",
+            "subsection_context": null,
+            "sign_convention": "as_reported",
+            "citation": {
+              "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+              "page": 1,
+              "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2023-06-30",
               "note": "iXBRL | Consolidated Balance Sheets"
             }
           },
@@ -3255,7 +3335,7 @@
             "raw_filing_label": "Payments For Proceeds From Investments",
             "canonical_label": "Other Investing Activities",
             "ledger_rule_id": "GEN-CF-043",
-            "value": "281",
+            "value": "-281",
             "raw_numeric_text": "281",
             "notation_flags": 0,
             "footnote_markers": [],
@@ -3897,7 +3977,7 @@
             "raw_filing_label": "Payments For Proceeds From Investments",
             "canonical_label": "Other Investing Activities",
             "ledger_rule_id": "GEN-CF-043",
-            "value": "3",
+            "value": "-3",
             "raw_numeric_text": "3",
             "notation_flags": 0,
             "footnote_markers": [],
@@ -4285,7 +4365,7 @@
       "quarter_label": "2024-FY",
       "fact_counts": {
         "total_in_file": 1560,
-        "consolidated_used": 283,
+        "consolidated_used": 289,
         "concepts_mapped": 108
       }
     }
@@ -4793,6 +4873,30 @@
       "model_sheet": "_subtotal",
       "model_row": 0,
       "model_label": "Liabilities",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Preferred Stock Value",
+      "canonical_label": "Convertible Preferred Stock",
+      "ledger_rule_id": "GEN-BS-027",
+      "value": "798",
+      "raw_numeric_text": "798",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "line_item",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2024-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Convertible Preferred Stock",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5609,6 +5713,78 @@
       "model_sheet": "_subtotal",
       "model_row": 0,
       "model_label": "Liabilities",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
+      "canonical_label": "Par Value of Equity",
+      "ledger_rule_id": "GEN-BS-042",
+      "value": "0.000001",
+      "raw_numeric_text": "1",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Par Value of Equity",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Preferred Stock Shares Authorized",
+      "canonical_label": "Common Stock - Shares Issued",
+      "ledger_rule_id": "GEN-BS-037",
+      "value": "600",
+      "raw_numeric_text": "600",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "memo",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2023-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Common Stock - Shares Issued",
+      "mapping_source": "ledger_auto"
+    },
+    {
+      "raw_filing_label": "Preferred Stock Value",
+      "canonical_label": "Convertible Preferred Stock",
+      "ledger_rule_id": "GEN-BS-027",
+      "value": "819",
+      "raw_numeric_text": "819",
+      "notation_flags": 0,
+      "footnote_markers": [],
+      "indent_level": 2,
+      "row_type": "line_item",
+      "section": "equity",
+      "subsection_context": null,
+      "sign_convention": "as_reported",
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2023-06-30",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
+      "model_sheet": "BALANCE SHEET",
+      "model_row": 0,
+      "model_label": "Convertible Preferred Stock",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7991,7 +8167,7 @@
       "raw_filing_label": "Payments For Proceeds From Investments",
       "canonical_label": "Other Investing Activities",
       "ledger_rule_id": "GEN-CF-043",
-      "value": "281",
+      "value": "-281",
       "raw_numeric_text": "281",
       "notation_flags": 0,
       "footnote_markers": [],
@@ -8711,7 +8887,7 @@
       "raw_filing_label": "Payments For Proceeds From Investments",
       "canonical_label": "Other Investing Activities",
       "ledger_rule_id": "GEN-CF-043",
-      "value": "3",
+      "value": "-3",
       "raw_numeric_text": "3",
       "notation_flags": 0,
       "footnote_markers": [],

@@ -444,6 +444,66 @@
           }
         },
         {
+          "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
+          "canonical_label": "Par Value of Equity",
+          "ledger_rule_id": "GEN-BS-042",
+          "value": "0.000001",
+          "raw_numeric_text": "1",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2023-06-30",
+            "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred Stock Value",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
+          "value": "819",
+          "raw_numeric_text": "819",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2023-06-30",
+            "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred Stock Shares Authorized",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "200",
+          "raw_numeric_text": "200",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2023-06-30",
+            "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+          }
+        },
+        {
           "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
           "canonical_label": "Par Value of Equity",
           "ledger_rule_id": "GEN-BS-042",
@@ -547,7 +607,7 @@
           "raw_filing_label": "Accumulated Other Comprehensive Income Loss Net Of Tax",
           "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
           "ledger_rule_id": "GEN-BS-030",
-          "value": "12220",
+          "value": "-12220",
           "raw_numeric_text": "12,220",
           "notation_flags": 0,
           "footnote_markers": [],
@@ -1125,6 +1185,46 @@
           }
         },
         {
+          "raw_filing_label": "Preferred Stock Shares Authorized",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "600",
+          "raw_numeric_text": "600",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2022-06-30",
+            "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred Stock Value",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
+          "value": "843",
+          "raw_numeric_text": "843",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2022-06-30",
+            "note": "iXBRL | CONSOLIDATED BALANCE SHEETS"
+          }
+        },
+        {
           "raw_filing_label": "Common Stock Shares Authorized",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
@@ -1228,7 +1328,7 @@
           "raw_filing_label": "Accumulated Other Comprehensive Income Loss Net Of Tax",
           "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
           "ledger_rule_id": "GEN-BS-030",
-          "value": "12189",
+          "value": "-12189",
           "raw_numeric_text": "12,189",
           "notation_flags": 0,
           "footnote_markers": [],
@@ -2572,7 +2672,7 @@
           "raw_filing_label": "Payments For Proceeds From Investments",
           "canonical_label": "Other Investing Activities",
           "ledger_rule_id": "GEN-CF-043",
-          "value": "281",
+          "value": "-281",
           "raw_numeric_text": "281",
           "notation_flags": 0,
           "footnote_markers": [],
@@ -3214,7 +3314,7 @@
           "raw_filing_label": "Payments For Proceeds From Investments",
           "canonical_label": "Other Investing Activities",
           "ledger_rule_id": "GEN-CF-043",
-          "value": "3",
+          "value": "-3",
           "raw_numeric_text": "3",
           "notation_flags": 0,
           "footnote_markers": [],
@@ -3616,7 +3716,7 @@
           "raw_filing_label": "Gains Losses On Extinguishment Of Debt",
           "canonical_label": "Gain (Loss) on Extinguishment of Debt",
           "ledger_rule_id": "GEN-CF-050",
-          "value": "512",
+          "value": "-512",
           "raw_numeric_text": "512",
           "notation_flags": 0,
           "footnote_markers": [],
@@ -4264,7 +4364,7 @@
     "quarter_label": "2023-FY",
     "fact_counts": {
       "total_in_file": 1524,
-      "consolidated_used": 275,
+      "consolidated_used": 281,
       "concepts_mapped": 108
     }
   }
