@@ -2,7 +2,18 @@
   "_notes": "PG decisions ledger \u00e2\u20ac\u201d initially empty. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Annual entries (model_sheet=ANNL P&L / BALANCE SHEET / CASH FLOW) and quarterly entries (model_sheet=QTR P&L / QTR BS / QTR CF) coexist \u00e2\u20ac\u201d reconcile picks the variant matching the filing_type.",
   "_last_updated": "2026-04-24",
   "ticker": "PG",
-  "mappings": [],
+  "mappings": [
+    {
+      "rule_id": "MAP-IS-001",
+      "filing_term_normalized": "income loss including portion attributable to noncontrolling interest",
+      "model_sheet": "QTR P&L",
+      "model_label": "Pre-Tax Income (Loss)",
+      "filing_section": "non_operating",
+      "row_type": "subtotal",
+      "decided_date": "2026-04-25",
+      "note": "PG's iXBRL tags Earnings Before Income Taxes (11,455 H1 FY2026) with us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest — a non-standard use; FASB taxonomy reserves this concept for post-tax NI Including NCI. Override routes the concept to Pre-Tax Income for PG. Generic library alias for this concept stays valid for filers tagging it correctly. When PG's first 10-K is run, add a parallel ANNL P&L entry. Long-term fix: parse iXBRL label linkbase to recover the visual label per concept."
+    }
+  ],
   "new_rows": [
     {
       "rule_id": "NEW-BS-001",

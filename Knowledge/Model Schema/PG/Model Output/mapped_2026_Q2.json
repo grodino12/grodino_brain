@@ -5619,15 +5619,15 @@
     },
     {
       "raw_filing_label": "Income Loss Including Portion Attributable To Noncontrolling Interest",
-      "canonical_label": "Net Income (Loss)",
-      "ledger_rule_id": "GEN-IS-022",
+      "canonical_label": "Pre-Tax Income (Loss)",
+      "ledger_rule_id": "MAP-IS-001",
       "value": "11455",
       "raw_numeric_text": "11,455",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "subtotal",
-      "section": "unclassified",
+      "section": "non_operating",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -5638,7 +5638,7 @@
       },
       "model_sheet": "QTR P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss)",
+      "model_label": "Pre-Tax Income (Loss)",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5955,15 +5955,15 @@
     },
     {
       "raw_filing_label": "Income Loss Including Portion Attributable To Noncontrolling Interest",
-      "canonical_label": "Net Income (Loss)",
-      "ledger_rule_id": "GEN-IS-022",
+      "canonical_label": "Pre-Tax Income (Loss)",
+      "ledger_rule_id": "MAP-IS-001",
       "value": "10985",
       "raw_numeric_text": "10,985",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "subtotal",
-      "section": "unclassified",
+      "section": "non_operating",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -5974,7 +5974,7 @@
       },
       "model_sheet": "QTR P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss)",
+      "model_label": "Pre-Tax Income (Loss)",
       "mapping_source": "ledger_auto"
     },
     {
