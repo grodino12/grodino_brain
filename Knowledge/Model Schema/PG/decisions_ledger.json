@@ -1,28 +1,28 @@
 {
-  "_notes": "PG decisions ledger \u00e2\u20ac\u201d initially empty. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Annual entries (model_sheet=ANNL P&L / BALANCE SHEET / CASH FLOW) and quarterly entries (model_sheet=QTR P&L / QTR BS / QTR CF) coexist \u00e2\u20ac\u201d reconcile picks the variant matching the filing_type.",
-  "_last_updated": "2026-04-24",
+  "_notes": "PG decisions ledger. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. After the 2026-04-25 variant collapse, model_sheet is informational only (sheet_group derivation: BS / IS / CF). The actual sheet routed to at write time comes from SHEET_NAME[(filing_type, statement_type)] in reconcile, so a single entry serves both 10-K and 10-Q runs.",
+  "_last_updated": "2026-04-25",
   "ticker": "PG",
   "mappings": [
     {
       "rule_id": "MAP-IS-001",
       "filing_term_normalized": "income loss including portion attributable to noncontrolling interest",
-      "model_sheet": "QTR P&L",
+      "model_sheet": "ANNL P&L",
       "model_label": "Pre-Tax Income (Loss)",
       "filing_section": "non_operating",
       "row_type": "subtotal",
       "decided_date": "2026-04-25",
-      "note": "PG's iXBRL tags Earnings Before Income Taxes (11,455 H1 FY2026) with us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest — a non-standard use; FASB taxonomy reserves this concept for post-tax NI Including NCI. Override routes the concept to Pre-Tax Income for PG. Generic library alias for this concept stays valid for filers tagging it correctly. When PG's first 10-K is run, add a parallel ANNL P&L entry. Long-term fix: parse iXBRL label linkbase to recover the visual label per concept."
+      "note": "PG's iXBRL tags Earnings Before Income Taxes with us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest — a non-standard use; FASB taxonomy reserves this concept for post-tax NI Including NCI. Override routes the concept to Pre-Tax Income for PG on both 10-K and 10-Q filings. Generic library alias for this concept stays valid for filers tagging it correctly. Long-term fix: parse iXBRL label linkbase to recover the visual label per concept."
     }
   ],
   "new_rows": [
     {
       "rule_id": "NEW-BS-001",
       "filing_term_normalized": "reserve for esop debt retirement",
-      "model_sheet": "QTR BS",
+      "model_sheet": "BALANCE SHEET",
       "new_row_label": "ESOP Debt Retirement Reserve",
       "filing_section": "equity",
       "sign_convention": "negative",
-      "note": "Contra-equity reserve offsetting PG's guarantee of the ESOP trust's debt. Presented as a negative number reducing TSE on the filing; stored expense_positive so value reads naturally in the model. ~$637M at Q2 FY2026, declining as ESOP amortizes. Company-specific (legacy leveraged ESOP from 1989) \u00e2\u20ac\u201d not promoted to generic library. When PG's first 10-K is run, add a parallel ANNL BS entry."
+      "note": "Contra-equity reserve offsetting PG's guarantee of the ESOP trust's debt. Presented as a negative number reducing TSE on the filing. ~$637M at Q2 FY2026, declining as ESOP amortizes. Company-specific (legacy leveraged ESOP from 1989) — not promoted to generic library. Applies to both 10-K and 10-Q filings."
     }
   ],
   "superseded_rule_ids": [],
