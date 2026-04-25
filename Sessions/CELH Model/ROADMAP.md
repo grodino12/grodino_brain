@@ -3,7 +3,7 @@ type: roadmap
 date: 2026-04-25
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 25th Framework Audit + Section-Driven Architecture Session"
+last_session: "April 25th PG Filing Tie-Out + Validator Trim Session"
 ---
 
 # Celsius HF Case Study — Roadmap
@@ -21,7 +21,7 @@ Living document. Update after each session. **Current project focus: build a uni
 | **SEC EDGAR ingestion** | Shipped 2026-04-24 — `sec-edgar-fetch` + `--all`. PG: 99 10-Q folders | Pull more tickers on demand |
 | **Generic cross-ticker library** | **109 entries** (down from 122: -7 OCI removed, -6 split donors after recombination). All BS+CF+IS have `filing_section` set (or intentionally null on bottom-line/reconciliation rows). Sign_convention now on 7 entries only | Grow per novel triage protocol; restore OCI when 4th statement ships |
 | **Sign-convention architecture** | **Reduced to abs-based 3-value (`as_reported` / `positive` / `negative`) 2026-04-25.** IS-only keyword detection in `match_raw_item` covers split-direction lines (Income Tax, FX, Other Non-Op). `parens_negative` special-case removed | Stable |
-| **Validator architecture** | **Section-driven 2026-04-25** — `partition_balance_sheet` and `partition_cash_flow` bucket by `item.section`; subtotals captured as anchors. CF-1, X-4 keyed on `canonical_label` not English prose. UNCLASSIFIED triggers reconcile halt | Stable; CF-2 keys on model_label (canonical-equivalent) |
+| **Validator architecture** | **Trimmed to 7 filer-tie rules 2026-04-25 (second session)** — BS-1..BS-5 (TCA/TA/TCL/TL/TSE), IS-4 (NI), CF-1 (Net Change in Cash). Each compares computed sum/cascade against the filer's reported subtotal. Deleted: BS-6 (accounting equation), IS-1/2/3 (cascades), CF-2/3/4/5, X-1/2/4 cross-statement, M-1 mapping consistency. validate.py shrunk 960 → 650 lines. `--allow-fails` flag added | Stable |
 | **Library load-time guard** | **`LibraryEntry` Pydantic model 2026-04-25** — `extra="forbid"` catches field-name typos, invalid enum values at load | Stable |
 | **Generic forecast-rules library** | Not started | Extract from `calc.py` after QTR polish ships |
 | **Ticker onboarding doc** | Not started | One-page guide once QTR xlsx polish stabilizes |
