@@ -90,7 +90,15 @@
         "interest income expense net",
         "interest income net",
         "net interest income",
-        "net interest expense"
+        "net interest expense",
+        "interest income",
+        "investment income interest",
+        "interest income on note receivable",
+        "interest income on notes receivable",
+        "interest earned",
+        "interest expense",
+        "interest expense nonoperating",
+        "interest and debt expense"
       ],
       "filing_section": "non_operating"
     },
@@ -102,7 +110,13 @@
         "foreign exchange gain (loss)",
         "foreign currency exchange gain (loss)",
         "foreign currency transaction gain (loss)",
-        "net foreign exchange gain (loss)"
+        "net foreign exchange gain (loss)",
+        "foreign exchange gain",
+        "foreign currency exchange gain",
+        "foreign currency transaction gain",
+        "foreign exchange loss",
+        "foreign currency exchange loss",
+        "foreign currency transaction loss"
       ],
       "filing_section": "non_operating"
     },
@@ -117,7 +131,15 @@
         "other non-operating income (expense)",
         "other non-operating income/(expense), net",
         "other, net",
-        "miscellaneous income, net"
+        "miscellaneous income, net",
+        "other income",
+        "other non-operating income",
+        "miscellaneous income",
+        "other nonoperating income",
+        "other expense",
+        "other non-operating expense",
+        "miscellaneous expense",
+        "other nonoperating expense"
       ],
       "filing_section": "non_operating"
     },
@@ -141,7 +163,7 @@
     {
       "rule_id": "GEN-IS-010",
       "model_sheet": "ANNL P&L",
-      "model_label": "Income Tax (Benefit) Expense",
+      "model_label": "Income Tax (Expense) Benefit",
       "note": "User-requested: store with expense positive, benefit negative (opposite of filing's natural sign). Sign flip applied during reconcile or model-write \u2014 TBD.",
       "aliases": [
         "income tax (expense) benefit",
@@ -1381,79 +1403,6 @@
         "income taxes paid"
       ],
       "filing_section": "operating"
-    },
-    {
-      "rule_id": "GEN-IS-029",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Interest Income",
-      "aliases": [
-        "interest income",
-        "investment income interest",
-        "interest income on note receivable",
-        "interest income on notes receivable",
-        "interest earned"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-030",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Interest Expense",
-      "sign_convention": "negative",
-      "aliases": [
-        "interest expense",
-        "interest expense nonoperating",
-        "interest and debt expense"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-031",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Foreign Currency Gain",
-      "aliases": [
-        "foreign exchange gain",
-        "foreign currency exchange gain",
-        "foreign currency transaction gain"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-032",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Foreign Currency Loss",
-      "sign_convention": "negative",
-      "aliases": [
-        "foreign exchange loss",
-        "foreign currency exchange loss",
-        "foreign currency transaction loss"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-033",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Other Non-Operating Income",
-      "aliases": [
-        "other income",
-        "other non-operating income",
-        "miscellaneous income",
-        "other nonoperating income"
-      ],
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "GEN-IS-034",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Other Non-Operating Expense",
-      "sign_convention": "negative",
-      "aliases": [
-        "other expense",
-        "other non-operating expense",
-        "miscellaneous expense",
-        "other nonoperating expense"
-      ],
-      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-CF-041",
