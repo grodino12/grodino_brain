@@ -222,19 +222,19 @@ def match_raw_item(
     `model_label`, `model_sheet`, `filing_section`, `filing_subsection`,
     `sign_convention`, `memo`, `row_type`, ...) on match, or None on miss.
 
-    Match order (display label is semantically authoritative — the filer
-    chose it for human readers. us-gaap concept names can be mis-tagged or
-    overloaded, so they're the LAST resort):
-      1. Exact-normalized match on raw_filing_label (filer display)
-      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold)
+    Match order:
+      1. Exact-normalized match on raw_filing_label
+      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold; threshold
+         drops to 70 when `concept` is in scope, since iXBRL CamelCase-split
+         labels are inherently noisier vs library prose aliases)
       3. Exact-normalized match on concept (iXBRL us-gaap local name) —
          fallback for filers whose display wording isn't in the library yet
-
-    Example of why display > concept: PG tags "EARNINGS BEFORE INCOME TAXES"
-    with us-gaap concept `IncomeLossIncludingPortionAttributableToNoncontrollingInterest`,
-    which other filers use for consolidated net income. The display label
-    disambiguates — we follow it.
     """
+    # iXBRL labels are CamelCase-split concept names — high baseline noise
+    # vs library aliases written for human prose ("Depreciation Depletion And
+    # Amortization" vs "depreciation and amortization" → ratio ~74).
+    if concept is not None and fuzzy_threshold > 70:
+        fuzzy_threshold = 70
     group = STMT_TO_GROUP[statement_type]
     normalized = normalize_label(raw_filing_label)
 
