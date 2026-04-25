@@ -181,8 +181,9 @@
     {
       "rule_id": "GEN-IS-011",
       "model_sheet": "ANNL P&L",
-      "model_label": "Net Income (Loss)",
+      "model_label": "Net Income (Loss) Less NCI",
       "row_type": "subtotal",
+      "note": "Net income attributable to the parent (= consolidated NI from GEN-IS-022 minus the NCI portion from GEN-IS-023). Tied to us-gaap:NetIncomeLoss concept which most filers use specifically for the parent-attributable line. For filers WITHOUT noncontrolling interests, this entry typically does not match anything (NI = parent NI; only GEN-IS-022 is rendered).",
       "aliases": [
         "net income (loss)",
         "net income",
@@ -824,9 +825,9 @@
     {
       "rule_id": "GEN-IS-022",
       "model_sheet": "ANNL P&L",
-      "model_label": "Net Income (Loss) Including NCI",
+      "model_label": "Net Income (Loss)",
       "row_type": "subtotal",
-      "note": "Consolidated net income BEFORE splitting the NCI portion. For filers with noncontrolling interests, this is the line that gets split into parent (GEN-IS-011) + NCI (GEN-IS-023).",
+      "note": "The TRUE Net Income line — consolidated, BEFORE splitting the NCI portion. Always rendered before any NCI adjustments. For filers without noncontrolling interests, this is the only NI line shown. For filers with NCI, this row is followed by GEN-IS-023 (NCI portion) and GEN-IS-011 (NI Less NCI = parent's share).",
       "aliases": [
         "profit loss",
         "income loss including portion attributable to noncontrolling interest",
