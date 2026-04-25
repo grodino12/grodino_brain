@@ -7415,14 +7415,6 @@
       "message": "TSE = sum of 8 equity components"
     },
     {
-      "rule_id": "BS-6 @ Q2 FY2026",
-      "expected": "127286",
-      "actual": "127286",
-      "gap": "0",
-      "severity": "pass",
-      "message": "Accounting equation: TA (127286) = TL (73969) + Mezz (0) + TSE (53317)"
-    },
-    {
       "rule_id": "BS-1 @ Q4 FY2025",
       "expected": "25392",
       "actual": "25392",
@@ -7463,68 +7455,12 @@
       "message": "TSE = sum of 8 equity components"
     },
     {
-      "rule_id": "BS-6 @ Q4 FY2025",
-      "expected": "125230",
-      "actual": "125231",
-      "gap": "1",
-      "severity": "pass",
-      "message": "Accounting equation: TA (125231) = TL (72946) + Mezz (0) + TSE (52284)"
-    },
-    {
-      "rule_id": "IS-1 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Gross Profit anchor or Revenue row missing"
-    },
-    {
-      "rule_id": "IS-2 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Operating Income or Gross Profit anchor missing"
-    },
-    {
-      "rule_id": "IS-3 @ Q2 FY2026",
-      "expected": "11454",
-      "actual": "11455",
-      "gap": "1",
-      "severity": "pass",
-      "message": "Pre-Tax (11455) = Operating Income (11222) + NonOp (232 across 3 rows)"
-    },
-    {
       "rule_id": "IS-4 @ Q2 FY2026",
       "expected": "9112",
       "actual": "9112",
       "gap": "0",
       "severity": "pass",
       "message": "Net Income (9112) = Pre-Tax (11455) + Tax (-2343 across 1 rows)"
-    },
-    {
-      "rule_id": "IS-1 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Gross Profit anchor or Revenue row missing"
-    },
-    {
-      "rule_id": "IS-2 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Operating Income or Gross Profit anchor missing"
-    },
-    {
-      "rule_id": "IS-3 @ Q2 FY2026",
-      "expected": "10984",
-      "actual": "10985",
-      "gap": "1",
-      "severity": "pass",
-      "message": "Pre-Tax (10985) = Operating Income (11538) + NonOp (-554 across 3 rows)"
     },
     {
       "rule_id": "IS-4 @ Q2 FY2026",
@@ -7535,60 +7471,12 @@
       "message": "Net Income (8646) = Pre-Tax (10985) + Tax (-2339 across 1 rows)"
     },
     {
-      "rule_id": "IS-1 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Gross Profit anchor or Revenue row missing"
-    },
-    {
-      "rule_id": "IS-2 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Operating Income or Gross Profit anchor missing"
-    },
-    {
-      "rule_id": "IS-3 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Pre-Tax or Operating Income anchor missing"
-    },
-    {
       "rule_id": "IS-4 @ Q2 FY2025",
       "expected": "0",
       "actual": "0",
       "gap": "0",
       "severity": "warning",
       "message": "inconclusive — Net Income or Pre-Tax anchor missing"
-    },
-    {
-      "rule_id": "IS-1 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Gross Profit anchor or Revenue row missing"
-    },
-    {
-      "rule_id": "IS-2 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Operating Income or Gross Profit anchor missing"
-    },
-    {
-      "rule_id": "IS-3 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Pre-Tax or Operating Income anchor missing"
     },
     {
       "rule_id": "IS-4 @ Q2 FY2025",
@@ -7607,76 +7495,12 @@
       "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
     },
     {
-      "rule_id": "CF-2 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from operating activities not found"
-    },
-    {
-      "rule_id": "CF-4 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from investing activities not found"
-    },
-    {
-      "rule_id": "CF-5 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from financing activities not found"
-    },
-    {
       "rule_id": "CF-1 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q2 FY2026",
-      "expected": "-1415",
-      "actual": "9127",
-      "gap": "10542",
-      "severity": "fail",
-      "message": "Sum of 5 operating items = Net cash from operating (9127)"
-    },
-    {
-      "rule_id": "CF-4 @ Q2 FY2026",
-      "expected": "-2030",
-      "actual": "-2029",
-      "gap": "1",
-      "severity": "pass",
-      "message": "Sum of 4 investing items = Net cash from investing (-2029)"
-    },
-    {
-      "rule_id": "CF-5 @ Q2 FY2026",
-      "expected": "-6204",
-      "actual": "-6205",
+      "expected": "749",
+      "actual": "748",
       "gap": "-1",
       "severity": "pass",
-      "message": "Sum of 8 financing items = Net cash from financing (-6205)"
+      "message": "CFO (9127) + CFI (-2029) + CFF (-6205) + CashOther (-144) = NetChange"
     },
     {
       "rule_id": "CF-1 @ Q2 FY2026",
@@ -7685,38 +7509,6 @@
       "gap": "0",
       "severity": "warning",
       "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from operating activities not found"
-    },
-    {
-      "rule_id": "CF-4 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from investing activities not found"
-    },
-    {
-      "rule_id": "CF-5 @ Q2 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from financing activities not found"
     },
     {
       "rule_id": "CF-1 @ Q4 FY2025",
@@ -7727,36 +7519,12 @@
       "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
     },
     {
-      "rule_id": "CF-2 @ Q4 FY2025",
+      "rule_id": "CF-1 @ Q2 FY2025",
       "expected": "0",
       "actual": "0",
       "gap": "0",
       "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q4 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from operating activities not found"
-    },
-    {
-      "rule_id": "CF-4 @ Q4 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from investing activities not found"
-    },
-    {
-      "rule_id": "CF-5 @ Q4 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from financing activities not found"
+      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
     },
     {
       "rule_id": "CF-1 @ Q2 FY2025",
@@ -7767,116 +7535,12 @@
       "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
     },
     {
-      "rule_id": "CF-2 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from operating activities not found"
-    },
-    {
-      "rule_id": "CF-4 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from investing activities not found"
-    },
-    {
-      "rule_id": "CF-5 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from financing activities not found"
-    },
-    {
       "rule_id": "CF-1 @ Q2 FY2025",
       "expected": "0",
       "actual": "0",
       "gap": "0",
       "severity": "warning",
       "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from operating activities not found"
-    },
-    {
-      "rule_id": "CF-4 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from investing activities not found"
-    },
-    {
-      "rule_id": "CF-5 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from financing activities not found"
-    },
-    {
-      "rule_id": "CF-1 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from operating activities not found"
-    },
-    {
-      "rule_id": "CF-4 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from investing activities not found"
-    },
-    {
-      "rule_id": "CF-5 @ Q2 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from financing activities not found"
     },
     {
       "rule_id": "CF-1 @ Q4 FY2024",
@@ -7885,47 +7549,7 @@
       "gap": "0",
       "severity": "warning",
       "message": "inconclusive — missing: CFO, CFI, CFF, NetΔ"
-    },
-    {
-      "rule_id": "CF-2 @ Q4 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Missing one of: Cash at Beginning of Period, Cash at End of Period, Net Change in Cash"
-    },
-    {
-      "rule_id": "CF-3 @ Q4 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from operating activities not found"
-    },
-    {
-      "rule_id": "CF-4 @ Q4 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from investing activities not found"
-    },
-    {
-      "rule_id": "CF-5 @ Q4 FY2024",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net cash from financing activities not found"
-    },
-    {
-      "rule_id": "M-1",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "pass",
-      "message": "All 63 ledger_rule_ids in use have consistent section tags."
     }
   ],
-  "passed": false
+  "passed": true
 }
