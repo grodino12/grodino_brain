@@ -21,7 +21,8 @@
         "net revenues",
         "revenues",
         "net sales (revenue)"
-      ]
+      ],
+      "filing_section": "revenue_cost"
     },
     {
       "rule_id": "GEN-IS-002",
@@ -33,7 +34,8 @@
         "cost of sales",
         "cost of products sold",
         "cost of goods and services sold"
-      ]
+      ],
+      "filing_section": "revenue_cost"
     },
     {
       "rule_id": "GEN-IS-003",
@@ -44,7 +46,8 @@
         "gross profit",
         "gross margin",
         "gross profit (loss)"
-      ]
+      ],
+      "filing_section": "revenue_cost"
     },
     {
       "rule_id": "GEN-IS-004",
@@ -56,7 +59,8 @@
         "general and administrative expenses",
         "sg&a",
         "selling general and administrative expenses"
-      ]
+      ],
+      "filing_section": "operating_expenses"
     },
     {
       "rule_id": "GEN-IS-005",
@@ -70,7 +74,8 @@
         "operating loss",
         "operating income (loss)",
         "loss from operations"
-      ]
+      ],
+      "filing_section": "operating_expenses"
     },
     {
       "rule_id": "GEN-IS-006",
@@ -84,7 +89,8 @@
         "interest income net",
         "net interest income",
         "net interest expense"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-007",
@@ -95,7 +101,8 @@
         "foreign currency exchange gain (loss)",
         "foreign currency transaction gain (loss)",
         "net foreign exchange gain (loss)"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-008",
@@ -109,7 +116,8 @@
         "other non-operating income/(expense), net",
         "other, net",
         "miscellaneous income, net"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-009",
@@ -125,7 +133,8 @@
         "loss before income taxes",
         "earnings before taxes",
         "pre-tax income"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-010",
@@ -143,7 +152,8 @@
         "tax expense",
         "tax benefit",
         "income tax expense"
-      ]
+      ],
+      "filing_section": "tax"
     },
     {
       "rule_id": "GEN-IS-011",
@@ -171,7 +181,8 @@
         "dividends on preferred stock",
         "preferred dividends declared",
         "cumulative dividends on preferred stock"
-      ]
+      ],
+      "filing_section": "eps"
     },
     {
       "rule_id": "GEN-IS-021",
@@ -187,7 +198,8 @@
         "common dividends declared",
         "cash dividends on common stock",
         "dividends declared"
-      ]
+      ],
+      "filing_section": "eps"
     },
     {
       "rule_id": "GEN-IS-013",
@@ -199,7 +211,8 @@
         "earnings allocated to participating securities",
         "undistributed earnings allocated to participating securities",
         "income (loss) allocated to participating preferred"
-      ]
+      ],
+      "filing_section": "eps"
     },
     {
       "rule_id": "GEN-IS-014",
@@ -228,7 +241,8 @@
         "total comprehensive income (loss)",
         "total comprehensive income",
         "comprehensive income net of tax"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-020",
@@ -245,7 +259,8 @@
         "foreign currency translation",
         "translation adjustment",
         "other comprehensive income loss foreign currency transaction and translation adjustment net of tax"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-016",
@@ -260,7 +275,8 @@
         "basic net income per share",
         "basic net income (loss) per share",
         "earnings per share basic"
-      ]
+      ],
+      "filing_section": "eps"
     },
     {
       "rule_id": "GEN-IS-017",
@@ -275,7 +291,8 @@
         "diluted net income per share",
         "diluted net income (loss) per share",
         "earnings per share diluted"
-      ]
+      ],
+      "filing_section": "eps"
     },
     {
       "rule_id": "GEN-IS-018",
@@ -287,7 +304,8 @@
         "weighted average shares outstanding basic",
         "weighted average common shares outstanding basic",
         "weighted average shares outstanding - basic"
-      ]
+      ],
+      "filing_section": "eps"
     },
     {
       "rule_id": "GEN-IS-019",
@@ -299,7 +317,8 @@
         "weighted average shares outstanding diluted",
         "weighted average common shares outstanding diluted",
         "weighted average shares outstanding - diluted"
-      ]
+      ],
+      "filing_section": "eps"
     },
     {
       "rule_id": "GEN-BS-001",
@@ -848,7 +867,8 @@
         "other comprehensive income loss net of tax",
         "other comprehensive income (loss), net of tax",
         "total other comprehensive income loss net of tax"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-025",
@@ -860,7 +880,8 @@
         "other comprehensive income loss available for sale securities adjustment net of tax",
         "unrealized gains (losses) on available-for-sale securities",
         "afs securities adjustment"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-026",
@@ -872,7 +893,8 @@
         "other comprehensive income loss pension and other postretirement benefit plans adjustment net of tax",
         "pension and other postretirement benefit plans adjustment",
         "pension adjustment"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-027",
@@ -882,7 +904,8 @@
       "aliases": [
         "comprehensive income net of tax attributable to noncontrolling interest",
         "comprehensive income attributable to noncontrolling interest"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-028",
@@ -892,7 +915,8 @@
       "aliases": [
         "comprehensive income net of tax including portion attributable to noncontrolling interest",
         "total comprehensive income including noncontrolling interest"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-CF-001",
@@ -905,7 +929,8 @@
         "net earnings",
         "net income loss",
         "net earnings (loss)"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-002",
@@ -916,7 +941,8 @@
         "depreciation and amortization expense",
         "depreciation, amortization and accretion",
         "d&a"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-003",
@@ -928,7 +954,8 @@
         "intangible asset impairment",
         "goodwill and intangibles impairment",
         "impairment charges"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-004",
@@ -941,7 +968,8 @@
         "provision for doubtful accounts",
         "provision for bad debt",
         "allowance for doubtful accounts"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-005",
@@ -955,7 +983,8 @@
         "provision for inventory obsolescence",
         "inventory reserve",
         "excess and obsolete inventory"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-006",
@@ -968,7 +997,8 @@
         "share-based compensation expense",
         "equity-based compensation",
         "sbc"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-007",
@@ -983,7 +1013,8 @@
         "gain/loss on sale of assets",
         "(gain)/loss on sale of assets",
         "gain loss on disposition of assets"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-008",
@@ -995,7 +1026,8 @@
         "deferred income taxes",
         "deferred tax provision",
         "(benefit) provision for deferred income taxes"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-009",
@@ -1008,7 +1040,8 @@
         "foreign currency transaction loss",
         "foreign exchange (gain) loss",
         "unrealized foreign currency gain (loss)"
-      ]
+      ],
+      "filing_section": "fx_reconciliation"
     },
     {
       "rule_id": "GEN-CF-010",
@@ -1021,7 +1054,8 @@
         "other non-cash items",
         "other, net",
         "other"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-011",
@@ -1035,7 +1069,8 @@
         "change in accounts receivable",
         "(increase) decrease in accounts receivable",
         "trade receivables"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-012",
@@ -1048,7 +1083,8 @@
         "inventory",
         "change in inventories",
         "(increase) decrease in inventories"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-013",
@@ -1060,7 +1096,8 @@
         "prepaid expenses",
         "change in prepaid expenses",
         "(increase) decrease in prepaid expenses"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-014",
@@ -1072,7 +1109,8 @@
         "change in accounts payable",
         "increase (decrease) in accounts payable",
         "trade payables"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-015",
@@ -1084,7 +1122,8 @@
         "change in accrued expenses",
         "change in accrued liabilities",
         "increase (decrease) in accrued expenses"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-016",
@@ -1096,7 +1135,8 @@
         "change in accrued promotional allowance",
         "promotional allowance",
         "trade promotion allowance"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-017",
@@ -1108,7 +1148,8 @@
         "income taxes payable",
         "change in other current liabilities",
         "other accrued liabilities"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-018",
@@ -1120,7 +1161,8 @@
         "change in right of use and lease obligation-net",
         "change in right of use asset and lease liability-net",
         "net change in rou and lease liability"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-019",
@@ -1133,7 +1175,8 @@
         "contract liabilities",
         "change in contract liabilities",
         "unearned revenue"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-020",
@@ -1145,7 +1188,8 @@
         "other non-current assets",
         "change in other non-current assets",
         "change in other assets"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-021",
@@ -1157,7 +1201,8 @@
         "notes receivable",
         "change in note receivable",
         "change in notes receivable"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-022",
@@ -1169,7 +1214,8 @@
         "net cash used in operating activities",
         "net cash provided by (used in) operating activities",
         "cash flows from operating activities"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-023",
@@ -1181,7 +1227,8 @@
         "collections from notes receivable",
         "proceeds from notes receivable",
         "principal payments received on notes receivable"
-      ]
+      ],
+      "filing_section": "investing"
     },
     {
       "rule_id": "GEN-CF-024",
@@ -1194,7 +1241,8 @@
         "capital expenditures",
         "additions to property, plant and equipment",
         "capex"
-      ]
+      ],
+      "filing_section": "investing"
     },
     {
       "rule_id": "GEN-CF-025",
@@ -1206,7 +1254,8 @@
         "investment in non-marketable equity securities",
         "equity investments",
         "investments in equity securities"
-      ]
+      ],
+      "filing_section": "investing"
     },
     {
       "rule_id": "GEN-CF-026",
@@ -1218,7 +1267,8 @@
         "net cash provided by investing activities",
         "net cash provided by (used in) investing activities",
         "cash flows from investing activities"
-      ]
+      ],
+      "filing_section": "investing"
     },
     {
       "rule_id": "GEN-CF-027",
@@ -1230,7 +1280,8 @@
         "finance lease principal payments",
         "payments on finance lease obligations",
         "repayments of finance lease obligations"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-028",
@@ -1242,7 +1293,8 @@
         "proceeds from exercise of options",
         "stock option exercise proceeds",
         "proceeds from issuance of common stock under employee plans"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-029",
@@ -1255,7 +1307,8 @@
         "proceeds from issuance of preferred stock",
         "proceeds from preferred stock issuance",
         "net proceeds from issuance of preferred stock"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-030",
@@ -1270,7 +1323,8 @@
         "preferred dividends paid",
         "dividends paid on preferred stock",
         "cash dividends paid on preferred shares"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-040",
@@ -1289,7 +1343,8 @@
         "dividends to shareholders",
         "dividends to stockholders",
         "payments of dividends"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-031",
@@ -1301,7 +1356,8 @@
         "proceeds from common stock offering",
         "proceeds from sale of common stock",
         "net proceeds from issuance of common stock"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-032",
@@ -1320,7 +1376,8 @@
         "treasury stock purchases",
         "purchase of treasury stock",
         "accelerated share repurchase"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-033",
@@ -1333,7 +1390,8 @@
         "net cash used in provided by financing activities",
         "net cash provided by (used in) financing activities",
         "cash flows from financing activities"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-034",
@@ -1347,7 +1405,8 @@
         "foreign currency translation effect on cash",
         "effect of exchange rate changes on cash, cash equivalents and restricted cash",
         "effect of exchange rate on cash cash equivalents restricted cash and restricted cash equivalents"
-      ]
+      ],
+      "filing_section": "fx_reconciliation"
     },
     {
       "rule_id": "GEN-CF-035",
@@ -1398,7 +1457,8 @@
         "interest paid",
         "interest",
         "cash paid during the period for interest"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-CF-039",
@@ -1412,7 +1472,8 @@
         "cash paid during the period for taxes",
         "cash paid for income taxes",
         "income taxes paid"
-      ]
+      ],
+      "filing_section": "operating"
     },
     {
       "rule_id": "GEN-IS-029",
@@ -1424,7 +1485,8 @@
         "interest income on note receivable",
         "interest income on notes receivable",
         "interest earned"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-030",
@@ -1435,7 +1497,8 @@
         "interest expense",
         "interest expense nonoperating",
         "interest and debt expense"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-031",
@@ -1445,7 +1508,8 @@
         "foreign exchange gain",
         "foreign currency exchange gain",
         "foreign currency transaction gain"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-032",
@@ -1456,7 +1520,8 @@
         "foreign exchange loss",
         "foreign currency exchange loss",
         "foreign currency transaction loss"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-033",
@@ -1467,7 +1532,8 @@
         "other non-operating income",
         "miscellaneous income",
         "other nonoperating income"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-IS-034",
@@ -1479,7 +1545,8 @@
         "other non-operating expense",
         "miscellaneous expense",
         "other nonoperating expense"
-      ]
+      ],
+      "filing_section": "non_operating"
     },
     {
       "rule_id": "GEN-CF-041",
@@ -1491,7 +1558,8 @@
         "proceeds from sale of productive assets",
         "proceeds from sale of property plant and equipment",
         "proceeds from disposal of property"
-      ]
+      ],
+      "filing_section": "investing"
     },
     {
       "rule_id": "GEN-CF-042",
@@ -1504,7 +1572,8 @@
         "payments to acquire businesses net of cash acquired",
         "cash paid for acquisitions",
         "business acquisitions net of cash"
-      ]
+      ],
+      "filing_section": "investing"
     },
     {
       "rule_id": "GEN-CF-043",
@@ -1515,7 +1584,8 @@
         "other investing activities",
         "other investing activities, net",
         "payments for proceeds from investments"
-      ]
+      ],
+      "filing_section": "investing"
     },
     {
       "rule_id": "GEN-CF-044",
@@ -1527,7 +1597,8 @@
         "proceeds from short-term debt",
         "proceeds from short term debt maturing in more than three months",
         "issuance of short-term debt"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-045",
@@ -1539,7 +1610,8 @@
         "reductions in short-term debt with original maturities of more than three months",
         "repayments of short-term debt",
         "repayments of short term debt maturing in more than three months"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-046",
@@ -1549,7 +1621,8 @@
         "net additions/(reductions) to other short-term debt",
         "proceeds from (repayments of) short-term debt",
         "proceeds from repayments of short term debt maturing in three months or less"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-047",
@@ -1561,7 +1634,8 @@
         "proceeds from issuance of long term debt",
         "issuance of long-term debt",
         "proceeds from long-term borrowings"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-048",
@@ -1574,7 +1648,8 @@
         "repayments of long term debt",
         "principal payments on long-term debt",
         "long-term debt repayments"
-      ]
+      ],
+      "filing_section": "financing"
     },
     {
       "rule_id": "GEN-CF-049",
@@ -1585,7 +1660,8 @@
         "stock options and other financing activities",
         "proceeds from stock options exercised and other financing activities",
         "stock option exercise proceeds and other"
-      ]
+      ],
+      "filing_section": "financing"
     }
   ]
 }
