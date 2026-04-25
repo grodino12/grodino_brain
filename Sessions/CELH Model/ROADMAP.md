@@ -1,9 +1,9 @@
 ---
 type: roadmap
-date: 2026-04-24
+date: 2026-04-25
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 24th Option B Migration + PG YTD Quarterly Session"
+last_session: "April 25th Framework Audit + Section-Driven Architecture Session"
 ---
 
 # Celsius HF Case Study — Roadmap
@@ -16,18 +16,18 @@ Living document. Update after each session. **Current project focus: build a uni
 
 | Workstream | State | Next action |
 |---|---|---|
-| **Financials pipeline** (8 skills) | **7 of 8 built** — sec-edgar-fetch, iXBRL+PDF extractors, reconcile, validate, playground, model-write all shipped + Option-B architecture (library lookup at extract time, canonical_label + ledger_rule_id on RawLineItem); model-calc still annual-only | Extend model-calc to quarterly after PG xlsx polish ships |
-| **Quarterly pipeline** | Shipped 2026-04-24 (third session same day) — **pivoted from 3-month to YTD** durations for 10-Qs (CF is filer-reported YTD). iXBRL extractor tags YTD with filing_fq; reconcile keeps longest-duration-per-period_end; model-write routes via MappedLineItem.model_sheet | Polish QTR xlsx: fix self-ref NI formula, insert CF subtotal rows (§next) |
-| **SEC EDGAR ingestion** | Shipped 2026-04-24 — `sec-edgar-fetch` + `--all`. PG: 99 10-Q folders (1993→2026) + companyfacts.json | Pull more tickers on demand |
-| **Generic cross-ticker library (mappings)** | **122 entries** (+13 this session): 8 new CF canonicals, 6 new IS income/expense splits. 22 BS entries gained `filing_section`. Library is authoritative for section routing (overrides iXBRL concept-name heuristic) | Grow per novel triage protocol |
-| **Option B architecture** | **Shipped 2026-04-24 (third session)** — shared `financials_schema/lookup.py`, canonical_label+ledger_rule_id on RawLineItem, sign_convention propagated end-to-end, `_signed_sum` validator helper | See Active §1-§3 for follow-on polish |
+| **Financials pipeline** (now 7 skills, was 8) | **All shipped** — `financials-extract` (PDF+iXBRL merged 2026-04-25), reconcile, validate, playground, model-write, model-calc, sec-edgar-fetch. model-calc still annual-only | Extend model-calc to quarterly after PG xlsx polish ships |
+| **Quarterly pipeline** | Shipped 2026-04-24 — YTD durations for 10-Qs | Polish QTR xlsx (Active §3) |
+| **SEC EDGAR ingestion** | Shipped 2026-04-24 — `sec-edgar-fetch` + `--all`. PG: 99 10-Q folders | Pull more tickers on demand |
+| **Generic cross-ticker library** | **109 entries** (down from 122: -7 OCI removed, -6 split donors after recombination). All BS+CF+IS have `filing_section` set (or intentionally null on bottom-line/reconciliation rows). Sign_convention now on 7 entries only | Grow per novel triage protocol; restore OCI when 4th statement ships |
+| **Sign-convention architecture** | **Reduced to abs-based 3-value (`as_reported` / `positive` / `negative`) 2026-04-25.** IS-only keyword detection in `match_raw_item` covers split-direction lines (Income Tax, FX, Other Non-Op). `parens_negative` special-case removed | Stable |
+| **Validator architecture** | **Section-driven 2026-04-25** — `partition_balance_sheet` and `partition_cash_flow` bucket by `item.section`; subtotals captured as anchors. CF-1, X-4 keyed on `canonical_label` not English prose. UNCLASSIFIED triggers reconcile halt | Stable; CF-2 keys on model_label (canonical-equivalent) |
+| **Library load-time guard** | **`LibraryEntry` Pydantic model 2026-04-25** — `extra="forbid"` catches field-name typos, invalid enum values at load | Stable |
 | **Generic forecast-rules library** | Not started | Extract from `calc.py` after QTR polish ships |
 | **Ticker onboarding doc** | Not started | One-page guide once QTR xlsx polish stabilizes |
-| **GLP-1 projection model** | Built standalone | Integrate once architecture is universal (deferred) |
-| **SNAP / demographics model** | Built standalone | Integrate once architecture is universal (deferred) |
-| **Cross-model integration** | Deferred per user direction | Revisit after universal architecture ships |
+| **GLP-1 / SNAP integration** | Standalone, deferred | Revisit after universal architecture stabilizes |
 
-**Revised critical path:** ~~`model-write`~~ ✓ → ~~generic-library migration~~ ✓ → ~~`model-calc` drivers + forecast~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → ~~SEC EDGAR ingestion + iXBRL extractor~~ ✓ → ~~quarterly pipeline (reconcile + validate + model-write)~~ ✓ → ~~triage PG 107-novel count~~ ✓ → ~~Option B architecture (library lookup at extract time)~~ ✓ → ~~sign-convention end-to-end~~ ✓ → ~~library splits (Interest/FX/Other income vs expense)~~ ✓ → ~~QTR pivot to YTD durations~~ ✓ → ~~model-write QTR parity port~~ ✓ → **PG xlsx polish (NI formula self-reference, CF subtotal rows, preferred-stock canonical)** → **refresh playgrounds (structural backlog from Option B)** → **CELH regression confirmation** → **answer LTM-period validation question** → **break OCI into 4th statement** → **extend model-calc to quarterly drivers** → **extract generic forecast-rules JSON** → **formalize ticker onboarding flow** → (later) cross-model integration.
+**Revised critical path:** ~~`model-write`~~ ✓ → ~~generic-library migration~~ ✓ → ~~`model-calc` drivers + forecast~~ ✓ → ~~fix forecast BS balance gap~~ ✓ → ~~SEC EDGAR ingestion + iXBRL extractor~~ ✓ → ~~quarterly pipeline~~ ✓ → ~~triage PG 107-novel count~~ ✓ → ~~Option B architecture~~ ✓ → ~~sign-convention end-to-end~~ ✓ → ~~library splits~~ ✓ → ~~QTR pivot to YTD durations~~ ✓ → ~~model-write QTR parity port~~ ✓ → ~~merge two extract skills into one~~ ✓ → ~~sign-convention reduced to abs-based 3-value with IS keyword detection~~ ✓ → ~~library splits recombined~~ ✓ → ~~validators: state machines + English prose anchors → section-driven + canonical_label~~ ✓ → ~~UNCLASSIFIED enforcement at reconcile~~ ✓ → ~~LibraryEntry Pydantic guard~~ ✓ → ~~framework audit~~ ✓ → **refresh playgrounds (large backlog: extract-merge, lookup.py LibraryEntry, CASH_OTHER, sign 3-value, section-driven partitions, canonical_label-keyed validators)** → **CELH + PG regressions on new architecture** → **PG xlsx polish (NI formula self-reference, CF subtotal rows, preferred-stock canonical)** → **answer LTM-period validation question** → **break OCI into 4th statement** → **extend model-calc to quarterly drivers** → **extract generic forecast-rules JSON** → **formalize ticker onboarding flow** → (later) cross-model integration.
 
 **Active propagating rule:** every structural change to the financials pipeline must update `playground_architecture.html` + `playground_schema.html`. Bump `LS_KEY` when NODES/EDGES change so the user's browser picks up fresh defaults instead of cached state. Carry this into every future handoff under "Open decisions / pending work." (User explicitly asked this rule propagate.)
 
@@ -140,22 +140,26 @@ Cross-model integration (GLP-1 + SNAP into CELH Revenue) is deferred per user di
 
 Concrete critical path:
 
-1. ~~**Triage PG's 107 novel items.**~~ Shipped 2026-04-24 (third session).
-2. ~~**Populate PG decisions_ledger.json.**~~ Shipped 2026-04-24.
-3. ~~**Run PG end-to-end to a first QTR xlsx.**~~ Shipped 2026-04-24 (fourth session). Extract → reconcile (0 novels) → validate (17 PASS / 0 FAIL / 32 WARN) → model-write (114 cells, 3 populated QTR sheets with BS subtotal formulas + IS subtotal formulas + accountant formatting + EPS decimal + YTD values).
-4. **PG xlsx polish (remaining after the parity port):**
-   - **IS "Net Income (Loss)" subtotal formula self-reference**: emits `=B9-SUM(B10:B12)` where row 12 is the NI row itself. `_is_subtotal_formula` needs to handle the 2-row NI structure (NI-incl-NCI + NI-attributable-to-parent) — compute attributable-NI as `NI-incl-NCI − SUM(NCI rows)`, not as `PreTax − (range that includes self)`.
-   - **CF subtotal rows (CFO / CFI / CFF / NetChange) not emitted**: iXBRL filers don't report these as line items (they're reconcile-dropped as `_subtotal` pseudo-rows). Need `insert_cf_subtotal_slots` helper analogous to `insert_bs_subtotal_slots`.
-   - **"Convertible Preferred Stock" mis-label**: PG's preferred is ESOP-linked, not convertible. Library GEN-BS-027 canonical is too narrow; split into Preferred Stock vs Convertible Preferred, or rename.
-   - **EPS format branch**: `"EPS" in label.upper()` doesn't match "Basic Earnings (Loss) per Share". Format override never fires. Values render correctly anyway (actual decimals), but the format path is dead.
-5. **Refresh playgrounds** (active propagating rule, substantial backlog from Option B): `playground_architecture.html` needs new `lookup.py` module node, new canonical_label+ledger_rule_id fields on RawLineItem, new QTR-YTD semantics, sign-convention routing. `playground_schema.html` needs RawLineItem field updates. Bump LS_KEY.
-6. **CELH regression confirmation.** Per user direction, not re-run this session ("run only 1 at a time"). Last known-clean state: 48/48 PASS on FY2024 + FY2025 10-Ks earlier in day, before library splits. Run CELH on current library state; expect passing (library changes are additive for CELH's label vocabulary, and sign conventions were made narrower not wider).
-7. **Answer LTM-period validation question for quarterlies.** User raised mid-session then pumped the brakes. Concrete question: for 10-Q BS items (point-in-time), is there any validation that needs an LTM-reconstructed IS (sum of current Q + prior 3 Qs) as the counterparty? If yes, this is a cross-filing validation mode that doesn't exist. Flagged for next session.
-8. **Break OCI into its own worksheet (4th statement).** User-ratified follow-up. Scope (~half-day): add `COMPREHENSIVE_INCOME` to StatementType enum, un-merge CI from IS in iXBRL extractor, move OCI library entries to `ANNL OCI` / `QTR OCI` variants, add OCI-1 + X-5 validators, add OCI sheet family to model-write with cross-sheet pull to IS.
-9. **Extend `model-calc` to quarterly drivers.** Currently annual-only. Deferred until PG xlsx polish ships.
-10. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`'s `FORECAST_STATEMENT_SPECS` + `DRIVER_SPECS`. Blocked on §9.
+1. ~~**Run PG end-to-end to a first QTR xlsx.**~~ Shipped 2026-04-24.
+2. ~~**Framework audit (extract merge, sign-convention overhaul, section-driven validators, LibraryEntry guard, dead-code purge).**~~ Shipped 2026-04-25.
+3. **Refresh playgrounds** (active propagating rule, very large backlog from 04-24 + 04-25 sessions):
+   - `playground_architecture.html`: collapse the two extract nodes into one (`financials-extract` only); add LibraryEntry validator step inside lookup; add CASH_OTHER section + 4-section CF; change sign_convention enum to 3-value; reflect section-driven validator architecture.
+   - `playground_schema.html`: SignConvention 3-value enum; Section enum changes (CASH_OTHER added, FX_RECONCILIATION removed); LibraryEntry model.
+   - Bump `LS_KEY`.
+4. **CELH + PG regressions on the new architecture.** Overdue — last clean run was before the merge / sign-convention overhaul / section-driven validators. Expected to surface: fuzzy-threshold-70 false positives, library entries needing concept-name aliases for iXBRL, possibly section-fix triages from the UNCLASSIFIED halt.
+5. **PG xlsx polish (carried from prior handoff):**
+   - **IS "Net Income (Loss)" subtotal formula self-reference**: emits `=B9-SUM(B10:B12)` where row 12 is the NI row itself.
+   - **CF subtotal rows (CFO / CFI / CFF / NetChange) not emitted**: need `insert_cf_subtotal_slots` helper.
+   - **"Convertible Preferred Stock" mis-label**: PG's preferred is ESOP-linked. Split into Preferred Stock vs Convertible Preferred, or rename.
+   - **EPS format branch**: `"EPS" in label.upper()` doesn't match "Basic Earnings (Loss) per Share".
+6. **Add IS D&A library entry** when we hit a filer that breaks D&A out on the IS (PG embeds it in COGS/SG&A).
+7. **Answer LTM-period validation question for quarterlies.** Carried.
+8. **Break OCI into its own worksheet (4th statement).** Carried. Library entries pulled this session, will be restored when sheet exists. Scope: add `COMPREHENSIVE_INCOME` to StatementType enum, un-merge CI from IS, OCI/QTR OCI sheets in model-write, OCI-1 + X-5 validators, restore the 7 GEN-IS entries.
+9. **Extend `model-calc` to quarterly drivers.** Currently annual-only.
+10. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`. Blocked on §9.
 11. **Formalize the ticker onboarding doc** at `Brain\Knowledge\Model Schema\05_ticker_onboarding.md`.
-12. **PG first 10-K onboarding** — when PG's annual flow is run, parallel ANNL BS entry for `NEW-BS-001 ESOP Debt Retirement Reserve` needs to be added to PG ledger.
+12. **PG first 10-K onboarding** — parallel ANNL BS entry for `NEW-BS-001 ESOP Debt Retirement Reserve`.
+13. **PG ledger NEW-BS-001 note text** — still says "stored expense_positive" (cosmetic; encoding quirks blocked auto-edit).
 
 Surface area to watch when running PEP:
 - `FORECAST_STATEMENT_SPECS` references CELH-specific canonical labels: `Deferred Other Costs - Current/Non-Current`, `Accrued Distributor Termination Fees`, `Note Receivable - Current/Non-Current`, `Convertible Preferred Stock`, `Acquisition of Big Beverages`. PEP will not have these; labels referenced by spec but missing on sheet simply skip (via the `if label not in sheet_rows: continue` guard), but CELH has specs for items PEP doesn't have that still surface other issues.
@@ -224,7 +228,8 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 24th Option B Migration + PG YTD Quarterly Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 25th Framework Audit + Section-Driven Architecture Session.md` |
+| Prior handoff (Option B + PG YTD) | `Brain\Sessions\CELH Model\Handoffs\April 24th Option B Migration + PG YTD Quarterly Session.md` |
 | Prior handoff (PG novel triage + library expansion) | `Brain\Sessions\CELH Model\Handoffs\April 24th PG Novel Triage + Library Expansion Session.md` |
 | Prior handoff (quarterly pipeline) | `Brain\Sessions\CELH Model\Handoffs\April 24th SEC EDGAR + Quarterly Pipeline Session.md` |
 | Prior handoff (model-calc forecast balance) | `Brain\Sessions\CELH Model\Handoffs\April 24th Model-Calc Forecast Balance Session.md` |
