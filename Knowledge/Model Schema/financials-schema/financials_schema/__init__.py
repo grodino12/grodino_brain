@@ -21,6 +21,7 @@ from financials_schema.patterns import (
 )
 from financials_schema.lookup import (
     IXBRL_SUBTOTAL_CONCEPTS,
+    LibraryEntry,
     build_generic_index,
     is_subtotal_label,
     load_generic_library,
@@ -34,6 +35,7 @@ __all__ = [
     "Citation",
     "FilingType",
     "IXBRL_SUBTOTAL_CONCEPTS",
+    "LibraryEntry",
     "MappedFiling",
     "MappedLineItem",
     "NovelItem",

@@ -25,11 +25,13 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, Literal
 
+from pydantic import BaseModel, ConfigDict, Field
 from rapidfuzz import fuzz, process
 
-from financials_schema.enums import StatementType
+from financials_schema.enums import Section, StatementType
+from financials_schema.line_item import RowType, SignConvention
 
 # ============================================================================
 # Label normalization
@@ -114,13 +116,49 @@ def _strip_underscore_keys(d: dict) -> dict:
     return {k: v for k, v in d.items() if not k.startswith("_")}
 
 
+class LibraryEntry(BaseModel):
+    """Pydantic-validated shape for a single generic-library entry.
+
+    Catches typos in field names (extra keys forbidden), invalid section /
+    sign_convention values, and missing required fields at LOAD time —
+    pointing to the bad entry instead of failing later when an item happens
+    to match it."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    rule_id: str
+    model_sheet: str
+    model_label: str
+    aliases: list[str] = Field(default_factory=list)
+    filing_section: Section | None = None
+    filing_subsection: str | None = None
+    sign_convention: SignConvention | None = None
+    memo: bool = False
+    row_type: RowType | None = None
+    # Free-form documentation field — surfaces in novel triage / human review.
+    # Not consumed by extract / reconcile / validate.
+    note: str | None = None
+
+
 def load_generic_library(library_path: Path) -> dict:
-    """Load the cross-ticker generic line-item mappings file. Returns an
-    empty container if the file is missing (opt-in)."""
+    """Load the cross-ticker generic line-item mappings file and validate
+    every entry through `LibraryEntry`. Returns the same dict shape downstream
+    code already consumes; validation is purely a load-time guard.
+
+    Empty container returned if the file is missing (opt-in)."""
     if not library_path.exists():
         return {"mappings": []}
     data = json.loads(library_path.read_text(encoding="utf-8"))
-    return _strip_underscore_keys(data)
+    data = _strip_underscore_keys(data)
+    # Validate every mapping. Loud failure on first bad entry — message names
+    # the rule_id (or position) so the user knows where to look.
+    for i, raw in enumerate(data.get("mappings", [])):
+        try:
+            LibraryEntry.model_validate(raw)
+        except Exception as e:
+            rid = raw.get("rule_id", f"<index {i}>")
+            raise ValueError(f"Invalid library entry {rid} in {library_path.name}: {e}") from e
+    return data
 
 
 def _sheet_group(model_sheet: str) -> str:

@@ -2,7 +2,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, model_validator
 
-from financials_schema.enums import StatementType, Unit
+from financials_schema.enums import FilingType, StatementType, Unit
 from financials_schema.line_item import RawLineItem
 from financials_schema.period import Period
 
