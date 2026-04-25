@@ -297,7 +297,7 @@ const SCHEMA = [
   },
   {
     name: 'Section', kind: 'enum', extends: 'str, Enum', layer: 'shared',
-    doc: 'Statement sub-section. Line items get classified during extraction; UNCLASSIFIED is the fallback.',
+    doc: 'Statement sub-section. Line items get classified during extraction; UNCLASSIFIED is the fallback (and now triggers a hard reconcile halt — surfaces extract misses with rule_id + canonical_label so the user knows which library entry needs filing_section). CF is genuinely 4 sections (operating / investing / financing / cash_other); FX Effect on Cash sits in cash_other; CF-1 sums all 4 to ΔCash. Validators bucket by item.section directly — partition_balance_sheet + partition_cash_flow do no state-machine walks.',
     fields: [
       { name: 'CURRENT_ASSETS',          type: '"current_assets"' },
       { name: 'NON_CURRENT_ASSETS',      type: '"non_current_assets"' },
@@ -308,7 +308,7 @@ const SCHEMA = [
       { name: 'OPERATING',               type: '"operating"' },
       { name: 'INVESTING',               type: '"investing"' },
       { name: 'FINANCING',               type: '"financing"' },
-      { name: 'FX_RECONCILIATION',       type: '"fx_reconciliation"' },
+      { name: 'CASH_OTHER',              type: '"cash_other"' },
       { name: 'REVENUE_COST',            type: '"revenue_cost"' },
       { name: 'OPERATING_EXPENSES',      type: '"operating_expenses"' },
       { name: 'NON_OPERATING',           type: '"non_operating"' },

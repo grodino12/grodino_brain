@@ -440,58 +440,42 @@ const LAYERS = [
 // Layer 4 output skills spread across 4 columns.
 // Layer 5 storage has two sub-rows (contracts/stores, then external I/O).
 let NODES = [
-  // Layer 1 — extract (two parallel extractors feeding the same RawFiling)
-  { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 430,  y: 315, w: 220, h: 56, label: 'financials-extract',
-    purpose: 'Parse filing PDFs (IR press releases, legacy sources) into Pydantic RawFiling. Fallback path for non-iXBRL sources.',
-    input: 'PDF path', output: 'RawFiling',
+  // Layer 1 — extract (single dispatcher; PDF + iXBRL paths share lookup.match_raw_item)
+  { id: 'financials-extract', layer: 'extract', kind: 'skill', built: true,    x: 580,  y: 315, w: 240, h: 56, label: 'financials-extract',
+    purpose: 'CLI dispatcher routing on file extension. .pdf → pdf_path.py (pdfplumber + pattern libraries); .htm/.html → ixbrl_path.py (lxml + SEC presentation linkbase). Both branches share lookup.match_raw_item() for canonical-label assignment and emit identical RawFiling shape — downstream skills consume format-agnostically.',
+    input: '--source <pdf|htm> + --library + --ticker-root', output: 'RawFiling',
     ops: [
-      'Locate BS/CF/IS pages by heading match (not hardcoded pages)',
-      'Detect Unit via phrase regex; parse "except per share / share and per share" → share_unit, eps_unit',
-      'Subsection detect: EPS, Weighted Avg Shares Outstanding → subsection_context',
-      'BS subtotal-flip: "Total current assets/liabilities" → flips section to NCA/NCL',
-      'IS keyword classifier: revenue_cost / operating_expenses / non_operating / eps',
-      'Attach (page, line_hint) citation to every value',
-      'Reject Unit.UNKNOWN at Statement model_validator'
+      'detect_source_kind() routes by extension; SystemExit on anything other than .pdf/.htm/.html',
+      'PDF path: pdfplumber, pattern libraries (statement headings, units, periods, notation), BS subtotal-flip, IS keyword classifier, (page, line_hint) citations',
+      'iXBRL path: lxml XML mode (HTMLParser mangles namespaces), context_id → Period + unit_id → measure maps, <ix:nonFraction> walk',
+      'iXBRL classification via FilingSummary.xml + per-role R{n}.htm cached per accession (concept → statement_code from presentation linkbase, no fuzzy heuristics)',
+      'iXBRL: BS instants filtered to top-2 most-populated dates (drops SE roll-forward leakage); CI merged into IS; YTD durations tagged with filing_fq for QTR pivot',
+      'iXBRL raw_filing_label = concept_to_display(local_name) — CamelCase split; the canonical_label from library is the user-facing name',
+      'Both paths populate canonical_label + ledger_rule_id via match_raw_item (3-step: exact → fuzzy ≥85 [≥70 when concept set] → concept fallback)',
+      'IS-only keyword sign-detection: expense/loss/cost-of → negative; benefit/gain/income/recovery → positive (per-entry sign_convention always wins)',
+      'sign_convention is abs-based 3-value (as_reported / positive / negative); parens_negative special-case removed'
     ],
-    deps: ['pymupdf', 'pdfplumber', 'pydantic', 'rapidfuzz']
-  },
-  { id: 'financials-extract-ixbrl', layer: 'extract', kind: 'skill', built: true, x: 710, y: 315, w: 240, h: 56, label: 'financials-extract-ixbrl',
-    purpose: 'Parse SEC iXBRL HTML into RawFiling using the SEC presentation linkbase (FilingSummary.xml + R{n}.htm) for authoritative statement classification. Near-perfect extraction — every number is pre-tagged with concept / period / unit / scale.',
-    input: 'iXBRL HTML + .meta.json', output: 'RawFiling',
-    ops: [
-      'XML-parse iXBRL (lxml — HTMLParser mangles namespaces)',
-      'Build {context_id → Period + segments} and {unit_id → measure} maps',
-      'Iterate <ix:nonFraction> elements → tagged IxFact[] with explicit scale / unit / period / sign',
-      'Fetch FilingSummary.xml + Statement R-files (MenuCategory="Statements") — cached per accession',
-      'Build {concept → statement_code} from R-file concept references (IS / CI / BS / CF / SE)',
-      'Group consolidated (non-segment) facts by (statement_type, period) → Statement[]; merge CI into IS, skip SE+DETAIL for v1',
-      'Detect Unit from dominant scale of USD facts in each statement (scale=6 → Unit.MILLIONS etc.)',
-      'Filter BS instants to the top-2 most-populated dates (drops SE roll-forward reference balances)',
-      'Resolve fiscal_year / fiscal_quarter from periodOfReport + fiscal-year-end month',
-      'Emit RawFiling identical to PDF pipeline output — plug-compatible downstream'
-    ],
-    deps: ['lxml', 'requests', 'pydantic']
+    deps: ['pdfplumber', 'lxml', 'rapidfuzz', 'pydantic']
   },
   { id: 'RawFiling', layer: 'extract', kind: 'contract', x: 1000, y: 315, w: 180, h: 56, label: 'RawFiling',
-    purpose: 'Pydantic model for an extracted filing. Contains Statement[] (BS/CF/IS), each with Unit + RawLineItem[]. Same shape regardless of extraction source — both financials-extract (PDF) and financials-extract-ixbrl (iXBRL) emit this.',
+    purpose: 'Pydantic model for an extracted filing. Contains Statement[] (BS/CF/IS), each with Unit + RawLineItem[]. Same shape regardless of source path — PDF and iXBRL branches of financials-extract both emit this. RawLineItem now carries canonical_label + ledger_rule_id (populated at extract time via library lookup).',
     fields: ['ticker: str', 'filing_type: FilingType', 'filing_date: date', 'source_path: Path', 'statements: list[Statement]', 'extraction_metadata: dict'],
     validators: ['at_least_one_statement', 'press_release_has_only_income_statement']
   },
 
   // Layer 2
   { id: 'financials-reconcile', layer: 'reconcile', kind: 'skill', built: true, x: 620, y: 505, w: 240, h: 56, label: 'financials-reconcile',
-    purpose: 'Map raw filing labels to canonical model rows via (a) the cross-ticker generic library and (b) the per-ticker decisions ledger. Filing-type aware: 10-K → ANNL sheet family, 10-Q → QTR sheet family. Entry precedence: ticker ledger (tier 10) > generic library (tier 0). Emits NovelReport for blocked items. PG Q2 FY26 smoke test: 107 → 2 novels (98.1% auto-resolution) with only generic library + empty ticker ledger.',
-    input: 'RawFiling + generic library + ticker ledger', output: 'MappedFiling',
+    purpose: 'Apply per-ticker overrides on top of what extract already canonicalized, route items to model_sheet by (filing_type, statement_type), and surface novels. Generic-library lookup happens in extract; reconcile is now thin — ticker-ledger overlays + sheet routing + novel surfacing. Halts loudly if any item arrives with Section.UNCLASSIFIED (points to where filing_section needs to be added in the library).',
+    input: 'RawFiling + ticker ledger', output: 'MappedFiling',
     ops: [
-      'Normalize labels: split CamelCase (us-gaap concept names), strip footnote markers, clutter, punctuation',
-      'Lookup index keyed (label, sheet_group, sheet_variant=ANNL|QTR). Generic entries indexed under BOTH variants (canonical concepts are variant-agnostic); ticker entries stay variant-specific',
-      'For 10-Qs: filter statements to 3-month duration IS/CF (period_length_weeks ∈ [11,15]) + BS instants; YTD 6mo/9mo dropped',
-      'target_variant derived from FilingType: TEN_Q → QTR, everything else → ANNL',
-      'iXBRL subtotal concept allowlist (Assets, Liabilities, LiabilitiesAndStockholdersEquity, StockholdersEquityIncluding…) routed to _subtotal pseudo-sheet — model-write generates canonical Total rows at section boundaries',
-      'select_entry: subsection filter strict when item has subsection; for iXBRL items (subsection_context=None) with a single-candidate key, accept despite filing_subsection mismatch',
-      'rapidfuzz fuzzy at ≥85 when no exact; novel below',
-      '--novels-out emits a NovelReport JSON for the playground NOVELS tab',
-      'Append new decisions to ledger (append-only, dated). New tickers onboarding 10-Q need only ticker-specific anomalies in their ledger — generic library resolves standard GAAP concepts.'
+      'Apply ticker_index overrides on top of canonical_label / model_sheet from extract (ticker ledger wins on conflicts via tier scoring)',
+      'Route via SHEET_NAME[(filing_type, statement_type)] — pure-function lookup; KeyError on missing combo (no fallback masking misroutes)',
+      'keep_statement_for_pipeline filters statements: 10-K = annual durations only; 10-Q = longest duration per period_end (YTD wins so PG-style YTD-only CF survives)',
+      'iXBRL subtotal concept allowlist (Assets, AssetsCurrent, Liabilities, LiabilitiesCurrent, LiabilitiesAndStockholdersEquity, StockholdersEquityIncluding...) routed to _subtotal pseudo-sheet — model-write generates canonical Total rows at section boundaries',
+      'Hard fail on Section.UNCLASSIFIED — surfaces extract misses with rule_id + canonical_label so the user knows which library entry needs filing_section',
+      'Section-collision guard refuses ambiguous mappings (one rule_id matched items across multiple sections → ledger needs filing_section split)',
+      '--novels-out emits a NovelReport JSON for the playground NOVELS tab; --dry-run skips MappedFiling write',
+      'Append-only ticker ledger updates (ISO-8601 dates). Onboarding a new ticker: only company-specific anomalies + new_rows go in the ledger; standard GAAP concepts resolve via the generic library at extract time'
     ],
     deps: ['pydantic', 'rapidfuzz']
   },
@@ -503,14 +487,17 @@ let NODES = [
 
   // Layer 3
   { id: 'financials-validate', layer: 'validate', kind: 'skill', built: true, x: 620, y: 695, w: 240, h: 56, label: 'financials-validate',
-    purpose: 'Arithmetic integrity — accounting identities + cross-statement ties + section-sum validations. Blocks the pipeline on fail.',
+    purpose: 'Arithmetic integrity — accounting identities + cross-statement ties + section-sum validations. Section-driven partitions (no state machines, no English-prose anchors): partition_balance_sheet + partition_cash_flow bucket by item.section directly. CF is genuinely 4 sections (operating / investing / financing / cash_other) with FX Effect on Cash sitting in cash_other. Blocks pipeline on fail.',
     input: 'MappedFiling + anomalies.json', output: 'ValidatedFiling',
     ops: [
-      'BS-1..BS-6: subtotal sums (TCA/NCA/TCL/NCL/TSE) + accounting equation',
-      'CF-1/CF-2: CFO+CFI+CFF+FX = ΔCash; CashEnd = Beg + Δ',
-      'CF-3/CF-4/CF-5: sum of items per section = Net Cash from (Op/Inv/Fin)',
-      'X-1/X-2/X-4: CF NI = P&L NI; CF CashEnd = BS Cash (cash_convention_per_year); Pref Div ties',
-      'Raise ValidationError with structured gap list on fail',
+      'partition_balance_sheet: bucket by item.section (current_assets / non_current_assets / current_liabilities / non_current_liabilities / mezzanine / equity); subtotal rows captured as named anchors (TCA, TA, TCL, TL, TSE, total_LE)',
+      'partition_cash_flow: 4-section bucket (operating / investing / financing / cash_other); subtotal rows captured per section via row_type=="subtotal"',
+      '_signed_value() applies sign_convention abs-based: positive → +abs(value); negative → -abs(value); as_reported → pass-through',
+      'BS-1..BS-7: subtotal sums (TCA/NCA/TCL/NCL/TSE) + accounting equation; uses canonical_label / partition output',
+      'CF-1: NetΔCash = sum of all 4 section subtotals (operating + investing + financing + cash_other); CF-2 keys Cash Beg/End by canonical_label',
+      'IS-1..IS-4: gross profit, operating income, pre-tax, net income cascades',
+      'X-1/X-2/X-4: CF NI = P&L NI; CF CashEnd = BS Cash (cash_convention_per_year); Pref Div ties — keyed on canonical_label, no _find_item_contains',
+      'M-1: mapping consistency — all items on one rule_id must agree on section',
       'BS-7 (RE roll-forward) deferred — needs prior-period BS'
     ],
     deps: ['pydantic', 'decimal']
@@ -588,7 +575,7 @@ let NODES = [
     deps: ['requests']
   },
   { id: 'ixbrl-htm-store', layer: 'input', kind: 'store', x: 340, y: 175, w: 240, h: 50, label: 'iXBRL HTML + meta.json',
-    purpose: 'SEC iXBRL primary documents + per-filing metadata sidecars. Produced by sec-edgar-fetch, consumed by financials-extract-ixbrl. Every number in the .htm is tagged with concept / context / unit / scale — the .meta.json carries the accession so the extractor can fetch FilingSummary.xml.',
+    purpose: 'SEC iXBRL primary documents + per-filing metadata sidecars. Produced by sec-edgar-fetch, consumed by the iXBRL branch of financials-extract. Every number in the .htm is tagged with concept / context / unit / scale — the .meta.json carries the accession so the extractor can fetch FilingSummary.xml.',
     path: 'Brain/Sources/{TICKER}/{QUARTER}/filings/{TICKER}_{YYYY-MM-DD}_{form}.htm + .meta.json'
   },
   { id: 'companyfacts-store', layer: 'input', kind: 'store', x: 620, y: 175, w: 220, h: 50, label: 'companyfacts.json',
@@ -599,14 +586,14 @@ let NODES = [
     purpose: 'Non-iXBRL PDFs — primarily IR-site press releases downloaded by the investor-relations-data-scraper skill. Press releases = IS-only; 10-K/10-Q PDFs are a legacy path now superseded by the iXBRL extractor for SEC-filed documents.',
     path: 'Brain/Sources/{TICKER}/{QUARTER}/transcripts/*_press_release.pdf'
   },
-  { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 170, y: 315, w: 220, h: 50, label: 'pattern_libraries/*.json',
-    purpose: 'Shared cross-ticker JSON store with two roles. Extract-time (6 files: statement_heading_patterns, section_heading_patterns, unit_phrases, period_phrase_patterns, filing_type_patterns, numeric_notation_patterns) — read by financials-extract (PDF pipeline); iXBRL extractor uses the XBRL taxonomy instead. Reconcile-time (1 file: generic_line_item_mappings.json, ~107 entries) — cross-ticker alias→canonical-row mappings consumed by financials-reconcile alongside the per-ticker ledger. The 6 PDF patterns are also bundled as read-only copies in the extract skill under ~/.claude/skills/financials-extract/references/; Brain folder is the canonical source.',
+  { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 200, y: 315, w: 240, h: 50, label: 'pattern_libraries/*.json',
+    purpose: 'Shared cross-ticker JSON store consumed by financials-extract. Generic library (generic_line_item_mappings.json, 109 entries) — alias → canonical-row + filing_section + sign_convention; loaded by both PDF and iXBRL branches at extract time, validated entry-by-entry through the LibraryEntry Pydantic model (extra="forbid") so typos / invalid Section / invalid SignConvention values fail loudly at load, not at use. Plus 6 PDF-only pattern files (statement_heading_patterns, section_heading_patterns, unit_phrases, period_phrase_patterns, filing_type_patterns, numeric_notation_patterns) used by the PDF branch only — iXBRL branch reads structure from the SEC presentation linkbase. Bundled as read-only copies under ~/.claude/skills/financials-extract/references/; Brain folder is the canonical source.',
     path: 'Brain/Knowledge/Model Schema/pattern_libraries/'
   },
 
   // Layer 2 — feeds / is appended-to by financials-reconcile
   { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 508, w: 240, h: 50, label: 'decisions_ledger.json',
-    purpose: 'Per-ticker mapping + structural-decision store. Post-migration: CELH has ~10 ticker-specific entries (generic library is source of truth for standard GAAP concepts). Entries may specify filing_subsection / filing_section / filing_type for multi-match disambiguation.',
+    purpose: 'Per-ticker mapping + structural-decision store. Generic library is source of truth for standard GAAP concepts; ticker ledgers carry only company-specific anomalies + new_rows. Current state: PG has 1 entry (NEW-BS-001 ESOP Debt Retirement Reserve, QTR-only); CELH has ~10. Entries may specify filing_subsection / filing_section / filing_type for multi-match disambiguation. Append-only, ISO-8601 dates.',
     path: 'Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json'
   },
 
@@ -642,25 +629,21 @@ let EDGES = [
   { from: 'sec-edgar-api', to: 'sec-edgar-fetch', kind: 'data' },
   { from: 'sec-edgar-fetch', to: 'ixbrl-htm-store', kind: 'data' },
   { from: 'sec-edgar-fetch', to: 'companyfacts-store', kind: 'data' },
-  // iXBRL path: HTML store → ixbrl extractor → RawFiling
-  { from: 'ixbrl-htm-store', to: 'financials-extract-ixbrl', kind: 'data' },
-  { from: 'financials-extract-ixbrl', to: 'RawFiling', kind: 'data' },
-  // companyfacts is also consulted by the ixbrl extractor (sanity-check / fallback for missing concepts)
-  { from: 'companyfacts-store', to: 'financials-extract-ixbrl', kind: 'data' },
-  // PDF path (legacy + IR press releases): PDFs → financials-extract → RawFiling
+  // iXBRL HTML store → unified extract dispatcher
+  { from: 'ixbrl-htm-store', to: 'financials-extract', kind: 'data' },
+  // companyfacts consulted by the iXBRL branch of extract (sanity-check / fallback for missing concepts)
+  { from: 'companyfacts-store', to: 'financials-extract', kind: 'data' },
+  // PDF path (IR press releases + legacy): PDFs → unified extract dispatcher
   { from: 'source-pdfs', to: 'financials-extract', kind: 'data' },
-  // Pattern libraries ↔ PDF extract (read on match, append on novel)
+  // Pattern libraries → extract (read at load: generic library validated through LibraryEntry; PDF patterns loaded by PDF branch only)
   { from: 'pattern-libraries', to: 'financials-extract', kind: 'data' },
-  { from: 'financials-extract', to: 'pattern-libraries', kind: 'data' },
-  // PDF extract produces
+  // extract produces RawFiling (with canonical_label + ledger_rule_id pre-populated by lookup.match_raw_item)
   { from: 'financials-extract', to: 'RawFiling', kind: 'data' },
   // RawFiling → reconcile
   { from: 'RawFiling', to: 'financials-reconcile', kind: 'data' },
-  // ledger ↔ reconcile (ticker-specific; append-only)
+  // ledger ↔ reconcile (ticker-specific overrides; append-only)
   { from: 'decisions-ledger', to: 'financials-reconcile', kind: 'data' },
   { from: 'financials-reconcile', to: 'decisions-ledger', kind: 'data' },
-  // pattern_libraries/generic_line_item_mappings.json → reconcile (cross-ticker canonical mappings; read-only at reconcile time). Same folder as the PDF-extract patterns; functional dual-role.
-  { from: 'pattern-libraries', to: 'financials-reconcile', kind: 'data' },
   // reconcile produces
   { from: 'financials-reconcile', to: 'MappedFiling', kind: 'data' },
   // MappedFiling → validate
@@ -708,7 +691,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v8';
+const LS_KEY = 'financials-architecture-playground-v9';
 
 function saveState() {
   try {
@@ -1150,7 +1133,7 @@ function renderDetail() {
 
 // ============ SCAFFOLD PROMPT ============
 
-const SKILL_IDS = ['sec-edgar-fetch', 'financials-extract-ixbrl', 'financials-extract', 'financials-reconcile', 'financials-validate', 'financials-playground', 'model-write', 'model-calc'];
+const SKILL_IDS = ['sec-edgar-fetch', 'financials-extract', 'financials-reconcile', 'financials-validate', 'financials-playground', 'model-write', 'model-calc'];
 const gridEl = document.getElementById('scaffoldGrid');
 const promptEl = document.getElementById('prompt');
 
@@ -1180,49 +1163,42 @@ function schemaLine() {
 function scopeLine() {
   return state.scope === 'celh'
     ? 'CELH-first bootstrap. Original library + ledger seeded from CELH FY2024 10-K. Architecture is multi-ticker — PG onboarded 2026-04-24 as second ticker.'
-    : 'Multi-ticker. Cross-ticker canonical mappings live in pattern_libraries/generic_line_item_mappings.json (~109 entries); ticker-specific anomalies + new_rows live in {TICKER}/decisions_ledger.json. Reconcile merges both at lookup time; ticker entries win on conflicts via tier scoring.';
+    : 'Multi-ticker. Cross-ticker canonical mappings live in pattern_libraries/generic_line_item_mappings.json (109 entries, validated by LibraryEntry on load); ticker-specific anomalies + new_rows live in {TICKER}/decisions_ledger.json. Generic library matched at extract time (lookup.match_raw_item); ticker overlay applied at reconcile time. Ticker entries win on conflicts via tier scoring.';
 }
 
 function scaffoldBody(id) {
   return {
     'sec-edgar-fetch': `Input: --tickers PG,KO,... (comma-separated) OR --ticker PG (single) OR no args = all Consumer Staples. Optional: --forms 10-K,10-Q (default), --limit N (default 8), --since YYYY-MM-DD, --companyfacts-only, --no-companyfacts, --dry-run.
-Output: iXBRL HTML + Financial_Report.xlsx per filing at Brain/Sources/{TICKER}/{QUARTER}/filings/, plus companyfacts.json per ticker at Brain/Sources/{TICKER}/. Every filing also gets a sibling .meta.json sidecar containing accession, CIK, archive_base_url — consumed by financials-extract-ixbrl to locate the presentation linkbase.
+Output: iXBRL HTML + Financial_Report.xlsx per filing at Brain/Sources/{TICKER}/{QUARTER}/filings/, plus companyfacts.json per ticker at Brain/Sources/{TICKER}/. Every filing also gets a sibling .meta.json sidecar containing accession, CIK, archive_base_url — consumed by the iXBRL branch of financials-extract to locate the presentation linkbase.
 Compliance: SEC-polite User-Agent (rodinogj12@gmail.com ...), 5 req/sec throttle, retry on 429/5xx.
 Fiscal-quarter labels derived from submissions.json fiscalYearEnd + periodOfReport, not from IR-page titles — may diverge slightly from IR scraper labels; each path files under its own label.
 Reference: already built at ~/.claude/skills/sec-edgar-fetch/. CLI entrypoint: scripts/fetch.py.
 Acceptance: ran --ticker PG → PG_2025-12-31_10-Q.htm + companyfacts.json (3.6 MB) landed at expected paths.`,
 
-    'financials-extract-ixbrl': `Input: --htm <iXBRL HTML path> + --out <RawFiling JSON path>. Optional: --ticker-root (config.json ticker guard).
-Output: RawFiling JSON identical in shape to financials-extract (PDF) — plug-compatible with financials-reconcile / financials-validate / financials-playground / model-write downstream.
-Classification: uses the SEC presentation linkbase. Fetches FilingSummary.xml + each R{n}.htm with MenuCategory="Statements" from the filing's archive (cached per accession in .cache/reports/{accession-nodash}/), parses concept → statement_code from the rendered R-files, groups facts by (statement_type, period). No fuzzy heuristics.
-iXBRL parsing: lxml XML mode (not HTMLParser — namespaces get mangled). Parse <ix:nonFraction> elements with explicit scale / unit / context attributes; resolve contexts to (period_kind, start, end, segments); resolve units to measure names.
-Unit: dominant scale of USD facts per statement (scale=6 → Unit.MILLIONS). confidence = share of facts at the dominant scale.
-BS filtering: keep only top-2 most-populated instant dates per filing (drops SE roll-forward reference balances that leak in via shared concepts).
-fiscal_quarter: only set for single-quarter durations (11-15 weeks) or BS. YTD and full-year durations get fiscal_quarter=None.
-Reference: already built at ~/.claude/skills/financials-extract-ixbrl/. Venv: Brain/Knowledge/Model Schema/financials-schema/.venv/.
-Acceptance: PG 2026-Q2 10-Q extracts 10 Statements / 199 line items cleanly; RawFiling.model_validate() passes.`,
+    'financials-extract': `Input: --source <pdf|htm|html> + --out <RawFiling JSON> + --ticker-root (config.json: ticker guard, expected revenue/TA ranges) + --library <generic_line_item_mappings.json>. Single CLI dispatcher routes by file extension — no separate skills.
+Routing: detect_source_kind(): .pdf → pdf_path.extract_filing (pdfplumber + pattern libraries); .htm/.html → ixbrl_path.build_raw_filing (lxml + SEC presentation linkbase). SystemExit on unknown extension.
+Output: RawFiling JSON with Statement[] (BS/CF/IS). Each RawLineItem carries raw_filing_label, canonical_label (None on miss → novel), ledger_rule_id, value (Decimal, native unit), raw_numeric_text, notation_flags, section, subsection_context, sign_convention, citation.
+Library lookup at extract time (both branches): match_raw_item() runs exact → fuzzy ≥85 (≥70 when concept set, since iXBRL CamelCase-split labels are noisier) → concept fallback. IS-only keyword sign-detection (expense/loss/cost-of → negative; benefit/gain/income/recovery → positive); per-entry sign_convention always wins. Library entries validated through LibraryEntry Pydantic model (extra="forbid") at load — typos / invalid Section / invalid SignConvention fail loudly.
+PDF branch: 6 pattern libraries (statement_heading_patterns, section_heading_patterns, unit_phrases, period_phrase_patterns, filing_type_patterns, numeric_notation_patterns); BS subtotal-flip; IS keyword classifier; (page, line_hint) citations; Unit.UNKNOWN raises.
+iXBRL branch: lxml XML mode (HTMLParser mangles namespaces); FilingSummary.xml + per-role R{n}.htm cached per accession; concept → statement_code from presentation linkbase (no fuzzy heuristics); CI merged into IS; BS instants filtered to top-2 most-populated dates; YTD durations tagged with filing_fq for QTR pivot.
+Sign-convention abs-based 3-value (as_reported / positive / negative). _signed_value() does ±abs(value); the filer's reported sign is irrelevant. parens_negative special-case removed from PDF path.
+Reference: already built at ~/.claude/skills/financials-extract/ (scripts/extract.py dispatcher, scripts/pdf_path.py, scripts/ixbrl_path.py). Venv: Brain/Knowledge/Model Schema/financials-schema/.venv/.
+Acceptance: PG 2026-Q2 10-Q (.htm) extracts 10 Statements / 199 line items cleanly with canonical_labels populated; CELH FY2024 10-K (.pdf) extracts BS totals matching the source citations doc.`,
 
-    'financials-extract': `Input: PDF path (--in) + output path (--out) + --ticker-root (e.g. Brain/Knowledge/Model Schema/CELH/) for config.json (expected revenue/TA ranges) and anomalies.json. PDF-only path — iXBRL filings from SEC use financials-extract-ixbrl instead.
-Output: RawFiling JSON with Statement[] (BS/CF/IS). Each RawLineItem carries raw_filing_label (verbatim PDF text), value (Decimal, native unit), raw_numeric_text ("(101,726)"), notation_flags (NumericNotation bitmap), section (classified), subsection_context (EPS vs shares_outstanding), citation (page, line_hint).
-Unit detection: pattern library at references/unit_phrases.json (4-layer ladder: normalize → keyword → fuzzy → user-prompt-append). Plausibility fallback reads tickers/{TICKER}/config.json for expected revenue/TA ranges. Unit.UNKNOWN raises.
-Statement location heuristics: references/{statement_heading_patterns, section_heading_patterns, period_phrase_patterns, numeric_notation_patterns, filing_type_patterns}.json — 5 parsing aids. Bundled with the skill as read-only copies of masters at Brain/Knowledge/Model Schema/pattern_libraries/*.json. Press releases = IS only.
-What this skill does NOT do: semantic alias→canonical mapping. Raw labels flow through to financials-reconcile unchanged; reconcile consults generic_line_item_mappings.json (not used here).
-Acceptance: extract CELH FY2025 10-K PDF → RawFiling whose BS totals match the source citations doc.`,
-
-    'financials-reconcile': `Input: RawFiling + --ticker-root (reads {TICKER}/decisions_ledger.json) + --generic-library (defaults to --ticker-root/../pattern_libraries/generic_line_item_mappings.json). --dry-run prints report only, --novels-out writes NovelReport JSON for playground QA.
-Output: MappedFiling — each line item gains model_sheet, model_row, model_label, ledger_rule_id. Unmatched items raise unless --dry-run (novel surfacing).
-Lookup: build index keyed (normalized_label, sheet_group IS|BS|CF, sheet_variant ANNL|QTR). Generic entries indexed under BOTH variants (canonical concepts are variant-agnostic); ticker entries stay variant-specific. Ticker tier 10 > generic tier 0; ticker wins on alias conflicts.
-Filing-type aware: 10-K → ANNL sheets (ANNL P&L / BALANCE SHEET / CASH FLOW); 10-Q → QTR sheets (QTR P&L / QTR BS / QTR CF). 10-Q statements filtered to 3-month duration IS/CF (period_length_weeks ∈ [11,15]) + BS instants; YTD 6mo/9mo dropped.
-Label normalization: lowercase, strip footnote markers + par-value clutter + punctuation, AND split CamelCase (us-gaap concept names like "AccountsReceivableNetCurrent" tokenize to "accounts receivable net current" to match library aliases).
-Subtotal detection: labels starting with "Total"/"Subtotal" OR matching the iXBRL concept allowlist (Assets, AssetsCurrent, Liabilities, LiabilitiesCurrent, LiabilitiesAndStockholdersEquity, StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest) routed to _subtotal pseudo-sheet; model-write generates canonical "Total X" rows at section boundaries.
-Subsection filter: strict when item.subsection_context is set (PDF EPS vs shares disambiguation); for iXBRL items (subsection_context=None) with exactly one candidate for the alias key, accept despite filing_subsection mismatch.
+    'financials-reconcile': `Input: RawFiling (already canonicalized at extract time) + --ticker-root (reads {TICKER}/decisions_ledger.json). --dry-run prints report only, --novels-out writes NovelReport JSON for playground QA.
+Output: MappedFiling — each line item gains model_sheet, model_row, model_label. Halts loudly if any item arrives with Section.UNCLASSIFIED (extract miss; surfaces rule_id + canonical_label so the user knows which library entry needs filing_section).
+Role: thin overlay step. Generic-library lookup happens in extract; reconcile applies ticker-ledger overrides on top, routes items to model_sheet by (filing_type, statement_type) via SHEET_NAME[(filing_type, statement_type)] (pure-function lookup, KeyError on missing combo — no fallback masking misroutes), and surfaces novels.
+Filing-type aware: 10-K → ANNL sheets (ANNL P&L / BALANCE SHEET / CASH FLOW); 10-Q → QTR sheets (QTR P&L / QTR BS / QTR CF). keep_statement_for_pipeline (shared helper from financials_schema.statement) filters: 10-K = annual durations only; 10-Q = longest duration per period_end (YTD wins so PG-style YTD-only CF survives).
+Subtotal detection: labels starting with "Total"/"Subtotal" OR matching the iXBRL concept allowlist (Assets, AssetsCurrent, Liabilities, LiabilitiesCurrent, LiabilitiesAndStockholdersEquity, StockholdersEquityIncluding…) routed to _subtotal pseudo-sheet; model-write generates canonical "Total X" rows at section boundaries.
 Section-collision guard: refuses to emit if one rule_id matched items across multiple sections (indicates ambiguous ledger entry needing filing_section split).
-Reference: Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (~109 entries). Brain/Knowledge/Model Schema/CELH/decisions_ledger.json (6 mappings + 2 new_rows + 7 structural, post-migration).
+Reference: Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (109 entries, validated through LibraryEntry on load). Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json — ticker-specific anomalies + new_rows.
 Acceptance: PG Q2 FY26 10-Q → 0 novels; CELH FY2024 + FY2025 10-Ks → 0 novels.`,
 
     'financials-validate': `Input: MappedFiling + --ticker-root (reads anomalies.json for overrides).
 Output: ValidatedFiling, or raise ValidationError with structured gap list (rule_id, expected, actual, gap, severity).
-Validators (period-agnostic — apply to both 10-K and 10-Q): BS-1..BS-6 (subtotal sums: TCA/NCA/TCL/NCL/TSE + accounting equation); CF-1/CF-2 (CFO+CFI+CFF+FX=ΔCash; CashEnd=Beg+Δ); CF-3/CF-4/CF-5 (section sums); IS-1..IS-4 (gross profit, operating income, pre-tax, net income cascades); X-1/X-2/X-4 (cross-statement: CF NI=P&L NI; CF CashEnd=BS Cash per cash_convention; Pref Div ties); M-1 (mapping consistency — all items on one rule_id must agree on section). BS-7 (RE roll-forward) deferred — needs prior-period BS.
+Architecture: section-driven. partition_balance_sheet / partition_cash_flow bucket items by item.section directly (no state machines, no English-prose label walks). Subtotal rows captured as named anchors (TCA / TA / TCL / TL / TSE / total_LE on BS; per-section subtotal on CF). _signed_value() applies sign_convention abs-based (positive → +abs, negative → -abs, as_reported → pass-through). Cross-statement validators key on canonical_label (set at extract time), not English-prose anchors — _find_item_contains is gone.
+CF is genuinely 4 sections: operating / investing / financing / cash_other. FX Effect on Cash sits in cash_other. CF-1: NetΔCash = sum of all 4 section subtotals. CF-2 keys Cash Beg/End by canonical_label.
+Validators (period-agnostic — apply to both 10-K and 10-Q): BS-1..BS-6 (subtotal sums: TCA/NCA/TCL/NCL/TSE + accounting equation); CF-1/CF-2 (NetΔCash + rollforward); CF-3/CF-4/CF-5 (section sums per partition); IS-1..IS-4 (gross profit, operating income, pre-tax, net income cascades); X-1/X-2/X-4 (cross-statement: CF NI=P&L NI; CF CashEnd=BS Cash per cash_convention; Pref Div ties); M-1 (mapping consistency — all items on one rule_id must agree on section). BS-7 (RE roll-forward) deferred — needs prior-period BS.
 Tolerance: $1K absolute, 0.1% relative. Period label format: FY{year} for annual, Q{N} FY{year} for quarterly.
 Cash convention: honor {TICKER}/anomalies.json.cash_convention_per_year (e.g. CELH 2023=cash_plus_restricted, 2024+=cash_only). Override support via validation_overrides.
 Acceptance: CELH FY2024 + FY2025 10-Ks → 48/48 PASS (36 original + IS-1..4 × 3 periods per filing).`,
@@ -1253,7 +1229,7 @@ Acceptance: CELH FY2024 10-K + FY2025 10-K → 2 assumptions + 258 driver cells 
 function updatePrompt() {
   const id = state.scaffoldFirst;
   const ledgerNote = ['financials-reconcile', 'financials-validate', 'model-write'].includes(id)
-    ? '\n\nLoad cross-ticker generic library from Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (~109 canonical entries) AND per-ticker decisions_ledger.json from --ticker-root. Ticker entries override generic on conflicts via tier scoring. Append-only, ISO-8601 dates when recording new user decisions.'
+    ? '\n\nLoad cross-ticker generic library from Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (109 canonical entries, validated through LibraryEntry on load) AND per-ticker decisions_ledger.json from --ticker-root. Generic library lookup happens in extract; ticker overlay applied at reconcile. Ticker entries override generic on conflicts via tier scoring. Append-only, ISO-8601 dates when recording new user decisions.'
     : '';
 
   const text = `Scaffold the \`${id}\` skill as part of the CELH multi-skill financial-modeling pipeline.
