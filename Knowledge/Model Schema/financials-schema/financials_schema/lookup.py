@@ -347,6 +347,7 @@ def match_raw_item(
     statement_type: StatementType,
     index: dict[tuple[str, str], list[dict]],
     fuzzy_threshold: int = 85,
+    strict: bool = False,
 ) -> dict | None:
     """Look up a raw line item in the generic library.
 
@@ -374,8 +375,11 @@ def match_raw_item(
     candidates = index.get((normalized, group), [])
     entry = select_entry(candidates, subsection_context, section)
 
-    # (2) fuzzy on raw label
-    if entry is None:
+    # (2) fuzzy on raw label — skipped in strict mode (subtotal-row lookups
+    # need exact matches only; fuzz.ratio of "total current liabilities" vs
+    # "other current liabilities" is 88% and would mis-promote a subtotal
+    # row to a sibling line-item canonical, double-counting on the BS).
+    if entry is None and not strict:
         group_keys = [k for (k, sg) in index if sg == group]
         matches = process.extract(normalized, group_keys, scorer=fuzz.ratio, limit=3)
         if matches and matches[0][1] >= fuzzy_threshold:
