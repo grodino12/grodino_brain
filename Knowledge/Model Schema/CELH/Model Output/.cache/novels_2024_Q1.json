@@ -11,38 +11,25 @@
       "period_label": "Q1 FY2024",
       "period_end_date": "2024-03-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Notes And Loans Receivable Net Current",
-      "value": "2259",
-      "raw_numeric_text": "2,259",
-      "section": "current_liabilities",
+      "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
+      "value": "0.000001",
+      "raw_numeric_text": "0.001",
+      "section": "unclassified",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:NotesAndLoansReceivableNetCurrent | ctx:instant:2024-03-31",
-        "note": "iXBRL | Consolidated Balance Sheets"
+        "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2024-03-31",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
-      "nearest_matches": [
-        [
-          "note receivable-net current",
-          0.8
-        ],
-        [
-          "notes receivable net",
-          0.6896551724137931
-        ],
-        [
-          "note receivable-current-net",
-          0.676923076923077
-        ]
-      ]
+      "nearest_matches": []
     },
     {
       "statement_type": "BS",
       "period_label": "Q1 FY2024",
       "period_end_date": "2024-03-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Temporary Equity Cumulative Dividend Percentage",
+      "raw_filing_label": "Mezzanine equity, cumulative dividend (percentage)",
       "value": "0.00005",
       "raw_numeric_text": "5",
       "section": "unclassified",
@@ -53,36 +40,10 @@
         "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2024-03-31",
         "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
-      "nearest_matches": []
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "Q1 FY2024",
-      "period_end_date": "2024-03-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Deferred Contract Costs Current",
-      "value": "14124",
-      "raw_numeric_text": "14,124",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2024-03-31",
-        "note": "iXBRL | Consolidated Balance Sheets"
-      },
       "nearest_matches": [
         [
-          "deferred tax assets net",
-          0.6666666666666667
-        ],
-        [
-          "deferred revenue current",
-          0.6545454545454545
-        ],
-        [
-          "contract liabilities current",
-          0.6440677966101696
+          "retained earnings accumulated deficit",
+          0.5238095238095238
         ]
       ]
     },
@@ -91,7 +52,7 @@
       "period_label": "Q1 FY2024",
       "period_end_date": "2024-03-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Temporary Equity Shares Outstanding",
+      "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
       "value": "1466666",
       "raw_numeric_text": "1,466,666",
       "section": "unclassified",
@@ -102,27 +63,14 @@
         "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2024-03-31",
         "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
-      "nearest_matches": [
-        [
-          "common stock shares outstanding",
-          0.696969696969697
-        ],
-        [
-          "preferred stock shares outstanding",
-          0.6956521739130435
-        ],
-        [
-          "treasury stock common shares outstanding",
-          0.6933333333333335
-        ]
-      ]
+      "nearest_matches": []
     },
     {
       "statement_type": "BS",
       "period_label": "Q1 FY2024",
       "period_end_date": "2024-03-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Temporary Equity Aggregate Amount Of Redemption Requirement",
+      "raw_filing_label": "Mezzanine equity, redemption amount",
       "value": "550000",
       "raw_numeric_text": "550,000",
       "section": "unclassified",
@@ -140,29 +88,29 @@
       "period_label": "Q1 FY2024",
       "period_end_date": "2024-03-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Deposits Assets",
-      "value": "7963",
-      "raw_numeric_text": "7,963",
+      "raw_filing_label": "Lease liability obligation-operating leases",
+      "value": "850",
+      "raw_numeric_text": "850",
       "section": "unclassified",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2024-03-31",
+        "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2024-03-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
       "nearest_matches": [
         [
-          "other assets",
-          0.6666666666666667
+          "lease liability obligation-operating leases",
+          1.0
         ],
         [
-          "deferred tax assets",
-          0.5882352941176471
+          "lease liability obligation-finance leases",
+          0.8571428571428572
         ],
         [
-          "other long-term assets",
-          0.5405405405405406
+          "lease liability operating leases",
+          0.8533333333333333
         ]
       ]
     },
@@ -171,21 +119,29 @@
       "period_label": "Q1 FY2024",
       "period_end_date": "2024-03-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
+      "raw_filing_label": "Lease liability obligation-finance leases",
+      "value": "245",
+      "raw_numeric_text": "245",
       "section": "unclassified",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2024-03-31",
+        "line_hint": "us-gaap:FinanceLeaseLiabilityNoncurrent | ctx:instant:2024-03-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
       "nearest_matches": [
         [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
+          "lease liability obligation-finance leases",
+          1.0
+        ],
+        [
+          "lease liability obligation-operating leases",
+          0.8571428571428572
+        ],
+        [
+          "lease liability finance leases",
+          0.8450704225352113
         ]
       ]
     },
@@ -194,69 +150,25 @@
       "period_label": "Q4 FY2023",
       "period_end_date": "2023-12-31",
       "fiscal_year": 2023,
-      "raw_filing_label": "Notes And Loans Receivable Net Current",
-      "value": "2318",
-      "raw_numeric_text": "2,318",
-      "section": "current_liabilities",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:NotesAndLoansReceivableNetCurrent | ctx:instant:2023-12-31",
-        "note": "iXBRL | Consolidated Balance Sheets"
-      },
-      "nearest_matches": [
-        [
-          "note receivable-net current",
-          0.8
-        ],
-        [
-          "notes receivable net",
-          0.6896551724137931
-        ],
-        [
-          "note receivable-current-net",
-          0.676923076923077
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "Q4 FY2023",
-      "period_end_date": "2023-12-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Deferred Contract Costs Current",
-      "value": "14124",
-      "raw_numeric_text": "14,124",
+      "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
+      "value": "0.000001",
+      "raw_numeric_text": "0.001",
       "section": "unclassified",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
         "page": 1,
-        "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2023-12-31",
-        "note": "iXBRL | Consolidated Balance Sheets"
+        "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2023-12-31",
+        "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
-      "nearest_matches": [
-        [
-          "deferred tax assets net",
-          0.6666666666666667
-        ],
-        [
-          "deferred revenue current",
-          0.6545454545454545
-        ],
-        [
-          "contract liabilities current",
-          0.6440677966101696
-        ]
-      ]
+      "nearest_matches": []
     },
     {
       "statement_type": "BS",
       "period_label": "Q4 FY2023",
       "period_end_date": "2023-12-31",
       "fiscal_year": 2023,
-      "raw_filing_label": "Temporary Equity Shares Outstanding",
+      "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
       "value": "1467000",
       "raw_numeric_text": "1,467",
       "section": "unclassified",
@@ -267,18 +179,36 @@
         "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2023-12-31",
         "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2023",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Lease liability obligation-operating leases",
+      "value": "955",
+      "raw_numeric_text": "955",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2023-12-31",
+        "note": "iXBRL | Consolidated Balance Sheets"
+      },
       "nearest_matches": [
         [
-          "common stock shares outstanding",
-          0.696969696969697
+          "lease liability obligation-operating leases",
+          1.0
         ],
         [
-          "preferred stock shares outstanding",
-          0.6956521739130435
+          "lease liability obligation-finance leases",
+          0.8571428571428572
         ],
         [
-          "treasury stock common shares outstanding",
-          0.6933333333333335
+          "lease liability operating leases",
+          0.8533333333333333
         ]
       ]
     },
@@ -287,424 +217,29 @@
       "period_label": "Q4 FY2023",
       "period_end_date": "2023-12-31",
       "fiscal_year": 2023,
-      "raw_filing_label": "Deposits Assets",
-      "value": "291",
-      "raw_numeric_text": "291",
+      "raw_filing_label": "Lease liability obligation-finance leases",
+      "value": "193",
+      "raw_numeric_text": "193",
       "section": "unclassified",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2023-12-31",
+        "line_hint": "us-gaap:FinanceLeaseLiabilityNoncurrent | ctx:instant:2023-12-31",
         "note": "iXBRL | Consolidated Balance Sheets"
       },
       "nearest_matches": [
         [
-          "other assets",
-          0.6666666666666667
+          "lease liability obligation-finance leases",
+          1.0
         ],
         [
-          "deferred tax assets",
-          0.5882352941176471
+          "lease liability obligation-operating leases",
+          0.8571428571428572
         ],
         [
-          "other long-term assets",
-          0.5405405405405406
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "Q4 FY2023",
-      "period_end_date": "2023-12-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2023-12-31",
-        "note": "iXBRL | Consolidated Balance Sheets"
-      },
-      "nearest_matches": [
-        [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2024",
-      "period_end_date": "2024-03-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Inventory Allowance For Excess And Obsolete Products",
-      "value": "2386",
-      "raw_numeric_text": "2,386",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "celh:InventoryAllowanceForExcessAndObsoleteProducts | ctx:duration:2024-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "inventory excess and obsolescence",
-          0.6823529411764706
-        ],
-        [
-          "allowance for credit losses",
-          0.5569620253164558
-        ],
-        [
-          "allowance for doubtful accounts",
-          0.5542168674698795
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2024",
-      "period_end_date": "2024-03-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Deferred Tax Liabilitynet",
-      "value": "6450",
-      "raw_numeric_text": "6,450",
-      "section": "non_current_liabilities",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "celh:DeferredTaxLiabilitynet | ctx:duration:2024-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "deferred tax provision",
-          0.6808510638297872
-        ],
-        [
-          "deferred income taxes net",
-          0.64
-        ],
-        [
-          "deferred income taxes-net",
-          0.6
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2024",
-      "period_end_date": "2024-03-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Increase Decrease In Deferred Revenue And Other Current Liabilities",
-      "value": "2094",
-      "raw_numeric_text": "2,094",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "celh:IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities | ctx:duration:2024-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "change in other current liabilities",
-          0.6274509803921569
-        ],
-        [
-          "increase decrease in accounts receivable",
-          0.5981308411214954
-        ],
-        [
-          "increase decrease in prepaid expenses",
-          0.5961538461538461
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2024",
-      "period_end_date": "2024-03-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Increase Decrease In Contract With Customer Liability",
-      "value": "-2378",
-      "raw_numeric_text": "2,378",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:IncreaseDecreaseInContractWithCustomerLiability | ctx:duration:2024-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "increase decrease in accounts receivable",
-          0.6881720430107527
-        ],
-        [
-          "increase decrease in accounts payable",
-          0.6666666666666667
-        ],
-        [
-          "increase decrease in other operating capital",
-          0.6597938144329896
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2024",
-      "period_end_date": "2024-03-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Payments Of Dividends Preferred Stock And Preference Stock",
-      "value": "-6837",
-      "raw_numeric_text": "6,837",
-      "section": "financing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsOfDividendsPreferredStockAndPreferenceStock | ctx:duration:2024-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "cash dividends paid on preferred stock",
-          0.6666666666666667
-        ],
-        [
-          "dividends paid on preferred stock",
-          0.6373626373626373
-        ],
-        [
-          "cash dividends paid on series a convertible preferred stock",
-          0.5982905982905983
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2024",
-      "period_end_date": "2024-03-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Taxes Other",
-      "value": "320",
-      "raw_numeric_text": "320",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:TaxesOther | ctx:duration:2024-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "other",
-          0.625
-        ],
-        [
-          "taxes",
-          0.625
-        ],
-        [
-          "taxes paid",
-          0.5714285714285714
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2023",
-      "period_end_date": "2023-03-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Inventory Allowance For Excess And Obsolete Products",
-      "value": "1672",
-      "raw_numeric_text": "1,672",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "celh:InventoryAllowanceForExcessAndObsoleteProducts | ctx:duration:2023-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "inventory excess and obsolescence",
-          0.6823529411764706
-        ],
-        [
-          "allowance for credit losses",
-          0.5569620253164558
-        ],
-        [
-          "allowance for doubtful accounts",
-          0.5542168674698795
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2023",
-      "period_end_date": "2023-03-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Deferred Tax Liabilitynet",
-      "value": "2873",
-      "raw_numeric_text": "2,873",
-      "section": "non_current_liabilities",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "celh:DeferredTaxLiabilitynet | ctx:duration:2023-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "deferred tax provision",
-          0.6808510638297872
-        ],
-        [
-          "deferred income taxes net",
-          0.64
-        ],
-        [
-          "deferred income taxes-net",
-          0.6
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2023",
-      "period_end_date": "2023-03-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Increase Decrease In Deferred Revenue And Other Current Liabilities",
-      "value": "1508",
-      "raw_numeric_text": "1,508",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "celh:IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities | ctx:duration:2023-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "change in other current liabilities",
-          0.6274509803921569
-        ],
-        [
-          "increase decrease in accounts receivable",
-          0.5981308411214954
-        ],
-        [
-          "increase decrease in prepaid expenses",
-          0.5961538461538461
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2023",
-      "period_end_date": "2023-03-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Increase Decrease In Contract With Customer Liability",
-      "value": "-4625",
-      "raw_numeric_text": "4,625",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:IncreaseDecreaseInContractWithCustomerLiability | ctx:duration:2023-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "increase decrease in accounts receivable",
-          0.6881720430107527
-        ],
-        [
-          "increase decrease in accounts payable",
-          0.6666666666666667
-        ],
-        [
-          "increase decrease in other operating capital",
-          0.6597938144329896
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2023",
-      "period_end_date": "2023-03-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Payments Of Dividends Preferred Stock And Preference Stock",
-      "value": "-6781",
-      "raw_numeric_text": "6,781",
-      "section": "financing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsOfDividendsPreferredStockAndPreferenceStock | ctx:duration:2023-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "cash dividends paid on preferred stock",
-          0.6666666666666667
-        ],
-        [
-          "dividends paid on preferred stock",
-          0.6373626373626373
-        ],
-        [
-          "cash dividends paid on series a convertible preferred stock",
-          0.5982905982905983
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "Q1 FY2023",
-      "period_end_date": "2023-03-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Taxes Other",
-      "value": "408",
-      "raw_numeric_text": "408",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:TaxesOther | ctx:duration:2023-03-31",
-        "note": "iXBRL | Consolidated Statements of Cash Flows"
-      },
-      "nearest_matches": [
-        [
-          "other",
-          0.625
-        ],
-        [
-          "taxes",
-          0.625
-        ],
-        [
-          "taxes paid",
-          0.5714285714285714
+          "lease liability finance leases",
+          0.8450704225352113
         ]
       ]
     }

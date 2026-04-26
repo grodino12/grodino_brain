@@ -24,7 +24,7 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Cash And Cash Equivalents At Carrying Value",
+          "raw_filing_label": "Cash and cash equivalents",
           "canonical_label": "Cash & Cash Equivalents",
           "ledger_rule_id": "GEN-BS-001",
           "value": "595476",
@@ -44,7 +44,7 @@
           }
         },
         {
-          "raw_filing_label": "Restricted Cash",
+          "raw_filing_label": "Restricted cash",
           "canonical_label": "Restricted Cash",
           "ledger_rule_id": "GEN-BS-002",
           "value": "38105",
@@ -64,7 +64,7 @@
           }
         },
         {
-          "raw_filing_label": "Accounts Receivable Net Current",
+          "raw_filing_label": "Accounts receivable-net",
           "canonical_label": "Accounts Receivable",
           "ledger_rule_id": "GEN-BS-003",
           "value": "172032",
@@ -84,7 +84,7 @@
           }
         },
         {
-          "raw_filing_label": "Notes And Loans Receivable Net Current",
+          "raw_filing_label": "Note receivable-current",
           "canonical_label": "Note Receivable - Current",
           "ledger_rule_id": "GEN-BS-004",
           "value": "3587",
@@ -104,7 +104,7 @@
           }
         },
         {
-          "raw_filing_label": "Inventory Net",
+          "raw_filing_label": "Inventories-net",
           "canonical_label": "Inventories",
           "ledger_rule_id": "GEN-BS-005",
           "value": "154280",
@@ -124,7 +124,7 @@
           }
         },
         {
-          "raw_filing_label": "Prepaid Expense And Other Assets Current",
+          "raw_filing_label": "Prepaid expenses and other current assets",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-BS-006",
           "value": "15507",
@@ -144,7 +144,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Outstanding",
+          "raw_filing_label": "Common Stock, Shares, Outstanding",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "76782000",
@@ -164,16 +164,16 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Contract Costs Current",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Deferred other costs-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "14124",
           "raw_numeric_text": "14,124",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -184,7 +184,7 @@
           }
         },
         {
-          "raw_filing_label": "Assets Current",
+          "raw_filing_label": "Total current assets",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "993111",
@@ -204,7 +204,7 @@
           }
         },
         {
-          "raw_filing_label": "Property Plant And Equipment Net",
+          "raw_filing_label": "Property and equipment-net",
           "canonical_label": "Net PP&E",
           "ledger_rule_id": "GEN-BS-007",
           "value": "12054",
@@ -224,7 +224,7 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Income Tax Assets Net",
+          "raw_filing_label": "Deferred tax asset",
           "canonical_label": "Deferred Tax Assets",
           "ledger_rule_id": "GEN-BS-008",
           "value": "482",
@@ -244,7 +244,7 @@
           }
         },
         {
-          "raw_filing_label": "Operating Lease Right Of Use Asset",
+          "raw_filing_label": "Right of use assets-operating leases",
           "canonical_label": "ROU Assets - Operating - Non-Current",
           "ledger_rule_id": "GEN-BS-009",
           "value": "931",
@@ -264,7 +264,7 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Right Of Use Asset",
+          "raw_filing_label": "Right of use assets-finance leases",
           "canonical_label": "ROU Assets - Finance - Non-Current",
           "ledger_rule_id": "GEN-BS-010",
           "value": "191",
@@ -284,7 +284,7 @@
           }
         },
         {
-          "raw_filing_label": "Deposits Assets",
+          "raw_filing_label": "Other long-term assets",
           "canonical_label": "Other Non-Current Assets",
           "ledger_rule_id": "GEN-BS-014",
           "value": "263",
@@ -304,16 +304,16 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Other Costs Non Current",
-          "canonical_label": "Other Non-Current Assets",
-          "ledger_rule_id": "GEN-BS-014",
+          "raw_filing_label": "Deferred other costs-non-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "258931",
           "raw_numeric_text": "258,931",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_assets",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -324,7 +324,7 @@
           }
         },
         {
-          "raw_filing_label": "Intangible Assets Net Excluding Goodwill",
+          "raw_filing_label": "Intangibles",
           "canonical_label": "Intangible Assets",
           "ledger_rule_id": "GEN-BS-012",
           "value": "12359",
@@ -364,7 +364,7 @@
           }
         },
         {
-          "raw_filing_label": "Assets",
+          "raw_filing_label": "Total Assets",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "1292271",
@@ -384,7 +384,7 @@
           }
         },
         {
-          "raw_filing_label": "Accounts Payable And Accrued Liabilities Current",
+          "raw_filing_label": "Accounts payable and accrued expenses",
           "canonical_label": "Accounts Payable",
           "ledger_rule_id": "GEN-BS-015",
           "value": "107112",
@@ -404,16 +404,16 @@
           }
         },
         {
-          "raw_filing_label": "Accrued Professional Fees Current",
-          "canonical_label": "Accrued Expenses",
-          "ledger_rule_id": "GEN-BS-016",
+          "raw_filing_label": "Accrued distributor termination fees",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "1063",
           "raw_numeric_text": "1,063",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "current_liabilities",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -424,7 +424,7 @@
           }
         },
         {
-          "raw_filing_label": "Accrued Promotional Allowance",
+          "raw_filing_label": "Accrued promotional allowance",
           "canonical_label": "Accrued Promotional Allowance",
           "ledger_rule_id": "GEN-BS-018",
           "value": "68225",
@@ -444,7 +444,7 @@
           }
         },
         {
-          "raw_filing_label": "Operating Lease Liability Current",
+          "raw_filing_label": "Lease liability obligation-operating leases",
           "canonical_label": "Lease Liability - Operating - Current",
           "ledger_rule_id": "GEN-BS-019",
           "value": "605",
@@ -464,7 +464,7 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Liability Current",
+          "raw_filing_label": "Lease liability obligation-finance leases",
           "canonical_label": "Lease Liability - Finance - Current",
           "ledger_rule_id": "GEN-BS-020",
           "value": "69",
@@ -484,7 +484,7 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Revenue Current",
+          "raw_filing_label": "Deferred revenue-current",
           "canonical_label": "Deferred Revenue - Current",
           "ledger_rule_id": "GEN-BS-021",
           "value": "9563",
@@ -504,7 +504,7 @@
           }
         },
         {
-          "raw_filing_label": "Other Liabilities Current",
+          "raw_filing_label": "Other current liabilities",
           "canonical_label": "Other Current Liabilities",
           "ledger_rule_id": "GEN-BS-022",
           "value": "5094",
@@ -524,7 +524,7 @@
           }
         },
         {
-          "raw_filing_label": "Liabilities Current",
+          "raw_filing_label": "Total current liabilities",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "191731",
@@ -544,16 +544,16 @@
           }
         },
         {
-          "raw_filing_label": "Operating Lease Liability Noncurrent",
-          "canonical_label": "Lease Liability - Operating - Non-Current",
-          "ledger_rule_id": "GEN-BS-023",
+          "raw_filing_label": "Lease liability obligation-operating leases",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "336",
           "raw_numeric_text": "336",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -564,16 +564,16 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Liability Noncurrent",
-          "canonical_label": "Lease Liability - Finance - Non-Current",
-          "ledger_rule_id": "GEN-BS-024",
+          "raw_filing_label": "Lease liability obligation-finance leases",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "156",
           "raw_numeric_text": "156",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -584,7 +584,7 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Income Tax Liabilities",
+          "raw_filing_label": "Deferred tax liability",
           "canonical_label": "Deferred Tax Liability",
           "ledger_rule_id": "GEN-BS-025",
           "value": "19250",
@@ -604,9 +604,9 @@
           }
         },
         {
-          "raw_filing_label": "Other Liabilities And Deferred Revenue Noncurrent",
-          "canonical_label": "Other Non-Current Liabilities",
-          "ledger_rule_id": "GEN-BS-034",
+          "raw_filing_label": "Deferred revenue-non-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "175275",
           "raw_numeric_text": "175,275",
           "notation_flags": 0,
@@ -624,7 +624,7 @@
           }
         },
         {
-          "raw_filing_label": "Liabilities",
+          "raw_filing_label": "Total Liabilities",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "386748",
@@ -644,16 +644,16 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred shares, $0.001 par value, 5% cumulative dividends; 1,467 shares issued and outstanding at March 31, 2023 and December 31, 2022, respectively, aggregate liquidation preference of $550,000 as of March 31, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -664,7 +664,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Value",
+          "raw_filing_label": "Common stock, $0.001 par value; 100,000 shares authorized, 76,782 and 76,382 shares issued and outstanding at March 31, 2023 and December 31, 2022,respectively",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
           "value": "77",
@@ -684,7 +684,7 @@
           }
         },
         {
-          "raw_filing_label": "Additional Paid In Capital",
+          "raw_filing_label": "Additional paid-in capital",
           "canonical_label": "Additional Paid-in Capital",
           "ledger_rule_id": "GEN-BS-029",
           "value": "279872",
@@ -704,7 +704,7 @@
           }
         },
         {
-          "raw_filing_label": "Accumulated Other Comprehensive Income Loss Net Of Tax",
+          "raw_filing_label": "Accumulated other comprehensive income (loss)",
           "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
           "ledger_rule_id": "GEN-BS-030",
           "value": "1287",
@@ -724,7 +724,7 @@
           }
         },
         {
-          "raw_filing_label": "Retained Earnings Accumulated Deficit",
+          "raw_filing_label": "Accumulated deficit",
           "canonical_label": "Retained Earnings (Accumulated Deficit)",
           "ledger_rule_id": "GEN-BS-031",
           "value": "197627",
@@ -744,7 +744,7 @@
           }
         },
         {
-          "raw_filing_label": "Stockholders Equity",
+          "raw_filing_label": "Total Stockholders’ Equity",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "81035",
@@ -764,7 +764,7 @@
           }
         },
         {
-          "raw_filing_label": "Liabilities And Stockholders Equity",
+          "raw_filing_label": "Total Liabilities, Mezzanine Equity and Stockholders' Equity",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "1292271",
@@ -805,7 +805,7 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Cash And Cash Equivalents At Carrying Value",
+          "raw_filing_label": "Cash and cash equivalents",
           "canonical_label": "Cash & Cash Equivalents",
           "ledger_rule_id": "GEN-BS-001",
           "value": "614159",
@@ -825,7 +825,7 @@
           }
         },
         {
-          "raw_filing_label": "Restricted Cash",
+          "raw_filing_label": "Restricted cash",
           "canonical_label": "Restricted Cash",
           "ledger_rule_id": "GEN-BS-002",
           "value": "38768",
@@ -845,7 +845,7 @@
           }
         },
         {
-          "raw_filing_label": "Accounts Receivable Net Current",
+          "raw_filing_label": "Accounts receivable-net",
           "canonical_label": "Accounts Receivable",
           "ledger_rule_id": "GEN-BS-003",
           "value": "63311",
@@ -865,7 +865,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
+          "raw_filing_label": "Common Stock, Par or Stated Value Per Share",
           "canonical_label": "Par Value of Equity",
           "ledger_rule_id": "GEN-BS-042",
           "value": "0.000001",
@@ -885,7 +885,7 @@
           }
         },
         {
-          "raw_filing_label": "Notes And Loans Receivable Net Current",
+          "raw_filing_label": "Note receivable-current",
           "canonical_label": "Note Receivable - Current",
           "ledger_rule_id": "GEN-BS-004",
           "value": "2979",
@@ -905,15 +905,15 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Authorized",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
+          "raw_filing_label": "Common Stock, Shares Authorized",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
           "value": "100000",
           "raw_numeric_text": "100,000",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "memo",
+          "row_type": "line_item",
           "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -925,7 +925,7 @@
           }
         },
         {
-          "raw_filing_label": "Inventory Net",
+          "raw_filing_label": "Inventories-net",
           "canonical_label": "Inventories",
           "ledger_rule_id": "GEN-BS-005",
           "value": "173289",
@@ -945,7 +945,7 @@
           }
         },
         {
-          "raw_filing_label": "Prepaid Expense And Other Assets Current",
+          "raw_filing_label": "Prepaid expenses and other current assets",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-BS-006",
           "value": "11341",
@@ -965,7 +965,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Outstanding",
+          "raw_filing_label": "Common Stock, Shares, Outstanding",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "76382000",
@@ -985,16 +985,16 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Contract Costs Current",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Deferred other costs-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "14124",
           "raw_numeric_text": "14,124",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1005,7 +1005,7 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
+          "raw_filing_label": "Preferred Stock, Par or Stated Value Per Share",
           "canonical_label": "Par Value of Equity",
           "ledger_rule_id": "GEN-BS-042",
           "value": "0.000001",
@@ -1025,7 +1025,7 @@
           }
         },
         {
-          "raw_filing_label": "Assets Current",
+          "raw_filing_label": "Total current assets",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "917971",
@@ -1045,7 +1045,7 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Cumulative Dividend Percentage",
+          "raw_filing_label": "Preferred Stock, Cumulative Dividend Percentage",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "0.00005",
@@ -1065,7 +1065,7 @@
           }
         },
         {
-          "raw_filing_label": "Notes And Loans Receivable Net Noncurrent",
+          "raw_filing_label": "Note receivable",
           "canonical_label": "Note Receivable - Non-Current",
           "ledger_rule_id": "GEN-BS-011",
           "value": "3574",
@@ -1085,15 +1085,15 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Shares Issued",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
+          "raw_filing_label": "Preferred Stock, Shares Issued",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "1467000",
           "raw_numeric_text": "1,467",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "memo",
+          "row_type": "line_item",
           "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1105,7 +1105,7 @@
           }
         },
         {
-          "raw_filing_label": "Property Plant And Equipment Net",
+          "raw_filing_label": "Property and equipment-net",
           "canonical_label": "Net PP&E",
           "ledger_rule_id": "GEN-BS-007",
           "value": "10185",
@@ -1125,7 +1125,7 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Income Tax Assets Net",
+          "raw_filing_label": "Deferred tax asset",
           "canonical_label": "Deferred Tax Assets",
           "ledger_rule_id": "GEN-BS-008",
           "value": "501",
@@ -1145,7 +1145,7 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Redemption Amount",
+          "raw_filing_label": "Preferred Stock, Redemption Amount",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "550000",
@@ -1165,7 +1165,7 @@
           }
         },
         {
-          "raw_filing_label": "Operating Lease Right Of Use Asset",
+          "raw_filing_label": "Right of use assets-operating leases",
           "canonical_label": "ROU Assets - Operating - Non-Current",
           "ledger_rule_id": "GEN-BS-009",
           "value": "972",
@@ -1185,7 +1185,7 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Right Of Use Asset",
+          "raw_filing_label": "Right of use assets-finance leases",
           "canonical_label": "ROU Assets - Finance - Non-Current",
           "ledger_rule_id": "GEN-BS-010",
           "value": "208",
@@ -1205,7 +1205,7 @@
           }
         },
         {
-          "raw_filing_label": "Deposits Assets",
+          "raw_filing_label": "Other long-term assets",
           "canonical_label": "Other Non-Current Assets",
           "ledger_rule_id": "GEN-BS-014",
           "value": "263",
@@ -1225,16 +1225,16 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Other Costs Non Current",
-          "canonical_label": "Other Non-Current Assets",
-          "ledger_rule_id": "GEN-BS-014",
+          "raw_filing_label": "Deferred other costs-non-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "262462",
           "raw_numeric_text": "262,462",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_assets",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1245,7 +1245,7 @@
           }
         },
         {
-          "raw_filing_label": "Intangible Assets Net Excluding Goodwill",
+          "raw_filing_label": "Intangibles",
           "canonical_label": "Intangible Assets",
           "ledger_rule_id": "GEN-BS-012",
           "value": "12254",
@@ -1285,7 +1285,7 @@
           }
         },
         {
-          "raw_filing_label": "Assets",
+          "raw_filing_label": "Total Assets",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "1222069",
@@ -1305,7 +1305,7 @@
           }
         },
         {
-          "raw_filing_label": "Accounts Payable And Accrued Liabilities Current",
+          "raw_filing_label": "Accounts payable and accrued expenses",
           "canonical_label": "Accounts Payable",
           "ledger_rule_id": "GEN-BS-015",
           "value": "107340",
@@ -1325,16 +1325,16 @@
           }
         },
         {
-          "raw_filing_label": "Accrued Professional Fees Current",
-          "canonical_label": "Accrued Expenses",
-          "ledger_rule_id": "GEN-BS-016",
+          "raw_filing_label": "Accrued distributor termination fees",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "3986",
           "raw_numeric_text": "3,986",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "current_liabilities",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1345,7 +1345,7 @@
           }
         },
         {
-          "raw_filing_label": "Accrued Promotional Allowance",
+          "raw_filing_label": "Accrued promotional allowance",
           "canonical_label": "Accrued Promotional Allowance",
           "ledger_rule_id": "GEN-BS-018",
           "value": "35977",
@@ -1365,7 +1365,7 @@
           }
         },
         {
-          "raw_filing_label": "Operating Lease Liability Current",
+          "raw_filing_label": "Lease liability obligation-operating leases",
           "canonical_label": "Lease Liability - Operating - Current",
           "ledger_rule_id": "GEN-BS-019",
           "value": "661",
@@ -1385,7 +1385,7 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Liability Current",
+          "raw_filing_label": "Lease liability obligation-finance leases",
           "canonical_label": "Lease Liability - Finance - Current",
           "ledger_rule_id": "GEN-BS-020",
           "value": "70",
@@ -1405,7 +1405,7 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Revenue Current",
+          "raw_filing_label": "Deferred revenue-current",
           "canonical_label": "Deferred Revenue - Current",
           "ledger_rule_id": "GEN-BS-021",
           "value": "9675",
@@ -1425,7 +1425,7 @@
           }
         },
         {
-          "raw_filing_label": "Other Liabilities Current",
+          "raw_filing_label": "Other current liabilities",
           "canonical_label": "Other Current Liabilities",
           "ledger_rule_id": "GEN-BS-022",
           "value": "3586",
@@ -1445,7 +1445,7 @@
           }
         },
         {
-          "raw_filing_label": "Liabilities Current",
+          "raw_filing_label": "Total current liabilities",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "161295",
@@ -1465,16 +1465,16 @@
           }
         },
         {
-          "raw_filing_label": "Operating Lease Liability Noncurrent",
-          "canonical_label": "Lease Liability - Operating - Non-Current",
-          "ledger_rule_id": "GEN-BS-023",
+          "raw_filing_label": "Lease liability obligation-operating leases",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "326",
           "raw_numeric_text": "326",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1485,16 +1485,16 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Liability Noncurrent",
-          "canonical_label": "Lease Liability - Finance - Non-Current",
-          "ledger_rule_id": "GEN-BS-024",
+          "raw_filing_label": "Lease liability obligation-finance leases",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "162",
           "raw_numeric_text": "162",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1505,7 +1505,7 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Income Tax Liabilities",
+          "raw_filing_label": "Deferred tax liability",
           "canonical_label": "Deferred Tax Liability",
           "ledger_rule_id": "GEN-BS-025",
           "value": "15919",
@@ -1525,9 +1525,9 @@
           }
         },
         {
-          "raw_filing_label": "Other Liabilities And Deferred Revenue Noncurrent",
-          "canonical_label": "Other Non-Current Liabilities",
-          "ledger_rule_id": "GEN-BS-034",
+          "raw_filing_label": "Deferred revenue-non-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "179788",
           "raw_numeric_text": "179,788",
           "notation_flags": 0,
@@ -1545,7 +1545,7 @@
           }
         },
         {
-          "raw_filing_label": "Liabilities",
+          "raw_filing_label": "Total Liabilities",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "357490",
@@ -1565,16 +1565,16 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred shares, $0.001 par value, 5% cumulative dividends; 1,467 shares issued and outstanding at March 31, 2023 and December 31, 2022, respectively, aggregate liquidation preference of $550,000 as of March 31, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1585,7 +1585,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Value",
+          "raw_filing_label": "Common stock, $0.001 par value; 100,000 shares authorized, 76,782 and 76,382 shares issued and outstanding at March 31, 2023 and December 31, 2022,respectively",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
           "value": "76",
@@ -1605,7 +1605,7 @@
           }
         },
         {
-          "raw_filing_label": "Additional Paid In Capital",
+          "raw_filing_label": "Additional paid-in capital",
           "canonical_label": "Additional Paid-in Capital",
           "ledger_rule_id": "GEN-BS-029",
           "value": "280668",
@@ -1625,7 +1625,7 @@
           }
         },
         {
-          "raw_filing_label": "Accumulated Other Comprehensive Income Loss Net Of Tax",
+          "raw_filing_label": "Accumulated other comprehensive income (loss)",
           "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
           "ledger_rule_id": "GEN-BS-030",
           "value": "1881",
@@ -1645,7 +1645,7 @@
           }
         },
         {
-          "raw_filing_label": "Retained Earnings Accumulated Deficit",
+          "raw_filing_label": "Accumulated deficit",
           "canonical_label": "Retained Earnings (Accumulated Deficit)",
           "ledger_rule_id": "GEN-BS-031",
           "value": "238772",
@@ -1665,7 +1665,7 @@
           }
         },
         {
-          "raw_filing_label": "Stockholders Equity",
+          "raw_filing_label": "Total Stockholders’ Equity",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "40091",
@@ -1685,7 +1685,7 @@
           }
         },
         {
-          "raw_filing_label": "Liabilities And Stockholders Equity",
+          "raw_filing_label": "Total Liabilities, Mezzanine Equity and Stockholders' Equity",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "1222069",
@@ -1726,7 +1726,7 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Net Income Loss",
+          "raw_filing_label": "Net loss",
           "canonical_label": "Net Income (Loss)",
           "ledger_rule_id": "GEN-CF-001",
           "value": "41227",
@@ -1766,7 +1766,7 @@
           }
         },
         {
-          "raw_filing_label": "Adjustment For Amortization",
+          "raw_filing_label": "Amortization",
           "canonical_label": "Amortization",
           "ledger_rule_id": "GEN-CF-053",
           "value": "145",
@@ -1786,7 +1786,7 @@
           }
         },
         {
-          "raw_filing_label": "Provision For Doubtful Accounts",
+          "raw_filing_label": "Allowance for credit losses",
           "canonical_label": "Allowance for Credit Losses",
           "ledger_rule_id": "GEN-CF-004",
           "value": "837",
@@ -1806,7 +1806,7 @@
           }
         },
         {
-          "raw_filing_label": "Amortization Of Deferred Other Costs",
+          "raw_filing_label": "Amortization of deferred other costs",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "3531",
@@ -1826,7 +1826,7 @@
           }
         },
         {
-          "raw_filing_label": "Inventory Allowance For Excess And Obsolete Products",
+          "raw_filing_label": "Inventory excess and obsolescence",
           "canonical_label": "Inventory Write-Down",
           "ledger_rule_id": "GEN-CF-005",
           "value": "1672",
@@ -1846,7 +1846,7 @@
           }
         },
         {
-          "raw_filing_label": "Share Based Compensation",
+          "raw_filing_label": "Share-based payment expense",
           "canonical_label": "Stock-Based Compensation",
           "ledger_rule_id": "GEN-CF-006",
           "value": "5507",
@@ -1866,16 +1866,16 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Tax Liabilitynet",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
           "value": "2873",
           "raw_numeric_text": "2,873",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "section": "operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1886,7 +1886,7 @@
           }
         },
         {
-          "raw_filing_label": "Foreign Currency Transaction Gain Loss Unrealized",
+          "raw_filing_label": "Foreign exchange loss",
           "canonical_label": "Foreign Currency Gain (Loss)",
           "ledger_rule_id": "GEN-CF-009",
           "value": "69",
@@ -1906,7 +1906,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Accounts Receivable",
+          "raw_filing_label": "Accounts receivable-net",
           "canonical_label": "Accounts Receivable",
           "ledger_rule_id": "GEN-CF-011",
           "value": "109639",
@@ -1926,7 +1926,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Inventories",
+          "raw_filing_label": "Inventory-net",
           "canonical_label": "Inventories",
           "ledger_rule_id": "GEN-CF-012",
           "value": "17338",
@@ -1946,7 +1946,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Prepaid Deferred Expense And Other Assets",
+          "raw_filing_label": "Prepaid expenses and other current assets",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-CF-013",
           "value": "4166",
@@ -1966,7 +1966,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Accounts Payable And Accrued Liabilities",
+          "raw_filing_label": "Accounts payable and accrued expenses",
           "canonical_label": "Accounts Payable",
           "ledger_rule_id": "GEN-CF-014",
           "value": "182",
@@ -1986,7 +1986,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Accrued Promotional Allowance",
+          "raw_filing_label": "Accrued promotional allowance",
           "canonical_label": "Accrued Promotional Allowance",
           "ledger_rule_id": "GEN-CF-016",
           "value": "32248",
@@ -2006,9 +2006,9 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Accrued Distributor Terminations Fees",
-          "canonical_label": "Accrued Expenses",
-          "ledger_rule_id": "GEN-CF-015",
+          "raw_filing_label": "Accrued distributor termination fees",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "2923",
           "raw_numeric_text": "2,923",
           "notation_flags": 0,
@@ -2026,9 +2026,9 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Deferred Revenue And Other Current Liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Other current liabilities",
+          "canonical_label": "Other Current Liabilities",
+          "ledger_rule_id": "GEN-CF-017",
           "value": "1508",
           "raw_numeric_text": "1,508",
           "notation_flags": 0,
@@ -2046,7 +2046,7 @@
           }
         },
         {
-          "raw_filing_label": "Change In Right To Use And Lease Obligationnet",
+          "raw_filing_label": "Change in right of use and lease obligation-net",
           "canonical_label": "ROU & Lease Liability, Net",
           "ledger_rule_id": "GEN-CF-018",
           "value": "15",
@@ -2066,9 +2066,9 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Other Noncurrent Liabilities",
-          "canonical_label": "Other Current Liabilities",
-          "ledger_rule_id": "GEN-CF-017",
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue",
+          "ledger_rule_id": "GEN-CF-019",
           "value": "4625",
           "raw_numeric_text": "4,625",
           "notation_flags": 0,
@@ -2086,9 +2086,9 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Other Operating Assets",
-          "canonical_label": "Net Change in Other Working Capital",
-          "ledger_rule_id": "GEN-CF-051",
+          "raw_filing_label": "Other assets",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
           "value": "4",
           "raw_numeric_text": "4",
           "notation_flags": 0,
@@ -2106,7 +2106,7 @@
           }
         },
         {
-          "raw_filing_label": "Net Cash Provided By Used In Operating Activities",
+          "raw_filing_label": "Net cash (used in) provided by operating activities",
           "canonical_label": "Cash Flow from Operations",
           "ledger_rule_id": "GEN-CF-022",
           "value": "13831",
@@ -2126,7 +2126,7 @@
           }
         },
         {
-          "raw_filing_label": "Proceeds From Sale Of Notes Receivable",
+          "raw_filing_label": "Proceeds from note receivable",
           "canonical_label": "Collections from Note Receivable",
           "ledger_rule_id": "GEN-CF-023",
           "value": "3233",
@@ -2146,7 +2146,7 @@
           }
         },
         {
-          "raw_filing_label": "Payments To Acquire Property Plant And Equipment",
+          "raw_filing_label": "Purchase of property and equipment",
           "canonical_label": "Purchase of PP&E",
           "ledger_rule_id": "GEN-CF-024",
           "value": "2253",
@@ -2166,7 +2166,7 @@
           }
         },
         {
-          "raw_filing_label": "Net Cash Provided By Used In Investing Activities",
+          "raw_filing_label": "Net cash provided by (used in) investing activities",
           "canonical_label": "Cash Flow from Investing",
           "ledger_rule_id": "GEN-CF-026",
           "value": "980",
@@ -2186,7 +2186,7 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Principal Payments",
+          "raw_filing_label": "Principal payments on finance lease obligations",
           "canonical_label": "Finance Lease Payments",
           "ledger_rule_id": "GEN-CF-027",
           "value": "11",
@@ -2206,7 +2206,7 @@
           }
         },
         {
-          "raw_filing_label": "Proceeds From Stock Options Exercised",
+          "raw_filing_label": "Proceeds from exercise of stock options",
           "canonical_label": "Proceeds from Exercise of Stock Options",
           "ledger_rule_id": "GEN-CF-028",
           "value": "478",
@@ -2226,7 +2226,7 @@
           }
         },
         {
-          "raw_filing_label": "Payments Of Dividends Preferred Stock And Preference Stock",
+          "raw_filing_label": "Dividends paid on preferred shares",
           "canonical_label": "Preferred Dividends",
           "ledger_rule_id": "GEN-CF-030",
           "value": "6781",
@@ -2246,7 +2246,7 @@
           }
         },
         {
-          "raw_filing_label": "Net Cash Provided By Used In Financing Activities",
+          "raw_filing_label": "Net cash (used in) provided by financing activities",
           "canonical_label": "Cash Flow from Financing",
           "ledger_rule_id": "GEN-CF-033",
           "value": "6314",
@@ -2266,7 +2266,7 @@
           }
         },
         {
-          "raw_filing_label": "Effect Of Exchange Rate On Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents Including Disposal Group And Discontinued Operations",
+          "raw_filing_label": "Effect on exchange rate changes on cash and cash equivalents",
           "canonical_label": "FX Effect on Cash",
           "ledger_rule_id": "GEN-CF-034",
           "value": "181",
@@ -2286,7 +2286,7 @@
           }
         },
         {
-          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents Period Increase Decrease Including Exchange Rate Effect",
+          "raw_filing_label": "Net (decrease) increase in cash, cash equivalents and restricted cash",
           "canonical_label": "Net Change in Cash",
           "ledger_rule_id": "GEN-CF-035",
           "value": "19346",
@@ -2306,16 +2306,16 @@
           }
         },
         {
-          "raw_filing_label": "Taxes Other",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Taxes",
+          "canonical_label": "Cash Paid for Taxes",
+          "ledger_rule_id": "GEN-CF-039",
           "value": "408",
           "raw_numeric_text": "408",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
+          "row_type": "memo",
+          "section": "operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2347,16 +2347,16 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-          "canonical_label": "FX Effect on Cash",
-          "ledger_rule_id": "GEN-CF-034",
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "canonical_label": "Cash at Beginning of Period",
+          "ledger_rule_id": "GEN-CF-036",
           "value": "633581",
           "raw_numeric_text": "633,581",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "cash_other",
+          "section": "non_current_assets",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2388,16 +2388,16 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-          "canonical_label": "FX Effect on Cash",
-          "ledger_rule_id": "GEN-CF-034",
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "canonical_label": "Cash at Beginning of Period",
+          "ledger_rule_id": "GEN-CF-036",
           "value": "652927",
           "raw_numeric_text": "652,927",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "cash_other",
+          "section": "non_current_assets",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2429,7 +2429,7 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Net Income Loss",
+          "raw_filing_label": "Net loss",
           "canonical_label": "Net Income (Loss)",
           "ledger_rule_id": "GEN-CF-001",
           "value": "6679",
@@ -2469,7 +2469,7 @@
           }
         },
         {
-          "raw_filing_label": "Adjustment For Amortization",
+          "raw_filing_label": "Amortization",
           "canonical_label": "Amortization",
           "ledger_rule_id": "GEN-CF-053",
           "value": "141",
@@ -2489,7 +2489,7 @@
           }
         },
         {
-          "raw_filing_label": "Provision For Doubtful Accounts",
+          "raw_filing_label": "Allowance for credit losses",
           "canonical_label": "Allowance for Credit Losses",
           "ledger_rule_id": "GEN-CF-004",
           "value": "455",
@@ -2509,7 +2509,7 @@
           }
         },
         {
-          "raw_filing_label": "Inventory Allowance For Excess And Obsolete Products",
+          "raw_filing_label": "Inventory excess and obsolescence",
           "canonical_label": "Inventory Write-Down",
           "ledger_rule_id": "GEN-CF-005",
           "value": "2596",
@@ -2529,7 +2529,7 @@
           }
         },
         {
-          "raw_filing_label": "Share Based Compensation",
+          "raw_filing_label": "Share-based payment expense",
           "canonical_label": "Stock-Based Compensation",
           "ledger_rule_id": "GEN-CF-006",
           "value": "4310",
@@ -2549,16 +2549,16 @@
           }
         },
         {
-          "raw_filing_label": "Deferred Tax Liabilitynet",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
           "value": "2561",
           "raw_numeric_text": "2,561",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "section": "operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2569,7 +2569,7 @@
           }
         },
         {
-          "raw_filing_label": "Foreign Currency Transaction Gain Loss Unrealized",
+          "raw_filing_label": "Foreign exchange loss",
           "canonical_label": "Foreign Currency Gain (Loss)",
           "ledger_rule_id": "GEN-CF-009",
           "value": "85",
@@ -2589,7 +2589,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Accounts Receivable",
+          "raw_filing_label": "Accounts receivable-net",
           "canonical_label": "Accounts Receivable",
           "ledger_rule_id": "GEN-CF-011",
           "value": "34420",
@@ -2609,7 +2609,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Inventories",
+          "raw_filing_label": "Inventory-net",
           "canonical_label": "Inventories",
           "ledger_rule_id": "GEN-CF-012",
           "value": "4531",
@@ -2629,7 +2629,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Prepaid Deferred Expense And Other Assets",
+          "raw_filing_label": "Prepaid expenses and other current assets",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-CF-013",
           "value": "3513",
@@ -2649,7 +2649,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Accounts Payable And Accrued Liabilities",
+          "raw_filing_label": "Accounts payable and accrued expenses",
           "canonical_label": "Accounts Payable",
           "ledger_rule_id": "GEN-CF-014",
           "value": "5552",
@@ -2669,7 +2669,7 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Accrued Promotional Allowance",
+          "raw_filing_label": "Accrued promotional allowance",
           "canonical_label": "Accrued Promotional Allowance",
           "ledger_rule_id": "GEN-CF-016",
           "value": "12190",
@@ -2689,9 +2689,9 @@
           }
         },
         {
-          "raw_filing_label": "Increase Decrease In Deferred Revenue And Other Current Liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Other current liabilities",
+          "canonical_label": "Other Current Liabilities",
+          "ledger_rule_id": "GEN-CF-017",
           "value": "765",
           "raw_numeric_text": "765",
           "notation_flags": 0,
@@ -2709,7 +2709,7 @@
           }
         },
         {
-          "raw_filing_label": "Change In Right To Use And Lease Obligationnet",
+          "raw_filing_label": "Change in right of use and lease obligation-net",
           "canonical_label": "ROU & Lease Liability, Net",
           "ledger_rule_id": "GEN-CF-018",
           "value": "78",
@@ -2729,7 +2729,7 @@
           }
         },
         {
-          "raw_filing_label": "Net Cash Provided By Used In Operating Activities",
+          "raw_filing_label": "Net cash (used in) provided by operating activities",
           "canonical_label": "Cash Flow from Operations",
           "ledger_rule_id": "GEN-CF-022",
           "value": "9125",
@@ -2749,7 +2749,7 @@
           }
         },
         {
-          "raw_filing_label": "Payments To Acquire Property Plant And Equipment",
+          "raw_filing_label": "Purchase of property and equipment",
           "canonical_label": "Purchase of PP&E",
           "ledger_rule_id": "GEN-CF-024",
           "value": "742",
@@ -2769,7 +2769,7 @@
           }
         },
         {
-          "raw_filing_label": "Net Cash Provided By Used In Investing Activities",
+          "raw_filing_label": "Net cash provided by (used in) investing activities",
           "canonical_label": "Cash Flow from Investing",
           "ledger_rule_id": "GEN-CF-026",
           "value": "742",
@@ -2789,7 +2789,7 @@
           }
         },
         {
-          "raw_filing_label": "Finance Lease Principal Payments",
+          "raw_filing_label": "Principal payments on finance lease obligations",
           "canonical_label": "Finance Lease Payments",
           "ledger_rule_id": "GEN-CF-027",
           "value": "20",
@@ -2809,7 +2809,7 @@
           }
         },
         {
-          "raw_filing_label": "Proceeds From Stock Options Exercised",
+          "raw_filing_label": "Proceeds from exercise of stock options",
           "canonical_label": "Proceeds from Exercise of Stock Options",
           "ledger_rule_id": "GEN-CF-028",
           "value": "810",
@@ -2829,7 +2829,7 @@
           }
         },
         {
-          "raw_filing_label": "Net Cash Provided By Used In Financing Activities",
+          "raw_filing_label": "Net cash (used in) provided by financing activities",
           "canonical_label": "Cash Flow from Financing",
           "ledger_rule_id": "GEN-CF-033",
           "value": "790",
@@ -2849,7 +2849,7 @@
           }
         },
         {
-          "raw_filing_label": "Effect Of Exchange Rate On Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents Including Disposal Group And Discontinued Operations",
+          "raw_filing_label": "Effect on exchange rate changes on cash and cash equivalents",
           "canonical_label": "FX Effect on Cash",
           "ledger_rule_id": "GEN-CF-034",
           "value": "104",
@@ -2869,7 +2869,7 @@
           }
         },
         {
-          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents Period Increase Decrease Including Exchange Rate Effect",
+          "raw_filing_label": "Net (decrease) increase in cash, cash equivalents and restricted cash",
           "canonical_label": "Net Change in Cash",
           "ledger_rule_id": "GEN-CF-035",
           "value": "9277",
@@ -2889,7 +2889,7 @@
           }
         },
         {
-          "raw_filing_label": "Interest Paid Net",
+          "raw_filing_label": "Interest",
           "canonical_label": "Cash Paid for Interest",
           "ledger_rule_id": "GEN-CF-038",
           "value": "2",
@@ -2930,16 +2930,16 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-          "canonical_label": "FX Effect on Cash",
-          "ledger_rule_id": "GEN-CF-034",
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "canonical_label": "Cash at Beginning of Period",
+          "ledger_rule_id": "GEN-CF-036",
           "value": "25532",
           "raw_numeric_text": "25,532",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "cash_other",
+          "section": "non_current_assets",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2971,16 +2971,16 @@
       "dialect": "US_GAAP",
       "line_items": [
         {
-          "raw_filing_label": "Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-          "canonical_label": "FX Effect on Cash",
-          "ledger_rule_id": "GEN-CF-034",
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "canonical_label": "Cash at Beginning of Period",
+          "ledger_rule_id": "GEN-CF-036",
           "value": "16255",
           "raw_numeric_text": "16,255",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "cash_other",
+          "section": "non_current_assets",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -3002,6 +3002,10 @@
       "total_in_file": 625,
       "consolidated_used": 167,
       "concepts_mapped": 113
+    },
+    "visual_label_misses": {
+      "count": 0,
+      "concepts": []
     }
   }
 }
