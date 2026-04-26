@@ -5,5 +5,161 @@
     "filing_date": "2025-04-24",
     "source_path": "Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm"
   },
-  "novels": []
+  "novels": [
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2025",
+      "period_end_date": "2025-03-31",
+      "fiscal_year": 2025,
+      "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+      "value": "15646",
+      "raw_numeric_text": "15,646",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "earnings before income taxes",
+          1.0
+        ],
+        [
+          "earnings before taxes",
+          0.8571428571428572
+        ],
+        [
+          "income before income taxes",
+          0.814814814814815
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2025",
+      "period_end_date": "2025-03-31",
+      "fiscal_year": 2025,
+      "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+      "value": "80",
+      "raw_numeric_text": "80",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2025-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "net earnings attributable to noncontrolling interests",
+          0.9549549549549551
+        ],
+        [
+          "less net income attributable to noncontrolling interests",
+          0.9122807017543859
+        ],
+        [
+          "net income attributable to noncontrolling interest",
+          0.8518518518518519
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2024",
+      "period_end_date": "2024-03-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Indefinite-lived intangible asset impairment charge",
+      "value": "1341",
+      "raw_numeric_text": "1,341",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2024-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "indefinite-lived intangible asset impairment charge",
+          1.0
+        ],
+        [
+          "intangible asset impairment",
+          0.6923076923076923
+        ],
+        [
+          "goodwill and intangibles impairment",
+          0.627906976744186
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2024",
+      "period_end_date": "2024-03-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+      "value": "14891",
+      "raw_numeric_text": "14,891",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "earnings before income taxes",
+          1.0
+        ],
+        [
+          "earnings before taxes",
+          0.8571428571428572
+        ],
+        [
+          "income before income taxes",
+          0.814814814814815
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2024",
+      "period_end_date": "2024-03-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+      "value": "88",
+      "raw_numeric_text": "88",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2024-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "net earnings attributable to noncontrolling interests",
+          0.9549549549549551
+        ],
+        [
+          "less net income attributable to noncontrolling interests",
+          0.9122807017543859
+        ],
+        [
+          "net income attributable to noncontrolling interest",
+          0.8518518518518519
+        ]
+      ]
+    }
+  ]
 }

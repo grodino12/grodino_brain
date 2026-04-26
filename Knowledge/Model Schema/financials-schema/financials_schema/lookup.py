@@ -267,10 +267,15 @@ def select_entry(
         pool = list(candidates)
     if not pool:
         return None
-    # Hard section-mismatch filter: applied uniformly, not only as a
-    # disambiguator. A candidate whose `filing_section` contradicts the
-    # item's walker-tagged section is NEVER acceptable.
-    if item_section is not None:
+    # Hard section-mismatch filter: a candidate whose `filing_section`
+    # contradicts the item's walker-tagged section is NEVER acceptable.
+    # SKIPPED when item_section is unspecified (None or "unclassified") —
+    # the walker couldn't classify the item, so the canonical's section
+    # hint fills in. Only fires when both sides have a CONCRETE section
+    # and they differ (e.g. PG's "DEFERRED INCOME TAXES" tagged
+    # non_current_liabilities by walker → must not match a canonical
+    # whose filing_section=non_current_assets).
+    if item_section is not None and item_section != "unclassified":
         pool = [c for c in pool
                 if c.get("filing_section") is None
                 or c.get("filing_section") == item_section]
