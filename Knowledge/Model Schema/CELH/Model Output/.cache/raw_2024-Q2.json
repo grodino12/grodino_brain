@@ -624,49 +624,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Par Or Stated Value Per Share",
-          "canonical_label": "Par Value of Equity",
-          "ledger_rule_id": "GEN-BS-042",
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2024-06-30",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Cumulative Dividend Percentage",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "0.00005",
-          "raw_numeric_text": "5",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2024-06-30",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred stock, $ 0.001  par value per share,  5 % cumulative dividends;  1,466,666  shares issued and outstanding at each of June 30, 2024 and December 31, 2023, aggregate liquidation preference of $ 550,000  as of both June 30, 2024 and December 31, 2023",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
@@ -684,27 +644,47 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Outstanding",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
-          "value": "233344377",
-          "raw_numeric_text": "233,344,377",
+          "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Par Or Stated Value Per Share",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "memo",
-          "section": "equity",
+          "section": "mezzanine",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2024-06-30",
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2024-06-30",
             "note": "iXBRL HTM | BS"
           }
         },
         {
-          "raw_filing_label": "Common Stock Value",
+          "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Cumulative Dividend Percentage",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.00005",
+          "raw_numeric_text": "5",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, $ 0.001  par value per share;  300,000,000  shares authorized,  233,344,377  and  231,787,482  shares issued and outstanding at June 30, 2024 and December 31, 2023, respectively",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
           "value": "78",
@@ -720,6 +700,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:CommonStockValue | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - Common Stock Shares Outstanding",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "233344377",
+          "raw_numeric_text": "233,344,377",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2024-06-30",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1445,49 +1445,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Shares Outstanding",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "1466666",
-          "raw_numeric_text": "1,466,666",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2023-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Aggregate Amount Of Redemption Requirement",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "550000",
-          "raw_numeric_text": "550,000",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2023-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred stock, $ 0.001  par value per share,  5 % cumulative dividends;  1,466,666  shares issued and outstanding at each of June 30, 2024 and December 31, 2023, aggregate liquidation preference of $ 550,000  as of both June 30, 2024 and December 31, 2023",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
@@ -1505,7 +1465,67 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
+          "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Shares Outstanding",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1466666",
+          "raw_numeric_text": "1,466,666",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2023-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Aggregate Amount Of Redemption Requirement",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "550000",
+          "raw_numeric_text": "550,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2023-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, $ 0.001  par value per share;  300,000,000  shares authorized,  233,344,377  and  231,787,482  shares issued and outstanding at June 30, 2024 and December 31, 2023, respectively",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "77",
+          "raw_numeric_text": "77",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2023-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - Common Stock Par Or Stated Value Per Share",
           "canonical_label": "Par Value of Equity",
           "ledger_rule_id": "GEN-BS-042",
           "value": "0.000001",
@@ -1525,7 +1545,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Authorized",
+          "raw_filing_label": "Common stock - Common Stock Shares Authorized",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "300000",
@@ -1545,7 +1565,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Issued",
+          "raw_filing_label": "Common stock - Common Stock Shares Issued",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "231787482",
@@ -1561,26 +1581,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Value",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "77",
-          "raw_numeric_text": "77",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2023-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1984,126 +1984,6 @@
             "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2024-06-30",
             "note": "iXBRL HTM | IS"
           }
-        },
-        {
-          "raw_filing_label": "Foreign currency translation adjustments, net of income tax",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-308",
-          "raw_numeric_text": "308",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Comprehensive income",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "66348",
-          "raw_numeric_text": "66,348",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": "Basic Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-016",
-          "value": "0.29",
-          "raw_numeric_text": "0.29",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": "Diluted Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-017",
-          "value": "0.28",
-          "raw_numeric_text": "0.28",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "233197000",
-          "raw_numeric_text": "233,197",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "237595000",
-          "raw_numeric_text": "237,595",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
         }
       ]
     },
@@ -2423,126 +2303,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Foreign currency translation adjustments, net of income tax",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-1662",
-          "raw_numeric_text": "1,662",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Comprehensive income",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "129840",
-          "raw_numeric_text": "129,840",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": "Basic Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-016",
-          "value": "0.56",
-          "raw_numeric_text": "0.56",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": "Diluted Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-017",
-          "value": "0.55",
-          "raw_numeric_text": "0.55",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "232979000",
-          "raw_numeric_text": "232,979",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2024-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "237569000",
-          "raw_numeric_text": "237,569",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2024-06-30",
             "note": "iXBRL HTM | IS"
           }
         }
@@ -2866,126 +2626,6 @@
             "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2023-06-30",
             "note": "iXBRL HTM | IS"
           }
-        },
-        {
-          "raw_filing_label": "Foreign currency translation adjustments, net of income tax",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-590",
-          "raw_numeric_text": "590",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Comprehensive income",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "40173",
-          "raw_numeric_text": "40,173",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": "Basic Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-016",
-          "value": "0.18",
-          "raw_numeric_text": "0.18",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": "Diluted Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-017",
-          "value": "0.17",
-          "raw_numeric_text": "0.17",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "230535000",
-          "raw_numeric_text": "230,535",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "236832000",
-          "raw_numeric_text": "236,832",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
         }
       ]
     },
@@ -3305,126 +2945,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Foreign currency translation adjustments, net of income tax",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "4",
-          "raw_numeric_text": "4",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Comprehensive income",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "72205",
-          "raw_numeric_text": "72,205",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": "Basic Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-016",
-          "value": "0.31",
-          "raw_numeric_text": "0.31",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": "Diluted Earnings (Loss) per Share",
-          "ledger_rule_id": "GEN-IS-017",
-          "value": "0.31",
-          "raw_numeric_text": "0.31",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Basic",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "230277000",
-          "raw_numeric_text": "230,277",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2023-06-30",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Diluted",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "236577000",
-          "raw_numeric_text": "236,577",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "eps",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q2\\filings\\CELH_2024-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2023-06-30",
             "note": "iXBRL HTM | IS"
           }
         }
@@ -4824,20 +4344,9 @@
       "CF"
     ],
     "fact_counts": {
-      "consolidated_used": 232,
-      "label_synthesis_misses": 12
+      "consolidated_used": 208,
+      "label_synthesis_misses": 0
     },
-    "label_synthesis_concepts": [
-      "CommonStockParOrStatedValuePerShare",
-      "CommonStockSharesAuthorized",
-      "CommonStockSharesIssued",
-      "CommonStockSharesOutstanding",
-      "CommonStockValue",
-      "TemporaryEquityAggregateAmountOfRedemptionRequirement",
-      "TemporaryEquityCarryingAmountAttributableToParent",
-      "TemporaryEquityCumulativeDividendPercentage",
-      "TemporaryEquityParOrStatedValuePerShare",
-      "TemporaryEquitySharesOutstanding"
-    ]
+    "label_synthesis_concepts": []
   }
 }

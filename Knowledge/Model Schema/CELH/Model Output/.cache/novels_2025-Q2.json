@@ -11,44 +11,60 @@
       "period_label": "Q2 FY2025",
       "period_end_date": "2025-06-30",
       "fiscal_year": 2025,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
+      "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Par Or Stated Value Per Share",
+      "value": "0.000001",
+      "raw_numeric_text": "0.001",
       "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q2\\filings\\CELH_2025-06-30_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2025-06-30",
+        "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2025-06-30",
         "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
+          "preferred stock par or stated value per share",
+          0.6923076923076923
+        ],
+        [
+          "common stock par or stated value per share",
+          0.6141732283464567
+        ],
+        [
+          "series a convertible preferred stock",
+          0.5950413223140496
         ]
       ]
     },
     {
       "statement_type": "BS",
-      "period_label": "Q4 FY2024",
-      "period_end_date": "2024-12-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
+      "period_label": "Q2 FY2025",
+      "period_end_date": "2025-06-30",
+      "fiscal_year": 2025,
+      "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Shares Issued",
+      "value": "1467000",
+      "raw_numeric_text": "1,467",
       "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q2\\filings\\CELH_2025-06-30_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2024-12-31",
+        "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2025-06-30",
         "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
+          "series a convertible preferred stock",
+          0.6857142857142857
+        ],
+        [
+          "preferred stock shares issued",
+          0.5918367346938775
+        ],
+        [
+          "redeemable convertible preferred stock",
+          0.5794392523364487
         ]
       ]
     }

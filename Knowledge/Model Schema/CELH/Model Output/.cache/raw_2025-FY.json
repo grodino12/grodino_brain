@@ -584,49 +584,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Par Or Stated Value Per Share",
-          "canonical_label": "Par Value of Equity",
-          "ledger_rule_id": "GEN-BS-042",
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2025-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Shares Issued",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "1467000",
-          "raw_numeric_text": "1,467",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2025-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred stock, $ 0.001  par value per share,  1,467  shares issued and outstanding as of December 31, 2025 and December 31, 2024  [3]",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "852355",
           "raw_numeric_text": "852,355",
           "notation_flags": 0,
@@ -644,9 +604,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Par Or Stated Value Per Share",
-          "canonical_label": "Par Value of Equity",
-          "ledger_rule_id": "GEN-BS-042",
+          "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Par Or Stated Value Per Share",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "0.000001",
           "raw_numeric_text": "0.001",
           "notation_flags": 0,
@@ -664,15 +624,15 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Shares Issued",
+          "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Shares Issued",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "390000",
-          "raw_numeric_text": "390",
+          "value": "1467000",
+          "raw_numeric_text": "1,467",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "memo",
           "section": "mezzanine",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -684,9 +644,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series B convertible preferred stock, $ 0.001  par value per share,  390  shares and  0  shares issued and outstanding as of December 31, 2025 and December 31, 2024, respectively  [3]",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "907620",
           "raw_numeric_text": "907,620",
           "notation_flags": 0,
@@ -704,67 +664,47 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
-          "canonical_label": "Par Value of Equity",
-          "ledger_rule_id": "GEN-BS-042",
+          "raw_filing_label": "Series B convertible preferred stock - Temporary Equity Par Or Stated Value Per Share",
+          "canonical_label": null,
+          "ledger_rule_id": null,
           "value": "0.000001",
           "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "memo",
-          "section": "equity",
+          "section": "mezzanine",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2025-12-31",
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2025-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Issued",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
-          "value": "258108000",
-          "raw_numeric_text": "258,108",
+          "raw_filing_label": "Series B convertible preferred stock - Temporary Equity Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "390000",
+          "raw_numeric_text": "390",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "memo",
-          "section": "equity",
+          "section": "mezzanine",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-12-31",
+            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2025-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Outstanding",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
-          "value": "256906000",
-          "raw_numeric_text": "256,906",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2025-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Value",
+          "raw_filing_label": "Common Stock, $ 0.001  par value per share;  400,000  shares authorized;  258,108  shares issued and  256,906  shares outstanding as of December 31, 2025; and  235,087  shares issued and  235,014  shares outstanding as of  December 31, 2024.",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
           "value": "101",
@@ -784,11 +724,11 @@
           }
         },
         {
-          "raw_filing_label": "Treasury Stock Common Shares",
-          "canonical_label": "Treasury Stock - Shares Outstanding",
-          "ledger_rule_id": "GEN-BS-043",
-          "value": "1202",
-          "raw_numeric_text": "1,202",
+          "raw_filing_label": "Common Stock - Common Stock Par Or Stated Value Per Share",
+          "canonical_label": "Par Value of Equity",
+          "ledger_rule_id": "GEN-BS-042",
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -799,12 +739,52 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2025-12-31",
+            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2025-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
         {
-          "raw_filing_label": "Treasury Stock Common Value",
+          "raw_filing_label": "Common Stock - Common Stock Shares Issued",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "258108000",
+          "raw_numeric_text": "258,108",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common Stock - Common Stock Shares Outstanding",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "256906000",
+          "raw_numeric_text": "256,906",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2025-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock, at cost;  1,202  shares and  73  shares as of December 31, 2025 and 2024, respectively",
           "canonical_label": "Treasury Stock",
           "ledger_rule_id": "GEN-BS-035",
           "value": "-48226",
@@ -820,6 +800,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2025-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock - Treasury Stock Common Shares",
+          "canonical_label": "Treasury Stock - Shares Outstanding",
+          "ledger_rule_id": "GEN-BS-043",
+          "value": "1202",
+          "raw_numeric_text": "1,202",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2025-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1425,9 +1425,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred stock, $ 0.001  par value per share,  1,467  shares issued and outstanding as of December 31, 2025 and December 31, 2024  [3]",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
@@ -1445,7 +1445,7 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Shares Outstanding",
+          "raw_filing_label": "Series B convertible preferred stock - Temporary Equity Shares Outstanding",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "0",
@@ -1453,7 +1453,7 @@
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "memo",
           "section": "mezzanine",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1465,67 +1465,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Authorized",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
-          "value": "400000",
-          "raw_numeric_text": "400,000",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2024-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Shares Issued",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
-          "value": "235087000",
-          "raw_numeric_text": "235,087",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Shares Outstanding",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
-          "value": "235014000",
-          "raw_numeric_text": "235,014",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2024-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Value",
+          "raw_filing_label": "Common Stock, $ 0.001  par value per share;  400,000  shares authorized;  258,108  shares issued and  256,906  shares outstanding as of December 31, 2025; and  235,087  shares issued and  235,014  shares outstanding as of  December 31, 2024.",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
           "value": "79",
@@ -1545,11 +1485,11 @@
           }
         },
         {
-          "raw_filing_label": "Treasury Stock Common Shares",
-          "canonical_label": "Treasury Stock - Shares Outstanding",
-          "ledger_rule_id": "GEN-BS-043",
-          "value": "73",
-          "raw_numeric_text": "73",
+          "raw_filing_label": "Common Stock - Common Stock Shares Authorized",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "400000",
+          "raw_numeric_text": "400,000",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -1560,12 +1500,52 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2024-12-31",
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2024-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
         {
-          "raw_filing_label": "Treasury Stock Common Value",
+          "raw_filing_label": "Common Stock - Common Stock Shares Issued",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "235087000",
+          "raw_numeric_text": "235,087",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common Stock - Common Stock Shares Outstanding",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "235014000",
+          "raw_numeric_text": "235,014",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2024-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock, at cost;  1,202  shares and  73  shares as of December 31, 2025 and 2024, respectively",
           "canonical_label": "Treasury Stock",
           "ledger_rule_id": "GEN-BS-035",
           "value": "-2585",
@@ -1581,6 +1561,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2024-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock - Treasury Stock Common Shares",
+          "canonical_label": "Treasury Stock - Shares Outstanding",
+          "ledger_rule_id": "GEN-BS-043",
+          "value": "73",
+          "raw_numeric_text": "73",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2024-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -3469,86 +3469,6 @@
           }
         },
         {
-          "raw_filing_label": "Acquisition date fair value of Alani Nu contingent consideration",
-          "canonical_label": "Change in Fair Value of Contingent Consideration",
-          "ledger_rule_id": "GEN-CF-055",
-          "value": "11200",
-          "raw_numeric_text": "11,200",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "operating",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:BusinessCombinationContingentConsiderationArrangementsChangeInAmountOfContingentConsiderationLiability1 | ctx:duration:2025-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
-          "raw_filing_label": "Fair value of share consideration issued in the Alani Nu Acquisition",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "721964",
-          "raw_numeric_text": "721,964",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable | ctx:duration:2025-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
-          "raw_filing_label": "Fair value of Series B Preferred Stock issued to Pepsi  [1]",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "907920",
-          "raw_numeric_text": "907,920",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable | ctx:duration:2025-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
-          "raw_filing_label": "Fair value of Series A Preferred Stock modification  [1]",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "27867",
-          "raw_numeric_text": "27,867",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "celh:PreferredStockIncreaseDecreaseInFairValue | ctx:duration:2025-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
           "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
           "canonical_label": "Cash at Beginning of Period",
           "ledger_rule_id": "GEN-CF-036",
@@ -4965,21 +4885,9 @@
       "CF"
     ],
     "fact_counts": {
-      "consolidated_used": 239,
-      "label_synthesis_misses": 20
+      "consolidated_used": 235,
+      "label_synthesis_misses": 0
     },
-    "label_synthesis_concepts": [
-      "CommonStockParOrStatedValuePerShare",
-      "CommonStockSharesAuthorized",
-      "CommonStockSharesIssued",
-      "CommonStockSharesOutstanding",
-      "CommonStockValue",
-      "TemporaryEquityCarryingAmountAttributableToParent",
-      "TemporaryEquityParOrStatedValuePerShare",
-      "TemporaryEquitySharesIssued",
-      "TemporaryEquitySharesOutstanding",
-      "TreasuryStockCommonShares",
-      "TreasuryStockCommonValue"
-    ]
+    "label_synthesis_concepts": []
   }
 }

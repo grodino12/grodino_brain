@@ -604,69 +604,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Par Or Stated Value Per Share",
-          "canonical_label": "Par Value of Equity",
-          "ledger_rule_id": "GEN-BS-042",
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2023-09-30",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Cumulative Dividend Percentage",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "0.00005",
-          "raw_numeric_text": "5",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2023-09-30",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Aggregate Amount Of Redemption Requirement",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "550000",
-          "raw_numeric_text": "550,000",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2023-09-30",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred shares, $ 0.001  par value,  5 % cumulative dividends;  1,466,666  shares issued and outstanding at September 30, 2023 and December 31, 2022, respectively, aggregate liquidation preference of $ 550,000  as of September 30, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
@@ -684,7 +624,87 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Authorized",
+          "raw_filing_label": "Series A convertible preferred shares - Temporary Equity Par Or Stated Value Per Share",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2023-09-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Series A convertible preferred shares - Temporary Equity Cumulative Dividend Percentage",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.00005",
+          "raw_numeric_text": "5",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2023-09-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Series A convertible preferred shares - Temporary Equity Aggregate Amount Of Redemption Requirement",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "550000",
+          "raw_numeric_text": "550,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2023-09-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, $ 0.001  par value;  100,000,000  shares authorized,  77,225,007  and  76,382,441  shares issued and outstanding at September 30, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "77",
+          "raw_numeric_text": "77",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2023-09-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - Common Stock Shares Authorized",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "100000",
@@ -704,7 +724,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Outstanding",
+          "raw_filing_label": "Common stock - Common Stock Shares Outstanding",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "77225007",
@@ -720,26 +740,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2023-09-30",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Value",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "77",
-          "raw_numeric_text": "77",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2023-09-30",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1505,29 +1505,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Shares Issued",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "1466666",
-          "raw_numeric_text": "1,466,666",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "mezzanine",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2022-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred shares, $ 0.001  par value,  5 % cumulative dividends;  1,466,666  shares issued and outstanding at September 30, 2023 and December 31, 2022, respectively, aggregate liquidation preference of $ 550,000  as of September 30, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
@@ -1545,7 +1525,47 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
+          "raw_filing_label": "Series A convertible preferred shares - Temporary Equity Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1466666",
+          "raw_numeric_text": "1,466,666",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, $ 0.001  par value;  100,000,000  shares authorized,  77,225,007  and  76,382,441  shares issued and outstanding at September 30, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "76",
+          "raw_numeric_text": "76",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - Common Stock Par Or Stated Value Per Share",
           "canonical_label": "Par Value of Equity",
           "ledger_rule_id": "GEN-BS-042",
           "value": "0.000001",
@@ -1565,7 +1585,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Issued",
+          "raw_filing_label": "Common stock - Common Stock Shares Issued",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "76382441",
@@ -1581,26 +1601,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Value",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "76",
-          "raw_numeric_text": "76",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q3\\filings\\CELH_2023-09-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2022-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -4385,19 +4385,8 @@
     ],
     "fact_counts": {
       "consolidated_used": 210,
-      "label_synthesis_misses": 12
+      "label_synthesis_misses": 0
     },
-    "label_synthesis_concepts": [
-      "CommonStockParOrStatedValuePerShare",
-      "CommonStockSharesAuthorized",
-      "CommonStockSharesIssued",
-      "CommonStockSharesOutstanding",
-      "CommonStockValue",
-      "TemporaryEquityAggregateAmountOfRedemptionRequirement",
-      "TemporaryEquityCarryingAmountAttributableToParent",
-      "TemporaryEquityCumulativeDividendPercentage",
-      "TemporaryEquityParOrStatedValuePerShare",
-      "TemporaryEquitySharesIssued"
-    ]
+    "label_synthesis_concepts": []
   }
 }

@@ -11,21 +11,91 @@
       "period_label": "FY2024",
       "period_end_date": "2024-12-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
+      "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Par Or Stated Value Per Share",
+      "value": "0.000001",
+      "raw_numeric_text": "0.001",
       "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
         "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2024-12-31",
+        "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2024-12-31",
         "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
+          "preferred stock par or stated value per share",
+          0.6923076923076923
+        ],
+        [
+          "common stock par or stated value per share",
+          0.6141732283464567
+        ],
+        [
+          "series a convertible preferred stock",
+          0.5950413223140496
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "FY2024",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Cumulative Dividend Percentage",
+      "value": "0.00005",
+      "raw_numeric_text": "5",
+      "section": "mezzanine",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2024-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "series a convertible preferred stock",
+          0.5901639344262295
+        ],
+        [
+          "preferred stock par or stated value per share",
+          0.5038167938931297
+        ],
+        [
+          "redeemable convertible preferred stock",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "FY2024",
+      "period_end_date": "2024-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Shares Issued",
+      "value": "1466666",
+      "raw_numeric_text": "1,466,666",
+      "section": "mezzanine",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2024-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "series a convertible preferred stock",
+          0.6857142857142857
+        ],
+        [
+          "preferred stock shares issued",
+          0.5918367346938775
+        ],
+        [
+          "redeemable convertible preferred stock",
+          0.5794392523364487
         ]
       ]
     },
@@ -34,171 +104,21 @@
       "period_label": "FY2023",
       "period_end_date": "2023-12-31",
       "fiscal_year": 2023,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
+      "raw_filing_label": "Series A convertible preferred stock - Temporary Equity Aggregate Amount Of Redemption Requirement",
+      "value": "550000",
+      "raw_numeric_text": "550,000",
       "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
         "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2023-12-31",
+        "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2023-12-31",
         "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
-        ]
-      ]
-    },
-    {
-      "statement_type": "IS",
-      "period_label": "FY2024",
-      "period_end_date": "2024-12-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Basic",
-      "value": "233667000",
-      "raw_numeric_text": "233,667",
-      "section": "eps",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2024-12-31",
-        "note": "iXBRL HTM | IS"
-      },
-      "nearest_matches": [
-        [
-          "basic",
-          1.0
-        ]
-      ]
-    },
-    {
-      "statement_type": "IS",
-      "period_label": "FY2024",
-      "period_end_date": "2024-12-31",
-      "fiscal_year": 2024,
-      "raw_filing_label": "Diluted",
-      "value": "237404000",
-      "raw_numeric_text": "237,404",
-      "section": "eps",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2024-12-31",
-        "note": "iXBRL HTM | IS"
-      },
-      "nearest_matches": [
-        [
-          "diluted",
-          1.0
-        ],
-        [
-          "dividends",
-          0.5
-        ]
-      ]
-    },
-    {
-      "statement_type": "IS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Basic",
-      "value": "230784000",
-      "raw_numeric_text": "230,784",
-      "section": "eps",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2023-12-31",
-        "note": "iXBRL HTM | IS"
-      },
-      "nearest_matches": [
-        [
-          "basic",
-          1.0
-        ]
-      ]
-    },
-    {
-      "statement_type": "IS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Diluted",
-      "value": "236964000",
-      "raw_numeric_text": "236,964",
-      "section": "eps",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2023-12-31",
-        "note": "iXBRL HTM | IS"
-      },
-      "nearest_matches": [
-        [
-          "diluted",
-          1.0
-        ],
-        [
-          "dividends",
-          0.5
-        ]
-      ]
-    },
-    {
-      "statement_type": "IS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Basic",
-      "value": "226947000",
-      "raw_numeric_text": "226,947",
-      "section": "eps",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | IS"
-      },
-      "nearest_matches": [
-        [
-          "basic",
-          1.0
-        ]
-      ]
-    },
-    {
-      "statement_type": "IS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Diluted",
-      "value": "226947000",
-      "raw_numeric_text": "226,947",
-      "section": "eps",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-FY\\filings\\CELH_2024-12-31_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | IS"
-      },
-      "nearest_matches": [
-        [
-          "diluted",
-          1.0
-        ],
-        [
-          "dividends",
-          0.5
+          "series a convertible preferred stock",
+          0.5373134328358209
         ]
       ]
     }

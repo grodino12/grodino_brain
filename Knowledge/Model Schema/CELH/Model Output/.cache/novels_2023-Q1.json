@@ -8,24 +8,28 @@
   "novels": [
     {
       "statement_type": "BS",
-      "period_label": "Q1 FY2023",
-      "period_end_date": "2023-03-31",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Series A convertible preferred shares - Preferred Stock Cumulative Dividend Percentage",
+      "value": "0.00005",
+      "raw_numeric_text": "5",
       "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2023-03-31",
+        "line_hint": "celh:PreferredStockCumulativeDividendPercentage | ctx:instant:2022-12-31",
         "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
+          "series a convertible preferred stock",
+          0.5901639344262295
+        ],
+        [
+          "redeemable convertible preferred stock",
+          0.5
         ]
       ]
     },
@@ -34,21 +38,29 @@
       "period_label": "Q4 FY2022",
       "period_end_date": "2022-12-31",
       "fiscal_year": 2022,
-      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-      "value": "824488",
-      "raw_numeric_text": "824,488",
+      "raw_filing_label": "Series A convertible preferred shares - Preferred Stock Redemption Amount",
+      "value": "550000",
+      "raw_numeric_text": "550,000",
       "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2022-12-31",
+        "line_hint": "us-gaap:PreferredStockRedemptionAmount | ctx:instant:2022-12-31",
         "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "stockholders equity attributable to noncontrolling interest",
-          0.5263157894736843
+          "series a convertible preferred stock",
+          0.6605504587155964
+        ],
+        [
+          "redeemable convertible preferred stock",
+          0.5585585585585586
+        ],
+        [
+          "convertible preferred stock",
+          0.54
         ]
       ]
     }

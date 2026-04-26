@@ -624,9 +624,9 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Series A convertible preferred shares, $ 0.001  par value,  5 % cumulative dividends;  1,467  shares issued and outstanding at March 31, 2023 and December 31, 2022, respectively, aggregate liquidation preference of $ 550,000  as of March 31, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
           "value": "824488",
           "raw_numeric_text": "824,488",
           "notation_flags": 0,
@@ -644,27 +644,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Outstanding",
-          "canonical_label": "Common Stock - Shares Issued",
-          "ledger_rule_id": "GEN-BS-037",
-          "value": "76782000",
-          "raw_numeric_text": "76,782",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "memo",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2023-03-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Value",
+          "raw_filing_label": "Common stock, $ 0.001  par value;  100,000  shares authorized,  76,782  and  76,382  shares issued and outstanding at March 31, 2023 and December 31, 2022, respectively",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
           "value": "77",
@@ -680,6 +660,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:CommonStockValue | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - Common Stock Shares Outstanding",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "76782000",
+          "raw_numeric_text": "76,782",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2023-03-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1425,7 +1425,27 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Par Or Stated Value Per Share",
+          "raw_filing_label": "Series A convertible preferred shares, $ 0.001  par value,  5 % cumulative dividends;  1,467  shares issued and outstanding at March 31, 2023 and December 31, 2022, respectively, aggregate liquidation preference of $ 550,000  as of March 31, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
+          "value": "824488",
+          "raw_numeric_text": "824,488",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "mezzanine",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Series A convertible preferred shares - Preferred Stock Par Or Stated Value Per Share",
           "canonical_label": "Par Value of Equity",
           "ledger_rule_id": "GEN-BS-042",
           "value": "0.000001",
@@ -1445,7 +1465,7 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Cumulative Dividend Percentage",
+          "raw_filing_label": "Series A convertible preferred shares - Preferred Stock Cumulative Dividend Percentage",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "0.00005",
@@ -1453,7 +1473,7 @@
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "memo",
           "section": "mezzanine",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1465,7 +1485,7 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Shares Issued",
+          "raw_filing_label": "Series A convertible preferred shares - Preferred Stock Shares Issued",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "1467000",
@@ -1485,7 +1505,7 @@
           }
         },
         {
-          "raw_filing_label": "Preferred Stock Redemption Amount",
+          "raw_filing_label": "Series A convertible preferred shares - Preferred Stock Redemption Amount",
           "canonical_label": null,
           "ledger_rule_id": null,
           "value": "550000",
@@ -1493,7 +1513,7 @@
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "memo",
           "section": "mezzanine",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1505,27 +1525,27 @@
           }
         },
         {
-          "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "824488",
-          "raw_numeric_text": "824,488",
+          "raw_filing_label": "Common stock, $ 0.001  par value;  100,000  shares authorized,  76,782  and  76,382  shares issued and outstanding at March 31, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "76",
+          "raw_numeric_text": "76",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "mezzanine",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2022-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
         {
-          "raw_filing_label": "Common Stock Par Or Stated Value Per Share",
+          "raw_filing_label": "Common stock - Common Stock Par Or Stated Value Per Share",
           "canonical_label": "Par Value of Equity",
           "ledger_rule_id": "GEN-BS-042",
           "value": "0.000001",
@@ -1545,7 +1565,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Authorized",
+          "raw_filing_label": "Common stock - Common Stock Shares Authorized",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "100000",
@@ -1565,7 +1585,7 @@
           }
         },
         {
-          "raw_filing_label": "Common Stock Shares Outstanding",
+          "raw_filing_label": "Common stock - Common Stock Shares Outstanding",
           "canonical_label": "Common Stock - Shares Issued",
           "ledger_rule_id": "GEN-BS-037",
           "value": "76382000",
@@ -1581,26 +1601,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2022-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Common Stock Value",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "76",
-          "raw_numeric_text": "76",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2022-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -3503,18 +3503,8 @@
     ],
     "fact_counts": {
       "consolidated_used": 168,
-      "label_synthesis_misses": 12
+      "label_synthesis_misses": 0
     },
-    "label_synthesis_concepts": [
-      "CommonStockParOrStatedValuePerShare",
-      "CommonStockSharesAuthorized",
-      "CommonStockSharesOutstanding",
-      "CommonStockValue",
-      "PreferredStockCumulativeDividendPercentage",
-      "PreferredStockParOrStatedValuePerShare",
-      "PreferredStockRedemptionAmount",
-      "PreferredStockSharesIssued",
-      "TemporaryEquityCarryingAmountAttributableToParent"
-    ]
+    "label_synthesis_concepts": []
   }
 }
