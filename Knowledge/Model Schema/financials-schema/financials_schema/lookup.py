@@ -38,13 +38,27 @@ from financials_schema.line_item import RowType, SignConvention
 # ============================================================================
 
 CLUTTER_RE = re.compile(
-    r"(?:[,;]\s*)?\$?[\d.,]*\s*"
-    r"(?:par\s+value|stated\s+value|cumulative\s+dividends|liquidation\s+preference|aggregate\s+liquidation"
+    # Filer-label clutter that follows a comma/semicolon trigger. Real filer
+    # labels with par/stated-value or shares-count metadata always punctuate
+    # the boundary ("Series A preferred stock, $0.001 par value..."). Library
+    # aliases like "preferred stock par or stated value per share" use the
+    # words mid-phrase without comma — they must NOT be stripped, or they
+    # collapse to "preferred stock par or" and then PG's bare "Preferred
+    # stock" label fuzzy-matches the wrong canonical.
+    r"[,;]\s*"
+    r"(?:"
+    r"\$?[\d.,]+\s*(?:par|stated)\s+value"
+    r"|(?:no\s+)?par\s+value"
+    r"|stated\s+value"
+    r"|cumulative\s+dividends"
+    r"|liquidation\s+preference"
+    r"|aggregate\s+liquidation"
     # Require at least one DIGIT in the leading number — `[\d,]+` alone matches
     # a bare comma (since `,` is in the character class), which silently clobbers
     # labels like "Mezzanine equity, shares outstanding (in shares)" by matching
     # `, shares outstanding`. Use `\d[\d,]*` to require a digit anchor.
-    r"|\d[\d,]*\s+shares\s+\w+)"
+    r"|\d[\d,]*\s+shares\s+\w+"
+    r")"
     r".*$",
     re.IGNORECASE | re.DOTALL,
 )
