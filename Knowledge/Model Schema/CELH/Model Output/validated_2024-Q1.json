@@ -8068,6 +8068,30 @@
       "message": "TSE = sum of 4 equity components"
     },
     {
+      "rule_id": "IS-1 @ Q1 FY2024",
+      "expected": "182207",
+      "actual": "182207",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (182207) = Revenue (355708) + signed cost (-173501 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-2 @ Q1 FY2024",
+      "expected": "83190",
+      "actual": "83190",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (83190) = GP (182207) + signed opex (-99017 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ Q1 FY2024",
+      "expected": "92461",
+      "actual": "92461",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (92461) = Operating Income (83190) + signed non-op (9271 across 3 rows)"
+    },
+    {
       "rule_id": "IS-4 @ Q1 FY2024",
       "expected": "0",
       "actual": "0",
@@ -8076,12 +8100,52 @@
       "message": "inconclusive — Net Income or Pre-Tax anchor missing"
     },
     {
+      "rule_id": "IS-5 @ Q1 FY2024",
+      "expected": "0",
+      "actual": "0",
+      "gap": "0",
+      "severity": "warning",
+      "message": "inconclusive — Net Income anchor or Revenue missing"
+    },
+    {
+      "rule_id": "IS-1 @ Q1 FY2023",
+      "expected": "113818",
+      "actual": "113818",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (113818) = Revenue (259939) + signed cost (-146121 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-2 @ Q1 FY2023",
+      "expected": "44913",
+      "actual": "44913",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (44913) = GP (113818) + signed opex (-68905 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ Q1 FY2023",
+      "expected": "49764",
+      "actual": "49764",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (49764) = Operating Income (44913) + signed non-op (4851 across 3 rows)"
+    },
+    {
       "rule_id": "IS-4 @ Q1 FY2023",
       "expected": "0",
       "actual": "0",
       "gap": "0",
       "severity": "warning",
       "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+    },
+    {
+      "rule_id": "IS-5 @ Q1 FY2023",
+      "expected": "0",
+      "actual": "0",
+      "gap": "0",
+      "severity": "warning",
+      "message": "inconclusive — Net Income anchor or Revenue missing"
     },
     {
       "rule_id": "CF-1 @ Q1 FY2024",

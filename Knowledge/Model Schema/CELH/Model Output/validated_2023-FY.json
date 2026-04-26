@@ -10222,12 +10222,68 @@
       "message": "TSE = sum of 4 equity components"
     },
     {
+      "rule_id": "IS-1 @ FY2023",
+      "expected": "633139",
+      "actual": "633139",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (633139) = Revenue (1318014) + signed cost (-684875 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-2 @ FY2023",
+      "expected": "266366",
+      "actual": "266366",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (266366) = GP (633139) + signed opex (-366773 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ FY2023",
+      "expected": "291749",
+      "actual": "291749",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (291749) = Operating Income (266366) + signed non-op (25383 across 3 rows)"
+    },
+    {
       "rule_id": "IS-4 @ FY2023",
       "expected": "0",
       "actual": "0",
       "gap": "0",
       "severity": "warning",
       "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+    },
+    {
+      "rule_id": "IS-5 @ FY2023",
+      "expected": "0",
+      "actual": "0",
+      "gap": "0",
+      "severity": "warning",
+      "message": "inconclusive — Net Income anchor or Revenue missing"
+    },
+    {
+      "rule_id": "IS-1 @ FY2022",
+      "expected": "270869",
+      "actual": "270869",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (270869) = Revenue (653604) + signed cost (-382735 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-2 @ FY2022",
+      "expected": "-157801",
+      "actual": "-157801",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (-157801) = GP (270869) + signed opex (-428670 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ FY2022",
+      "expected": "-152664",
+      "actual": "-152664",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (-152664) = Operating Income (-157801) + signed non-op (5137 across 3 rows)"
     },
     {
       "rule_id": "IS-4 @ FY2022",
@@ -10238,12 +10294,52 @@
       "message": "inconclusive — Net Income or Pre-Tax anchor missing"
     },
     {
+      "rule_id": "IS-5 @ FY2022",
+      "expected": "0",
+      "actual": "0",
+      "gap": "0",
+      "severity": "warning",
+      "message": "inconclusive — Net Income anchor or Revenue missing"
+    },
+    {
+      "rule_id": "IS-1 @ FY2021",
+      "expected": "128169",
+      "actual": "128169",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Gross Profit (128169) = Revenue (314272) + signed cost (-186103 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-2 @ FY2021",
+      "expected": "-4090",
+      "actual": "-4090",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (-4090) = GP (128169) + signed opex (-132259 across 1 rows)"
+    },
+    {
+      "rule_id": "IS-3 @ FY2021",
+      "expected": "-4059",
+      "actual": "-4059",
+      "gap": "0",
+      "severity": "pass",
+      "message": "Pre-Tax (-4059) = Operating Income (-4090) + signed non-op (31 across 3 rows)"
+    },
+    {
       "rule_id": "IS-4 @ FY2021",
       "expected": "0",
       "actual": "0",
       "gap": "0",
       "severity": "warning",
       "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+    },
+    {
+      "rule_id": "IS-5 @ FY2021",
+      "expected": "0",
+      "actual": "0",
+      "gap": "0",
+      "severity": "warning",
+      "message": "inconclusive — Net Income anchor or Revenue missing"
     },
     {
       "rule_id": "CF-1 @ FY2023",
