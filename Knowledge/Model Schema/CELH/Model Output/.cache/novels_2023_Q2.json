@@ -14,7 +14,7 @@
       "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
       "value": "0.000001",
       "raw_numeric_text": "0.001",
-      "section": "unclassified",
+      "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
@@ -32,7 +32,7 @@
       "raw_filing_label": "Mezzanine equity, shares issued (in shares)",
       "value": "1467000",
       "raw_numeric_text": "1,467",
-      "section": "unclassified",
+      "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
@@ -50,7 +50,7 @@
       "raw_filing_label": "Mezzanine equity, shares outatanding (in shares)",
       "value": "1467000",
       "raw_numeric_text": "1,467",
-      "section": "unclassified",
+      "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
@@ -62,75 +62,13 @@
     },
     {
       "statement_type": "BS",
-      "period_label": "Q2 FY2023",
-      "period_end_date": "2023-06-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Lease liability obligation-operating leases",
-      "value": "249",
-      "raw_numeric_text": "249",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2023-06-30",
-        "note": "iXBRL | Consolidated Balance Sheets"
-      },
-      "nearest_matches": [
-        [
-          "lease liability obligation-operating leases",
-          1.0
-        ],
-        [
-          "lease liability obligation-finance leases",
-          0.8571428571428572
-        ],
-        [
-          "lease liability operating leases",
-          0.8533333333333333
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "Q2 FY2023",
-      "period_end_date": "2023-06-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Lease liability obligation-finance leases",
-      "value": "147",
-      "raw_numeric_text": "147",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:FinanceLeaseLiabilityNoncurrent | ctx:instant:2023-06-30",
-        "note": "iXBRL | Consolidated Balance Sheets"
-      },
-      "nearest_matches": [
-        [
-          "lease liability obligation-finance leases",
-          1.0
-        ],
-        [
-          "lease liability obligation-operating leases",
-          0.8571428571428572
-        ],
-        [
-          "lease liability finance leases",
-          0.8450704225352113
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
       "period_label": "Q4 FY2022",
       "period_end_date": "2022-12-31",
       "fiscal_year": 2022,
       "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
       "value": "0.000001",
       "raw_numeric_text": "0.001",
-      "section": "unclassified",
+      "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
@@ -148,7 +86,7 @@
       "raw_filing_label": "Mezzanine equity, cummulative dividend (percentage)",
       "value": "0.00005",
       "raw_numeric_text": "5",
-      "section": "unclassified",
+      "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
@@ -171,7 +109,7 @@
       "raw_filing_label": "Mezzanine equity, shares outatanding (in shares)",
       "value": "1467000",
       "raw_numeric_text": "1,467",
-      "section": "unclassified",
+      "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
@@ -189,7 +127,7 @@
       "raw_filing_label": "Mezzanine equity, redemption amount",
       "value": "550000",
       "raw_numeric_text": "550,000",
-      "section": "unclassified",
+      "section": "mezzanine",
       "subsection_context": null,
       "citation": {
         "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
@@ -198,68 +136,6 @@
         "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
       },
       "nearest_matches": []
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "Q4 FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Lease liability obligation-operating leases",
-      "value": "326",
-      "raw_numeric_text": "326",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2022-12-31",
-        "note": "iXBRL | Consolidated Balance Sheets"
-      },
-      "nearest_matches": [
-        [
-          "lease liability obligation-operating leases",
-          1.0
-        ],
-        [
-          "lease liability obligation-finance leases",
-          0.8571428571428572
-        ],
-        [
-          "lease liability operating leases",
-          0.8533333333333333
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "Q4 FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Lease liability obligation-finance leases",
-      "value": "162",
-      "raw_numeric_text": "162",
-      "section": "unclassified",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-        "page": 1,
-        "line_hint": "us-gaap:FinanceLeaseLiabilityNoncurrent | ctx:instant:2022-12-31",
-        "note": "iXBRL | Consolidated Balance Sheets"
-      },
-      "nearest_matches": [
-        [
-          "lease liability obligation-finance leases",
-          1.0
-        ],
-        [
-          "lease liability obligation-operating leases",
-          0.8571428571428572
-        ],
-        [
-          "lease liability finance leases",
-          0.8450704225352113
-        ]
-      ]
     }
   ]
 }
