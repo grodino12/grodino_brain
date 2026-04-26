@@ -225,8 +225,8 @@
         },
         {
           "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
           "value": "23832",
           "raw_numeric_text": "23,832",
           "notation_flags": 0,
@@ -305,8 +305,8 @@
         },
         {
           "raw_filing_label": "Accrued and other liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
           "value": "10523",
           "raw_numeric_text": "10,523",
           "notation_flags": 0,
@@ -325,8 +325,8 @@
         },
         {
           "raw_filing_label": "Debt due within one year",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Current Portion of Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-033",
           "value": "13717",
           "raw_numeric_text": "13,717",
           "notation_flags": 0,
@@ -484,9 +484,9 @@
           }
         },
         {
-          "raw_filing_label": "June 2022",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Common Stock Value",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
           "value": "4009",
           "raw_numeric_text": "4,009",
           "notation_flags": 0,
@@ -886,8 +886,8 @@
         },
         {
           "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
           "value": "23679",
           "raw_numeric_text": "23,679",
           "notation_flags": 0,
@@ -966,8 +966,8 @@
         },
         {
           "raw_filing_label": "Accrued and other liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
           "value": "9554",
           "raw_numeric_text": "9,554",
           "notation_flags": 0,
@@ -986,8 +986,8 @@
         },
         {
           "raw_filing_label": "Debt due within one year",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Current Portion of Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-033",
           "value": "8645",
           "raw_numeric_text": "8,645",
           "notation_flags": 0,
@@ -1125,15 +1125,15 @@
           }
         },
         {
-          "raw_filing_label": "June 2022",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Common Stock Shares Issued",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
           "value": "4009200000.0",
           "raw_numeric_text": "4,009.2",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "memo",
           "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1145,9 +1145,9 @@
           }
         },
         {
-          "raw_filing_label": "June 2022",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Common Stock Value",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
           "value": "4009",
           "raw_numeric_text": "4,009",
           "notation_flags": 0,
@@ -1567,14 +1567,14 @@
         },
         {
           "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
           "value": "3397",
           "raw_numeric_text": "3,397",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "subtotal",
           "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1908,14 +1908,14 @@
         },
         {
           "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
           "value": "11269",
           "raw_numeric_text": "11,269",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "subtotal",
           "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -2249,14 +2249,14 @@
         },
         {
           "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
           "value": "3355",
           "raw_numeric_text": "3,355",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "subtotal",
           "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -2590,14 +2590,14 @@
         },
         {
           "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
           "value": "11690",
           "raw_numeric_text": "11,690",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "subtotal",
           "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -3906,8 +3906,11 @@
     ],
     "fact_counts": {
       "consolidated_used": 186,
-      "label_synthesis_misses": 0
+      "label_synthesis_misses": 3
     },
-    "label_synthesis_concepts": []
+    "label_synthesis_concepts": [
+      "CommonStockSharesIssued",
+      "CommonStockValue"
+    ]
   }
 }

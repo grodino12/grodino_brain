@@ -225,8 +225,8 @@
         },
         {
           "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
           "value": "21818",
           "raw_numeric_text": "21,818",
           "notation_flags": 0,
@@ -305,8 +305,8 @@
         },
         {
           "raw_filing_label": "Accrued and other liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
           "value": "10756",
           "raw_numeric_text": "10,756",
           "notation_flags": 0,
@@ -325,8 +325,8 @@
         },
         {
           "raw_filing_label": "Debt due within one year",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Current Portion of Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-033",
           "value": "11631",
           "raw_numeric_text": "11,631",
           "notation_flags": 0,
@@ -484,9 +484,9 @@
           }
         },
         {
-          "raw_filing_label": "June 2025",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Common Stock Value",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
           "value": "4009",
           "raw_numeric_text": "4,009",
           "notation_flags": 0,
@@ -886,8 +886,8 @@
         },
         {
           "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
           "value": "21910",
           "raw_numeric_text": "21,910",
           "notation_flags": 0,
@@ -966,8 +966,8 @@
         },
         {
           "raw_filing_label": "Accrued and other liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
           "value": "11318",
           "raw_numeric_text": "11,318",
           "notation_flags": 0,
@@ -986,8 +986,8 @@
         },
         {
           "raw_filing_label": "Debt due within one year",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Current Portion of Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-033",
           "value": "9513",
           "raw_numeric_text": "9,513",
           "notation_flags": 0,
@@ -1125,15 +1125,15 @@
           }
         },
         {
-          "raw_filing_label": "June 2025",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Common Stock Shares Issued",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
           "value": "4009200000.0",
           "raw_numeric_text": "4,009.2",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "memo",
           "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1145,9 +1145,9 @@
           }
         },
         {
-          "raw_filing_label": "June 2025",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "raw_filing_label": "Common Stock Value",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
           "value": "4009",
           "raw_numeric_text": "4,009",
           "notation_flags": 0,
@@ -1567,14 +1567,14 @@
         },
         {
           "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
           "value": "4750",
           "raw_numeric_text": "4,750",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "subtotal",
           "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -1888,14 +1888,14 @@
         },
         {
           "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
           "value": "3959",
           "raw_numeric_text": "3,959",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
+          "row_type": "subtotal",
           "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
@@ -2069,8 +2069,8 @@
         },
         {
           "raw_filing_label": "Loss/(gain) on sale of assets",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Gain (Loss) on Disposal of PP&E",
+          "ledger_rule_id": "GEN-CF-007",
           "value": "-3",
           "raw_numeric_text": "3",
           "notation_flags": 0,
@@ -2630,8 +2630,8 @@
         },
         {
           "raw_filing_label": "Loss/(gain) on sale of assets",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Gain (Loss) on Disposal of PP&E",
+          "ledger_rule_id": "GEN-CF-007",
           "value": "794",
           "raw_numeric_text": "794",
           "notation_flags": 0,
@@ -3104,8 +3104,11 @@
     ],
     "fact_counts": {
       "consolidated_used": 148,
-      "label_synthesis_misses": 0
+      "label_synthesis_misses": 3
     },
-    "label_synthesis_concepts": []
+    "label_synthesis_concepts": [
+      "CommonStockSharesIssued",
+      "CommonStockValue"
+    ]
   }
 }

@@ -485,7 +485,7 @@
             }
           },
           {
-            "raw_filing_label": "June 2023",
+            "raw_filing_label": "Common Stock Value",
             "canonical_label": "Common Stock",
             "ledger_rule_id": "GEN-BS-028",
             "value": "4009",
@@ -1126,7 +1126,7 @@
             }
           },
           {
-            "raw_filing_label": "June 2023",
+            "raw_filing_label": "Common Stock Shares Issued",
             "canonical_label": "Common Stock - Shares Issued",
             "ledger_rule_id": "GEN-BS-037",
             "value": "4009200000.0",
@@ -1146,7 +1146,7 @@
             }
           },
           {
-            "raw_filing_label": "June 2023",
+            "raw_filing_label": "Common Stock Value",
             "canonical_label": "Common Stock",
             "ledger_rule_id": "GEN-BS-028",
             "value": "4009",
@@ -1568,15 +1568,15 @@
           },
           {
             "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-            "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
-            "ledger_rule_id": "GEN-IS-023",
+            "canonical_label": "Net Income (Loss) Less NCI",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "4521",
             "raw_numeric_text": "4,521",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
-            "row_type": "line_item",
-            "section": "post_ni_deduction",
+            "row_type": "subtotal",
+            "section": "unclassified",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -1889,15 +1889,15 @@
           },
           {
             "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-            "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
-            "ledger_rule_id": "GEN-IS-023",
+            "canonical_label": "Net Income (Loss) Less NCI",
+            "ledger_rule_id": "GEN-IS-011",
             "value": "3939",
             "raw_numeric_text": "3,939",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
-            "row_type": "line_item",
-            "section": "post_ni_deduction",
+            "row_type": "subtotal",
+            "section": "unclassified",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -3125,9 +3125,12 @@
       ],
       "fact_counts": {
         "consolidated_used": 149,
-        "label_synthesis_misses": 0
+        "label_synthesis_misses": 3
       },
-      "label_synthesis_concepts": []
+      "label_synthesis_concepts": [
+        "CommonStockSharesIssued",
+        "CommonStockValue"
+      ]
     }
   },
   "mapped_line_items": [
@@ -3684,7 +3687,7 @@
       "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "June 2023",
+      "raw_filing_label": "Common Stock Value",
       "canonical_label": "Common Stock",
       "ledger_rule_id": "GEN-BS-028",
       "value": "4009",
@@ -4428,7 +4431,7 @@
       "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "June 2023",
+      "raw_filing_label": "Common Stock Shares Issued",
       "canonical_label": "Common Stock - Shares Issued",
       "ledger_rule_id": "GEN-BS-037",
       "value": "4009200000.0",
@@ -4452,7 +4455,7 @@
       "mapping_source": "ledger_auto"
     },
     {
-      "raw_filing_label": "June 2023",
+      "raw_filing_label": "Common Stock Value",
       "canonical_label": "Common Stock",
       "ledger_rule_id": "GEN-BS-028",
       "value": "4009",
@@ -4933,15 +4936,15 @@
     },
     {
       "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-      "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
-      "ledger_rule_id": "GEN-IS-023",
+      "canonical_label": "Net Income (Loss) Less NCI",
+      "ledger_rule_id": "GEN-IS-011",
       "value": "4521",
       "raw_numeric_text": "4,521",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
-      "section": "post_ni_deduction",
+      "row_type": "subtotal",
+      "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -4952,7 +4955,7 @@
       },
       "model_sheet": "QTR P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+      "model_label": "Net Income (Loss) Less NCI",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5293,15 +5296,15 @@
     },
     {
       "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
-      "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
-      "ledger_rule_id": "GEN-IS-023",
+      "canonical_label": "Net Income (Loss) Less NCI",
+      "ledger_rule_id": "GEN-IS-011",
       "value": "3939",
       "raw_numeric_text": "3,939",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "line_item",
-      "section": "post_ni_deduction",
+      "row_type": "subtotal",
+      "section": "unclassified",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -5312,7 +5315,7 @@
       },
       "model_sheet": "QTR P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+      "model_label": "Net Income (Loss) Less NCI",
       "mapping_source": "ledger_auto"
     },
     {
