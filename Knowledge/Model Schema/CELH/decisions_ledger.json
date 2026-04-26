@@ -239,7 +239,8 @@
       "section": "operating_expenses",
       "position_note": "Operating expenses, after SG&A",
       "decided_date": "2026-04-26",
-      "note": "Material in FY2025 due to Alani Nu acquisition; per STRUCT-IS-002 historically classified as S&M but called out separately on the rendered IS"
+      "note": "Material in FY2025 due to Alani Nu acquisition; per STRUCT-IS-002 historically classified as S&M but called out separately on the rendered IS. sign_convention=negative: filer renders as positive (charge in expense convention); store negative for IS cascade subtraction.",
+      "sign_convention": "negative"
     }
   ],
   "structural_decisions": [
