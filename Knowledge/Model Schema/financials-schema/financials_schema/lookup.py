@@ -90,10 +90,14 @@ IXBRL_SUBTOTAL_CONCEPTS = frozenset({
     "LiabilitiesAndStockholdersEquity",
     "StockholdersEquity",
     "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
-    # CF section subtotals + the net-change-in-cash subtotal. The cash-position
-    # rollforward concepts ("Cash...beginning/end of period", same concept
-    # different periods) are tagged as memo at the walker (CF instant→duration
-    # fold), not here.
+})
+
+# CF section subtotal + net-change-in-cash concepts. These are NOT routed to
+# the _subtotal carry-through (model-write expects them as regular rows with
+# canonical labels like "Cash Flow from Operations" and replaces them with
+# SUM formulas in-place). They're listed here so the walker can recognize
+# them in the section_subtotal_rows machinery downstream if needed.
+CF_SECTION_SUBTOTAL_CONCEPTS = frozenset({
     "NetCashProvidedByUsedInOperatingActivities",
     "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
     "NetCashProvidedByUsedInInvestingActivities",

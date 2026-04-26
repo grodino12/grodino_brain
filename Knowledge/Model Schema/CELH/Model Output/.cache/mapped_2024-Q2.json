@@ -706,8 +706,8 @@
           },
           {
             "raw_filing_label": "Common stock - Common Stock Shares Outstanding",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "233344377",
             "raw_numeric_text": "233,344,377",
             "notation_flags": 0,
@@ -1527,8 +1527,8 @@
           },
           {
             "raw_filing_label": "Common stock - Common Stock Par Or Stated Value Per Share",
-            "canonical_label": "Par Value of Equity",
-            "ledger_rule_id": "GEN-BS-042",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "0.000001",
             "raw_numeric_text": "0.001",
             "notation_flags": 0,
@@ -1547,8 +1547,8 @@
           },
           {
             "raw_filing_label": "Common stock - Common Stock Shares Authorized",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "300000",
             "raw_numeric_text": "300,000,000",
             "notation_flags": 0,
@@ -1567,8 +1567,8 @@
           },
           {
             "raw_filing_label": "Common stock - Common Stock Shares Issued",
-            "canonical_label": "Common Stock - Shares Issued",
-            "ledger_rule_id": "GEN-BS-037",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "231787482",
             "raw_numeric_text": "231,787,482",
             "notation_flags": 0,
@@ -3392,8 +3392,8 @@
           },
           {
             "raw_filing_label": "Net cash provided by operating activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "174292",
             "raw_numeric_text": "174,292",
             "notation_flags": 0,
@@ -3432,8 +3432,8 @@
           },
           {
             "raw_filing_label": "Net cash used in investing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-13739",
             "raw_numeric_text": "13,739",
             "notation_flags": 0,
@@ -3512,8 +3512,8 @@
           },
           {
             "raw_filing_label": "Net cash used in financing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "-12558",
             "raw_numeric_text": "12,558",
             "notation_flags": 0,
@@ -3552,14 +3552,14 @@
           },
           {
             "raw_filing_label": "Net increase in cash and cash equivalents",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Net Change in Cash",
+            "ledger_rule_id": "GEN-CF-035",
             "value": "147229",
             "raw_numeric_text": "147,229",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
-            "row_type": "subtotal",
+            "row_type": "line_item",
             "section": "cash_other",
             "subsection_context": null,
             "sign_convention": "as_reported",
@@ -3592,8 +3592,8 @@
           },
           {
             "raw_filing_label": "Cash and cash equivalents at beginning of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-            "canonical_label": "FX Effect on Cash",
-            "ledger_rule_id": "GEN-CF-034",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "755981",
             "raw_numeric_text": "755,981",
             "notation_flags": 0,
@@ -3612,8 +3612,8 @@
           },
           {
             "raw_filing_label": "Cash and cash equivalents at end of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-            "canonical_label": "FX Effect on Cash",
-            "ledger_rule_id": "GEN-CF-034",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "903210",
             "raw_numeric_text": "903,210",
             "notation_flags": 0,
@@ -4073,8 +4073,8 @@
           },
           {
             "raw_filing_label": "Net cash provided by operating activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "45211",
             "raw_numeric_text": "45,211",
             "notation_flags": 0,
@@ -4133,8 +4133,8 @@
           },
           {
             "raw_filing_label": "Net cash used in investing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-3577",
             "raw_numeric_text": "3,577",
             "notation_flags": 0,
@@ -4213,8 +4213,8 @@
           },
           {
             "raw_filing_label": "Net cash used in financing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "-12952",
             "raw_numeric_text": "12,952",
             "notation_flags": 0,
@@ -4253,14 +4253,14 @@
           },
           {
             "raw_filing_label": "Net increase in cash and cash equivalents",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Net Change in Cash",
+            "ledger_rule_id": "GEN-CF-035",
             "value": "28127",
             "raw_numeric_text": "28,127",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
-            "row_type": "subtotal",
+            "row_type": "line_item",
             "section": "cash_other",
             "subsection_context": null,
             "sign_convention": "as_reported",
@@ -4293,8 +4293,8 @@
           },
           {
             "raw_filing_label": "Cash and cash equivalents at beginning of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-            "canonical_label": "FX Effect on Cash",
-            "ledger_rule_id": "GEN-CF-034",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "652927",
             "raw_numeric_text": "652,927",
             "notation_flags": 0,
@@ -4313,8 +4313,8 @@
           },
           {
             "raw_filing_label": "Cash and cash equivalents at end of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-            "canonical_label": "FX Effect on Cash",
-            "ledger_rule_id": "GEN-CF-034",
+            "canonical_label": null,
+            "ledger_rule_id": null,
             "value": "681054",
             "raw_numeric_text": "681,054",
             "notation_flags": 0,
@@ -5170,8 +5170,8 @@
     },
     {
       "raw_filing_label": "Common stock - Common Stock Shares Outstanding",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "233344377",
       "raw_numeric_text": "233,344,377",
       "notation_flags": 0,
@@ -5187,9 +5187,9 @@
         "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2024-06-30",
         "note": "iXBRL HTM | BS"
       },
-      "model_sheet": "QTR BS",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
+      "model_label": "Common stock - Common Stock Shares Outstanding",
       "mapping_source": "ledger_auto"
     },
     {
@@ -6130,8 +6130,8 @@
     },
     {
       "raw_filing_label": "Common stock - Common Stock Par Or Stated Value Per Share",
-      "canonical_label": "Par Value of Equity",
-      "ledger_rule_id": "GEN-BS-042",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "0.000001",
       "raw_numeric_text": "0.001",
       "notation_flags": 0,
@@ -6147,15 +6147,15 @@
         "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2023-12-31",
         "note": "iXBRL HTM | BS"
       },
-      "model_sheet": "QTR BS",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "Par Value of Equity",
+      "model_label": "Common stock - Common Stock Par Or Stated Value Per Share",
       "mapping_source": "ledger_auto"
     },
     {
       "raw_filing_label": "Common stock - Common Stock Shares Authorized",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "300000",
       "raw_numeric_text": "300,000,000",
       "notation_flags": 0,
@@ -6171,15 +6171,15 @@
         "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2023-12-31",
         "note": "iXBRL HTM | BS"
       },
-      "model_sheet": "QTR BS",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
+      "model_label": "Common stock - Common Stock Shares Authorized",
       "mapping_source": "ledger_auto"
     },
     {
       "raw_filing_label": "Common stock - Common Stock Shares Issued",
-      "canonical_label": "Common Stock - Shares Issued",
-      "ledger_rule_id": "GEN-BS-037",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "231787482",
       "raw_numeric_text": "231,787,482",
       "notation_flags": 0,
@@ -6195,9 +6195,9 @@
         "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-12-31",
         "note": "iXBRL HTM | BS"
       },
-      "model_sheet": "QTR BS",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "Common Stock - Shares Issued",
+      "model_label": "Common stock - Common Stock Shares Issued",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7546,8 +7546,8 @@
     },
     {
       "raw_filing_label": "Net cash provided by operating activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Operations",
+      "ledger_rule_id": "GEN-CF-022",
       "value": "174292",
       "raw_numeric_text": "174,292",
       "notation_flags": 0,
@@ -7563,9 +7563,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2024-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net cash provided by operating activities",
+      "model_label": "Cash Flow from Operations",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7594,8 +7594,8 @@
     },
     {
       "raw_filing_label": "Net cash used in investing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-13739",
       "raw_numeric_text": "13,739",
       "notation_flags": 0,
@@ -7611,9 +7611,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2024-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net cash used in investing activities",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7690,8 +7690,8 @@
     },
     {
       "raw_filing_label": "Net cash used in financing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Financing",
+      "ledger_rule_id": "GEN-CF-033",
       "value": "-12558",
       "raw_numeric_text": "12,558",
       "notation_flags": 0,
@@ -7707,9 +7707,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2024-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net cash used in financing activities",
+      "model_label": "Cash Flow from Financing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7738,14 +7738,14 @@
     },
     {
       "raw_filing_label": "Net increase in cash and cash equivalents",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Net Change in Cash",
+      "ledger_rule_id": "GEN-CF-035",
       "value": "147229",
       "raw_numeric_text": "147,229",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "subtotal",
+      "row_type": "line_item",
       "section": "cash_other",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -7755,9 +7755,9 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2024-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net increase in cash and cash equivalents",
+      "model_label": "Net Change in Cash",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7786,8 +7786,8 @@
     },
     {
       "raw_filing_label": "Cash and cash equivalents at beginning of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-      "canonical_label": "FX Effect on Cash",
-      "ledger_rule_id": "GEN-CF-034",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "755981",
       "raw_numeric_text": "755,981",
       "notation_flags": 0,
@@ -7803,15 +7803,15 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "QTR CF",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "FX Effect on Cash",
+      "model_label": "Cash and cash equivalents at beginning of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
       "mapping_source": "ledger_auto"
     },
     {
       "raw_filing_label": "Cash and cash equivalents at end of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-      "canonical_label": "FX Effect on Cash",
-      "ledger_rule_id": "GEN-CF-034",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "903210",
       "raw_numeric_text": "903,210",
       "notation_flags": 0,
@@ -7827,9 +7827,9 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "QTR CF",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "FX Effect on Cash",
+      "model_label": "Cash and cash equivalents at end of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8338,8 +8338,8 @@
     },
     {
       "raw_filing_label": "Net cash provided by operating activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Operations",
+      "ledger_rule_id": "GEN-CF-022",
       "value": "45211",
       "raw_numeric_text": "45,211",
       "notation_flags": 0,
@@ -8355,9 +8355,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2023-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net cash provided by operating activities",
+      "model_label": "Cash Flow from Operations",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8410,8 +8410,8 @@
     },
     {
       "raw_filing_label": "Net cash used in investing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-3577",
       "raw_numeric_text": "3,577",
       "notation_flags": 0,
@@ -8427,9 +8427,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2023-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net cash used in investing activities",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8506,8 +8506,8 @@
     },
     {
       "raw_filing_label": "Net cash used in financing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Financing",
+      "ledger_rule_id": "GEN-CF-033",
       "value": "-12952",
       "raw_numeric_text": "12,952",
       "notation_flags": 0,
@@ -8523,9 +8523,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2023-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net cash used in financing activities",
+      "model_label": "Cash Flow from Financing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8554,14 +8554,14 @@
     },
     {
       "raw_filing_label": "Net increase in cash and cash equivalents",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Net Change in Cash",
+      "ledger_rule_id": "GEN-CF-035",
       "value": "28127",
       "raw_numeric_text": "28,127",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "subtotal",
+      "row_type": "line_item",
       "section": "cash_other",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -8571,9 +8571,9 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2023-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Net increase in cash and cash equivalents",
+      "model_label": "Net Change in Cash",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8602,8 +8602,8 @@
     },
     {
       "raw_filing_label": "Cash and cash equivalents at beginning of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-      "canonical_label": "FX Effect on Cash",
-      "ledger_rule_id": "GEN-CF-034",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "652927",
       "raw_numeric_text": "652,927",
       "notation_flags": 0,
@@ -8619,15 +8619,15 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "QTR CF",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "FX Effect on Cash",
+      "model_label": "Cash and cash equivalents at beginning of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
       "mapping_source": "ledger_auto"
     },
     {
       "raw_filing_label": "Cash and cash equivalents at end of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
-      "canonical_label": "FX Effect on Cash",
-      "ledger_rule_id": "GEN-CF-034",
+      "canonical_label": null,
+      "ledger_rule_id": null,
       "value": "681054",
       "raw_numeric_text": "681,054",
       "notation_flags": 0,
@@ -8643,9 +8643,9 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2023-06-30",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "QTR CF",
+      "model_sheet": "_memo",
       "model_row": 0,
-      "model_label": "FX Effect on Cash",
+      "model_label": "Cash and cash equivalents at end of the period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
       "mapping_source": "ledger_auto"
     }
   ],

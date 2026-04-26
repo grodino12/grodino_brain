@@ -3091,8 +3091,8 @@
           },
           {
             "raw_filing_label": "Net cash provided by (used in) operating activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "141218",
             "raw_numeric_text": "141,218",
             "notation_flags": 0,
@@ -3151,8 +3151,8 @@
           },
           {
             "raw_filing_label": "Net cash (used in) investing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-14200",
             "raw_numeric_text": "14,200",
             "notation_flags": 0,
@@ -3231,8 +3231,8 @@
           },
           {
             "raw_filing_label": "Net cash (used in) provided by financing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "-25221",
             "raw_numeric_text": "25,221",
             "notation_flags": 0,
@@ -3271,14 +3271,14 @@
           },
           {
             "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Net Change in Cash",
+            "ledger_rule_id": "GEN-CF-035",
             "value": "103054",
             "raw_numeric_text": "103,054",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
-            "row_type": "subtotal",
+            "row_type": "line_item",
             "section": "cash_other",
             "subsection_context": null,
             "sign_convention": "as_reported",
@@ -3792,8 +3792,8 @@
           },
           {
             "raw_filing_label": "Net cash provided by (used in) operating activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "108182",
             "raw_numeric_text": "108,182",
             "notation_flags": 0,
@@ -3852,8 +3852,8 @@
           },
           {
             "raw_filing_label": "Net cash (used in) investing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-5672",
             "raw_numeric_text": "5,672",
             "notation_flags": 0,
@@ -3952,8 +3952,8 @@
           },
           {
             "raw_filing_label": "Net cash (used in) provided by financing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "534112",
             "raw_numeric_text": "534,112",
             "notation_flags": 0,
@@ -3992,14 +3992,14 @@
           },
           {
             "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Net Change in Cash",
+            "ledger_rule_id": "GEN-CF-035",
             "value": "636672",
             "raw_numeric_text": "636,672",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
-            "row_type": "subtotal",
+            "row_type": "line_item",
             "section": "cash_other",
             "subsection_context": null,
             "sign_convention": "as_reported",
@@ -4433,8 +4433,8 @@
           },
           {
             "raw_filing_label": "Net cash provided by (used in) operating activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "-96586",
             "raw_numeric_text": "96,586",
             "notation_flags": 0,
@@ -4493,8 +4493,8 @@
           },
           {
             "raw_filing_label": "Net cash (used in) investing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-1264",
             "raw_numeric_text": "1,264",
             "notation_flags": 0,
@@ -4573,8 +4573,8 @@
           },
           {
             "raw_filing_label": "Net cash (used in) provided by financing activities",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "71395",
             "raw_numeric_text": "71,395",
             "notation_flags": 0,
@@ -4613,14 +4613,14 @@
           },
           {
             "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Net Change in Cash",
+            "ledger_rule_id": "GEN-CF-035",
             "value": "-26993",
             "raw_numeric_text": "26,993",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
-            "row_type": "subtotal",
+            "row_type": "line_item",
             "section": "cash_other",
             "subsection_context": null,
             "sign_convention": "as_reported",
@@ -8266,8 +8266,8 @@
     },
     {
       "raw_filing_label": "Net cash provided by (used in) operating activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Operations",
+      "ledger_rule_id": "GEN-CF-022",
       "value": "141218",
       "raw_numeric_text": "141,218",
       "notation_flags": 0,
@@ -8283,9 +8283,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash provided by (used in) operating activities",
+      "model_label": "Cash Flow from Operations",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8338,8 +8338,8 @@
     },
     {
       "raw_filing_label": "Net cash (used in) investing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-14200",
       "raw_numeric_text": "14,200",
       "notation_flags": 0,
@@ -8355,9 +8355,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash (used in) investing activities",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8434,8 +8434,8 @@
     },
     {
       "raw_filing_label": "Net cash (used in) provided by financing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Financing",
+      "ledger_rule_id": "GEN-CF-033",
       "value": "-25221",
       "raw_numeric_text": "25,221",
       "notation_flags": 0,
@@ -8451,9 +8451,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash (used in) provided by financing activities",
+      "model_label": "Cash Flow from Financing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -8482,14 +8482,14 @@
     },
     {
       "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Net Change in Cash",
+      "ledger_rule_id": "GEN-CF-035",
       "value": "103054",
       "raw_numeric_text": "103,054",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "subtotal",
+      "row_type": "line_item",
       "section": "cash_other",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -8499,9 +8499,9 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
+      "model_label": "Net Change in Cash",
       "mapping_source": "ledger_auto"
     },
     {
@@ -9082,8 +9082,8 @@
     },
     {
       "raw_filing_label": "Net cash provided by (used in) operating activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Operations",
+      "ledger_rule_id": "GEN-CF-022",
       "value": "108182",
       "raw_numeric_text": "108,182",
       "notation_flags": 0,
@@ -9099,9 +9099,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash provided by (used in) operating activities",
+      "model_label": "Cash Flow from Operations",
       "mapping_source": "ledger_auto"
     },
     {
@@ -9154,8 +9154,8 @@
     },
     {
       "raw_filing_label": "Net cash (used in) investing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-5672",
       "raw_numeric_text": "5,672",
       "notation_flags": 0,
@@ -9171,9 +9171,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash (used in) investing activities",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -9274,8 +9274,8 @@
     },
     {
       "raw_filing_label": "Net cash (used in) provided by financing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Financing",
+      "ledger_rule_id": "GEN-CF-033",
       "value": "534112",
       "raw_numeric_text": "534,112",
       "notation_flags": 0,
@@ -9291,9 +9291,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash (used in) provided by financing activities",
+      "model_label": "Cash Flow from Financing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -9322,14 +9322,14 @@
     },
     {
       "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Net Change in Cash",
+      "ledger_rule_id": "GEN-CF-035",
       "value": "636672",
       "raw_numeric_text": "636,672",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "subtotal",
+      "row_type": "line_item",
       "section": "cash_other",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -9339,9 +9339,9 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
+      "model_label": "Net Change in Cash",
       "mapping_source": "ledger_auto"
     },
     {
@@ -9826,8 +9826,8 @@
     },
     {
       "raw_filing_label": "Net cash provided by (used in) operating activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Operations",
+      "ledger_rule_id": "GEN-CF-022",
       "value": "-96586",
       "raw_numeric_text": "96,586",
       "notation_flags": 0,
@@ -9843,9 +9843,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2021-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash provided by (used in) operating activities",
+      "model_label": "Cash Flow from Operations",
       "mapping_source": "ledger_auto"
     },
     {
@@ -9898,8 +9898,8 @@
     },
     {
       "raw_filing_label": "Net cash (used in) investing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-1264",
       "raw_numeric_text": "1,264",
       "notation_flags": 0,
@@ -9915,9 +9915,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2021-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash (used in) investing activities",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -9994,8 +9994,8 @@
     },
     {
       "raw_filing_label": "Net cash (used in) provided by financing activities",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Financing",
+      "ledger_rule_id": "GEN-CF-033",
       "value": "71395",
       "raw_numeric_text": "71,395",
       "notation_flags": 0,
@@ -10011,9 +10011,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2021-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net cash (used in) provided by financing activities",
+      "model_label": "Cash Flow from Financing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -10042,14 +10042,14 @@
     },
     {
       "raw_filing_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Net Change in Cash",
+      "ledger_rule_id": "GEN-CF-035",
       "value": "-26993",
       "raw_numeric_text": "26,993",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
-      "row_type": "subtotal",
+      "row_type": "line_item",
       "section": "cash_other",
       "subsection_context": null,
       "sign_convention": "as_reported",
@@ -10059,9 +10059,9 @@
         "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2021-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "CASH FLOW",
       "model_row": 0,
-      "model_label": "Net increase (decrease) in cash, cash equivalents and restricted cash",
+      "model_label": "Net Change in Cash",
       "mapping_source": "ledger_auto"
     },
     {
