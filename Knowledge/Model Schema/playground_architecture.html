@@ -535,7 +535,7 @@ let NODES = [
       'ANNL column labels = FY{fiscal_year}; forecast columns FY2025E..FY2030E pre-allocated empty',
       'Row layout from decisions ledger — one entry per concept serves both 10-K and 10-Q (variant collapse 2026-04-25); reconcile derives sheet name from filing_type at item time',
       'Row consolidation by canonical_label (resolve_row_positions final stage): when multiple rule_ids share a canonical (e.g. PG MAP-IS-001 + GEN-IS-009 both → "Pre-Tax Income (Loss)"), they alias to the same excel row — without this the IS cascade SUM would double-count Pre-Tax',
-      'Period dedup: first-filing-wins when the same period appears in multiple inputs (was newer-filing-wins; flipped 2026-04-25 — filers re-categorize line items between filings, original 10-Q/10-K\'s breakdown is what users see when comparing the workbook to that filing)',
+      'Period dedup: first-filing-wins per (sheet, period) — every cell in a given period column comes from the oldest filing that reported it; row-level mixing across filings is forbidden. Eliminates the concept-rename double-count class of bug (filer uses a hybrid us-gaap concept in one filing, splits it into two pure concepts in a later filing — per-row dedup would pick both rows for the same period; per-period dedup uses the original filing\'s complete breakdown).',
       'Row insertion forward look-up when no prior anchor exists (handles atypical filing orders + _CASCADE_<section> injection placement)',
       'CF section/subtotal containment check (raises): every section-tagged row must fall within its subtotal\'s SUM range — catches row-placement bugs',
       'Cross-filing CF section/subtotal tie-out check (warns, doesn\'t raise): for each (period, section), workbook-formula sum vs dedup-picked subtotal — fires when filers re-categorize between filings',
@@ -698,7 +698,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v11';
+const LS_KEY = 'financials-architecture-playground-v12';
 
 function saveState() {
   try {
