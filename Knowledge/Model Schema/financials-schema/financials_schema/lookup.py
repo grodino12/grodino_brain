@@ -296,7 +296,7 @@ def select_entry(
 # on CF, "Depreciation expense" appears positive (non-cash add-back), so
 # the keyword logic would mis-flip.
 
-_NEGATIVE_KEYWORDS = ("expense", "loss", "cost of")
+_NEGATIVE_KEYWORDS = ("expense", "loss", "cost of", "charge")
 _POSITIVE_KEYWORDS = ("benefit", "gain", "income", "recovery")
 
 
