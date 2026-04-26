@@ -3547,28 +3547,27 @@
             "line_hint": "celh:PreferredStockIncreaseDecreaseInFairValue | ctx:duration:2025-12-31",
             "note": "iXBRL HTM | CF"
           }
-        }
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period": {
-        "fiscal_year": 2025,
-        "fiscal_quarter": null,
-        "period_end_date": "2025-12-31",
-        "raw_period_label": "as of 2025-12-31",
-        "period_length_weeks": null,
-        "is_comparative": false
-      },
-      "unit": "thousands",
-      "raw_unit_phrase": "in thousands",
-      "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 1.0,
-      "share_unit": "actual",
-      "eps_unit": "actual",
-      "currency": "USD",
-      "dialect": "US_GAAP",
-      "line_items": [
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "canonical_label": "Cash at Beginning of Period",
+          "ledger_rule_id": "GEN-CF-036",
+          "value": "890190",
+          "raw_numeric_text": "890,190",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
         {
           "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
           "canonical_label": "Cash at End of Period",
@@ -4249,47 +4248,6 @@
             "line_hint": "us-gaap:IncomeTaxesPaid | ctx:duration:2024-12-31",
             "note": "iXBRL HTM | CF"
           }
-        }
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period": {
-        "fiscal_year": 2024,
-        "fiscal_quarter": null,
-        "period_end_date": "2024-12-31",
-        "raw_period_label": "as of 2024-12-31",
-        "period_length_weeks": null,
-        "is_comparative": true
-      },
-      "unit": "thousands",
-      "raw_unit_phrase": "in thousands",
-      "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 1.0,
-      "share_unit": "actual",
-      "eps_unit": "actual",
-      "currency": "USD",
-      "dialect": "US_GAAP",
-      "line_items": [
-        {
-          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
-          "canonical_label": "Cash at Beginning of Period",
-          "ledger_rule_id": "GEN-CF-036",
-          "value": "890190",
-          "raw_numeric_text": "890,190",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "financing",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-12-31",
-            "note": "iXBRL HTM | CF"
-          }
         },
         {
           "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
@@ -4308,6 +4266,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
+          "canonical_label": "Cash at Beginning of Period",
+          "ledger_rule_id": "GEN-CF-036",
+          "value": "755981",
+          "raw_numeric_text": "755,981",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2023-12-31",
             "note": "iXBRL HTM | CF"
           }
         }
@@ -4931,47 +4909,6 @@
             "line_hint": "us-gaap:IncomeTaxesPaid | ctx:duration:2023-12-31",
             "note": "iXBRL HTM | CF"
           }
-        }
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period": {
-        "fiscal_year": 2023,
-        "fiscal_quarter": null,
-        "period_end_date": "2023-12-31",
-        "raw_period_label": "as of 2023-12-31",
-        "period_length_weeks": null,
-        "is_comparative": true
-      },
-      "unit": "thousands",
-      "raw_unit_phrase": "in thousands",
-      "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 1.0,
-      "share_unit": "actual",
-      "eps_unit": "actual",
-      "currency": "USD",
-      "dialect": "US_GAAP",
-      "line_items": [
-        {
-          "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
-          "canonical_label": "Cash at Beginning of Period",
-          "ledger_rule_id": "GEN-CF-036",
-          "value": "755981",
-          "raw_numeric_text": "755,981",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "financing",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2023-12-31",
-            "note": "iXBRL HTM | CF"
-          }
         },
         {
           "raw_filing_label": "Cash, cash equivalents and restricted cash at end of the period",
@@ -4992,28 +4929,7 @@
             "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2023-12-31",
             "note": "iXBRL HTM | CF"
           }
-        }
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period": {
-        "fiscal_year": 2022,
-        "fiscal_quarter": null,
-        "period_end_date": "2022-12-31",
-        "raw_period_label": "as of 2022-12-31",
-        "period_length_weeks": null,
-        "is_comparative": true
-      },
-      "unit": "thousands",
-      "raw_unit_phrase": "in thousands",
-      "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 1.0,
-      "share_unit": "actual",
-      "eps_unit": "actual",
-      "currency": "USD",
-      "dialect": "US_GAAP",
-      "line_items": [
+        },
         {
           "raw_filing_label": "Cash, cash equivalents and restricted cash at beginning of the period",
           "canonical_label": "Cash at Beginning of Period",
