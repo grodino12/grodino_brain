@@ -1574,7 +1574,8 @@
         "repayments of long-term debt",
         "repayments of long term debt",
         "principal payments on long-term debt",
-        "long-term debt repayments"
+        "long-term debt repayments",
+        "payments on term loan"
       ],
       "filing_section": "financing"
     },
@@ -1644,6 +1645,52 @@
       ],
       "filing_section": "operating",
       "note": "Amortization alone, when filer reports D and A separately. Includes adjustment-for-amortization variants. Filers reporting combined D&A (us-gaap:DepreciationDepletionAndAmortization) route to GEN-CF-002 and use the combined row."
+    },
+    {
+      "rule_id": "GEN-CF-054",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Debt Issuance Fees",
+      "aliases": [
+        "payment of debt issuance costs and debt discount",
+        "payment of debt issuance costs",
+        "payments of debt issuance costs",
+        "debt issuance costs",
+        "debt issuance fees",
+        "payment of revolver fees",
+        "revolver fees",
+        "financing fees",
+        "payment of financing fees"
+      ],
+      "filing_section": "financing",
+      "note": "Cash paid for debt issuance / financing fees (term loan + revolver). Single canonical for the umbrella; some filers split debt issuance vs revolver fees but the cash impact is the same financing-section character."
+    },
+    {
+      "rule_id": "GEN-CF-055",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Change in Fair Value of Contingent Consideration",
+      "aliases": [
+        "change in fair value of contingent consideration",
+        "fair value adjustment to contingent consideration",
+        "change in contingent consideration",
+        "remeasurement of contingent consideration",
+        "liabilities fair value adjustment"
+      ],
+      "filing_section": "operating",
+      "note": "Non-cash adjustment in CFO recon for the period mark-to-market of an acquisition earnout liability. Moves with the BS Contingent Consideration balance."
+    },
+    {
+      "rule_id": "GEN-BS-045",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Contingent Consideration - Current",
+      "aliases": [
+        "contingent consideration",
+        "contingent consideration current",
+        "contingent consideration - current",
+        "business combination contingent consideration liability current",
+        "acquisition contingent consideration"
+      ],
+      "filing_section": "current_liabilities",
+      "note": "Acquisition earnout payable, current portion. ASC 805 fair-value liability. Mark-to-market changes flow through GEN-CF-055 in operating."
     }
   ]
 }
