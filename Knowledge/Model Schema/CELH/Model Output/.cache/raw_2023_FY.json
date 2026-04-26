@@ -64,26 +64,6 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, par value (in USD per share) | $ / shares",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2023-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Note receivable-current-net",
           "canonical_label": "Note Receivable - Current",
           "ledger_rule_id": "GEN-BS-004",
@@ -104,11 +84,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, cumulative dividend (percentage)",
+          "raw_filing_label": "Mezzanine equity, par value (in USD per share) | $ / shares",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "0.00005",
-          "raw_numeric_text": "5",
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -119,7 +99,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2023-12-31",
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2023-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -144,6 +124,26 @@
           }
         },
         {
+          "raw_filing_label": "Mezzanine equity, cumulative dividend (percentage)",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.00005",
+          "raw_numeric_text": "5",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2023-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
           "raw_filing_label": "Prepaid expenses and other current assets",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-BS-006",
@@ -160,6 +160,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2023-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred other costs-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
+          "value": "14124",
+          "raw_numeric_text": "14,124",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2023-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -181,26 +201,6 @@
             "page": 1,
             "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2023-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
-          "raw_filing_label": "Deferred other costs-current",
-          "canonical_label": "Deferred Revenue - Non-Current",
-          "ledger_rule_id": "GEN-BS-026",
-          "value": "14124",
-          "raw_numeric_text": "14,124",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2023-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
         {
@@ -264,26 +264,6 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares outstanding (in shares)",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "231787482",
-          "raw_numeric_text": "231,787,482",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2023-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Right of use assets-operating leases",
           "canonical_label": "ROU Assets - Operating - Non-Current",
           "ledger_rule_id": "GEN-BS-009",
@@ -301,6 +281,26 @@
             "page": 1,
             "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2023-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, shares outstanding (in shares)",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "231787482",
+          "raw_numeric_text": "231,787,482",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2023-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -833,7 +833,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -965,26 +965,6 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, shares issued (in shares)",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "1466666",
-          "raw_numeric_text": "1,466,666",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2022-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Prepaid expenses and other current assets",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-BS-006",
@@ -1005,11 +985,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
+          "raw_filing_label": "Mezzanine equity, shares issued (in shares)",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "1467000",
-          "raw_numeric_text": "1,467",
+          "value": "1466666",
+          "raw_numeric_text": "1,466,666",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -1020,7 +1000,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -1045,11 +1025,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, redemption amount | $",
+          "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "550000",
-          "raw_numeric_text": "550,000",
+          "value": "1467000",
+          "raw_numeric_text": "1,467",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -1060,7 +1040,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -1085,22 +1065,22 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, par value (in USD per share) | $ / shares",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
+          "raw_filing_label": "Mezzanine equity, redemption amount | $",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "550000",
+          "raw_numeric_text": "550,000",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "equity",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -1125,11 +1105,11 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares authorized (in shares)",
+          "raw_filing_label": "Common stock, par value (in USD per share) | $ / shares",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
-          "value": "300000",
-          "raw_numeric_text": "300,000,000",
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -1140,7 +1120,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -1165,6 +1145,26 @@
           }
         },
         {
+          "raw_filing_label": "Common stock, shares authorized (in shares)",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "300000",
+          "raw_numeric_text": "300,000,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
           "raw_filing_label": "Deferred tax assets",
           "canonical_label": "Deferred Tax Assets",
           "ledger_rule_id": "GEN-BS-008",
@@ -1181,6 +1181,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:DeferredIncomeTaxAssetsNet | ctx:instant:2022-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Right of use assets-operating leases",
+          "canonical_label": "ROU Assets - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-009",
+          "value": "972",
+          "raw_numeric_text": "972",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -1202,26 +1222,6 @@
             "page": 1,
             "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
-          "raw_filing_label": "Right of use assets-operating leases",
-          "canonical_label": "ROU Assets - Operating - Non-Current",
-          "ledger_rule_id": "GEN-BS-009",
-          "value": "972",
-          "raw_numeric_text": "972",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2022-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
         {
@@ -1414,7 +1414,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1774,7 +1774,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -3379,7 +3379,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {

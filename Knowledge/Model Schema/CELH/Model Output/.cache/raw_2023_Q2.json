@@ -64,26 +64,6 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2023-06-30",
-            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Note receivable-current",
           "canonical_label": "Note Receivable - Current",
           "ledger_rule_id": "GEN-BS-004",
@@ -104,6 +84,26 @@
           }
         },
         {
+          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2023-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
           "raw_filing_label": "Inventories-net",
           "canonical_label": "Inventories",
           "ledger_rule_id": "GEN-BS-005",
@@ -120,6 +120,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:InventoryNet | ctx:instant:2023-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other current assets",
+          "canonical_label": "Prepaid Expenses",
+          "ledger_rule_id": "GEN-BS-006",
+          "value": "23398",
+          "raw_numeric_text": "23,398",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2023-06-30",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -144,22 +164,22 @@
           }
         },
         {
-          "raw_filing_label": "Prepaid expenses and other current assets",
-          "canonical_label": "Prepaid Expenses",
-          "ledger_rule_id": "GEN-BS-006",
-          "value": "23398",
-          "raw_numeric_text": "23,398",
+          "raw_filing_label": "Deferred other costs-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
+          "value": "14124",
+          "raw_numeric_text": "14,124",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "current_assets",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2023-06-30",
+            "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2023-06-30",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -184,26 +204,6 @@
           }
         },
         {
-          "raw_filing_label": "Deferred other costs-current",
-          "canonical_label": "Deferred Revenue - Non-Current",
-          "ledger_rule_id": "GEN-BS-026",
-          "value": "14124",
-          "raw_numeric_text": "14,124",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2023-06-30",
-            "note": "iXBRL | Consolidated Balance Sheets"
-          }
-        },
-        {
           "raw_filing_label": "Total current assets",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -220,6 +220,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2023-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Property and equipment-net",
+          "canonical_label": "Net PP&E",
+          "ledger_rule_id": "GEN-BS-007",
+          "value": "15892",
+          "raw_numeric_text": "15,892",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2023-06-30",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -244,26 +264,6 @@
           }
         },
         {
-          "raw_filing_label": "Property and equipment-net",
-          "canonical_label": "Net PP&E",
-          "ledger_rule_id": "GEN-BS-007",
-          "value": "15892",
-          "raw_numeric_text": "15,892",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2023-06-30",
-            "note": "iXBRL | Consolidated Balance Sheets"
-          }
-        },
-        {
           "raw_filing_label": "Deferred tax asset",
           "canonical_label": "Deferred Tax Assets",
           "ledger_rule_id": "GEN-BS-008",
@@ -280,6 +280,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:DeferredIncomeTaxAssetsNet | ctx:instant:2023-06-30",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Right of use assets-operating leases",
+          "canonical_label": "ROU Assets - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-009",
+          "value": "756",
+          "raw_numeric_text": "756",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2023-06-30",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -301,26 +321,6 @@
             "page": 1,
             "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2023-06-30",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
-          "raw_filing_label": "Right of use assets-operating leases",
-          "canonical_label": "ROU Assets - Operating - Non-Current",
-          "ledger_rule_id": "GEN-BS-009",
-          "value": "756",
-          "raw_numeric_text": "756",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2023-06-30",
-            "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
         {
@@ -833,7 +833,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -925,26 +925,6 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2022-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Note receivable-current",
           "canonical_label": "Note Receivable - Current",
           "ledger_rule_id": "GEN-BS-004",
@@ -965,11 +945,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, cummulative dividend (percentage)",
+          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "0.00005",
-          "raw_numeric_text": "5",
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -980,7 +960,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
-            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -1005,6 +985,26 @@
           }
         },
         {
+          "raw_filing_label": "Mezzanine equity, cummulative dividend (percentage)",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.00005",
+          "raw_numeric_text": "5",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2022-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
           "raw_filing_label": "Prepaid expenses and other current assets",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-BS-006",
@@ -1021,6 +1021,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
             "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred other costs-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
+          "value": "14124",
+          "raw_numeric_text": "14,124",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -1045,22 +1065,22 @@
           }
         },
         {
-          "raw_filing_label": "Deferred other costs-current",
-          "canonical_label": "Deferred Revenue - Non-Current",
-          "ledger_rule_id": "GEN-BS-026",
-          "value": "14124",
-          "raw_numeric_text": "14,124",
+          "raw_filing_label": "Total current assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "917971",
+          "raw_numeric_text": "917,971",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "row_type": "subtotal",
+          "section": "current_assets",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
-            "line_hint": "celh:DeferredContractCostsCurrent | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -1085,22 +1105,22 @@
           }
         },
         {
-          "raw_filing_label": "Total current assets",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "917971",
-          "raw_numeric_text": "917,971",
+          "raw_filing_label": "Note receivable-non-current",
+          "canonical_label": "Note Receivable - Non-Current",
+          "ledger_rule_id": "GEN-BS-011",
+          "value": "3574",
+          "raw_numeric_text": "3,574",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
-          "row_type": "subtotal",
-          "section": "current_assets",
+          "row_type": "line_item",
+          "section": "non_current_assets",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2022-12-31",
+            "line_hint": "us-gaap:NotesAndLoansReceivableNetNoncurrent | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -1122,26 +1142,6 @@
             "page": 1,
             "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
-          "raw_filing_label": "Note receivable-non-current",
-          "canonical_label": "Note Receivable - Non-Current",
-          "ledger_rule_id": "GEN-BS-011",
-          "value": "3574",
-          "raw_numeric_text": "3,574",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NotesAndLoansReceivableNetNoncurrent | ctx:instant:2022-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
         {
@@ -1185,26 +1185,6 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares outstanding (in shares)",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "76382000",
-          "raw_numeric_text": "76,382",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2022-12-31",
-            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Right of use assets-operating leases",
           "canonical_label": "ROU Assets - Operating - Non-Current",
           "ledger_rule_id": "GEN-BS-009",
@@ -1222,6 +1202,26 @@
             "page": 1,
             "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2022-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, shares outstanding (in shares)",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "76382000",
+          "raw_numeric_text": "76,382",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q2\\filings\\CELH_2023-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2022-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -1394,7 +1394,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1754,7 +1754,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {

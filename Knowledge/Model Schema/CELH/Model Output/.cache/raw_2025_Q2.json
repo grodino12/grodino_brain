@@ -44,26 +44,6 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares outstanding (in shares)",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "257769000",
-          "raw_numeric_text": "257,769",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q2\\filings\\CELH_2025-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2025-06-30",
-            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Accounts receivable-net",
           "canonical_label": "Accounts Receivable",
           "ledger_rule_id": "GEN-BS-003",
@@ -81,6 +61,26 @@
             "page": 1,
             "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2025-06-30",
             "note": "iXBRL | Condensed Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, shares outstanding (in shares)",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "257769000",
+          "raw_numeric_text": "257,769",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q2\\filings\\CELH_2025-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2025-06-30",
+            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -373,7 +373,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -533,7 +533,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -553,7 +553,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -573,7 +573,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -713,7 +713,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -805,26 +805,6 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares outstanding (in shares)",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "235014000",
-          "raw_numeric_text": "235,014",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q2\\filings\\CELH_2025-06-30_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2024-12-31",
-            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Accounts receivable-net",
           "canonical_label": "Accounts Receivable",
           "ledger_rule_id": "GEN-BS-003",
@@ -842,6 +822,26 @@
             "page": 1,
             "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2024-12-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, shares outstanding (in shares)",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "235014000",
+          "raw_numeric_text": "235,014",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q2\\filings\\CELH_2025-06-30_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2024-12-31",
+            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -1374,7 +1374,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1616,7 +1616,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "non_current_liabilities",
+          "section": "operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2036,7 +2036,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "financing",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2056,7 +2056,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "financing",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {

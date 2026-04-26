@@ -144,26 +144,6 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2025-03-31",
-            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Property, plant and equipment-net",
           "canonical_label": "Net PP&E",
           "ledger_rule_id": "GEN-BS-007",
@@ -184,11 +164,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, cumulative dividend (as a percent)",
+          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "0.00005",
-          "raw_numeric_text": "5",
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -199,7 +179,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2025-03-31",
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -224,11 +204,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, shares issued (in shares)",
+          "raw_filing_label": "Mezzanine equity, cumulative dividend (as a percent)",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "1466666",
-          "raw_numeric_text": "1,466,666",
+          "value": "0.00005",
+          "raw_numeric_text": "5",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -239,7 +219,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2025-03-31",
+            "line_hint": "celh:TemporaryEquityCumulativeDividendPercentage | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -264,11 +244,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
+          "raw_filing_label": "Mezzanine equity, shares issued (in shares)",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "1467000",
-          "raw_numeric_text": "1,467",
+          "value": "1466666",
+          "raw_numeric_text": "1,466,666",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -279,7 +259,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2025-03-31",
+            "line_hint": "us-gaap:TemporaryEquitySharesIssued | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -304,11 +284,11 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, redemption amount",
+          "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
           "canonical_label": null,
           "ledger_rule_id": null,
-          "value": "550000",
-          "raw_numeric_text": "550,000",
+          "value": "1467000",
+          "raw_numeric_text": "1,467",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -319,7 +299,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2025-03-31",
+            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -344,22 +324,22 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, par value (in USD per share)",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
+          "raw_filing_label": "Mezzanine equity, redemption amount",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "550000",
+          "raw_numeric_text": "550,000",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "equity",
+          "section": "unclassified",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2025-03-31",
+            "line_hint": "us-gaap:TemporaryEquityAggregateAmountOfRedemptionRequirement | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -384,11 +364,11 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares authorized (in shares)",
+          "raw_filing_label": "Common stock, par value (in USD per share)",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
-          "value": "300000",
-          "raw_numeric_text": "300,000,000",
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -399,7 +379,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2025-03-31",
+            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -424,11 +404,11 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares issued (in shares)",
+          "raw_filing_label": "Common stock, shares authorized (in shares)",
           "canonical_label": "Common Stock",
           "ledger_rule_id": "GEN-BS-028",
-          "value": "235283266",
-          "raw_numeric_text": "235,283,266",
+          "value": "300000",
+          "raw_numeric_text": "300,000,000",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
@@ -439,7 +419,7 @@
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
             "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-03-31",
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -461,6 +441,26 @@
             "page": 1,
             "line_hint": "us-gaap:Assets | ctx:instant:2025-03-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, shares issued (in shares)",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "235283266",
+          "raw_numeric_text": "235,283,266",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-03-31",
+            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -565,15 +565,15 @@
         },
         {
           "raw_filing_label": "Deferred revenue",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Deferred Revenue - Current",
+          "ledger_rule_id": "GEN-BS-021",
           "value": "9513",
           "raw_numeric_text": "9,513",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -625,15 +625,15 @@
         },
         {
           "raw_filing_label": "Lease liability operating leases",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Lease Liability - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-023",
           "value": "16152",
           "raw_numeric_text": "16,152",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -645,15 +645,15 @@
         },
         {
           "raw_filing_label": "Deferred revenue",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "155336",
           "raw_numeric_text": "155,336",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -833,7 +833,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -985,26 +985,6 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "0.000001",
-          "raw_numeric_text": "0.001",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2024-12-31",
-            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Property, plant and equipment-net",
           "canonical_label": "Net PP&E",
           "ledger_rule_id": "GEN-BS-007",
@@ -1022,6 +1002,26 @@
             "page": 1,
             "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2024-12-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Mezzanine equity, par value (in USD per share)",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.000001",
+          "raw_numeric_text": "0.001",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquityParOrStatedValuePerShare | ctx:instant:2024-12-31",
+            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -1065,26 +1065,6 @@
           }
         },
         {
-          "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "1467000",
-          "raw_numeric_text": "1,467",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2024-12-31",
-            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Goodwill",
           "canonical_label": "Goodwill",
           "ledger_rule_id": "GEN-BS-013",
@@ -1102,6 +1082,26 @@
             "page": 1,
             "line_hint": "us-gaap:Goodwill | ctx:instant:2024-12-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Mezzanine equity, shares outstanding (in shares)",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1467000",
+          "raw_numeric_text": "1,467",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TemporaryEquitySharesOutstanding | ctx:instant:2024-12-31",
+            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -1165,26 +1165,6 @@
           }
         },
         {
-          "raw_filing_label": "Common stock, shares issued (in shares)",
-          "canonical_label": "Common Stock",
-          "ledger_rule_id": "GEN-BS-028",
-          "value": "235013960",
-          "raw_numeric_text": "235,013,960",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "equity",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
-            "page": 1,
-            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
-            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
-          }
-        },
-        {
           "raw_filing_label": "Total Assets",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -1202,6 +1182,26 @@
             "page": 1,
             "line_hint": "us-gaap:Assets | ctx:instant:2024-12-31",
             "note": "iXBRL | Condensed Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock, shares issued (in shares)",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "235013960",
+          "raw_numeric_text": "235,013,960",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-Q1\\filings\\CELH_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-12-31",
+            "note": "iXBRL | Condensed Consolidated Balance Sheets (Parenthetical)"
           }
         },
         {
@@ -1306,15 +1306,15 @@
         },
         {
           "raw_filing_label": "Deferred revenue",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Deferred Revenue - Current",
+          "ledger_rule_id": "GEN-BS-021",
           "value": "9513",
           "raw_numeric_text": "9,513",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1366,15 +1366,15 @@
         },
         {
           "raw_filing_label": "Lease liability operating leases",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Lease Liability - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-023",
           "value": "16674",
           "raw_numeric_text": "16,674",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1386,15 +1386,15 @@
         },
         {
           "raw_filing_label": "Deferred revenue",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
           "value": "157714",
           "raw_numeric_text": "157,714",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_current_liabilities",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -1574,7 +1574,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "subtotal",
-          "section": "non_current_liabilities",
+          "section": "equity",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2095,7 +2095,7 @@
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "financing",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
