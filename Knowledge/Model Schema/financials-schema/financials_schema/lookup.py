@@ -90,20 +90,11 @@ IXBRL_SUBTOTAL_CONCEPTS = frozenset({
     "LiabilitiesAndStockholdersEquity",
     "StockholdersEquity",
     "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
-})
-
-# CF section subtotal + net-change-in-cash concepts. These are NOT routed to
-# the _subtotal carry-through (model-write expects them as regular rows with
-# canonical labels like "Cash Flow from Operations" and replaces them with
-# SUM formulas in-place). They're listed here so the walker can recognize
-# them in the section_subtotal_rows machinery downstream if needed.
-CF_SECTION_SUBTOTAL_CONCEPTS = frozenset({
-    "NetCashProvidedByUsedInOperatingActivities",
-    "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
-    "NetCashProvidedByUsedInInvestingActivities",
-    "NetCashProvidedByUsedInInvestingActivitiesContinuingOperations",
-    "NetCashProvidedByUsedInFinancingActivities",
-    "NetCashProvidedByUsedInFinancingActivitiesContinuingOperations",
+    # Net-change-in-cash subtotal — sums CFO+CFI+CFF+FX. Tagged as subtotal so
+    # CF-1 validator and CashOther bucket don't double-count it. The CFO/CFI/CFF
+    # section subtotals are NOT here — model-write expects those as regular
+    # line-item rows (with canonical "Cash Flow from Operations" etc.) and
+    # replaces their cells with SUM formulas in-place.
     "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
     "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseExcludingExchangeRateEffect",
     "CashAndCashEquivalentsPeriodIncreaseDecrease",

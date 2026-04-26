@@ -1691,6 +1691,19 @@
       ],
       "filing_section": "current_liabilities",
       "note": "Acquisition earnout payable, current portion. ASC 805 fair-value liability. Mark-to-market changes flow through GEN-CF-055 in operating."
+    },
+    {
+      "rule_id": "GEN-CF-056",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Other Financing Activities",
+      "row_type": "line_item",
+      "aliases": [
+        "other financing activities-net",
+        "other financing activities, net",
+        "other financing activities",
+        "proceeds from payments for other financing activities"
+      ],
+      "filing_section": "financing"
     }
   ]
 }
