@@ -1,9 +1,9 @@
 ---
 type: roadmap
-date: 2026-04-25
+date: 2026-04-26
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 25th PG Cross-Year Backfill + Sign Authority + Subtotal Consolidation Session"
+last_session: "April 26th CELH Onboarding + Visual Label + Section Scanning + Bucket A B Triage Session"
 ---
 
 # Celsius HF Case Study — Roadmap
@@ -162,7 +162,7 @@ Concrete critical path:
 8. ~~**Paren-of-value visual sign.**~~ Shipped 2026-04-25 (third session). Replaced sign-attr + negatedLabel inference with `_is_parens_negative()` walking the iXBRL fact's surrounding HTML. Also iXBRL extractor adds: subtotal-concept guard, class-of-stock dimension whitelist (Series A/B preferred), presentation-linkbase visual ordering DFS.
 9. ~~**CF-2/CF-3/CF-4 section validators + slice-alignment fix.**~~ Shipped 2026-04-25 (third session). validate.py now 10 rules. `group_items_by_statement` no longer drifts indices on 10-Qs.
 10. ~~**Model-write: first-filing-wins, row consolidation, layered subtotal checks.**~~ Shipped 2026-04-25 (third session). Original-filer breakdown wins per period. Two rule_ids → same canonical → one row. CF section containment raises; cross-filing CF tie-out warns on micro-shifts.
-11. **Multi-ticker validation.** **Next session.** Pull a couple more consumer-staples tickers (KO/PEP/COST/etc.) via `sec-edgar-fetch`, run the full pipeline, confirm the architecture generalizes. Surfaces ticker-specific quirks before the framework gets locked in.
+11. ~~**Multi-ticker validation.**~~ Shipped 2026-04-26 against CELH (3 10-Ks + 9 10-Qs). Surfaced 9 framework gaps; all fixed. Result: 0 novels across 12 filings, but 2025-FY validation still failing on missing Intangibles ($1.5B+ from Alani Nu acquisition tagged with dimensioned facts only). **Next session opens with the dimensioned-only-concept synthesis fix** (auto-detect concepts whose iXBRL facts are all segment-dimensioned, sum the breakouts to synthesize a default-context total). Detail in latest handoff.
 12. **Break OCI into its own worksheet (4th statement).** Carried. CI statements skipped today. Scope: add `COMPREHENSIVE_INCOME` to StatementType enum, route CI in iXBRL extractor, OCI/QTR OCI sheets in model-write, OCI library entries restored.
 13. **Extend `model-calc` to quarterly drivers.** Currently annual-only.
 14. **Extract `pattern_libraries/generic_forecast_rules.json`** from `calc.py`. Blocked on §13.
@@ -239,7 +239,7 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 25th PG Cross-Year Backfill + Sign Authority + Subtotal Consolidation Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH model\Handoffs\April 26th CELH Onboarding + Visual Label + Section Scanning + Bucket A B Triage Session.md` |
 | Prior handoffs (rotated) | `Brain\Sessions\CELH Model\Handoffs\Archive\` |
 | **sec-edgar-fetch skill** | `~\.claude\skills\sec-edgar-fetch\` |
 | **financials-extract-ixbrl skill** | `~\.claude\skills\financials-extract-ixbrl\` |
