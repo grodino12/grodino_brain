@@ -3,7 +3,7 @@ type: roadmap
 date: 2026-04-26
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 26th CELH Onboarding + Visual Label + Section Scanning + Bucket A B Triage Session"
+last_session: "April 26th HTM-Only Pivot Decision Session"
 ---
 
 # Celsius HF Case Study — Roadmap
