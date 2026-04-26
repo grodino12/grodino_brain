@@ -134,7 +134,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "non_current_liabilities",
+            "section": "current_assets",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -274,7 +274,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "non_current_liabilities",
+            "section": "non_current_assets",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -634,7 +634,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "equity",
+            "section": "mezzanine",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -995,7 +995,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "non_current_liabilities",
+            "section": "current_assets",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -1135,7 +1135,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "non_current_liabilities",
+            "section": "non_current_assets",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -1495,7 +1495,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "equity",
+            "section": "mezzanine",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -1956,7 +1956,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "eps",
+            "section": "equity",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -2277,7 +2277,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "line_item",
-            "section": "eps",
+            "section": "equity",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -2810,15 +2810,15 @@
           },
           {
             "raw_filing_label": "Net cash (used in) provided by investing activities",
-            "canonical_label": "Cash Flow from Financing",
-            "ledger_rule_id": "GEN-CF-033",
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-4525",
             "raw_numeric_text": "4,525",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "subtotal",
-            "section": "financing",
+            "section": "investing",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -3491,15 +3491,15 @@
           },
           {
             "raw_filing_label": "Net cash (used in) provided by investing activities",
-            "canonical_label": "Cash Flow from Financing",
-            "ledger_rule_id": "GEN-CF-033",
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "980",
             "raw_numeric_text": "980",
             "notation_flags": 0,
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "subtotal",
-            "section": "financing",
+            "section": "investing",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -4440,7 +4440,7 @@
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "line_item",
-      "section": "equity",
+      "section": "mezzanine",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -5448,7 +5448,7 @@
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "line_item",
-      "section": "equity",
+      "section": "mezzanine",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -5976,7 +5976,7 @@
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "line_item",
-      "section": "eps",
+      "section": "equity",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -6336,7 +6336,7 @@
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "line_item",
-      "section": "eps",
+      "section": "equity",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -6952,15 +6952,15 @@
     },
     {
       "raw_filing_label": "Net cash (used in) provided by investing activities",
-      "canonical_label": "Cash Flow from Financing",
-      "ledger_rule_id": "GEN-CF-033",
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-4525",
       "raw_numeric_text": "4,525",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "subtotal",
-      "section": "financing",
+      "section": "investing",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -6971,7 +6971,7 @@
       },
       "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Cash Flow from Financing",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7744,15 +7744,15 @@
     },
     {
       "raw_filing_label": "Net cash (used in) provided by investing activities",
-      "canonical_label": "Cash Flow from Financing",
-      "ledger_rule_id": "GEN-CF-033",
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "980",
       "raw_numeric_text": "980",
       "notation_flags": 0,
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "subtotal",
-      "section": "financing",
+      "section": "investing",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -7763,7 +7763,7 @@
       },
       "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "Cash Flow from Financing",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
