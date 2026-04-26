@@ -660,8 +660,12 @@
         "redeemable convertible preferred stock",
         "series a preferred stock",
         "preferred stock value",
-        "preferred stock"
-      ]
+        "preferred stock",
+        "temporary equity carrying amount attributable to parent",
+        "series b convertible preferred stock",
+        "redeemable preferred stock value"
+      ],
+      "note": "Convertible preferred is rendered in mezzanine equity per ASC 480, but model-write folds mezzanine into the equity section for workbook layout (per user directive 2026-04-26)."
     },
     {
       "rule_id": "GEN-BS-028",
