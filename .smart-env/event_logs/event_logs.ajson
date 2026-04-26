@@ -2468,3 +2468,4 @@
 "event_logs:sources:modified": {"key":"sources:modified","ct":1922,"first_at":1776544370371,"last_at":1777236538883,"class_name":"EventLog","event_sources":{"obsidian:vault.modify":1836,"obsidian:workspace.editor-change":86}},
 "event_logs:sources:reimport_started": {"key":"sources:reimport_started","ct":936,"first_at":1776544383375,"last_at":1777236538616,"class_name":"EventLog","event_sources":{"run_re_import":936}},
 "event_logs:sources:reimport_progress": {"key":"sources:reimport_progress","ct":2246,"first_at":1776544383377,"last_at":1777236538637,"class_name":"EventLog","event_sources":{"run_re_import":2246}},
+"event_logs:sources:deleted": {"key":"sources:deleted","ct":582,"first_at":1776691019630,"last_at":1777237034594,"class_name":"EventLog","event_sources":{"obsidian:vault.delete":582}},
