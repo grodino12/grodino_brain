@@ -2892,8 +2892,8 @@
           },
           {
             "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "10004",
             "raw_numeric_text": "10,004",
             "notation_flags": 0,
@@ -2972,8 +2972,8 @@
           },
           {
             "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-2224",
             "raw_numeric_text": "2,224",
             "notation_flags": 0,
@@ -3152,8 +3152,8 @@
           },
           {
             "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "-8087",
             "raw_numeric_text": "8,087",
             "notation_flags": 0,
@@ -3473,8 +3473,8 @@
           },
           {
             "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Operations",
+            "ledger_rule_id": "GEN-CF-022",
             "value": "7644",
             "raw_numeric_text": "7,644",
             "notation_flags": 0,
@@ -3573,8 +3573,8 @@
           },
           {
             "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Investing",
+            "ledger_rule_id": "GEN-CF-026",
             "value": "-1322",
             "raw_numeric_text": "1,322",
             "notation_flags": 0,
@@ -3733,8 +3733,8 @@
           },
           {
             "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
-            "canonical_label": null,
-            "ledger_rule_id": null,
+            "canonical_label": "Cash Flow from Financing",
+            "ledger_rule_id": "GEN-CF-033",
             "value": "-6500",
             "raw_numeric_text": "6,500",
             "notation_flags": 0,
@@ -6402,8 +6402,8 @@
     },
     {
       "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Operations",
+      "ledger_rule_id": "GEN-CF-022",
       "value": "10004",
       "raw_numeric_text": "10,004",
       "notation_flags": 0,
@@ -6419,9 +6419,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "TOTAL OPERATING ACTIVITIES",
+      "model_label": "Cash Flow from Operations",
       "mapping_source": "ledger_auto"
     },
     {
@@ -6498,8 +6498,8 @@
     },
     {
       "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-2224",
       "raw_numeric_text": "2,224",
       "notation_flags": 0,
@@ -6515,9 +6515,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "TOTAL INVESTING ACTIVITIES",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -6714,8 +6714,8 @@
     },
     {
       "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Financing",
+      "ledger_rule_id": "GEN-CF-033",
       "value": "-8087",
       "raw_numeric_text": "8,087",
       "notation_flags": 0,
@@ -6731,9 +6731,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "TOTAL FINANCING ACTIVITIES",
+      "model_label": "Cash Flow from Financing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7074,8 +7074,8 @@
     },
     {
       "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Operations",
+      "ledger_rule_id": "GEN-CF-022",
       "value": "7644",
       "raw_numeric_text": "7,644",
       "notation_flags": 0,
@@ -7091,9 +7091,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "TOTAL OPERATING ACTIVITIES",
+      "model_label": "Cash Flow from Operations",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7194,8 +7194,8 @@
     },
     {
       "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Investing",
+      "ledger_rule_id": "GEN-CF-026",
       "value": "-1322",
       "raw_numeric_text": "1,322",
       "notation_flags": 0,
@@ -7211,9 +7211,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "TOTAL INVESTING ACTIVITIES",
+      "model_label": "Cash Flow from Investing",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7386,8 +7386,8 @@
     },
     {
       "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
-      "canonical_label": null,
-      "ledger_rule_id": null,
+      "canonical_label": "Cash Flow from Financing",
+      "ledger_rule_id": "GEN-CF-033",
       "value": "-6500",
       "raw_numeric_text": "6,500",
       "notation_flags": 0,
@@ -7403,9 +7403,9 @@
         "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2022-12-31",
         "note": "iXBRL HTM | CF"
       },
-      "model_sheet": "_subtotal",
+      "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "TOTAL FINANCING ACTIVITIES",
+      "model_label": "Cash Flow from Financing",
       "mapping_source": "ledger_auto"
     },
     {
