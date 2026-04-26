@@ -386,8 +386,8 @@
           },
           {
             "raw_filing_label": "DEFERRED INCOME TAXES",
-            "canonical_label": "Deferred Tax Assets",
-            "ledger_rule_id": "GEN-BS-008",
+            "canonical_label": "Deferred Tax Liability",
+            "ledger_rule_id": "GEN-BS-025",
             "value": "6478",
             "raw_numeric_text": "6,478",
             "notation_flags": 0,
@@ -1147,8 +1147,8 @@
           },
           {
             "raw_filing_label": "DEFERRED INCOME TAXES",
-            "canonical_label": "Deferred Tax Assets",
-            "ledger_rule_id": "GEN-BS-008",
+            "canonical_label": "Deferred Tax Liability",
+            "ledger_rule_id": "GEN-BS-025",
             "value": "6809",
             "raw_numeric_text": "6,809",
             "notation_flags": 0,
@@ -3039,7 +3039,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "memo",
-            "section": "tax",
+            "section": "operating",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -3680,7 +3680,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "memo",
-            "section": "tax",
+            "section": "operating",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -4341,7 +4341,7 @@
             "footnote_markers": [],
             "indent_level": 2,
             "row_type": "memo",
-            "section": "tax",
+            "section": "operating",
             "subsection_context": null,
             "sign_convention": "as_reported",
             "citation": {
@@ -4847,8 +4847,8 @@
     },
     {
       "raw_filing_label": "DEFERRED INCOME TAXES",
-      "canonical_label": "Deferred Tax Assets",
-      "ledger_rule_id": "GEN-BS-008",
+      "canonical_label": "Deferred Tax Liability",
+      "ledger_rule_id": "GEN-BS-025",
       "value": "6478",
       "raw_numeric_text": "6,478",
       "notation_flags": 0,
@@ -4866,7 +4866,7 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Deferred Tax Assets",
+      "model_label": "Deferred Tax Liability",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5735,8 +5735,8 @@
     },
     {
       "raw_filing_label": "DEFERRED INCOME TAXES",
-      "canonical_label": "Deferred Tax Assets",
-      "ledger_rule_id": "GEN-BS-008",
+      "canonical_label": "Deferred Tax Liability",
+      "ledger_rule_id": "GEN-BS-025",
       "value": "6809",
       "raw_numeric_text": "6,809",
       "notation_flags": 0,
@@ -5754,7 +5754,7 @@
       },
       "model_sheet": "BALANCE SHEET",
       "model_row": 0,
-      "model_label": "Deferred Tax Assets",
+      "model_label": "Deferred Tax Liability",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7903,7 +7903,7 @@
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "memo",
-      "section": "tax",
+      "section": "operating",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -8647,7 +8647,7 @@
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "memo",
-      "section": "tax",
+      "section": "operating",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {
@@ -9415,7 +9415,7 @@
       "footnote_markers": [],
       "indent_level": 2,
       "row_type": "memo",
-      "section": "tax",
+      "section": "operating",
       "subsection_context": null,
       "sign_convention": "as_reported",
       "citation": {

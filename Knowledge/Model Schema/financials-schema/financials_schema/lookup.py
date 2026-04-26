@@ -47,7 +47,13 @@ CLUTTER_RE = re.compile(
     # stock" label fuzzy-matches the wrong canonical.
     r"[,;]\s*"
     r"(?:"
-    r"\$?[\d.,]+\s*(?:par|stated)\s+value"
+    # Currency + amount + "par|stated value". Allow whitespace anywhere
+    # between `$`, the digits, and the keyword — CELH writes `$ 0.001` (space
+    # after $) so `\$\s*[\d.,]+` is required, not `\$?[\d.,]+`.
+    r"\$\s*[\d.,]+\s*(?:par|stated)\s+value"
+    # Bare digit + par/stated value (no $ prefix).
+    r"|[\d.,]+\s*(?:par|stated)\s+value"
+    # Word-only par/stated value (no leading number).
     r"|(?:no\s+)?par\s+value"
     r"|stated\s+value"
     r"|cumulative\s+dividends"
