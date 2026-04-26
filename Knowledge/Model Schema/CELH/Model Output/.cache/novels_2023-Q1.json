@@ -1,0 +1,56 @@
+{
+  "filing": {
+    "ticker": "CELH",
+    "filing_type": "10-Q",
+    "filing_date": "2023-05-09",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
+      "value": "824488",
+      "raw_numeric_text": "824,488",
+      "section": "mezzanine",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2023-03-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "stockholders equity attributable to noncontrolling interest",
+          0.5263157894736843
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
+      "value": "824488",
+      "raw_numeric_text": "824,488",
+      "section": "mezzanine",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2023-Q1\\filings\\CELH_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2022-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "stockholders equity attributable to noncontrolling interest",
+          0.5263157894736843
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "filing": {
+    "ticker": "CELH",
+    "filing_type": "10-Q",
+    "filing_date": "2024-05-07",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2024",
+      "period_end_date": "2024-03-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
+      "value": "824488",
+      "raw_numeric_text": "824,488",
+      "section": "mezzanine",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2024-03-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "stockholders equity attributable to noncontrolling interest",
+          0.5263157894736843
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2023",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Temporary Equity Carrying Amount Attributable To Parent",
+      "value": "824488",
+      "raw_numeric_text": "824,488",
+      "section": "mezzanine",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TemporaryEquityCarryingAmountAttributableToParent | ctx:instant:2023-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "stockholders equity attributable to noncontrolling interest",
+          0.5263157894736843
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2024",
+      "period_end_date": "2024-03-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Comprehensive income",
+      "value": "63492",
+      "raw_numeric_text": "63,492",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2024-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "other income",
+          0.625
+        ],
+        [
+          "operating income",
+          0.6111111111111112
+        ],
+        [
+          "consolidated net income",
+          0.6046511627906976
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2024",
+      "period_end_date": "2024-03-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Basic",
+      "value": "232780000",
+      "raw_numeric_text": "232,780",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2024-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "basic",
+          1.0
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2024",
+      "period_end_date": "2024-03-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Diluted",
+      "value": "237523000",
+      "raw_numeric_text": "237,523",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2024-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "diluted",
+          1.0
+        ],
+        [
+          "dividends",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Comprehensive income",
+      "value": "32106",
+      "raw_numeric_text": "32,106",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ComprehensiveIncomeNetOfTax | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "other income",
+          0.625
+        ],
+        [
+          "operating income",
+          0.6111111111111112
+        ],
+        [
+          "consolidated net income",
+          0.6046511627906976
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Basic",
+      "value": "230019000",
+      "raw_numeric_text": "230,019",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "basic",
+          1.0
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Diluted",
+      "value": "236277000",
+      "raw_numeric_text": "236,277",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2024-Q1\\filings\\CELH_2024-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "diluted",
+          1.0
+        ],
+        [
+          "dividends",
+          0.5
+        ]
+      ]
+    }
+  ]
+}
