@@ -449,11 +449,14 @@ let NODES = [
       'PDF path: pdfplumber, pattern libraries (statement headings, units, periods, notation), BS subtotal-flip, IS keyword classifier, (page, line_hint) citations',
       'iXBRL path: lxml XML mode (HTMLParser mangles namespaces), context_id → Period + unit_id → measure maps, <ix:nonFraction> walk',
       'iXBRL classification via FilingSummary.xml + per-role R{n}.htm cached per accession (concept → statement_code from presentation linkbase, no fuzzy heuristics)',
-      'iXBRL: BS instants filtered to top-2 most-populated dates (drops SE roll-forward leakage); CI merged into IS; YTD durations tagged with filing_fq for QTR pivot',
+      'iXBRL: BS instants filtered to top-2 most-populated dates (drops SE roll-forward leakage); CI dropped from IS (peer statement, not continuation — OCI 4th statement deferred); YTD durations tagged with filing_fq for QTR pivot',
+      'iXBRL line items sort by filer\'s presentation-linkbase visual order (DFS over presentationArc/@order) — fixes filers whose XML scan order disagrees with rendered visual order',
+      'iXBRL subtotal-concept guard: IXBRL_SUBTOTAL_CONCEPTS allowlist (Assets, AssetsCurrent, Liabilities, LiabilitiesCurrent, LiabilitiesAndStockholdersEquity, StockholdersEquity[Including…], etc.) skip library lookup so they don\'t fuzzy-match into a sibling line-item canonical',
+      'iXBRL StatementClassOfStockAxis dimensioned-fact whitelist: Series A/B preferred breakdowns flow through dimensioned facts (default-only filter would otherwise drop them)',
       'iXBRL raw_filing_label = concept_to_display(local_name) — CamelCase split; the canonical_label from library is the user-facing name',
       'Both paths populate canonical_label + ledger_rule_id via match_raw_item (3-step: exact → fuzzy ≥85 [≥70 when concept set] → concept fallback)',
-      'IS-only keyword sign-detection: expense/loss/cost-of → negative; benefit/gain/income/recovery → positive (per-entry sign_convention always wins)',
-      'sign_convention is abs-based 3-value (as_reported / positive / negative); parens_negative special-case removed'
+      'iXBRL sign authority: _is_parens_negative() walks the iXBRL fact element\'s surrounding rendered HTML — `(VALUE)` → negative, otherwise positive. Single source of truth, matches what humans read off the filing. Drops sign-attr + negatedLabel inference (was filer-by-filer inconsistent — could double-flip)',
+      'IS-only keyword sign-detection: expense/loss/cost-of → negative; benefit/gain/income/recovery → positive (used only for label-keyword splits like Income Tax / FX / Other Non-Op where the canonical is sign-agnostic)'
     ],
     deps: ['pdfplumber', 'lxml', 'rapidfuzz', 'pydantic']
   },
@@ -487,18 +490,19 @@ let NODES = [
 
   // Layer 3
   { id: 'financials-validate', layer: 'validate', kind: 'skill', built: true, x: 620, y: 695, w: 240, h: 56, label: 'financials-validate',
-    purpose: 'Arithmetic integrity — accounting identities + cross-statement ties + section-sum validations. Section-driven partitions (no state machines, no English-prose anchors): partition_balance_sheet + partition_cash_flow bucket by item.section directly. CF is genuinely 4 sections (operating / investing / financing / cash_other) with FX Effect on Cash sitting in cash_other. Blocks pipeline on fail.',
+    purpose: 'Filer-tie integrity — 10 rules total, all of the form "sum of extracted line items ties to filer-reported subtotal." Section-driven partitions (no state machines, no English-prose anchors): partition_balance_sheet + partition_cash_flow bucket by item.section directly. CF has 4 sections (operating / investing / financing / cash_other); CF-2/CF-3/CF-4 tie each one to its filer subtotal. Blocks pipeline on fail.',
     input: 'MappedFiling + anomalies.json', output: 'ValidatedFiling',
     ops: [
       'partition_balance_sheet: bucket by item.section (current_assets / non_current_assets / current_liabilities / non_current_liabilities / mezzanine / equity); subtotal rows captured as named anchors (TCA, TA, TCL, TL, TSE, total_LE)',
       'partition_cash_flow: 4-section bucket (operating / investing / financing / cash_other); subtotal rows captured per section via row_type=="subtotal"',
       '_signed_value() applies sign_convention abs-based: positive → +abs(value); negative → -abs(value); as_reported → pass-through',
-      'BS-1..BS-7: subtotal sums (TCA/NCA/TCL/NCL/TSE) + accounting equation; uses canonical_label / partition output',
-      'CF-1: NetΔCash = sum of all 4 section subtotals (operating + investing + financing + cash_other); CF-2 keys Cash Beg/End by canonical_label',
-      'IS-1..IS-4: gross profit, operating income, pre-tax, net income cascades',
-      'X-1/X-2/X-4: CF NI = P&L NI; CF CashEnd = BS Cash (cash_convention_per_year); Pref Div ties — keyed on canonical_label, no _find_item_contains',
-      'M-1: mapping consistency — all items on one rule_id must agree on section',
-      'BS-7 (RE roll-forward) deferred — needs prior-period BS'
+      'BS-1..BS-5: TCA / TA / TCL / TL / TSE — each subtotal ties to sum of its section components (TA = TCA + NCA; TL = TCL + NCL)',
+      'IS-4: Net Income = Pre-Tax Income + signed Tax (the only IS rule — IS-1..IS-3 / X-1..X-4 / BS-6 / M-1 trimmed in the 18→7 validator overhaul)',
+      'CF-1: NetΔCash = sum of all 4 section subtotals (operating + investing + financing + cash_other)',
+      'CF-2 / CF-3 / CF-4 (added 2026-04-25): per-section subtotal tie-out via shared _run_cf_section() helper — filer-reported CFO/CFI/CFF vs sum of section components',
+      'group_items_by_statement skips the same statements keep_statement_for_pipeline drops at reconcile time — fixes the slice-alignment bug where iterating ALL raw statements but slicing the kept-only mapped_line_items list silently mixed values across periods (drifted indices on every 10-Q)',
+      'main() sys.stdout.reconfigure(encoding="utf-8") — Windows cp1252 console was crashing on Δ / em-dash mid-loop and skipping the JSON write',
+      'BS-7 (RE roll-forward) + cross-filing checks deferred — belong in higher layers when prior-period / cross-filing context lands'
     ],
     deps: ['pydantic', 'decimal']
   },
