@@ -194,8 +194,20 @@ def build_generic_index(
             "row_type": entry.get("row_type"),
             "_source": "generic",
         }
+        # Collect normalized aliases unique to THIS entry. Multiple library
+        # aliases can normalize to the same string (e.g. 'net income (loss)'
+        # and 'net income loss' both → 'net income loss'). Without dedup the
+        # same entry registers twice under one key, which forces select_entry
+        # into its multi-candidate disambiguation branch — where the section
+        # filter then rejects items whose iXBRL section came through as
+        # 'unclassified' (a structural mismatch with the entry's filing_section).
+        seen_norm: set[str] = set()
         for alias in entry.get("aliases", []):
-            index[(normalize_label(alias), sheet_grp)].append(canonical)
+            n = normalize_label(alias)
+            if n in seen_norm:
+                continue
+            seen_norm.add(n)
+            index[(n, sheet_grp)].append(canonical)
     return index
 
 
