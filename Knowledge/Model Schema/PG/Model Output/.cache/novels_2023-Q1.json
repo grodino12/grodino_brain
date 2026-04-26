@@ -1,0 +1,103 @@
+{
+  "filing": {
+    "ticker": "PG",
+    "filing_type": "10-Q",
+    "filing_date": "2022-10-19",
+    "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2022-09-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Accounts payable, accrued and other liabilities",
+      "value": "1495",
+      "raw_numeric_text": "1,495",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2022-09-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts payable and accrued expenses",
+          0.6746987951807228
+        ],
+        [
+          "other accrued liabilities",
+          0.6478873239436621
+        ],
+        [
+          "change in accrued liabilities",
+          0.6133333333333333
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2022-09-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Proceeds from sales and maturities of short-term investments",
+      "value": "55",
+      "raw_numeric_text": "55",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromSaleOfShortTermInvestments | ctx:duration:2022-09-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from repayments of short-term debt",
+          0.6990291262135923
+        ],
+        [
+          "proceeds from issuance of long-term debt",
+          0.64
+        ],
+        [
+          "proceeds from sale of productive assets",
+          0.6262626262626263
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2021-09-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Accounts payable, accrued and other liabilities",
+      "value": "1261",
+      "raw_numeric_text": "1,261",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2021-09-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts payable and accrued expenses",
+          0.6746987951807228
+        ],
+        [
+          "other accrued liabilities",
+          0.6478873239436621
+        ],
+        [
+          "change in accrued liabilities",
+          0.6133333333333333
+        ]
+      ]
+    }
+  ]
+}

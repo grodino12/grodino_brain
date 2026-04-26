@@ -1,0 +1,103 @@
+{
+  "filing": {
+    "ticker": "PG",
+    "filing_type": "10-K",
+    "filing_date": "2024-08-05",
+    "source_path": "Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "CF",
+      "period_label": "FY2024",
+      "period_end_date": "2024-06-30",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+      "value": "1814",
+      "raw_numeric_text": "1,814",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2024-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "changes in other operating assets and liabilities",
+          0.6605504587155964
+        ],
+        [
+          "accounts payable and accrued expenses",
+          0.6597938144329896
+        ],
+        [
+          "change in other current liabilities",
+          0.6526315789473685
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+      "value": "313",
+      "raw_numeric_text": "313",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2023-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "changes in other operating assets and liabilities",
+          0.6605504587155964
+        ],
+        [
+          "accounts payable and accrued expenses",
+          0.6597938144329896
+        ],
+        [
+          "change in other current liabilities",
+          0.6526315789473685
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+      "value": "1429",
+      "raw_numeric_text": "1,429",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-FY\\filings\\PG_2024-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2022-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "changes in other operating assets and liabilities",
+          0.6605504587155964
+        ],
+        [
+          "accounts payable and accrued expenses",
+          0.6597938144329896
+        ],
+        [
+          "change in other current liabilities",
+          0.6526315789473685
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "filing": {
+    "ticker": "PG",
+    "filing_type": "10-K",
+    "filing_date": "2023-08-04",
+    "source_path": "Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Treasury stock (shares held:  2023 -  1,647.1 ; 2022 -  1,615.4 )",
+      "value": "-129736",
+      "raw_numeric_text": "129,736",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TreasuryStockValue | ctx:instant:2023-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "treasury stock shares",
+          0.5454545454545454
+        ],
+        [
+          "treasury stock common shares",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Treasury stock (shares held:  2023 -  1,647.1 ; 2022 -  1,615.4 )",
+      "value": "-123382",
+      "raw_numeric_text": "123,382",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TreasuryStockValue | ctx:instant:2022-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "treasury stock shares",
+          0.5454545454545454
+        ],
+        [
+          "treasury stock common shares",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+      "value": "313",
+      "raw_numeric_text": "313",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2023-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "changes in other operating assets and liabilities",
+          0.6605504587155964
+        ],
+        [
+          "accounts payable and accrued expenses",
+          0.6597938144329896
+        ],
+        [
+          "change in other current liabilities",
+          0.6526315789473685
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+      "value": "1429",
+      "raw_numeric_text": "1,429",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2022-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "changes in other operating assets and liabilities",
+          0.6605504587155964
+        ],
+        [
+          "accounts payable and accrued expenses",
+          0.6597938144329896
+        ],
+        [
+          "change in other current liabilities",
+          0.6526315789473685
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-06-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+      "value": "1391",
+      "raw_numeric_text": "1,391",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-FY\\filings\\PG_2023-06-30_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2021-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "changes in other operating assets and liabilities",
+          0.6605504587155964
+        ],
+        [
+          "accounts payable and accrued expenses",
+          0.6597938144329896
+        ],
+        [
+          "change in other current liabilities",
+          0.6526315789473685
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "filing": {
+    "ticker": "PG",
+    "filing_type": "10-Q",
+    "filing_date": "2023-01-19",
+    "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q2\\filings\\PG_2022-12-31_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2023",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Accounts payable, accrued and other liabilities",
+      "value": "177",
+      "raw_numeric_text": "177",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q2\\filings\\PG_2022-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2022-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts payable and accrued expenses",
+          0.6746987951807228
+        ],
+        [
+          "other accrued liabilities",
+          0.6478873239436621
+        ],
+        [
+          "change in accrued liabilities",
+          0.6133333333333333
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2022",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Accounts payable, accrued and other liabilities",
+      "value": "1431",
+      "raw_numeric_text": "1,431",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q2\\filings\\PG_2022-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts payable and accrued expenses",
+          0.6746987951807228
+        ],
+        [
+          "other accrued liabilities",
+          0.6478873239436621
+        ],
+        [
+          "change in accrued liabilities",
+          0.6133333333333333
+        ]
+      ]
+    }
+  ]
+}

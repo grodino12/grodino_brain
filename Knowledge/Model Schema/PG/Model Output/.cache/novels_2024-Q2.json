@@ -1,0 +1,72 @@
+{
+  "filing": {
+    "ticker": "PG",
+    "filing_type": "10-Q",
+    "filing_date": "2024-01-23",
+    "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2024",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Indefinite-lived intangible asset impairment charge",
+      "value": "1341",
+      "raw_numeric_text": "1,341",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "pg:ImpairmentOfIntangibleAssetsForGroomingSegmentIndefiniteLivedExcludingGoodwill | ctx:duration:2023-12-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "intangible asset impairment",
+          0.6923076923076923
+        ],
+        [
+          "goodwill and intangibles impairment",
+          0.627906976744186
+        ],
+        [
+          "asset impairment charges",
+          0.6133333333333333
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2024",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Indefinite-lived intangible asset impairment charge",
+      "value": "1341",
+      "raw_numeric_text": "1,341",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "pg:ImpairmentOfIntangibleAssetsForGroomingSegmentIndefiniteLivedExcludingGoodwill | ctx:duration:2023-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "intangible asset impairment",
+          0.6923076923076923
+        ],
+        [
+          "goodwill and intangibles impairment",
+          0.627906976744186
+        ],
+        [
+          "asset impairment charges",
+          0.6133333333333333
+        ]
+      ]
+    }
+  ]
+}
