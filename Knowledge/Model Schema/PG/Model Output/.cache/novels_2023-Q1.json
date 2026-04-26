@@ -7,95 +7,378 @@
   },
   "novels": [
     {
-      "statement_type": "CF",
+      "statement_type": "BS",
       "period_label": "Q1 FY2023",
       "period_end_date": "2022-09-30",
       "fiscal_year": 2023,
-      "raw_filing_label": "Accounts payable, accrued and other liabilities",
-      "value": "1495",
-      "raw_numeric_text": "1,495",
-      "section": "operating",
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "value": "23465",
+      "raw_numeric_text": "23,465",
+      "section": "non_current_assets",
       "subsection_context": null,
       "citation": {
         "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2022-09-30",
-        "note": "iXBRL HTM | CF"
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2022-09-30",
+        "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "accounts payable and accrued expenses",
-          0.6746987951807228
+          "other intangible assets",
+          0.7076923076923076
         ],
         [
-          "other accrued liabilities",
-          0.6478873239436621
+          "intangible assets net",
+          0.6666666666666667
         ],
         [
-          "change in accrued liabilities",
-          0.6133333333333333
+          "other intangibles net",
+          0.6666666666666667
         ]
       ]
     },
     {
-      "statement_type": "CF",
+      "statement_type": "BS",
       "period_label": "Q1 FY2023",
       "period_end_date": "2022-09-30",
       "fiscal_year": 2023,
-      "raw_filing_label": "Proceeds from sales and maturities of short-term investments",
-      "value": "55",
-      "raw_numeric_text": "55",
-      "section": "investing",
+      "raw_filing_label": "Accrued and other liabilities",
+      "value": "10056",
+      "raw_numeric_text": "10,056",
+      "section": "current_liabilities",
       "subsection_context": null,
       "citation": {
         "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:ProceedsFromSaleOfShortTermInvestments | ctx:duration:2022-09-30",
-        "note": "iXBRL HTM | CF"
+        "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2022-09-30",
+        "note": "iXBRL HTM | BS"
       },
       "nearest_matches": [
         [
-          "proceeds from repayments of short-term debt",
-          0.6990291262135923
+          "accrued liabilities",
+          0.7916666666666665
         ],
         [
-          "proceeds from issuance of long-term debt",
-          0.64
+          "accrued expenses and other current liabilities",
+          0.7733333333333333
         ],
         [
-          "proceeds from sale of productive assets",
-          0.6262626262626263
+          "other liabilities",
+          0.7391304347826086
         ]
       ]
     },
     {
-      "statement_type": "CF",
+      "statement_type": "BS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2022-09-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Debt due within one year",
+      "value": "11717",
+      "raw_numeric_text": "11,717",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DebtCurrent | ctx:instant:2022-09-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2022-09-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "June 2022",
+      "value": "4009",
+      "raw_numeric_text": "4,009",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValue | ctx:instant:2022-09-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "value": "23679",
+      "raw_numeric_text": "23,679",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2022-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "other intangible assets",
+          0.7076923076923076
+        ],
+        [
+          "intangible assets net",
+          0.6666666666666667
+        ],
+        [
+          "other intangibles net",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Accrued and other liabilities",
+      "value": "9554",
+      "raw_numeric_text": "9,554",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2022-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "accrued liabilities",
+          0.7916666666666665
+        ],
+        [
+          "accrued expenses and other current liabilities",
+          0.7733333333333333
+        ],
+        [
+          "other liabilities",
+          0.7391304347826086
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Debt due within one year",
+      "value": "8645",
+      "raw_numeric_text": "8,645",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DebtCurrent | ctx:instant:2022-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "June 2022",
+      "value": "4009200000.0",
+      "raw_numeric_text": "4,009.2",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "June 2022",
+      "value": "4009",
+      "raw_numeric_text": "4,009",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValue | ctx:instant:2022-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2022-09-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "value": "3939",
+      "raw_numeric_text": "3,939",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2022-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "net earnings attributable to noncontrolling interests",
+          0.7291666666666667
+        ],
+        [
+          "net income attributable to noncontrolling interest",
+          0.6236559139784946
+        ],
+        [
+          "net income loss attributable to noncontrolling interest",
+          0.6122448979591837
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2022-09-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Basic",
+      "value": "1.62",
+      "raw_numeric_text": "1.62",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2022-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "basic",
+          1.0
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2022-09-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Diluted",
+      "value": "1.57",
+      "raw_numeric_text": "1.57",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2022-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "diluted",
+          1.0
+        ],
+        [
+          "dividends",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
       "period_label": "Q1 FY2022",
       "period_end_date": "2021-09-30",
       "fiscal_year": 2022,
-      "raw_filing_label": "Accounts payable, accrued and other liabilities",
-      "value": "1261",
-      "raw_numeric_text": "1,261",
-      "section": "operating",
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "value": "4112",
+      "raw_numeric_text": "4,112",
+      "section": "unclassified",
       "subsection_context": null,
       "citation": {
         "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
         "page": 1,
-        "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2021-09-30",
-        "note": "iXBRL HTM | CF"
+        "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2021-09-30",
+        "note": "iXBRL HTM | IS"
       },
       "nearest_matches": [
         [
-          "accounts payable and accrued expenses",
-          0.6746987951807228
+          "net earnings attributable to noncontrolling interests",
+          0.7291666666666667
         ],
         [
-          "other accrued liabilities",
-          0.6478873239436621
+          "net income attributable to noncontrolling interest",
+          0.6236559139784946
         ],
         [
-          "change in accrued liabilities",
-          0.6133333333333333
+          "net income loss attributable to noncontrolling interest",
+          0.6122448979591837
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2021-09-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Basic",
+      "value": "1.66",
+      "raw_numeric_text": "1.66",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2021-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "basic",
+          1.0
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2021-09-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Diluted",
+      "value": "1.61",
+      "raw_numeric_text": "1.61",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2023-Q1\\filings\\PG_2022-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2021-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "diluted",
+          1.0
+        ],
+        [
+          "dividends",
+          0.5
         ]
       ]
     }

@@ -913,7 +913,8 @@
         "intangible asset impairment",
         "goodwill and intangibles impairment",
         "impairment charges",
-        "asset impairment charges"
+        "asset impairment charges",
+        "indefinite-lived intangible asset impairment charge"
       ]
     },
     {
@@ -956,7 +957,8 @@
         "intangible asset impairment",
         "goodwill and intangibles impairment",
         "impairment charges",
-        "asset impairment charges"
+        "asset impairment charges",
+        "indefinite-lived intangible asset impairment charge"
       ],
       "filing_section": "operating"
     },
@@ -1112,7 +1114,9 @@
         "accounts payable and accrued expenses",
         "change in accounts payable",
         "increase (decrease) in accounts payable",
-        "trade payables"
+        "trade payables",
+        "change in accounts payable and accrued and other liabilities",
+        "accounts payable, accrued and other liabilities"
       ],
       "filing_section": "operating"
     },
@@ -1713,6 +1717,19 @@
         "proceeds from payments for other financing activities"
       ],
       "filing_section": "financing"
+    },
+    {
+      "rule_id": "GEN-CF-057",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Sale of Short-Term Investments",
+      "row_type": "line_item",
+      "aliases": [
+        "proceeds from sales and maturities of short-term investments",
+        "proceeds from sale of short-term investments",
+        "proceeds from sale and maturity of short-term investments",
+        "proceeds from short-term investments"
+      ],
+      "filing_section": "investing"
     }
   ]
 }

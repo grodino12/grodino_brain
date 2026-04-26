@@ -49,22 +49,22 @@ CLUTTER_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 FOOTNOTE_RE = re.compile(r"\[\d+\]|\(\d+\)")
-# Split CamelCase (iXBRL us-gaap concept names like "AccountsReceivableNetCurrent"
-# → "Accounts Receivable Net Current"). Insert space at lower→upper transitions
-# and at Acronym→Word transitions (e.g. "XBRLData" → "XBRL Data").
-CAMEL_SPLIT_LOWER_UPPER = re.compile(r"(?<=[a-z0-9])(?=[A-Z])")
-CAMEL_SPLIT_ACRONYM = re.compile(r"(?<=[A-Z])(?=[A-Z][a-z])")
+# Strip trailing parenthetical metadata at end-of-label (e.g. PG's "Treasury
+# stock (shares held: 2023 - 1,647.1 ; 2022 - 1,615.4 )"). Keeps embedded
+# parens like "Increase (Decrease) in Accounts Payable" intact — only the
+# final `\s*( ... )\s*$` is removed.
+TRAILING_PAREN_RE = re.compile(r"\s*\([^)]*\)\s*$")
 
 
 def normalize_label(label: str) -> str:
-    """Lowercase, drop footnote markers + filing clutter, normalize punctuation.
-    Splits CamelCase so us-gaap concept names tokenize identically to English
-    phrases (`AccountsReceivableNetCurrent` ↔ `accounts receivable net current`).
+    """Lowercase, drop footnote markers + trailing parenthetical metadata +
+    filing clutter, normalize punctuation. Used to compare HTM visual labels
+    against library canonical aliases — concept-name matching is intentionally
+    NOT supported here (per `feedback_label_only_matching.md`).
     """
     label = FOOTNOTE_RE.sub("", label)
+    label = TRAILING_PAREN_RE.sub("", label)
     label = CLUTTER_RE.sub("", label)
-    label = CAMEL_SPLIT_ACRONYM.sub(" ", label)
-    label = CAMEL_SPLIT_LOWER_UPPER.sub(" ", label)
     label = label.lower()
     label = re.sub(r"\b(the|our)\b", " ", label)
     label = re.sub(r"[^\w\s\-]", " ", label)
@@ -318,24 +318,17 @@ def match_raw_item(
     `model_label`, `model_sheet`, `filing_section`, `filing_subsection`,
     `sign_convention`, `memo`, `row_type`, ...) on match, or None on miss.
 
-    Match order:
+    Match order (HTM-visual-label only — `concept` is accepted for signature
+    compatibility but intentionally ignored, per
+    `feedback_label_only_matching.md`):
       1. Exact-normalized match on raw_filing_label
-      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold; threshold
-         drops to 70 when `concept` is in scope, since iXBRL CamelCase-split
-         labels are inherently noisier vs library prose aliases)
-      3. Exact-normalized match on concept (iXBRL us-gaap local name) —
-         fallback for filers whose display wording isn't in the library yet
+      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold)
 
     On a hit, if `statement_type` is INCOME_STATEMENT and the entry has no
     explicit `sign_convention`, the sign is derived from keywords in the
     raw_filing_label ("expense"/"loss" → negative; "benefit"/"gain"/"income"
     → positive). Per-entry sign_convention always wins if set.
     """
-    # iXBRL labels are CamelCase-split concept names — high baseline noise
-    # vs library aliases written for human prose ("Depreciation Depletion And
-    # Amortization" vs "depreciation and amortization" → ratio ~74).
-    if concept is not None and fuzzy_threshold > 70:
-        fuzzy_threshold = 70
     group = STMT_TO_GROUP[statement_type]
     normalized = normalize_label(raw_filing_label)
 
@@ -353,11 +346,6 @@ def match_raw_item(
             best_key = matches[0][0]
             entry = select_entry(index.get((best_key, group), []),
                                  subsection_context, section)
-
-    # (3) concept fallback (iXBRL only — raw source of truth)
-    if entry is None and concept:
-        candidates = index.get((normalize_label(concept), group), [])
-        entry = select_entry(candidates, subsection_context, section)
 
     if entry is None:
         return None

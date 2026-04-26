@@ -7,64 +7,378 @@
   },
   "novels": [
     {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2024",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "value": "22302",
+      "raw_numeric_text": "22,302",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2023-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "other intangible assets",
+          0.7076923076923076
+        ],
+        [
+          "intangible assets net",
+          0.6666666666666667
+        ],
+        [
+          "other intangibles net",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2024",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Accrued and other liabilities",
+      "value": "11100",
+      "raw_numeric_text": "11,100",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2023-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "accrued liabilities",
+          0.7916666666666665
+        ],
+        [
+          "accrued expenses and other current liabilities",
+          0.7733333333333333
+        ],
+        [
+          "other liabilities",
+          0.7391304347826086
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2024",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Debt due within one year",
+      "value": "10616",
+      "raw_numeric_text": "10,616",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DebtCurrent | ctx:instant:2023-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2024",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "June 2023",
+      "value": "4009",
+      "raw_numeric_text": "4,009",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValue | ctx:instant:2023-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+      "value": "23783",
+      "raw_numeric_text": "23,783",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2023-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "other intangible assets",
+          0.7076923076923076
+        ],
+        [
+          "intangible assets net",
+          0.6666666666666667
+        ],
+        [
+          "other intangibles net",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Accrued and other liabilities",
+      "value": "10929",
+      "raw_numeric_text": "10,929",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2023-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "accrued liabilities",
+          0.7916666666666665
+        ],
+        [
+          "accrued expenses and other current liabilities",
+          0.7733333333333333
+        ],
+        [
+          "other liabilities",
+          0.7391304347826086
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Debt due within one year",
+      "value": "10229",
+      "raw_numeric_text": "10,229",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DebtCurrent | ctx:instant:2023-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "June 2023",
+      "value": "4009200000.0",
+      "raw_numeric_text": "4,009.2",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2023",
+      "period_end_date": "2023-06-30",
+      "fiscal_year": 2023,
+      "raw_filing_label": "June 2023",
+      "value": "4009",
+      "raw_numeric_text": "4,009",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValue | ctx:instant:2023-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": []
+    },
+    {
       "statement_type": "IS",
       "period_label": "Q2 FY2024",
       "period_end_date": "2023-12-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Indefinite-lived intangible asset impairment charge",
-      "value": "1341",
-      "raw_numeric_text": "1,341",
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "value": "7988",
+      "raw_numeric_text": "7,988",
       "section": "unclassified",
       "subsection_context": null,
       "citation": {
         "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
         "page": 1,
-        "line_hint": "pg:ImpairmentOfIntangibleAssetsForGroomingSegmentIndefiniteLivedExcludingGoodwill | ctx:duration:2023-12-31",
+        "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2023-12-31",
         "note": "iXBRL HTM | IS"
       },
       "nearest_matches": [
         [
-          "intangible asset impairment",
-          0.6923076923076923
+          "net earnings attributable to noncontrolling interests",
+          0.7291666666666667
         ],
         [
-          "goodwill and intangibles impairment",
-          0.627906976744186
+          "net income attributable to noncontrolling interest",
+          0.6236559139784946
         ],
         [
-          "asset impairment charges",
-          0.6133333333333333
+          "net income loss attributable to noncontrolling interest",
+          0.6122448979591837
         ]
       ]
     },
     {
-      "statement_type": "CF",
+      "statement_type": "IS",
       "period_label": "Q2 FY2024",
       "period_end_date": "2023-12-31",
       "fiscal_year": 2024,
-      "raw_filing_label": "Indefinite-lived intangible asset impairment charge",
-      "value": "1341",
-      "raw_numeric_text": "1,341",
-      "section": "operating",
+      "raw_filing_label": "Basic",
+      "value": "3.33",
+      "raw_numeric_text": "3.33",
+      "section": "eps",
       "subsection_context": null,
       "citation": {
         "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
         "page": 1,
-        "line_hint": "pg:ImpairmentOfIntangibleAssetsForGroomingSegmentIndefiniteLivedExcludingGoodwill | ctx:duration:2023-12-31",
-        "note": "iXBRL HTM | CF"
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2023-12-31",
+        "note": "iXBRL HTM | IS"
       },
       "nearest_matches": [
         [
-          "intangible asset impairment",
-          0.6923076923076923
+          "basic",
+          1.0
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2024",
+      "period_end_date": "2023-12-31",
+      "fiscal_year": 2024,
+      "raw_filing_label": "Diluted",
+      "value": "3.23",
+      "raw_numeric_text": "3.23",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2023-12-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "diluted",
+          1.0
         ],
         [
-          "goodwill and intangibles impairment",
-          0.627906976744186
+          "dividends",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2023",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+      "value": "7872",
+      "raw_numeric_text": "7,872",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2022-12-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "net earnings attributable to noncontrolling interests",
+          0.7291666666666667
         ],
         [
-          "asset impairment charges",
-          0.6133333333333333
+          "net income attributable to noncontrolling interest",
+          0.6236559139784946
+        ],
+        [
+          "net income loss attributable to noncontrolling interest",
+          0.6122448979591837
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2023",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Basic",
+      "value": "3.25",
+      "raw_numeric_text": "3.25",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2022-12-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "basic",
+          1.0
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2023",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Diluted",
+      "value": "3.16",
+      "raw_numeric_text": "3.16",
+      "section": "eps",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Desktop\\Brain\\Sources\\PG\\2024-Q2\\filings\\PG_2023-12-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2022-12-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "diluted",
+          1.0
+        ],
+        [
+          "dividends",
+          0.5
         ]
       ]
     }
