@@ -252,9 +252,13 @@ def select_entry(
     context.
 
     Subsection filter is always applied (EPS vs shares_outstanding is a hard
-    semantic split). Section filter is applied only when necessary to
-    disambiguate. Single-candidate fallback unblocks iXBRL items whose
-    subsection_context is None.
+    semantic split). Section filter is enforced WHENEVER both sides have
+    `filing_section` set and they differ — even when the candidate is the
+    single survivor of the subsection filter. Without this guard, a fuzzy
+    match could route an item whose walker section is non_current_liabilities
+    to a non_current_assets canonical (PG's "DEFERRED INCOME TAXES" → the
+    Deferred Tax Assets entry), placing the value on the wrong side of the
+    BS at model-write time.
     """
     pool = [c for c in candidates
             if c.get("filing_subsection") is None
@@ -263,15 +267,22 @@ def select_entry(
         pool = list(candidates)
     if not pool:
         return None
+    # Hard section-mismatch filter: applied uniformly, not only as a
+    # disambiguator. A candidate whose `filing_section` contradicts the
+    # item's walker-tagged section is NEVER acceptable.
+    if item_section is not None:
+        pool = [c for c in pool
+                if c.get("filing_section") is None
+                or c.get("filing_section") == item_section]
+        if not pool:
+            return None
     if len(pool) == 1:
         return pool[0]
     best, best_score = None, -1
     for c in pool:
-        c_sec = c.get("filing_section")
-        if c_sec is not None and c_sec != item_section:
-            continue
         score = 0
         c_sub = c.get("filing_subsection")
+        c_sec = c.get("filing_section")
         if c_sub is not None and c_sub == item_subsection:
             score += 2
         if c_sec is not None and c_sec == item_section:
