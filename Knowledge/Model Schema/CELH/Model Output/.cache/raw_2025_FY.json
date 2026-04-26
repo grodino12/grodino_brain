@@ -17,7 +17,7 @@
       "unit": "thousands",
       "raw_unit_phrase": "in thousands",
       "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 0.9318181818181818,
+      "unit_detection_confidence": 0.9130434782608695,
       "share_unit": "actual",
       "eps_unit": "actual",
       "currency": "USD",
@@ -140,6 +140,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable-net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "349100.0",
+          "raw_numeric_text": "349100000.0",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ReceivablesNetCurrent | ctx:instant:2025-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -300,6 +320,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2025-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Intangible assets, net (excluding goodwill)",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "1391915",
+          "raw_numeric_text": "1391915000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -838,7 +878,7 @@
       "unit": "thousands",
       "raw_unit_phrase": "in thousands",
       "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 0.9210526315789473,
+      "unit_detection_confidence": 0.9,
       "share_unit": "actual",
       "eps_unit": "actual",
       "currency": "USD",
@@ -941,6 +981,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2024-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable-net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "168200.0",
+          "raw_numeric_text": "168200000.0",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ReceivablesNetCurrent | ctx:instant:2024-12-31",
             "note": "iXBRL | Consolidated Balance Sheets (Parenthetical)"
           }
         },
@@ -1081,6 +1141,26 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2024-12-31",
+            "note": "iXBRL | Consolidated Balance Sheets"
+          }
+        },
+        {
+          "raw_filing_label": "Intangible assets, net (excluding goodwill)",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "12213",
+          "raw_numeric_text": "12213000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2024-12-31",
             "note": "iXBRL | Consolidated Balance Sheets"
           }
         },
@@ -1559,7 +1639,7 @@
       "unit": "thousands",
       "raw_unit_phrase": "in thousands",
       "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 0.9,
+      "unit_detection_confidence": 0.9038461538461539,
       "share_unit": "actual",
       "eps_unit": "actual",
       "currency": "USD",
@@ -2066,6 +2146,26 @@
           }
         },
         {
+          "raw_filing_label": "Acquisition, net of cash acquired",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "-1278769",
+          "raw_numeric_text": "-1278769000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
           "raw_filing_label": "Net working capital estimate received from Pepsi related to the Rockstar Acquisition",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -2386,6 +2486,26 @@
           }
         },
         {
+          "raw_filing_label": "Estimated fair value of share consideration issued in the acquisition of Alani Nu and Fair value of Series B Preferred Stock issued to Pepsi",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "721964",
+          "raw_numeric_text": "721964000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable | ctx:duration:2025-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
           "raw_filing_label": "Fair value of Series A Preferred Stock modification",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -2451,6 +2571,129 @@
     {
       "statement_type": "CF",
       "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": null,
+        "period_end_date": "2025-08-31",
+        "raw_period_label": "2025-08-01 to 2025-08-31 (4wk)",
+        "period_length_weeks": 4,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Estimated fair value of share consideration issued in the acquisition of Alani Nu and Fair value of Series B Preferred Stock issued to Pepsi",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "935.8",
+          "raw_numeric_text": "935800000.0",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable | ctx:duration:2025-08-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": null,
+        "period_end_date": "2025-08-28",
+        "raw_period_label": "2025-08-28 to 2025-08-28 (0wk)",
+        "period_length_weeks": 0,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Estimated fair value of share consideration issued in the acquisition of Alani Nu and Fair value of Series B Preferred Stock issued to Pepsi",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "935787",
+          "raw_numeric_text": "935787000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable | ctx:duration:2025-08-28",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": null,
+        "period_end_date": "2025-04-01",
+        "raw_period_label": "2025-04-01 to 2025-04-01 (0wk)",
+        "period_length_weeks": 0,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Estimated fair value of share consideration issued in the acquisition of Alani Nu and Fair value of Series B Preferred Stock issued to Pepsi",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "721964",
+          "raw_numeric_text": "721964000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable | ctx:duration:2025-04-01",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
         "fiscal_year": 2024,
         "fiscal_quarter": null,
         "period_end_date": "2024-12-31",
@@ -2461,7 +2704,7 @@
       "unit": "thousands",
       "raw_unit_phrase": "in thousands",
       "unit_detection_source": "explicit_header",
-      "unit_detection_confidence": 0.9444444444444444,
+      "unit_detection_confidence": 0.9459459459459459,
       "share_unit": "actual",
       "eps_unit": "actual",
       "currency": "USD",
@@ -2928,6 +3171,26 @@
           }
         },
         {
+          "raw_filing_label": "Acquisition, net of cash acquired",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "-75336",
+          "raw_numeric_text": "-75336000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        },
+        {
           "raw_filing_label": "Net cash used in investing activities",
           "canonical_label": "Cash Flow from Investing",
           "ledger_rule_id": "GEN-CF-026",
@@ -3125,6 +3388,47 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-12-31",
+            "note": "iXBRL | Consolidated Statements of Cash Flows"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2024,
+        "fiscal_quarter": null,
+        "period_end_date": "2024-11-01",
+        "raw_period_label": "2024-11-01 to 2024-11-01 (0wk)",
+        "period_length_weeks": 0,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Acquisition, net of cash acquired",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "75.3",
+          "raw_numeric_text": "75300000.0",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2025-FY\\filings\\CELH_2025-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2024-11-01",
             "note": "iXBRL | Consolidated Statements of Cash Flows"
           }
         }
@@ -3840,13 +4144,30 @@
     "report_date": "2025-12-31",
     "quarter_label": "2025-FY",
     "fact_counts": {
-      "total_in_file": 1120,
-      "consolidated_used": 223,
+      "total_in_file": 1145,
+      "consolidated_used": 234,
       "concepts_mapped": 145
     },
     "visual_label_misses": {
       "count": 0,
       "concepts": []
+    },
+    "dimensioned_only_synthesis": {
+      "count": 25,
+      "concepts": [
+        "BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable",
+        "BusinessCombinationContingentConsiderationLiabilityCurrent",
+        "CommonStockSharesOutstanding",
+        "Goodwill",
+        "IntangibleAssetsNetExcludingGoodwill",
+        "PaymentsToAcquireBusinessesNetOfCashAcquired",
+        "ReceivablesNetCurrent",
+        "StockIssuedDuringPeriodSharesNewIssues",
+        "StockRepurchasedAndRetiredDuringPeriodShares",
+        "StockRepurchasedDuringPeriodShares",
+        "TemporaryEquityParOrStatedValuePerShare",
+        "TreasuryStockSharesAcquired"
+      ]
     }
   }
 }
