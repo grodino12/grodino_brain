@@ -534,9 +534,12 @@ let NODES = [
       'QTR column labels = Q{fiscal_quarter} FY{fiscal_year} (disambiguates quarters within fiscal year)',
       'ANNL column labels = FY{fiscal_year}; forecast columns FY2025E..FY2030E pre-allocated empty',
       'Row layout from decisions ledger — one entry per concept serves both 10-K and 10-Q (variant collapse 2026-04-25); reconcile derives sheet name from filing_type at item time',
-      'Period dedup: newer filing wins when the same period appears in multiple inputs',
-      'Emit only sheets with ≥1 row or historical column (empty QTR sheets suppressed when no 10-Q input, vice versa for ANNL)',
-      '_subtotal items skipped (no live SUM formulas in v1 — model-calc adds driver tabs later)'
+      'Row consolidation by canonical_label (resolve_row_positions final stage): when multiple rule_ids share a canonical (e.g. PG MAP-IS-001 + GEN-IS-009 both → "Pre-Tax Income (Loss)"), they alias to the same excel row — without this the IS cascade SUM would double-count Pre-Tax',
+      'Period dedup: first-filing-wins when the same period appears in multiple inputs (was newer-filing-wins; flipped 2026-04-25 — filers re-categorize line items between filings, original 10-Q/10-K\'s breakdown is what users see when comparing the workbook to that filing)',
+      'Row insertion forward look-up when no prior anchor exists (handles atypical filing orders + _CASCADE_<section> injection placement)',
+      'CF section/subtotal containment check (raises): every section-tagged row must fall within its subtotal\'s SUM range — catches row-placement bugs',
+      'Cross-filing CF section/subtotal tie-out check (warns, doesn\'t raise): for each (period, section), workbook-formula sum vs dedup-picked subtotal — fires when filers re-categorize between filings',
+      'Emit only sheets with ≥1 row or historical column (empty QTR sheets suppressed when no 10-Q input, vice versa for ANNL)'
     ],
     deps: ['openpyxl', 'pydantic']
   },
@@ -591,7 +594,7 @@ let NODES = [
     path: 'Brain/Sources/{TICKER}/{QUARTER}/transcripts/*_press_release.pdf'
   },
   { id: 'pattern-libraries', layer: 'extract', kind: 'store', x: 200, y: 315, w: 240, h: 50, label: 'pattern_libraries/*.json',
-    purpose: 'Shared cross-ticker JSON store consumed by financials-extract. Generic library (generic_line_item_mappings.json, 109 entries) — alias → canonical-row + filing_section + sign_convention; loaded by both PDF and iXBRL branches at extract time, validated entry-by-entry through the LibraryEntry Pydantic model (extra="forbid") so typos / invalid Section / invalid SignConvention values fail loudly at load, not at use. Plus 6 PDF-only pattern files (statement_heading_patterns, section_heading_patterns, unit_phrases, period_phrase_patterns, filing_type_patterns, numeric_notation_patterns) used by the PDF branch only — iXBRL branch reads structure from the SEC presentation linkbase. Bundled as read-only copies under ~/.claude/skills/financials-extract/references/; Brain folder is the canonical source.',
+    purpose: 'Shared cross-ticker JSON store consumed by financials-extract. Generic library (generic_line_item_mappings.json, 115 entries) — alias → canonical-row + filing_section + sign_convention; loaded by both PDF and iXBRL branches at extract time, validated entry-by-entry through the LibraryEntry Pydantic model (extra="forbid") so typos / invalid Section / invalid SignConvention values fail loudly at load, not at use. Plus 6 PDF-only pattern files (statement_heading_patterns, section_heading_patterns, unit_phrases, period_phrase_patterns, filing_type_patterns, numeric_notation_patterns) used by the PDF branch only — iXBRL branch reads structure from the SEC presentation linkbase. Bundled as read-only copies under ~/.claude/skills/financials-extract/references/; Brain folder is the canonical source.',
     path: 'Brain/Knowledge/Model Schema/pattern_libraries/'
   },
 
@@ -695,7 +698,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v10';
+const LS_KEY = 'financials-architecture-playground-v11';
 
 function saveState() {
   try {
@@ -1167,7 +1170,7 @@ function schemaLine() {
 function scopeLine() {
   return state.scope === 'celh'
     ? 'CELH-first bootstrap. Original library + ledger seeded from CELH FY2024 10-K. Architecture is multi-ticker — PG onboarded 2026-04-24 as second ticker.'
-    : 'Multi-ticker. Cross-ticker canonical mappings live in pattern_libraries/generic_line_item_mappings.json (109 entries, validated by LibraryEntry on load); ticker-specific anomalies + new_rows live in {TICKER}/decisions_ledger.json. Generic library matched at extract time (lookup.match_raw_item); ticker overlay applied at reconcile time. Ticker entries win on conflicts via tier scoring.';
+    : 'Multi-ticker. Cross-ticker canonical mappings live in pattern_libraries/generic_line_item_mappings.json (115 entries, validated by LibraryEntry on load); ticker-specific anomalies + new_rows live in {TICKER}/decisions_ledger.json. Generic library matched at extract time (lookup.match_raw_item); ticker overlay applied at reconcile time. Ticker entries win on conflicts via tier scoring.';
 }
 
 function scaffoldBody(id) {
@@ -1195,7 +1198,7 @@ Role: thin overlay step. Generic-library lookup happens in extract; reconcile ap
 Filing-type aware: 10-K → ANNL sheets (ANNL P&L / BALANCE SHEET / CASH FLOW); 10-Q → QTR sheets (QTR P&L / QTR BS / QTR CF). keep_statement_for_pipeline (shared helper from financials_schema.statement) filters: 10-K = annual durations only; 10-Q = longest duration per period_end (YTD wins so PG-style YTD-only CF survives).
 Subtotal detection: labels starting with "Total"/"Subtotal" OR matching the iXBRL concept allowlist (Assets, AssetsCurrent, Liabilities, LiabilitiesCurrent, LiabilitiesAndStockholdersEquity, StockholdersEquityIncluding…) routed to _subtotal pseudo-sheet; model-write generates canonical "Total X" rows at section boundaries.
 Section-collision guard: refuses to emit if one rule_id matched items across multiple sections (indicates ambiguous ledger entry needing filing_section split).
-Reference: Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (109 entries, validated through LibraryEntry on load). Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json — ticker-specific anomalies + new_rows.
+Reference: Brain/Knowledge/Model Schema/pattern_libraries/generic_line_item_mappings.json (115 entries, validated through LibraryEntry on load). Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json — ticker-specific anomalies + new_rows.
 Acceptance: PG Q2 FY26 10-Q → 0 novels; CELH FY2024 + FY2025 10-Ks → 0 novels.`,
 
     'financials-validate': `Input: MappedFiling + --ticker-root (reads anomalies.json for overrides).

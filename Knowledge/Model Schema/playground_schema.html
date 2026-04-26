@@ -496,7 +496,7 @@ const SCHEMA = [
   {
     name: 'ValidationResult', kind: 'model', extends: 'BaseModel', layer: 'validated',
     layerLabel: 'LAYER 3 · VALIDATED FILING',
-    doc: 'Outcome of a single validation rule. Families: BS-1..BS-6 (subtotal sums + accounting equation; BS-7 RE roll-forward deferred), CF-1/CF-2 (Δcash + rollforward), CF-3/CF-4/CF-5 (section-sum to Net Cash from Op/Inv/Fin), X-1/X-2/X-4 (cross-statement ties).',
+    doc: 'Outcome of a single validation rule. 10 filer-tie rules total: BS-1..BS-5 (TCA/TA/TCL/TL/TSE subtotal sums), IS-4 (Net Income = Pre-Tax + signed Tax), CF-1 (NetΔCash = sum of 4 section subtotals), CF-2/CF-3/CF-4 (per-section subtotal tie-out for CFO/CFI/CFF). BS-6/BS-7, IS-1..IS-3, X-1/X-2/X-4, M-1 trimmed in the 18→7 validator overhaul; CF-2/CF-3/CF-4 added 2026-04-25.',
     fields: [
       { name: 'rule_id',  type: 'str',                              typeKind: 'primitive' },
       { name: 'expected', type: 'Decimal',                          typeKind: 'primitive' },
