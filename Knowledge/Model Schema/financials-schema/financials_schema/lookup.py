@@ -39,7 +39,7 @@ from financials_schema.line_item import RowType, SignConvention
 
 CLUTTER_RE = re.compile(
     r"(?:[,;]\s*)?\$?[\d.,]*\s*"
-    r"(?:par\s+value|cumulative\s+dividends|liquidation\s+preference|aggregate\s+liquidation"
+    r"(?:par\s+value|stated\s+value|cumulative\s+dividends|liquidation\s+preference|aggregate\s+liquidation"
     # Require at least one DIGIT in the leading number — `[\d,]+` alone matches
     # a bare comma (since `,` is in the character class), which silently clobbers
     # labels like "Mezzanine equity, shares outstanding (in shares)" by matching
