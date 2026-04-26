@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order \u2014 this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
-  "last_updated": "2026-04-25",
+  "last_updated": "2026-04-26",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
     "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
@@ -346,7 +346,8 @@
         "accounts receivable-net",
         "accounts receivable, net",
         "trade receivables",
-        "trade receivables, net"
+        "trade receivables, net",
+        "receivables net current"
       ],
       "filing_section": "current_assets"
     },
@@ -361,7 +362,8 @@
         "note receivable-net (current)",
         "notes receivable",
         "notes receivable, net",
-        "note receivable"
+        "note receivable",
+        "notes and loans receivable net current"
       ]
     },
     {
@@ -452,7 +454,8 @@
         "note receivable-net (current)",
         "notes receivable",
         "notes receivable, net",
-        "note receivable"
+        "note receivable",
+        "notes and loans receivable net noncurrent"
       ]
     },
     {
@@ -491,7 +494,8 @@
         "other assets",
         "other long-term assets, net",
         "other non-current assets, net",
-        "other assets noncurrent"
+        "other assets noncurrent",
+        "deposits assets"
       ],
       "filing_section": "non_current_assets"
     },
@@ -759,7 +763,7 @@
       "model_label": "Par Value of Equity",
       "filing_section": "equity",
       "memo": true,
-      "note": "Per-share par/stated value disclosure (parenthetical on the BS, not a balance). Memo entry — recognized at reconcile so it doesn't surface as a novel, but model-write does not render it as a row.",
+      "note": "Per-share par/stated value disclosure (parenthetical on the BS, not a balance). Memo entry \u2014 recognized at reconcile so it doesn't surface as a novel, but model-write does not render it as a row.",
       "aliases": [
         "common stock par or stated value per share",
         "preferred stock par or stated value per share",
@@ -790,7 +794,7 @@
       "model_label": "Treasury Stock",
       "filing_section": "equity",
       "sign_convention": "negative",
-      "note": "Contra-equity dollar balance. The bare 'treasury shares' alias is intentionally absent — it conflicts with the share-count concept TreasuryStockCommonShares (memo, GEN-BS-043).",
+      "note": "Contra-equity dollar balance. The bare 'treasury shares' alias is intentionally absent \u2014 it conflicts with the share-count concept TreasuryStockCommonShares (memo, GEN-BS-043).",
       "aliases": [
         "treasury stock",
         "treasury stock common value",
@@ -837,7 +841,7 @@
       "model_label": "Treasury Stock - Shares Outstanding",
       "filing_section": "equity",
       "memo": true,
-      "note": "Treasury share count (not dollar). Distinct from GEN-BS-035 Treasury Stock which is the dollar balance — without this memo entry, share-count concept TreasuryStockCommonShares fuzzy-matches the dollar canonical and gets summed alongside it, double-counting equity.",
+      "note": "Treasury share count (not dollar). Distinct from GEN-BS-035 Treasury Stock which is the dollar balance \u2014 without this memo entry, share-count concept TreasuryStockCommonShares fuzzy-matches the dollar canonical and gets summed alongside it, double-counting equity.",
       "aliases": [
         "treasury stock common shares",
         "treasury shares",
@@ -870,7 +874,7 @@
       "model_sheet": "ANNL P&L",
       "model_label": "Net Income (Loss)",
       "row_type": "subtotal",
-      "note": "The TRUE Net Income line — consolidated, BEFORE splitting the NCI portion. Always rendered before any NCI adjustments. For filers without noncontrolling interests, this is the only NI line shown. For filers with NCI, this row is followed by GEN-IS-023 (NCI portion) and GEN-IS-011 (NI Less NCI = parent's share).",
+      "note": "The TRUE Net Income line \u2014 consolidated, BEFORE splitting the NCI portion. Always rendered before any NCI adjustments. For filers without noncontrolling interests, this is the only NI line shown. For filers with NCI, this row is followed by GEN-IS-023 (NCI portion) and GEN-IS-011 (NI Less NCI = parent's share).",
       "aliases": [
         "profit loss",
         "income loss including portion attributable to noncontrolling interest",
@@ -978,7 +982,8 @@
         "inventory write-down",
         "provision for inventory obsolescence",
         "inventory reserve",
-        "excess and obsolete inventory"
+        "excess and obsolete inventory",
+        "inventory allowance for excess and obsolete products"
       ],
       "filing_section": "operating"
     },
@@ -1318,7 +1323,8 @@
         "cash dividends paid on preferred stock",
         "preferred dividends paid",
         "dividends paid on preferred stock",
-        "cash dividends paid on preferred shares"
+        "cash dividends paid on preferred shares",
+        "payments of dividends preferred stock and preference stock"
       ],
       "filing_section": "financing"
     },
@@ -1371,7 +1377,8 @@
         "share repurchases",
         "treasury stock purchases",
         "purchase of treasury stock",
-        "accelerated share repurchase"
+        "accelerated share repurchase",
+        "payments for repurchase of common stock for treasury"
       ],
       "filing_section": "financing"
     },
@@ -1588,7 +1595,7 @@
       "model_sheet": "CASH FLOW",
       "model_label": "Gain (Loss) on Extinguishment of Debt",
       "filing_section": "operating",
-      "note": "Non-cash add-back when debt is retired early at a premium/discount. Sign read from filer's parens (extract honors visual sign on CF — no library sign_convention).",
+      "note": "Non-cash add-back when debt is retired early at a premium/discount. Sign read from filer's parens (extract honors visual sign on CF \u2014 no library sign_convention).",
       "aliases": [
         "gain loss on extinguishment of debt",
         "gains losses on extinguishment of debt",
@@ -1614,6 +1621,29 @@
         "other working capital changes",
         "net change in other operating assets and liabilities"
       ]
+    },
+    {
+      "rule_id": "GEN-CF-052",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Depreciation",
+      "aliases": [
+        "depreciation",
+        "depreciation expense"
+      ],
+      "filing_section": "operating",
+      "note": "Depreciation alone, when filer reports D and A separately. Per per-period dedup, the row is only used for the period(s) where the filer split. Filers reporting combined D&A (us-gaap:DepreciationDepletionAndAmortization) route to GEN-CF-002 and use the combined row."
+    },
+    {
+      "rule_id": "GEN-CF-053",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Amortization",
+      "aliases": [
+        "amortization",
+        "amortization expense",
+        "adjustment for amortization"
+      ],
+      "filing_section": "operating",
+      "note": "Amortization alone, when filer reports D and A separately. Includes adjustment-for-amortization variants. Filers reporting combined D&A (us-gaap:DepreciationDepletionAndAmortization) route to GEN-CF-002 and use the combined row."
     }
   ]
 }
