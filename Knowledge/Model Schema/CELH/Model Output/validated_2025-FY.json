@@ -10644,19 +10644,19 @@
     },
     {
       "rule_id": "IS-4 @ FY2025",
-      "expected": "0",
-      "actual": "0",
+      "expected": "107999",
+      "actual": "107999",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+      "severity": "pass",
+      "message": "Net Income (107999) = Pre-Tax (125033) + Tax (-17034 across 1 rows)"
     },
     {
       "rule_id": "IS-5 @ FY2025",
-      "expected": "0",
-      "actual": "0",
+      "expected": "107999",
+      "actual": "107999",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income anchor or Revenue missing"
+      "severity": "pass",
+      "message": "Net Income (107999) end-to-end = Rev (2515269) + cost (-1247936) + opex (-1126271) + non-op (-16029) + tax (-17034)"
     },
     {
       "rule_id": "IS-1 @ FY2024",
@@ -10684,19 +10684,19 @@
     },
     {
       "rule_id": "IS-4 @ FY2024",
-      "expected": "0",
-      "actual": "0",
+      "expected": "145074",
+      "actual": "145074",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+      "severity": "pass",
+      "message": "Net Income (145074) = Pre-Tax (195050) + Tax (-49976 across 1 rows)"
     },
     {
       "rule_id": "IS-5 @ FY2024",
-      "expected": "0",
-      "actual": "0",
+      "expected": "145074",
+      "actual": "145074",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income anchor or Revenue missing"
+      "severity": "pass",
+      "message": "Net Income (145074) end-to-end = Rev (1355630) + cost (-675423) + opex (-524479) + non-op (39322) + tax (-49976)"
     },
     {
       "rule_id": "IS-1 @ FY2023",
@@ -10724,19 +10724,19 @@
     },
     {
       "rule_id": "IS-4 @ FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "226801",
+      "actual": "226801",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+      "severity": "pass",
+      "message": "Net Income (226801) = Pre-Tax (291749) + Tax (-64948 across 1 rows)"
     },
     {
       "rule_id": "IS-5 @ FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "226801",
+      "actual": "226801",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income anchor or Revenue missing"
+      "severity": "pass",
+      "message": "Net Income (226801) end-to-end = Rev (1318014) + cost (-684875) + opex (-366773) + non-op (25383) + tax (-64948)"
     },
     {
       "rule_id": "CF-1 @ FY2025",

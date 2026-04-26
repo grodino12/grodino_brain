@@ -8093,19 +8093,19 @@
     },
     {
       "rule_id": "IS-4 @ Q1 FY2024",
-      "expected": "0",
-      "actual": "0",
+      "expected": "77811",
+      "actual": "77811",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+      "severity": "pass",
+      "message": "Net Income (77811) = Pre-Tax (92461) + Tax (-14650 across 1 rows)"
     },
     {
       "rule_id": "IS-5 @ Q1 FY2024",
-      "expected": "0",
-      "actual": "0",
+      "expected": "77811",
+      "actual": "77811",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income anchor or Revenue missing"
+      "severity": "pass",
+      "message": "Net Income (77811) end-to-end = Rev (355708) + cost (-173501) + opex (-99017) + non-op (9271) + tax (-14650)"
     },
     {
       "rule_id": "IS-1 @ Q1 FY2023",
@@ -8133,19 +8133,19 @@
     },
     {
       "rule_id": "IS-4 @ Q1 FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "41227",
+      "actual": "41227",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income or Pre-Tax anchor missing"
+      "severity": "pass",
+      "message": "Net Income (41227) = Pre-Tax (49764) + Tax (-8537 across 1 rows)"
     },
     {
       "rule_id": "IS-5 @ Q1 FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "41227",
+      "actual": "41227",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Net Income anchor or Revenue missing"
+      "severity": "pass",
+      "message": "Net Income (41227) end-to-end = Rev (259939) + cost (-146121) + opex (-68905) + non-op (4851) + tax (-8537)"
     },
     {
       "rule_id": "CF-1 @ Q1 FY2024",

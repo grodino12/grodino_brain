@@ -127,14 +127,14 @@
             },
             {
               "raw_filing_label": "Total inventories",
-              "canonical_label": null,
-              "ledger_rule_id": null,
+              "canonical_label": "Inventories",
+              "ledger_rule_id": "GEN-BS-005",
               "value": "7848",
               "raw_numeric_text": "7,848",
               "notation_flags": 0,
               "footnote_markers": [],
               "indent_level": 2,
-              "row_type": "subtotal",
+              "row_type": "line_item",
               "section": "current_assets",
               "subsection_context": null,
               "sign_convention": "as_reported",
@@ -387,8 +387,8 @@
             },
             {
               "raw_filing_label": "DEFERRED INCOME TAXES",
-              "canonical_label": "Deferred Tax Assets",
-              "ledger_rule_id": "GEN-BS-008",
+              "canonical_label": "Deferred Tax Liability",
+              "ledger_rule_id": "GEN-BS-025",
               "value": "5893",
               "raw_numeric_text": "5,893",
               "notation_flags": 0,
@@ -788,14 +788,14 @@
             },
             {
               "raw_filing_label": "Total inventories",
-              "canonical_label": null,
-              "ledger_rule_id": null,
+              "canonical_label": "Inventories",
+              "ledger_rule_id": "GEN-BS-005",
               "value": "7551",
               "raw_numeric_text": "7,551",
               "notation_flags": 0,
               "footnote_markers": [],
               "indent_level": 2,
-              "row_type": "subtotal",
+              "row_type": "line_item",
               "section": "current_assets",
               "subsection_context": null,
               "sign_convention": "as_reported",
@@ -1048,8 +1048,8 @@
             },
             {
               "raw_filing_label": "DEFERRED INCOME TAXES",
-              "canonical_label": "Deferred Tax Assets",
-              "ledger_rule_id": "GEN-BS-008",
+              "canonical_label": "Deferred Tax Liability",
+              "ledger_rule_id": "GEN-BS-025",
               "value": "5774",
               "raw_numeric_text": "5,774",
               "notation_flags": 0,
@@ -2471,8 +2471,8 @@
             },
             {
               "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
-              "canonical_label": null,
-              "ledger_rule_id": null,
+              "canonical_label": "Net Change in Cash",
+              "ledger_rule_id": "GEN-CF-035",
               "value": "1615",
               "raw_numeric_text": "1,615",
               "notation_flags": 0,
@@ -3032,8 +3032,8 @@
             },
             {
               "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
-              "canonical_label": null,
-              "ledger_rule_id": null,
+              "canonical_label": "Net Change in Cash",
+              "ledger_rule_id": "GEN-CF-035",
               "value": "2675",
               "raw_numeric_text": "2,675",
               "notation_flags": 0,
@@ -3237,14 +3237,14 @@
       },
       {
         "raw_filing_label": "Total inventories",
-        "canonical_label": null,
-        "ledger_rule_id": null,
+        "canonical_label": "Inventories",
+        "ledger_rule_id": "GEN-BS-005",
         "value": "7848",
         "raw_numeric_text": "7,848",
         "notation_flags": 0,
         "footnote_markers": [],
         "indent_level": 2,
-        "row_type": "subtotal",
+        "row_type": "line_item",
         "section": "current_assets",
         "subsection_context": null,
         "sign_convention": "as_reported",
@@ -3254,9 +3254,9 @@
           "line_hint": "us-gaap:InventoryNet | ctx:instant:2025-09-30",
           "note": "iXBRL HTM | BS"
         },
-        "model_sheet": "_subtotal",
+        "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Total inventories",
+        "model_label": "Inventories",
         "mapping_source": "ledger_auto"
       },
       {
@@ -3549,8 +3549,8 @@
       },
       {
         "raw_filing_label": "DEFERRED INCOME TAXES",
-        "canonical_label": "Deferred Tax Assets",
-        "ledger_rule_id": "GEN-BS-008",
+        "canonical_label": "Deferred Tax Liability",
+        "ledger_rule_id": "GEN-BS-025",
         "value": "5893",
         "raw_numeric_text": "5,893",
         "notation_flags": 0,
@@ -3568,7 +3568,7 @@
         },
         "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Deferred Tax Assets",
+        "model_label": "Deferred Tax Liability",
         "mapping_source": "ledger_auto"
       },
       {
@@ -4005,14 +4005,14 @@
       },
       {
         "raw_filing_label": "Total inventories",
-        "canonical_label": null,
-        "ledger_rule_id": null,
+        "canonical_label": "Inventories",
+        "ledger_rule_id": "GEN-BS-005",
         "value": "7551",
         "raw_numeric_text": "7,551",
         "notation_flags": 0,
         "footnote_markers": [],
         "indent_level": 2,
-        "row_type": "subtotal",
+        "row_type": "line_item",
         "section": "current_assets",
         "subsection_context": null,
         "sign_convention": "as_reported",
@@ -4022,9 +4022,9 @@
           "line_hint": "us-gaap:InventoryNet | ctx:instant:2025-06-30",
           "note": "iXBRL HTM | BS"
         },
-        "model_sheet": "_subtotal",
+        "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Total inventories",
+        "model_label": "Inventories",
         "mapping_source": "ledger_auto"
       },
       {
@@ -4317,8 +4317,8 @@
       },
       {
         "raw_filing_label": "DEFERRED INCOME TAXES",
-        "canonical_label": "Deferred Tax Assets",
-        "ledger_rule_id": "GEN-BS-008",
+        "canonical_label": "Deferred Tax Liability",
+        "ledger_rule_id": "GEN-BS-025",
         "value": "5774",
         "raw_numeric_text": "5,774",
         "notation_flags": 0,
@@ -4336,7 +4336,7 @@
         },
         "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Deferred Tax Assets",
+        "model_label": "Deferred Tax Liability",
         "mapping_source": "ledger_auto"
       },
       {
@@ -5949,8 +5949,8 @@
       },
       {
         "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
-        "canonical_label": null,
-        "ledger_rule_id": null,
+        "canonical_label": "Net Change in Cash",
+        "ledger_rule_id": "GEN-CF-035",
         "value": "1615",
         "raw_numeric_text": "1,615",
         "notation_flags": 0,
@@ -5966,9 +5966,9 @@
           "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2025-09-30",
           "note": "iXBRL HTM | CF"
         },
-        "model_sheet": "_subtotal",
+        "model_sheet": "QTR CF",
         "model_row": 0,
-        "model_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+        "model_label": "Net Change in Cash",
         "mapping_source": "ledger_auto"
       },
       {
@@ -6597,8 +6597,8 @@
       },
       {
         "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
-        "canonical_label": null,
-        "ledger_rule_id": null,
+        "canonical_label": "Net Change in Cash",
+        "ledger_rule_id": "GEN-CF-035",
         "value": "2675",
         "raw_numeric_text": "2,675",
         "notation_flags": 0,
@@ -6614,9 +6614,9 @@
           "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2024-09-30",
           "note": "iXBRL HTM | CF"
         },
-        "model_sheet": "_subtotal",
+        "model_sheet": "QTR CF",
         "model_row": 0,
-        "model_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+        "model_label": "Net Change in Cash",
         "mapping_source": "ledger_auto"
       },
       {
@@ -6833,11 +6833,11 @@
     },
     {
       "rule_id": "CF-1 @ Q1 FY2026",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: NetΔ"
+      "expected": "1614",
+      "actual": "1615",
+      "gap": "1",
+      "severity": "pass",
+      "message": "CFO (5408) + CFI (-1535) + CFF (-2239) + CashOther (-20) = NetChange"
     },
     {
       "rule_id": "CF-2 @ Q1 FY2026",
@@ -6865,11 +6865,11 @@
     },
     {
       "rule_id": "CF-1 @ Q1 FY2025",
-      "expected": "0",
-      "actual": "0",
-      "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — missing: NetΔ"
+      "expected": "2676",
+      "actual": "2675",
+      "gap": "-1",
+      "severity": "pass",
+      "message": "CFO (4302) + CFI (-1108) + CFF (-634) + CashOther (116) = NetChange"
     },
     {
       "rule_id": "CF-2 @ Q1 FY2025",
