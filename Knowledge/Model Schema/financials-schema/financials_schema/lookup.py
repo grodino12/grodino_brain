@@ -90,6 +90,21 @@ IXBRL_SUBTOTAL_CONCEPTS = frozenset({
     "LiabilitiesAndStockholdersEquity",
     "StockholdersEquity",
     "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+    # CF section subtotals + the net-change-in-cash subtotal. The cash-position
+    # rollforward concepts ("Cash...beginning/end of period", same concept
+    # different periods) are tagged as memo at the walker (CF instant→duration
+    # fold), not here.
+    "NetCashProvidedByUsedInOperatingActivities",
+    "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+    "NetCashProvidedByUsedInInvestingActivities",
+    "NetCashProvidedByUsedInInvestingActivitiesContinuingOperations",
+    "NetCashProvidedByUsedInFinancingActivities",
+    "NetCashProvidedByUsedInFinancingActivitiesContinuingOperations",
+    "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+    "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseExcludingExchangeRateEffect",
+    "CashAndCashEquivalentsPeriodIncreaseDecrease",
+    "CashAndCashEquivalentsPeriodIncreaseDecreaseExcludingExchangeRateEffect",
+    "CashAndCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
 })
 
 
