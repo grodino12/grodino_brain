@@ -12,13 +12,7 @@
       "FY2022": "-40576",
       "FY2023": "-41881",
       "FY2024": "-41744",
-      "FY2025": "-43066",
-      "FY2025E": "='IS DRIVERS'!G3*'ANNL P&L'!G2",
-      "FY2026E": "='IS DRIVERS'!H3*'ANNL P&L'!H2",
-      "FY2027E": "='IS DRIVERS'!I3*'ANNL P&L'!I2",
-      "FY2028E": "='IS DRIVERS'!J3*'ANNL P&L'!J2",
-      "FY2029E": "='IS DRIVERS'!K3*'ANNL P&L'!K2",
-      "FY2030E": "='IS DRIVERS'!L3*'ANNL P&L'!L2"
+      "FY2025": "-43066"
     },
     "Diluted Earnings (Loss) per Share": {
       "FY2021": "5.49",
@@ -79,13 +73,7 @@
       "FY2022": "-939",
       "FY2023": "-819",
       "FY2024": "-919",
-      "FY2025": "-1121",
-      "FY2025E": "='IS DRIVERS'!G5",
-      "FY2026E": "='IS DRIVERS'!H5",
-      "FY2027E": "='IS DRIVERS'!I5",
-      "FY2028E": "='IS DRIVERS'!J5",
-      "FY2029E": "='IS DRIVERS'!K5",
-      "FY2030E": "='IS DRIVERS'!L5"
+      "FY2025": "-1121"
     },
     "Net Income (Loss)": {
       "FY2021": "=B11+B12",
@@ -125,13 +113,7 @@
       "FY2022": "86392",
       "FY2023": "91471",
       "FY2024": "91854",
-      "FY2025": "93925",
-      "FY2025E": "='ANNL P&L'!F2*(1+'IS DRIVERS'!G2)",
-      "FY2026E": "='ANNL P&L'!G2*(1+'IS DRIVERS'!H2)",
-      "FY2027E": "='ANNL P&L'!H2*(1+'IS DRIVERS'!I2)",
-      "FY2028E": "='ANNL P&L'!I2*(1+'IS DRIVERS'!J2)",
-      "FY2029E": "='ANNL P&L'!J2*(1+'IS DRIVERS'!K2)",
-      "FY2030E": "='ANNL P&L'!K2*(1+'IS DRIVERS'!L2)"
+      "FY2025": "93925"
     },
     "Other Pension and OPEB Benefits Income (Expense)": {
       "FY2021": "522",
@@ -158,49 +140,21 @@
       "FY2022": "-34459",
       "FY2023": "-36677",
       "FY2024": "-37190",
-      "FY2025": "-37368",
-      "FY2025E": "='IS DRIVERS'!G4*'ANNL P&L'!G2",
-      "FY2026E": "='IS DRIVERS'!H4*'ANNL P&L'!H2",
-      "FY2027E": "='IS DRIVERS'!I4*'ANNL P&L'!I2",
-      "FY2028E": "='IS DRIVERS'!J4*'ANNL P&L'!J2",
-      "FY2029E": "='IS DRIVERS'!K4*'ANNL P&L'!K2",
-      "FY2030E": "='IS DRIVERS'!L4*'ANNL P&L'!L2"
+      "FY2025": "-37368"
     },
     "Weighted Average Shares Outstanding (Basic)": {
       "FY2021": "1382000000",
       "FY2022": "1380000000",
       "FY2023": "1376000000",
       "FY2024": "1373000000",
-      "FY2025": "1369000000",
-      "FY2025E": "=F18",
-      "FY2026E": "=G18",
-      "FY2027E": "=H18",
-      "FY2028E": "=I18",
-      "FY2029E": "=J18",
-      "FY2030E": "=K18"
+      "FY2025": "1369000000"
     },
     "Weighted Average Shares Outstanding (Diluted)": {
       "FY2021": "1389000000",
       "FY2022": "1387000000",
       "FY2023": "1383000000",
       "FY2024": "1378000000",
-      "FY2025": "1373000000",
-      "FY2025E": "=F19",
-      "FY2026E": "=G19",
-      "FY2027E": "=H19",
-      "FY2028E": "=I19",
-      "FY2029E": "=J19",
-      "FY2030E": "=K19"
-    }
-  },
-  "ASSUMPTIONS": {
-    "Days in Year": {
-      "Note": "Used in DSO, DIO, DPO formulas",
-      "Value": "365"
-    },
-    "Share Repurchases $": {
-      "Note": "Per-period repurchase assumption for projection",
-      "Value": "0"
+      "FY2025": "1373000000"
     }
   },
   "BALANCE SHEET": {
@@ -208,97 +162,49 @@
       "FY2022": "10163",
       "FY2023": "10815",
       "FY2024": "10333",
-      "FY2025": "11506",
-      "FY2025E": "='BS DRIVERS'!G3*'ANNL P&L'!G2/ASSUMPTIONS!$B$2",
-      "FY2026E": "='BS DRIVERS'!H3*'ANNL P&L'!H2/ASSUMPTIONS!$B$2",
-      "FY2027E": "='BS DRIVERS'!I3*'ANNL P&L'!I2/ASSUMPTIONS!$B$2",
-      "FY2028E": "='BS DRIVERS'!J3*'ANNL P&L'!J2/ASSUMPTIONS!$B$2",
-      "FY2029E": "='BS DRIVERS'!K3*'ANNL P&L'!K2/ASSUMPTIONS!$B$2",
-      "FY2030E": "='BS DRIVERS'!L3*'ANNL P&L'!L2/ASSUMPTIONS!$B$2"
+      "FY2025": "11506"
     },
     "Accrued Expenses": {
       "FY2022": "23371",
       "FY2023": "25137",
       "FY2024": "24454",
-      "FY2025": "25903",
-      "FY2025E": "='BS DRIVERS'!G12*'ANNL P&L'!G2",
-      "FY2026E": "='BS DRIVERS'!H12*'ANNL P&L'!H2",
-      "FY2027E": "='BS DRIVERS'!I12*'ANNL P&L'!I2",
-      "FY2028E": "='BS DRIVERS'!J12*'ANNL P&L'!J2",
-      "FY2029E": "='BS DRIVERS'!K12*'ANNL P&L'!K2",
-      "FY2030E": "='BS DRIVERS'!L12*'ANNL P&L'!L2"
+      "FY2025": "25903"
     },
     "Accumulated Other Comprehensive Income (Loss)": {
       "FY2022": "-15302",
       "FY2023": "-15534",
       "FY2024": "-17612",
-      "FY2025": "-15024",
-      "FY2025E": "=E25+'CASH FLOW'!G47",
-      "FY2026E": "=F25+'CASH FLOW'!H47",
-      "FY2027E": "=G25+'CASH FLOW'!I47",
-      "FY2028E": "=H25+'CASH FLOW'!J47",
-      "FY2029E": "=I25+'CASH FLOW'!K47",
-      "FY2030E": "=J25+'CASH FLOW'!L47"
+      "FY2025": "-15024"
     },
     "Additional Paid-in Capital": {
       "FY2022": "4134",
       "FY2023": "4261",
       "FY2024": "4385",
-      "FY2025": "4451",
-      "FY2025E": "=E23+'CASH FLOW'!G10+'CASH FLOW'!G43",
-      "FY2026E": "=F23+'CASH FLOW'!H10+'CASH FLOW'!H43",
-      "FY2027E": "=G23+'CASH FLOW'!I10+'CASH FLOW'!I43",
-      "FY2028E": "=H23+'CASH FLOW'!J10+'CASH FLOW'!J43",
-      "FY2029E": "=I23+'CASH FLOW'!K10+'CASH FLOW'!K43",
-      "FY2030E": "=J23+'CASH FLOW'!L10+'CASH FLOW'!L43"
+      "FY2025": "4451"
     },
     "Cash & Cash Equivalents": {
       "FY2022": "4954",
       "FY2023": "9711",
       "FY2024": "8505",
-      "FY2025": "9159",
-      "FY2025E": "=E2+'CASH FLOW'!G48",
-      "FY2026E": "=F2+'CASH FLOW'!H48",
-      "FY2027E": "=G2+'CASH FLOW'!I48",
-      "FY2028E": "=H2+'CASH FLOW'!J48",
-      "FY2029E": "=I2+'CASH FLOW'!K48",
-      "FY2030E": "=J2+'CASH FLOW'!L48"
+      "FY2025": "9159"
     },
     "Common Stock": {
       "FY2022": "23",
       "FY2023": "23",
       "FY2024": "23",
-      "FY2025": "23",
-      "FY2025E": "=E22",
-      "FY2026E": "=F22",
-      "FY2027E": "=G22",
-      "FY2028E": "=H22",
-      "FY2029E": "=I22",
-      "FY2030E": "=J22"
+      "FY2025": "23"
     },
     "Deferred Tax Assets": {
       "FY2022": "4204",
       "FY2023": "4474",
       "FY2024": "4362",
-      "FY2025": "4541",
-      "FY2025E": "=E12",
-      "FY2026E": "=F12",
-      "FY2027E": "=G12",
-      "FY2028E": "=H12",
-      "FY2029E": "=I12",
-      "FY2030E": "=J12"
+      "FY2025": "4541"
     },
     "Deferred Tax Liability": {
       "FY2022": "4133",
       "FY2023": "3895",
       "FY2024": "3484",
-      "FY2025": "3802",
-      "FY2025E": "=E19",
-      "FY2026E": "=F19",
-      "FY2027E": "=G19",
-      "FY2028E": "=H19",
-      "FY2029E": "=I19",
-      "FY2030E": "=J19"
+      "FY2025": "3802"
     },
     "Equity Method Investments": {
       "FY2022": "3073",
@@ -310,37 +216,19 @@
       "FY2022": "18202",
       "FY2023": "17728",
       "FY2024": "17534",
-      "FY2025": "18916",
-      "FY2025E": "=E10",
-      "FY2026E": "=F10",
-      "FY2027E": "=G10",
-      "FY2028E": "=H10",
-      "FY2029E": "=I10",
-      "FY2030E": "=J10"
+      "FY2025": "18916"
     },
     "Intangible Assets": {
       "FY2022": "15586",
       "FY2023": "14929",
       "FY2024": "14801",
-      "FY2025": "15066",
-      "FY2025E": "=E9",
-      "FY2026E": "=F9",
-      "FY2027E": "=G9",
-      "FY2028E": "=H9",
-      "FY2029E": "=I9",
-      "FY2030E": "=J9"
+      "FY2025": "15066"
     },
     "Inventories": {
       "FY2022": "5222",
       "FY2023": "5334",
       "FY2024": "5306",
-      "FY2025": "5845",
-      "FY2025E": "='BS DRIVERS'!G4*'ANNL P&L'!G3/ASSUMPTIONS!$B$2",
-      "FY2026E": "='BS DRIVERS'!H4*'ANNL P&L'!H3/ASSUMPTIONS!$B$2",
-      "FY2027E": "='BS DRIVERS'!I4*'ANNL P&L'!I3/ASSUMPTIONS!$B$2",
-      "FY2028E": "='BS DRIVERS'!J4*'ANNL P&L'!J3/ASSUMPTIONS!$B$2",
-      "FY2029E": "='BS DRIVERS'!K4*'ANNL P&L'!K3/ASSUMPTIONS!$B$2",
-      "FY2030E": "='BS DRIVERS'!L4*'ANNL P&L'!L3/ASSUMPTIONS!$B$2"
+      "FY2025": "5845"
     },
     "Long-Term Debt": {
       "FY2022": "35657",
@@ -352,13 +240,7 @@
       "FY2022": "24291",
       "FY2023": "27039",
       "FY2024": "28008",
-      "FY2025": "29905",
-      "FY2025E": "=E8-'CASH FLOW'!G27-'CASH FLOW'!G3",
-      "FY2026E": "=F8-'CASH FLOW'!H27-'CASH FLOW'!H3",
-      "FY2027E": "=G8-'CASH FLOW'!I27-'CASH FLOW'!I3",
-      "FY2028E": "=H8-'CASH FLOW'!J27-'CASH FLOW'!J3",
-      "FY2029E": "=I8-'CASH FLOW'!K27-'CASH FLOW'!K3",
-      "FY2030E": "=J8-'CASH FLOW'!L27-'CASH FLOW'!L3"
+      "FY2025": "29905"
     },
     "Noncontrolling Interest": {
       "FY2022": "124",
@@ -370,13 +252,7 @@
       "FY2022": "5292",
       "FY2023": "6661",
       "FY2024": "6951",
-      "FY2025": "8984",
-      "FY2025E": "='BS DRIVERS'!G9*'ANNL P&L'!G2",
-      "FY2026E": "='BS DRIVERS'!H9*'ANNL P&L'!H2",
-      "FY2027E": "='BS DRIVERS'!I9*'ANNL P&L'!I2",
-      "FY2028E": "='BS DRIVERS'!J9*'ANNL P&L'!J2",
-      "FY2029E": "='BS DRIVERS'!K9*'ANNL P&L'!K2",
-      "FY2030E": "='BS DRIVERS'!L9*'ANNL P&L'!L2"
+      "FY2025": "8984"
     },
     "Other Non-Current Liabilities": {
       "FY2022": "8339",
@@ -388,25 +264,13 @@
       "FY2022": "806",
       "FY2023": "798",
       "FY2024": "921",
-      "FY2025": "1068",
-      "FY2025E": "='BS DRIVERS'!G7*'ANNL P&L'!G2",
-      "FY2026E": "='BS DRIVERS'!H7*'ANNL P&L'!H2",
-      "FY2027E": "='BS DRIVERS'!I7*'ANNL P&L'!I2",
-      "FY2028E": "='BS DRIVERS'!J7*'ANNL P&L'!J2",
-      "FY2029E": "='BS DRIVERS'!K7*'ANNL P&L'!K2",
-      "FY2030E": "='BS DRIVERS'!L7*'ANNL P&L'!L2"
+      "FY2025": "1068"
     },
     "Retained Earnings (Accumulated Deficit)": {
       "FY2022": "67800",
       "FY2023": "70035",
       "FY2024": "72266",
-      "FY2025": "72788",
-      "FY2025E": "=E24+'ANNL P&L'!G13+'CASH FLOW'!G41",
-      "FY2026E": "=F24+'ANNL P&L'!H13+'CASH FLOW'!H41",
-      "FY2027E": "=G24+'ANNL P&L'!I13+'CASH FLOW'!I41",
-      "FY2028E": "=H24+'ANNL P&L'!J13+'CASH FLOW'!J41",
-      "FY2029E": "=I24+'ANNL P&L'!K13+'CASH FLOW'!K41",
-      "FY2030E": "=J24+'ANNL P&L'!L13+'CASH FLOW'!L41"
+      "FY2025": "72788"
     },
     "Short-Term Debt Obligations": {
       "FY2022": "3414",
@@ -499,161 +363,13 @@
       "FY2025": "-41832"
     }
   },
-  "BS DRIVERS": {
-    "Accrued Distributor Termination Fees % of Rev": {
-      "FY2025E": "=F14",
-      "FY2026E": "=G14",
-      "FY2027E": "=H14",
-      "FY2028E": "=I14",
-      "FY2029E": "=J14",
-      "FY2030E": "=K14"
-    },
-    "Accrued Expenses % of Rev": {
-      "FY2022": "=IFERROR('BALANCE SHEET'!B16/'ANNL P&L'!C2,0)",
-      "FY2023": "=IFERROR('BALANCE SHEET'!C16/'ANNL P&L'!D2,0)",
-      "FY2024": "=IFERROR('BALANCE SHEET'!D16/'ANNL P&L'!E2,0)",
-      "FY2025": "=IFERROR('BALANCE SHEET'!E16/'ANNL P&L'!F2,0)",
-      "FY2025E": "=F12",
-      "FY2026E": "=G12",
-      "FY2027E": "=H12",
-      "FY2028E": "=I12",
-      "FY2029E": "=J12",
-      "FY2030E": "=K12"
-    },
-    "Accrued Promotional Allowance % of Rev": {
-      "FY2025E": "=F15",
-      "FY2026E": "=G15",
-      "FY2027E": "=H15",
-      "FY2028E": "=I15",
-      "FY2029E": "=J15",
-      "FY2030E": "=K15"
-    },
-    "DIO (days)": {
-      "FY2022": "=IFERROR('BALANCE SHEET'!B5/'ANNL P&L'!C3*ASSUMPTIONS!$B$2,0)",
-      "FY2023": "=IFERROR('BALANCE SHEET'!C5/'ANNL P&L'!D3*ASSUMPTIONS!$B$2,0)",
-      "FY2024": "=IFERROR('BALANCE SHEET'!D5/'ANNL P&L'!E3*ASSUMPTIONS!$B$2,0)",
-      "FY2025": "=IFERROR('BALANCE SHEET'!E5/'ANNL P&L'!F3*ASSUMPTIONS!$B$2,0)",
-      "FY2025E": "=F4",
-      "FY2026E": "=G4",
-      "FY2027E": "=H4",
-      "FY2028E": "=I4",
-      "FY2029E": "=J4",
-      "FY2030E": "=K4"
-    },
-    "DPO (days)": {
-      "FY2025E": "=F11",
-      "FY2026E": "=G11",
-      "FY2027E": "=H11",
-      "FY2028E": "=I11",
-      "FY2029E": "=J11",
-      "FY2030E": "=K11"
-    },
-    "DSO (days)": {
-      "FY2022": "=IFERROR('BALANCE SHEET'!B4/'ANNL P&L'!C2*ASSUMPTIONS!$B$2,0)",
-      "FY2023": "=IFERROR('BALANCE SHEET'!C4/'ANNL P&L'!D2*ASSUMPTIONS!$B$2,0)",
-      "FY2024": "=IFERROR('BALANCE SHEET'!D4/'ANNL P&L'!E2*ASSUMPTIONS!$B$2,0)",
-      "FY2025": "=IFERROR('BALANCE SHEET'!E4/'ANNL P&L'!F2*ASSUMPTIONS!$B$2,0)",
-      "FY2025E": "=F3",
-      "FY2026E": "=G3",
-      "FY2027E": "=H3",
-      "FY2028E": "=I3",
-      "FY2029E": "=J3",
-      "FY2030E": "=K3"
-    },
-    "Deferred Other Costs - Current % of Rev": {
-      "FY2025E": "=F6",
-      "FY2026E": "=G6",
-      "FY2027E": "=H6",
-      "FY2028E": "=I6",
-      "FY2029E": "=J6",
-      "FY2030E": "=K6"
-    },
-    "Deferred Revenue - Current % of Rev": {
-      "FY2025E": "=F18",
-      "FY2026E": "=G18",
-      "FY2027E": "=H18",
-      "FY2028E": "=I18",
-      "FY2029E": "=J18",
-      "FY2030E": "=K18"
-    },
-    "Income Taxes Payable % of Rev": {
-      "FY2025E": "=F13",
-      "FY2026E": "=G13",
-      "FY2027E": "=H13",
-      "FY2028E": "=I13",
-      "FY2029E": "=J13",
-      "FY2030E": "=K13"
-    },
-    "Lease Liability - Finance - Current % of Rev": {
-      "FY2025E": "=F17",
-      "FY2026E": "=G17",
-      "FY2027E": "=H17",
-      "FY2028E": "=I17",
-      "FY2029E": "=J17",
-      "FY2030E": "=K17"
-    },
-    "Lease Liability - Operating - Current % of Rev": {
-      "FY2025E": "=F16",
-      "FY2026E": "=G16",
-      "FY2027E": "=H16",
-      "FY2028E": "=I16",
-      "FY2029E": "=J16",
-      "FY2030E": "=K16"
-    },
-    "Note Receivable - Current % of Rev": {
-      "FY2025E": "=F5",
-      "FY2026E": "=G5",
-      "FY2027E": "=H5",
-      "FY2028E": "=I5",
-      "FY2029E": "=J5",
-      "FY2030E": "=K5"
-    },
-    "Other Current Liabilities % of Rev": {
-      "FY2025E": "=F19",
-      "FY2026E": "=G19",
-      "FY2027E": "=H19",
-      "FY2028E": "=I19",
-      "FY2029E": "=J19",
-      "FY2030E": "=K19"
-    },
-    "Other Non-Current Assets % of Rev": {
-      "FY2022": "=IFERROR('BALANCE SHEET'!B13/'ANNL P&L'!C2,0)",
-      "FY2023": "=IFERROR('BALANCE SHEET'!C13/'ANNL P&L'!D2,0)",
-      "FY2024": "=IFERROR('BALANCE SHEET'!D13/'ANNL P&L'!E2,0)",
-      "FY2025": "=IFERROR('BALANCE SHEET'!E13/'ANNL P&L'!F2,0)",
-      "FY2025E": "=F9",
-      "FY2026E": "=G9",
-      "FY2027E": "=H9",
-      "FY2028E": "=I9",
-      "FY2029E": "=J9",
-      "FY2030E": "=K9"
-    },
-    "Prepaid Expenses % of Rev": {
-      "FY2022": "=IFERROR('BALANCE SHEET'!B6/'ANNL P&L'!C2,0)",
-      "FY2023": "=IFERROR('BALANCE SHEET'!C6/'ANNL P&L'!D2,0)",
-      "FY2024": "=IFERROR('BALANCE SHEET'!D6/'ANNL P&L'!E2,0)",
-      "FY2025": "=IFERROR('BALANCE SHEET'!E6/'ANNL P&L'!F2,0)",
-      "FY2025E": "=F7",
-      "FY2026E": "=G7",
-      "FY2027E": "=H7",
-      "FY2028E": "=I7",
-      "FY2029E": "=J7",
-      "FY2030E": "=K7"
-    }
-  },
   "CASH FLOW": {
     "(Benefit) Provision for Deferred Income Taxes": {
       "FY2021": "298",
       "FY2022": "-873",
       "FY2023": "-271",
       "FY2024": "-42",
-      "FY2025": "71",
-      "FY2025E": "=0",
-      "FY2026E": "=0",
-      "FY2027E": "=0",
-      "FY2028E": "=0",
-      "FY2029E": "=0",
-      "FY2030E": "=0"
+      "FY2025": "71"
     },
     "Accounts Payable": {
       "FY2021": "1762",
@@ -667,13 +383,7 @@
       "FY2022": "-1763",
       "FY2023": "-793",
       "FY2024": "-138",
-      "FY2025": "-580",
-      "FY2025E": "=-('BALANCE SHEET'!F4-'BALANCE SHEET'!E4)",
-      "FY2026E": "=-('BALANCE SHEET'!G4-'BALANCE SHEET'!F4)",
-      "FY2027E": "=-('BALANCE SHEET'!H4-'BALANCE SHEET'!G4)",
-      "FY2028E": "=-('BALANCE SHEET'!I4-'BALANCE SHEET'!H4)",
-      "FY2029E": "=-('BALANCE SHEET'!J4-'BALANCE SHEET'!I4)",
-      "FY2030E": "=-('BALANCE SHEET'!K4-'BALANCE SHEET'!J4)"
+      "FY2025": "-580"
     },
     "Acquisition and Divestiture-Related Charges": {
       "FY2021": "-4",
@@ -761,26 +471,14 @@
       "FY2022": "2763",
       "FY2023": "2948",
       "FY2024": "3160",
-      "FY2025": "3451",
-      "FY2025E": "='CF DRIVERS'!G3*'BALANCE SHEET'!E8",
-      "FY2026E": "='CF DRIVERS'!H3*'BALANCE SHEET'!F8",
-      "FY2027E": "='CF DRIVERS'!I3*'BALANCE SHEET'!G8",
-      "FY2028E": "='CF DRIVERS'!J3*'BALANCE SHEET'!H8",
-      "FY2029E": "='CF DRIVERS'!K3*'BALANCE SHEET'!I8",
-      "FY2030E": "='CF DRIVERS'!L3*'BALANCE SHEET'!J8"
+      "FY2025": "3451"
     },
     "FX Effect on Cash": {
       "FY2021": "-114",
       "FY2022": "-465",
       "FY2023": "-277",
       "FY2024": "-687",
-      "FY2025": "422",
-      "FY2025E": "=F47",
-      "FY2026E": "=G47",
-      "FY2027E": "=H47",
-      "FY2028E": "=I47",
-      "FY2029E": "=J47",
-      "FY2030E": "=K47"
+      "FY2025": "422"
     },
     "Gain on Juice Transaction": {
       "FY2021": "0",
@@ -808,13 +506,7 @@
       "FY2022": "-1142",
       "FY2023": "-261",
       "FY2024": "-314",
-      "FY2025": "-150",
-      "FY2025E": "=-('BALANCE SHEET'!F5-'BALANCE SHEET'!E5)",
-      "FY2026E": "=-('BALANCE SHEET'!G5-'BALANCE SHEET'!F5)",
-      "FY2027E": "=-('BALANCE SHEET'!H5-'BALANCE SHEET'!G5)",
-      "FY2028E": "=-('BALANCE SHEET'!I5-'BALANCE SHEET'!H5)",
-      "FY2029E": "=-('BALANCE SHEET'!J5-'BALANCE SHEET'!I5)",
-      "FY2030E": "=-('BALANCE SHEET'!K5-'BALANCE SHEET'!J5)"
+      "FY2025": "-150"
     },
     "Net Change in Cash": {
       "FY2021": "=B26+B34+B46+B47+B48",
@@ -822,12 +514,12 @@
       "FY2023": "=D26+D34+D46+D47+D48",
       "FY2024": "=E26+E34+E46+E47+E48",
       "FY2025": "=F26+F34+F46+F47+F48",
-      "FY2025E": "='CASH FLOW'!G26+'CASH FLOW'!G34+'CASH FLOW'!G46+'CASH FLOW'!G47",
-      "FY2026E": "='CASH FLOW'!H26+'CASH FLOW'!H34+'CASH FLOW'!H46+'CASH FLOW'!H47",
-      "FY2027E": "='CASH FLOW'!I26+'CASH FLOW'!I34+'CASH FLOW'!I46+'CASH FLOW'!I47",
-      "FY2028E": "='CASH FLOW'!J26+'CASH FLOW'!J34+'CASH FLOW'!J46+'CASH FLOW'!J47",
-      "FY2029E": "='CASH FLOW'!K26+'CASH FLOW'!K34+'CASH FLOW'!K46+'CASH FLOW'!K47",
-      "FY2030E": "='CASH FLOW'!L26+'CASH FLOW'!L34+'CASH FLOW'!L46+'CASH FLOW'!L47"
+      "FY2025E": "=G26+G34+G46+G47+G48",
+      "FY2026E": "=H26+H34+H46+H47+H48",
+      "FY2027E": "=I26+I34+I46+I47+I48",
+      "FY2028E": "=J26+J34+J46+J47+J48",
+      "FY2029E": "=K26+K34+K46+K47+K48",
+      "FY2030E": "=L26+L34+L46+L47+L48"
     },
     "Net Change in Other Short-Term Debt": {
       "FY2021": "434",
@@ -848,13 +540,7 @@
       "FY2022": "8978",
       "FY2023": "9155",
       "FY2024": "9626",
-      "FY2025": "8295",
-      "FY2025E": "='ANNL P&L'!G13",
-      "FY2026E": "='ANNL P&L'!H13",
-      "FY2027E": "='ANNL P&L'!I13",
-      "FY2028E": "='ANNL P&L'!J13",
-      "FY2029E": "='ANNL P&L'!K13",
-      "FY2030E": "='ANNL P&L'!L13"
+      "FY2025": "8295"
     },
     "Operating Lease ROU Asset Amortization": {
       "FY2021": "505",
@@ -889,13 +575,7 @@
       "FY2022": "-359",
       "FY2023": "189",
       "FY2024": "-307",
-      "FY2025": "-712",
-      "FY2025E": "=0",
-      "FY2026E": "=0",
-      "FY2027E": "=0",
-      "FY2028E": "=0",
-      "FY2029E": "=0",
-      "FY2030E": "=0"
+      "FY2025": "-712"
     },
     "Payments of Contingent Consideration": {
       "FY2021": "-773",
@@ -923,13 +603,7 @@
       "FY2022": "118",
       "FY2023": "-13",
       "FY2024": "40",
-      "FY2025": "195",
-      "FY2025E": "=-('BALANCE SHEET'!F6-'BALANCE SHEET'!E6)",
-      "FY2026E": "=-('BALANCE SHEET'!G6-'BALANCE SHEET'!F6)",
-      "FY2027E": "=-('BALANCE SHEET'!H6-'BALANCE SHEET'!G6)",
-      "FY2028E": "=-('BALANCE SHEET'!I6-'BALANCE SHEET'!H6)",
-      "FY2029E": "=-('BALANCE SHEET'!J6-'BALANCE SHEET'!I6)",
-      "FY2030E": "=-('BALANCE SHEET'!K6-'BALANCE SHEET'!J6)"
+      "FY2025": "195"
     },
     "Proceeds from Divestitures of Businesses": {
       "FY2021": "169",
@@ -943,13 +617,7 @@
       "FY2022": "138",
       "FY2023": "116",
       "FY2024": "166",
-      "FY2025": "97",
-      "FY2025E": "=F43",
-      "FY2026E": "=G43",
-      "FY2027E": "=H43",
-      "FY2028E": "=I43",
-      "FY2029E": "=J43",
-      "FY2030E": "=K43"
+      "FY2025": "97"
     },
     "Proceeds from Issuance of Long-Term Debt": {
       "FY2021": "4122",
@@ -991,13 +659,7 @@
       "FY2022": "-5207",
       "FY2023": "-5518",
       "FY2024": "-5318",
-      "FY2025": "-4415",
-      "FY2025E": "='CF DRIVERS'!G5*'BALANCE SHEET'!E8",
-      "FY2026E": "='CF DRIVERS'!H5*'BALANCE SHEET'!F8",
-      "FY2027E": "='CF DRIVERS'!I5*'BALANCE SHEET'!G8",
-      "FY2028E": "='CF DRIVERS'!J5*'BALANCE SHEET'!H8",
-      "FY2029E": "='CF DRIVERS'!K5*'BALANCE SHEET'!I8",
-      "FY2030E": "='CF DRIVERS'!L5*'BALANCE SHEET'!J8"
+      "FY2025": "-4415"
     },
     "Repayments of Long-Term Debt": {
       "FY2021": "-8299",
@@ -1025,26 +687,14 @@
       "FY2022": "-1500",
       "FY2023": "-1000",
       "FY2024": "-1000",
-      "FY2025": "-1000",
-      "FY2025E": "='CF DRIVERS'!G8",
-      "FY2026E": "='CF DRIVERS'!H8",
-      "FY2027E": "='CF DRIVERS'!I8",
-      "FY2028E": "='CF DRIVERS'!J8",
-      "FY2029E": "='CF DRIVERS'!K8",
-      "FY2030E": "='CF DRIVERS'!L8"
+      "FY2025": "-1000"
     },
     "Stock-Based Compensation": {
       "FY2021": "301",
       "FY2022": "343",
       "FY2023": "380",
       "FY2024": "362",
-      "FY2025": "288",
-      "FY2025E": "='CF DRIVERS'!G4",
-      "FY2026E": "='CF DRIVERS'!H4",
-      "FY2027E": "='CF DRIVERS'!I4",
-      "FY2028E": "='CF DRIVERS'!J4",
-      "FY2029E": "='CF DRIVERS'!K4",
-      "FY2030E": "='CF DRIVERS'!L4"
+      "FY2025": "288"
     },
     "Tax Expense Related to TCJ Act": {
       "FY2021": "190",
@@ -1066,156 +716,6 @@
       "FY2023": "-140",
       "FY2024": "-135",
       "FY2025": "-113"
-    }
-  },
-  "CF DRIVERS": {
-    "Allowance for Credit Losses % of Revenue": {
-      "FY2025E": "=F2",
-      "FY2026E": "=G2",
-      "FY2027E": "=H2",
-      "FY2028E": "=I2",
-      "FY2029E": "=J2",
-      "FY2030E": "=K2"
-    },
-    "CapEx % of PP&E": {
-      "FY2023": "=IFERROR('CASH FLOW'!D27/'BALANCE SHEET'!B8,0)",
-      "FY2024": "=IFERROR('CASH FLOW'!E27/'BALANCE SHEET'!C8,0)",
-      "FY2025": "=IFERROR('CASH FLOW'!F27/'BALANCE SHEET'!D8,0)",
-      "FY2025E": "=F5",
-      "FY2026E": "=G5",
-      "FY2027E": "=H5",
-      "FY2028E": "=I5",
-      "FY2029E": "=J5",
-      "FY2030E": "=K5"
-    },
-    "Common Dividends % of Net Income": {
-      "FY2021": "=IFERROR('CASH FLOW'!B41/'CASH FLOW'!B2,0)",
-      "FY2022": "=IFERROR('CASH FLOW'!C41/'CASH FLOW'!C2,0)",
-      "FY2023": "=IFERROR('CASH FLOW'!D41/'CASH FLOW'!D2,0)",
-      "FY2024": "=IFERROR('CASH FLOW'!E41/'CASH FLOW'!E2,0)",
-      "FY2025": "=IFERROR('CASH FLOW'!F41/'CASH FLOW'!F2,0)",
-      "FY2025E": "=F7",
-      "FY2026E": "=G7",
-      "FY2027E": "=H7",
-      "FY2028E": "=I7",
-      "FY2029E": "=J7",
-      "FY2030E": "=K7"
-    },
-    "D&A % of PP&E": {
-      "FY2023": "=IFERROR('CASH FLOW'!D3/'BALANCE SHEET'!B8,0)",
-      "FY2024": "=IFERROR('CASH FLOW'!E3/'BALANCE SHEET'!C8,0)",
-      "FY2025": "=IFERROR('CASH FLOW'!F3/'BALANCE SHEET'!D8,0)",
-      "FY2025E": "=F3",
-      "FY2026E": "=G3",
-      "FY2027E": "=H3",
-      "FY2028E": "=I3",
-      "FY2029E": "=J3",
-      "FY2030E": "=K3"
-    },
-    "Preferred Dividends % of Preferred Balance": {
-      "FY2025E": "=F6",
-      "FY2026E": "=G6",
-      "FY2027E": "=H6",
-      "FY2028E": "=I6",
-      "FY2029E": "=J6",
-      "FY2030E": "=K6"
-    },
-    "SBC $": {
-      "FY2021": "='CASH FLOW'!B10",
-      "FY2022": "='CASH FLOW'!C10",
-      "FY2023": "='CASH FLOW'!D10",
-      "FY2024": "='CASH FLOW'!E10",
-      "FY2025": "='CASH FLOW'!F10",
-      "FY2025E": "=F4",
-      "FY2026E": "=G4",
-      "FY2027E": "=H4",
-      "FY2028E": "=I4",
-      "FY2029E": "=J4",
-      "FY2030E": "=K4"
-    },
-    "Share Repurchases $": {
-      "FY2021": "='CASH FLOW'!B42",
-      "FY2022": "='CASH FLOW'!C42",
-      "FY2023": "='CASH FLOW'!D42",
-      "FY2024": "='CASH FLOW'!E42",
-      "FY2025": "='CASH FLOW'!F42",
-      "FY2025E": "=ASSUMPTIONS!$B$3",
-      "FY2026E": "=ASSUMPTIONS!$B$3",
-      "FY2027E": "=ASSUMPTIONS!$B$3",
-      "FY2028E": "=ASSUMPTIONS!$B$3",
-      "FY2029E": "=ASSUMPTIONS!$B$3",
-      "FY2030E": "=ASSUMPTIONS!$B$3"
-    }
-  },
-  "IS DRIVERS": {
-    "COGS % of Revenue": {
-      "FY2021": "=IFERROR('ANNL P&L'!B3/'ANNL P&L'!B2,0)",
-      "FY2022": "=IFERROR('ANNL P&L'!C3/'ANNL P&L'!C2,0)",
-      "FY2023": "=IFERROR('ANNL P&L'!D3/'ANNL P&L'!D2,0)",
-      "FY2024": "=IFERROR('ANNL P&L'!E3/'ANNL P&L'!E2,0)",
-      "FY2025": "=IFERROR('ANNL P&L'!F3/'ANNL P&L'!F2,0)",
-      "FY2025E": "=F3",
-      "FY2026E": "=G3",
-      "FY2027E": "=H3",
-      "FY2028E": "=I3",
-      "FY2029E": "=J3",
-      "FY2030E": "=K3"
-    },
-    "Effective Tax Rate %": {
-      "FY2025E": "=F8",
-      "FY2026E": "=G8",
-      "FY2027E": "=H8",
-      "FY2028E": "=I8",
-      "FY2029E": "=J8",
-      "FY2030E": "=K8"
-    },
-    "Foreign Currency Gain (Loss) $": {
-      "FY2025E": "=F6",
-      "FY2026E": "=G6",
-      "FY2027E": "=H6",
-      "FY2028E": "=I6",
-      "FY2029E": "=J6",
-      "FY2030E": "=K6"
-    },
-    "Interest Income (Expense) $": {
-      "FY2021": "='ANNL P&L'!B10",
-      "FY2022": "='ANNL P&L'!C10",
-      "FY2023": "='ANNL P&L'!D10",
-      "FY2024": "='ANNL P&L'!E10",
-      "FY2025": "='ANNL P&L'!F10",
-      "FY2025E": "=F5",
-      "FY2026E": "=G5",
-      "FY2027E": "=H5",
-      "FY2028E": "=I5",
-      "FY2029E": "=J5",
-      "FY2030E": "=K5"
-    },
-    "Other Income (Expense) $": {
-      "FY2025E": "=F7",
-      "FY2026E": "=G7",
-      "FY2027E": "=H7",
-      "FY2028E": "=I7",
-      "FY2029E": "=J7",
-      "FY2030E": "=K7"
-    },
-    "Revenue Growth %": {
-      "FY2022": "=IFERROR(('ANNL P&L'!C2-'ANNL P&L'!B2)/'ANNL P&L'!B2,0)",
-      "FY2023": "=IFERROR(('ANNL P&L'!D2-'ANNL P&L'!C2)/'ANNL P&L'!C2,0)",
-      "FY2024": "=IFERROR(('ANNL P&L'!E2-'ANNL P&L'!D2)/'ANNL P&L'!D2,0)",
-      "FY2025": "=IFERROR(('ANNL P&L'!F2-'ANNL P&L'!E2)/'ANNL P&L'!E2,0)"
-    },
-    "SG&A % of Revenue": {
-      "FY2021": "=IFERROR('ANNL P&L'!B5/'ANNL P&L'!B2,0)",
-      "FY2022": "=IFERROR('ANNL P&L'!C5/'ANNL P&L'!C2,0)",
-      "FY2023": "=IFERROR('ANNL P&L'!D5/'ANNL P&L'!D2,0)",
-      "FY2024": "=IFERROR('ANNL P&L'!E5/'ANNL P&L'!E2,0)",
-      "FY2025": "=IFERROR('ANNL P&L'!F5/'ANNL P&L'!F2,0)",
-      "FY2025E": "=F4",
-      "FY2026E": "=G4",
-      "FY2027E": "=H4",
-      "FY2028E": "=I4",
-      "FY2029E": "=J4",
-      "FY2030E": "=K4"
     }
   },
   "QTR BS": {
