@@ -96,6 +96,7 @@
         "interest income net",
         "net interest income",
         "net interest expense",
+        "net interest expense and other",
         "interest income",
         "investment income interest",
         "interest income on note receivable",
@@ -105,7 +106,8 @@
         "interest expense nonoperating",
         "interest and debt expense"
       ],
-      "filing_section": "non_operating"
+      "filing_section": "non_operating",
+      "us_gaap_concept": "InterestExpense"
     },
     {
       "rule_id": "GEN-IS-007",
@@ -362,10 +364,14 @@
         "trade receivables, net",
         "receivables net current",
         "accounts and note receivable-net",
-        "accounts and note receivable, net"
+        "accounts and note receivable, net",
+        "accounts and notes receivable, less allowance"
       ],
       "filing_section": "current_assets",
-      "us_gaap_concept": "AccountsReceivableNetCurrent"
+      "us_gaap_concept": "AccountsReceivableNetCurrent",
+      "us_gaap_concepts": [
+        "AccountsNotesAndLoansReceivableNetCurrent"
+      ]
     },
     {
       "rule_id": "GEN-BS-004",
@@ -1196,10 +1202,14 @@
         "deferred income taxes, net",
         "deferred income taxes",
         "deferred tax provision",
-        "(benefit) provision for deferred income taxes"
+        "(benefit) provision for deferred income taxes",
+        "deferred income taxes and other tax charges and credits"
       ],
       "filing_section": "operating",
-      "us_gaap_concept": "DeferredIncomeTaxExpenseBenefit"
+      "us_gaap_concept": "DeferredIncomeTaxExpenseBenefit",
+      "us_gaap_concepts": [
+        "DeferredIncomeTaxesAndTaxCredits"
+      ]
     },
     {
       "rule_id": "GEN-CF-009",
@@ -1283,13 +1293,15 @@
       "aliases": [
         "accounts payable",
         "accounts payable and accrued expenses",
+        "accounts payable and other current liabilities",
         "change in accounts payable",
         "increase (decrease) in accounts payable",
         "trade payables",
         "change in accounts payable and accrued and other liabilities",
         "accounts payable, accrued and other liabilities"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "IncreaseDecreaseInAccountsPayableAndAccruedLiabilities"
     },
     {
       "rule_id": "GEN-CF-015",
@@ -1425,11 +1437,15 @@
         "purchase of property and equipment",
         "purchases of property, plant and equipment",
         "capital expenditures",
+        "capital spending",
         "additions to property, plant and equipment",
         "capex"
       ],
       "filing_section": "investing",
-      "us_gaap_concept": "PaymentsToAcquirePropertyPlantAndEquipment"
+      "us_gaap_concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "us_gaap_concepts": [
+        "PaymentsToAcquireProductiveAssets"
+      ]
     },
     {
       "rule_id": "GEN-CF-025",
@@ -1711,10 +1727,14 @@
         "payments to acquire businesses net of cash acquired",
         "cash paid for acquisitions",
         "business acquisitions net of cash",
-        "acquisition of alani nutrition llc, net of cash acquired"
+        "acquisition of alani nutrition llc, net of cash acquired",
+        "acquisitions, net of cash acquired, investments in noncontrolled affiliates and purchases of intangible and other assets"
       ],
       "filing_section": "investing",
-      "us_gaap_concept": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      "us_gaap_concept": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+      "us_gaap_concepts": [
+        "PaymentsToAcquireBusinessesAndInterestInAffiliates"
+      ]
     },
     {
       "rule_id": "GEN-CF-043",
@@ -1724,10 +1744,14 @@
         "other investing activity",
         "other investing activities",
         "other investing activities, net",
+        "other investing, net",
         "payments for proceeds from investments"
       ],
       "filing_section": "investing",
-      "us_gaap_concept": "PaymentsForProceedsFromInvestments"
+      "us_gaap_concept": "PaymentsForProceedsFromInvestments",
+      "us_gaap_concepts": [
+        "PaymentsForProceedsFromOtherInvestingActivities"
+      ]
     },
     {
       "rule_id": "GEN-CF-044",
@@ -1793,10 +1817,15 @@
         "repayments of long term debt",
         "principal payments on long-term debt",
         "long-term debt repayments",
-        "payments on term loan"
+        "payments on term loan",
+        "debt redemptions",
+        "debt redemptions/cash tender offers"
       ],
       "filing_section": "financing",
-      "us_gaap_concept": "RepaymentsOfLongTermDebt"
+      "us_gaap_concept": "RepaymentsOfLongTermDebt",
+      "us_gaap_concepts": [
+        "ProceedsFromRepaymentsOfOtherLongTermDebt"
+      ]
     },
     {
       "rule_id": "GEN-CF-049",
@@ -2071,6 +2100,69 @@
         "contingent consideration payments"
       ],
       "us_gaap_concept": "PaymentForContingentConsiderationLiabilityFinancingActivities"
+    },
+    {
+      "rule_id": "GEN-CF-065",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Divestitures of Businesses",
+      "row_type": "line_item",
+      "filing_section": "investing",
+      "note": "Cash received from sale of business units, equity-method investees, or controlled affiliates. Counterpart canonical to GEN-CF-042 (acquisitions outflow). Universal across staples filers when M&A activity occurs.",
+      "aliases": [
+        "proceeds from divestitures",
+        "proceeds from divestiture of businesses",
+        "divestitures, sales of investments in noncontrolled affiliates and other assets",
+        "other divestitures, sales of investments in noncontrolled affiliates and other assets",
+        "proceeds from sale of subsidiaries"
+      ],
+      "us_gaap_concept": "ProceedsFromDivestitureOfBusinessesAndInterestsInAffiliates"
+    },
+    {
+      "rule_id": "GEN-CF-066",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Acquisition and Divestiture-Related Charges",
+      "row_type": "line_item",
+      "filing_section": "operating",
+      "note": "Non-cash CFO add-back for transaction expenses and gains/losses from M&A activity recognized on the IS. Counterpart to GEN-CF-067 which captures the cash payments piece.",
+      "aliases": [
+        "acquisition and divestiture-related charges",
+        "acquisition and divestiture-related charges/credits",
+        "transaction-related costs",
+        "merger-related costs",
+        "business combination transaction costs"
+      ],
+      "us_gaap_concept": "BusinessCombinationSeparatelyRecognizedTransactionsNetGainsAndLosses"
+    },
+    {
+      "rule_id": "GEN-CF-067",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash Payments for Acquisition and Divestiture Costs",
+      "row_type": "line_item",
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "note": "Cash outflows for transaction-related fees, integration costs, and severance from M&A activity. Counterpart to GEN-CF-066 (the non-cash charge add-back).",
+      "aliases": [
+        "cash payments for acquisition and divestiture-related charges",
+        "cash payments for merger-related costs",
+        "transaction cost payments",
+        "merger and integration payments"
+      ],
+      "us_gaap_concept": "PaymentsForMergerRelatedCosts"
+    },
+    {
+      "rule_id": "GEN-CF-068",
+      "model_sheet": "CASH FLOW",
+      "model_label": "ROU Assets Obtained in Exchange for Lease Obligations",
+      "memo": true,
+      "filing_section": "cash_other",
+      "note": "Supplemental non-cash disclosure: balance of operating-lease right-of-use assets recognized in the period in exchange for new lease liabilities. Universal across filers post-ASC-842 adoption. Memo-only — not summed into CFO/CFI/CFF, presented under non-cash supplemental disclosures.",
+      "aliases": [
+        "right-of-use assets obtained in exchange for lease obligations",
+        "right of use assets obtained in exchange for operating lease liabilities",
+        "rou assets obtained for new operating leases",
+        "operating lease assets obtained in exchange for operating lease liabilities"
+      ],
+      "us_gaap_concept": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability"
     }
   ]
 }

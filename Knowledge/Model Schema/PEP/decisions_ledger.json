@@ -3,7 +3,140 @@
   "_last_updated": "2026-04-27",
   "ticker": "PEP",
   "mappings": [],
-  "new_rows": [],
+  "new_rows": [
+    {
+      "rule_id": "PEP-CF-001",
+      "filing_term_normalized": "gain associated with the juice transaction",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Gain on Juice Transaction",
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "us_gaap_concepts": [
+        "pep:GainAssociatedWithTheJuiceTransaction"
+      ],
+      "note": "FY2024 divestiture of Tropicana / Naked / Izze juice business to PAI Partners (closed Q4 FY2024). Non-cash add-back removing the IS gain from CFO. PEP-specific (one-time event), so kept on ticker ledger rather than promoted to generic library."
+    },
+    {
+      "rule_id": "PEP-CF-002",
+      "filing_term_normalized": "proceeds associated with the juice transaction",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Proceeds from Juice Transaction",
+      "filing_section": "investing",
+      "sign_convention": "positive",
+      "us_gaap_concepts": [
+        "pep:ProceedsAssociatedWithTheJuiceTransaction"
+      ],
+      "note": "Cash received from the FY2024 sale of the juice business. Investing-section inflow. Paired with PEP-CF-001 (the non-cash add-back) and PEP-IS-001 (IS gain line)."
+    },
+    {
+      "rule_id": "PEP-IS-001",
+      "filing_term_normalized": "gain associated with the juice transaction",
+      "model_sheet": "ANNL P&L",
+      "new_row_label": "Gain on Juice Transaction",
+      "filing_section": "non_operating",
+      "sign_convention": "positive",
+      "us_gaap_concepts": [
+        "GainLossOnSaleOfBusiness"
+      ],
+      "note": "IS line for the FY2024 divestiture gain. Walker tags with us-gaap:GainLossOnSaleOfBusiness (not pep namespace) on the IS face. Non-operating section."
+    },
+    {
+      "rule_id": "PEP-CF-003",
+      "filing_term_normalized": "product recall-related impact",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Product Recall Impact",
+      "filing_section": "operating",
+      "us_gaap_concepts": [
+        "pep:ProductRecallRelatedImpact"
+      ],
+      "note": "Non-cash CFO add-back for the FY2024 Quaker Foods recall reserve. Paired with PEP-CF-004 (cash payments)."
+    },
+    {
+      "rule_id": "PEP-CF-004",
+      "filing_term_normalized": "cash payments for product recall-related impact",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Cash Payments for Product Recall",
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "us_gaap_concepts": [
+        "pep:PaymentsForProductRecallRelatedImpact"
+      ],
+      "note": "Cash outflow settling the FY2024 Quaker recall obligations. Counterpart to PEP-CF-003."
+    },
+    {
+      "rule_id": "PEP-CF-005",
+      "filing_term_normalized": "tax payments related to the tcj act",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Tax Payments Related to TCJ Act",
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "us_gaap_concepts": [
+        "pep:TaxpaymentsrelatedtotheTCJAct"
+      ],
+      "note": "Cash payments on the 2017 Tax Cuts and Jobs Act transition tax (8-year installment for accumulated foreign earnings). Final installments running through FY2025."
+    },
+    {
+      "rule_id": "PEP-CF-006",
+      "filing_term_normalized": "tax expense related to the tcj act",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Tax Expense Related to TCJ Act",
+      "filing_section": "operating",
+      "us_gaap_concepts": [
+        "pep:TaxCutsAndJobsActNoncurrentExpense"
+      ],
+      "note": "Non-cash CFO add-back for the IS tax expense recognized on the TCJ Act transition tax liability remeasurement. Distinct from PEP-CF-005 (cash payments)."
+    },
+    {
+      "rule_id": "PEP-CF-007",
+      "filing_term_normalized": "impairment and other charges",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Impairment and Other Charges",
+      "filing_section": "operating",
+      "us_gaap_concepts": [
+        "pep:ImpairmentAndOtherCharges",
+        "pep:ImpairmentAndOtherChargesRUCCBPIC"
+      ],
+      "note": "Non-cash CFO add-back for the bucketed impairment + restructuring + uncollectible receivable charges PEP groups under one line in the CF reconciliation. RUCCBPIC variant is the FY2024 quarterly disclosure tag for the same concept."
+    },
+    {
+      "rule_id": "PEP-CF-008",
+      "filing_term_normalized": "indirect tax impact",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Indirect Tax Impact",
+      "filing_section": "operating",
+      "us_gaap_concepts": [
+        "pep:IndirectTaxImpact"
+      ],
+      "note": "Non-cash CFO line for indirect tax (VAT, sales tax) reserve adjustments. Small dollar amounts, surfaces sporadically."
+    },
+    {
+      "rule_id": "PEP-CF-009",
+      "filing_term_normalized": "debt discharged via legal defeasance",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Debt Discharged via Legal Defeasance",
+      "filing_section": "cash_other",
+      "memo": true,
+      "us_gaap_concepts": [
+        "pep:DebtDischargedViaLegalDefeasance"
+      ],
+      "note": "Supplemental non-cash disclosure: senior notes legally defeased (cash transferred to a trustee that holds Treasuries to satisfy the bonds at maturity). Removes the bonds from PEP's BS without an immediate cash outflow on the CF financing section. Memo-only."
+    },
+    {
+      "rule_id": "PEP-CF-010",
+      "filing_term_normalized": "investment obtained for certain assets",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Investment Obtained for Celsius Stake",
+      "filing_section": "cash_other",
+      "memo": true,
+      "us_gaap_concepts": [
+        "pep:PurchaseCommitmentCelsius"
+      ],
+      "note": "Supplemental disclosure: Celsius Holdings preferred-stock investment received in exchange for distribution rights (FY2022 distribution agreement). Non-cash, memo-only."
+    }
+  ],
   "superseded_rule_ids": [],
-  "memo_rule_ids": []
+  "memo_rule_ids": [
+    "PEP-CF-009",
+    "PEP-CF-010"
+  ]
 }
