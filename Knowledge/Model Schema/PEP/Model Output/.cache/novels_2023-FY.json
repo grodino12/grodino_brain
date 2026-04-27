@@ -7,378 +7,6 @@
   },
   "novels": [
     {
-      "statement_type": "BS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Short-term investments",
-      "value": "292",
-      "raw_numeric_text": "292",
-      "section": "current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:ShortTermInvestments | ctx:instant:2023-12-30",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "short-term debt",
-          0.7027027027027026
-        ],
-        [
-          "short-term borrowings",
-          0.6511627906976745
-        ],
-        [
-          "short term borrowings",
-          0.6046511627906976
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Amortizable Intangible Assets, net",
-      "value": "1199",
-      "raw_numeric_text": "1,199",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:FiniteLivedIntangibleAssetsNet | ctx:instant:2023-12-30",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "intangible assets net",
-          0.7777777777777779
-        ],
-        [
-          "other intangible assets",
-          0.75
-        ],
-        [
-          "intangible assets-net",
-          0.7407407407407408
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Other Indefinite-Lived Intangible Assets",
-      "value": "13730",
-      "raw_numeric_text": "13,730",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:IndefiniteLivedIntangibleAssetsExcludingGoodwill | ctx:instant:2023-12-30",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "other intangible assets",
-          0.7301587301587302
-        ],
-        [
-          "trademarks and other intangible assets net",
-          0.6341463414634146
-        ],
-        [
-          "other intangibles net",
-          0.6229508196721312
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Investments in Noncontrolled Affiliates",
-      "value": "2714",
-      "raw_numeric_text": "2,714",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:EquityMethodInvestments | ctx:instant:2023-12-30",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "noncontrolling interest",
-          0.5161290322580645
-        ],
-        [
-          "noncontrolling interests",
-          0.5079365079365079
-        ],
-        [
-          "non-controlling interest",
-          0.5079365079365079
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Accounts payable and other current liabilities",
-      "value": "25137",
-      "raw_numeric_text": "25,137",
-      "section": "current_liabilities",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrent | ctx:instant:2023-12-30",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "accrued expenses and other current liabilities",
-          0.8043478260869565
-        ],
-        [
-          "accrued and other liabilities",
-          0.72
-        ],
-        [
-          "other current liabilities",
-          0.704225352112676
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Repurchased common stock, in excess of par value ( 493  and  490  shares, respectively)",
-      "value": "-40282",
-      "raw_numeric_text": "40,282",
-      "section": "equity",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:TreasuryStockValue | ctx:instant:2023-12-30",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "common stock no par value",
-          0.6944444444444444
-        ],
-        [
-          "capital in excess of par value",
-          0.6753246753246753
-        ],
-        [
-          "common stock par value",
-          0.6376811594202898
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Short-term investments",
-      "value": "394",
-      "raw_numeric_text": "394",
-      "section": "current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:ShortTermInvestments | ctx:instant:2022-12-31",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "short-term debt",
-          0.7027027027027026
-        ],
-        [
-          "short-term borrowings",
-          0.6511627906976745
-        ],
-        [
-          "short term borrowings",
-          0.6046511627906976
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Amortizable Intangible Assets, net",
-      "value": "1277",
-      "raw_numeric_text": "1,277",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:FiniteLivedIntangibleAssetsNet | ctx:instant:2022-12-31",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "intangible assets net",
-          0.7777777777777779
-        ],
-        [
-          "other intangible assets",
-          0.75
-        ],
-        [
-          "intangible assets-net",
-          0.7407407407407408
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Other Indefinite-Lived Intangible Assets",
-      "value": "14309",
-      "raw_numeric_text": "14,309",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:IndefiniteLivedIntangibleAssetsExcludingGoodwill | ctx:instant:2022-12-31",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "other intangible assets",
-          0.7301587301587302
-        ],
-        [
-          "trademarks and other intangible assets net",
-          0.6341463414634146
-        ],
-        [
-          "other intangibles net",
-          0.6229508196721312
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Investments in Noncontrolled Affiliates",
-      "value": "3073",
-      "raw_numeric_text": "3,073",
-      "section": "non_current_assets",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:EquityMethodInvestments | ctx:instant:2022-12-31",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "noncontrolling interest",
-          0.5161290322580645
-        ],
-        [
-          "noncontrolling interests",
-          0.5079365079365079
-        ],
-        [
-          "non-controlling interest",
-          0.5079365079365079
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Accounts payable and other current liabilities",
-      "value": "23371",
-      "raw_numeric_text": "23,371",
-      "section": "current_liabilities",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrent | ctx:instant:2022-12-31",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "accrued expenses and other current liabilities",
-          0.8043478260869565
-        ],
-        [
-          "accrued and other liabilities",
-          0.72
-        ],
-        [
-          "other current liabilities",
-          0.704225352112676
-        ]
-      ]
-    },
-    {
-      "statement_type": "BS",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Repurchased common stock, in excess of par value ( 493  and  490  shares, respectively)",
-      "value": "-39506",
-      "raw_numeric_text": "39,506",
-      "section": "equity",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:TreasuryStockValue | ctx:instant:2022-12-31",
-        "note": "iXBRL HTM | BS"
-      },
-      "nearest_matches": [
-        [
-          "common stock no par value",
-          0.6944444444444444
-        ],
-        [
-          "capital in excess of par value",
-          0.6753246753246753
-        ],
-        [
-          "common stock par value",
-          0.6376811594202898
-        ]
-      ]
-    },
-    {
       "statement_type": "IS",
       "period_label": "FY2023",
       "period_end_date": "2023-12-30",
@@ -1012,99 +640,6 @@
       "period_label": "FY2023",
       "period_end_date": "2023-12-30",
       "fiscal_year": 2023,
-      "raw_filing_label": "Operating lease right-of-use asset amortization",
-      "value": "570",
-      "raw_numeric_text": "570",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:OperatingLeaseRightOfUseAssetAmortizationExpense | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "change in right of use and lease obligation-net",
-          0.574468085106383
-        ],
-        [
-          "depreciation and amortization",
-          0.5526315789473684
-        ],
-        [
-          "change in right of use asset and lease liability-net",
-          0.5454545454545454
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Restructuring and impairment charges",
-      "value": "445",
-      "raw_numeric_text": "445",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:RestructuringCostsAndAssetImpairmentCharges | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "asset impairment charges",
-          0.7
-        ],
-        [
-          "impairment charges",
-          0.6666666666666667
-        ],
-        [
-          "indefinite-lived intangible asset impairment charge",
-          0.5747126436781609
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Cash payments for restructuring charges",
-      "value": "-434",
-      "raw_numeric_text": "434",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsForRestructuring | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "cash payments for interest",
-          0.7076923076923076
-        ],
-        [
-          "proceeds from payments for other financing activities",
-          0.5652173913043479
-        ],
-        [
-          "cash paid for interest",
-          0.5573770491803278
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
       "raw_filing_label": "Acquisition and divestiture-related charges",
       "value": "41",
       "raw_numeric_text": "41",
@@ -1122,12 +657,12 @@
           0.5617977528089888
         ],
         [
-          "acquisitions net of cash acquired",
-          0.5526315789473684
+          "restructuring and impairment charges",
+          0.5569620253164558
         ],
         [
-          "acquisition of alani nutrition llc net of cash acquired",
-          0.5306122448979591
+          "acquisitions net of cash acquired",
+          0.5526315789473684
         ]
       ]
     },
@@ -1149,70 +684,16 @@
       },
       "nearest_matches": [
         [
+          "cash payments for restructuring charges",
+          0.64
+        ],
+        [
+          "payments of acquisition-related contingent consideration",
+          0.5982905982905983
+        ],
+        [
           "cash payments for interest",
           0.5747126436781609
-        ],
-        [
-          "cash paid for acquisitions",
-          0.5517241379310345
-        ],
-        [
-          "payments to acquire businesses net of cash acquired",
-          0.5357142857142857
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Pension and retiree medical plan expenses",
-      "value": "150",
-      "raw_numeric_text": "150",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PensionAndOtherPostretirementBenefitExpense | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "depreciation and amortization expense",
-          0.5897435897435898
-        ],
-        [
-          "increase decrease in prepaid expenses",
-          0.5641025641025641
-        ],
-        [
-          "increase decrease in accrued expenses",
-          0.5384615384615384
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Pension and retiree medical plan contributions",
-      "value": "-410",
-      "raw_numeric_text": "410",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PensionAndOtherPostretirementBenefitContributions | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "payments on finance lease obligations",
-          0.5060240963855422
         ]
       ]
     },
@@ -1377,117 +858,6 @@
       "period_label": "FY2023",
       "period_end_date": "2023-12-30",
       "fiscal_year": 2023,
-      "raw_filing_label": "More than three months - purchases",
-      "value": "-555",
-      "raw_numeric_text": "555",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsToAcquireShortTermInvestments | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "common stock repurchases",
-          0.5517241379310345
-        ],
-        [
-          "treasury stock purchases",
-          0.5517241379310345
-        ],
-        [
-          "share repurchases",
-          0.5490196078431373
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "More than three months - maturities",
-      "value": "556",
-      "raw_numeric_text": "556",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "net change in other operating assets and liabilities",
-          0.5057471264367817
-        ],
-        [
-          "other current liabilities",
-          0.5
-        ],
-        [
-          "change in other long-term liabilities",
-          0.5
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "More than three months - sales",
-      "value": "12",
-      "raw_numeric_text": "12",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "pep:ProceedsFromSaleOfInvestmentsMoreThanThreeMonthsSales | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": []
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Three months or less, net",
-      "value": "3",
-      "raw_numeric_text": "3",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "pep:PaymentsForProceedsFromShortTermInvestmentsThreeMonthsOrLessNet | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "other long-term assets",
-          0.5652173913043479
-        ],
-        [
-          "repayments of long-term debt",
-          0.5384615384615384
-        ],
-        [
-          "repayments of long term debt",
-          0.5384615384615384
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
       "raw_filing_label": "Other investing, net",
       "value": "48",
       "raw_numeric_text": "48",
@@ -1511,33 +881,6 @@
         [
           "other investing activities",
           0.7555555555555555
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2023",
-      "period_end_date": "2023-12-30",
-      "fiscal_year": 2023,
-      "raw_filing_label": "Withholding tax payments on restricted stock units (RSUs) and performance stock units (PSUs) converted",
-      "value": "-140",
-      "raw_numeric_text": "140",
-      "section": "financing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsRelatedToTaxWithholdingForShareBasedCompensation | ctx:duration:2023-12-30",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "tax withholdings on vested restricted stock units",
-          0.5306122448979591
-        ],
-        [
-          "payments of dividends preferred stock and preference stock",
-          0.5256410256410257
         ]
       ]
     },
@@ -1604,99 +947,6 @@
       "period_label": "FY2022",
       "period_end_date": "2022-12-31",
       "fiscal_year": 2022,
-      "raw_filing_label": "Operating lease right-of-use asset amortization",
-      "value": "517",
-      "raw_numeric_text": "517",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:OperatingLeaseRightOfUseAssetAmortizationExpense | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "change in right of use and lease obligation-net",
-          0.574468085106383
-        ],
-        [
-          "depreciation and amortization",
-          0.5526315789473684
-        ],
-        [
-          "change in right of use asset and lease liability-net",
-          0.5454545454545454
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Restructuring and impairment charges",
-      "value": "411",
-      "raw_numeric_text": "411",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:RestructuringCostsAndAssetImpairmentCharges | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "asset impairment charges",
-          0.7
-        ],
-        [
-          "impairment charges",
-          0.6666666666666667
-        ],
-        [
-          "indefinite-lived intangible asset impairment charge",
-          0.5747126436781609
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Cash payments for restructuring charges",
-      "value": "-224",
-      "raw_numeric_text": "224",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsForRestructuring | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "cash payments for interest",
-          0.7076923076923076
-        ],
-        [
-          "proceeds from payments for other financing activities",
-          0.5652173913043479
-        ],
-        [
-          "cash paid for interest",
-          0.5573770491803278
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
       "raw_filing_label": "Acquisition and divestiture-related charges",
       "value": "80",
       "raw_numeric_text": "80",
@@ -1714,12 +964,12 @@
           0.5617977528089888
         ],
         [
-          "acquisitions net of cash acquired",
-          0.5526315789473684
+          "restructuring and impairment charges",
+          0.5569620253164558
         ],
         [
-          "acquisition of alani nutrition llc net of cash acquired",
-          0.5306122448979591
+          "acquisitions net of cash acquired",
+          0.5526315789473684
         ]
       ]
     },
@@ -1741,70 +991,16 @@
       },
       "nearest_matches": [
         [
+          "cash payments for restructuring charges",
+          0.64
+        ],
+        [
+          "payments of acquisition-related contingent consideration",
+          0.5982905982905983
+        ],
+        [
           "cash payments for interest",
           0.5747126436781609
-        ],
-        [
-          "cash paid for acquisitions",
-          0.5517241379310345
-        ],
-        [
-          "payments to acquire businesses net of cash acquired",
-          0.5357142857142857
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Pension and retiree medical plan expenses",
-      "value": "419",
-      "raw_numeric_text": "419",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PensionAndOtherPostretirementBenefitExpense | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "depreciation and amortization expense",
-          0.5897435897435898
-        ],
-        [
-          "increase decrease in prepaid expenses",
-          0.5641025641025641
-        ],
-        [
-          "increase decrease in accrued expenses",
-          0.5384615384615384
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Pension and retiree medical plan contributions",
-      "value": "-384",
-      "raw_numeric_text": "384",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PensionAndOtherPostretirementBenefitContributions | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "payments on finance lease obligations",
-          0.5060240963855422
         ]
       ]
     },
@@ -2027,99 +1223,6 @@
       "period_label": "FY2022",
       "period_end_date": "2022-12-31",
       "fiscal_year": 2022,
-      "raw_filing_label": "More than three months - purchases",
-      "value": "-291",
-      "raw_numeric_text": "291",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsToAcquireShortTermInvestments | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "common stock repurchases",
-          0.5517241379310345
-        ],
-        [
-          "treasury stock purchases",
-          0.5517241379310345
-        ],
-        [
-          "share repurchases",
-          0.5490196078431373
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "More than three months - maturities",
-      "value": "150",
-      "raw_numeric_text": "150",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "net change in other operating assets and liabilities",
-          0.5057471264367817
-        ],
-        [
-          "other current liabilities",
-          0.5
-        ],
-        [
-          "change in other long-term liabilities",
-          0.5
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Three months or less, net",
-      "value": "24",
-      "raw_numeric_text": "24",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "pep:PaymentsForProceedsFromShortTermInvestmentsThreeMonthsOrLessNet | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "other long-term assets",
-          0.5652173913043479
-        ],
-        [
-          "repayments of long-term debt",
-          0.5384615384615384
-        ],
-        [
-          "repayments of long term debt",
-          0.5384615384615384
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
       "raw_filing_label": "Other investing, net",
       "value": "11",
       "raw_numeric_text": "11",
@@ -2179,126 +1282,6 @@
     },
     {
       "statement_type": "CF",
-      "period_label": "FY2022",
-      "period_end_date": "2022-12-31",
-      "fiscal_year": 2022,
-      "raw_filing_label": "Withholding tax payments on restricted stock units (RSUs) and performance stock units (PSUs) converted",
-      "value": "-107",
-      "raw_numeric_text": "107",
-      "section": "financing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsRelatedToTaxWithholdingForShareBasedCompensation | ctx:duration:2022-12-31",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "tax withholdings on vested restricted stock units",
-          0.5306122448979591
-        ],
-        [
-          "payments of dividends preferred stock and preference stock",
-          0.5256410256410257
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Operating lease right-of-use asset amortization",
-      "value": "505",
-      "raw_numeric_text": "505",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:OperatingLeaseRightOfUseAssetAmortizationExpense | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "change in right of use and lease obligation-net",
-          0.574468085106383
-        ],
-        [
-          "depreciation and amortization",
-          0.5526315789473684
-        ],
-        [
-          "change in right of use asset and lease liability-net",
-          0.5454545454545454
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Restructuring and impairment charges",
-      "value": "247",
-      "raw_numeric_text": "247",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:RestructuringCostsAndAssetImpairmentCharges | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "asset impairment charges",
-          0.7
-        ],
-        [
-          "impairment charges",
-          0.6666666666666667
-        ],
-        [
-          "indefinite-lived intangible asset impairment charge",
-          0.5747126436781609
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Cash payments for restructuring charges",
-      "value": "-256",
-      "raw_numeric_text": "256",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsForRestructuring | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "cash payments for interest",
-          0.7076923076923076
-        ],
-        [
-          "proceeds from payments for other financing activities",
-          0.5652173913043479
-        ],
-        [
-          "cash paid for interest",
-          0.5573770491803278
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
       "period_label": "FY2021",
       "period_end_date": "2021-12-25",
       "fiscal_year": 2021,
@@ -2319,12 +1302,12 @@
           0.5617977528089888
         ],
         [
-          "acquisitions net of cash acquired",
-          0.5526315789473684
+          "restructuring and impairment charges",
+          0.5569620253164558
         ],
         [
-          "acquisition of alani nutrition llc net of cash acquired",
-          0.5306122448979591
+          "acquisitions net of cash acquired",
+          0.5526315789473684
         ]
       ]
     },
@@ -2346,70 +1329,16 @@
       },
       "nearest_matches": [
         [
+          "cash payments for restructuring charges",
+          0.64
+        ],
+        [
+          "payments of acquisition-related contingent consideration",
+          0.5982905982905983
+        ],
+        [
           "cash payments for interest",
           0.5747126436781609
-        ],
-        [
-          "cash paid for acquisitions",
-          0.5517241379310345
-        ],
-        [
-          "payments to acquire businesses net of cash acquired",
-          0.5357142857142857
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Pension and retiree medical plan expenses",
-      "value": "123",
-      "raw_numeric_text": "123",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PensionAndOtherPostretirementBenefitExpense | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "depreciation and amortization expense",
-          0.5897435897435898
-        ],
-        [
-          "increase decrease in prepaid expenses",
-          0.5641025641025641
-        ],
-        [
-          "increase decrease in accrued expenses",
-          0.5384615384615384
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Pension and retiree medical plan contributions",
-      "value": "-785",
-      "raw_numeric_text": "785",
-      "section": "operating",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PensionAndOtherPostretirementBenefitContributions | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "payments on finance lease obligations",
-          0.5060240963855422
         ]
       ]
     },
@@ -2601,68 +1530,6 @@
       "period_label": "FY2021",
       "period_end_date": "2021-12-25",
       "fiscal_year": 2021,
-      "raw_filing_label": "More than three months - maturities",
-      "value": "1135",
-      "raw_numeric_text": "1,135",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "net change in other operating assets and liabilities",
-          0.5057471264367817
-        ],
-        [
-          "other current liabilities",
-          0.5
-        ],
-        [
-          "change in other long-term liabilities",
-          0.5
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Three months or less, net",
-      "value": "-58",
-      "raw_numeric_text": "58",
-      "section": "investing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "pep:PaymentsForProceedsFromShortTermInvestmentsThreeMonthsOrLessNet | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "other long-term assets",
-          0.5652173913043479
-        ],
-        [
-          "repayments of long-term debt",
-          0.5384615384615384
-        ],
-        [
-          "repayments of long term debt",
-          0.5384615384615384
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
       "raw_filing_label": "Other investing, net",
       "value": "5",
       "raw_numeric_text": "5",
@@ -2717,64 +1584,6 @@
         [
           "net increase in cash and cash equivalents",
           0.5
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Payments of acquisition-related contingent consideration",
-      "value": "-773",
-      "raw_numeric_text": "773",
-      "section": "financing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentForContingentConsiderationLiabilityFinancingActivities | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "remeasurement of contingent consideration",
-          0.6804123711340206
-        ],
-        [
-          "change in fair value of contingent consideration",
-          0.673076923076923
-        ],
-        [
-          "change in contingent consideration",
-          0.6666666666666667
-        ]
-      ]
-    },
-    {
-      "statement_type": "CF",
-      "period_label": "FY2021",
-      "period_end_date": "2021-12-25",
-      "fiscal_year": 2021,
-      "raw_filing_label": "Withholding tax payments on restricted stock units (RSUs) and performance stock units (PSUs) converted",
-      "value": "-92",
-      "raw_numeric_text": "92",
-      "section": "financing",
-      "subsection_context": null,
-      "citation": {
-        "source_path": "2023-FY\\filings\\PEP_2023-12-30_10-K.htm",
-        "page": 1,
-        "line_hint": "us-gaap:PaymentsRelatedToTaxWithholdingForShareBasedCompensation | ctx:duration:2021-12-25",
-        "note": "iXBRL HTM | CF"
-      },
-      "nearest_matches": [
-        [
-          "tax withholdings on vested restricted stock units",
-          0.5306122448979591
-        ],
-        [
-          "payments of dividends preferred stock and preference stock",
-          0.5256410256410257
         ]
       ]
     }

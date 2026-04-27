@@ -441,6 +441,27 @@
       "us_gaap_concept": "PropertyPlantAndEquipmentNet"
     },
     {
+      "rule_id": "GEN-BS-046",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Net PP&E",
+      "memo": true,
+      "note": "PP&E gross-and-accumulated-depreciation detail. Some filers (PEP) show gross PP&E + accumulated depreciation as separate BS lines that net to PP&E Net. We render only the net (GEN-BS-007) on the workbook by convention; this memo bucket absorbs the detail concepts so they don't surface as novels and don't double-count into the BS. Shared model_label 'Net PP&E' intentional — same row identity for cross-filing dedup, just at finer granularity we don't model.",
+      "aliases": [
+        "property plant and equipment gross",
+        "property, plant and equipment, gross",
+        "property, plant and equipment, at cost",
+        "property and equipment, gross",
+        "less: accumulated depreciation",
+        "accumulated depreciation",
+        "accumulated depreciation and amortization"
+      ],
+      "us_gaap_concepts": [
+        "PropertyPlantAndEquipmentGross",
+        "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment"
+      ],
+      "filing_section": "non_current_assets"
+    },
+    {
       "rule_id": "GEN-BS-008",
       "model_sheet": "BALANCE SHEET",
       "model_label": "Deferred Tax Assets",
@@ -498,7 +519,7 @@
       "us_gaap_concept": "NotesAndLoansReceivableNetNoncurrent"
     },
     {
-      "rule_id": "GEN-BS-045",
+      "rule_id": "GEN-BS-047",
       "model_sheet": "BALANCE SHEET",
       "model_label": "Equity Method Investments",
       "filing_section": "non_current_assets",
@@ -1915,16 +1936,141 @@
     {
       "rule_id": "GEN-CF-057",
       "model_sheet": "CASH FLOW",
-      "model_label": "Proceeds from Sale of Short-Term Investments",
+      "model_label": "Net Change in Short-Term Investments",
       "row_type": "line_item",
+      "note": "Net cash flow from short-term investing activity (purchases, sales, maturities). Some filers (CELH, KO) report only proceeds; others (PEP) split into multiple maturity-bucket lines. All variants route to this single canonical so the workbook shows one consolidated row — model-write's row consolidation by canonical_label sums purchases (negative) and sales/maturities (positive) into the net change.",
       "aliases": [
         "proceeds from sales and maturities of short-term investments",
         "proceeds from sale of short-term investments",
         "proceeds from sale and maturity of short-term investments",
-        "proceeds from short-term investments"
+        "proceeds from short-term investments",
+        "purchases of short-term investments",
+        "more than three months - maturities",
+        "more than three months - purchases",
+        "more than three months - sales",
+        "three months or less, net"
       ],
       "filing_section": "investing",
-      "us_gaap_concept": "ProceedsFromSaleOfShortTermInvestments"
+      "us_gaap_concept": "ProceedsFromSaleOfShortTermInvestments",
+      "us_gaap_concepts": [
+        "PaymentsToAcquireShortTermInvestments",
+        "ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities",
+        "PaymentsForProceedsFromShortTermInvestmentsThreeMonthsOrLessNet",
+        "ProceedsFromSaleOfInvestmentsMoreThanThreeMonthsSales"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-058",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Operating Lease ROU Asset Amortization",
+      "row_type": "line_item",
+      "filing_section": "operating",
+      "note": "Non-cash CFO add-back for amortization of operating lease right-of-use assets — the operating-lease counterpart to the depreciation add-back. Distinct from finance-lease principal payments which sit in financing.",
+      "aliases": [
+        "operating lease right-of-use asset amortization",
+        "operating lease right of use asset amortization",
+        "amortization of operating lease right-of-use assets",
+        "amortization of operating lease assets"
+      ],
+      "us_gaap_concept": "OperatingLeaseRightOfUseAssetAmortizationExpense"
+    },
+    {
+      "rule_id": "GEN-CF-059",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Pension and Postretirement Benefits Expense",
+      "row_type": "line_item",
+      "filing_section": "operating",
+      "note": "Non-cash CFO add-back for the expense recognized on pension and other postretirement benefit plans (service cost + interest cost + expected return + amortizations). Cash outflows for plan funding sit on a separate line (GEN-CF-060 Pension Contributions).",
+      "aliases": [
+        "pension and retiree medical plan expense",
+        "pension and retiree medical plan expenses",
+        "pension and retiree medical plan expense/(income)",
+        "pension and other postretirement benefit expense",
+        "pension expense",
+        "net periodic pension cost"
+      ],
+      "us_gaap_concept": "PensionAndOtherPostretirementBenefitExpense"
+    },
+    {
+      "rule_id": "GEN-CF-060",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Pension and Postretirement Benefits Contributions",
+      "row_type": "line_item",
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "note": "Cash outflow for funding pension and OPEB plans. Operating-section CF use of cash. Distinct from the non-cash expense add-back (GEN-CF-059).",
+      "aliases": [
+        "pension and retiree medical plan contributions",
+        "pension and other postretirement benefit contributions",
+        "pension contributions",
+        "contributions to pension plans"
+      ],
+      "us_gaap_concept": "PensionAndOtherPostretirementBenefitContributions"
+    },
+    {
+      "rule_id": "GEN-CF-061",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Restructuring and Asset Impairment Charges",
+      "row_type": "line_item",
+      "filing_section": "operating",
+      "note": "Non-cash CFO add-back for restructuring + asset impairment expense recognized on the IS. Cash payments for restructuring (employee severance, exit costs paid in cash) flow through GEN-CF-062.",
+      "aliases": [
+        "restructuring and impairment charges",
+        "restructuring charges",
+        "restructuring and asset impairment charges",
+        "restructuring costs",
+        "restructuring and impairment"
+      ],
+      "us_gaap_concept": "RestructuringCostsAndAssetImpairmentCharges"
+    },
+    {
+      "rule_id": "GEN-CF-062",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Cash Payments for Restructuring",
+      "row_type": "line_item",
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "note": "Cash outflow paid in the period to settle restructuring obligations recognized in prior or current periods. Counterpart to GEN-CF-061 (the non-cash charge add-back).",
+      "aliases": [
+        "cash payments for restructuring charges",
+        "cash payments for restructuring",
+        "payments for restructuring",
+        "restructuring payments"
+      ],
+      "us_gaap_concept": "PaymentsForRestructuring"
+    },
+    {
+      "rule_id": "GEN-CF-063",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Tax Withholdings on RSU/PSU Settlement",
+      "row_type": "line_item",
+      "filing_section": "financing",
+      "sign_convention": "negative",
+      "note": "Cash paid by the issuer to tax authorities to satisfy employee withholding obligations on net-share-settlement of RSUs/PSUs. Universal across staples filers (PEP, KO, COST, etc.).",
+      "aliases": [
+        "withholding tax payments on restricted stock units (rsus) and performance stock units (psus) converted",
+        "tax withholdings on vested restricted stock units",
+        "payments for taxes related to net share settlement of equity awards",
+        "tax withholding payments",
+        "withholding taxes on share-based payments"
+      ],
+      "us_gaap_concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation"
+    },
+    {
+      "rule_id": "GEN-CF-064",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Payments of Contingent Consideration",
+      "row_type": "line_item",
+      "filing_section": "financing",
+      "sign_convention": "negative",
+      "note": "Cash settlement of an acquisition earnout (ASC 805 contingent consideration). Financing-section by GAAP convention for the portion settled at acquisition-date fair value; excess flows through operating. Most filers report the gross financing component on this line.",
+      "aliases": [
+        "payments of acquisition-related contingent consideration",
+        "payment of contingent consideration",
+        "settlement of contingent consideration",
+        "contingent consideration payments"
+      ],
+      "us_gaap_concept": "PaymentForContingentConsiderationLiabilityFinancingActivities"
     }
   ]
 }
