@@ -181,15 +181,25 @@ class LibraryEntry(BaseModel):
     model_sheet: str
     model_label: str
     aliases: list[str] = Field(default_factory=list)
-    # Optional explicit us-gaap concept (LOCAL NAME, no namespace prefix —
+    # Optional explicit us-gaap concept(s) (LOCAL NAME, no namespace prefix —
     # e.g. "CashAndCashEquivalentsAtCarryingValue", not
     # "us-gaap:CashAndCashEquivalentsAtCarryingValue"). When set, the iXBRL
     # walker can route a row to this canonical via `match_raw_item`'s concept
     # fallback when the row's filer-rendered label matches no alias. The
     # walker passes `f.local_name` and we compare exactly — no CamelCase
     # splitting, no fuzz, no namespace inference. Multiple canonicals must
-    # NOT declare the same us_gaap_concept (load-time guard).
+    # NOT declare the same concept on the same sheet group (load-time guard).
+    #
+    # Two field shapes:
+    # - `us_gaap_concept` (singular): one canonical pulls in one concept. The
+    #   common case (47/91 entries today).
+    # - `us_gaap_concepts` (plural): one canonical pulls in multiple concepts.
+    #   Used for memo buckets where several concepts conceptually share a
+    #   model_label — e.g. GEN-BS-038 Inventories collapses
+    #   {InventoryRawMaterials, InventoryWorkInProcess, InventoryFinishedGoods}
+    #   into one informational row.
     us_gaap_concept: str | None = None
+    us_gaap_concepts: list[str] = Field(default_factory=list)
     filing_section: Section | None = None
     filing_subsection: str | None = None
     sign_convention: SignConvention | None = None
@@ -295,25 +305,35 @@ def build_concept_index(library: dict) -> dict[tuple[str, str], dict]:
     splitting, no fuzz, no normalization.
 
     PDF path passes `concept=None`, so this index is never consulted on
-    PDF inputs. Library entries without `us_gaap_concept` are not
-    indexed — the fallback simply doesn't fire on their concepts.
+    PDF inputs. Library entries without `us_gaap_concept` /
+    `us_gaap_concepts` are not indexed — the fallback simply doesn't fire
+    on their concepts.
+
+    An entry may declare a single concept via `us_gaap_concept` OR a list
+    via `us_gaap_concepts`; both feed into the same index. Used together,
+    every concept (singular + each in the plural list) is enrolled.
     """
     index: dict[tuple[str, str], dict] = {}
     for entry in library.get("mappings", []):
-        concept = entry.get("us_gaap_concept")
-        if not concept:
+        concepts: list[str] = []
+        single = entry.get("us_gaap_concept")
+        if single:
+            concepts.append(single)
+        concepts.extend(entry.get("us_gaap_concepts", []))
+        if not concepts:
             continue
         sheet_grp = _sheet_group(entry["model_sheet"])
-        key = (concept, sheet_grp)
-        if key in index:
-            existing = index[key]
-            raise ValueError(
-                f"us_gaap_concept {concept!r} on sheet group {sheet_grp!r} "
-                f"declared by both {existing['rule_id']!r} and "
-                f"{entry['rule_id']!r} — each (concept, statement) pair must "
-                f"map to exactly one canonical."
-            )
-        index[key] = _entry_canonical(entry)
+        for concept in concepts:
+            key = (concept, sheet_grp)
+            if key in index:
+                existing = index[key]
+                raise ValueError(
+                    f"us_gaap_concept {concept!r} on sheet group {sheet_grp!r} "
+                    f"declared by both {existing['rule_id']!r} and "
+                    f"{entry['rule_id']!r} — each (concept, statement) pair must "
+                    f"map to exactly one canonical."
+                )
+            index[key] = _entry_canonical(entry)
     return index
 
 
