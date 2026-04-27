@@ -10493,11 +10493,11 @@
     },
     {
       "rule_id": "IS-2 @ Q2 FY2022",
-      "expected": "674",
+      "expected": "7344",
       "actual": "7344",
-      "gap": "6670",
-      "severity": "fail",
-      "message": "Operating Income (7344) = GP (19577) + signed opex (-18903 across 3 rows)"
+      "gap": "0",
+      "severity": "pass",
+      "message": "Operating Income (7344) = GP (19577) + signed opex (-12233 across 3 rows)"
     },
     {
       "rule_id": "IS-3 @ Q2 FY2022",
@@ -10517,11 +10517,11 @@
     },
     {
       "rule_id": "IS-5 @ Q2 FY2022",
-      "expected": "1611",
+      "expected": "5719",
       "actual": "5719",
-      "gap": "4108",
-      "severity": "fail",
-      "message": "Net Income (5719) end-to-end = Rev (36425) + cost (-16848) + opex (-18903) + non-op (-344) + tax (1281)"
+      "gap": "0",
+      "severity": "pass",
+      "message": "Net Income (5719) end-to-end = Rev (36425) + cost (-16848) + opex (-12233) + non-op (-344) + tax (-1281)"
     },
     {
       "rule_id": "CF-1 @ Q2 FY2023",
@@ -10588,5 +10588,5 @@
       "message": "CFF = sum of 9 financing line items"
     }
   ],
-  "passed": false
+  "passed": true
 }
