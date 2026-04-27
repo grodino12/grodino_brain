@@ -1,16 +1,18 @@
 {
-  "_notes": "PEP decisions ledger. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Per the 2026-04-25 variant collapse, model_sheet is informational; the actual sheet routed to at write time comes from SHEET_NAME[(filing_type, statement_type)] in reconcile.",
+  "_notes": "PEP decisions ledger. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Per the 2026-04-25 variant collapse, model_sheet is informational; the actual sheet routed to at write time comes from SHEET_NAME[(filing_type, statement_type)] in reconcile. Ticker-ledger aliases must match what `normalize_label` produces (lowercase, articles 'the'/'our' stripped, trailing parens stripped). The us_gaap_concepts field is informational only on ticker entries today — concept-fallback runs against the generic library only — so the alias list must cover every label variant PEP renders.",
   "_last_updated": "2026-04-27",
   "ticker": "PEP",
   "mappings": [],
   "new_rows": [
     {
       "rule_id": "PEP-CF-001",
-      "filing_term_normalized": "gain associated with the juice transaction",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Gain on Juice Transaction",
       "filing_section": "operating",
       "sign_convention": "negative",
+      "aliases": [
+        "gain associated with juice transaction"
+      ],
       "us_gaap_concepts": [
         "pep:GainAssociatedWithTheJuiceTransaction"
       ],
@@ -18,11 +20,13 @@
     },
     {
       "rule_id": "PEP-CF-002",
-      "filing_term_normalized": "proceeds associated with the juice transaction",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Proceeds from Juice Transaction",
       "filing_section": "investing",
       "sign_convention": "positive",
+      "aliases": [
+        "proceeds associated with juice transaction"
+      ],
       "us_gaap_concepts": [
         "pep:ProceedsAssociatedWithTheJuiceTransaction"
       ],
@@ -30,11 +34,13 @@
     },
     {
       "rule_id": "PEP-IS-001",
-      "filing_term_normalized": "gain associated with the juice transaction",
       "model_sheet": "ANNL P&L",
       "new_row_label": "Gain on Juice Transaction",
       "filing_section": "non_operating",
       "sign_convention": "positive",
+      "aliases": [
+        "gain associated with juice transaction"
+      ],
       "us_gaap_concepts": [
         "GainLossOnSaleOfBusiness"
       ],
@@ -42,10 +48,12 @@
     },
     {
       "rule_id": "PEP-CF-003",
-      "filing_term_normalized": "product recall-related impact",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Product Recall Impact",
       "filing_section": "operating",
+      "aliases": [
+        "product recall-related impact"
+      ],
       "us_gaap_concepts": [
         "pep:ProductRecallRelatedImpact"
       ],
@@ -53,11 +61,13 @@
     },
     {
       "rule_id": "PEP-CF-004",
-      "filing_term_normalized": "cash payments for product recall-related impact",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Cash Payments for Product Recall",
       "filing_section": "operating",
       "sign_convention": "negative",
+      "aliases": [
+        "cash payments for product recall-related impact"
+      ],
       "us_gaap_concepts": [
         "pep:PaymentsForProductRecallRelatedImpact"
       ],
@@ -65,22 +75,28 @@
     },
     {
       "rule_id": "PEP-CF-005",
-      "filing_term_normalized": "tax payments related to the tcj act",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Tax Payments Related to TCJ Act",
       "filing_section": "operating",
       "sign_convention": "negative",
+      "aliases": [
+        "tax payments related to tax cuts and jobs act",
+        "tax payments related to tcj act"
+      ],
       "us_gaap_concepts": [
         "pep:TaxpaymentsrelatedtotheTCJAct"
       ],
-      "note": "Cash payments on the 2017 Tax Cuts and Jobs Act transition tax (8-year installment for accumulated foreign earnings). Final installments running through FY2025."
+      "note": "Cash payments on the 2017 Tax Cuts and Jobs Act transition tax (8-year installment for accumulated foreign earnings). Final installments running through FY2025. PEP renders this with two label variants (full name with TCJ Act parenthetical vs. short form); both alias here."
     },
     {
       "rule_id": "PEP-CF-006",
-      "filing_term_normalized": "tax expense related to the tcj act",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Tax Expense Related to TCJ Act",
       "filing_section": "operating",
+      "aliases": [
+        "tax expense related to tax cuts and jobs act",
+        "tax expense related to tcj act"
+      ],
       "us_gaap_concepts": [
         "pep:TaxCutsAndJobsActNoncurrentExpense"
       ],
@@ -88,22 +104,28 @@
     },
     {
       "rule_id": "PEP-CF-007",
-      "filing_term_normalized": "impairment and other charges",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Impairment and Other Charges",
       "filing_section": "operating",
+      "aliases": [
+        "impairment and other charges",
+        "impairment and other charges credits",
+        "impairment and other credits charges"
+      ],
       "us_gaap_concepts": [
         "pep:ImpairmentAndOtherCharges",
         "pep:ImpairmentAndOtherChargesRUCCBPIC"
       ],
-      "note": "Non-cash CFO add-back for the bucketed impairment + restructuring + uncollectible receivable charges PEP groups under one line in the CF reconciliation. RUCCBPIC variant is the FY2024 quarterly disclosure tag for the same concept."
+      "note": "Non-cash CFO add-back for the bucketed impairment + restructuring + uncollectible receivable charges PEP groups under one line in the CF reconciliation. RUCCBPIC variant is the FY2024 quarterly disclosure tag for the same concept. Aliases cover both the standard 'charges' label and the slash-separated 'charges/(credits)' or '(credits)/charges' variants where the parenthetical-credits branch falls in the middle of the label and isn't stripped by TRAILING_PAREN_RE."
     },
     {
       "rule_id": "PEP-CF-008",
-      "filing_term_normalized": "indirect tax impact",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Indirect Tax Impact",
       "filing_section": "operating",
+      "aliases": [
+        "indirect tax impact"
+      ],
       "us_gaap_concepts": [
         "pep:IndirectTaxImpact"
       ],
@@ -111,11 +133,13 @@
     },
     {
       "rule_id": "PEP-CF-009",
-      "filing_term_normalized": "debt discharged via legal defeasance",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Debt Discharged via Legal Defeasance",
       "filing_section": "cash_other",
       "memo": true,
+      "aliases": [
+        "debt discharged via legal defeasance"
+      ],
       "us_gaap_concepts": [
         "pep:DebtDischargedViaLegalDefeasance"
       ],
@@ -123,15 +147,17 @@
     },
     {
       "rule_id": "PEP-CF-010",
-      "filing_term_normalized": "investment obtained for certain assets",
       "model_sheet": "CASH FLOW",
       "new_row_label": "Investment Obtained for Celsius Stake",
       "filing_section": "cash_other",
       "memo": true,
+      "aliases": [
+        "investment obtained for certain assets"
+      ],
       "us_gaap_concepts": [
         "pep:PurchaseCommitmentCelsius"
       ],
-      "note": "Supplemental disclosure: Celsius Holdings preferred-stock investment received in exchange for distribution rights (FY2022 distribution agreement). Non-cash, memo-only."
+      "note": "Supplemental disclosure: Celsius Holdings preferred-stock investment received in exchange for distribution rights (FY2022 distribution agreement). Non-cash, memo-only. Note that the filing label has '(see Notes 4 and 9)' parenthetical metadata which TRAILING_PAREN_RE strips before normalize_label."
     }
   ],
   "superseded_rule_ids": [],

@@ -2163,6 +2163,46 @@
         "operating lease assets obtained in exchange for operating lease liabilities"
       ],
       "us_gaap_concept": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability"
+    },
+    {
+      "rule_id": "GEN-IS-025",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Other Pension and OPEB Benefits Income (Expense)",
+      "filing_section": "non_operating",
+      "note": "ASC 715-20 line for net periodic pension and other postretirement benefit cost components OTHER than service cost (interest cost + expected return on assets + amortization of prior service cost + amortization of net actuarial gain/loss). Service cost lives in operating; this segment lives in non-operating per the 2017 ASU update. Universal across large staples filers with defined-benefit plans (PEP, KO, PG, MDLZ).",
+      "aliases": [
+        "other pension and retiree medical benefits income",
+        "other pension and retiree medical benefits expense",
+        "other pension and retiree medical benefits expense income",
+        "other pension and retiree medical benefits income expense",
+        "net periodic benefit cost excluding service cost",
+        "non-service cost components of net periodic benefit cost"
+      ],
+      "us_gaap_concept": "NetPeriodicDefinedBenefitsExpenseReversalOfExpenseExcludingServiceCostComponent"
+    },
+    {
+      "rule_id": "GEN-CI-001",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Other Comprehensive Income (Loss)",
+      "memo": true,
+      "filing_section": "non_operating",
+      "note": "Stop-gap memo bucket for OCI line items that bleed into the IS table when filers (PEP) co-locate IS and Comprehensive Income in one HTM table. Walker should STOP at the OCI header but doesn't catch every layout variant — rather than let these surface as novels and block reconcile, route them here as memo (not summed into IS subtotals). TO BE REPLACED when StatementType.COMPREHENSIVE_INCOME ships (roadmap §21 — OCI 4th statement build). All OCI components (translation, cash flow hedges, pension adjustments, AFS securities, total OCI net of tax) collapse to this one canonical for now. Sheet 'ANNL P&L' is informational; the OCI 4th statement will route these to its own sheet.",
+      "aliases": [
+        "other comprehensive income loss net of tax",
+        "other comprehensive income loss",
+        "net currency translation adjustment",
+        "net change on cash flow hedges",
+        "net pension and retiree medical adjustments",
+        "net change on available-for-sale debt securities and other",
+        "other"
+      ],
+      "us_gaap_concepts": [
+        "OtherComprehensiveIncomeLossNetOfTax",
+        "OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationGainLossArisingDuringPeriodNetOfTax",
+        "OtherComprehensiveIncomeLossCashFlowHedgeGainLossAfterReclassificationAndTax",
+        "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
+        "OtherComprehensiveIncomeOtherNetOfTax"
+      ]
     }
   ]
 }
