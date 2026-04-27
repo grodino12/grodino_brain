@@ -260,35 +260,43 @@ def build_generic_index(
     return index
 
 
-def build_concept_index(library: dict) -> dict[str, dict]:
-    """Build {us_gaap_concept (local name) -> canonical entry} from library
-    entries that declare an explicit `us_gaap_concept`. Used by the iXBRL
-    walker as a structural fallback when a row's filer-rendered label
-    matches no alias.
+def build_concept_index(library: dict) -> dict[tuple[str, str], dict]:
+    """Build {(us_gaap_concept_local_name, sheet_group) -> canonical entry}
+    from library entries that declare an explicit `us_gaap_concept`. Used
+    by the iXBRL walker as a structural fallback when a row's filer-
+    rendered label matches no alias.
 
-    Match key is the concept's LOCAL NAME (no namespace prefix) — this
-    matches what the walker passes (`f.local_name`). Lookup is exact;
-    there is no CamelCase splitting, no fuzz, no normalization. Multiple
-    canonicals declaring the same concept is a load-time error — the
-    library author must pick one canonical per concept.
+    Keying on (concept, sheet_group) lets the same us-gaap concept appear
+    on different statements with different canonical assignments — e.g.
+    `ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill`
+    legitimately exists on the IS as an expense line and on the CF as a
+    non-cash add-back. Within one statement, two canonicals declaring the
+    same concept is still a load-time error.
+
+    Match is exact on the concept LOCAL NAME (no namespace prefix) — this
+    matches what the walker passes (`f.local_name`). No CamelCase
+    splitting, no fuzz, no normalization.
 
     PDF path passes `concept=None`, so this index is never consulted on
     PDF inputs. Library entries without `us_gaap_concept` are not
     indexed — the fallback simply doesn't fire on their concepts.
     """
-    index: dict[str, dict] = {}
+    index: dict[tuple[str, str], dict] = {}
     for entry in library.get("mappings", []):
         concept = entry.get("us_gaap_concept")
         if not concept:
             continue
-        if concept in index:
-            existing = index[concept]
+        sheet_grp = _sheet_group(entry["model_sheet"])
+        key = (concept, sheet_grp)
+        if key in index:
+            existing = index[key]
             raise ValueError(
-                f"us_gaap_concept {concept!r} declared by both "
-                f"{existing['rule_id']!r} and {entry['rule_id']!r} — "
-                f"each concept must map to exactly one canonical."
+                f"us_gaap_concept {concept!r} on sheet group {sheet_grp!r} "
+                f"declared by both {existing['rule_id']!r} and "
+                f"{entry['rule_id']!r} — each (concept, statement) pair must "
+                f"map to exactly one canonical."
             )
-        index[concept] = _entry_canonical(entry)
+        index[key] = _entry_canonical(entry)
     return index
 
 
@@ -395,7 +403,7 @@ def match_raw_item(
     index: dict[tuple[str, str], list[dict]],
     fuzzy_threshold: int = 85,
     strict: bool = False,
-    concept_index: dict[str, dict] | None = None,
+    concept_index: dict[tuple[str, str], dict] | None = None,
 ) -> dict | None:
     """Look up a raw line item in the generic library.
 
@@ -446,10 +454,11 @@ def match_raw_item(
             entry = select_entry(index.get((best_key, group), []),
                                  subsection_context, section)
 
-    # (3) concept fallback — exact-match the iXBRL local name against the
-    # library's `us_gaap_concept` index. Inert when either side is None.
+    # (3) concept fallback — exact-match the (concept_local_name, sheet_group)
+    # pair against the library's `us_gaap_concept` index. Inert when either
+    # side is None.
     if entry is None and concept and concept_index:
-        entry = concept_index.get(concept)
+        entry = concept_index.get((concept, group))
 
     if entry is None:
         return None
