@@ -22,7 +22,8 @@
         "revenues",
         "net sales (revenue)"
       ],
-      "filing_section": "revenue_cost"
+      "filing_section": "revenue_cost",
+      "us_gaap_concept": "Revenues"
     },
     {
       "rule_id": "GEN-IS-002",
@@ -36,7 +37,8 @@
         "cost of goods and services sold"
       ],
       "filing_section": "revenue_cost",
-      "sign_convention": "negative"
+      "sign_convention": "negative",
+      "us_gaap_concept": "CostOfGoodsAndServicesSold"
     },
     {
       "rule_id": "GEN-IS-003",
@@ -48,7 +50,8 @@
         "gross margin",
         "gross profit (loss)"
       ],
-      "filing_section": "revenue_cost"
+      "filing_section": "revenue_cost",
+      "us_gaap_concept": "GrossProfit"
     },
     {
       "rule_id": "GEN-IS-004",
@@ -62,7 +65,8 @@
         "selling general and administrative expenses"
       ],
       "filing_section": "operating_expenses",
-      "sign_convention": "negative"
+      "sign_convention": "negative",
+      "us_gaap_concept": "SellingGeneralAndAdministrativeExpense"
     },
     {
       "rule_id": "GEN-IS-005",
@@ -77,7 +81,8 @@
         "operating income (loss)",
         "loss from operations"
       ],
-      "filing_section": "operating_expenses"
+      "filing_section": "operating_expenses",
+      "us_gaap_concept": "OperatingIncomeLoss"
     },
     {
       "rule_id": "GEN-IS-006",
@@ -118,7 +123,8 @@
         "foreign currency exchange loss",
         "foreign currency transaction loss"
       ],
-      "filing_section": "non_operating"
+      "filing_section": "non_operating",
+      "us_gaap_concept": "ForeignCurrencyTransactionGainLossBeforeTax"
     },
     {
       "rule_id": "GEN-IS-008",
@@ -141,7 +147,8 @@
         "miscellaneous expense",
         "other nonoperating expense"
       ],
-      "filing_section": "non_operating"
+      "filing_section": "non_operating",
+      "us_gaap_concept": "OtherNonoperatingIncomeExpense"
     },
     {
       "rule_id": "GEN-IS-009",
@@ -181,7 +188,8 @@
         "tax benefit",
         "income tax expense"
       ],
-      "filing_section": "tax"
+      "filing_section": "tax",
+      "us_gaap_concept": "IncomeTaxExpenseBenefit"
     },
     {
       "rule_id": "GEN-IS-011",
@@ -191,7 +199,8 @@
       "note": "Net income attributable to the parent (= consolidated NI from GEN-IS-022 minus the NCI portion from GEN-IS-023). Tied to us-gaap:NetIncomeLoss concept which most filers use specifically for the parent-attributable line. For filers WITHOUT noncontrolling interests, this entry typically does not match anything (NI = parent NI; only GEN-IS-022 is rendered).",
       "aliases": [
         "net earnings attributable to procter & gamble"
-      ]
+      ],
+      "us_gaap_concept": "NetIncomeLoss"
     },
     {
       "rule_id": "GEN-IS-012",
@@ -208,7 +217,8 @@
         "preferred dividends declared",
         "cumulative dividends on preferred stock"
       ],
-      "filing_section": "eps"
+      "filing_section": "eps",
+      "us_gaap_concept": "PreferredStockDividendsIncomeStatementImpact"
     },
     {
       "rule_id": "GEN-IS-021",
@@ -238,7 +248,8 @@
         "undistributed earnings allocated to participating securities",
         "income (loss) allocated to participating preferred"
       ],
-      "filing_section": "eps"
+      "filing_section": "eps",
+      "us_gaap_concept": "UndistributedEarningsLossAllocatedToParticipatingSecuritiesBasic"
     },
     {
       "rule_id": "GEN-IS-014",
@@ -252,7 +263,8 @@
         "net income (loss) available to common shareholders",
         "net income available to common stockholders",
         "net income to common"
-      ]
+      ],
+      "us_gaap_concept": "NetIncomeLossAvailableToCommonStockholdersBasic"
     },
     {
       "rule_id": "GEN-IS-016",
@@ -268,7 +280,8 @@
         "basic net income (loss) per share",
         "earnings per share basic"
       ],
-      "filing_section": "eps"
+      "filing_section": "eps",
+      "us_gaap_concept": "EarningsPerShareBasic"
     },
     {
       "rule_id": "GEN-IS-017",
@@ -284,7 +297,8 @@
         "diluted net income (loss) per share",
         "earnings per share diluted"
       ],
-      "filing_section": "eps"
+      "filing_section": "eps",
+      "us_gaap_concept": "EarningsPerShareDiluted"
     },
     {
       "rule_id": "GEN-IS-018",
@@ -297,7 +311,8 @@
         "weighted average common shares outstanding basic",
         "weighted average shares outstanding - basic"
       ],
-      "filing_section": "eps"
+      "filing_section": "eps",
+      "us_gaap_concept": "WeightedAverageNumberOfDilutedSharesOutstanding"
     },
     {
       "rule_id": "GEN-IS-019",
@@ -332,7 +347,8 @@
         "restricted cash",
         "restricted cash and cash equivalents"
       ],
-      "filing_section": "current_assets"
+      "filing_section": "current_assets",
+      "us_gaap_concept": "RestrictedCash"
     },
     {
       "rule_id": "GEN-BS-003",
@@ -348,7 +364,8 @@
         "accounts and note receivable-net",
         "accounts and note receivable, net"
       ],
-      "filing_section": "current_assets"
+      "filing_section": "current_assets",
+      "us_gaap_concept": "AccountsReceivableNetCurrent"
     },
     {
       "rule_id": "GEN-BS-004",
@@ -363,7 +380,8 @@
         "notes receivable, net",
         "note receivable",
         "notes and loans receivable net current"
-      ]
+      ],
+      "us_gaap_concept": "NotesAndLoansReceivableNetCurrent"
     },
     {
       "rule_id": "GEN-BS-005",
@@ -376,7 +394,8 @@
         "inventories, net",
         "total inventories"
       ],
-      "filing_section": "current_assets"
+      "filing_section": "current_assets",
+      "us_gaap_concept": "InventoryNet"
     },
     {
       "rule_id": "GEN-BS-006",
@@ -389,7 +408,8 @@
         "prepaid expenses, net",
         "prepaid expense and other assets current"
       ],
-      "filing_section": "current_assets"
+      "filing_section": "current_assets",
+      "us_gaap_concept": "PrepaidExpenseAndOtherAssetsCurrent"
     },
     {
       "rule_id": "GEN-BS-007",
@@ -403,7 +423,8 @@
         "pp&e",
         "net property, plant and equipment"
       ],
-      "filing_section": "non_current_assets"
+      "filing_section": "non_current_assets",
+      "us_gaap_concept": "PropertyPlantAndEquipmentNet"
     },
     {
       "rule_id": "GEN-BS-008",
@@ -415,7 +436,8 @@
         "deferred income tax assets",
         "deferred income taxes"
       ],
-      "filing_section": "non_current_assets"
+      "filing_section": "non_current_assets",
+      "us_gaap_concept": "DeferredIncomeTaxAssetsNet"
     },
     {
       "rule_id": "GEN-BS-009",
@@ -428,7 +450,8 @@
         "operating lease right-of-use assets",
         "operating lease rou assets",
         "right-of-use assets, operating"
-      ]
+      ],
+      "us_gaap_concept": "OperatingLeaseRightOfUseAsset"
     },
     {
       "rule_id": "GEN-BS-010",
@@ -441,7 +464,8 @@
         "right of use assets-finance leases",
         "finance lease right-of-use assets",
         "finance lease rou assets"
-      ]
+      ],
+      "us_gaap_concept": "FinanceLeaseRightOfUseAsset"
     },
     {
       "rule_id": "GEN-BS-011",
@@ -456,7 +480,8 @@
         "notes receivable, net",
         "note receivable",
         "notes and loans receivable net noncurrent"
-      ]
+      ],
+      "us_gaap_concept": "NotesAndLoansReceivableNetNoncurrent"
     },
     {
       "rule_id": "GEN-BS-012",
@@ -475,7 +500,8 @@
         "customer relationships-net",
         "intangibles"
       ],
-      "filing_section": "non_current_assets"
+      "filing_section": "non_current_assets",
+      "us_gaap_concept": "IntangibleAssetsNetExcludingGoodwill"
     },
     {
       "rule_id": "GEN-BS-013",
@@ -486,7 +512,8 @@
         "goodwill, net",
         "goodwill-net"
       ],
-      "filing_section": "non_current_assets"
+      "filing_section": "non_current_assets",
+      "us_gaap_concept": "Goodwill"
     },
     {
       "rule_id": "GEN-BS-014",
@@ -527,7 +554,8 @@
         "accrued liabilities current",
         "accrued and other liabilities"
       ],
-      "filing_section": "current_liabilities"
+      "filing_section": "current_liabilities",
+      "us_gaap_concept": "AccruedLiabilitiesCurrent"
     },
     {
       "rule_id": "GEN-BS-017",
@@ -539,7 +567,8 @@
         "taxes payable",
         "accrued income taxes"
       ],
-      "filing_section": "current_liabilities"
+      "filing_section": "current_liabilities",
+      "us_gaap_concept": "AccruedIncomeTaxesCurrent"
     },
     {
       "rule_id": "GEN-BS-018",
@@ -566,7 +595,8 @@
         "operating lease liability, current",
         "lease liability operating-current",
         "operating lease liability-current"
-      ]
+      ],
+      "us_gaap_concept": "OperatingLeaseLiabilityCurrent"
     },
     {
       "rule_id": "GEN-BS-020",
@@ -581,7 +611,8 @@
         "finance lease liability, current",
         "lease liability finance-current",
         "finance lease liability-current"
-      ]
+      ],
+      "us_gaap_concept": "FinanceLeaseLiabilityCurrent"
     },
     {
       "rule_id": "GEN-BS-021",
@@ -596,7 +627,8 @@
         "unearned revenue",
         "deferred revenue-current",
         "deferred revenue, current"
-      ]
+      ],
+      "us_gaap_concept": "ContractWithCustomerLiabilityCurrent"
     },
     {
       "rule_id": "GEN-BS-022",
@@ -607,7 +639,8 @@
         "other accrued liabilities",
         "other liabilities, current"
       ],
-      "filing_section": "current_liabilities"
+      "filing_section": "current_liabilities",
+      "us_gaap_concept": "OtherLiabilitiesCurrent"
     },
     {
       "rule_id": "GEN-BS-023",
@@ -622,7 +655,8 @@
         "operating lease liability, non-current",
         "lease liability operating-non-current",
         "lease liability operating, non-current"
-      ]
+      ],
+      "us_gaap_concept": "OperatingLeaseLiabilityNoncurrent"
     },
     {
       "rule_id": "GEN-BS-024",
@@ -637,7 +671,8 @@
         "finance lease liability, non-current",
         "lease liability finance-non-current",
         "lease liability finance, non-current"
-      ]
+      ],
+      "us_gaap_concept": "FinanceLeaseLiabilityNoncurrent"
     },
     {
       "rule_id": "GEN-BS-025",
@@ -651,7 +686,8 @@
         "deferred income tax liabilities, net",
         "deferred income taxes"
       ],
-      "filing_section": "non_current_liabilities"
+      "filing_section": "non_current_liabilities",
+      "us_gaap_concept": "DeferredIncomeTaxLiabilitiesNet"
     },
     {
       "rule_id": "GEN-BS-026",
@@ -667,7 +703,8 @@
         "deferred revenue-non-current",
         "deferred revenue, non-current",
         "deferred revenue, noncurrent"
-      ]
+      ],
+      "us_gaap_concept": "ContractWithCustomerLiabilityNoncurrent"
     },
     {
       "rule_id": "GEN-BS-027",
@@ -698,7 +735,8 @@
         "class b common stock",
         "common stock value"
       ],
-      "filing_section": "equity"
+      "filing_section": "equity",
+      "us_gaap_concept": "CommonStockValue"
     },
     {
       "rule_id": "GEN-BS-029",
@@ -711,7 +749,8 @@
         "capital in excess of par value",
         "apic"
       ],
-      "filing_section": "equity"
+      "filing_section": "equity",
+      "us_gaap_concept": "AdditionalPaidInCapital"
     },
     {
       "rule_id": "GEN-BS-030",
@@ -723,7 +762,8 @@
         "accumulated other comprehensive income (loss)",
         "aoci"
       ],
-      "filing_section": "equity"
+      "filing_section": "equity",
+      "us_gaap_concept": "AccumulatedOtherComprehensiveIncomeLossNetOfTax"
     },
     {
       "rule_id": "GEN-BS-031",
@@ -735,7 +775,8 @@
         "accumulated deficit",
         "retained earnings / (accumulated deficit)"
       ],
-      "filing_section": "equity"
+      "filing_section": "equity",
+      "us_gaap_concept": "RetainedEarningsAccumulatedDeficit"
     },
     {
       "rule_id": "GEN-BS-032",
@@ -765,7 +806,8 @@
         "current portion of long term debt",
         "debt current",
         "debt due within one year"
-      ]
+      ],
+      "us_gaap_concept": "DebtCurrent"
     },
     {
       "rule_id": "GEN-BS-041",
@@ -779,7 +821,8 @@
         "long-term debt, excluding current portion",
         "senior notes",
         "notes payable non-current"
-      ]
+      ],
+      "us_gaap_concept": "LongTermDebtNoncurrent"
     },
     {
       "rule_id": "GEN-BS-042",
@@ -810,7 +853,8 @@
         "other liabilities noncurrent",
         "other liabilities",
         "other long-term liabilities, net"
-      ]
+      ],
+      "us_gaap_concept": "OtherLiabilitiesNoncurrent"
     },
     {
       "rule_id": "GEN-BS-035",
@@ -825,7 +869,8 @@
         "treasury stock, at cost",
         "treasury stock at cost",
         "treasury stock, common"
-      ]
+      ],
+      "us_gaap_concept": "TreasuryStockCommonValue"
     },
     {
       "rule_id": "GEN-BS-036",
@@ -838,7 +883,8 @@
         "noncontrolling interests",
         "non-controlling interest",
         "stockholders equity attributable to noncontrolling interest"
-      ]
+      ],
+      "us_gaap_concept": "MinorityInterest"
     },
     {
       "rule_id": "GEN-BS-037",
@@ -857,7 +903,8 @@
         "preferred stock shares outstanding",
         "shares issued",
         "shares authorized"
-      ]
+      ],
+      "us_gaap_concept": "CommonStockSharesIssued"
     },
     {
       "rule_id": "GEN-BS-043",
@@ -924,7 +971,8 @@
         "net income attributable to noncontrolling interest",
         "less: net income attributable to noncontrolling interests",
         "net earnings attributable to noncontrolling interests"
-      ]
+      ],
+      "us_gaap_concept": "NetIncomeLossAttributableToNoncontrollingInterest"
     },
     {
       "rule_id": "GEN-IS-024",
@@ -943,7 +991,8 @@
         "impairment charges",
         "asset impairment charges",
         "indefinite-lived intangible asset impairment charge"
-      ]
+      ],
+      "us_gaap_concept": "ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill"
     },
     {
       "rule_id": "GEN-CF-001",
@@ -971,7 +1020,8 @@
         "depreciation, amortization and accretion",
         "d&a"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "DepreciationDepletionAndAmortization"
     },
     {
       "rule_id": "GEN-CF-003",
@@ -1002,7 +1052,8 @@
         "provision for bad debt",
         "allowance for doubtful accounts"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "ProvisionForDoubtfulAccounts"
     },
     {
       "rule_id": "GEN-CF-005",
@@ -1018,7 +1069,8 @@
         "excess and obsolete inventory",
         "inventory allowance for excess and obsolete products"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "InventoryWriteDown"
     },
     {
       "rule_id": "GEN-CF-006",
@@ -1033,7 +1085,8 @@
         "sbc",
         "share-based payment expense"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "ShareBasedCompensation"
     },
     {
       "rule_id": "GEN-CF-007",
@@ -1050,7 +1103,8 @@
         "gain loss on disposition of assets",
         "loss/(gain) on sale of assets"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "GainLossOnDispositionOfAssets1"
     },
     {
       "rule_id": "GEN-CF-008",
@@ -1063,7 +1117,8 @@
         "deferred tax provision",
         "(benefit) provision for deferred income taxes"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "DeferredIncomeTaxExpenseBenefit"
     },
     {
       "rule_id": "GEN-CF-009",
@@ -1077,7 +1132,8 @@
         "foreign exchange (gain) loss",
         "unrealized foreign currency gain (loss)"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "ForeignCurrencyTransactionGainLossUnrealized"
     },
     {
       "rule_id": "GEN-CF-010",
@@ -1122,7 +1178,8 @@
         "change in inventories",
         "(increase) decrease in inventories"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "IncreaseDecreaseInInventories"
     },
     {
       "rule_id": "GEN-CF-013",
@@ -1135,7 +1192,8 @@
         "change in prepaid expenses",
         "(increase) decrease in prepaid expenses"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets"
     },
     {
       "rule_id": "GEN-CF-014",
@@ -1163,7 +1221,8 @@
         "change in accrued liabilities",
         "increase (decrease) in accrued expenses"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "IncreaseDecreaseInAccruedLiabilities"
     },
     {
       "rule_id": "GEN-CF-016",
@@ -1229,7 +1288,8 @@
         "change in other non-current assets",
         "change in other assets"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "IncreaseDecreaseInOtherNoncurrentAssets"
     },
     {
       "rule_id": "GEN-CF-021",
@@ -1242,7 +1302,8 @@
         "change in note receivable",
         "change in notes receivable"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "IncreaseDecreaseInFinanceReceivables"
     },
     {
       "rule_id": "GEN-CF-022",
@@ -1258,7 +1319,8 @@
         "net cash (used in) provided by operating activities",
         "total operating activities"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "NetCashProvidedByUsedInOperatingActivities"
     },
     {
       "rule_id": "GEN-CF-023",
@@ -1285,7 +1347,8 @@
         "additions to property, plant and equipment",
         "capex"
       ],
-      "filing_section": "investing"
+      "filing_section": "investing",
+      "us_gaap_concept": "PaymentsToAcquirePropertyPlantAndEquipment"
     },
     {
       "rule_id": "GEN-CF-025",
@@ -1298,7 +1361,8 @@
         "equity investments",
         "investments in equity securities"
       ],
-      "filing_section": "investing"
+      "filing_section": "investing",
+      "us_gaap_concept": "PaymentsToAcquireEquitySecuritiesFvNi"
     },
     {
       "rule_id": "GEN-CF-026",
@@ -1314,7 +1378,8 @@
         "net cash (used in) provided by investing activities",
         "total investing activities"
       ],
-      "filing_section": "investing"
+      "filing_section": "investing",
+      "us_gaap_concept": "NetCashProvidedByUsedInInvestingActivities"
     },
     {
       "rule_id": "GEN-CF-027",
@@ -1327,7 +1392,8 @@
         "payments on finance lease obligations",
         "repayments of finance lease obligations"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "FinanceLeasePrincipalPayments"
     },
     {
       "rule_id": "GEN-CF-028",
@@ -1340,7 +1406,8 @@
         "stock option exercise proceeds",
         "proceeds from issuance of common stock under employee plans"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "ProceedsFromStockOptionsExercised"
     },
     {
       "rule_id": "GEN-CF-029",
@@ -1354,7 +1421,8 @@
         "proceeds from preferred stock issuance",
         "net proceeds from issuance of preferred stock"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "ProceedsFromIssuanceOfPreferredStockAndPreferenceStock"
     },
     {
       "rule_id": "GEN-CF-030",
@@ -1373,7 +1441,8 @@
         "dividends on series a preferred shares",
         "dividends paid on series a preferred shares"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "PaymentsOfDividendsPreferredStockAndPreferenceStock"
     },
     {
       "rule_id": "GEN-CF-040",
@@ -1393,7 +1462,8 @@
         "dividends to stockholders",
         "payments of dividends"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "PaymentsOfDividends"
     },
     {
       "rule_id": "GEN-CF-031",
@@ -1406,7 +1476,8 @@
         "proceeds from sale of common stock",
         "net proceeds from issuance of common stock"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "ProceedsFromIssuanceOfCommonStock"
     },
     {
       "rule_id": "GEN-CF-032",
@@ -1427,7 +1498,8 @@
         "accelerated share repurchase",
         "payments for repurchase of common stock for treasury"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "PaymentsForRepurchaseOfCommonStock"
     },
     {
       "rule_id": "GEN-CF-033",
@@ -1443,7 +1515,8 @@
         "net cash (used in) provided by financing activities",
         "total financing activities"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "NetCashProvidedByUsedInFinancingActivities"
     },
     {
       "rule_id": "GEN-CF-034",
@@ -1458,7 +1531,8 @@
         "effect of exchange rate changes on cash, cash equivalents and restricted cash",
         "effect of exchange rate on cash cash equivalents restricted cash and restricted cash equivalents"
       ],
-      "filing_section": "cash_other"
+      "filing_section": "cash_other",
+      "us_gaap_concept": "EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
     },
     {
       "rule_id": "GEN-CF-035",
@@ -1475,7 +1549,8 @@
         "cash cash equivalents restricted cash and restricted cash equivalents period increase decrease including exchange rate effect"
       ],
       "filing_section": "cash_other",
-      "row_type": "subtotal"
+      "row_type": "subtotal",
+      "us_gaap_concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect"
     },
     {
       "rule_id": "GEN-CF-036",
@@ -1542,7 +1617,8 @@
         "proceeds from sale of property plant and equipment",
         "proceeds from disposal of property"
       ],
-      "filing_section": "investing"
+      "filing_section": "investing",
+      "us_gaap_concept": "ProceedsFromSaleOfProductiveAssets"
     },
     {
       "rule_id": "GEN-CF-042",
@@ -1556,7 +1632,8 @@
         "business acquisitions net of cash",
         "acquisition of alani nutrition llc, net of cash acquired"
       ],
-      "filing_section": "investing"
+      "filing_section": "investing",
+      "us_gaap_concept": "PaymentsToAcquireBusinessesNetOfCashAcquired"
     },
     {
       "rule_id": "GEN-CF-043",
@@ -1568,7 +1645,8 @@
         "other investing activities, net",
         "payments for proceeds from investments"
       ],
-      "filing_section": "investing"
+      "filing_section": "investing",
+      "us_gaap_concept": "PaymentsForProceedsFromInvestments"
     },
     {
       "rule_id": "GEN-CF-044",
@@ -1581,7 +1659,8 @@
         "proceeds from short term debt maturing in more than three months",
         "issuance of short-term debt"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths"
     },
     {
       "rule_id": "GEN-CF-045",
@@ -1593,7 +1672,8 @@
         "repayments of short-term debt",
         "repayments of short term debt maturing in more than three months"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths"
     },
     {
       "rule_id": "GEN-CF-046",
@@ -1604,7 +1684,8 @@
         "proceeds from (repayments of) short-term debt",
         "proceeds from repayments of short term debt maturing in three months or less"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess"
     },
     {
       "rule_id": "GEN-CF-047",
@@ -1618,7 +1699,8 @@
         "proceeds from long-term borrowings",
         "proceeds from term loan"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "ProceedsFromIssuanceOfLongTermDebt"
     },
     {
       "rule_id": "GEN-CF-048",
@@ -1632,7 +1714,8 @@
         "long-term debt repayments",
         "payments on term loan"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "RepaymentsOfLongTermDebt"
     },
     {
       "rule_id": "GEN-CF-049",
@@ -1660,7 +1743,8 @@
         "gain on extinguishment of debt",
         "loss on debt extinguishment",
         "debt extinguishment loss"
-      ]
+      ],
+      "us_gaap_concept": "GainsLossesOnExtinguishmentOfDebt"
     },
     {
       "rule_id": "GEN-CF-051",
@@ -1689,7 +1773,8 @@
         "depreciation expense"
       ],
       "filing_section": "operating",
-      "note": "Depreciation alone, when filer reports D and A separately. Per per-period dedup, the row is only used for the period(s) where the filer split. Filers reporting combined D&A (us-gaap:DepreciationDepletionAndAmortization) route to GEN-CF-002 and use the combined row."
+      "note": "Depreciation alone, when filer reports D and A separately. Per per-period dedup, the row is only used for the period(s) where the filer split. Filers reporting combined D&A (us-gaap:DepreciationDepletionAndAmortization) route to GEN-CF-002 and use the combined row.",
+      "us_gaap_concept": "Depreciation"
     },
     {
       "rule_id": "GEN-CF-053",
@@ -1701,7 +1786,8 @@
         "adjustment for amortization"
       ],
       "filing_section": "operating",
-      "note": "Amortization alone, when filer reports D and A separately. Includes adjustment-for-amortization variants. Filers reporting combined D&A (us-gaap:DepreciationDepletionAndAmortization) route to GEN-CF-002 and use the combined row."
+      "note": "Amortization alone, when filer reports D and A separately. Includes adjustment-for-amortization variants. Filers reporting combined D&A (us-gaap:DepreciationDepletionAndAmortization) route to GEN-CF-002 and use the combined row.",
+      "us_gaap_concept": "AdjustmentForAmortization"
     },
     {
       "rule_id": "GEN-CF-054",
@@ -1719,7 +1805,8 @@
         "payment of financing fees"
       ],
       "filing_section": "financing",
-      "note": "Cash paid for debt issuance / financing fees (term loan + revolver). Single canonical for the umbrella; some filers split debt issuance vs revolver fees but the cash impact is the same financing-section character."
+      "note": "Cash paid for debt issuance / financing fees (term loan + revolver). Single canonical for the umbrella; some filers split debt issuance vs revolver fees but the cash impact is the same financing-section character.",
+      "us_gaap_concept": "PaymentsOfDebtIssuanceCosts"
     },
     {
       "rule_id": "GEN-CF-055",
@@ -1733,7 +1820,8 @@
         "liabilities fair value adjustment"
       ],
       "filing_section": "operating",
-      "note": "Non-cash adjustment in CFO recon for the period mark-to-market of an acquisition earnout liability. Moves with the BS Contingent Consideration balance."
+      "note": "Non-cash adjustment in CFO recon for the period mark-to-market of an acquisition earnout liability. Moves with the BS Contingent Consideration balance.",
+      "us_gaap_concept": "LiabilitiesFairValueAdjustment"
     },
     {
       "rule_id": "GEN-BS-045",
@@ -1747,7 +1835,8 @@
         "acquisition contingent consideration"
       ],
       "filing_section": "current_liabilities",
-      "note": "Acquisition earnout payable, current portion. ASC 805 fair-value liability. Mark-to-market changes flow through GEN-CF-055 in operating."
+      "note": "Acquisition earnout payable, current portion. ASC 805 fair-value liability. Mark-to-market changes flow through GEN-CF-055 in operating.",
+      "us_gaap_concept": "BusinessCombinationContingentConsiderationLiabilityCurrent"
     },
     {
       "rule_id": "GEN-CF-056",
@@ -1760,7 +1849,8 @@
         "other financing activities",
         "proceeds from payments for other financing activities"
       ],
-      "filing_section": "financing"
+      "filing_section": "financing",
+      "us_gaap_concept": "ProceedsFromPaymentsForOtherFinancingActivities"
     },
     {
       "rule_id": "GEN-CF-057",
@@ -1773,7 +1863,8 @@
         "proceeds from sale and maturity of short-term investments",
         "proceeds from short-term investments"
       ],
-      "filing_section": "investing"
+      "filing_section": "investing",
+      "us_gaap_concept": "ProceedsFromSaleOfShortTermInvestments"
     }
   ]
 }

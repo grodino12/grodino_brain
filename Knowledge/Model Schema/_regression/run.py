@@ -32,6 +32,11 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
+# Force utf-8 stdout so diffs containing Greek delta / em-dashes / etc. don't
+# crash on Windows cp1252.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 # ============================================================================
 # Paths (all absolute, anchored to the user's repo layout)
 # ============================================================================
