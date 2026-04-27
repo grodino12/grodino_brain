@@ -15,6 +15,13 @@ class RawFiling(BaseModel):
     filing_date: date
     source_path: Path
     statements: list[Statement]
+    # Structural signal computed by the iXBRL walker at filing-load time:
+    # True when the filing has any `NoncontrollingInterest`-bearing concept
+    # (MinorityInterest on the BS, NetIncomeLossAttributableTo
+    # NoncontrollingInterest on the IS, etc.). Available downstream for
+    # NCI-aware routing decisions. PDF path leaves this as the default
+    # (False) — NCI structural detection is iXBRL-only.
+    is_nci_filer: bool = False
     extraction_metadata: dict = Field(default_factory=dict)
 
     @model_validator(mode="after")
