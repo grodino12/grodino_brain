@@ -459,8 +459,7 @@ def match_raw_item(
 
     Match order:
       1. Exact-normalized match on raw_filing_label (HTM visual label).
-      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold).
-      3. **Concept fallback** — if `concept` and `concept_index` are both
+      2. **Concept match** — if `concept` and `concept_index` are both
          provided, look up `concept` (the iXBRL fact's local name, e.g.
          `CashAndCashEquivalentsAtCarryingValue`) directly in `concept_index`.
          Exact match only — no CamelCase splitting, no fuzz. The walker is
@@ -470,6 +469,14 @@ def match_raw_item(
          new ones. Per `feedback_label_only_matching.md` we never tokenize
          the concept and fuzzy-match aliases — that approach was dropped
          for false positives.
+      3. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold).
+         Concept-before-fuzzy ordering: a structural XBRL concept tag is a
+         more precise routing signal than an alias fuzzy match. PEP's gross
+         PP&E label "Property, plant and equipment" fuzzy-matches GEN-BS-007
+         "Net PP&E" (alias "property, plant and equipment, net" at ~0.92)
+         even though concept `PropertyPlantAndEquipmentGross` declares the
+         line belongs on GEN-BS-046 (PP&E memo bucket). Concept-before-fuzzy
+         resolves this without any label-text heuristic.
 
     PDF path passes `concept=None` and no `concept_index`, so the fallback
     is naturally inert there.
@@ -488,7 +495,18 @@ def match_raw_item(
     candidates = index.get((normalized, group), [])
     entry = select_entry(candidates, subsection_context, section)
 
-    # (2) fuzzy on raw label — skipped in strict mode (subtotal-row lookups
+    # (2) concept match — exact-match the (concept_local_name, sheet_group)
+    # pair against the library's `us_gaap_concept(s)` index. Inert when either
+    # side is None. Runs BEFORE fuzzy so a deterministic XBRL concept tag
+    # outranks a label-text fuzzy match — required for cases like PEP's
+    # gross PP&E line, which would otherwise fuzzy-match GEN-BS-007 Net PP&E
+    # (alias "property, plant and equipment, net" at ~0.92) instead of
+    # routing structurally to GEN-BS-046 PP&E memo via concept
+    # `PropertyPlantAndEquipmentGross`.
+    if entry is None and concept and concept_index:
+        entry = concept_index.get((concept, group))
+
+    # (3) fuzzy on raw label — skipped in strict mode (subtotal-row lookups
     # need exact matches only; fuzz.ratio of "total current liabilities" vs
     # "other current liabilities" is 88% and would mis-promote a subtotal
     # row to a sibling line-item canonical, double-counting on the BS).
@@ -499,12 +517,6 @@ def match_raw_item(
             best_key = matches[0][0]
             entry = select_entry(index.get((best_key, group), []),
                                  subsection_context, section)
-
-    # (3) concept fallback — exact-match the (concept_local_name, sheet_group)
-    # pair against the library's `us_gaap_concept` index. Inert when either
-    # side is None.
-    if entry is None and concept and concept_index:
-        entry = concept_index.get((concept, group))
 
     if entry is None:
         return None

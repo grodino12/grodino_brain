@@ -228,13 +228,13 @@
             {
               "raw_filing_label": "Property, plant and equipment",
               "canonical_label": "Net PP&E",
-              "ledger_rule_id": "GEN-BS-007",
+              "ledger_rule_id": "GEN-BS-046",
               "value": "55040",
               "raw_numeric_text": "55,040",
               "notation_flags": 0,
               "footnote_markers": [],
               "indent_level": 2,
-              "row_type": "line_item",
+              "row_type": "memo",
               "section": "non_current_assets",
               "subsection_context": null,
               "sign_convention": "as_reported",
@@ -969,13 +969,13 @@
             {
               "raw_filing_label": "Property, plant and equipment",
               "canonical_label": "Net PP&E",
-              "ledger_rule_id": "GEN-BS-007",
+              "ledger_rule_id": "GEN-BS-046",
               "value": "54439",
               "raw_numeric_text": "54,439",
               "notation_flags": 0,
               "footnote_markers": [],
               "indent_level": 2,
-              "row_type": "line_item",
+              "row_type": "memo",
               "section": "non_current_assets",
               "subsection_context": null,
               "sign_convention": "as_reported",
@@ -3413,8 +3413,8 @@
             },
             {
               "raw_filing_label": "Sales of property, plant and equipment",
-              "canonical_label": "Purchase of PP&E",
-              "ledger_rule_id": "GEN-CF-024",
+              "canonical_label": "Proceeds from Sale of Assets",
+              "ledger_rule_id": "GEN-CF-041",
               "value": "127",
               "raw_numeric_text": "127",
               "notation_flags": 0,
@@ -4254,8 +4254,8 @@
             },
             {
               "raw_filing_label": "Sales of property, plant and equipment",
-              "canonical_label": "Purchase of PP&E",
-              "ledger_rule_id": "GEN-CF-024",
+              "canonical_label": "Proceeds from Sale of Assets",
+              "ledger_rule_id": "GEN-CF-041",
               "value": "122",
               "raw_numeric_text": "122",
               "notation_flags": 0,
@@ -5021,13 +5021,13 @@
       {
         "raw_filing_label": "Property, plant and equipment",
         "canonical_label": "Net PP&E",
-        "ledger_rule_id": "GEN-BS-007",
+        "ledger_rule_id": "GEN-BS-046",
         "value": "55040",
         "raw_numeric_text": "55,040",
         "notation_flags": 0,
         "footnote_markers": [],
         "indent_level": 2,
-        "row_type": "line_item",
+        "row_type": "memo",
         "section": "non_current_assets",
         "subsection_context": null,
         "sign_convention": "as_reported",
@@ -5885,13 +5885,13 @@
       {
         "raw_filing_label": "Property, plant and equipment",
         "canonical_label": "Net PP&E",
-        "ledger_rule_id": "GEN-BS-007",
+        "ledger_rule_id": "GEN-BS-046",
         "value": "54439",
         "raw_numeric_text": "54,439",
         "notation_flags": 0,
         "footnote_markers": [],
         "indent_level": 2,
-        "row_type": "line_item",
+        "row_type": "memo",
         "section": "non_current_assets",
         "subsection_context": null,
         "sign_convention": "as_reported",
@@ -7876,8 +7876,8 @@
       },
       {
         "raw_filing_label": "Sales of property, plant and equipment",
-        "canonical_label": "Purchase of PP&E",
-        "ledger_rule_id": "GEN-CF-024",
+        "canonical_label": "Proceeds from Sale of Assets",
+        "ledger_rule_id": "GEN-CF-041",
         "value": "127",
         "raw_numeric_text": "127",
         "notation_flags": 0,
@@ -7895,7 +7895,7 @@
         },
         "model_sheet": "QTR CF",
         "model_row": 0,
-        "model_label": "Purchase of PP&E",
+        "model_label": "Proceeds from Sale of Assets",
         "mapping_source": "ledger_auto"
       },
       {
@@ -8860,8 +8860,8 @@
       },
       {
         "raw_filing_label": "Sales of property, plant and equipment",
-        "canonical_label": "Purchase of PP&E",
-        "ledger_rule_id": "GEN-CF-024",
+        "canonical_label": "Proceeds from Sale of Assets",
+        "ledger_rule_id": "GEN-CF-041",
         "value": "122",
         "raw_numeric_text": "122",
         "notation_flags": 0,
@@ -8879,7 +8879,7 @@
         },
         "model_sheet": "QTR CF",
         "model_row": 0,
-        "model_label": "Purchase of PP&E",
+        "model_label": "Proceeds from Sale of Assets",
         "mapping_source": "ledger_auto"
       },
       {
@@ -9472,11 +9472,11 @@
     },
     {
       "rule_id": "BS-2 @ Q2 FY2024",
-      "expected": "154573",
+      "expected": "99533",
       "actual": "99533",
-      "gap": "-55040",
-      "severity": "fail",
-      "message": "TA = TCA (25703) + sum(8 NCA items = 128870)"
+      "gap": "0",
+      "severity": "pass",
+      "message": "TA = TCA (25703) + sum(7 NCA items = 73830)"
     },
     {
       "rule_id": "BS-3 @ Q2 FY2024",
@@ -9512,11 +9512,11 @@
     },
     {
       "rule_id": "BS-2 @ Q4 FY2023",
-      "expected": "154934",
+      "expected": "100495",
       "actual": "100495",
-      "gap": "-54439",
-      "severity": "fail",
-      "message": "TA = TCA (26950) + sum(8 NCA items = 127984)"
+      "gap": "0",
+      "severity": "pass",
+      "message": "TA = TCA (26950) + sum(7 NCA items = 73545)"
     },
     {
       "rule_id": "BS-3 @ Q4 FY2023",
