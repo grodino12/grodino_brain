@@ -77,6 +77,20 @@ Shared Postgres backing (Docker): `demographic_data` DB on localhost:5432. pgAdm
   - `feedback_ledger_ordering.md` — align ledger ordering to the latest filing when filings differ.
   - `feedback_sign_agnostic_labels.md` — canonical labels use parentheticals for the alternative sign.
 
+### PG onboarding on new HTM walker + workbook tie-out validator + framework hardening (2026-04-26 — second session)
+
+- **PG 14 filings clean.** 3 10-Ks (FY2023/24/25) + 11 10-Qs (Q1 FY2023 → Q2 FY2026): 0 novels, 0 validate fails, 0 workbook tie-out errors. `PG_model_v5.xlsx` 1,178 cells.
+- **Label-only library matching.** `match_raw_item` concept-name CamelCase fallback dropped per `feedback_label_only_matching.md`. Section filter applied uniformly in `select_entry` — single-candidate fallback no longer bypasses section mismatch (caught PG's `DEFERRED INCOME TAXES` mis-routing to `Deferred Tax Assets` canonical, which would have placed $5.7B of NC liabilities into the NC assets bucket on the workbook).
+- **CLUTTER_RE tightening + trailing-paren strip.** Required comma/semicolon trigger before clutter keywords (was over-matching mid-string aliases like `'preferred stock par or stated value per share'`). New `TRAILING_PAREN_RE` strips `(shares held: ...)` style metadata.
+- **Walker hardening (5 changes).** (1) Subsection_context derived from concept (`eps` for per-share, `shares_outstanding` for share-count) — fixes Basic/Diluted alias collision. (2) Date-only label fallback (PG quarterly BS rows labeled `June 2025` with CommonStockValue concept now synthesize friendly label). (3) `TOTAL FINANCING ACTIVITIES` added to subtotal-transition patterns. (4) Stmt-type-scoped `classify_section` (CF concepts no longer pick up IS-side `tax`/`non_operating` tags). (5) Strict-mode library lookup for subtotal rows (exact-match only) — prevents `Total current liabilities` mis-promoting to `Other Current Liabilities` at 88% fuzzy.
+- **Reconcile path-1 gated on `canonical_label is None`.** Canonical-matched subtotals (e.g. PG's `TOTAL OPERATING ACTIVITIES` → `Cash Flow from Operations`) now flow through to their proper sheet instead of `_subtotal` pseudo-bucket.
+- **Workbook tie-out validator in model-write.** `validate_workbook_ties()` compares section sums against filer subtotals per period; folds mezzanine into equity for TSE; skips subtotal-canonical rows; raises BEFORE save. Snapshots `row_map`+`row_section` BEFORE `insert_bs_subtotal_slots` mutation. Tolerance widened to $5 to absorb cross-filing rounding.
+- **Per-period tax-sign correction.** `extract.py` `correct_tax_signs()` runs post-walker on both PDF and iXBRL paths. For each IS Statement, if `NI > PT` (benefit period), flips tax `sign_convention` to `positive` via `model_copy` (RawLineItem frozen). PG always profitable → no flip; CELH FY2021 tax now renders +$7,996. IS-4 / IS-5 also updated to tolerate either tax sign as a backup. Per `feedback_tax_sign_per_period.md`.
+- **CELH single-NI fix.** Moved bare-NI aliases from `GEN-IS-011 Net Income (Loss) Less NCI` to `GEN-IS-022 Net Income (Loss)`. Single-NI filers (CELH) now route to consolidated NI; NCI filers (PG) keep both rows via specific aliases (`net earnings attributable to procter & gamble`).
+- **Library: 122 → 124 entries** + ~40 alias additions across BS/CF/IS for hyphen-suffix labels (CELH: `brands-net`, `customer relationships-net`, `deferred revenue-current`, lease-{op,fin}-{current,non-current}; PG: `change in accounts payable and accrued and other liabilities`, `total inventories`, `debt due within one year`, `deferred income taxes` on GEN-BS-025).
+- **Ledger writes: NONE.** All hardening done at framework / library / extract level — no per-ticker ledger entries added. Future tickers benefit automatically.
+- **Memory feedback saved (4):** `feedback_label_only_matching.md`, `feedback_charge_means_expense.md`, `feedback_celh_pg_joint_regression.md`, `feedback_tax_sign_per_period.md`.
+
 ### PG cross-year backfill + sign authority + subtotal consolidation (2026-04-25 — third session same day)
 
 - **PG 3-year backfill.** 3 10-Ks (FY2023/24/25) + 11 10-Qs (Q1 FY2023 → Q2 FY2026) — 14 filings total, 0 novels, 0 FAILs. `PG_model_v14.xlsx` ships with 5 historical FY columns + 14 quarterly columns, ANNL P&L 15 rows / QTR P&L 16 rows after Pre-Tax consolidation.
@@ -249,7 +263,7 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 26th HTM Walker Build-Out + 12 Filing Clean Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 26th PG Onboarding + Workbook Tie-Out Validator Session.md` |
 | Prior handoffs (rotated) | `Brain\Sessions\CELH Model\Handoffs\Archive\` |
 | **sec-edgar-fetch skill** | `~\.claude\skills\sec-edgar-fetch\` |
 | **financials-extract-ixbrl skill** | `~\.claude\skills\financials-extract-ixbrl\` |
