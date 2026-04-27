@@ -36,14 +36,14 @@
       "rule_id": "PEP-IS-001",
       "model_sheet": "ANNL P&L",
       "new_row_label": "Gain on Juice Transaction",
-      "filing_section": "operating_expenses",
+      "filing_section": "non_operating",
       "aliases": [
         "gain associated with juice transaction"
       ],
       "us_gaap_concepts": [
         "GainLossOnSaleOfBusiness"
       ],
-      "note": "IS line for the Juice Transaction. PEP renders this line INSIDE the Operating Profit calculation — visually placed between SG&A and Impairment, value rendered in parens-negative (-3,321 in FY2022, the held-for-sale loss recognized when Juice was classified as held-for-sale). Filing_section MUST be operating_expenses (not non_operating) so model-write's cascade-subtotal injection algorithm doesn't see a fake section transition that would push IFO/PT subtotals into the middle of the bucket. Sign convention left unset — value comes through as-mapped from parens-negative detection. The actual close gain in FY2024 wasn't broken out as a separate line (PEP netted it through Impairment of intangibles)."
+      "note": "IS line for the Juice Transaction. Conceptually a non-operating divestiture-related line (us-gaap:GainLossOnSaleOfBusiness). PEP renders the line VISUALLY between SG&A and Impairment in the FY2022 column with value parens-negative (-3,321, the held-for-sale loss recognized when Juice was classified as held-for-sale), but the conceptual classification is non_operating per the us-gaap concept. Model-write's cascade-subtotal injection respects this without producing duplicate subtotals because the IFO/PT cascade labels are skipped when the filer already rendered them in document order (per `feedback_no_duplicate_anchor_subtotals.md`). The actual close gain in FY2024 wasn't broken out as a separate line (PEP netted it through Impairment of intangibles)."
     },
     {
       "rule_id": "PEP-CF-003",
