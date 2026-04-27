@@ -164,6 +164,15 @@ class LibraryEntry(BaseModel):
     model_sheet: str
     model_label: str
     aliases: list[str] = Field(default_factory=list)
+    # Optional explicit us-gaap concept (LOCAL NAME, no namespace prefix —
+    # e.g. "CashAndCashEquivalentsAtCarryingValue", not
+    # "us-gaap:CashAndCashEquivalentsAtCarryingValue"). When set, the iXBRL
+    # walker can route a row to this canonical via `match_raw_item`'s concept
+    # fallback when the row's filer-rendered label matches no alias. The
+    # walker passes `f.local_name` and we compare exactly — no CamelCase
+    # splitting, no fuzz, no namespace inference. Multiple canonicals must
+    # NOT declare the same us_gaap_concept (load-time guard).
+    us_gaap_concept: str | None = None
     filing_section: Section | None = None
     filing_subsection: str | None = None
     sign_convention: SignConvention | None = None
@@ -206,6 +215,22 @@ def _sheet_group(model_sheet: str) -> str:
     return "OTHER"
 
 
+def _entry_canonical(entry: dict) -> dict:
+    """Project a library entry to the canonical dict shape consumed by
+    `select_entry` / `match_raw_item` callers."""
+    return {
+        "rule_id": entry["rule_id"],
+        "model_sheet": entry["model_sheet"],
+        "model_label": entry["model_label"],
+        "filing_subsection": entry.get("filing_subsection"),
+        "filing_section": entry.get("filing_section"),
+        "sign_convention": entry.get("sign_convention"),
+        "memo": entry.get("memo", False),
+        "row_type": entry.get("row_type"),
+        "_source": "generic",
+    }
+
+
 def build_generic_index(
     library: dict,
 ) -> dict[tuple[str, str], list[dict]]:
@@ -217,17 +242,7 @@ def build_generic_index(
     index: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for entry in library.get("mappings", []):
         sheet_grp = _sheet_group(entry["model_sheet"])
-        canonical = {
-            "rule_id": entry["rule_id"],
-            "model_sheet": entry["model_sheet"],
-            "model_label": entry["model_label"],
-            "filing_subsection": entry.get("filing_subsection"),
-            "filing_section": entry.get("filing_section"),
-            "sign_convention": entry.get("sign_convention"),
-            "memo": entry.get("memo", False),
-            "row_type": entry.get("row_type"),
-            "_source": "generic",
-        }
+        canonical = _entry_canonical(entry)
         # Collect normalized aliases unique to THIS entry. Multiple library
         # aliases can normalize to the same string (e.g. 'net income (loss)'
         # and 'net income loss' both → 'net income loss'). Without dedup the
@@ -242,6 +257,38 @@ def build_generic_index(
                 continue
             seen_norm.add(n)
             index[(n, sheet_grp)].append(canonical)
+    return index
+
+
+def build_concept_index(library: dict) -> dict[str, dict]:
+    """Build {us_gaap_concept (local name) -> canonical entry} from library
+    entries that declare an explicit `us_gaap_concept`. Used by the iXBRL
+    walker as a structural fallback when a row's filer-rendered label
+    matches no alias.
+
+    Match key is the concept's LOCAL NAME (no namespace prefix) — this
+    matches what the walker passes (`f.local_name`). Lookup is exact;
+    there is no CamelCase splitting, no fuzz, no normalization. Multiple
+    canonicals declaring the same concept is a load-time error — the
+    library author must pick one canonical per concept.
+
+    PDF path passes `concept=None`, so this index is never consulted on
+    PDF inputs. Library entries without `us_gaap_concept` are not
+    indexed — the fallback simply doesn't fire on their concepts.
+    """
+    index: dict[str, dict] = {}
+    for entry in library.get("mappings", []):
+        concept = entry.get("us_gaap_concept")
+        if not concept:
+            continue
+        if concept in index:
+            existing = index[concept]
+            raise ValueError(
+                f"us_gaap_concept {concept!r} declared by both "
+                f"{existing['rule_id']!r} and {entry['rule_id']!r} — "
+                f"each concept must map to exactly one canonical."
+            )
+        index[concept] = _entry_canonical(entry)
     return index
 
 
@@ -348,6 +395,7 @@ def match_raw_item(
     index: dict[tuple[str, str], list[dict]],
     fuzzy_threshold: int = 85,
     strict: bool = False,
+    concept_index: dict[str, dict] | None = None,
 ) -> dict | None:
     """Look up a raw line item in the generic library.
 
@@ -355,11 +403,22 @@ def match_raw_item(
     `model_label`, `model_sheet`, `filing_section`, `filing_subsection`,
     `sign_convention`, `memo`, `row_type`, ...) on match, or None on miss.
 
-    Match order (HTM-visual-label only — `concept` is accepted for signature
-    compatibility but intentionally ignored, per
-    `feedback_label_only_matching.md`):
-      1. Exact-normalized match on raw_filing_label
-      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold)
+    Match order:
+      1. Exact-normalized match on raw_filing_label (HTM visual label).
+      2. Fuzzy match on raw_filing_label (rapidfuzz ≥ threshold).
+      3. **Concept fallback** — if `concept` and `concept_index` are both
+         provided, look up `concept` (the iXBRL fact's local name, e.g.
+         `CashAndCashEquivalentsAtCarryingValue`) directly in `concept_index`.
+         Exact match only — no CamelCase splitting, no fuzz. The walker is
+         the gatekeeper for what's "in scope" (visible primary HTM rows
+         only), per `feedback_no_rfiles_for_financials.md`. This step only
+         relabels rows the walker already collected; it never discovers
+         new ones. Per `feedback_label_only_matching.md` we never tokenize
+         the concept and fuzzy-match aliases — that approach was dropped
+         for false positives.
+
+    PDF path passes `concept=None` and no `concept_index`, so the fallback
+    is naturally inert there.
 
     On a hit, if `statement_type` is INCOME_STATEMENT and the entry has no
     explicit `sign_convention`, the sign is derived from keywords in the
@@ -386,6 +445,11 @@ def match_raw_item(
             best_key = matches[0][0]
             entry = select_entry(index.get((best_key, group), []),
                                  subsection_context, section)
+
+    # (3) concept fallback — exact-match the iXBRL local name against the
+    # library's `us_gaap_concept` index. Inert when either side is None.
+    if entry is None and concept and concept_index:
+        entry = concept_index.get(concept)
 
     if entry is None:
         return None

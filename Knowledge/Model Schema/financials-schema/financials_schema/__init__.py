@@ -22,6 +22,7 @@ from financials_schema.patterns import (
 from financials_schema.lookup import (
     IXBRL_SUBTOTAL_CONCEPTS,
     LibraryEntry,
+    build_concept_index,
     build_generic_index,
     is_subtotal_label,
     load_generic_library,
@@ -53,6 +54,7 @@ __all__ = [
     "Unit",
     "ValidatedFiling",
     "ValidationResult",
+    "build_concept_index",
     "build_generic_index",
     "is_subtotal_label",
     "keep_statement_for_pipeline",
