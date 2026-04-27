@@ -123,15 +123,32 @@ IXBRL_SUBTOTAL_CONCEPTS = frozenset({
 })
 
 
-def is_subtotal_label(raw_filing_label: str, concept: str | None = None) -> bool:
-    """Rows starting with 'Total' or 'Subtotal' are subtotals. Also catches
-    iXBRL us-gaap subtotal concept names (via the optional `concept` arg from
-    the iXBRL extractor's citation; the label itself may be 'TOTAL ASSETS'
-    which already matches the regex, so `concept` is belt-and-suspenders)."""
+def is_subtotal_label(
+    raw_filing_label: str,
+    concept: str | None = None,
+    calc_subtotal_concepts: set[str] | None = None,
+) -> bool:
+    """Rows starting with 'Total' or 'Subtotal' are subtotals. Concept-based
+    subtotal detection has two paths:
+
+    1. **Calc-linkbase-driven** (preferred). When `calc_subtotal_concepts` is
+       provided, it's the set of concepts that appear as `xlink:from` in any
+       calculationArc in the filing's `*_cal.xml` — i.e., concepts the filer
+       has explicitly declared as parents-of-summands. This is the structural
+       truth from the filing itself; replaces the hardcoded allowlist.
+    2. **Hardcoded allowlist fallback**. When `calc_subtotal_concepts` is None
+       (PDF path, or iXBRL filing without cal.xml available), fall back to
+       `IXBRL_SUBTOTAL_CONCEPTS` — a static list of well-known us-gaap
+       subtotal concepts. Less precise but works without the linkbase.
+    """
     if SUBTOTAL_RE.match(raw_filing_label.strip()):
         return True
-    if concept and concept in IXBRL_SUBTOTAL_CONCEPTS:
-        return True
+    if concept:
+        if calc_subtotal_concepts is not None:
+            if concept in calc_subtotal_concepts:
+                return True
+        elif concept in IXBRL_SUBTOTAL_CONCEPTS:
+            return True
     return False
 
 
