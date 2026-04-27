@@ -1988,8 +1988,8 @@
           },
           {
             "raw_filing_label": "Net income (loss)",
-            "canonical_label": "Net Income (Loss) Less NCI",
-            "ledger_rule_id": "GEN-IS-011",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-022",
             "value": "226801",
             "raw_numeric_text": "226,801",
             "notation_flags": 0,
@@ -2309,8 +2309,8 @@
           },
           {
             "raw_filing_label": "Net income (loss)",
-            "canonical_label": "Net Income (Loss) Less NCI",
-            "ledger_rule_id": "GEN-IS-011",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-022",
             "value": "-187282",
             "raw_numeric_text": "187,282",
             "notation_flags": 0,
@@ -2600,7 +2600,7 @@
             "row_type": "line_item",
             "section": "tax",
             "subsection_context": null,
-            "sign_convention": "negative",
+            "sign_convention": "positive",
             "citation": {
               "source_path": "Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
               "page": 1,
@@ -2610,8 +2610,8 @@
           },
           {
             "raw_filing_label": "Net income (loss)",
-            "canonical_label": "Net Income (Loss) Less NCI",
-            "ledger_rule_id": "GEN-IS-011",
+            "canonical_label": "Net Income (Loss)",
+            "ledger_rule_id": "GEN-IS-022",
             "value": "3937",
             "raw_numeric_text": "3,937",
             "notation_flags": 0,
@@ -7018,8 +7018,8 @@
     },
     {
       "raw_filing_label": "Net income (loss)",
-      "canonical_label": "Net Income (Loss) Less NCI",
-      "ledger_rule_id": "GEN-IS-011",
+      "canonical_label": "Net Income (Loss)",
+      "ledger_rule_id": "GEN-IS-022",
       "value": "226801",
       "raw_numeric_text": "226,801",
       "notation_flags": 0,
@@ -7037,7 +7037,7 @@
       },
       "model_sheet": "ANNL P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss) Less NCI",
+      "model_label": "Net Income (Loss)",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7378,8 +7378,8 @@
     },
     {
       "raw_filing_label": "Net income (loss)",
-      "canonical_label": "Net Income (Loss) Less NCI",
-      "ledger_rule_id": "GEN-IS-011",
+      "canonical_label": "Net Income (Loss)",
+      "ledger_rule_id": "GEN-IS-022",
       "value": "-187282",
       "raw_numeric_text": "187,282",
       "notation_flags": 0,
@@ -7397,7 +7397,7 @@
       },
       "model_sheet": "ANNL P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss) Less NCI",
+      "model_label": "Net Income (Loss)",
       "mapping_source": "ledger_auto"
     },
     {
@@ -7700,7 +7700,7 @@
       "row_type": "line_item",
       "section": "tax",
       "subsection_context": null,
-      "sign_convention": "negative",
+      "sign_convention": "positive",
       "citation": {
         "source_path": "Desktop\\Brain\\Sources\\CELH\\2023-FY\\filings\\CELH_2023-12-31_10-K.htm",
         "page": 1,
@@ -7714,8 +7714,8 @@
     },
     {
       "raw_filing_label": "Net income (loss)",
-      "canonical_label": "Net Income (Loss) Less NCI",
-      "ledger_rule_id": "GEN-IS-011",
+      "canonical_label": "Net Income (Loss)",
+      "ledger_rule_id": "GEN-IS-022",
       "value": "3937",
       "raw_numeric_text": "3,937",
       "notation_flags": 0,
@@ -7733,7 +7733,7 @@
       },
       "model_sheet": "ANNL P&L",
       "model_row": 0,
-      "model_label": "Net Income (Loss) Less NCI",
+      "model_label": "Net Income (Loss)",
       "mapping_source": "ledger_auto"
     },
     {
