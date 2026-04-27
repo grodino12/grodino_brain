@@ -8815,7 +8815,7 @@
         "notation_flags": 0,
         "footnote_markers": [],
         "indent_level": 2,
-        "row_type": "line_item",
+        "row_type": "memo",
         "section": "cash_other",
         "subsection_context": null,
         "sign_convention": "as_reported",
@@ -10148,11 +10148,11 @@
     },
     {
       "rule_id": "CF-1 @ Q3 FY2025",
-      "expected": "172",
+      "expected": "-382",
       "actual": "-382",
-      "gap": "-554",
-      "severity": "fail",
-      "message": "CFO (5468) + CFI (-5237) + CFF (-1008) + CashOther (949) = NetChange"
+      "gap": "0",
+      "severity": "pass",
+      "message": "CFO (5468) + CFI (-5237) + CFF (-1008) + CashOther (395) = NetChange"
     },
     {
       "rule_id": "CF-2 @ Q3 FY2025",
@@ -10211,5 +10211,5 @@
       "message": "CFF = sum of 10 financing line items"
     }
   ],
-  "passed": false
+  "passed": true
 }

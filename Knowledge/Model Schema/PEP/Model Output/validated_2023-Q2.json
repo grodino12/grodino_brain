@@ -9240,7 +9240,7 @@
         "notation_flags": 0,
         "footnote_markers": [],
         "indent_level": 2,
-        "row_type": "line_item",
+        "row_type": "memo",
         "section": "cash_other",
         "subsection_context": null,
         "sign_convention": "as_reported",
@@ -10525,11 +10525,11 @@
     },
     {
       "rule_id": "CF-1 @ Q2 FY2023",
-      "expected": "1236",
+      "expected": "1142",
       "actual": "1142",
-      "gap": "-94",
-      "severity": "fail",
-      "message": "CFO (2019) + CFI (-1423) + CFF (690) + CashOther (-50) = NetChange"
+      "gap": "0",
+      "severity": "pass",
+      "message": "CFO (2019) + CFI (-1423) + CFF (690) + CashOther (-144) = NetChange"
     },
     {
       "rule_id": "CF-2 @ Q2 FY2023",
