@@ -1,0 +1,9 @@
+{
+  "_notes": "PEP decisions ledger. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Per the 2026-04-25 variant collapse, model_sheet is informational; the actual sheet routed to at write time comes from SHEET_NAME[(filing_type, statement_type)] in reconcile.",
+  "_last_updated": "2026-04-27",
+  "ticker": "PEP",
+  "mappings": [],
+  "new_rows": [],
+  "superseded_rule_ids": [],
+  "memo_rule_ids": []
+}

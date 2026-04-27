@@ -1,0 +1,21 @@
+{
+  "_notes": "PEP ticker metadata. Populated 2026-04-27 as the third ticker onboarded after CELH + PG, validating the post Tier C hardening framework.",
+  "_last_updated": "2026-04-27",
+
+  "ticker": "PEP",
+  "company_name": "PepsiCo, Inc.",
+  "cik": "0000077476",
+  "exchange": "NASDAQ",
+  "sector": "Consumer Staples",
+  "industry": "Beverages & Convenient Foods",
+  "fiscal_year_end": "12-27",
+  "_fiscal_year_end_note": "PEP uses a 52/53-week fiscal year ending on the last Saturday of December. FY2023 ended 2023-12-30; FY2024 ended 2024-12-28; FY2025 ended 2025-12-27. The 12-27 value is a representative anchor; period-end dates per filing are authoritative.",
+  "currency": "USD",
+
+  "_plausibility_note": "Ranges in $millions (PEP reports all USD facts at scale=6). Used by unit_detection fallback when no explicit header phrase is found.",
+  "expected_revenue_range_millions": [85000, 100000],
+  "expected_total_assets_range_millions": [90000, 110000],
+
+  "_stock_splits_note": "No recent PEP splits. The 1996 3-for-1 is pre-iXBRL; pre-1996 filings (not in scope) use pre-split share counts.",
+  "stock_splits": []
+}
