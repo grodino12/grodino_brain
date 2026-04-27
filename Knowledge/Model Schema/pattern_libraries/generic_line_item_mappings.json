@@ -190,10 +190,6 @@
       "row_type": "subtotal",
       "note": "Net income attributable to the parent (= consolidated NI from GEN-IS-022 minus the NCI portion from GEN-IS-023). Tied to us-gaap:NetIncomeLoss concept which most filers use specifically for the parent-attributable line. For filers WITHOUT noncontrolling interests, this entry typically does not match anything (NI = parent NI; only GEN-IS-022 is rendered).",
       "aliases": [
-        "net income (loss)",
-        "net income",
-        "net loss",
-        "net income loss",
         "net earnings attributable to procter & gamble"
       ]
     },
@@ -911,7 +907,11 @@
         "net income including noncontrolling interest",
         "net earnings",
         "net earnings (loss)",
-        "net (loss) income"
+        "net (loss) income",
+        "net income (loss)",
+        "net income",
+        "net loss",
+        "net income loss"
       ]
     },
     {
