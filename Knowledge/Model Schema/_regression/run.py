@@ -262,9 +262,16 @@ def _values_equal(a, b) -> bool:
     return False
 
 
+# Path-key patterns that should be ignored during diff. Source paths can
+# vary by absolute-vs-relative form depending on how the pipeline was
+# invoked; that's representational, not a data regression.
+_DIFF_SKIP_KEYS = {"source_path"}
+
+
 def diff_json(golden, current, path: str = "") -> list[str]:
     """Recursively diff two JSON-decoded structures. Numeric values within
-    NUMERIC_TOLERANCE are considered equal.
+    NUMERIC_TOLERANCE are considered equal. Keys in _DIFF_SKIP_KEYS are
+    skipped (representational metadata, not data).
     """
     diffs: list[str] = []
     if type(golden) != type(current):
@@ -272,6 +279,8 @@ def diff_json(golden, current, path: str = "") -> list[str]:
         return diffs
     if isinstance(golden, dict):
         for k in sorted(set(golden) | set(current)):
+            if k in _DIFF_SKIP_KEYS:
+                continue
             if k not in golden:
                 diffs.append(f"{path}/{k}: ADDED")
             elif k not in current:
