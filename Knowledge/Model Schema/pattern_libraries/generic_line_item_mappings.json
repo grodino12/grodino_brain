@@ -398,6 +398,20 @@
       "us_gaap_concept": "InventoryNet"
     },
     {
+      "rule_id": "GEN-BS-044",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Short-Term Investments",
+      "filing_section": "current_assets",
+      "note": "Short-term investment balances (commercial paper, AFS securities, time deposits) held as a current asset distinct from cash equivalents. Common across staples filers (PEP, KO).",
+      "aliases": [
+        "short-term investments",
+        "short term investments",
+        "short-term investment securities",
+        "short-term marketable securities"
+      ],
+      "us_gaap_concept": "ShortTermInvestments"
+    },
+    {
       "rule_id": "GEN-BS-006",
       "model_sheet": "BALANCE SHEET",
       "model_label": "Prepaid Expenses",
@@ -484,9 +498,26 @@
       "us_gaap_concept": "NotesAndLoansReceivableNetNoncurrent"
     },
     {
+      "rule_id": "GEN-BS-045",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Equity Method Investments",
+      "filing_section": "non_current_assets",
+      "note": "Investments in noncontrolled affiliates / unconsolidated joint ventures accounted for under the equity method. Distinct from short-term marketable securities (GEN-BS-044) and from consolidated subsidiaries.",
+      "aliases": [
+        "equity method investments",
+        "investments in noncontrolled affiliates",
+        "investments in unconsolidated affiliates",
+        "investments in unconsolidated subsidiaries",
+        "investments in equity method investees",
+        "investments in joint ventures"
+      ],
+      "us_gaap_concept": "EquityMethodInvestments"
+    },
+    {
       "rule_id": "GEN-BS-012",
       "model_sheet": "BALANCE SHEET",
       "model_label": "Intangible Assets",
+      "note": "Combined intangibles canonical. Filers split this presentation differently: some show one combined line (CELH, PG), others split into amortizable (finite-lived) and indefinite-lived sub-lines (PEP). The us_gaap_concepts list captures all three concept variants so the workbook displays a single combined Intangible Assets row regardless of filer presentation.",
       "aliases": [
         "intangibles-net",
         "intangible assets, net",
@@ -498,10 +529,16 @@
         "trademarks and other intangible assets, net",
         "brands-net",
         "customer relationships-net",
-        "intangibles"
+        "intangibles",
+        "amortizable intangible assets, net",
+        "other indefinite-lived intangible assets"
       ],
       "filing_section": "non_current_assets",
-      "us_gaap_concept": "IntangibleAssetsNetExcludingGoodwill"
+      "us_gaap_concept": "IntangibleAssetsNetExcludingGoodwill",
+      "us_gaap_concepts": [
+        "FiniteLivedIntangibleAssetsNet",
+        "IndefiniteLivedIntangibleAssetsExcludingGoodwill"
+      ]
     },
     {
       "rule_id": "GEN-BS-013",
@@ -552,10 +589,14 @@
         "accrued expenses and other current liabilities",
         "accrued liabilities and other",
         "accrued liabilities current",
-        "accrued and other liabilities"
+        "accrued and other liabilities",
+        "accounts payable and other current liabilities"
       ],
       "filing_section": "current_liabilities",
-      "us_gaap_concept": "AccruedLiabilitiesCurrent"
+      "us_gaap_concept": "AccruedLiabilitiesCurrent",
+      "us_gaap_concepts": [
+        "AccountsPayableAndAccruedLiabilitiesCurrent"
+      ]
     },
     {
       "rule_id": "GEN-BS-017",
@@ -781,16 +822,18 @@
     {
       "rule_id": "GEN-BS-032",
       "model_sheet": "BALANCE SHEET",
-      "model_label": "Short-Term Debt",
+      "model_label": "Short-Term Debt Obligations",
       "filing_section": "current_liabilities",
       "note": "Debt with original maturity < 1 year (commercial paper, revolving credit drawings, short-term notes). Distinct from GEN-BS-033 Current Portion of LT Debt, which is the <1yr slice of longer-dated instruments.",
       "aliases": [
         "short-term debt",
+        "short-term debt obligations",
         "short-term borrowings",
         "notes payable",
         "commercial paper",
         "short term borrowings"
-      ]
+      ],
+      "us_gaap_concept": "ShortTermBorrowings"
     },
     {
       "rule_id": "GEN-BS-033",
@@ -819,10 +862,14 @@
         "long-term debt noncurrent",
         "long-term debt, net",
         "long-term debt, excluding current portion",
+        "long-term debt obligations",
         "senior notes",
         "notes payable non-current"
       ],
-      "us_gaap_concept": "LongTermDebtNoncurrent"
+      "us_gaap_concept": "LongTermDebtNoncurrent",
+      "us_gaap_concepts": [
+        "LongTermDebtAndCapitalLeaseObligations"
+      ]
     },
     {
       "rule_id": "GEN-BS-042",
@@ -862,7 +909,7 @@
       "model_label": "Treasury Stock",
       "filing_section": "equity",
       "sign_convention": "negative",
-      "note": "Contra-equity dollar balance. The bare 'treasury shares' alias is intentionally absent — it conflicts with the share-count concept TreasuryStockCommonShares (memo, GEN-BS-043).",
+      "note": "Contra-equity dollar balance. The bare 'treasury shares' alias is intentionally absent — it conflicts with the share-count concept TreasuryStockCommonShares (memo, GEN-BS-043). us_gaap_concepts widened to include TreasuryStockValue (the parent concept some filers use, e.g. PEP) so concept-fallback resolves filer-specific label phrasings like 'Repurchased common stock, in excess of par value (X shares)'.",
       "aliases": [
         "treasury stock",
         "treasury stock common value",
@@ -870,7 +917,10 @@
         "treasury stock at cost",
         "treasury stock, common"
       ],
-      "us_gaap_concept": "TreasuryStockCommonValue"
+      "us_gaap_concept": "TreasuryStockCommonValue",
+      "us_gaap_concepts": [
+        "TreasuryStockValue"
+      ]
     },
     {
       "rule_id": "GEN-BS-036",
