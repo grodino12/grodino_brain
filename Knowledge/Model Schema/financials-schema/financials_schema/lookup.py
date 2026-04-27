@@ -373,7 +373,16 @@ def select_entry(
 # on CF, "Depreciation expense" appears positive (non-cash add-back), so
 # the keyword logic would mis-flip.
 
-_NEGATIVE_KEYWORDS = ("expense", "loss", "cost of", "charge")
+# `"charge"` was previously listed as a negative keyword to handle PG's
+# "Indefinite-lived intangible asset impairment charge" rendering negatively
+# on the IS. Removed in the §18d sprint stage: the routing target
+# (GEN-IS-024 Impairment of Intangibles) already declares
+# `sign_convention=negative`, so the canonical-level rule wins and the
+# keyword scan was dead code on every observed CELH+PG item. Sign for
+# impairment-type charge labels comes from the canonical's declared
+# convention, not from label-text scanning. Per
+# `feedback_charge_means_expense.md` — superseded.
+_NEGATIVE_KEYWORDS = ("expense", "loss", "cost of")
 _POSITIVE_KEYWORDS = ("benefit", "gain", "income", "recovery")
 
 
