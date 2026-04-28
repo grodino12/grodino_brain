@@ -296,7 +296,7 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 27th PEP Onboarding Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 28th Quarterly Forecasting Layer Session.md` |
 | Prior handoffs (rotated) | `Brain\Sessions\CELH Model\Handoffs\Archive\` |
 | **sec-edgar-fetch skill** | `~\.claude\skills\sec-edgar-fetch\` |
 | **financials-extract-ixbrl skill** | `~\.claude\skills\financials-extract-ixbrl\` |
