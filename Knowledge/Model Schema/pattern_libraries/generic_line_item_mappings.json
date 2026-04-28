@@ -243,6 +243,7 @@
       "rule_id": "GEN-IS-013",
       "model_sheet": "ANNL P&L",
       "model_label": "Income Allocated to Participating Preferred",
+      "note": "Earnings allocated away from common holders to participating preferred under the two-class method; renders as a deduction on the IS, so always negative regardless of how the filer's iXBRL fact is signed. Keyword scan would derive 'positive' from 'income' in the alias; explicit negative wins per `match_raw_item` precedence rules.",
       "aliases": [
         "income allocated to participating preferred shares",
         "income allocated to participating preferred stock",
@@ -251,6 +252,7 @@
         "income (loss) allocated to participating preferred"
       ],
       "filing_section": "eps",
+      "sign_convention": "negative",
       "us_gaap_concept": "UndistributedEarningsLossAllocatedToParticipatingSecuritiesBasic"
     },
     {

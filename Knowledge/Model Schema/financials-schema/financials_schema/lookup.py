@@ -208,6 +208,12 @@ class LibraryEntry(BaseModel):
     # Free-form documentation field — surfaces in novel triage / human review.
     # Not consumed by extract / reconcile / validate.
     note: str | None = None
+    # Path B closure: BS canonical declares the CF row whose ΔBS feeds this
+    # row. Read by model-calc's `_wire_bs_delta_and_plug`. When unset, BS_DELTA
+    # falls back to exact-canonical-label match on the CF side, then to the
+    # RESIDUAL_PLUG. Example: GEN-BS-016 Accrued Expenses → "Accounts Payable"
+    # (PEP routes accrued ΔBS to the CF AP line).
+    cf_delta_target: str | None = None
 
 
 def load_generic_library(library_path: Path) -> dict:
