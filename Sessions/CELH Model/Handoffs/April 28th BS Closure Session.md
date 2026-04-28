@@ -61,6 +61,16 @@ CELH's 10-Q condensed BS omits Treasury Stock (Reg S-X Article 10 condensed pres
 
 Deleted 12 stale snapshots (CELH_model_v5, PG_model_v2/v3/v5, PEP_model_v3 through v10, plus pre-fix `{TICKER}_model.xlsx`). Renamed `*_balance_test.xlsx` → `{TICKER}_model.xlsx`. Each ticker folder now has exactly one canonical workbook built under the new pipeline.
 
+### 11. Folder layout reorg (post-session)
+
+After main work shipped, restructured `Knowledge/` so the only artifact under `Model Outputs/{TICKER}/` is the deliverable workbook. All per-ticker workspace data — `config.json`, `decisions_ledger.json`, `anomalies.json`, `validated_*.json`, `explorer_*.html`, `.cache/` — now lives at `Knowledge/Model Schema/Ticker Libraries/{TICKER}/`. `pattern_libraries/`, `financials-schema/`, and `_regression/` stay where they were under `Model Schema/`. Updated:
+- `reconcile.py:446`, `write.py:159` — auto-resolve generic library via `ticker_root.parent.parent / "pattern_libraries"` (one extra level since ticker folders are now nested under Ticker Libraries).
+- `_regression/run.py` — added `validated_dir()` helper, `cache_dir()` now points at `ticker_root / .cache`, `model_output_dir()` returns `Knowledge/Model Outputs/{ticker}/` for workbook only.
+- 5 SKILL.md examples (extract/reconcile/playground/model-calc/model-write) and `_regression/README.md` updated.
+- `playground_architecture.html` decisions_ledger / source_citations / xlsm path nodes updated.
+
+Saved `project_brain_layout.md` memory so future sessions don't re-derive the convention. ROADMAP.md not updated (per user) — its path table is now stale; treat the table in this handoff as authoritative.
+
 ## Current state
 
 - **PEP**: 19 forecast quarters Q2 FY2026E..Q4 FY2030E, BS gap = $0 max abs.
@@ -93,9 +103,10 @@ Deleted 12 stale snapshots (CELH_model_v5, PG_model_v2/v3/v5, PEP_model_v3 throu
 | model-write annual→QTR mirror | `~\.claude\skills\model-write\scripts\write.py:344-378` |
 | model-write dynamic FORECAST_LABELS | `~\.claude\skills\model-write\scripts\write.py:30,477-498` |
 | Generic library (137 entries; +1 cf_delta_target) | `Brain\Knowledge\Model Schema\pattern_libraries\generic_line_item_mappings.json` |
-| **PEP canonical workbook** | `Brain\Knowledge\Model Schema\PEP\Model Output\PEP_model.xlsx` |
-| **PG canonical workbook** | `Brain\Knowledge\Model Schema\PG\Model Output\PG_model.xlsx` |
-| **CELH canonical workbook** | `Brain\Knowledge\Model Schema\CELH\Model Output\CELH_model.xlsx` |
+| **PEP canonical workbook** | `Brain\Knowledge\Model Outputs\PEP\PEP_model.xlsx` |
+| **PG canonical workbook** | `Brain\Knowledge\Model Outputs\PG\PG_model.xlsx` |
+| **CELH canonical workbook** | `Brain\Knowledge\Model Outputs\CELH\CELH_model.xlsx` |
+| Per-ticker workspace (config, ledger, validated_*, .cache, explorers) | `Brain\Knowledge\Model Schema\Ticker Libraries\{TICKER}\` |
 | Playgrounds (need v9 → v12 bump) | `Brain\Knowledge\Model Schema\playground_{architecture,schema}.html` |
 
 ## How to create the next handoff
