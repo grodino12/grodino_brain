@@ -361,18 +361,21 @@ const SCHEMA = [
   {
     name: 'LibraryEntry', kind: 'model', extends: 'BaseModel', layer: 'patterns',
     config: 'extra="forbid"',
-    doc: 'Pydantic-validated shape for one entry in the cross-ticker generic library (pattern_libraries/generic_line_item_mappings.json, 109 entries). load_generic_library() runs LibraryEntry.model_validate() on every mapping at LOAD time — the extra="forbid" config catches field-name typos, invalid Section / SignConvention values, and missing required fields immediately, with a message naming the offending rule_id. Replaces the previous "fail at use time when an item happens to match it" model. After the 2026-04-25 variant collapse, model_sheet is informational only (drives sheet_group derivation BS / IS / CF) — actual sheet routing comes from SHEET_NAME[(filing_type, statement_type)] at reconcile time, so one entry serves both 10-K and 10-Q runs. Same applies to per-ticker decisions_ledger.json entries.',
+    doc: 'Pydantic-validated shape for one entry in the cross-ticker generic library (pattern_libraries/generic_line_item_mappings.json, ~140 entries). load_generic_library() runs LibraryEntry.model_validate() on every mapping at LOAD time — the extra="forbid" config catches field-name typos, invalid Section / SignConvention values, and missing required fields immediately, with a message naming the offending rule_id. **Adding a field to the JSON requires a paired edit to LibraryEntry** — extra="forbid" otherwise blocks extract for ALL filings on the first entry that uses the new field (per `feedback_library_entry_schema_sync.md`). After the 2026-04-25 variant collapse, model_sheet is informational only (drives sheet_group derivation BS / IS / CF) — actual sheet routing comes from SHEET_NAME[(filing_type, statement_type)] at reconcile time, so one entry serves both 10-K and 10-Q runs. Same applies to per-ticker decisions_ledger.json entries.',
     fields: [
       { name: 'rule_id',           type: 'str',                            typeKind: 'primitive' },
       { name: 'model_sheet',       type: 'str',                            typeKind: 'primitive' },
       { name: 'model_label',       type: 'str',                            typeKind: 'primitive' },
       { name: 'aliases',           type: 'list[str]',                      typeKind: 'container', default: 'Field(default_factory=list)' },
+      { name: 'us_gaap_concept',   type: 'str | None',                     typeKind: 'primitive', default: 'None' },
+      { name: 'us_gaap_concepts',  type: 'list[str]',                      typeKind: 'container', default: 'Field(default_factory=list)' },
       { name: 'filing_section',    type: 'Section | None',                 typeKind: 'enum', ref: 'Section', default: 'None' },
       { name: 'filing_subsection', type: 'str | None',                     typeKind: 'primitive', default: 'None' },
       { name: 'sign_convention',   type: 'Literal["as_reported", "positive", "negative"] | None', typeKind: 'literal', default: 'None' },
       { name: 'memo',              type: 'bool',                           typeKind: 'primitive', default: 'False' },
       { name: 'row_type',          type: 'RowType | None',                 typeKind: 'literal', default: 'None' },
-      { name: 'note',              type: 'str | None',                     typeKind: 'primitive', default: 'None' }
+      { name: 'note',              type: 'str | None',                     typeKind: 'primitive', default: 'None' },
+      { name: 'cf_delta_target',   type: 'str | None',                     typeKind: 'primitive', default: 'None (Path B closure: BS canonical declares the CF row whose ΔBS feeds it; consumed by model-calc _wire_bs_delta_and_plug)' }
     ]
   },
 

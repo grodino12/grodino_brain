@@ -634,7 +634,7 @@ let NODES = [
 
   // Layer 5 — shared Pydantic package (used by every skill)
   { id: 'financials-schema', layer: 'storage', kind: 'pkg', x: 580, y: 1130, w: 260, h: 56, label: 'financials-schema/',
-    purpose: 'Shared Pydantic package imported by every skill. Defines RawFiling, MappedFiling, ValidatedFiling, DerivedCalcs, PatternLibrary.',
+    purpose: 'Shared Pydantic package imported by every skill. Defines RawFiling, MappedFiling, ValidatedFiling, LibraryEntry (with cf_delta_target field added 2026-04-28 for Path B closure).',
     path: '~/projects/financials-schema/', install: 'pip install -e .'
   }
 ];
@@ -666,24 +666,22 @@ let EDGES = [
   // validate produces
   { from: 'financials-validate', to: 'ValidatedFiling', kind: 'data' },
   { from: 'financials-validate', to: 'citations-doc', kind: 'data' },
-  // ValidatedFiling → 3 outputs
+  // ValidatedFiling → 2 outputs (model-calc consumes the workbook, not validated JSON directly)
   { from: 'ValidatedFiling', to: 'financials-playground', kind: 'data' },
   { from: 'ValidatedFiling', to: 'model-write', kind: 'data' },
-  { from: 'ValidatedFiling', to: 'model-calc', kind: 'data' },
-  // model-write → xlsm
-  { from: 'model-write', to: 'xlsm-model', kind: 'data' },
-  // model-calc scenario inputs
-  { from: 'glp1-model', to: 'model-calc', kind: 'data' },
-  { from: 'snap-model', to: 'model-calc', kind: 'data' },
-  // model-calc produces
-  { from: 'model-calc', to: 'DerivedCalcs', kind: 'data' },
-  // DerivedCalcs feeds the xlsx forecast columns (model-calc writes them in)
-  { from: 'DerivedCalcs', to: 'xlsm-model', kind: 'data' },
+  // model-write → xlsx (auto-chains into model-qtr-derive)
+  { from: 'model-write', to: 'xlsx-model', kind: 'data' },
+  { from: 'model-write', to: 'model-qtr-derive', kind: 'data' },
+  // model-qtr-derive modifies the xlsx in-place (renames YTD sheets, adds QTR sheets)
+  { from: 'model-qtr-derive', to: 'xlsx-model', kind: 'data' },
+  // model-calc consumes the post-qtr-derive workbook + ticker config; modifies in place
+  { from: 'xlsx-model', to: 'model-calc', kind: 'data' },
+  { from: 'ticker-config', to: 'model-calc', kind: 'data' },
+  { from: 'model-calc', to: 'xlsx-model', kind: 'data' },
   // Schema package → contracts (dashed, annotated)
   { from: 'financials-schema', to: 'RawFiling', kind: 'schema' },
   { from: 'financials-schema', to: 'MappedFiling', kind: 'schema' },
-  { from: 'financials-schema', to: 'ValidatedFiling', kind: 'schema' },
-  { from: 'financials-schema', to: 'DerivedCalcs', kind: 'schema' }
+  { from: 'financials-schema', to: 'ValidatedFiling', kind: 'schema' }
 ];
 
 // ============ STATE ============
@@ -706,7 +704,7 @@ const DEFAULT_EDGES = JSON.parse(JSON.stringify(EDGES));
 
 // ============ LOCAL PERSISTENCE ============
 
-const LS_KEY = 'financials-architecture-playground-v12';
+const LS_KEY = 'financials-architecture-playground-v13';
 
 function saveState() {
   try {
@@ -1148,7 +1146,7 @@ function renderDetail() {
 
 // ============ SCAFFOLD PROMPT ============
 
-const SKILL_IDS = ['sec-edgar-fetch', 'financials-extract', 'financials-reconcile', 'financials-validate', 'financials-playground', 'model-write', 'model-calc'];
+const SKILL_IDS = ['sec-edgar-fetch', 'financials-extract', 'financials-reconcile', 'financials-validate', 'financials-playground', 'model-write', 'model-qtr-derive', 'model-calc'];
 const gridEl = document.getElementById('scaffoldGrid');
 const promptEl = document.getElementById('prompt');
 
@@ -1178,7 +1176,7 @@ function schemaLine() {
 function scopeLine() {
   return state.scope === 'celh'
     ? 'CELH-first bootstrap. Original library + ledger seeded from CELH FY2024 10-K. Architecture is multi-ticker — PG onboarded 2026-04-24 as second ticker.'
-    : 'Multi-ticker. Cross-ticker canonical mappings live in pattern_libraries/generic_line_item_mappings.json (115 entries, validated by LibraryEntry on load); ticker-specific anomalies + new_rows live in {TICKER}/decisions_ledger.json. Generic library matched at extract time (lookup.match_raw_item); ticker overlay applied at reconcile time. Ticker entries win on conflicts via tier scoring.';
+    : 'Multi-ticker (CELH 12 filings, PEP 13, PG 14 — all rebuild clean through full pipeline). Cross-ticker canonical mappings live in pattern_libraries/generic_line_item_mappings.json (~140 entries, validated by LibraryEntry on load with extra="forbid" — adding a JSON field requires a paired LibraryEntry edit per `feedback_library_entry_schema_sync.md`); ticker-specific anomalies + new_rows live in Ticker Libraries/{TICKER}/decisions_ledger.json. Generic library matched at extract time (lookup.match_raw_item); ticker overlay applied at reconcile time. Ticker entries win on conflicts via tier scoring.';
 }
 
 function scaffoldBody(id) {
@@ -1224,20 +1222,29 @@ Features: tabs BALANCE SHEET / INCOME STATEMENT / CASH FLOW / VALIDATION / NOVEL
 Acceptance: CELH FY2024+FY2025 side-by-side; YoY shading + citation tooltip + NOVELS tab all functional.`,
 
     'model-write': `Input: ValidatedFiling[] (one or more, 10-K and/or 10-Q) + --ticker-root (reads decisions_ledger.json + config.json) + --out {TICKER}_model.xlsx.
-Output: Fresh .xlsx built from scratch (no template, no VBA). 10-K inputs → ANNL P&L / BALANCE SHEET / CASH FLOW sheets (FY columns + forecast FY{Y}E..FY{Y+5}E); 10-Q inputs → QTR P&L / QTR BS / QTR CF (Q{N} FY{YYYY} columns, no forecast — deferred to model-calc). Mixed inputs emit both sheet families; empty sheets suppressed.
-Row layout: derived at write-time from the latest filing's document order (NOT stored in ledger as model_row). Section-boundary subtotals inserted: Total CA, Total NCA, Total CL, Total NCL, Total SE, grand total. IS cascade subtotals: Gross Profit → Operating Income → Pre-Tax → Net Income. CF section subtotals: CFO, CFI, CFF, ΔCash.
-Column labels: annual FY{year} (e.g. FY2024), quarterly Q{fiscal_quarter} FY{fiscal_year} (e.g. Q2 FY2026 — disambiguates quarters within a fiscal year).
-Number formats: subtotal $#,##0_);($#,##0);"$--"_); line items #,##0;(#,##0);"--"; EPS $#,##0.00. Top black border on every sum-formula row. Yellow tint on user-input cells (Revenue Growth %), grey on formula-forecast cells.
-Historical dedup: per-filing sum + newer-filing-wins across filings. Zero-fill empty cells. Honors superseded_by, memo, sign_convention from ledger.
-Acceptance: CELH FY2024 + FY2025 10-Ks → CELH_model.xlsx with 327+ cells, IS+BS+CF live subtotal formulas, no circular refs (verified via formulas package).`,
+Output: Fresh .xlsx built from scratch (no template, no VBA). 10-K inputs → ANNL P&L / BALANCE SHEET / CASH FLOW (FY columns + N_FORECAST_YEARS=6 forecast FYs FY{Y+1}E..FY{Y+6}E); 10-Q inputs → YTD-shaped QTR P&L / QTR BS / QTR CF (Q{N} FY{YYYY} columns, no forecast — model-qtr-derive runs next). Mixed inputs emit both sheet families; empty sheets suppressed. Forecast labels are computed dynamically per sheet from max(historical FY) + 1..+N — caters to filers whose latest 10-K is FY{Y} (no duplicate FY{Y} + FY{Y}E).
+Row layout: derived at write-time from the latest filing's document order (NOT stored in ledger as model_row). IS cascade subtotals injected at section boundaries (revenue_cost → Gross Profit; opex → Income from Operations; non_op → Pre-Tax; tax → Net Income) only when filer didn't render the anchor as its own line; placement uses global already-rendered set, never windowed look-back. BS section-boundary subtotals: Total CA, Total NCA, Total CL, Total NCL, Total SE, grand total (TL + Mezz + TSE).
+Live subtotal formulas via write_is_subtotals: Net Income (Loss) Less NCI = NI − NCI Attrib (delta); **Net Income (Loss) Attributable to Common Shareholders = NI + Preferred Dividends + Income Allocated to Participating Preferred** (components carry natural filer signs; live formula replaces filer-extracted hardcodes). Path B closure relies on these — analyst overrides upstream rows and subtotals update.
+Workbook tie-out validator (validate_workbook_ties) runs BEFORE save: section sums vs filer subtotals per period; folds mezzanine into equity for TSE; skips subtotal-canonical rows; raises on mismatch.
+Auto-chains into model-qtr-derive at end (when QTR sheets present) — produces 9-sheet workbook in one CLI invocation.
+Acceptance: CELH 12 filings → 6-sheet build, NI Attrib Common live formula matches filer-reported subtotal across all 5 historical years; PEP 13 + PG 14 same harness clean.`,
 
-    'model-calc': `Input: path to {TICKER}_model.xlsx (built by model-write) + --ticker-root (config.json for assumption defaults). Base-case only — GLP-1 / SNAP scenario overlays deferred per user.
-Output: same xlsx with new tabs added in-place: ASSUMPTIONS (Days in Year, Share Repurchases $, etc. — all forecast constants live here, NO magic numbers in formulas), IS DRIVERS + BS DRIVERS + CF DRIVERS (historical formulas + projection rules), and full forecast formulas on ANNL P&L / BALANCE SHEET / CASH FLOW rows (yellow-tinted input cells, grey formula cells).
-Driver kinds: growth, ratio, lagged_ratio, days_ratio, dollar, dollar_sum, net_debt — with projection rules hold_last, input, assumption_ref, derived.
-Forecast kinds: revenue_growth, ratio_of_rev/cogs, days_driven_rev/cogs, tax, cash_rollforward, pp_e_rollforward, apic_rollforward, re_rollforward, aoci_rollforward, amortize, cf_wc_asset/liability/combined, capex, d_a, dividends_preferred/common, cf_net_change, cash_beg, cash_end, ni_attrib_common, zero (27 total).
-Cross-sheet column lookups by period label (not index) — correctly handles BS having fewer historical columns than P&L/CF.
-Quarterly drivers: NOT YET IMPLEMENTED. Annual-only in v1; QTR P&L / QTR BS / QTR CF sheets get no forecast columns. Extend when a ticker accumulates ≥2 quarters of data.
-Acceptance: CELH FY2024 10-K + FY2025 10-K → 2 assumptions + 258 driver cells + 492 forecast cells; no circular refs; BS balanced at $0 gap FY2022 → FY2030E.`
+    'model-qtr-derive': `Input: path to {TICKER}_model.xlsx (output of model-write; QTR P&L / QTR BS / QTR CF sheets currently hold YTD durations per filer convention).
+Output: same xlsx in-place with single-quarter QTR sheets and renamed YTD sheets (9 total: ANNL P&L / BALANCE SHEET / CASH FLOW + QTR P&L / QTR BS / QTR CF + YTD P&L / YTD BS / YTD CF).
+Mechanics: Renames original QTR sheets → YTD (the data was always YTD). Creates new QTR sheets where every cell is a cell-reference formula. IS/CF: Q1 = =YTD Q1 (single quarter); Q{2..3} = =YTD Q{n} − YTD Q{n-1} (single-quarter decomposition); Q4 = =ANNL FY − YTD Q3 (closes the year). BS (point-in-time): all four quarters mirror YTD directly; Q4 = ANNL FYE.
+Annual→QTR row mirror: walks rule_ids on annual sheet; any present on annual but missing from QTR (e.g. CELH Treasury Stock omitted from condensed 10-Q BS per Reg S-X Article 10) is injected after the most recent shared anchor in document order. Structural — uses rule_id, never label-text. Per the no-heuristic policy.
+Cross-sheet refs by row label not row index (catches PEP Indirect Tax Impact row-shift bug — different row positions across filings).
+Auto-runs at end of model-write. Standalone CLI invocation when re-deriving QTR layer on an already-built workbook.
+Acceptance: 9-sheet workbook is the new baseline; CELH / PEP / PG all clean.`,
+
+    'model-calc': `Input: path to {TICKER}_model.xlsx (post model-qtr-derive — 9 sheets) + --ticker-root (reads config.json for growth_basis default; loads merged generic+ticker library for canonical→section mapping).
+Output: same xlsx with new tabs added in-place: ASSUMPTIONS (Days in Quarter = 91 — every forecast formula references this cell, NO magic numbers); IS DRIVERS / BS DRIVERS / CF DRIVERS (one row per non-SKIP / non-DERIVED spec; historical = mirror or ratio; forecast = chained yellow input or computed formula); forecast columns on QTR P&L / QTR BS / QTR CF (5 fiscal years from last historical, terminal always Q4); ANNL forecast cells aggregated from QTR (=SUM(Q1..Q4) for IS/CF; =QTR Q4 for BS).
+Per-row driver inference (inference.py — NO hand-curated DRIVER_SPECS dict): IS rows from filing_section + canonical label; BS rows from section + canonical-label-against-known-rows (Cash → ROLLFORWARD, AR → DSO_RATIO, AP → DPO_RATIO, PP&E → ROLLFORWARD via CapEx − D&A, RE → ROLLFORWARD via NI + CommonDiv + PrefDiv, APIC → ROLLFORWARD via SBC, AOCI → ROLLFORWARD via FX Effect on Cash); CF rows from section + label. eps section special-cases: Pref Div → LINK_TO_CF (mirrors CF Pref Div via single shared driver); Income Allocated to Participating Preferred → HOLD_LAST; per-share / share-count → SKIP.
+Path B closure: every non-rollforward / non-named-WC BS row's ΔBS is absorbed by the RESIDUAL_PLUG row on CF (canonical "Other Operating Items"). Sign rule: assets contribute -(BS[t]−BS[t−1]), liabilities/equity/mezzanine contribute +Δ. Library can declare cf_delta_target on a BS canonical to route ΔBS to a specific CF row instead of the plug (PEP Accrued Expenses → CF AP). HOLD_LAST + ZERO BS rows (mezzanine, equity, ticker new_rows) join the plug on the boundary delta. Result: BS identity (TA = TL + Mezz + SE) holds at \$0 across every forecast quarter by construction.
+Per-row YoY/QoQ growth basis toggle (GROWTH-kind only): IS DRIVERS column B holds a YoY/QoQ dropdown (DataValidation list) on each Growth % row. Default sourced from {TICKER}/config.json:growth_basis (CELH=qoq, PEP/PG=yoy). Historical Growth % and forecast Revenue formulas both wrap IF(\$B{r}="QoQ", prev_qtr_ref, prev_year_ref) — analyst flips the cell in-Excel without rerunning model-calc. Formula picks one branch at recalc time.
+Chained driver forecast defaults: every USER_INPUT_KIND forecast cell defaults to ={prev_period_letter}{r} on the driver tab — single override propagates forward; mid-stream override re-routes. ZERO kind keeps literal 0 (semantic = non-recurring).
+Per-sheet column-alignment fix in historical ratio formulas: pl_col passed by period (year, quarter) into _historical_driver_formula — ratio canonicals on BS / CF sheets look up QTR P&L cols by period, never reuse the source sheet's col index. Required because BS and P&L can have different historical period coverage (CELH BS starts Q4 FY2022 vs P&L Q1 FY2022 — 3-quarter offset).
+Acceptance: CELH / PEP / PG all rebuild clean, BS gap = \$0 across 20 / 23 / 22 forecast quarters respectively. CELH NI Attrib Common live formula matches filer to \$1 across FY2021–FY2025.`
   }[id];
 }
 
