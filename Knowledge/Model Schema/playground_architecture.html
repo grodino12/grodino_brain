@@ -543,21 +543,33 @@ let NODES = [
     ],
     deps: ['openpyxl', 'pydantic']
   },
-  { id: 'model-calc', layer: 'output', kind: 'skill', x: 680, y: 880, w: 180, h: 56, label: 'model-calc',
-    purpose: 'Derived calcs + scenario overlay. Plugs GLP-1 consumption headwind + SNAP ban volume drag into revenue forecast.',
-    input: 'ValidatedFiling + ScenarioInputs', output: 'DerivedCalcs',
+  { id: 'model-qtr-derive', layer: 'output', kind: 'skill', built: true, x: 680, y: 820, w: 200, h: 56, label: 'model-qtr-derive',
+    purpose: 'Derive single-quarter QTR sheets from YTD-shaped ones. Renames original QTR P&L / QTR BS / QTR CF (which actually held YTD durations per filer convention) to YTD P&L / YTD BS / YTD CF, then writes new QTR sheets where each cell is a cell-reference formula: Q1=YTD Q1; Q2=YTD Q2−YTD Q1; Q3=YTD Q3−YTD Q2; Q4=ANNL FY−YTD Q3 (IS/CF) or ANNL FYE direct (BS). Auto-chains from model-write end. Annual→QTR row mirror: any rule_id present on annual sheet but missing from QTR (e.g. CELH Treasury Stock omitted from condensed 10-Q BS) is injected after the most recent shared anchor in document order — structural (rule_id-based, not label-text).',
+    input: '.xlsx (post model-write, has YTD-shaped QTR sheets)', output: '.xlsx (9 sheets — YTD + QTR families both present)',
     ops: [
-      'YoY/QoQ growth, margins, DSO/DIO/CCC',
-      'GLP-1 consumption headwind curve overlay',
-      'SNAP state-weighted volume drag overlay',
-      'Base / bull / bear sensitivity grid',
-      'Emit JSON for charting / dashboards'
+      'Rename QTR P&L → YTD P&L, QTR BS → YTD BS, QTR CF → YTD CF (the data was always YTD)',
+      'Write new QTR P&L / QTR BS / QTR CF sheets with derivation formulas referencing YTD + ANNL cells',
+      'IS/CF: Q1 = =YTD Q1; Q{2..3} = =YTD Q{n} − YTD Q{n-1}; Q4 = =ANNL FY − YTD Q3',
+      'BS (point-in-time): all four quarters = direct mirror of YTD value; Q4 = ANNL FYE',
+      'Annual→QTR row mirror: walk rule_ids on annual sheet; any missing on QTR insert after last shared anchor (preserves document order). Structural — uses rule_id, not label-text',
+      'Cross-sheet refs by row label not row index (catches PEP Indirect Tax Impact row-shift bug — different row positions across filings)'
     ],
-    deps: ['pydantic', 'pandas', 'numpy']
+    deps: ['openpyxl']
   },
-  { id: 'DerivedCalcs', layer: 'output', kind: 'contract', x: 940, y: 880, w: 200, h: 56, label: 'DerivedCalcs',
-    purpose: 'Growth rates, margins, working capital ratios, and scenario grids. Output of model-calc, consumed by the case study deck.',
-    fields: ['growth: GrowthTable', 'margins: MarginTable', 'working_capital: WcRatios', 'scenarios: ScenarioGrid']
+  { id: 'model-calc', layer: 'output', kind: 'skill', built: true, x: 920, y: 880, w: 180, h: 56, label: 'model-calc',
+    purpose: 'Quarterly-first forecasting layer. Adds ASSUMPTIONS + IS/BS/CF DRIVERS tabs to a post-model-qtr-derive workbook; extends QTR sheets with N forecast columns; writes forecast formulas on QTR rows; aggregates ANNL forecasts from QTR. **Path B closure architecture** — every BS row\'s Δ is absorbed by a CF entry, so the BS identity (TA = TL + Mezz + SE) holds by construction across every forecast quarter. Per-row driver inference (NO hand-curated specs) via filing_section + canonical-label matching against the merged generic+ticker library.',
+    input: '.xlsx (post model-qtr-derive) + --ticker-root', output: '.xlsx (in-place; adds DRIVERS + forecast layer)',
+    ops: [
+      'Forecast horizon: N_FORECAST_YEARS = 5; last_forecast_year = last_historical_year + n_years (terminal always Q4 — ANNL =SUM(Q1..Q4) always reflects a complete fiscal year)',
+      'Per-row driver inference (inference.py): IS rows from section (revenue_cost / opex / non_op / tax / eps); BS rows from section + label-against-canonical (Cash → ROLLFORWARD, AR → DSO_RATIO, Inventory → DIO_RATIO, AP → DPO_RATIO, PP&E → ROLLFORWARD via CapEx − D&A, RE → ROLLFORWARD via NI + dividends, APIC → ROLLFORWARD via SBC, AOCI → ROLLFORWARD via FX Effect, etc.)',
+      'eps section special-cases: Pref Div → LINK_TO_CF (mirrors CF Pref Div — single shared driver); Income Allocated to Participating Preferred → HOLD_LAST; per-share / share-count → SKIP',
+      'Path B closure: RESIDUAL_PLUG kind on "Other Operating Items" CF row absorbs Σ ±(BS[t]−BS[t−1]) over every non-rollforward / non-named-WC BS row. Library can declare `cf_delta_target` on a BS canonical to route its ΔBS to a specific CF row (PEP Accrued Expenses → CF AP). HOLD_LAST + ZERO BS rows (mezzanine, equity, ticker new_rows) join the plug too — equity drops counted as liability-side',
+      'Driver tabs: one row per non-SKIP / non-DERIVED spec. Historical cells = ratio / mirror formulas (by period, not by index — fixes BS-vs-PL column misalignment when their historical ranges differ). Forecast cells = chained off `target_col-1` (yellow input default, single override propagates). RATIO kinds emit the rate; source-sheet forecast cell does `=base × rate`',
+      'Per-row YoY/QoQ Basis toggle on IS DRIVERS column B: GROWTH-kind rows show a YoY/QoQ dropdown (DataValidation list). Default sourced from {TICKER}/config.json:growth_basis (CELH=qoq, PEP/PG=yoy). Historical Growth % and forecast Revenue formulas both wrap `IF($B{r}="QoQ", prev_qtr_ref, prev_year_ref)` — analyst flips in-Excel without rerunning model-calc',
+      'COMPUTED_KINDS (LINK_TO_IS / LINK_TO_CF / BS_DELTA / ROLLFORWARD / RESIDUAL_PLUG): forecast cells are formulas, not yellow inputs. Driver row reads the source-sheet historical value as a mirror; forecast cell on driver tab IS the value (not a rate)',
+      'ANNL forecast aggregation: =SUM(QTR Q1..Q4) for IS/CF; =QTR Q4 for BS. Skips per-share / share-count rows (not linearly additive across quarters). Sample format / font / border from last populated historical cell so forecasts render identically'
+    ],
+    deps: ['openpyxl', 'pydantic']
   },
 
   // Stores positioned next to their consumer skill, in the skill's own layer.
@@ -610,18 +622,14 @@ let NODES = [
     path: 'Brain/Knowledge/Model Schema/Ticker Libraries/CELH/source_citations.json'
   },
 
-  // Layer 4 sub-row (y=830) — xlsm under model-write, glp1/snap feeding model-calc
-  { id: 'xlsm-model', layer: 'output', kind: 'external', x: 400, y: 1010, w: 200, h: 50, label: 'CELH Financial Model.xlsm',
-    purpose: 'Target Excel model (10 sheets, VBA macros). Written via model-write; saves to _updated.xlsm, never overwrites.',
-    path: 'Brain/Knowledge/Model Outputs/CELH/CELH Financial Model.xlsm'
+  // Layer 4 sub-row — workbook artifact (single .xlsx; no template, no VBA)
+  { id: 'xlsx-model', layer: 'output', kind: 'external', x: 600, y: 1010, w: 220, h: 50, label: '{TICKER}_model.xlsx',
+    purpose: '9-sheet target workbook (after model-qtr-derive auto-chain): ANNL P&L / BALANCE SHEET / CASH FLOW (annual + 6 forecast FYs); QTR P&L / QTR BS / QTR CF (single-quarter, derived from YTD via cell-reference formulas); YTD P&L / YTD BS / YTD CF (renamed from original YTD-shaped 10-Q sheets, kept for traceability). model-calc adds ASSUMPTIONS + IS/BS/CF DRIVERS tabs in-place + forecast columns on QTR sheets. Plain .xlsx — no VBA, no template.',
+    path: 'Brain/Knowledge/Model Outputs/{TICKER}/{TICKER}_model.xlsx'
   },
-  { id: 'glp1-model', layer: 'output', kind: 'external', x: 610, y: 1010, w: 150, h: 50, label: 'GLP-1 output',
-    purpose: 'Energy drink consumption headwind curve from the GLP-1 Projection model. Scenario input to model-calc.',
-    path: 'data/derived/GLP1_Projection Data.xlsx'
-  },
-  { id: 'snap-model', layer: 'output', kind: 'external', x: 770, y: 1010, w: 150, h: 50, label: 'SNAP output',
-    purpose: 'State-weighted volume drag from the SNAP energy drink ban model. Scenario input to model-calc.',
-    path: 'data/derived/Celsius_SNAP Data_GR.xlsx'
+  { id: 'ticker-config', layer: 'output', kind: 'store', x: 850, y: 1010, w: 240, h: 50, label: '{TICKER}/config.json',
+    purpose: 'Per-ticker forecasting metadata read by model-calc at build time. growth_basis: "yoy" | "qoq" sets the default for the IS DRIVERS Basis column on the GROWTH (Revenue) row. Plus existing fields: ticker, fiscal_year_end, expected ranges, stock_splits. CELH defaults to "qoq" (high-growth phase), PEP/PG to "yoy" (mature seasonal CPGs). Per-row in-Excel override via the Basis dropdown.',
+    path: 'Brain/Knowledge/Model Schema/Ticker Libraries/{TICKER}/config.json'
   },
 
   // Layer 5 — shared Pydantic package (used by every skill)
