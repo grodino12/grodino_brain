@@ -3,8 +3,8 @@ type: roadmap
 date: 2026-04-27
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 28th BS Closure Session"
-next_objective: "Make driver-kind determination fully systematic. Inference engine still uses ~10 `_label_contains` substring checks (Cash, Goodwill, Debt, Receivable, Inventory, Payable, Retained Earnings, APIC, AOCI, etc.). Replace each with a structural signal — `us_gaap_concept` mappings, library-declared `driver_kind` field on each canonical, calc-linkbase-derived structural position. Goal: adding a new ticker requires ZERO `_label_contains` fallback firings — every driver decision flows from canonical metadata."
+last_session: "April 28th Forecast UX & Subtotal Hardening Session"
+next_objective: "Single dedicated playground sync session — `playground_architecture.html` + `playground_schema.html` are now ~5 framework changes behind. Owe LS_KEY bumps for: RESIDUAL_PLUG, residual_plug_sources, cf_delta_target, APIC/AOCI rollforwards, dynamic FORECAST_LABELS, annual→QTR mirror (carried from BS Closure), AND from this session: 5-year forecast horizon, chained driver defaults, per-row growth_basis Basis column on IS DRIVERS, NI Attrib Common live subtotal formula, GEN-IS-013 sign_convention=negative, LINK_TO_CF kind, Income Allocated HOLD_LAST policy (eps-section dollar-items), `cf_delta_target` LibraryEntry field, `growth_basis` config.json field. After playground sync: resume systematic-driver-determination work (carried from prior session — replace `_label_contains` substring checks with structural signals)."
 ---
 
 # Celsius HF Case Study — Roadmap
