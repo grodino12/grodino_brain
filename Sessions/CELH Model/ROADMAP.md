@@ -3,8 +3,8 @@ type: roadmap
 date: 2026-04-27
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 28th Quarterly Forecasting Layer Session"
-next_objective: "Make driver-kind determination fully systematic. Current inference engine still uses ~10 `_label_contains` substring checks (Cash, Goodwill, Debt, Receivable, Inventory, Payable, Retained Earnings, etc.). Replace each with a structural signal — `us_gaap_concept` mappings, library-declared `driver_kind` field on each canonical, calc-linkbase-derived structural position. Goal: adding a new ticker requires ZERO `_label_contains` fallback firings — every driver decision flows from canonical metadata."
+last_session: "April 28th BS Closure Session"
+next_objective: "Make driver-kind determination fully systematic. Inference engine still uses ~10 `_label_contains` substring checks (Cash, Goodwill, Debt, Receivable, Inventory, Payable, Retained Earnings, APIC, AOCI, etc.). Replace each with a structural signal — `us_gaap_concept` mappings, library-declared `driver_kind` field on each canonical, calc-linkbase-derived structural position. Goal: adding a new ticker requires ZERO `_label_contains` fallback firings — every driver decision flows from canonical metadata."
 ---
 
 # Celsius HF Case Study — Roadmap
@@ -296,7 +296,7 @@ Surface area to watch when running PEP:
 | Purpose | Path |
 |---|---|
 | Handoffs folder | `Brain\Sessions\CELH Model\Handoffs\` |
-| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 28th Quarterly Forecasting Layer Session.md` |
+| **Latest session handoff** | `Brain\Sessions\CELH Model\Handoffs\April 28th BS Closure Session.md` |
 | Prior handoffs (rotated) | `Brain\Sessions\CELH Model\Handoffs\Archive\` |
 | **sec-edgar-fetch skill** | `~\.claude\skills\sec-edgar-fetch\` |
 | **financials-extract-ixbrl skill** | `~\.claude\skills\financials-extract-ixbrl\` |
