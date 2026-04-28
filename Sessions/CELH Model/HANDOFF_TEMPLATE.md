@@ -34,9 +34,3 @@ Write at end of session under `Brain\Sessions\{Task-Theme}\Handoffs\{Month} {Day
 
 - After ~5 live handoffs accumulate, move older ones to `Handoffs/Archive/`. Live folder is for resumption fuel; archive is for history.
 - ROADMAP.md is the cross-session source of truth — update it after each session, not in the handoff narrative.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/CELH Model/00_README]] (0.826)
-<!-- smart-related:end -->

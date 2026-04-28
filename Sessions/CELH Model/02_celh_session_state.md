@@ -82,11 +82,3 @@ This file captures live state — what's been decided, what's pending, and the c
 ## To Resume
 
 > "Continue the CELH model update. Read `data/derived/celh_session_state.md` to see current pending decisions, then `data/derived/CELH Financial Model - Source Citations.md` and `data/derived/celh_decisions_ledger.md` for context. We need a call on whether to spawn the FY2024 CF line-item detail subagent before proceeding to Phase 3."
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/CELH Model/04_celh_source_citations]] (0.870)
-- [[Sessions/CELH Model/03_celh_decisions_ledger]] (0.857)
-- [[Sessions/CELH Model/00_README]] (0.850)
-<!-- smart-related:end -->

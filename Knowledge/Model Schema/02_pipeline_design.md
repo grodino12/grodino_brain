@@ -172,11 +172,3 @@ model-calc \
     --scenarios scenarios.json \
     --out tickers/celh/derived/derived_calcs.json
 ```
-
-
-<!-- smart-related:start -->
-## Related
-- [[Knowledge/Model Schema/README]] (0.884)
-- [[Knowledge/Model Schema/03_ticker_folder_spec]] (0.812)
-- [[Knowledge/Model Schema/04_pattern_library_design]] (0.800)
-<!-- smart-related:end -->

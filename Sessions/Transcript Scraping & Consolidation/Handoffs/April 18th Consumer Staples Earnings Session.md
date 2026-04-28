@@ -115,11 +115,3 @@ Populate `IR_URLS` dict in `consumer_staples_earnings.py`. Once URLs are in, re-
 PG, COST, WMT, KO, PEP, PM, MO, MDLZ, CL, TGT, KMB, GIS, SYY, KR, STZ, HSY, KDP, MNST, EL, TSN, ADM, CHD, CAG, CLX, SJM, HRL, MKC, LW, BG, DLTR, DG, BF-B, CELH.
 
 XLP holdings + a few mid-caps.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/Transcript Scraping & Consolidation/Handoffs/April 20th IR Scraper v1 Session]] (0.892)
-- [[Sessions/Transcript Scraping & Consolidation/Handoffs/April 20th IR Scraper Generic Backend Session]] (0.817)
-- [[Sessions/Transcript Scraping & Consolidation/Handoffs/April 22nd Audio Coverage Push Session]] (0.814)
-<!-- smart-related:end -->

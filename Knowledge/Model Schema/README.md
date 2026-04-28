@@ -60,11 +60,3 @@ Layer 5 — CONTRACTS + EXTERNAL
 ## Current CELH work state
 
 Session-handoff docs live separately at `Brain/Sessions/CELH Model/`. The most recent handoff (`April 22nd Multi-Skill Framework Session.md`) describes the clean-slate rebuild that produced the current pipeline.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Knowledge/Model Schema/02_pipeline_design]] (0.884)
-- [[Knowledge/Model Schema/01_schema_spec]] (0.844)
-- [[Knowledge/Model Schema/03_ticker_folder_spec]] (0.836)
-<!-- smart-related:end -->

@@ -284,11 +284,3 @@ From a final `ValidatedFiling`, you can walk backward to any source PDF citation
 1. Whether to split `RegexPatternEntry` and `PatternEntry` or unify into one class with optional regex field. Current spec keeps them separate.
 2. Whether `DerivedCalcs` sub-models (`GrowthTable`, `MarginTable`, `WcRatios`, `ScenarioGrid`) live in `financials-schema/` or inside `model-calc` itself.
 3. Comprehensive income / equity roll-forward statements — out of scope for v1.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Knowledge/Model Schema/README]] (0.844)
-- [[Knowledge/Model Schema/04_pattern_library_design]] (0.812)
-- [[Knowledge/Model Schema/03_ticker_folder_spec]] (0.807)
-<!-- smart-related:end -->

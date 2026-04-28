@@ -105,10 +105,3 @@ The `celh_decisions_ledger.md` pattern is now a project convention. Persistent d
 
 ### Validation phase (NEW pattern)
 The Phase 1.75 arithmetic-identity validation pattern is a project convention. Caught $394M of FY2024 misstatement that would otherwise have entered the model. Replicate for any future financial extraction work.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/CELH Model/ROADMAP]] (0.805)
-- [[Sessions/CELH Model/02_celh_session_state]] (0.801)
-<!-- smart-related:end -->
