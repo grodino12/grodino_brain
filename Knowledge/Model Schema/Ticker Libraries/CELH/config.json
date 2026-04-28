@@ -15,6 +15,9 @@
   "expected_revenue_range_thousands": [1000000, 3000000],
   "expected_total_assets_range_thousands": [500000, 2500000],
 
+  "_growth_basis_note": "model-calc revenue growth driver. 'qoq' (default for high-growth tickers like CELH) projects Q[t]=Q[t-1]*(1+g); 'yoy' (CPG default) projects Q[t]=Q[Y-1,q]*(1+g) and preserves seasonality. Per-row override available in Excel via the Basis column on IS DRIVERS.",
+  "growth_basis": "qoq",
+
   "_stock_splits_note": "Do NOT auto-adjust share counts or EPS without verifying the pre/post-split convention of the source filing.",
   "stock_splits": [
     { "date": "2023-11-13", "ratio": 3, "note": "3-for-1 split" }
