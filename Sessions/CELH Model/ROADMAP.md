@@ -3,8 +3,8 @@ type: roadmap
 date: 2026-04-27
 project: Celsius HF Case Study
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "April 27th PEP Onboarding Session"
-next_objective: "Rebuild model-calc from scratch with quarterly support + line-item-type-aware driver inference. Drivers should be derived from line-item type/section (revenue → growth %, opex → % of revenue, AR/AP/Inventory → days ratio, PP&E → rollforward, etc.) rather than hand-curated specs. IS/BS/CF intertwined so a forecast assumption flows through formulas across all three statements without duplication."
+last_session: "April 28th Quarterly Forecasting Layer Session"
+next_objective: "Make driver-kind determination fully systematic. Current inference engine still uses ~10 `_label_contains` substring checks (Cash, Goodwill, Debt, Receivable, Inventory, Payable, Retained Earnings, etc.). Replace each with a structural signal — `us_gaap_concept` mappings, library-declared `driver_kind` field on each canonical, calc-linkbase-derived structural position. Goal: adding a new ticker requires ZERO `_label_contains` fallback firings — every driver decision flows from canonical metadata."
 ---
 
 # Celsius HF Case Study — Roadmap
