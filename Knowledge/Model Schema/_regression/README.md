@@ -7,7 +7,7 @@ diff. Replaces the manual "rerun both tickers and eyeball" backstop.
 ## What it does
 
 1. Discovers each ticker's filings by reading the source paths embedded in
-   the existing `raw_*.json` files under `{TICKER}/Model Output/.cache/`.
+   the existing `raw_*.json` files under `Knowledge/Model Outputs/{TICKER}/.cache/`.
 2. Re-runs the full pipeline (extract -> reconcile -> validate -> model-write)
    on each filing into a temporary directory.
 3. Compares the fresh outputs against the goldens stored under
@@ -22,7 +22,7 @@ diff. Replaces the manual "rerun both tickers and eyeball" backstop.
 ## Usage
 
 ```
-# One-time bootstrap from current Model Output (the locked baseline)
+# One-time bootstrap from current Model Outputs (the locked baseline)
 python run.py --bootstrap
 
 # Verify a code change didn't regress CELH/PG

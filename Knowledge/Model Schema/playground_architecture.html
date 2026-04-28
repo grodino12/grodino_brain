@@ -601,19 +601,19 @@ let NODES = [
   // Layer 2 — feeds / is appended-to by financials-reconcile
   { id: 'decisions-ledger', layer: 'reconcile', kind: 'store', x: 310, y: 508, w: 240, h: 50, label: 'decisions_ledger.json',
     purpose: 'Per-ticker mapping + structural-decision store. Generic library is source of truth for standard GAAP concepts; ticker ledgers carry only company-specific anomalies + new_rows. Current state: PG has 2 entries (MAP-IS-001 Pre-Tax override, NEW-BS-001 ESOP Debt Retirement Reserve — both fire on 10-K and 10-Q after the 2026-04-25 variant collapse); CELH has ~10. Entries may specify filing_subsection / filing_section for multi-match disambiguation. The model_sheet field is informational (sheet_group derivation only) — actual sheet routing comes from SHEET_NAME[(filing_type, statement_type)]. Append-only, ISO-8601 dates.',
-    path: 'Brain/Knowledge/Model Schema/{TICKER}/decisions_ledger.json'
+    path: 'Brain/Knowledge/Model Schema/Ticker Libraries/{TICKER}/decisions_ledger.json'
   },
 
   // Layer 3 — written by financials-validate
   { id: 'citations-doc', layer: 'validate', kind: 'store', x: 310, y: 695, w: 240, h: 50, label: 'source_citations.json',
     purpose: 'Per-value citation trail (filing, page, line_hint). Output artifact of reconcile+validate. Machine-readable for downstream skills.',
-    path: 'Brain/Knowledge/Model Schema/CELH/source_citations.json'
+    path: 'Brain/Knowledge/Model Schema/Ticker Libraries/CELH/source_citations.json'
   },
 
   // Layer 4 sub-row (y=830) — xlsm under model-write, glp1/snap feeding model-calc
   { id: 'xlsm-model', layer: 'output', kind: 'external', x: 400, y: 1010, w: 200, h: 50, label: 'CELH Financial Model.xlsm',
     purpose: 'Target Excel model (10 sheets, VBA macros). Written via model-write; saves to _updated.xlsm, never overwrites.',
-    path: 'Brain/Knowledge/Model Schema/CELH/Model Output/CELH Financial Model.xlsm'
+    path: 'Brain/Knowledge/Model Outputs/CELH/CELH Financial Model.xlsm'
   },
   { id: 'glp1-model', layer: 'output', kind: 'external', x: 610, y: 1010, w: 150, h: 50, label: 'GLP-1 output',
     purpose: 'Energy drink consumption headwind curve from the GLP-1 Projection model. Scenario input to model-calc.',

@@ -44,6 +44,8 @@ if hasattr(sys.stdout, "reconfigure"):
 USER_HOME = Path.home()
 BRAIN = USER_HOME / "Desktop" / "Brain"
 MODEL_SCHEMA = BRAIN / "Knowledge" / "Model Schema"
+TICKER_LIBRARIES = MODEL_SCHEMA / "Ticker Libraries"
+MODEL_OUTPUTS = BRAIN / "Knowledge" / "Model Outputs"
 SCHEMA_PKG = MODEL_SCHEMA / "financials-schema"
 LIBRARY = MODEL_SCHEMA / "pattern_libraries" / "generic_line_item_mappings.json"
 
@@ -71,11 +73,11 @@ NUMERIC_TOLERANCE = Decimal("1")
 # ============================================================================
 
 def ticker_root(ticker: str) -> Path:
-    return MODEL_SCHEMA / ticker
+    return TICKER_LIBRARIES / ticker
 
 
 def model_output_dir(ticker: str) -> Path:
-    return ticker_root(ticker) / "Model Output"
+    return MODEL_OUTPUTS / ticker
 
 
 def cache_dir(ticker: str) -> Path:
