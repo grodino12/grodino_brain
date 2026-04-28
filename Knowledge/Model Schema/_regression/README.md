@@ -7,7 +7,7 @@ diff. Replaces the manual "rerun both tickers and eyeball" backstop.
 ## What it does
 
 1. Discovers each ticker's filings by reading the source paths embedded in
-   the existing `raw_*.json` files under `Knowledge/Model Outputs/{TICKER}/.cache/`.
+   the existing `raw_*.json` files under `Knowledge/Model Schema/Ticker Libraries/{TICKER}/.cache/`.
 2. Re-runs the full pipeline (extract -> reconcile -> validate -> model-write)
    on each filing into a temporary directory.
 3. Compares the fresh outputs against the goldens stored under

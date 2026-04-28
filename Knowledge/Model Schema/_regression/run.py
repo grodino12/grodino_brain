@@ -77,11 +77,18 @@ def ticker_root(ticker: str) -> Path:
 
 
 def model_output_dir(ticker: str) -> Path:
+    """Where the produced workbook lives. Only the .xlsx sits here."""
     return MODEL_OUTPUTS / ticker
 
 
 def cache_dir(ticker: str) -> Path:
-    return model_output_dir(ticker) / ".cache"
+    """raw_/mapped_/novels_ JSONs live alongside the ticker library."""
+    return ticker_root(ticker) / ".cache"
+
+
+def validated_dir(ticker: str) -> Path:
+    """validated_*.json lives in the ticker library, not Model Outputs."""
+    return ticker_root(ticker)
 
 
 def discover_filings(ticker: str) -> list[dict]:
@@ -311,15 +318,15 @@ def diff_json(golden, current, path: str = "") -> list[str]:
 # ============================================================================
 
 def write_goldens_from_current(ticker: str) -> None:
-    """Snapshot the current Model Output for `ticker` into goldens/."""
-    src = model_output_dir(ticker)
+    """Snapshot the current outputs for `ticker` into goldens/. Validated JSONs
+    live under the ticker library; the workbook lives under Model Outputs."""
     dst = GOLDENS_ROOT / ticker
     dst.mkdir(parents=True, exist_ok=True)
 
-    for vpath in sorted(src.glob("validated_*.json")):
+    for vpath in sorted(validated_dir(ticker).glob("validated_*.json")):
         shutil.copy2(vpath, dst / vpath.name)
 
-    wb_src = src / WORKBOOK_FILENAME[ticker]
+    wb_src = model_output_dir(ticker) / WORKBOOK_FILENAME[ticker]
     if not wb_src.exists():
         raise SystemExit(f"ERROR: workbook {wb_src} not found")
     snap = snapshot_workbook(wb_src)
