@@ -198,11 +198,3 @@ Written by `financials-validate` at the end of each run. One entry per value wri
 3. **Rollback** — broken ledger? Revert the JSON. No code revert needed.
 4. **Testing** — each ticker folder is a self-contained test fixture.
 5. **Onboarding** — a new analyst only needs to understand the folder structure, not the framework internals.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Knowledge/Model Schema/README]] (0.836)
-- [[Knowledge/Model Schema/02_pipeline_design]] (0.812)
-- [[Knowledge/Model Schema/01_schema_spec]] (0.807)
-<!-- smart-related:end -->

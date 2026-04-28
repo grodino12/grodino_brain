@@ -406,10 +406,3 @@ This update surfaced critical lessons that have been baked into the skill:
 5. ⏳ Phase 5: diff report
 
 **STOP.** Per Phase 2 of the skill, do not proceed to Phase 3 (Excel writes) without explicit user approval of this citations doc.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/CELH Model/02_celh_session_state]] (0.870)
-- [[Sessions/CELH Model/03_celh_decisions_ledger]] (0.811)
-<!-- smart-related:end -->

@@ -324,10 +324,3 @@ Surface area to watch when running PEP:
 | Source PDFs | `Pl3 Celsius Case Study\data\CELH Reporting\Financial Statements\` |
 | model-write skill | `~\.claude\skills\model-write\` |
 | model-calc skill | `~\.claude\skills\model-calc\` |
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/CELH Model/01_three_model_overview]] (0.805)
-- [[Sessions/CELH Model/Handoffs/April 28th BS Closure Session]] (0.804)
-<!-- smart-related:end -->

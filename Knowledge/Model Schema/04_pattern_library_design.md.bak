@@ -161,11 +161,3 @@ Same underlying pattern (fuzzy matching + progressive learning), applied at two 
 4. **After 20-30 filings**: user prompts become rare — limited to genuinely novel IFRS / 20-F phrasings
 
 Same progressive-learning arc the decisions ledger went through for CELH line items.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Knowledge/Model Schema/README]] (0.827)
-- [[Knowledge/Model Schema/01_schema_spec]] (0.812)
-- [[Knowledge/Model Schema/02_pipeline_design]] (0.800)
-<!-- smart-related:end -->

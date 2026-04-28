@@ -195,11 +195,3 @@ When you make a new decision in Phase 1.5:
 4. If superseding an old rule, mark the old row's Notes with `SUPERSEDED on [date] by [new rule]` and add the new row as a separate entry
 
 Do not edit existing rows in place (except to add `SUPERSEDED` notes). The history is the audit trail.
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/CELH Model/02_celh_session_state]] (0.857)
-- [[Sessions/CELH Model/00_README]] (0.812)
-- [[Sessions/CELH Model/04_celh_source_citations]] (0.811)
-<!-- smart-related:end -->

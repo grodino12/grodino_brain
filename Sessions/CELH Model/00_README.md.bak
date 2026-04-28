@@ -85,11 +85,3 @@ When the replacement `celh-model-update` skill is built, it must:
 2. **Run a Phase 1.75 validation step** (BS-1 through BS-7, CF-1/CF-2, X-1 through X-4) before any Excel write. The old first pass had ~$394M of FY2024 misstatement that only this step caught.
 3. **Honor the Excel safety rules** (keep_vba=True; never `cell.fill = None`; save to `_updated` filename; backup to `.bak` before writes; Path 3 manual row inserts for cross-sheet formula safety). The old `skill/references/excel_safety.md` encoded these — they need to be re-encoded in the rework.
 4. **Respect CELH-specific anomalies** documented in Section E of the ledger — cash convention changes between FY2023 and FY2024 10-Ks, PEP mezzanine preferred treatment, the stock split, the straight-line amortization patterns that produce identical YoY values on Deferred Other Costs (Current) and Deferred Revenue (Current).
-
-
-<!-- smart-related:start -->
-## Related
-- [[Sessions/CELH Model/02_celh_session_state]] (0.850)
-- [[Sessions/CELH Model/HANDOFF_TEMPLATE]] (0.826)
-- [[Sessions/CELH Model/03_celh_decisions_ledger]] (0.812)
-<!-- smart-related:end -->
