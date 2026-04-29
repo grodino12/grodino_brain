@@ -313,6 +313,7 @@ const SCHEMA = [
       { name: 'OPERATING_EXPENSES',      type: '"operating_expenses"' },
       { name: 'NON_OPERATING',           type: '"non_operating"' },
       { name: 'TAX',                     type: '"tax"' },
+      { name: 'POST_NI_DEDUCTION',       type: '"post_ni_deduction"' },
       { name: 'EPS',                     type: '"eps"' },
       { name: 'UNCLASSIFIED',            type: '"unclassified"' }
     ]
@@ -499,7 +500,7 @@ const SCHEMA = [
   {
     name: 'ValidationResult', kind: 'model', extends: 'BaseModel', layer: 'validated',
     layerLabel: 'LAYER 3 · VALIDATED FILING',
-    doc: 'Outcome of a single validation rule. 10 filer-tie rules total: BS-1..BS-5 (TCA/TA/TCL/TL/TSE subtotal sums), IS-4 (Net Income = Pre-Tax + signed Tax), CF-1 (NetΔCash = sum of 4 section subtotals), CF-2/CF-3/CF-4 (per-section subtotal tie-out for CFO/CFI/CFF). BS-6/BS-7, IS-1..IS-3, X-1/X-2/X-4, M-1 trimmed in the 18→7 validator overhaul; CF-2/CF-3/CF-4 added 2026-04-25.',
+    doc: 'Outcome of a single validation rule. 14 filer-tie rules total: BS-1..BS-5 (TCA/TA/TCL/TL/TSE subtotal sums); IS-1..IS-5 (Gross Profit / Op Income / Pre-Tax / Net Income cascade + IS-5 NI-Less-NCI tie); CF-1 (NetΔCash = sum of 4 section subtotals); CF-2/CF-3/CF-4 (per-section subtotal tie-out for CFO/CFI/CFF). IS-4 / IS-5 tolerate either tax sign as a backup so loss-year benefits work. Plus a separate workbook-tie-out validator in model-write that compares each section sum (workbook line-items by section) against filer-reported subtotals per period — folds mezzanine into equity for TSE; raises BEFORE save. BS-6/BS-7 (RE roll-forward) deferred — needs prior-period BS context.',
     fields: [
       { name: 'rule_id',  type: 'str',                              typeKind: 'primitive' },
       { name: 'expected', type: 'Decimal',                          typeKind: 'primitive' },
