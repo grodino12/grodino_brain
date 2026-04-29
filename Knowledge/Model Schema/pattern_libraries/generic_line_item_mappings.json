@@ -495,6 +495,9 @@
       "us_gaap_concept": "DeferredIncomeTaxAssetsNet",
       "us_gaap_concepts": [
         "PrepaidTaxes"
+      ],
+      "accepted_sections": [
+        "current_assets"
       ]
     },
     {
@@ -1710,7 +1713,10 @@
         "cash payments for interest"
       ],
       "filing_section": "operating",
-      "us_gaap_concept": "InterestPaidNet"
+      "us_gaap_concept": "InterestPaidNet",
+      "accepted_sections": [
+        "cash_other"
+      ]
     },
     {
       "rule_id": "GEN-CF-039",
@@ -1727,7 +1733,10 @@
         "taxes, net of refunds received"
       ],
       "filing_section": "operating",
-      "us_gaap_concept": "IncomeTaxesPaid"
+      "us_gaap_concept": "IncomeTaxesPaid",
+      "accepted_sections": [
+        "cash_other"
+      ]
     },
     {
       "rule_id": "GEN-CF-041",
@@ -2036,7 +2045,7 @@
     {
       "rule_id": "GEN-CF-058",
       "model_sheet": "CASH FLOW",
-      "model_label": "Operating Lease ROU Asset Amortization",
+      "model_label": "Non-Cash Lease Expense",
       "row_type": "line_item",
       "filing_section": "operating",
       "note": "Non-cash CFO add-back for amortization of operating lease right-of-use assets — the operating-lease counterpart to the depreciation add-back. Distinct from finance-lease principal payments which sit in financing.",
@@ -2044,9 +2053,18 @@
         "operating lease right-of-use asset amortization",
         "operating lease right of use asset amortization",
         "amortization of operating lease right-of-use assets",
-        "amortization of operating lease assets"
+        "amortization of operating lease assets",
+        "non-cash lease expense",
+        "non cash lease expense",
+        "operating lease expense",
+        "operating lease cost",
+        "amortization of operating lease rou asset",
+        "rou asset amortization"
       ],
-      "us_gaap_concept": "OperatingLeaseRightOfUseAssetAmortizationExpense"
+      "us_gaap_concept": "OperatingLeaseRightOfUseAssetAmortizationExpense",
+      "us_gaap_concepts": [
+        "NonCashLeaseExpense"
+      ]
     },
     {
       "rule_id": "GEN-CF-059",
@@ -2371,28 +2389,6 @@
         "accrued employee compensation"
       ],
       "us_gaap_concept": "IncreaseDecreaseInEmployeeRelatedLiabilities"
-    },
-    {
-      "rule_id": "GEN-CF-073",
-      "model_sheet": "CASH FLOW",
-      "model_label": "Non-Cash Lease Expense",
-      "filing_section": "operating",
-      "row_type": "line_item",
-      "note": "Non-cash CFO add-back for ASC 842 operating lease ROU asset amortization (the lease-expense portion that does not represent cash outflow). Most filers bundle this into D&A; MNST and some others break it out as a discrete CF line.",
-      "aliases": [
-        "non-cash lease expense",
-        "non cash lease expense",
-        "operating lease expense",
-        "operating lease cost",
-        "amortization of operating lease right-of-use assets",
-        "amortization of operating lease rou asset",
-        "rou asset amortization"
-      ],
-      "us_gaap_concept": "OperatingLeaseExpense",
-      "us_gaap_concepts": [
-        "OperatingLeaseRightOfUseAssetAmortizationExpense",
-        "NonCashLeaseExpense"
-      ]
     }
   ]
 }

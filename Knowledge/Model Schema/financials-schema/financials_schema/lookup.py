@@ -201,6 +201,16 @@ class LibraryEntry(BaseModel):
     us_gaap_concept: str | None = None
     us_gaap_concepts: list[str] = Field(default_factory=list)
     filing_section: Section | None = None
+    # Sections (in addition to `filing_section`) that may legitimately route
+    # items to this canonical. Used when one model row absorbs items the
+    # filer classifies inconsistently — e.g. GEN-BS-008 Deferred Tax Assets
+    # accepts both `non_current_assets` (PG, post-ASC740-2017 modal) and
+    # `current_assets` (MNST's `Prepaid income taxes`). When non-empty,
+    # reconcile's section-collision guard ignores items whose section is in
+    # this list. Workbook layout still follows the canonical's primary
+    # `filing_section`, so cross-section items render under the canonical's
+    # row in its modal section. Default empty (= strict single-section).
+    accepted_sections: list[Section] = Field(default_factory=list)
     filing_subsection: str | None = None
     sign_convention: SignConvention | None = None
     memo: bool = False
