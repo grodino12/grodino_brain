@@ -631,12 +631,14 @@
         "accrued liabilities and other",
         "accrued liabilities current",
         "accrued and other liabilities",
-        "accounts payable and other current liabilities"
+        "accounts payable and other current liabilities",
+        "accrued revenue share"
       ],
       "filing_section": "current_liabilities",
       "us_gaap_concept": "AccruedLiabilitiesCurrent",
       "us_gaap_concepts": [
-        "AccountsPayableAndAccruedLiabilitiesCurrent"
+        "AccountsPayableAndAccruedLiabilitiesCurrent",
+        "goog:AccruedRevenueShare"
       ],
       "cf_delta_target": "Accounts Payable"
     },
@@ -1382,10 +1384,14 @@
         "accrued liabilities",
         "change in accrued expenses",
         "change in accrued liabilities",
-        "increase (decrease) in accrued expenses"
+        "increase (decrease) in accrued expenses",
+        "accrued revenue share"
       ],
       "filing_section": "operating",
-      "us_gaap_concept": "IncreaseDecreaseInAccruedLiabilities"
+      "us_gaap_concept": "IncreaseDecreaseInAccruedLiabilities",
+      "us_gaap_concepts": [
+        "goog:IncreaseDecreaseInAccruedRevenueShare"
+      ]
     },
     {
       "rule_id": "GEN-CF-016",
@@ -2416,6 +2422,23 @@
         "g&a"
       ],
       "note": "Primary G&A opex line for filers that split S&M from G&A (tech — GOOG, AAPL, MSFT, META). Distinct from GEN-IS-004 SG&A, which is the combined-form line used by staples filers. Companion to GEN-IS-028 Sales and Marketing."
+    },
+    {
+      "rule_id": "GEN-IS-030",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Litigation and Regulatory Charges",
+      "filing_section": "operating_expenses",
+      "sign_convention": "negative",
+      "us_gaap_concept": "LossContingencyLossInPeriod",
+      "aliases": [
+        "litigation and regulatory charges",
+        "litigation charges",
+        "regulatory charges",
+        "european commission fines",
+        "european commission fine",
+        "loss contingency"
+      ],
+      "note": "Non-recurring opex line for litigation settlements / regulatory fines that the filer renders as a discrete IS line above Income from Operations. GOOG: EC antitrust fines FY2017 (€2.42B Google Shopping), FY2018 (€4.34B Android), FY2019 (€1.49B AdSense). Generalizable to AAPL EU DMA, JNJ talc, GE asbestos, and similar regulatory/litigation events. When a filer doesn't have one, the row stays empty."
     },
     {
       "rule_id": "GEN-CF-069",
