@@ -120,6 +120,12 @@ IXBRL_SUBTOTAL_CONCEPTS = frozenset({
     "CashAndCashEquivalentsPeriodIncreaseDecrease",
     "CashAndCashEquivalentsPeriodIncreaseDecreaseExcludingExchangeRateEffect",
     "CashAndCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+    # BS-side aggregate of Cash + Short-Term Investments — used by tech filers
+    # (GOOG renders "Total cash, cash equivalents, and marketable securities" as
+    # a subtotal between Cash and the next non-securities current asset). Add to
+    # floor so it's classified as subtotal even when the filer's pre.xml doesn't
+    # flag it via preferredLabel=totalLabel.
+    "CashCashEquivalentsAndShortTermInvestments",
 })
 
 
