@@ -477,6 +477,13 @@
       "FY2024": "-436",
       "FY2025": "-796"
     },
+    "Change in Income Taxes": {
+      "FY2021": "30",
+      "FY2022": "57",
+      "FY2023": "310",
+      "FY2024": "-123",
+      "FY2025": "-433"
+    },
     "Common Dividends": {
       "FY2021": "-5815",
       "FY2022": "-6172",
@@ -566,13 +573,6 @@
       "FY2023": "570",
       "FY2024": "655",
       "FY2025": "727"
-    },
-    "Other Current Liabilities": {
-      "FY2021": "30",
-      "FY2022": "57",
-      "FY2023": "310",
-      "FY2024": "-123",
-      "FY2025": "-433"
     },
     "Other Financing Activities": {
       "FY2021": "-47",
@@ -1444,6 +1444,25 @@
       "Q4 FY2024": "='CASH FLOW'!E12-'YTD CF'!J12",
       "Q4 FY2025": "='CASH FLOW'!F12-'YTD CF'!M12"
     },
+    "Change in Income Taxes": {
+      "Q1 FY2022": "='YTD CF'!B24",
+      "Q1 FY2023": "='YTD CF'!E24",
+      "Q1 FY2024": "='YTD CF'!H24",
+      "Q1 FY2025": "='YTD CF'!K24",
+      "Q1 FY2026": "='YTD CF'!N24",
+      "Q2 FY2022": "='YTD CF'!C24-'YTD CF'!B24",
+      "Q2 FY2023": "='YTD CF'!F24-'YTD CF'!E24",
+      "Q2 FY2024": "='YTD CF'!I24-'YTD CF'!H24",
+      "Q2 FY2025": "='YTD CF'!L24-'YTD CF'!K24",
+      "Q3 FY2022": "='YTD CF'!D24-'YTD CF'!C24",
+      "Q3 FY2023": "='YTD CF'!G24-'YTD CF'!F24",
+      "Q3 FY2024": "='YTD CF'!J24-'YTD CF'!I24",
+      "Q3 FY2025": "='YTD CF'!M24-'YTD CF'!L24",
+      "Q4 FY2022": "='CASH FLOW'!C24-'YTD CF'!D24",
+      "Q4 FY2023": "='CASH FLOW'!D24-'YTD CF'!G24",
+      "Q4 FY2024": "='CASH FLOW'!E24-'YTD CF'!J24",
+      "Q4 FY2025": "='CASH FLOW'!F24-'YTD CF'!M24"
+    },
     "Common Dividends": {
       "Q1 FY2022": "='YTD CF'!B41",
       "Q1 FY2023": "='YTD CF'!E41",
@@ -1671,25 +1690,6 @@
       "Q4 FY2023": "='CASH FLOW'!D9-'YTD CF'!G9",
       "Q4 FY2024": "='CASH FLOW'!E9-'YTD CF'!J9",
       "Q4 FY2025": "='CASH FLOW'!F9-'YTD CF'!M9"
-    },
-    "Other Current Liabilities": {
-      "Q1 FY2022": "='YTD CF'!B24",
-      "Q1 FY2023": "='YTD CF'!E24",
-      "Q1 FY2024": "='YTD CF'!H24",
-      "Q1 FY2025": "='YTD CF'!K24",
-      "Q1 FY2026": "='YTD CF'!N24",
-      "Q2 FY2022": "='YTD CF'!C24-'YTD CF'!B24",
-      "Q2 FY2023": "='YTD CF'!F24-'YTD CF'!E24",
-      "Q2 FY2024": "='YTD CF'!I24-'YTD CF'!H24",
-      "Q2 FY2025": "='YTD CF'!L24-'YTD CF'!K24",
-      "Q3 FY2022": "='YTD CF'!D24-'YTD CF'!C24",
-      "Q3 FY2023": "='YTD CF'!G24-'YTD CF'!F24",
-      "Q3 FY2024": "='YTD CF'!J24-'YTD CF'!I24",
-      "Q3 FY2025": "='YTD CF'!M24-'YTD CF'!L24",
-      "Q4 FY2022": "='CASH FLOW'!C24-'YTD CF'!D24",
-      "Q4 FY2023": "='CASH FLOW'!D24-'YTD CF'!G24",
-      "Q4 FY2024": "='CASH FLOW'!E24-'YTD CF'!J24",
-      "Q4 FY2025": "='CASH FLOW'!F24-'YTD CF'!M24"
     },
     "Other Financing Activities": {
       "Q1 FY2022": "='YTD CF'!B45",
@@ -3061,6 +3061,21 @@
       "Q3 FY2024": "-284",
       "Q3 FY2025": "-554"
     },
+    "Change in Income Taxes": {
+      "Q1 FY2022": "489",
+      "Q1 FY2023": "290",
+      "Q1 FY2024": "222",
+      "Q1 FY2025": "223",
+      "Q1 FY2026": "131",
+      "Q2 FY2022": "608",
+      "Q2 FY2023": "100",
+      "Q2 FY2024": "287",
+      "Q2 FY2025": "415",
+      "Q3 FY2022": "718",
+      "Q3 FY2023": "512",
+      "Q3 FY2024": "426",
+      "Q3 FY2025": "6"
+    },
     "Common Dividends": {
       "Q1 FY2022": "-1505",
       "Q1 FY2023": "-1608",
@@ -3240,21 +3255,6 @@
       "Q3 FY2023": "384",
       "Q3 FY2024": "438",
       "Q3 FY2025": "489"
-    },
-    "Other Current Liabilities": {
-      "Q1 FY2022": "489",
-      "Q1 FY2023": "290",
-      "Q1 FY2024": "222",
-      "Q1 FY2025": "223",
-      "Q1 FY2026": "131",
-      "Q2 FY2022": "608",
-      "Q2 FY2023": "100",
-      "Q2 FY2024": "287",
-      "Q2 FY2025": "415",
-      "Q3 FY2022": "718",
-      "Q3 FY2023": "512",
-      "Q3 FY2024": "426",
-      "Q3 FY2025": "6"
     },
     "Other Financing Activities": {
       "Q1 FY2022": "-1",

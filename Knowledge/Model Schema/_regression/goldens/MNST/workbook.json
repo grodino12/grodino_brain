@@ -587,6 +587,15 @@
       "FY2024": "5947",
       "FY2025": "17801"
     },
+    "Change in Income Taxes": {
+      "FY2019": "8105",
+      "FY2020": "10422",
+      "FY2021": "7221",
+      "FY2022": "-16860",
+      "FY2023": "1748",
+      "FY2024": "9438",
+      "FY2025": "27779"
+    },
     "Change in Prepaid Income Taxes": {
       "FY2019": "9481",
       "FY2020": "5516",
@@ -736,15 +745,6 @@
       "FY2023": "9043",
       "FY2024": "13521",
       "FY2025": "15398"
-    },
-    "Other Current Liabilities": {
-      "FY2019": "8105",
-      "FY2020": "10422",
-      "FY2021": "7221",
-      "FY2022": "-16860",
-      "FY2023": "1748",
-      "FY2024": "9438",
-      "FY2025": "27779"
     },
     "Other Investing Activities": {
       "FY2019": "-1265",
@@ -1942,6 +1942,32 @@
       "Q4 FY2024": "='CASH FLOW'!G18-'YTD CF'!P20",
       "Q4 FY2025": "='CASH FLOW'!H18-'YTD CF'!S20"
     },
+    "Change in Income Taxes": {
+      "Q1 FY2020": "='YTD CF'!B21",
+      "Q1 FY2021": "='YTD CF'!E21",
+      "Q1 FY2022": "='YTD CF'!H21",
+      "Q1 FY2023": "='YTD CF'!K21",
+      "Q1 FY2024": "='YTD CF'!N21",
+      "Q1 FY2025": "='YTD CF'!Q21",
+      "Q2 FY2020": "='YTD CF'!C21-'YTD CF'!B21",
+      "Q2 FY2021": "='YTD CF'!F21-'YTD CF'!E21",
+      "Q2 FY2022": "='YTD CF'!I21-'YTD CF'!H21",
+      "Q2 FY2023": "='YTD CF'!L21-'YTD CF'!K21",
+      "Q2 FY2024": "='YTD CF'!O21-'YTD CF'!N21",
+      "Q2 FY2025": "='YTD CF'!R21-'YTD CF'!Q21",
+      "Q3 FY2020": "='YTD CF'!D21-'YTD CF'!C21",
+      "Q3 FY2021": "='YTD CF'!G21-'YTD CF'!F21",
+      "Q3 FY2022": "='YTD CF'!J21-'YTD CF'!I21",
+      "Q3 FY2023": "='YTD CF'!M21-'YTD CF'!L21",
+      "Q3 FY2024": "='YTD CF'!P21-'YTD CF'!O21",
+      "Q3 FY2025": "='YTD CF'!S21-'YTD CF'!R21",
+      "Q4 FY2020": "='CASH FLOW'!C19-'YTD CF'!D21",
+      "Q4 FY2021": "='CASH FLOW'!D19-'YTD CF'!G21",
+      "Q4 FY2022": "='CASH FLOW'!E19-'YTD CF'!J21",
+      "Q4 FY2023": "='CASH FLOW'!F19-'YTD CF'!M21",
+      "Q4 FY2024": "='CASH FLOW'!G19-'YTD CF'!P21",
+      "Q4 FY2025": "='CASH FLOW'!H19-'YTD CF'!S21"
+    },
     "Change in Prepaid Income Taxes": {
       "Q1 FY2020": "='YTD CF'!B15",
       "Q1 FY2021": "='YTD CF'!E15",
@@ -2377,32 +2403,6 @@
       "Q4 FY2023": "='CASH FLOW'!F4-'YTD CF'!M4",
       "Q4 FY2024": "='CASH FLOW'!G4-'YTD CF'!P4",
       "Q4 FY2025": "='CASH FLOW'!H4-'YTD CF'!S4"
-    },
-    "Other Current Liabilities": {
-      "Q1 FY2020": "='YTD CF'!B21",
-      "Q1 FY2021": "='YTD CF'!E21",
-      "Q1 FY2022": "='YTD CF'!H21",
-      "Q1 FY2023": "='YTD CF'!K21",
-      "Q1 FY2024": "='YTD CF'!N21",
-      "Q1 FY2025": "='YTD CF'!Q21",
-      "Q2 FY2020": "='YTD CF'!C21-'YTD CF'!B21",
-      "Q2 FY2021": "='YTD CF'!F21-'YTD CF'!E21",
-      "Q2 FY2022": "='YTD CF'!I21-'YTD CF'!H21",
-      "Q2 FY2023": "='YTD CF'!L21-'YTD CF'!K21",
-      "Q2 FY2024": "='YTD CF'!O21-'YTD CF'!N21",
-      "Q2 FY2025": "='YTD CF'!R21-'YTD CF'!Q21",
-      "Q3 FY2020": "='YTD CF'!D21-'YTD CF'!C21",
-      "Q3 FY2021": "='YTD CF'!G21-'YTD CF'!F21",
-      "Q3 FY2022": "='YTD CF'!J21-'YTD CF'!I21",
-      "Q3 FY2023": "='YTD CF'!M21-'YTD CF'!L21",
-      "Q3 FY2024": "='YTD CF'!P21-'YTD CF'!O21",
-      "Q3 FY2025": "='YTD CF'!S21-'YTD CF'!R21",
-      "Q4 FY2020": "='CASH FLOW'!C19-'YTD CF'!D21",
-      "Q4 FY2021": "='CASH FLOW'!D19-'YTD CF'!G21",
-      "Q4 FY2022": "='CASH FLOW'!E19-'YTD CF'!J21",
-      "Q4 FY2023": "='CASH FLOW'!F19-'YTD CF'!M21",
-      "Q4 FY2024": "='CASH FLOW'!G19-'YTD CF'!P21",
-      "Q4 FY2025": "='CASH FLOW'!H19-'YTD CF'!S21"
     },
     "Other Investing Activities": {
       "Q1 FY2020": "='YTD CF'!B32",
@@ -3930,6 +3930,26 @@
       "Q3 FY2024": "-6043",
       "Q3 FY2025": "6434"
     },
+    "Change in Income Taxes": {
+      "Q1 FY2020": "-1552",
+      "Q1 FY2021": "-13287",
+      "Q1 FY2022": "-9818",
+      "Q1 FY2023": "41617",
+      "Q1 FY2024": "60512",
+      "Q1 FY2025": "61674",
+      "Q2 FY2020": "8278",
+      "Q2 FY2021": "7696",
+      "Q2 FY2022": "-14666",
+      "Q2 FY2023": "-1219",
+      "Q2 FY2024": "11348",
+      "Q2 FY2025": "21056",
+      "Q3 FY2020": "17969",
+      "Q3 FY2021": "-114",
+      "Q3 FY2022": "-12823",
+      "Q3 FY2023": "4217",
+      "Q3 FY2024": "4213",
+      "Q3 FY2025": "33361"
+    },
     "Change in Prepaid Income Taxes": {
       "Q1 FY2020": "8078",
       "Q1 FY2021": "-7076",
@@ -4269,26 +4289,6 @@
       "Q3 FY2023": "6471",
       "Q3 FY2024": "9801",
       "Q3 FY2025": "10266"
-    },
-    "Other Current Liabilities": {
-      "Q1 FY2020": "-1552",
-      "Q1 FY2021": "-13287",
-      "Q1 FY2022": "-9818",
-      "Q1 FY2023": "41617",
-      "Q1 FY2024": "60512",
-      "Q1 FY2025": "61674",
-      "Q2 FY2020": "8278",
-      "Q2 FY2021": "7696",
-      "Q2 FY2022": "-14666",
-      "Q2 FY2023": "-1219",
-      "Q2 FY2024": "11348",
-      "Q2 FY2025": "21056",
-      "Q3 FY2020": "17969",
-      "Q3 FY2021": "-114",
-      "Q3 FY2022": "-12823",
-      "Q3 FY2023": "4217",
-      "Q3 FY2024": "4213",
-      "Q3 FY2025": "33361"
     },
     "Other Investing Activities": {
       "Q1 FY2020": "-1148",
