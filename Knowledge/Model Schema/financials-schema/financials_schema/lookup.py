@@ -225,6 +225,18 @@ class LibraryEntry(BaseModel):
     # (PEP routes accrued ΔBS to the CF AP line).
     cf_delta_target: str | None = None
 
+    # Subtotal/detail relationship. When set, this canonical is a DETAIL of the
+    # named parent canonical (rule_id, e.g. "GEN-BS-005"). When detail rows
+    # have data for a (sheet, period), the parent's historical cell renders as
+    # `=SUM(detail rows)` with subtotal styling, and the parent value (not the
+    # individual detail values) is what flows into BS-1 / section-sum tie-out
+    # checks — children are excluded to avoid double-counting. Forecast: parent
+    # uses its own driver (e.g. DIO_RATIO for Inventories Net); children use
+    # `RATIO_OF_PARENT` (= ratio × parent_forecast). By construction sum of
+    # children = parent in both historical (SUM formula) and forecast
+    # (ratios sum to 1.0). Example: RM/WIP/FG canonicals point to GEN-BS-005.
+    parent_canonical: str | None = None
+
 
 def load_generic_library(library_path: Path) -> dict:
     """Load the cross-ticker generic line-item mappings file and validate

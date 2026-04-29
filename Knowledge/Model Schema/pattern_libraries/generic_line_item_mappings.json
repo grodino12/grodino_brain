@@ -1012,34 +1012,60 @@
       ]
     },
     {
-      "rule_id": "GEN-BS-038",
+      "rule_id": "GEN-BS-051",
       "model_sheet": "BALANCE SHEET",
-      "model_label": "Inventories",
-      "memo": true,
-      "note": "Inventory detail breakdown (Raw Materials, WIP, Finished Goods) — recognized from on-face disclosures but not rendered on xlsx. The Net roll-up renders via GEN-BS-005. Shared model_label intentional: the detail concepts conceptually belong to the same Inventories line, just at a finer granularity we don't model. us_gaap_concepts (plural) routes all three sub-concepts to this memo bucket structurally, so filers using PEP-style phrasing like 'raw materials and packaging' resolve via concept-fallback even when the alias list doesn't anticipate the wording.",
+      "model_label": "Raw Materials",
+      "note": "Inventory raw-materials detail row. Children of GEN-BS-005 Inventories — when present, parent renders as =SUM(detail) subtotal in historical and uses RATIO_OF_PARENT in forecast (each child = ratio × parent_forecast, ratios sum to 1.0).",
       "aliases": [
         "inventory raw materials and supplies net of reserves",
         "raw materials",
         "raw materials and packaging",
         "raw materials and supplies",
-        "inventory, raw materials",
+        "materials and supplies",
+        "inventory, raw materials"
+      ],
+      "us_gaap_concepts": [
+        "InventoryRawMaterials",
+        "InventoryRawMaterialsAndSupplies",
+        "InventoryRawMaterialsAndSuppliesNetOfReserves"
+      ],
+      "filing_section": "current_assets",
+      "parent_canonical": "GEN-BS-005"
+    },
+    {
+      "rule_id": "GEN-BS-052",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Work in Process",
+      "note": "Inventory work-in-process detail row. Child of GEN-BS-005 Inventories.",
+      "aliases": [
         "inventory work in process net of reserves",
         "work in process",
-        "inventory, work in process",
+        "work-in-process",
+        "inventory, work in process"
+      ],
+      "us_gaap_concepts": [
+        "InventoryWorkInProcess",
+        "InventoryWorkInProcessNetOfReserves"
+      ],
+      "filing_section": "current_assets",
+      "parent_canonical": "GEN-BS-005"
+    },
+    {
+      "rule_id": "GEN-BS-053",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Finished Goods",
+      "note": "Inventory finished-goods detail row. Child of GEN-BS-005 Inventories.",
+      "aliases": [
         "inventory finished goods net of reserves",
         "finished goods",
         "inventory, finished goods"
       ],
       "us_gaap_concepts": [
-        "InventoryRawMaterials",
-        "InventoryRawMaterialsAndSupplies",
-        "InventoryRawMaterialsAndSuppliesNetOfReserves",
-        "InventoryWorkInProcess",
-        "InventoryWorkInProcessNetOfReserves",
         "InventoryFinishedGoods",
         "InventoryFinishedGoodsNetOfReserves"
       ],
-      "filing_section": "current_assets"
+      "filing_section": "current_assets",
+      "parent_canonical": "GEN-BS-005"
     },
     {
       "rule_id": "GEN-IS-022",
