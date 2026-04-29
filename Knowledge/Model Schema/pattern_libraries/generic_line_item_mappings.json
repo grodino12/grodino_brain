@@ -651,7 +651,8 @@
         "accrued income taxes"
       ],
       "filing_section": "current_liabilities",
-      "us_gaap_concept": "AccruedIncomeTaxesCurrent"
+      "us_gaap_concept": "AccruedIncomeTaxesCurrent",
+      "cf_delta_target": "Change in Income Taxes"
     },
     {
       "rule_id": "GEN-BS-018",
@@ -1421,11 +1422,11 @@
       "aliases": [
         "other current liabilities (change)",
         "other current liabilities",
-        "income taxes payable",
         "change in other current liabilities",
         "other accrued liabilities"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "note": "WC change for the Other Current Liabilities BS bucket. Income-tax payable WC change is intentionally NOT aliased here — that line routes to GEN-CF-076 Change in Income Taxes."
     },
     {
       "rule_id": "GEN-CF-018",
@@ -2080,7 +2081,7 @@
       "model_sheet": "CASH FLOW",
       "model_label": "Net Change in Short-Term Investments",
       "row_type": "line_item",
-      "note": "Net cash flow from short-term investing activity (purchases, sales, maturities). Some filers (CELH, KO) report only proceeds; others (PEP) split into multiple maturity-bucket lines. All variants route to this single canonical so the workbook shows one consolidated row — model-write's row consolidation by canonical_label sums purchases (negative) and sales/maturities (positive) into the net change.",
+      "note": "Net cash flow from short-term investing activity (purchases, sales, maturities). Some filers (CELH, KO) report only proceeds; others (PEP) split into multiple maturity-bucket lines; tech filers (GOOG) split as 'Purchases of marketable securities' + 'Maturities and sales of marketable securities'. All variants route to this single canonical so the workbook shows one consolidated row — model-write's row consolidation by canonical_label sums purchases (negative) and sales/maturities (positive) into the net change.",
       "aliases": [
         "proceeds from sales and maturities of short-term investments",
         "proceeds from sale of short-term investments",
@@ -2090,7 +2091,9 @@
         "more than three months - maturities",
         "more than three months - purchases",
         "more than three months - sales",
-        "three months or less, net"
+        "three months or less, net",
+        "maturities and sales of marketable securities",
+        "purchases of marketable securities"
       ],
       "filing_section": "investing",
       "us_gaap_concept": "ProceedsFromSaleOfShortTermInvestments",
@@ -2098,7 +2101,9 @@
         "PaymentsToAcquireShortTermInvestments",
         "ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities",
         "PaymentsForProceedsFromShortTermInvestmentsThreeMonthsOrLessNet",
-        "ProceedsFromSaleOfInvestmentsMoreThanThreeMonthsSales"
+        "ProceedsFromSaleOfInvestmentsMoreThanThreeMonthsSales",
+        "ProceedsFromSaleAndMaturityOfMarketableSecurities",
+        "PaymentsToAcquireMarketableSecurities"
       ]
     },
     {
@@ -2560,6 +2565,27 @@
       ],
       "us_gaap_concepts": [
         "goog:IncreaseDecreaseInAccruedRevenueShare"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-076",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Change in Income Taxes",
+      "filing_section": "operating",
+      "row_type": "line_item",
+      "note": "WC-change companion to GEN-BS-017 Income Taxes Payable. Sign organic — positive when accrued tax balance grows (cash add-back to CFO), negative when paid down. The us-gaap:IncreaseDecreaseInIncomeTaxes concept covers payable + receivable nets at filers that report a single combined line (GOOG); per-filer variants for split-form filers included. Distinct from GEN-CF-074 Change in Prepaid Income Taxes (asset-side).",
+      "aliases": [
+        "income taxes, net",
+        "change in income taxes",
+        "change in income taxes payable",
+        "income taxes payable (change)",
+        "income taxes payable",
+        "accrued income taxes"
+      ],
+      "us_gaap_concept": "IncreaseDecreaseInIncomeTaxes",
+      "us_gaap_concepts": [
+        "IncreaseDecreaseInAccruedIncomeTaxesPayable",
+        "IncreaseDecreaseInIncomeTaxesPayableNet"
       ]
     }
   ]
