@@ -418,14 +418,18 @@
       "model_sheet": "BALANCE SHEET",
       "model_label": "Short-Term Investments",
       "filing_section": "current_assets",
-      "note": "Short-term investment balances (commercial paper, AFS securities, time deposits) held as a current asset distinct from cash equivalents. Common across staples filers (PEP, KO).",
+      "note": "Short-term investment balances (commercial paper, AFS securities, time deposits) held as a current asset distinct from cash equivalents. Common across staples filers (PEP, KO) and tech filers (GOOG).",
       "aliases": [
         "short-term investments",
         "short term investments",
         "short-term investment securities",
-        "short-term marketable securities"
+        "short-term marketable securities",
+        "marketable securities"
       ],
-      "us_gaap_concept": "ShortTermInvestments"
+      "us_gaap_concept": "ShortTermInvestments",
+      "us_gaap_concepts": [
+        "MarketableSecuritiesCurrent"
+      ]
     },
     {
       "rule_id": "GEN-BS-006",
@@ -1066,6 +1070,31 @@
       ],
       "filing_section": "current_assets",
       "parent_canonical": "GEN-BS-005"
+    },
+    {
+      "rule_id": "GEN-BS-054",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Common Stock and Additional Paid-in Capital",
+      "filing_section": "equity",
+      "us_gaap_concept": "CommonStocksIncludingAdditionalPaidInCapital",
+      "aliases": [
+        "common stock and additional paid-in capital",
+        "class a and class b common stock and class c capital stock and additional paid-in capital",
+        "class a class b and class c stock and additional paid-in capital"
+      ],
+      "note": "Combined par + APIC line used by filers that don't separate the two (GOOG, AAPL, many tech). Distinct from GEN-BS-028 (Common Stock par) and GEN-BS-029 (APIC), which are the split form. Concept-based matching is the primary key — heavy label noise (embedded share counts that change quarter-to-quarter) makes label aliasing fragile."
+    },
+    {
+      "rule_id": "GEN-BS-055",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Other Current Assets",
+      "filing_section": "current_assets",
+      "us_gaap_concept": "OtherAssetsCurrent",
+      "aliases": [
+        "other current assets",
+        "other current assets, net"
+      ],
+      "note": "Standalone other-current-assets line. Distinct from GEN-BS-006 Prepaid Expenses, which uses concept PrepaidExpenseAndOtherAssetsCurrent and absorbs the combined-form rendering used by most staples filers. Mirror of GEN-BS-014 (Other Non-Current Assets)."
     },
     {
       "rule_id": "GEN-IS-022",
