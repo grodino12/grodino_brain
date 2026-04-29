@@ -1,0 +1,971 @@
+{
+  "filing": {
+    "ticker": "MNST",
+    "filing_type": "10-Q",
+    "filing_date": "2023-05-05",
+    "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Prepaid income taxes",
+      "value": "30889",
+      "raw_numeric_text": "30,889",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PrepaidTaxes | ctx:instant:2023-03-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "accrued income taxes",
+          0.8
+        ],
+        [
+          "deferred income taxes",
+          0.7804878048780488
+        ],
+        [
+          "deferred income tax assets",
+          0.6956521739130435
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "INVESTMENTS",
+      "value": "41152",
+      "raw_numeric_text": "41,152",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:LongTermInvestments | ctx:instant:2023-03-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "short-term investments",
+          0.6666666666666667
+        ],
+        [
+          "short term investments",
+          0.6666666666666667
+        ],
+        [
+          "inventories",
+          0.6363636363636364
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Accrued compensation",
+      "value": "42673",
+      "raw_numeric_text": "42,673",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EmployeeRelatedLiabilitiesCurrent | ctx:instant:2023-03-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "accrued expenses",
+          0.6666666666666667
+        ],
+        [
+          "accrued income taxes",
+          0.65
+        ],
+        [
+          "accumulated depreciation",
+          0.6363636363636364
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Common stock - $ 0.005  par value;  1,250,000  shares authorized;  1,117,392  shares issued and  1,046,616  shares outstanding as of March\u00a031,\u00a02023;  1,283,688  shares issued and  1,044,600  shares outstanding as of December\u00a031,\u00a02022",
+      "value": "5587",
+      "raw_numeric_text": "5,587",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValueOutstanding | ctx:instant:2023-03-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "common stock par value",
+          0.8461538461538461
+        ],
+        [
+          "common stock no par value",
+          0.8363636363636364
+        ],
+        [
+          "common stock value",
+          0.75
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Prepaid income taxes",
+      "value": "33785",
+      "raw_numeric_text": "33,785",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PrepaidTaxes | ctx:instant:2022-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "accrued income taxes",
+          0.8
+        ],
+        [
+          "deferred income taxes",
+          0.7804878048780488
+        ],
+        [
+          "deferred income tax assets",
+          0.6956521739130435
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "INVESTMENTS",
+      "value": "61443",
+      "raw_numeric_text": "61,443",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:LongTermInvestments | ctx:instant:2022-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "short-term investments",
+          0.6666666666666667
+        ],
+        [
+          "short term investments",
+          0.6666666666666667
+        ],
+        [
+          "inventories",
+          0.6363636363636364
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Accrued compensation",
+      "value": "72463",
+      "raw_numeric_text": "72,463",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:EmployeeRelatedLiabilitiesCurrent | ctx:instant:2022-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "accrued expenses",
+          0.6666666666666667
+        ],
+        [
+          "accrued income taxes",
+          0.65
+        ],
+        [
+          "accumulated depreciation",
+          0.6363636363636364
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2022",
+      "period_end_date": "2022-12-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Common stock - $ 0.005  par value;  1,250,000  shares authorized;  1,117,392  shares issued and  1,046,616  shares outstanding as of March\u00a031,\u00a02023;  1,283,688  shares issued and  1,044,600  shares outstanding as of December\u00a031,\u00a02022",
+      "value": "6418",
+      "raw_numeric_text": "6,418",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValueOutstanding | ctx:instant:2022-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "common stock par value",
+          0.8461538461538461
+        ],
+        [
+          "common stock no par value",
+          0.8363636363636364
+        ],
+        [
+          "common stock value",
+          0.75
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "OPERATING EXPENSES",
+      "value": "412785",
+      "raw_numeric_text": "412,785",
+      "section": "operating_expenses",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingExpenses | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "other nonoperating expense",
+          0.7727272727272727
+        ],
+        [
+          "other non-operating expense",
+          0.7555555555555555
+        ],
+        [
+          "operating loss",
+          0.75
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "OPERATING EXPENSES",
+      "value": "377178",
+      "raw_numeric_text": "377,178",
+      "section": "operating_expenses",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingExpenses | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "other nonoperating expense",
+          0.7727272727272727
+        ],
+        [
+          "other non-operating expense",
+          0.7555555555555555
+        ],
+        [
+          "operating loss",
+          0.75
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Non-cash lease expense",
+      "value": "2160",
+      "raw_numeric_text": "2,160",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "mnst:NonCashLeaseExpense | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "pension expense",
+          0.5945945945945945
+        ],
+        [
+          "bad debt expense",
+          0.5789473684210527
+        ],
+        [
+          "increase decrease in prepaid expenses",
+          0.576271186440678
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Prepaid income taxes",
+      "value": "3986",
+      "raw_numeric_text": "3,986",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInPrepaidTaxes | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "deferred income taxes",
+          0.7804878048780488
+        ],
+        [
+          "cash paid for income taxes",
+          0.7391304347826086
+        ],
+        [
+          "deferred income taxes-net",
+          0.7111111111111111
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Accrued compensation",
+      "value": "-30261",
+      "raw_numeric_text": "30,261",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInEmployeeRelatedLiabilities | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "share-based compensation",
+          0.7727272727272727
+        ],
+        [
+          "stock-based compensation",
+          0.7272727272727273
+        ],
+        [
+          "equity-based compensation",
+          0.7111111111111111
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Other liabilities",
+      "value": "-751",
+      "raw_numeric_text": "751",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInOtherNoncurrentLiabilities | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "contract liabilities",
+          0.8108108108108109
+        ],
+        [
+          "other current liabilities",
+          0.8095238095238095
+        ],
+        [
+          "other accrued liabilities",
+          0.8095238095238095
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Sales of available-for-sale investments",
+      "value": "522501",
+      "raw_numeric_text": "522,501",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromSaleOfAvailableForSaleSecuritiesDebt | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "purchases of short-term investments",
+          0.6216216216216216
+        ],
+        [
+          "proceeds from sale of short-term investments",
+          0.6024096385542168
+        ],
+        [
+          "proceeds from short-term investments",
+          0.56
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Purchases of available-for-sale investments",
+      "value": "-518751",
+      "raw_numeric_text": "518,751",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "purchases of short-term investments",
+          0.7435897435897436
+        ],
+        [
+          "purchase of equity investments",
+          0.6849315068493153
+        ],
+        [
+          "proceeds from sale of short-term investments",
+          0.6436781609195402
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Additions to intangibles",
+      "value": "-3952",
+      "raw_numeric_text": "3,952",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "mnst:PaymentsToProceedsFromIntangiblesAssets | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "impairment of intangibles",
+          0.6938775510204082
+        ],
+        [
+          "additions to long-term debt",
+          0.6274509803921569
+        ],
+        [
+          "impairment of intangible assets",
+          0.6181818181818182
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "(Payments) borrowings on debt",
+      "value": "-7271",
+      "raw_numeric_text": "7,271",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebt | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "repayments of long term debt",
+          0.6909090909090909
+        ],
+        [
+          "repayments of long-term debt",
+          0.6545454545454545
+        ],
+        [
+          "payment of contingent consideration",
+          0.6129032258064516
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Interest",
+      "value": "96",
+      "raw_numeric_text": "96",
+      "section": "cash_other",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InterestPaidNet | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "interest",
+          1.0
+        ],
+        [
+          "interest paid",
+          0.7619047619047619
+        ],
+        [
+          "inventories",
+          0.631578947368421
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2023",
+      "period_end_date": "2023-03-31",
+      "fiscal_year": 2023,
+      "raw_filing_label": "Income taxes",
+      "value": "56985",
+      "raw_numeric_text": "56,985",
+      "section": "cash_other",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncomeTaxesPaid | ctx:duration:2023-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "income taxes paid",
+          0.8275862068965517
+        ],
+        [
+          "income taxes payable",
+          0.75
+        ],
+        [
+          "deferred income taxes",
+          0.7272727272727273
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Non-cash lease expense",
+      "value": "1481",
+      "raw_numeric_text": "1,481",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "mnst:NonCashLeaseExpense | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "pension expense",
+          0.5945945945945945
+        ],
+        [
+          "bad debt expense",
+          0.5789473684210527
+        ],
+        [
+          "increase decrease in prepaid expenses",
+          0.576271186440678
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Prepaid income taxes",
+      "value": "-5885",
+      "raw_numeric_text": "5,885",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInPrepaidTaxes | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "deferred income taxes",
+          0.7804878048780488
+        ],
+        [
+          "cash paid for income taxes",
+          0.7391304347826086
+        ],
+        [
+          "deferred income taxes-net",
+          0.7111111111111111
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Accrued compensation",
+      "value": "-32122",
+      "raw_numeric_text": "32,122",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInEmployeeRelatedLiabilities | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "share-based compensation",
+          0.7727272727272727
+        ],
+        [
+          "stock-based compensation",
+          0.7272727272727273
+        ],
+        [
+          "equity-based compensation",
+          0.7111111111111111
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Other liabilities",
+      "value": "-596",
+      "raw_numeric_text": "596",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncreaseDecreaseInOtherNoncurrentLiabilities | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "contract liabilities",
+          0.8108108108108109
+        ],
+        [
+          "other current liabilities",
+          0.8095238095238095
+        ],
+        [
+          "other accrued liabilities",
+          0.8095238095238095
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Sales of available-for-sale investments",
+      "value": "504808",
+      "raw_numeric_text": "504,808",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromSaleOfAvailableForSaleSecuritiesDebt | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "purchases of short-term investments",
+          0.6216216216216216
+        ],
+        [
+          "proceeds from sale of short-term investments",
+          0.6024096385542168
+        ],
+        [
+          "proceeds from short-term investments",
+          0.56
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Purchases of available-for-sale investments",
+      "value": "-441925",
+      "raw_numeric_text": "441,925",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "purchases of short-term investments",
+          0.7435897435897436
+        ],
+        [
+          "purchase of equity investments",
+          0.6849315068493153
+        ],
+        [
+          "proceeds from sale of short-term investments",
+          0.6436781609195402
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Acquisition of CANarchy, net of cash",
+      "value": "-330356",
+      "raw_numeric_text": "330,356",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PaymentsToAcquireBusinessesGross | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "acquisition of businesses net of cash acquired",
+          0.691358024691358
+        ],
+        [
+          "acquisition of alani nutrition llc net of cash acquired",
+          0.6888888888888889
+        ],
+        [
+          "acquisitions net of cash acquired",
+          0.6764705882352942
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Additions to intangibles",
+      "value": "-8419",
+      "raw_numeric_text": "8,419",
+      "section": "investing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "mnst:PaymentsToProceedsFromIntangiblesAssets | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "impairment of intangibles",
+          0.6938775510204082
+        ],
+        [
+          "additions to long-term debt",
+          0.6274509803921569
+        ],
+        [
+          "impairment of intangible assets",
+          0.6181818181818182
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "(Payments) borrowings on debt",
+      "value": "3454",
+      "raw_numeric_text": "3,454",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebt | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "repayments of long term debt",
+          0.6909090909090909
+        ],
+        [
+          "repayments of long-term debt",
+          0.6545454545454545
+        ],
+        [
+          "payment of contingent consideration",
+          0.6129032258064516
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Interest",
+      "value": "91",
+      "raw_numeric_text": "91",
+      "section": "cash_other",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InterestPaidNet | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "interest",
+          1.0
+        ],
+        [
+          "interest paid",
+          0.7619047619047619
+        ],
+        [
+          "inventories",
+          0.631578947368421
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Income taxes",
+      "value": "112863",
+      "raw_numeric_text": "112,863",
+      "section": "cash_other",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IncomeTaxesPaid | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "income taxes paid",
+          0.8275862068965517
+        ],
+        [
+          "income taxes payable",
+          0.75
+        ],
+        [
+          "deferred income taxes",
+          0.7272727272727273
+        ]
+      ]
+    }
+  ]
+}

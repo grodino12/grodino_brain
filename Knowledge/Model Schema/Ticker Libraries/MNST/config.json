@@ -1,0 +1,27 @@
+{
+  "_notes": "MNST ticker metadata. Populated 2026-04-28 as the fourth ticker onboarded after CELH + PG + PEP. Selected for being NCI-free, mature, seasonal CPG that exercises the YoY-basis forecast path cleanly.",
+  "_last_updated": "2026-04-28",
+
+  "ticker": "MNST",
+  "company_name": "Monster Beverage Corporation",
+  "cik": "0000865752",
+  "exchange": "NASDAQ",
+  "sector": "Consumer Staples",
+  "industry": "Non-Alcoholic Beverages",
+  "fiscal_year_end": "12-31",
+  "currency": "USD",
+
+  "_plausibility_note": "Ranges in $thousands (MNST renders all USD facts at scale=3, like CELH). Used by unit_detection fallback when no explicit header phrase is found.",
+  "expected_revenue_range_thousands": [4000000, 12000000],
+  "expected_total_assets_range_thousands": [5000000, 14000000],
+
+  "_growth_basis_note": "model-calc revenue growth driver. MNST defaults to 'yoy' (CPG default) — projects Q[t]=Q[Y-1,q]*(1+g) and preserves seasonality (energy-drink demand peaks in Q2/Q3). Matches PEP/PG default. Per-row override available in Excel via the Basis column on IS DRIVERS.",
+  "growth_basis": "yoy",
+
+  "_stock_splits_note": "Do NOT auto-adjust share counts or EPS without verifying the pre/post-split convention of the source filing. MNST historically restates EPS / share counts in subsequent filings to reflect splits.",
+  "stock_splits": [
+    { "date": "2023-02-23", "ratio": 2, "note": "2-for-1 split (ex-date 2023-02-23)" }
+  ],
+
+  "segments": ["Monster Energy", "Strategic Brands", "Alcohol Brands", "Other"]
+}
