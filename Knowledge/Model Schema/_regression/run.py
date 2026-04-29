@@ -59,9 +59,9 @@ GOLDENS_ROOT = MODEL_SCHEMA / "_regression" / "goldens"
 
 # Latest workbook filename per ticker (the canonical artifact to snapshot).
 WORKBOOK_FILENAME = {
-    "CELH": "CELH_model_v5.xlsx",
-    "PG":   "PG_model_v5.xlsx",
-    "PEP":  "PEP_model_v3.xlsx",
+    "CELH": "CELH_model.xlsx",
+    "PG":   "PG_model.xlsx",
+    "PEP":  "PEP_model.xlsx",
     "MNST": "MNST_model.xlsx",
 }
 
