@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -453,14 +454,28 @@ def main() -> int:
         print("\nALL CLEAN -- no regressions.")
         return 0
     print(f"\n{total} DIFFS FOUND across {sum(1 for d in all_diffs.values() if d)} ticker(s):\n")
+    # Cluster diffs by anonymized signature so repeated patterns collapse to
+    # a single line + count, while one-off anomalies remain individually
+    # visible. Signature = the diff string with array indices ([0], [42], ...)
+    # replaced by [*]. Two diffs that differ only in which line-item index
+    # they hit share a signature; a singleton anomaly does not.
+    #
+    # Why not a fixed cap on examples printed: a 1000-diff regression with
+    # one expected pattern hides any 1-3-diff anomaly in the tail. Clustering
+    # surfaces both kinds of change without burying either.
+    _IDX_RE = re.compile(r"\[\d+\]")
     for t, diffs in all_diffs.items():
         if not diffs:
             continue
-        print(f"--- {t} ({len(diffs)} diffs) ---")
-        for d in diffs[:50]:
-            print(f"  {d}")
-        if len(diffs) > 50:
-            print(f"  ... {len(diffs) - 50} more (use --keep-temp to inspect)")
+        groups: dict[str, list[str]] = {}
+        for d in diffs:
+            sig = _IDX_RE.sub("[*]", d)
+            groups.setdefault(sig, []).append(d)
+        print(f"--- {t} ({len(diffs)} diffs across {len(groups)} unique pattern(s)) ---")
+        # Sort by descending occurrence count — biggest patterns first, then
+        # singleton anomalies at the bottom of the list.
+        for sig, examples in sorted(groups.items(), key=lambda kv: -len(kv[1])):
+            print(f"  {len(examples):>5}x  {examples[0]}")
     return 1
 
 
