@@ -1908,12 +1908,14 @@
         "proceeds from long-term borrowings",
         "proceeds from term loan",
         "borrowings on credit facilities",
-        "borrowings on credit facility"
+        "borrowings on credit facility",
+        "proceeds from issuance of debt, net of costs"
       ],
       "filing_section": "financing",
       "us_gaap_concept": "ProceedsFromIssuanceOfLongTermDebt",
       "us_gaap_concepts": [
-        "ProceedsFromLongTermLinesOfCredit"
+        "ProceedsFromLongTermLinesOfCredit",
+        "ProceedsFromDebtNetOfIssuanceCosts"
       ]
     },
     {
@@ -2586,6 +2588,35 @@
       "us_gaap_concepts": [
         "IncreaseDecreaseInAccruedIncomeTaxesPayable",
         "IncreaseDecreaseInIncomeTaxesPayableNet"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-077",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Stock-Based Award Activities, Net",
+      "filing_section": "financing",
+      "row_type": "line_item",
+      "note": "Combined-net form of stock-based award cash flows: nets tax withholdings on RSU/PSU vesting (typically negative, dominant) with proceeds from stock option exercises and ESPP (typically positive, smaller). Used by tech filers (GOOG, META, AMZN-style). Distinct from GEN-CF-063 Tax Withholdings on RSU/PSU Settlement, which is the withholdings-only form used by staples filers that split the two cash flows. The two are mutually exclusive at any given filer. Concept namespace varies per filer extension.",
+      "aliases": [
+        "net payments related to stock-based award activities",
+        "stock-based award activities, net"
+      ],
+      "us_gaap_concepts": [
+        "goog:NetProceedsPaymentsRelatedToStockBasedAwardActivities"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-078",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Proceeds from Sale of Interest in Consolidated Entities",
+      "filing_section": "financing",
+      "row_type": "line_item",
+      "note": "Cash inflow from selling a minority stake in a consolidated subsidiary to outside investors while retaining control. Treated as a financing activity (capital injection from new NCI holders). Distinct from GEN-CF-065 Proceeds from Divestitures of Businesses (investing, full divestiture). GOOG: Waymo, Verily, GFiber outside-investor rounds. Generalizable to any filer with consolidated subs and outside-investor capital.",
+      "us_gaap_concept": "ProceedsFromMinorityShareholders",
+      "aliases": [
+        "proceeds from sale of interest in consolidated entities, net",
+        "proceeds from sale of interest in consolidated entities",
+        "proceeds from sale of subsidiary shares"
       ]
     }
   ]
