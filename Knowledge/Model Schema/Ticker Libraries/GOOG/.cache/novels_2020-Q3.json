@@ -24,16 +24,16 @@
       },
       "nearest_matches": [
         [
+          "marketable securities",
+          1.0
+        ],
+        [
           "long-term marketable securities",
           0.8076923076923077
         ],
         [
           "short-term marketable securities",
           0.7924528301886792
-        ],
-        [
-          "long-term investment securities",
-          0.5769230769230769
         ]
       ]
     },
@@ -55,16 +55,16 @@
       },
       "nearest_matches": [
         [
+          "other current assets",
+          1.0
+        ],
+        [
           "other non-current assets",
           0.9090909090909091
         ],
         [
-          "other non-current assets net",
-          0.8333333333333335
-        ],
-        [
-          "other current liabilities",
-          0.7555555555555555
+          "other current assets net",
+          0.9090909090909091
         ]
       ]
     },
@@ -86,16 +86,16 @@
       },
       "nearest_matches": [
         [
+          "non-marketable investments",
+          1.0
+        ],
+        [
           "long-term investments",
           0.7234042553191489
         ],
         [
-          "long term investments",
-          0.6808510638297872
-        ],
-        [
-          "short-term investments",
-          0.6666666666666667
+          "non-marketable equity securities",
+          0.6896551724137931
         ]
       ]
     },
@@ -117,16 +117,16 @@
       },
       "nearest_matches": [
         [
+          "accrued revenue share",
+          1.0
+        ],
+        [
           "accrued expenses",
           0.7027027027027026
         ],
         [
           "unearned revenue",
           0.6486486486486487
-        ],
-        [
-          "accrued income taxes",
-          0.6341463414634146
         ]
       ]
     },
@@ -146,7 +146,20 @@
         "line_hint": "us-gaap:CommonStocksIncludingAdditionalPaidInCapital | ctx:instant:2020-09-30",
         "note": "iXBRL HTM | BS"
       },
-      "nearest_matches": []
+      "nearest_matches": [
+        [
+          "class a and class b common stock and class c capital stock and additional paid-in capital",
+          1.0
+        ],
+        [
+          "class a class b and class c stock and additional paid-in capital",
+          0.8366013071895425
+        ],
+        [
+          "common stock and additional paid-in capital",
+          0.6515151515151516
+        ]
+      ]
     },
     {
       "statement_type": "BS",
@@ -166,16 +179,16 @@
       },
       "nearest_matches": [
         [
+          "marketable securities",
+          1.0
+        ],
+        [
           "long-term marketable securities",
           0.8076923076923077
         ],
         [
           "short-term marketable securities",
           0.7924528301886792
-        ],
-        [
-          "long-term investment securities",
-          0.5769230769230769
         ]
       ]
     },
@@ -197,16 +210,16 @@
       },
       "nearest_matches": [
         [
+          "other current assets",
+          1.0
+        ],
+        [
           "other non-current assets",
           0.9090909090909091
         ],
         [
-          "other non-current assets net",
-          0.8333333333333335
-        ],
-        [
-          "other current liabilities",
-          0.7555555555555555
+          "other current assets net",
+          0.9090909090909091
         ]
       ]
     },
@@ -228,16 +241,16 @@
       },
       "nearest_matches": [
         [
+          "non-marketable investments",
+          1.0
+        ],
+        [
           "long-term investments",
           0.7234042553191489
         ],
         [
-          "long term investments",
-          0.6808510638297872
-        ],
-        [
-          "short-term investments",
-          0.6666666666666667
+          "non-marketable equity securities",
+          0.6896551724137931
         ]
       ]
     },
@@ -259,16 +272,16 @@
       },
       "nearest_matches": [
         [
+          "accrued revenue share",
+          1.0
+        ],
+        [
           "accrued expenses",
           0.7027027027027026
         ],
         [
           "unearned revenue",
           0.6486486486486487
-        ],
-        [
-          "accrued income taxes",
-          0.6341463414634146
         ]
       ]
     },
@@ -288,7 +301,20 @@
         "line_hint": "us-gaap:CommonStocksIncludingAdditionalPaidInCapital | ctx:instant:2019-12-31",
         "note": "iXBRL HTM | BS"
       },
-      "nearest_matches": []
+      "nearest_matches": [
+        [
+          "class a and class b common stock and class c capital stock and additional paid-in capital",
+          1.0
+        ],
+        [
+          "class a class b and class c stock and additional paid-in capital",
+          0.8366013071895425
+        ],
+        [
+          "common stock and additional paid-in capital",
+          0.6515151515151516
+        ]
+      ]
     },
     {
       "statement_type": "IS",
@@ -308,16 +334,16 @@
       },
       "nearest_matches": [
         [
-          "interest and debt expense",
-          0.5714285714285714
+          "research and development",
+          1.0
         ],
         [
-          "interest and other income net",
-          0.5283018867924528
+          "research and development expense",
+          0.8571428571428572
         ],
         [
-          "interest and other expense net",
-          0.5185185185185186
+          "research and development expenses",
+          0.8421052631578947
         ]
       ]
     },
@@ -339,16 +365,16 @@
       },
       "nearest_matches": [
         [
-          "selling and marketing expenses",
-          0.653061224489796
+          "sales and marketing",
+          1.0
         ],
         [
-          "gross margin",
-          0.5161290322580645
+          "sales and marketing expense",
+          0.826086956521739
         ],
         [
-          "consolidated net earnings",
-          0.5
+          "sales and marketing expenses",
+          0.8085106382978724
         ]
       ]
     },
@@ -370,16 +396,16 @@
       },
       "nearest_matches": [
         [
+          "european commission fines",
+          1.0
+        ],
+        [
+          "european commission fine",
+          0.9795918367346939
+        ],
+        [
           "provision for income taxes",
           0.5098039215686274
-        ],
-        [
-          "provision for taxes",
-          0.5
-        ],
-        [
-          "other comprehensive loss income",
-          0.5
         ]
       ]
     },
@@ -401,16 +427,16 @@
       },
       "nearest_matches": [
         [
-          "interest and debt expense",
-          0.5714285714285714
+          "research and development",
+          1.0
         ],
         [
-          "interest and other income net",
-          0.5283018867924528
+          "research and development expense",
+          0.8571428571428572
         ],
         [
-          "interest and other expense net",
-          0.5185185185185186
+          "research and development expenses",
+          0.8421052631578947
         ]
       ]
     },
@@ -432,16 +458,16 @@
       },
       "nearest_matches": [
         [
-          "selling and marketing expenses",
-          0.653061224489796
+          "sales and marketing",
+          1.0
         ],
         [
-          "gross margin",
-          0.5161290322580645
+          "sales and marketing expense",
+          0.826086956521739
         ],
         [
-          "consolidated net earnings",
-          0.5
+          "sales and marketing expenses",
+          0.8085106382978724
         ]
       ]
     },
@@ -463,16 +489,16 @@
       },
       "nearest_matches": [
         [
+          "european commission fines",
+          1.0
+        ],
+        [
+          "european commission fine",
+          0.9795918367346939
+        ],
+        [
           "provision for income taxes",
           0.5098039215686274
-        ],
-        [
-          "provision for taxes",
-          0.5
-        ],
-        [
-          "other comprehensive loss income",
-          0.5
         ]
       ]
     },
@@ -494,16 +520,16 @@
       },
       "nearest_matches": [
         [
+          "depreciation and impairment of property and equipment",
+          1.0
+        ],
+        [
           "impairment of property and equipment",
           0.8089887640449437
         ],
         [
           "impairment of property plant and equipment",
           0.7578947368421054
-        ],
-        [
-          "purchase of property and equipment",
-          0.7126436781609197
         ]
       ]
     },
@@ -525,16 +551,16 @@
       },
       "nearest_matches": [
         [
+          "amortization and impairment of intangible assets",
+          1.0
+        ],
+        [
           "impairment of intangible assets",
           0.7848101265822784
         ],
         [
           "additions to intangible assets",
           0.6923076923076923
-        ],
-        [
-          "impairment of intangibles",
-          0.6849315068493153
         ]
       ]
     },
@@ -556,16 +582,16 @@
       },
       "nearest_matches": [
         [
-          "investments in equity securities",
-          0.6857142857142857
+          "gain on debt and equity securities net",
+          1.0
         ],
         [
-          "investment in non-marketable equity securities",
-          0.6190476190476191
+          "loss gain on debt and equity securities net",
+          0.9382716049382716
         ],
         [
-          "purchase of non-marketable equity securities",
-          0.6097560975609756
+          "gain loss on debt and equity securities net",
+          0.9382716049382716
         ]
       ]
     },
@@ -587,16 +613,16 @@
       },
       "nearest_matches": [
         [
+          "income taxes net",
+          1.0
+        ],
+        [
           "income taxes paid",
           0.7878787878787878
         ],
         [
           "deferred income taxes net",
           0.7804878048780488
-        ],
-        [
-          "income taxes payable",
-          0.7777777777777779
         ]
       ]
     },
@@ -618,16 +644,16 @@
       },
       "nearest_matches": [
         [
+          "accrued revenue share",
+          1.0
+        ],
+        [
           "accrued expenses",
           0.7027027027027026
         ],
         [
           "unearned revenue",
           0.6486486486486487
-        ],
-        [
-          "deferred revenue",
-          0.5945945945945945
         ]
       ]
     },
@@ -649,16 +675,16 @@
       },
       "nearest_matches": [
         [
+          "purchases of marketable securities",
+          1.0
+        ],
+        [
           "purchase of non-marketable equity securities",
           0.8461538461538461
         ],
         [
-          "purchases of intangible assets",
-          0.71875
-        ],
-        [
-          "purchase of treasury stock",
-          0.6333333333333333
+          "maturities and sales of marketable securities",
+          0.7848101265822784
         ]
       ]
     },
@@ -680,16 +706,16 @@
       },
       "nearest_matches": [
         [
-          "purchase of non-marketable equity securities",
-          0.6741573033707866
+          "maturities and sales of marketable securities",
+          1.0
         ],
         [
-          "investment in non-marketable equity securities",
-          0.6153846153846154
+          "maturities and sales of non-marketable securities",
+          0.9574468085106383
         ],
         [
-          "purchases of intangible assets",
-          0.5333333333333333
+          "maturities and sales of non-marketable investments",
+          0.8210526315789474
         ]
       ]
     },
@@ -711,16 +737,16 @@
       },
       "nearest_matches": [
         [
+          "purchases of non-marketable investments",
+          1.0
+        ],
+        [
           "purchases of long-term investments",
           0.821917808219178
         ],
         [
-          "purchases of short-term investments",
-          0.7837837837837838
-        ],
-        [
-          "purchase of non-marketable equity securities",
-          0.7710843373493976
+          "maturities and sales of non-marketable investments",
+          0.8089887640449437
         ]
       ]
     },
@@ -742,16 +768,16 @@
       },
       "nearest_matches": [
         [
-          "sales of long-term investments",
-          0.65
+          "maturities and sales of non-marketable investments",
+          1.0
         ],
         [
-          "proceeds from sale of long-term investments",
-          0.6451612903225806
+          "maturities and sales of non-marketable securities",
+          0.8686868686868688
         ],
         [
-          "purchases of long-term investments",
-          0.6428571428571428
+          "maturities and sales of marketable securities",
+          0.8210526315789474
         ]
       ]
     },
@@ -773,16 +799,16 @@
       },
       "nearest_matches": [
         [
+          "acquisitions net of cash acquired and purchases of intangible assets",
+          1.0
+        ],
+        [
           "acquisitions net of cash acquired investments in noncontrolled affiliates and purchases of intangible and other assets",
           0.7311827956989247
         ],
         [
           "acquisitions net of cash acquired",
           0.6534653465346536
-        ],
-        [
-          "purchases of intangible assets",
-          0.6122448979591837
         ]
       ]
     },
@@ -804,16 +830,16 @@
       },
       "nearest_matches": [
         [
+          "net payments related to stock-based award activities",
+          1.0
+        ],
+        [
+          "stock-based award activities net",
+          0.6666666666666667
+        ],
+        [
           "payments on credit facilities",
           0.5679012345679013
-        ],
-        [
-          "net cash used in operating activities",
-          0.5617977528089888
-        ],
-        [
-          "net cash provided by operating activities",
-          0.5591397849462365
         ]
       ]
     },
@@ -835,16 +861,16 @@
       },
       "nearest_matches": [
         [
+          "proceeds from issuance of debt net of costs",
+          1.0
+        ],
+        [
           "proceeds from issuance of common stock",
           0.7407407407407408
         ],
         [
           "proceeds from issuance of preferred stock",
           0.7380952380952381
-        ],
-        [
-          "proceeds from issuance of preferred shares",
-          0.7294117647058824
         ]
       ]
     },
@@ -866,16 +892,16 @@
       },
       "nearest_matches": [
         [
+          "proceeds from sale of interest in consolidated entities net",
+          1.0
+        ],
+        [
+          "proceeds from sale of interest in consolidated entities",
+          0.9649122807017544
+        ],
+        [
           "proceeds from sale of long-term investments",
           0.6862745098039216
-        ],
-        [
-          "proceeds from sale of property plant and equipment",
-          0.6605504587155964
-        ],
-        [
-          "proceeds from sale of short-term investments",
-          0.6601941747572815
         ]
       ]
     },
@@ -897,16 +923,16 @@
       },
       "nearest_matches": [
         [
+          "depreciation and impairment of property and equipment",
+          1.0
+        ],
+        [
           "impairment of property and equipment",
           0.8089887640449437
         ],
         [
           "impairment of property plant and equipment",
           0.7578947368421054
-        ],
-        [
-          "purchase of property and equipment",
-          0.7126436781609197
         ]
       ]
     },
@@ -928,16 +954,16 @@
       },
       "nearest_matches": [
         [
+          "amortization and impairment of intangible assets",
+          1.0
+        ],
+        [
           "impairment of intangible assets",
           0.7848101265822784
         ],
         [
           "additions to intangible assets",
           0.6923076923076923
-        ],
-        [
-          "impairment of intangibles",
-          0.6849315068493153
         ]
       ]
     },
@@ -959,16 +985,16 @@
       },
       "nearest_matches": [
         [
-          "investments in equity securities",
-          0.6857142857142857
+          "gain on debt and equity securities net",
+          1.0
         ],
         [
-          "investment in non-marketable equity securities",
-          0.6190476190476191
+          "loss gain on debt and equity securities net",
+          0.9382716049382716
         ],
         [
-          "purchase of non-marketable equity securities",
-          0.6097560975609756
+          "gain loss on debt and equity securities net",
+          0.9382716049382716
         ]
       ]
     },
@@ -990,16 +1016,16 @@
       },
       "nearest_matches": [
         [
+          "income taxes net",
+          1.0
+        ],
+        [
           "income taxes paid",
           0.7878787878787878
         ],
         [
           "deferred income taxes net",
           0.7804878048780488
-        ],
-        [
-          "income taxes payable",
-          0.7777777777777779
         ]
       ]
     },
@@ -1021,16 +1047,16 @@
       },
       "nearest_matches": [
         [
+          "accrued revenue share",
+          1.0
+        ],
+        [
           "accrued expenses",
           0.7027027027027026
         ],
         [
           "unearned revenue",
           0.6486486486486487
-        ],
-        [
-          "deferred revenue",
-          0.5945945945945945
         ]
       ]
     },
@@ -1052,16 +1078,16 @@
       },
       "nearest_matches": [
         [
+          "purchases of marketable securities",
+          1.0
+        ],
+        [
           "purchase of non-marketable equity securities",
           0.8461538461538461
         ],
         [
-          "purchases of intangible assets",
-          0.71875
-        ],
-        [
-          "purchase of treasury stock",
-          0.6333333333333333
+          "maturities and sales of marketable securities",
+          0.7848101265822784
         ]
       ]
     },
@@ -1083,16 +1109,16 @@
       },
       "nearest_matches": [
         [
-          "purchase of non-marketable equity securities",
-          0.6741573033707866
+          "maturities and sales of marketable securities",
+          1.0
         ],
         [
-          "investment in non-marketable equity securities",
-          0.6153846153846154
+          "maturities and sales of non-marketable securities",
+          0.9574468085106383
         ],
         [
-          "purchases of intangible assets",
-          0.5333333333333333
+          "maturities and sales of non-marketable investments",
+          0.8210526315789474
         ]
       ]
     },
@@ -1114,16 +1140,16 @@
       },
       "nearest_matches": [
         [
+          "purchases of non-marketable investments",
+          1.0
+        ],
+        [
           "purchases of long-term investments",
           0.821917808219178
         ],
         [
-          "purchases of short-term investments",
-          0.7837837837837838
-        ],
-        [
-          "purchase of non-marketable equity securities",
-          0.7710843373493976
+          "maturities and sales of non-marketable investments",
+          0.8089887640449437
         ]
       ]
     },
@@ -1145,16 +1171,16 @@
       },
       "nearest_matches": [
         [
-          "sales of long-term investments",
-          0.65
+          "maturities and sales of non-marketable investments",
+          1.0
         ],
         [
-          "proceeds from sale of long-term investments",
-          0.6451612903225806
+          "maturities and sales of non-marketable securities",
+          0.8686868686868688
         ],
         [
-          "purchases of long-term investments",
-          0.6428571428571428
+          "maturities and sales of marketable securities",
+          0.8210526315789474
         ]
       ]
     },
@@ -1176,16 +1202,16 @@
       },
       "nearest_matches": [
         [
+          "acquisitions net of cash acquired and purchases of intangible assets",
+          1.0
+        ],
+        [
           "acquisitions net of cash acquired investments in noncontrolled affiliates and purchases of intangible and other assets",
           0.7311827956989247
         ],
         [
           "acquisitions net of cash acquired",
           0.6534653465346536
-        ],
-        [
-          "purchases of intangible assets",
-          0.6122448979591837
         ]
       ]
     },
@@ -1207,16 +1233,16 @@
       },
       "nearest_matches": [
         [
+          "net payments related to stock-based award activities",
+          1.0
+        ],
+        [
+          "stock-based award activities net",
+          0.6666666666666667
+        ],
+        [
           "payments on credit facilities",
           0.5679012345679013
-        ],
-        [
-          "net cash used in operating activities",
-          0.5617977528089888
-        ],
-        [
-          "net cash provided by operating activities",
-          0.5591397849462365
         ]
       ]
     },
@@ -1238,16 +1264,16 @@
       },
       "nearest_matches": [
         [
+          "proceeds from issuance of debt net of costs",
+          1.0
+        ],
+        [
           "proceeds from issuance of common stock",
           0.7407407407407408
         ],
         [
           "proceeds from issuance of preferred stock",
           0.7380952380952381
-        ],
-        [
-          "proceeds from issuance of preferred shares",
-          0.7294117647058824
         ]
       ]
     },
@@ -1269,16 +1295,16 @@
       },
       "nearest_matches": [
         [
+          "proceeds from sale of interest in consolidated entities net",
+          1.0
+        ],
+        [
+          "proceeds from sale of interest in consolidated entities",
+          0.9649122807017544
+        ],
+        [
           "proceeds from sale of long-term investments",
           0.6862745098039216
-        ],
-        [
-          "proceeds from sale of property plant and equipment",
-          0.6605504587155964
-        ],
-        [
-          "proceeds from sale of short-term investments",
-          0.6601941747572815
         ]
       ]
     }
