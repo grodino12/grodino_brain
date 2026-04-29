@@ -2280,7 +2280,8 @@
         "long-term investment securities",
         "long-term marketable securities"
       ],
-      "us_gaap_concept": "LongTermInvestments"
+      "us_gaap_concept": "LongTermInvestments",
+      "cf_delta_target": "Net Change in Long-Term Investments"
     },
     {
       "rule_id": "GEN-BS-049",
@@ -2296,7 +2297,8 @@
         "accrued wages",
         "employee related liabilities"
       ],
-      "us_gaap_concept": "EmployeeRelatedLiabilitiesCurrent"
+      "us_gaap_concept": "EmployeeRelatedLiabilitiesCurrent",
+      "cf_delta_target": "Change in Accrued Compensation"
     },
     {
       "rule_id": "GEN-IS-026",
@@ -2392,7 +2394,8 @@
         "income taxes refundable",
         "current income tax assets"
       ],
-      "us_gaap_concept": "PrepaidTaxes"
+      "us_gaap_concept": "PrepaidTaxes",
+      "cf_delta_target": "Change in Prepaid Income Taxes"
     },
     {
       "rule_id": "GEN-CF-074",

@@ -106,8 +106,8 @@
           },
           {
             "raw_filing_label": "Prepaid income taxes",
-            "canonical_label": "Deferred Tax Assets",
-            "ledger_rule_id": "GEN-BS-008",
+            "canonical_label": "Prepaid Income Taxes",
+            "ledger_rule_id": "GEN-BS-050",
             "value": "34113",
             "raw_numeric_text": "34,113",
             "notation_flags": 0,
@@ -767,8 +767,8 @@
           },
           {
             "raw_filing_label": "Prepaid income taxes",
-            "canonical_label": "Deferred Tax Assets",
-            "ledger_rule_id": "GEN-BS-008",
+            "canonical_label": "Prepaid Income Taxes",
+            "ledger_rule_id": "GEN-BS-050",
             "value": "42202",
             "raw_numeric_text": "42,202",
             "notation_flags": 0,
@@ -2190,8 +2190,8 @@
           },
           {
             "raw_filing_label": "Prepaid income taxes",
-            "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
-            "ledger_rule_id": "GEN-CF-008",
+            "canonical_label": "Change in Prepaid Income Taxes",
+            "ledger_rule_id": "GEN-CF-074",
             "value": "11912",
             "raw_numeric_text": "11,912",
             "notation_flags": 0,
@@ -2891,8 +2891,8 @@
           },
           {
             "raw_filing_label": "Prepaid income taxes",
-            "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
-            "ledger_rule_id": "GEN-CF-008",
+            "canonical_label": "Change in Prepaid Income Taxes",
+            "ledger_rule_id": "GEN-CF-074",
             "value": "11840",
             "raw_numeric_text": "11,840",
             "notation_flags": 0,
@@ -3530,8 +3530,8 @@
     },
     {
       "raw_filing_label": "Prepaid income taxes",
-      "canonical_label": "Deferred Tax Assets",
-      "ledger_rule_id": "GEN-BS-008",
+      "canonical_label": "Prepaid Income Taxes",
+      "ledger_rule_id": "GEN-BS-050",
       "value": "34113",
       "raw_numeric_text": "34,113",
       "notation_flags": 0,
@@ -3549,7 +3549,7 @@
       },
       "model_sheet": "QTR BS",
       "model_row": 0,
-      "model_label": "Deferred Tax Assets",
+      "model_label": "Prepaid Income Taxes",
       "mapping_source": "ledger_auto"
     },
     {
@@ -4298,8 +4298,8 @@
     },
     {
       "raw_filing_label": "Prepaid income taxes",
-      "canonical_label": "Deferred Tax Assets",
-      "ledger_rule_id": "GEN-BS-008",
+      "canonical_label": "Prepaid Income Taxes",
+      "ledger_rule_id": "GEN-BS-050",
       "value": "42202",
       "raw_numeric_text": "42,202",
       "notation_flags": 0,
@@ -4317,7 +4317,7 @@
       },
       "model_sheet": "QTR BS",
       "model_row": 0,
-      "model_label": "Deferred Tax Assets",
+      "model_label": "Prepaid Income Taxes",
       "mapping_source": "ledger_auto"
     },
     {
@@ -5930,8 +5930,8 @@
     },
     {
       "raw_filing_label": "Prepaid income taxes",
-      "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
-      "ledger_rule_id": "GEN-CF-008",
+      "canonical_label": "Change in Prepaid Income Taxes",
+      "ledger_rule_id": "GEN-CF-074",
       "value": "11912",
       "raw_numeric_text": "11,912",
       "notation_flags": 0,
@@ -5949,7 +5949,7 @@
       },
       "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "(Benefit) Provision for Deferred Income Taxes",
+      "model_label": "Change in Prepaid Income Taxes",
       "mapping_source": "ledger_auto"
     },
     {
@@ -6746,8 +6746,8 @@
     },
     {
       "raw_filing_label": "Prepaid income taxes",
-      "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
-      "ledger_rule_id": "GEN-CF-008",
+      "canonical_label": "Change in Prepaid Income Taxes",
+      "ledger_rule_id": "GEN-CF-074",
       "value": "11840",
       "raw_numeric_text": "11,840",
       "notation_flags": 0,
@@ -6765,7 +6765,7 @@
       },
       "model_sheet": "QTR CF",
       "model_row": 0,
-      "model_label": "(Benefit) Provision for Deferred Income Taxes",
+      "model_label": "Change in Prepaid Income Taxes",
       "mapping_source": "ledger_auto"
     },
     {
