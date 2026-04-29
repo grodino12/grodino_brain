@@ -631,14 +631,12 @@
         "accrued liabilities and other",
         "accrued liabilities current",
         "accrued and other liabilities",
-        "accounts payable and other current liabilities",
-        "accrued revenue share"
+        "accounts payable and other current liabilities"
       ],
       "filing_section": "current_liabilities",
       "us_gaap_concept": "AccruedLiabilitiesCurrent",
       "us_gaap_concepts": [
-        "AccountsPayableAndAccruedLiabilitiesCurrent",
-        "goog:AccruedRevenueShare"
+        "AccountsPayableAndAccruedLiabilitiesCurrent"
       ],
       "cf_delta_target": "Accounts Payable"
     },
@@ -1099,6 +1097,20 @@
       "note": "Standalone other-current-assets line. Distinct from GEN-BS-006 Prepaid Expenses, which uses concept PrepaidExpenseAndOtherAssetsCurrent and absorbs the combined-form rendering used by most staples filers. Mirror of GEN-BS-014 (Other Non-Current Assets)."
     },
     {
+      "rule_id": "GEN-BS-056",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Accrued Revenue Share",
+      "filing_section": "current_liabilities",
+      "us_gaap_concepts": [
+        "goog:AccruedRevenueShare"
+      ],
+      "aliases": [
+        "accrued revenue share"
+      ],
+      "cf_delta_target": "Accrued Revenue Share",
+      "note": "Platform-economy accrued payable to revenue-share counterparties (TAC partners, App Store developers, content licensors, etc.). GOOG: traffic acquisition costs owed to Apple Safari, Mozilla, Samsung, AdSense network publishers. Distinct from GEN-BS-016 Accrued Expenses (general operating accruals). Future-applicable to META, AAPL, streaming filers; concept namespace will vary per filer extension. Paired with GEN-CF-075 for the WC-change line."
+    },
+    {
       "rule_id": "GEN-IS-022",
       "model_sheet": "ANNL P&L",
       "model_label": "Net Income (Loss)",
@@ -1384,14 +1396,10 @@
         "accrued liabilities",
         "change in accrued expenses",
         "change in accrued liabilities",
-        "increase (decrease) in accrued expenses",
-        "accrued revenue share"
+        "increase (decrease) in accrued expenses"
       ],
       "filing_section": "operating",
-      "us_gaap_concept": "IncreaseDecreaseInAccruedLiabilities",
-      "us_gaap_concepts": [
-        "goog:IncreaseDecreaseInAccruedRevenueShare"
-      ]
+      "us_gaap_concept": "IncreaseDecreaseInAccruedLiabilities"
     },
     {
       "rule_id": "GEN-CF-016",
@@ -2537,6 +2545,20 @@
         "income taxes refundable"
       ],
       "us_gaap_concept": "IncreaseDecreaseInPrepaidTaxes"
+    },
+    {
+      "rule_id": "GEN-CF-075",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Accrued Revenue Share",
+      "filing_section": "operating",
+      "row_type": "line_item",
+      "note": "WC-change companion to GEN-BS-056 Accrued Revenue Share. Sign organic — positive when accrued balance grows (cash add-back to CFO), negative when it shrinks. Mirrors the GEN-CF-015 / GEN-BS-016 relationship for the platform-economy revenue-share split-out. Concept namespace varies per filer extension (goog:, meta:, etc.).",
+      "aliases": [
+        "accrued revenue share"
+      ],
+      "us_gaap_concepts": [
+        "goog:IncreaseDecreaseInAccruedRevenueShare"
+      ]
     }
   ]
 }
