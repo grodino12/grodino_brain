@@ -1,13 +1,13 @@
 ---
 type: session-handoff
 date: 2026-04-28
-topic: Forecast-UX rebuild (per-row YoY/QoQ basis toggle, 5-year horizon, chained driver defaults), Net Income (Loss) Attributable to Common Shareholders as a live subtotal, LINK_TO_CF for IS Pref Div mirror of CF, GEN-IS-013 sign_convention fix, per-sheet column-alignment fix, LibraryEntry schema sync. Five new memory rules saved.
-tags: [session, forecast-ux, basis-toggle, subtotals, link-to-cf, sign-convention, schema-sync]
+topic: Forecast-UX rebuild (per-row YoY/QoQ basis toggle, 5-year horizon, chained driver defaults), Net Income (Loss) Attributable to Common Shareholders as a live subtotal, LINK_TO_CF for IS Pref Div mirror of CF, GEN-IS-013 sign_convention fix, per-sheet column-alignment fix, LibraryEntry schema sync, playground sync (architecture v12→v13 + schema Layer 4 rebuild), OCI 4th-statement removed from roadmap. Six new memory rules saved.
+tags: [session, forecast-ux, basis-toggle, subtotals, link-to-cf, sign-convention, schema-sync, playground-sync, oci-removed]
 ---
 
 # April 28th — Forecast UX & Subtotal Hardening Session
 
-Picks up from `Archive\April 28th BS Closure Session.md` (same day; that session shipped Path B closure and BS-tied $0 across all three tickers). This session was an analyst-UX pass driven by user observations on the freshly-closed model: forecasts only ran 4 years instead of 5, driver overrides didn't propagate, NI Attrib Common was a hardcoded number not a formula, IS Preferred Dividends had no forecast, and a column-alignment defect was inflating BS ratios by ~2× silently behind the Path B plug. Next session opens with the playground sync that's now ~5 framework changes behind.
+Picks up from `Archive\April 28th BS Closure Session.md` (same day; that session shipped Path B closure and BS-tied $0 across all three tickers). This session was an analyst-UX pass driven by user observations on the freshly-closed model: forecasts only ran 4 years instead of 5, driver overrides didn't propagate, NI Attrib Common was a hardcoded number not a formula, IS Preferred Dividends had no forecast, and a column-alignment defect was inflating BS ratios by ~2× silently behind the Path B plug. Session also caught up the playground sync that had been owed for ~5 sessions, and the user removed OCI 4th-statement breakout from the roadmap permanently. Next session opens with **4th-ticker onboarding (MNST or KO recommended)** — three tickers isn't enough to claim the framework generalizes.
 
 ## Starting state
 
@@ -59,6 +59,20 @@ Symmetric to existing LINK_TO_IS. New `cf_link_source: Optional[Tuple[str, str]]
 
 User raised "shouldn't preferred dividends also reduce preferred equity?" Verified CELH is cash-pay (Convertible Preferred Stock balance flat at $824,488 from FY2022→FY2024 despite cash dividends; jump to $1,759,975 in FY2025 was a Series B issuance, not accretion). Current model is correct: Pref Div reduces Cash (CF) and RE (rollforward inputs include CF Pref Div); Preferred Equity stays flat. Documented PIK alternative for future tickers in `feedback_preferred_dividend_accounting.md`. No code change.
 
+### 11. Playground sync — architecture v12→v13 + schema Layer 4 rebuild
+
+`playground_architecture.html` (LS_KEY v12 → v13): added `model-qtr-derive` node + scaffoldBody (was missing despite shipping in BS Closure session); rewrote `model-calc` node — replaced stale "scenario overlay / GLP-1 / SNAP" framing with actual Path B closure architecture (RESIDUAL_PLUG, BS-DELTA wiring, cf_delta_target, eps-section policy, LINK_TO_CF, growth_basis toggle, chained defaults, column-alignment fix); removed obsolete `DerivedCalcs` / `glp1-model` / `snap-model` / `xlsm-model` nodes; added `xlsx-model` and `ticker-config` nodes; rewrote scaffoldBody for model-write (NIC live formula, dynamic FORECAST_LABELS, workbook tie-out validator, auto-chain into qtr-derive); added `reconcile → pattern-libraries` edge mirroring the existing reconcile↔decisions-ledger bidirectional pattern (novel triage feeds library updates per `feedback_novel_triage_protocol.md`); SKILL_IDS updated; scopeLine updated (~140 entries, 3-ticker clean state).
+
+`playground_schema.html`: replaced fake `DerivedCalcs` model (which referenced nonexistent `GrowthTable` / `MarginTable` / `WcRatios` / `ScenarioGrid`) with the real `DriverKind` enum (18 kinds) + `DriverSpec` Pydantic model (15 fields covering rollforward anchors, BS_DELTA, LINK_TO_IS/CF, residual plug sources, growth_basis); added missing `POST_NI_DEDUCTION` to Section enum (was 16 entries, code has 17); added `cf_delta_target`, `us_gaap_concept`, `us_gaap_concepts` fields to LibraryEntry (was missing); updated ValidationResult doc (10 → 14 rules); renamed Layer 4 banner from "DERIVED CALCULATIONS" to "FORECASTING (model-calc)".
+
+### 12. OCI 4th-statement removed from roadmap
+
+User decision 2026-04-28: 3 statements (IS / BS / CF) are sufficient for this framework's purpose. The plan to add `StatementType.COMPREHENSIVE_INCOME` + `OCI` / `QTR OCI` sheets + OCI-1 / X-5 validators is **out of scope, not deferred**. Updated `feedback_oci_separate_statement.md` to reflect permanent removal; AOCI rollforward stays proxied via CF FX Effect on Cash as a permanent design (not a workaround awaiting the 4th statement). MEMORY.md index entry updated.
+
+### 13. Coverage-gap noted: TickerLedgerEntry validator
+
+User asked whether LibraryEntry being split from the library JSON is redundant. Answer: not redundant (validator vs. data, correct split), but there's a real coverage gap on the OTHER side — per-ticker `decisions_ledger.json` files (CELH/PEP/PG `mappings[]` + `new_rows[]`) get loaded by the same matching code but have **no Pydantic validator**. Typo in generic library → loud failure at load with rule_id; typo in ticker ledger → silent miss at use time. Future session candidate: add sibling `TickerLedgerEntry` model. Not blocking — recorded as carried item.
+
 ## Current state
 
 - **CELH**: 12 filings clean through full pipeline. 20 forecast Q (Q1 FY2026E..Q4 FY2030E). NIC matches filer to $1 across all 5 historical years. IS PrefDiv = CF PrefDiv. BS gap = $0.
@@ -69,10 +83,12 @@ User raised "shouldn't preferred dividends also reduce preferred equity?" Verifi
 
 ## Open decisions / pending work
 
-1. **NEXT SESSION OPENS WITH** — playground sync. `playground_architecture.html` + `playground_schema.html` are now ~5 framework changes behind. Owe LS_KEY bump from v9 cumulatively for: RESIDUAL_PLUG, residual_plug_sources, cf_delta_target, APIC/AOCI rollforwards, dynamic FORECAST_LABELS, annual→QTR mirror (carried from BS Closure), 5-year horizon, chained defaults, growth_basis + Basis col, NIC live formula, LINK_TO_CF, eps-section policy, GEN-IS-013 sign, LibraryEntry cf_delta_target. Single dedicated session.
-2. **Then resume** — systematic-driver-determination work (carried from prior session). Replace remaining `_label_contains` checks (Cash, Goodwill, Debt, RE, APIC, AOCI, etc.) with structural canonical metadata.
-3. **Active propagating rules** — playground sync, no-heuristic policy, no validator sign flips, no duplicate anchor subtotals, joint CELH+PG (+PEP) regression on every framework change. All carried.
-4. **Future PIK preferred ticker** — would need ROLLFORWARD on Preferred Equity row with IS Pref Div as input. Not in scope for current 3 tickers. Per `feedback_preferred_dividend_accounting.md`.
+1. **NEXT SESSION OPENS WITH** — onboard a 4th ticker (recommend MNST or KO — NCI-free, mature, seasonal CPG that exercises the YoY-basis path cleanly). Three tickers (CELH/PEP/PG) isn't enough to claim the framework generalizes. Cycle: `sec-edgar-fetch --ticker {T} --all` → full pipeline → triage novels per `feedback_novel_triage_protocol.md` → confirm BS ties at $0 across forecast quarters. Catches the next round of architectural assumptions that ticker-specific bugs hide.
+2. **After 4th ticker clean** — resume systematic driver-kind determination. Replace remaining `_label_contains` checks (Cash, Goodwill, Debt, RE, APIC, AOCI, etc.) in `inference.py` with structural canonical metadata (`us_gaap_concept` / library-declared `driver_kind` / canonical-position-derived classification). Goal: zero `_label_contains` fallback firings for new tickers.
+3. **TickerLedgerEntry validator** (carried from this session §13) — add a sibling Pydantic model in `financials_schema/lookup.py` that validates per-ticker `decisions_ledger.json` shape. Closes the coverage gap where library typos fail loudly but ticker-ledger typos fail silently. Small structural fix.
+4. **Active propagating rules** — playground sync (now caught up; stays as a carried rule for any future structural change), no-heuristic policy, no validator sign flips, no duplicate anchor subtotals, joint CELH+PG+PEP regression on every framework change. All carried.
+5. **OCI 4th-statement breakout** — **out of scope per user 2026-04-28**, no longer in roadmap. AOCI rollforward stays proxied via CF FX Effect on Cash as a permanent design. Per `feedback_oci_separate_statement.md`.
+6. **Future PIK preferred ticker** — would need ROLLFORWARD on Preferred Equity row with IS Pref Div as input. Not in scope for current tickers. Per `feedback_preferred_dividend_accounting.md`.
 
 ## Key file paths
 
@@ -90,7 +106,7 @@ User raised "shouldn't preferred dividends also reduce preferred equity?" Verifi
 | **CELH workbook** | `Brain\Knowledge\Model Outputs\CELH\CELH_model.xlsx` |
 | **PEP workbook** | `Brain\Knowledge\Model Outputs\PEP\PEP_model.xlsx` |
 | **PG workbook** | `Brain\Knowledge\Model Outputs\PG\PG_model.xlsx` |
-| Playgrounds (owe v9 → v13+ cumulative) | `Brain\Knowledge\Model Schema\playground_{architecture,schema}.html` |
+| Playgrounds (synced this session — architecture v13, schema Layer 4 rebuilt) | `Brain\Knowledge\Model Schema\playground_{architecture,schema}.html` |
 
 ## How to create the next handoff
 
