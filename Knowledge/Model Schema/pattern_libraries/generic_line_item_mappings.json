@@ -2618,6 +2618,20 @@
         "proceeds from sale of interest in consolidated entities",
         "proceeds from sale of subsidiary shares"
       ]
+    },
+    {
+      "rule_id": "GEN-CF-079",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Amortization and Impairment of Intangibles",
+      "filing_section": "operating",
+      "row_type": "line_item",
+      "note": "Combined-by-asset-class CFO non-cash add-back: amortization of intangibles + impairment of intangibles in one line. Used by tech filers (GOOG, future META/AMZN-style) that split D&A by asset class. Distinct from GEN-CF-002 D&A (combined depreciation + amortization, no impairment) and GEN-CF-003 Impairment of Intangibles (impairment only). When a filer reports separate amortization and impairment lines, those route to their respective canonicals; this row stays empty. Paired with the PP&E-side combined canonical (forthcoming) for the full asset-class-split layout.",
+      "us_gaap_concepts": [
+        "goog:AmortizationAndImpairmentOfIntangibleAssets"
+      ],
+      "aliases": [
+        "amortization and impairment of intangible assets"
+      ]
     }
   ]
 }
