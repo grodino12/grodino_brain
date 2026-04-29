@@ -1788,10 +1788,15 @@
         "cash paid during the period for taxes",
         "cash paid for income taxes",
         "income taxes paid",
-        "taxes, net of refunds received"
+        "taxes, net of refunds received",
+        "cash paid for income taxes, net of refunds",
+        "cash paid for taxes, net of refunds"
       ],
       "filing_section": "operating",
       "us_gaap_concept": "IncomeTaxesPaid",
+      "us_gaap_concepts": [
+        "IncomeTaxesPaidNet"
+      ],
       "accepted_sections": [
         "cash_other"
       ]
@@ -2480,21 +2485,26 @@
       "model_label": "Net Change in Long-Term Investments",
       "row_type": "line_item",
       "filing_section": "investing",
-      "note": "Net cash flow from long-term investing activity (purchases, sales, maturities of AFS / debt / equity securities held >12mo). Pairs with GEN-BS-048. Filers can split into separate Purchases + Sales lines (MNST does); model-write's by-canonical-label row consolidation collapses them into one net change row.",
+      "note": "Net cash flow from long-term investing activity (purchases, sales, maturities of AFS / debt / equity securities held >12mo, plus non-marketable equity stakes for tech filers). Pairs with GEN-BS-048. Filers can split into separate Purchases + Sales lines (MNST does; GOOG splits into marketable + non-marketable); model-write's by-canonical-label row consolidation collapses them into one net change row.",
       "aliases": [
         "purchases of available-for-sale investments",
         "sales of available-for-sale investments",
         "purchases of long-term investments",
         "sales of long-term investments",
         "proceeds from sale of long-term investments",
-        "payments to acquire long-term investments"
+        "payments to acquire long-term investments",
+        "maturities and sales of non-marketable investments",
+        "maturities and sales of non-marketable securities",
+        "purchases of non-marketable investments"
       ],
       "us_gaap_concept": "PaymentsToAcquireAvailableForSaleSecuritiesDebt",
       "us_gaap_concepts": [
         "ProceedsFromSaleOfAvailableForSaleSecuritiesDebt",
         "ProceedsFromMaturitiesPrepaymentsAndCallsOfAvailableForSaleSecurities",
         "PaymentsToAcquireLongTermInvestments",
-        "ProceedsFromSaleOfLongTermInvestments"
+        "ProceedsFromSaleOfLongTermInvestments",
+        "ProceedsFromSaleAndMaturityOfOtherInvestments",
+        "PaymentsToAcquireOtherInvestments"
       ]
     },
     {
@@ -2645,6 +2655,27 @@
       ],
       "aliases": [
         "depreciation and impairment of property and equipment"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-081",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Loss (Gain) on Equity and Debt Securities, Net",
+      "filing_section": "operating",
+      "row_type": "line_item",
+      "note": "Non-cash CFO add-back reversing the IS-side fair-value gain/loss recognized on marketable + non-marketable equity and debt securities under ASC 321 (effective FY2018+). Sign organic — when IS shows a gain (positive), CF reverses negative; when IS shows a loss, CF reverses positive. GOOG: Uber post-IPO swing, Lyft, SpaceX, Other Bets equity stakes. Generalizable to META, MSFT, BRK (massive equity holdings), and any filer with material FV-through-P&L investment portfolio. Distinct from GEN-CF-009 (FX unrealized gain/loss).",
+      "us_gaap_concept": "DebtAndEquitySecuritiesGainLoss",
+      "us_gaap_concepts": [
+        "GainLossOnSaleOfInvestments",
+        "UnrealizedGainLossOnInvestments"
+      ],
+      "aliases": [
+        "loss (gain) on debt and equity securities, net",
+        "(gain) loss on debt and equity securities, net",
+        "gain on debt and equity securities, net",
+        "loss on debt and equity securities, net",
+        "gain (loss) on debt and equity securities",
+        "unrealized gain on equity securities"
       ]
     }
   ]
