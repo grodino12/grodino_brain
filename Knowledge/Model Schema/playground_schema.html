@@ -376,7 +376,9 @@ const SCHEMA = [
       { name: 'memo',              type: 'bool',                           typeKind: 'primitive', default: 'False' },
       { name: 'row_type',          type: 'RowType | None',                 typeKind: 'literal', default: 'None' },
       { name: 'note',              type: 'str | None',                     typeKind: 'primitive', default: 'None' },
-      { name: 'cf_delta_target',   type: 'str | None',                     typeKind: 'primitive', default: 'None (Path B closure: BS canonical declares the CF row whose ΔBS feeds it; consumed by model-calc _wire_bs_delta_and_plug)' }
+      { name: 'cf_delta_target',   type: 'str | None',                     typeKind: 'primitive', default: 'None (Path B closure: BS canonical declares the CF row whose ΔBS feeds it; consumed by model-calc _wire_bs_delta_and_plug)' },
+      { name: 'parent_canonical',  type: 'str | None',                     typeKind: 'primitive', default: 'None (detail-of relationship: this canonical is a detail of the named parent rule_id; in historical the parent renders =SUM(detail) with subtotal styling, in forecast children use RATIO_OF_PARENT (= ratio × parent_forecast). Used by GEN-BS-051/052/053 RM/WIP/FG → GEN-BS-005 Inventories Net.)' },
+      { name: 'accepted_sections', type: 'list[Section]',                  typeKind: 'container', default: 'Field(default_factory=list)' }
     ]
   },
 
