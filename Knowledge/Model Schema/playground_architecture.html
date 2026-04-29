@@ -652,6 +652,11 @@ let EDGES = [
   { from: 'source-pdfs', to: 'financials-extract', kind: 'data' },
   // Pattern libraries → extract (read at load: generic library validated through LibraryEntry; PDF patterns loaded by PDF branch only)
   { from: 'pattern-libraries', to: 'financials-extract', kind: 'data' },
+  // reconcile → pattern-libraries (human-mediated feedback loop: novel triage feeds library updates).
+  // reconcile surfaces unmatched items via --novels-out NovelReport; per `feedback_novel_triage_protocol.md`,
+  // user / agent decides whether each novel becomes a new generic-library entry, a ticker-ledger override,
+  // or a memo bucket — same pattern as the bidirectional reconcile↔decisions-ledger edges.
+  { from: 'financials-reconcile', to: 'pattern-libraries', kind: 'data' },
   // extract produces RawFiling (with canonical_label + ledger_rule_id pre-populated by lookup.match_raw_item)
   { from: 'financials-extract', to: 'RawFiling', kind: 'data' },
   // RawFiling → reconcile

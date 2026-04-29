@@ -523,16 +523,52 @@ const SCHEMA = [
     ]
   },
 
-  // ============ LAYER 4 — DERIVED ============
+  // ============ LAYER 4 — FORECASTING (model-calc Pydantic types) ============
   {
-    name: 'DerivedCalcs', kind: 'model', extends: 'BaseModel', layer: 'derived',
-    layerLabel: 'LAYER 4 · DERIVED CALCULATIONS',
-    doc: 'Output of model-calc. Growth rates, margins, WC ratios, and scenario grid with GLP-1 / SNAP overlays.',
+    name: 'DriverKind', kind: 'enum', extends: 'str, Enum', layer: 'derived',
+    layerLabel: 'LAYER 4 · FORECASTING LAYER (model-calc)',
+    doc: 'All supported driver kinds. Each row in IS / BS / CF DRIVERS gets exactly one kind. SKIP rows produce no driver tab entry and no forecast cell. Lives in ~/.claude/skills/model-calc/scripts/driver_models.py — adding a kind requires: (1) enum entry here, (2) inference branch in inference.py, (3) formula builder in calc.py, (4) add to DRIVER_TAB_KINDS / COMPUTED_KINDS / USER_INPUT_KINDS sets as appropriate.',
     fields: [
-      { name: 'growth',           type: 'GrowthTable',    typeKind: 'model' },
-      { name: 'margins',          type: 'MarginTable',    typeKind: 'model' },
-      { name: 'working_capital',  type: 'WcRatios',       typeKind: 'model' },
-      { name: 'scenarios',        type: 'ScenarioGrid',   typeKind: 'model' }
+      { name: 'GROWTH',        type: '"growth"           # YoY or QoQ growth %, per quarter — basis cell on IS DRIVERS column B picks; Q[t] = base × (1+g)' },
+      { name: 'RATIO_OF_REV',  type: '"ratio_of_rev"     # line / Revenue %' },
+      { name: 'RATIO_OF_COGS', type: '"ratio_of_cogs"    # line / COGS %' },
+      { name: 'DSO_RATIO',     type: '"dso_ratio"        # AR-style: line / Revenue * 91 (Days in Quarter)' },
+      { name: 'DIO_RATIO',     type: '"dio_ratio"        # Inventory-style: line / COGS * 91' },
+      { name: 'DPO_RATIO',     type: '"dpo_ratio"        # AP-style: line / COGS * 91' },
+      { name: 'TAX_RATE',      type: '"tax_rate"         # Tax / Pre-Tax %' },
+      { name: 'PAYOUT_RATIO',  type: '"payout_ratio"     # Common Dividends / NI %' },
+      { name: 'DOLLAR_INPUT',  type: '"dollar_input"     # analyst types each forecast quarter' },
+      { name: 'HOLD_LAST',     type: '"hold_last"        # forecast = last historical value (constant)' },
+      { name: 'ZERO',          type: '"zero"             # forecast = 0 (one-time / non-recurring lines)' },
+      { name: 'LINK_TO_IS',    type: '"link_to_is"       # CF row = IS row for that quarter (e.g. CF NI = IS NI)' },
+      { name: 'LINK_TO_CF',    type: '"link_to_cf"       # IS row = CF row (e.g. IS Pref Div mirrors CF Pref Div — single shared driver)' },
+      { name: 'BS_DELTA',      type: '"bs_delta"         # CF WC item = -(BS[Q]-BS[Q-1]) for asset, +Δ for liability' },
+      { name: 'ROLLFORWARD',   type: '"rollforward"      # running balance: prev + inputs - outputs (Cash, RE, PP&E, APIC, AOCI, DTA)' },
+      { name: 'RESIDUAL_PLUG', type: '"residual_plug"    # CF row absorbs Σ ΔBS of unmatched non-flat BS rows (Path B closure → BS ties at \\$0)' },
+      { name: 'DERIVED',       type: '"derived"          # subtotal/cascade — already in workbook via SUM/+ formulas (skipped by inference)' },
+      { name: 'SKIP',          type: '"skip"             # EPS, share count — not forecast in v1' }
+    ]
+  },
+  {
+    name: 'DriverSpec', kind: 'model', extends: 'BaseModel', layer: 'derived',
+    config: 'extra="forbid"',
+    doc: 'One row\'s driver. sheet+excel_row identify the source workbook row; kind identifies how to fill its forecast cells; the optional anchor fields point at other rows the formula needs to reference. Output of inference.infer_drivers(). Consumed by calc.build_driver_tab() (writes the driver tab cell) + calc.write_forecast_cells() (writes the source-sheet forecast cell that references the driver). For COMPUTED_KINDS (LINK_TO_IS / LINK_TO_CF / BS_DELTA / ROLLFORWARD / RESIDUAL_PLUG) the driver-tab cell IS the value (formula); the source-sheet cell is just =DRIVER!{col}{row}. For ratio kinds the driver-tab cell is the RATE; source cell does =base × rate.',
+    fields: [
+      { name: 'sheet',                 type: 'str',                                typeKind: 'primitive', default: '"QTR P&L" | "QTR BS" | "QTR CF"' },
+      { name: 'excel_row',             type: 'int',                                typeKind: 'primitive', default: '1-indexed row on `sheet`' },
+      { name: 'label',                 type: 'str',                                typeKind: 'primitive', default: 'row label (column A) — also the canonical model_label' },
+      { name: 'kind',                  type: 'DriverKind',                         typeKind: 'enum',      ref: 'DriverKind' },
+      { name: 'filing_section',        type: 'str | None',                         typeKind: 'primitive', default: 'None (mirrored from library entry for traceability)' },
+      { name: 'note',                  type: 'str | None',                         typeKind: 'primitive', default: 'None (human-readable inference reason)' },
+      { name: 'rollforward_inputs',    type: 'list[Tuple[str, str]]',              typeKind: 'container', default: 'Field(default_factory=list) — (sheet, label) tuples ADDED to running balance' },
+      { name: 'rollforward_outputs',   type: 'list[Tuple[str, str]]',              typeKind: 'container', default: 'Field(default_factory=list) — (sheet, label) tuples SUBTRACTED' },
+      { name: 'bs_delta_source',       type: 'Tuple[str, str] | None',             typeKind: 'primitive', default: 'None (CF WC anchor — which BS row\'s ΔQ drives this CF line)' },
+      { name: 'bs_delta_is_liability', type: 'bool',                               typeKind: 'primitive', default: 'False (True flips Δ sign for liability-side BS rows)' },
+      { name: 'is_link_source',        type: 'Tuple[str, str] | None',             typeKind: 'primitive', default: 'None (LINK_TO_IS anchor — which IS row this CF line equals; e.g. ("QTR P&L","Net Income (Loss)"))' },
+      { name: 'cf_link_source',        type: 'Tuple[str, str] | None',             typeKind: 'primitive', default: 'None (LINK_TO_CF anchor — which CF row this IS line equals; e.g. ("QTR CF","Preferred Dividends"))' },
+      { name: 'is_signed_negative',    type: 'bool',                               typeKind: 'primitive', default: 'False (rows whose historical values are typically parens-negative)' },
+      { name: 'residual_plug_sources', type: 'list[Tuple[str, str, bool]]',        typeKind: 'container', default: 'Field(default_factory=list) — (bs_sheet, bs_label, is_liability) for every non-flat BS row this CF plug absorbs; populated in Pass 4 of infer_drivers' },
+      { name: 'growth_basis',          type: 'Optional[str]',                      typeKind: 'primitive', default: 'None (GROWTH-kind only — "yoy" or "qoq"; sourced from {TICKER}/config.json:growth_basis at build time, rendered as the Basis cell on IS DRIVERS column B)' }
     ]
   }
 ];
@@ -549,7 +585,7 @@ const LAYERS = [
   { id: 'raw',       label: 'LAYER 1 · RAW FILING',         y0: 830 },
   { id: 'mapped',    label: 'LAYER 2 · MAPPED FILING',      y0: 1500 },
   { id: 'validated', label: 'LAYER 3 · VALIDATED FILING',   y0: 1730 },
-  { id: 'derived',   label: 'LAYER 4 · DERIVED CALCS',      y0: 1990 }
+  { id: 'derived',   label: 'LAYER 4 · FORECASTING (model-calc)', y0: 1990 }
 ];
 
 const COL_X = [60, 430, 800, 1170];
@@ -586,7 +622,8 @@ const LAYOUT = {
   'ValidationResult': { col: 0, row: 0 },
   'ValidatedFiling':  { col: 2, row: 0 },
 
-  'DerivedCalcs':     { col: 1, row: 0 }
+  'DriverKind':       { col: 0, row: 0 },
+  'DriverSpec':       { col: 2, row: 0 }
 };
 
 // =========================================================================
