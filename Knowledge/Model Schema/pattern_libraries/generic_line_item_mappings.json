@@ -59,14 +59,14 @@
       "model_label": "SG&A",
       "aliases": [
         "selling, general and administrative expenses",
-        "selling and marketing expenses",
-        "general and administrative expenses",
+        "selling, general and administrative expense",
         "sg&a",
         "selling general and administrative expenses"
       ],
       "filing_section": "operating_expenses",
       "sign_convention": "negative",
-      "us_gaap_concept": "SellingGeneralAndAdministrativeExpense"
+      "us_gaap_concept": "SellingGeneralAndAdministrativeExpense",
+      "note": "Combined-form SG&A used by staples filers (CELH, PG, PEP, MNST). Filers that split S&M from G&A (tech — GOOG, AAPL, MSFT) route to GEN-IS-028 (Sales and Marketing) and GEN-IS-029 (General and Administrative) via concept and label. Aliases for the split-form labels are intentionally NOT here — keeping them would silently mis-route split-form filers' G&A and S&M lines into the combined SG&A row."
     },
     {
       "rule_id": "GEN-IS-005",
@@ -2325,15 +2325,20 @@
       "model_sheet": "BALANCE SHEET",
       "model_label": "Long-Term Investments",
       "filing_section": "non_current_assets",
-      "note": "Long-term investment securities (typically AFS debt securities held to maturity, equity securities held >12mo) classified as non-current. Distinct from GEN-BS-044 Short-Term Investments and GEN-BS-047 Equity Method Investments.",
+      "note": "Long-term investment securities (typically AFS debt securities held to maturity, equity securities held >12mo) classified as non-current. Distinct from GEN-BS-044 Short-Term Investments and GEN-BS-047 Equity Method Investments. Tech filers (GOOG) report this line as 'Non-marketable investments' covering equity stakes held at FV through P&L.",
       "aliases": [
         "long-term investments",
         "long term investments",
         "investments",
         "long-term investment securities",
-        "long-term marketable securities"
+        "long-term marketable securities",
+        "non-marketable investments",
+        "non-marketable equity securities"
       ],
       "us_gaap_concept": "LongTermInvestments",
+      "us_gaap_concepts": [
+        "OtherLongTermInvestments"
+      ],
       "cf_delta_target": "Net Change in Long-Term Investments"
     },
     {
@@ -2365,6 +2370,52 @@
         "total operating expenses"
       ],
       "us_gaap_concept": "OperatingExpenses"
+    },
+    {
+      "rule_id": "GEN-IS-027",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Research and Development",
+      "filing_section": "operating_expenses",
+      "sign_convention": "negative",
+      "us_gaap_concept": "ResearchAndDevelopmentExpense",
+      "aliases": [
+        "research and development",
+        "research and development expenses",
+        "research and development expense",
+        "r&d"
+      ],
+      "note": "Primary R&D opex line. Used by tech (GOOG, AAPL, MSFT), pharma (MRNA, PFE), and any filer with a dedicated R&D line distinct from SG&A. Sign: negative — renders as a charge against operating income. Position: between GEN-IS-002 COGS and GEN-IS-005 Income from Operations, alongside GEN-IS-004 SG&A."
+    },
+    {
+      "rule_id": "GEN-IS-028",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Sales and Marketing",
+      "filing_section": "operating_expenses",
+      "sign_convention": "negative",
+      "us_gaap_concept": "SellingAndMarketingExpense",
+      "aliases": [
+        "sales and marketing",
+        "sales and marketing expenses",
+        "sales and marketing expense",
+        "selling and marketing expenses",
+        "marketing and selling expenses"
+      ],
+      "note": "Primary S&M opex line for filers that split S&M from G&A (tech — GOOG, AAPL, MSFT, META). Distinct from GEN-IS-004 SG&A, which is the combined-form line used by staples filers. The two are mutually exclusive at any given filer."
+    },
+    {
+      "rule_id": "GEN-IS-029",
+      "model_sheet": "ANNL P&L",
+      "model_label": "General and Administrative",
+      "filing_section": "operating_expenses",
+      "sign_convention": "negative",
+      "us_gaap_concept": "GeneralAndAdministrativeExpense",
+      "aliases": [
+        "general and administrative",
+        "general and administrative expenses",
+        "general and administrative expense",
+        "g&a"
+      ],
+      "note": "Primary G&A opex line for filers that split S&M from G&A (tech — GOOG, AAPL, MSFT, META). Distinct from GEN-IS-004 SG&A, which is the combined-form line used by staples filers. Companion to GEN-IS-028 Sales and Marketing."
     },
     {
       "rule_id": "GEN-CF-069",
