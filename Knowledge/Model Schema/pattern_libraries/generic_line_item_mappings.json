@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order — this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
-  "last_updated": "2026-04-26",
+  "last_updated": "2026-04-28",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
     "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
@@ -104,10 +104,16 @@
         "interest earned",
         "interest expense",
         "interest expense nonoperating",
-        "interest and debt expense"
+        "interest and debt expense",
+        "interest and other expense, net",
+        "interest and other (expense) income, net",
+        "interest and other income (expense), net"
       ],
       "filing_section": "non_operating",
-      "us_gaap_concept": "InterestExpense"
+      "us_gaap_concept": "InterestExpense",
+      "us_gaap_concepts": [
+        "InterestIncomeExpenseNonoperatingNet"
+      ]
     },
     {
       "rule_id": "GEN-IS-007",
@@ -147,7 +153,11 @@
         "other expense",
         "other non-operating expense",
         "miscellaneous expense",
-        "other nonoperating expense"
+        "other nonoperating expense",
+        "interest and other income (expense), net",
+        "interest and other (expense) income, net",
+        "interest and other expense, net",
+        "interest and other income net of expense"
       ],
       "filing_section": "non_operating",
       "us_gaap_concept": "OtherNonoperatingIncomeExpense"
@@ -477,10 +487,15 @@
         "deferred tax assets",
         "deferred tax assets, net",
         "deferred income tax assets",
-        "deferred income taxes"
+        "deferred income taxes",
+        "prepaid income taxes",
+        "prepaid taxes"
       ],
       "filing_section": "non_current_assets",
-      "us_gaap_concept": "DeferredIncomeTaxAssetsNet"
+      "us_gaap_concept": "DeferredIncomeTaxAssetsNet",
+      "us_gaap_concepts": [
+        "PrepaidTaxes"
+      ]
     },
     {
       "rule_id": "GEN-BS-009",
@@ -807,7 +822,10 @@
         "common stock value"
       ],
       "filing_section": "equity",
-      "us_gaap_concept": "CommonStockValue"
+      "us_gaap_concept": "CommonStockValue",
+      "us_gaap_concepts": [
+        "CommonStockValueOutstanding"
+      ]
     },
     {
       "rule_id": "GEN-BS-029",
@@ -1128,7 +1146,8 @@
         "asset impairment charges",
         "indefinite-lived intangible asset impairment charge"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "GoodwillAndIntangibleAssetImpairment"
     },
     {
       "rule_id": "GEN-CF-004",
@@ -1206,12 +1225,14 @@
         "deferred income taxes",
         "deferred tax provision",
         "(benefit) provision for deferred income taxes",
-        "deferred income taxes and other tax charges and credits"
+        "deferred income taxes and other tax charges and credits",
+        "prepaid income taxes"
       ],
       "filing_section": "operating",
       "us_gaap_concept": "DeferredIncomeTaxExpenseBenefit",
       "us_gaap_concepts": [
-        "DeferredIncomeTaxesAndTaxCredits"
+        "DeferredIncomeTaxesAndTaxCredits",
+        "IncreaseDecreaseInPrepaidTaxes"
       ]
     },
     {
@@ -1688,7 +1709,8 @@
         "cash paid during the period for interest",
         "cash payments for interest"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "InterestPaidNet"
     },
     {
       "rule_id": "GEN-CF-039",
@@ -1704,7 +1726,8 @@
         "income taxes paid",
         "taxes, net of refunds received"
       ],
-      "filing_section": "operating"
+      "filing_section": "operating",
+      "us_gaap_concept": "IncomeTaxesPaid"
     },
     {
       "rule_id": "GEN-CF-041",
@@ -1790,10 +1813,19 @@
       "aliases": [
         "net additions/(reductions) to other short-term debt",
         "proceeds from (repayments of) short-term debt",
-        "proceeds from repayments of short term debt maturing in three months or less"
+        "proceeds from repayments of short term debt maturing in three months or less",
+        "borrowings (payments) on debt",
+        "(payments) borrowings on debt",
+        "borrowings of (payments on) debt",
+        "borrowings on debt",
+        "payments on debt",
+        "(payments) borrowings on short-term debt"
       ],
       "filing_section": "financing",
-      "us_gaap_concept": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess"
+      "us_gaap_concept": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess",
+      "us_gaap_concepts": [
+        "ProceedsFromRepaymentsOfShortTermDebt"
+      ]
     },
     {
       "rule_id": "GEN-CF-047",
@@ -1805,10 +1837,15 @@
         "proceeds from issuance of long term debt",
         "issuance of long-term debt",
         "proceeds from long-term borrowings",
-        "proceeds from term loan"
+        "proceeds from term loan",
+        "borrowings on credit facilities",
+        "borrowings on credit facility"
       ],
       "filing_section": "financing",
-      "us_gaap_concept": "ProceedsFromIssuanceOfLongTermDebt"
+      "us_gaap_concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "us_gaap_concepts": [
+        "ProceedsFromLongTermLinesOfCredit"
+      ]
     },
     {
       "rule_id": "GEN-CF-048",
@@ -1822,12 +1859,15 @@
         "long-term debt repayments",
         "payments on term loan",
         "debt redemptions",
-        "debt redemptions/cash tender offers"
+        "debt redemptions/cash tender offers",
+        "payments on credit facilities",
+        "payments on credit facility"
       ],
       "filing_section": "financing",
       "us_gaap_concept": "RepaymentsOfLongTermDebt",
       "us_gaap_concepts": [
-        "ProceedsFromRepaymentsOfOtherLongTermDebt"
+        "ProceedsFromRepaymentsOfOtherLongTermDebt",
+        "RepaymentsOfLongTermLinesOfCredit"
       ]
     },
     {
@@ -1874,8 +1914,10 @@
         "other working capital changes",
         "net change in other operating assets and liabilities",
         "other long-term liabilities",
-        "change in other long-term liabilities"
-      ]
+        "change in other long-term liabilities",
+        "other liabilities"
+      ],
+      "us_gaap_concept": "IncreaseDecreaseInOtherNoncurrentLiabilities"
     },
     {
       "rule_id": "GEN-CF-052",
@@ -2197,14 +2239,159 @@
         "net change on cash flow hedges",
         "net pension and retiree medical adjustments",
         "net change on available-for-sale debt securities and other",
-        "other"
+        "other",
+        "change in foreign currency translation adjustment, net",
+        "change in net unrealized gains (losses)",
+        "change in net unrealized losses (gains)",
+        "net change in available-for-sale investments",
+        "other comprehensive (loss) income",
+        "other comprehensive income (loss)"
       ],
       "us_gaap_concepts": [
         "OtherComprehensiveIncomeLossNetOfTax",
         "OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationGainLossArisingDuringPeriodNetOfTax",
         "OtherComprehensiveIncomeLossCashFlowHedgeGainLossAfterReclassificationAndTax",
         "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax",
-        "OtherComprehensiveIncomeOtherNetOfTax"
+        "OtherComprehensiveIncomeOtherNetOfTax",
+        "OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+        "OtherComprehensiveIncomeUnrealizedHoldingGainLossOnSecuritiesArisingDuringPeriodNetOfTax",
+        "OtherComprehensiveIncomeAvailableforsaleSecuritiesAdjustmentNetOfTax",
+        "OtherComprehensiveIncomeLossNetOfTaxPortionAttributableToParent"
+      ]
+    },
+    {
+      "rule_id": "GEN-BS-048",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Long-Term Investments",
+      "filing_section": "non_current_assets",
+      "note": "Long-term investment securities (typically AFS debt securities held to maturity, equity securities held >12mo) classified as non-current. Distinct from GEN-BS-044 Short-Term Investments and GEN-BS-047 Equity Method Investments.",
+      "aliases": [
+        "long-term investments",
+        "long term investments",
+        "investments",
+        "long-term investment securities",
+        "long-term marketable securities"
+      ],
+      "us_gaap_concept": "LongTermInvestments"
+    },
+    {
+      "rule_id": "GEN-BS-049",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Accrued Compensation",
+      "filing_section": "current_liabilities",
+      "note": "Accrued employee compensation liability — payroll, bonuses, vacation, employee benefits payable but not yet paid.",
+      "aliases": [
+        "accrued compensation",
+        "accrued employee compensation",
+        "accrued payroll",
+        "accrued payroll and benefits",
+        "accrued wages",
+        "employee related liabilities"
+      ],
+      "us_gaap_concept": "EmployeeRelatedLiabilitiesCurrent"
+    },
+    {
+      "rule_id": "GEN-IS-026",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Operating Expenses",
+      "filing_section": "operating_expenses",
+      "sign_convention": "negative",
+      "note": "Single-line operating expense canonical for filers (e.g. MNST) that present total operating expenses as one line on the IS without breaking down SG&A / R&D / D&A. Matches us-gaap:OperatingExpenses tagged as a line_item (not subtotal). PEP/PG/CELH break out their opex and won't hit this canonical.",
+      "aliases": [
+        "operating expenses",
+        "total operating expenses"
+      ],
+      "us_gaap_concept": "OperatingExpenses"
+    },
+    {
+      "rule_id": "GEN-CF-069",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Additions to Intangibles",
+      "filing_section": "investing",
+      "note": "Cash outflow for additions to intangible assets (trademarks, distributor rights, etc.).",
+      "aliases": [
+        "additions to intangibles",
+        "additions to intangible assets",
+        "payments to acquire intangible assets",
+        "purchases of intangible assets"
+      ],
+      "us_gaap_concept": "PaymentsToAcquireIntangibleAssets",
+      "us_gaap_concepts": [
+        "PaymentsToProceedsFromIntangiblesAssets"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-070",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Net Change in Long-Term Investments",
+      "row_type": "line_item",
+      "filing_section": "investing",
+      "note": "Net cash flow from long-term investing activity (purchases, sales, maturities of AFS / debt / equity securities held >12mo). Pairs with GEN-BS-048. Filers can split into separate Purchases + Sales lines (MNST does); model-write's by-canonical-label row consolidation collapses them into one net change row.",
+      "aliases": [
+        "purchases of available-for-sale investments",
+        "sales of available-for-sale investments",
+        "purchases of long-term investments",
+        "sales of long-term investments",
+        "proceeds from sale of long-term investments",
+        "payments to acquire long-term investments"
+      ],
+      "us_gaap_concept": "PaymentsToAcquireAvailableForSaleSecuritiesDebt",
+      "us_gaap_concepts": [
+        "ProceedsFromSaleOfAvailableForSaleSecuritiesDebt",
+        "ProceedsFromMaturitiesPrepaymentsAndCallsOfAvailableForSaleSecurities",
+        "PaymentsToAcquireLongTermInvestments",
+        "ProceedsFromSaleOfLongTermInvestments"
+      ]
+    },
+    {
+      "rule_id": "GEN-CF-071",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Impairment of Long-Lived Assets (PP&E)",
+      "filing_section": "operating",
+      "note": "Non-cash CFO add-back for impairment of long-lived tangible assets (PP&E, ROU assets, etc.). Distinct from GEN-CF-003 Impairment of Intangibles.",
+      "aliases": [
+        "impairment of property and equipment",
+        "impairment of long-lived assets",
+        "impairment of long-lived assets held for use",
+        "impairment of property plant and equipment",
+        "impairment of ppe"
+      ],
+      "us_gaap_concept": "ImpairmentOfLongLivedAssetsHeldForUse"
+    },
+    {
+      "rule_id": "GEN-CF-072",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Change in Accrued Compensation",
+      "filing_section": "operating",
+      "row_type": "line_item",
+      "note": "Working-capital change in accrued employee compensation. Pairs with GEN-BS-049 Accrued Compensation. Filers like MNST report this as a discrete CF op line distinct from Other Working Capital.",
+      "aliases": [
+        "accrued compensation",
+        "change in accrued compensation",
+        "accrued employee compensation"
+      ],
+      "us_gaap_concept": "IncreaseDecreaseInEmployeeRelatedLiabilities"
+    },
+    {
+      "rule_id": "GEN-CF-073",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Non-Cash Lease Expense",
+      "filing_section": "operating",
+      "row_type": "line_item",
+      "note": "Non-cash CFO add-back for ASC 842 operating lease ROU asset amortization (the lease-expense portion that does not represent cash outflow). Most filers bundle this into D&A; MNST and some others break it out as a discrete CF line.",
+      "aliases": [
+        "non-cash lease expense",
+        "non cash lease expense",
+        "operating lease expense",
+        "operating lease cost",
+        "amortization of operating lease right-of-use assets",
+        "amortization of operating lease rou asset",
+        "rou asset amortization"
+      ],
+      "us_gaap_concept": "OperatingLeaseExpense",
+      "us_gaap_concepts": [
+        "OperatingLeaseRightOfUseAssetAmortizationExpense",
+        "NonCashLeaseExpense"
       ]
     }
   ]

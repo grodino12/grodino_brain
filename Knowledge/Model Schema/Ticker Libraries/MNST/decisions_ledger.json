@@ -3,7 +3,93 @@
   "_last_updated": "2026-04-28",
   "ticker": "MNST",
   "mappings": [],
-  "new_rows": [],
+  "new_rows": [
+    {
+      "rule_id": "MNST-CF-001",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Acquisition of CANarchy",
+      "filing_section": "investing",
+      "sign_convention": "negative",
+      "aliases": [
+        "acquisition of canarchy, net of cash",
+        "acquisition of canarchy"
+      ],
+      "us_gaap_concepts": [
+        "us-gaap:PaymentsToAcquireBusinessesGross"
+      ],
+      "note": "FY2022 acquisition of CANarchy Craft Brewery Collective (alcoholic-beverage entry; closed Q1 FY2022). MNST-specific one-time event; appears in 8 filings spanning the acquisition period and tax-credit reversal periods. Cash outflow on the investing section."
+    },
+    {
+      "rule_id": "MNST-CF-002",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Acquisition of Bang Energy",
+      "filing_section": "investing",
+      "sign_convention": "negative",
+      "aliases": [
+        "acquisition of bang energy",
+        "acquisition of bang energy, net of cash"
+      ],
+      "us_gaap_concepts": [
+        "us-gaap:PaymentsToAcquireBusinessesGross"
+      ],
+      "note": "FY2023 acquisition of Bang Energy assets out of Vital Pharmaceuticals' bankruptcy (closed Q3 FY2023). Cash outflow on investing. Paired with MNST-CF-004 (non-cash IS gain add-back) and the FY2024 PP&E + intangibles impairments tied to Bang underperformance."
+    },
+    {
+      "rule_id": "MNST-CF-003",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Acquisition of Monster Brewing",
+      "filing_section": "investing",
+      "sign_convention": "negative",
+      "aliases": [
+        "acquisition of monster brewing, net of cash",
+        "acquisition of monster brewing"
+      ],
+      "us_gaap_concepts": [
+        "us-gaap:PaymentsToAcquireBusinessesGross"
+      ],
+      "note": "Smaller alcoholic-beverage acquisition (Monster Brewing Co.). Single-filing one-time event. Cash outflow on investing."
+    },
+    {
+      "rule_id": "MNST-CF-004",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Gain on Bang Transaction",
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "aliases": [
+        "gain on bang transaction"
+      ],
+      "us_gaap_concepts": [
+        "us-gaap:BusinessCombinationConsiderationTransferredLiabilitiesIncurred"
+      ],
+      "note": "Non-cash CFO add-back removing the IS gain recognized on the Bang Energy acquisition (bargain purchase / settlement-date gain). Appears in 5 filings during FY2023-FY2024 era. Add-back reverses the non-cash IS gain so CFO ties to actual operating cash."
+    },
+    {
+      "rule_id": "MNST-CF-005",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Accrued Distributor Terminations",
+      "filing_section": "operating",
+      "aliases": [
+        "accrued distributor terminations"
+      ],
+      "us_gaap_concepts": [
+        "mnst:IncreaseDecreaseInAccruedDistributorTerminations"
+      ],
+      "note": "Working-capital change in accrued distributor termination liabilities. MNST extension concept. Tied to FY2024 distributor restructuring tied to Bang Energy integration."
+    },
+    {
+      "rule_id": "MNST-CF-006",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Distributor Receivables",
+      "filing_section": "operating",
+      "aliases": [
+        "distributor receivables"
+      ],
+      "us_gaap_concepts": [
+        "mnst:IncreaseDecreaseInDistributorReceivables"
+      ],
+      "note": "Working-capital change in distributor-related receivables. MNST extension concept. Tied to FY2024 distributor restructuring."
+    }
+  ],
   "structural": [],
   "renames": []
 }
