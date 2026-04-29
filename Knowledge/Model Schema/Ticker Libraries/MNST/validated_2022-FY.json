@@ -9820,8 +9820,8 @@
       "expected": "0",
       "actual": "0",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Total Liabilities or TCL missing"
+      "severity": "skip",
+      "message": "skipped — Total Liabilities not rendered by filer"
     },
     {
       "rule_id": "BS-5 @ FY2022",
@@ -9860,8 +9860,8 @@
       "expected": "0",
       "actual": "0",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Total Liabilities or TCL missing"
+      "severity": "skip",
+      "message": "skipped — Total Liabilities not rendered by filer"
     },
     {
       "rule_id": "BS-5 @ FY2021",

@@ -62,6 +62,7 @@ WORKBOOK_FILENAME = {
     "CELH": "CELH_model_v5.xlsx",
     "PG":   "PG_model_v5.xlsx",
     "PEP":  "PEP_model_v3.xlsx",
+    "MNST": "MNST_model.xlsx",
 }
 
 # Tolerance for numeric diffs ($1, since statements are in thousands).
@@ -397,7 +398,7 @@ def compare_against_goldens(ticker: str, temp_dir: Path) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--ticker", choices=["CELH", "PG", "PEP"], help="restrict to one ticker")
+    ap.add_argument("--ticker", choices=["CELH", "PG", "PEP", "MNST"], help="restrict to one ticker")
     ap.add_argument("--bootstrap", action="store_true",
                     help="copy current Model Output to goldens (one-time)")
     ap.add_argument("--accept", action="store_true",
@@ -406,7 +407,7 @@ def main() -> int:
                     help="keep the temp pipeline directory for inspection")
     args = ap.parse_args()
 
-    tickers = [args.ticker] if args.ticker else ["CELH", "PG", "PEP"]
+    tickers = [args.ticker] if args.ticker else ["CELH", "PG", "PEP", "MNST"]
 
     GOLDENS_ROOT.mkdir(parents=True, exist_ok=True)
 

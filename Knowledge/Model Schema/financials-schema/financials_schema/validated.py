@@ -6,7 +6,7 @@ from pydantic import BaseModel, model_validator
 from financials_schema.mapped import MappedFiling
 
 
-Severity = Literal["pass", "warning", "fail"]
+Severity = Literal["pass", "warning", "fail", "skip"]
 
 
 class ValidationResult(BaseModel):
