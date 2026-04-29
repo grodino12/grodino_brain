@@ -487,18 +487,10 @@
         "deferred tax assets",
         "deferred tax assets, net",
         "deferred income tax assets",
-        "deferred income taxes",
-        "prepaid income taxes",
-        "prepaid taxes"
+        "deferred income taxes"
       ],
       "filing_section": "non_current_assets",
-      "us_gaap_concept": "DeferredIncomeTaxAssetsNet",
-      "us_gaap_concepts": [
-        "PrepaidTaxes"
-      ],
-      "accepted_sections": [
-        "current_assets"
-      ]
+      "us_gaap_concept": "DeferredIncomeTaxAssetsNet"
     },
     {
       "rule_id": "GEN-BS-009",
@@ -1228,14 +1220,12 @@
         "deferred income taxes",
         "deferred tax provision",
         "(benefit) provision for deferred income taxes",
-        "deferred income taxes and other tax charges and credits",
-        "prepaid income taxes"
+        "deferred income taxes and other tax charges and credits"
       ],
       "filing_section": "operating",
       "us_gaap_concept": "DeferredIncomeTaxExpenseBenefit",
       "us_gaap_concepts": [
-        "DeferredIncomeTaxesAndTaxCredits",
-        "IncreaseDecreaseInPrepaidTaxes"
+        "DeferredIncomeTaxesAndTaxCredits"
       ]
     },
     {
@@ -2389,6 +2379,34 @@
         "accrued employee compensation"
       ],
       "us_gaap_concept": "IncreaseDecreaseInEmployeeRelatedLiabilities"
+    },
+    {
+      "rule_id": "GEN-BS-050",
+      "model_sheet": "BALANCE SHEET",
+      "model_label": "Prepaid Income Taxes",
+      "filing_section": "current_assets",
+      "note": "Income taxes paid in advance and refundable. A current-asset balance distinct from Deferred Tax Assets (GEN-BS-008, NCA per ASC 740-10-45 post-2017). Common at filers like MNST that disclose it as a discrete CA line.",
+      "aliases": [
+        "prepaid income taxes",
+        "prepaid taxes",
+        "income taxes refundable",
+        "current income tax assets"
+      ],
+      "us_gaap_concept": "PrepaidTaxes"
+    },
+    {
+      "rule_id": "GEN-CF-074",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Change in Prepaid Income Taxes",
+      "filing_section": "operating",
+      "row_type": "line_item",
+      "note": "Working-capital change in the prepaid-income-taxes BS balance (pairs with GEN-BS-050). Distinct from GEN-CF-008 (Benefit) Provision for Deferred Income Taxes which is a non-cash add-back for the IS deferred-tax provision.",
+      "aliases": [
+        "prepaid income taxes",
+        "change in prepaid income taxes",
+        "income taxes refundable"
+      ],
+      "us_gaap_concept": "IncreaseDecreaseInPrepaidTaxes"
     }
   ]
 }
