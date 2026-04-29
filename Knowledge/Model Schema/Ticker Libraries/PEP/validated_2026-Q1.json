@@ -8686,11 +8686,11 @@
     },
     {
       "rule_id": "BS-5 @ Q1 FY2026",
-      "expected": "0",
-      "actual": "0",
+      "expected": "21536",
+      "actual": "21536",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Total Stockholders' Equity subtotal not found"
+      "severity": "pass",
+      "message": "TSE = sum of 6 equity components"
     },
     {
       "rule_id": "BS-1 @ Q4 FY2025",
@@ -8726,11 +8726,11 @@
     },
     {
       "rule_id": "BS-5 @ Q4 FY2025",
-      "expected": "0",
-      "actual": "0",
+      "expected": "20547",
+      "actual": "20547",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Total Stockholders' Equity subtotal not found"
+      "severity": "pass",
+      "message": "TSE = sum of 6 equity components"
     },
     {
       "rule_id": "IS-1 @ Q1 FY2026",

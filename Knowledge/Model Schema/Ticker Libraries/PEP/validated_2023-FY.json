@@ -12513,11 +12513,11 @@
     },
     {
       "rule_id": "BS-5 @ FY2023",
-      "expected": "0",
-      "actual": "0",
+      "expected": "18637",
+      "actual": "18637",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Total Stockholders' Equity subtotal not found"
+      "severity": "pass",
+      "message": "TSE = sum of 6 equity components"
     },
     {
       "rule_id": "BS-1 @ FY2022",
@@ -12553,11 +12553,11 @@
     },
     {
       "rule_id": "BS-5 @ FY2022",
-      "expected": "0",
-      "actual": "0",
+      "expected": "17273",
+      "actual": "17273",
       "gap": "0",
-      "severity": "warning",
-      "message": "inconclusive — Total Stockholders' Equity subtotal not found"
+      "severity": "pass",
+      "message": "TSE = sum of 6 equity components"
     },
     {
       "rule_id": "IS-1 @ FY2023",
