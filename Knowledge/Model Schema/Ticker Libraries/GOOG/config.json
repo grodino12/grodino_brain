@@ -1,0 +1,29 @@
+{
+  "_notes": "GOOG ticker metadata. Populated 2026-04-29 as the fifth ticker onboarded after CELH + PG + PEP + MNST. First non-Consumer-Staples ticker — exercises tech / Communication Services line items (R&D as primary opex, marketable securities at FV, equity investments at FV through P&L, segment revenue: Search/YouTube/Cloud/Other Bets, large stock-based comp, no inventory). Filer is Alphabet Inc.; ticker GOOG is the Class C non-voting share class — single CIK regardless.",
+  "_last_updated": "2026-04-29",
+
+  "ticker": "GOOG",
+  "company_name": "Alphabet Inc.",
+  "cik": "0001652044",
+  "exchange": "NASDAQ",
+  "sector": "Communication Services",
+  "industry": "Interactive Media & Services",
+  "fiscal_year_end": "12-31",
+  "currency": "USD",
+
+  "_plausibility_note": "Ranges in $millions (GOOG reports all USD facts at scale=6, like PEP/PG).",
+  "expected_revenue_range_millions": [100000, 400000],
+  "expected_total_assets_range_millions": [200000, 500000],
+
+  "_growth_basis_note": "model-calc revenue growth driver. Default 'yoy' — digital advertising has seasonal Q4 holiday spike; Cloud has secular growth; YoY basis preserves seasonality. Per-row override available in Excel via the Basis column on IS DRIVERS.",
+  "growth_basis": "yoy",
+
+  "_stock_splits_note": "20-for-1 split executed as a stock dividend on 2022-07-15 (record 2022-07-01). Affects share counts and EPS pre/post 2022-Q3 filings. Filer typically restates prior-period EPS / share counts in subsequent filings. Do NOT auto-adjust without verifying the pre/post-split convention of the source filing.",
+  "stock_splits": [
+    { "date": "2022-07-15", "ratio": 20, "note": "20-for-1 split executed as stock dividend (record date 2022-07-01)" }
+  ],
+
+  "_share_classes_note": "Three share classes: Class A (GOOGL, voting), Class B (insider, not public-traded), Class C (GOOG, non-voting). Filer reports them as separate columns on equity sections. Treasury stock and APIC may be split by class.",
+
+  "segments": ["Google Services", "Google Cloud", "Other Bets"]
+}

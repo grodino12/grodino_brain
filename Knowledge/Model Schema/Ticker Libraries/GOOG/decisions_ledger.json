@@ -1,0 +1,9 @@
+{
+  "_notes": "GOOG decisions ledger. Entries accumulate as reconcile surfaces novel items and the user resolves each to a model row. Per the 2026-04-25 variant collapse, model_sheet is informational; the actual sheet routed to at write time comes from SHEET_NAME[(filing_type, statement_type)] in reconcile. Ticker-ledger aliases must match what `normalize_label` produces (lowercase, articles 'the'/'our' stripped, trailing parens stripped). Empty at scaffold time — populate via novel triage protocol (feedback_novel_triage_protocol.md).",
+  "_last_updated": "2026-04-29",
+  "ticker": "GOOG",
+  "mappings": [],
+  "new_rows": [],
+  "structural": [],
+  "renames": []
+}
