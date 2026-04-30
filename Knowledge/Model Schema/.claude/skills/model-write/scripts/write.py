@@ -1698,12 +1698,23 @@ def build_workbook(
 
 def _auto_derive_quarterly(out_path: Path) -> dict | None:
     """Dynamically load model-qtr-derive's `derive_quarterly` and run it on the
-    just-saved workbook. Tolerant of the skill being absent."""
+    just-saved workbook. Tolerant of the skill being absent.
+
+    Resolves model-qtr-derive's location relative to this file, so it works
+    both at user-level (~/.claude/skills/) and project-level
+    (<project>/.claude/skills/) without hardcoding either path."""
     try:
         import importlib.util
-        skill_path = Path.home() / ".claude" / "skills" / "model-qtr-derive" / "scripts" / "build.py"
+        # this file: .../<skills_root>/model-write/scripts/write.py
+        # sibling:   .../<skills_root>/model-qtr-derive/scripts/build.py
+        skills_root = Path(__file__).resolve().parent.parent.parent
+        skill_path = skills_root / "model-qtr-derive" / "scripts" / "build.py"
         if not skill_path.exists():
-            print(f"[!] model-qtr-derive not found at {skill_path} — skipping single-quarter sheet derivation")
+            # Fallback to user-level for the case where someone's running
+            # model-write from a project that doesn't co-locate model-qtr-derive.
+            skill_path = Path.home() / ".claude" / "skills" / "model-qtr-derive" / "scripts" / "build.py"
+        if not skill_path.exists():
+            print(f"[!] model-qtr-derive not found (checked sibling + ~/.claude/skills) — skipping single-quarter sheet derivation")
             return None
         spec = importlib.util.spec_from_file_location("model_qtr_derive_build", skill_path)
         module = importlib.util.module_from_spec(spec)
