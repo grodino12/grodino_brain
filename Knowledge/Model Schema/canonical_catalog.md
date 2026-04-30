@@ -119,7 +119,6 @@ Linkage / derived: `link_to_is`, `link_to_cf`, `bs_delta`, `rollforward`, `resid
 | GEN-CF-003 | Impairment of Intangibles                         | operating  | line_item |          |        |            | `GoodwillAndIntangibleAssetImpairment`   |                        |
 | GEN-CF-052 | Depreciation                                      | operating  | line_item |          |        |            | `Depreciation`                           |                        |
 | GEN-CF-053 | Amortization                                      | operating  | line_item |          |        |            | `AdjustmentForAmortization`              |                        |
-| GEN-CF-058 | Non-Cash Lease Expense                            | operating  | line_item |          |        |            | `OperatingLeaseRightOfUseAssetAmorti…`   |                        |
 | GEN-CF-061 | Restructuring and Asset Impairment Charges        | operating  | line_item |          |        |            | `RestructuringCostsAndAssetImpairmen…`   |                        |
 | GEN-CF-071 | Impairment of Long-Lived Assets (PP&E)            | operating  | line_item |          |        |            | `ImpairmentOfLongLivedAssetsHeldForUse`  |                        |
 | GEN-CF-079 | Amortization and Impairment of Intangibles        | operating  | line_item |          |        |            | `goog:AmortizationAndImpairmentOfInt…`   |                        |
@@ -166,6 +165,7 @@ Linkage / derived: `link_to_is`, `link_to_cf`, `bs_delta`, `rollforward`, `resid
 | GEN-CF-042 | Acquisitions, Net of Cash Acquired                | investing  | line_item |          |        |            | `PaymentsToAcquireBusinessesNetOfCas…`   |                        |
 | GEN-CF-043 | Other Investing Activities                        | investing  | line_item |          |        |            | `PaymentsForProceedsFromInvestments`     |                        |
 | GEN-CF-057 | Net Change in Short-Term Investments              | investing  | line_item |          |        |            | `ProceedsFromSaleOfShortTermInvestments` |                        |
+| GEN-CF-058 | Non-Cash Lease Expense                            | operating  | line_item |          |        |            | `OperatingLeaseRightOfUseAssetAmorti…`   |                        |
 | GEN-CF-065 | Proceeds from Divestitures of Businesses          | investing  | line_item |          |        |            | `ProceedsFromDivestitureOfBusinesses…`   |                        |
 | GEN-CF-069 | Additions to Intangibles                          | investing  | line_item |          |        |            | `PaymentsToAcquireIntangibleAssets`      |                        |
 | GEN-CF-070 | Net Change in Long-Term Investments               | investing  | line_item |          |        |            | `PaymentsToAcquireAvailableForSaleSe…`   |                        |
