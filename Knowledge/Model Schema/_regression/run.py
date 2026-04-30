@@ -28,6 +28,8 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
@@ -64,6 +66,7 @@ WORKBOOK_FILENAME = {
     "PG":   "PG_model.xlsx",
     "PEP":  "PEP_model.xlsx",
     "MNST": "MNST_model.xlsx",
+    "GOOG": "GOOG_model.xlsx",
 }
 
 # Tolerance for numeric diffs ($1, since statements are in thousands).
@@ -399,16 +402,19 @@ def compare_against_goldens(ticker: str, temp_dir: Path) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--ticker", choices=["CELH", "PG", "PEP", "MNST"], help="restrict to one ticker")
+    ap.add_argument("--ticker", choices=["CELH", "PG", "PEP", "MNST", "GOOG"], help="restrict to one ticker")
     ap.add_argument("--bootstrap", action="store_true",
                     help="copy current Model Output to goldens (one-time)")
     ap.add_argument("--accept", action="store_true",
                     help="rerun pipeline and overwrite goldens with fresh output")
     ap.add_argument("--keep-temp", action="store_true",
                     help="keep the temp pipeline directory for inspection")
+    ap.add_argument("--max-workers", type=int, default=0,
+                    help="parallel ticker workers (default: min(cpu_count, n_tickers); 1 = serial)")
     args = ap.parse_args()
 
-    tickers = [args.ticker] if args.ticker else ["CELH", "PG", "PEP", "MNST"]
+    tickers = [args.ticker] if args.ticker else ["CELH", "PG", "PEP", "MNST", "GOOG"]
+    max_workers = args.max_workers if args.max_workers > 0 else min(os.cpu_count() or 1, len(tickers))
 
     GOLDENS_ROOT.mkdir(parents=True, exist_ok=True)
 
@@ -423,13 +429,47 @@ def main() -> int:
     with tempfile.TemporaryDirectory(prefix="regression_") as tmp_root:
         tmp_root = Path(tmp_root)
         all_diffs: dict[str, list[str]] = {}
-        for t in tickers:
+
+        # Phase A: parallel per-ticker pipeline runs.
+        # Each ticker's run_pipeline shells out to extract/reconcile/validate/
+        # model-write subprocesses. The Python threads spend their time waiting
+        # on subprocess.run, so they release the GIL — ThreadPoolExecutor gives
+        # us the parallelism without multiprocessing's pickling overhead.
+        # Tickers are fully isolated (own ticker_root, own out_dir under tmp_root).
+        ticker_dirs: dict[str, Path] = {}
+        ticker_errors: dict[str, BaseException] = {}
+
+        def _one_ticker(t: str) -> tuple[str, Path]:
             print(f"[{t}] discovering filings...")
             filings = discover_filings(t)
             print(f"[{t}] running pipeline on {len(filings)} filings...")
             t_dir = tmp_root / t
             t_dir.mkdir(parents=True, exist_ok=True)
+            t0 = time.monotonic()
             run_pipeline(t, filings, t_dir)
+            print(f"[{t}] pipeline done ({time.monotonic() - t0:.1f}s)")
+            return t, t_dir
+
+        wall_start = time.monotonic()
+        print(f"Running {len(tickers)} ticker(s) with max_workers={max_workers}...")
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            futures = {pool.submit(_one_ticker, t): t for t in tickers}
+            for fut in as_completed(futures):
+                t = futures[fut]
+                try:
+                    _, t_dir = fut.result()
+                    ticker_dirs[t] = t_dir
+                except BaseException as exc:
+                    ticker_errors[t] = exc
+                    sys.stderr.write(f"[{t}] pipeline FAILED: {exc!r}\n")
+        print(f"All pipelines finished in {time.monotonic() - wall_start:.1f}s.")
+
+        # Phase B: serial post-processing (accept goldens or diff). Fast, and
+        # avoids any race on goldens/ writes.
+        for t in tickers:
+            if t in ticker_errors:
+                continue
+            t_dir = ticker_dirs[t]
             if args.accept:
                 print(f"[{t}] accepting fresh output as new golden")
                 write_goldens_from_temp(t, t_dir)
@@ -443,6 +483,12 @@ def main() -> int:
                 shutil.rmtree(keep)
             shutil.copytree(tmp_root, keep)
             print(f"[debug] temp run preserved at {keep}")
+
+    if ticker_errors:
+        print(f"\n{len(ticker_errors)} ticker(s) FAILED:")
+        for t, exc in ticker_errors.items():
+            print(f"  [{t}] {exc!r}")
+        return 2
 
     if args.accept:
         print("Goldens overwritten with fresh output.")
