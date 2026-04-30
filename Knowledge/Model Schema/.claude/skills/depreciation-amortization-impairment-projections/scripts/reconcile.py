@@ -39,24 +39,41 @@ from openpyxl import load_workbook
 # instead. For each field, scan every sheet and find a row whose label matches
 # the row pattern AND whose sheet has date-formatted column headers.
 RECONCILE_PATTERNS = [
+    # PP&E net — try "net"-explicit first (BS-style), fall back to bare label
+    # (footnote-style at filers like CELH that have only one PP&E row in the
+    # schedule). Dedup ensures the first match wins per (field, period).
     {
-        "row_pattern": r"^property,?\s+plant\s+and\s+equipment(,?\s+net)?$",
+        "row_pattern": r"^property,?\s+plant\s+and\s+equipment,?\s+net$",
         "field":       "ppe_net",
         "tolerance":   Decimal("1"),
     },
     {
-        "row_pattern": r"less:?\s+accumulated\s+depreciation",
+        "row_pattern": r"^property,?\s+plant\s+and\s+equipment$",
+        "field":       "ppe_net",
+        "tolerance":   Decimal("1"),
+    },
+    # Accumulated depreciation — sign-flipped (R-file negative, field positive)
+    {
+        "row_pattern": r"less:?\s+accumulated\s+depreciation|^accumulated\s+depreciation",
         "field":       "ppe_accumulated_depreciation",
         "tolerance":   Decimal("1"),
-        "sign_flip":   True,  # R-file shows negative; our field stores positive
+        "sign_flip":   True,
     },
+    # Goodwill total
     {
         "row_pattern": r"^goodwill$",
         "field":       "goodwill_balance",
         "tolerance":   Decimal("1"),
     },
+    # Intangibles net — broader total preferred (matches "Intangibles-net" or
+    # broader "Intangible Assets, Net"); falls back to definite-lived only
     {
-        "row_pattern": r"^intangibles[\s-]+net$|definite-lived intangible assets,?\s+net",
+        "row_pattern": r"^intangibles[\s-]+net$|^intangible\s+assets,?\s+net$",
+        "field":       "intangibles_net",
+        "tolerance":   Decimal("1"),
+    },
+    {
+        "row_pattern": r"definite-lived intangible assets,?\s+net",
         "field":       "intangibles_net",
         "tolerance":   Decimal("1"),
     },
