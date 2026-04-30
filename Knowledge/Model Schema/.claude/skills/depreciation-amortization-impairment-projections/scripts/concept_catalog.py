@@ -80,8 +80,13 @@ INTANGIBLES_ACC_AMORTIZATION = ConceptMapping(
 INTANGIBLES_NET = ConceptMapping(
     field="intangibles_net",
     concepts=(
-        "FiniteLivedIntangibleAssetsNet",
+        # Broader concept first — includes both definite-lived and
+        # indefinite-lived intangibles. Matches how the filer's BS aggregates
+        # total intangibles. R-file label: "Intangibles-net".
         "IntangibleAssetsNetExcludingGoodwill",
+        # Falls back to definite-lived-only if the filer doesn't tag the broader
+        # concept. R-file label: "Definite-lived intangible assets, net".
+        "FiniteLivedIntangibleAssetsNet",
     ),
     is_instant=True,
 )
