@@ -53,7 +53,10 @@ MODEL_OUTPUTS = BRAIN / "Knowledge" / "Model Outputs"
 SCHEMA_PKG = MODEL_SCHEMA / "financials-schema"
 LIBRARY = MODEL_SCHEMA / "pattern_libraries" / "generic_line_item_mappings.json"
 
-SKILLS_ROOT = USER_HOME / ".claude" / "skills"
+# Project-scoped skills as of 2026-04-30. Skills used by this pipeline live
+# under MODEL_SCHEMA/.claude/skills/ (Claude Code project-level scope) so they
+# don't comingle with general-purpose user-level skills at ~/.claude/skills/.
+SKILLS_ROOT = MODEL_SCHEMA / ".claude" / "skills"
 EXTRACT_CLI = SKILLS_ROOT / "financials-extract" / "scripts" / "extract.py"
 RECONCILE_CLI = SKILLS_ROOT / "financials-reconcile" / "scripts" / "reconcile.py"
 VALIDATE_CLI = SKILLS_ROOT / "financials-validate" / "scripts" / "validate.py"

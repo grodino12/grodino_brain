@@ -1,0 +1,103 @@
+{
+  "_notes": "Section heading phrases → Section enum. Line-item section is inferred from the nearest preceding section header during extraction.",
+
+  "normalization": {
+    "case_insensitive": true,
+    "collapse_whitespace": true,
+    "strip_punctuation": true,
+    "strip_prefixes": ["total"]
+  },
+
+  "entries": {
+    "current_assets": {
+      "canonical": "CURRENT_ASSETS",
+      "keywords": ["current assets"],
+      "variants": ["Current assets", "Current assets:", "CURRENT ASSETS"],
+      "fuzzy_threshold": 85
+    },
+    "non_current_assets": {
+      "canonical": "NON_CURRENT_ASSETS",
+      "keywords": ["non-current assets", "noncurrent assets", "long-term assets", "other assets"],
+      "variants": ["Non-current assets", "Noncurrent assets", "Other assets", "Long-term assets"],
+      "fuzzy_threshold": 80
+    },
+    "current_liabilities": {
+      "canonical": "CURRENT_LIABILITIES",
+      "keywords": ["current liabilities"],
+      "variants": ["Current liabilities", "Current liabilities:", "CURRENT LIABILITIES"],
+      "fuzzy_threshold": 85
+    },
+    "non_current_liabilities": {
+      "canonical": "NON_CURRENT_LIABILITIES",
+      "keywords": ["non-current liabilities", "noncurrent liabilities", "long-term liabilities", "other liabilities"],
+      "variants": ["Non-current liabilities", "Noncurrent liabilities", "Long-term liabilities", "Other liabilities"],
+      "fuzzy_threshold": 80
+    },
+    "mezzanine": {
+      "canonical": "MEZZANINE",
+      "keywords": ["mezzanine", "temporary equity", "redeemable preferred"],
+      "variants": ["Mezzanine equity", "Temporary equity", "Redeemable preferred stock"],
+      "fuzzy_threshold": 85
+    },
+    "equity": {
+      "canonical": "EQUITY",
+      "keywords": ["stockholders' equity", "shareholders' equity", "stockholders equity", "shareholders equity"],
+      "variants": ["Stockholders' equity", "Stockholders' equity:", "Shareholders' equity", "STOCKHOLDERS' EQUITY", "Total equity"],
+      "fuzzy_threshold": 85
+    },
+    "operating": {
+      "canonical": "OPERATING",
+      "keywords": ["operating activities", "cash flows from operating", "cash flow from operating"],
+      "variants": ["Cash flows from operating activities", "Cash flow from operating activities", "Operating activities", "CASH FLOWS FROM OPERATING ACTIVITIES"],
+      "fuzzy_threshold": 85
+    },
+    "investing": {
+      "canonical": "INVESTING",
+      "keywords": ["investing activities", "cash flows from investing", "cash flow from investing"],
+      "variants": ["Cash flows from investing activities", "Investing activities", "CASH FLOWS FROM INVESTING ACTIVITIES"],
+      "fuzzy_threshold": 85
+    },
+    "financing": {
+      "canonical": "FINANCING",
+      "keywords": ["financing activities", "cash flows from financing", "cash flow from financing"],
+      "variants": ["Cash flows from financing activities", "Financing activities", "CASH FLOWS FROM FINANCING ACTIVITIES"],
+      "fuzzy_threshold": 85
+    },
+    "cash_other": {
+      "canonical": "CASH_OTHER",
+      "keywords": ["effect of exchange rate", "foreign exchange effect", "effect of foreign currency"],
+      "variants": ["Effect of exchange rate changes on cash", "Effect of foreign currency exchange rate changes"],
+      "fuzzy_threshold": 85
+    },
+    "revenue_cost": {
+      "canonical": "REVENUE_COST",
+      "keywords": ["revenue", "net sales", "cost of revenue", "cost of goods sold", "gross profit"],
+      "variants": ["Revenue", "Net revenue", "Net sales", "Total revenue", "Cost of revenue", "Cost of goods sold", "Gross profit"],
+      "fuzzy_threshold": 85
+    },
+    "operating_expenses": {
+      "canonical": "OPERATING_EXPENSES",
+      "keywords": ["operating expenses", "selling and marketing", "general and administrative", "sg&a", "research and development"],
+      "variants": ["Operating expenses", "Operating expenses:", "Selling, general and administrative expenses", "Selling and marketing expenses", "General and administrative expenses", "Research and development expenses"],
+      "fuzzy_threshold": 85
+    },
+    "non_operating": {
+      "canonical": "NON_OPERATING",
+      "keywords": ["non-operating", "other income", "interest income", "interest expense", "foreign exchange"],
+      "variants": ["Non-operating income (expense)", "Other income (expense), net", "Interest income", "Interest expense"],
+      "fuzzy_threshold": 80
+    },
+    "tax": {
+      "canonical": "TAX",
+      "keywords": ["income taxes", "provision for income taxes", "tax provision"],
+      "variants": ["Provision for income taxes", "Income tax expense", "Income taxes"],
+      "fuzzy_threshold": 85
+    },
+    "eps": {
+      "canonical": "EPS",
+      "keywords": ["earnings per share", "per share data", "per share amounts"],
+      "variants": ["Earnings per share", "Earnings per common share", "Net income per share", "Per share data:"],
+      "fuzzy_threshold": 85
+    }
+  }
+}

@@ -1,0 +1,1124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FilingSummary>
+  <Version>3.25.2</Version>
+  <ProcessingTime/>
+  <ReportFormat>html</ReportFormat>
+  <ContextCount>428</ContextCount>
+  <ElementCount>516</ElementCount>
+  <EntityCount>1</EntityCount>
+  <FootnotesReported>true</FootnotesReported>
+  <SegmentCount>144</SegmentCount>
+  <ScenarioCount>0</ScenarioCount>
+  <TuplesReported>false</TuplesReported>
+  <UnitCount>7</UnitCount>
+  <MyReports>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R1.htm</HtmlFileName>
+      <LongName>0000001 - Document - Cover Page</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/CoverPage</Role>
+      <ShortName>Cover Page</ShortName>
+      <MenuCategory>Cover</MenuCategory>
+      <Position>1</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R2.htm</HtmlFileName>
+      <LongName>0000002 - Document - Audit Information</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/AuditInformation</Role>
+      <ShortName>Audit Information</ShortName>
+      <MenuCategory>Cover</MenuCategory>
+      <Position>2</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R3.htm</HtmlFileName>
+      <LongName>9952151 - Statement - Consolidated Statements of Earnings</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedStatementsofEarnings</Role>
+      <ShortName>Consolidated Statements of Earnings</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>3</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R4.htm</HtmlFileName>
+      <LongName>9952152 - Statement - Consolidated Statements of Comprehensive Income</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedStatementsofComprehensiveIncome</Role>
+      <ShortName>Consolidated Statements of Comprehensive Income</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>4</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R5.htm</HtmlFileName>
+      <LongName>9952153 - Statement - Consolidated Statements of Comprehensive Income (Parenthetical)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedStatementsofComprehensiveIncomeParenthetical</Role>
+      <ShortName>Consolidated Statements of Comprehensive Income (Parenthetical)</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>5</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R6.htm</HtmlFileName>
+      <LongName>9952154 - Statement - Consolidated Balance Sheets</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedBalanceSheets</Role>
+      <ShortName>Consolidated Balance Sheets</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>6</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R7.htm</HtmlFileName>
+      <LongName>9952155 - Statement - Consolidated Balance Sheets (Parenthetical)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedBalanceSheetsParenthetical</Role>
+      <ShortName>Consolidated Balance Sheets (Parenthetical)</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>7</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R8.htm</HtmlFileName>
+      <LongName>9952156 - Statement - Consolidated Statements of Shareholders' Equity</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedStatementsofShareholdersEquity</Role>
+      <ShortName>Consolidated Statements of Shareholders' Equity</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>8</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R9.htm</HtmlFileName>
+      <LongName>9952157 - Statement - Consolidated Statements of Shareholders' Equity (Parenthetical)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedStatementsofShareholdersEquityParenthetical</Role>
+      <ShortName>Consolidated Statements of Shareholders' Equity (Parenthetical)</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>9</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R10.htm</HtmlFileName>
+      <LongName>9952158 - Statement - Consolidated Statements of Cash Flows</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ConsolidatedStatementsofCashFlows</Role>
+      <ShortName>Consolidated Statements of Cash Flows</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>10</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R11.htm</HtmlFileName>
+      <LongName>9952159 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUMMARYOFSIGNIFICANTACCOUNTINGPOLICIES</Role>
+      <ShortName>SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>11</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R12.htm</HtmlFileName>
+      <LongName>9952160 - Disclosure - SEGMENT INFORMATION</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SEGMENTINFORMATION</Role>
+      <ShortName>SEGMENT INFORMATION</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>12</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R13.htm</HtmlFileName>
+      <LongName>9952161 - Disclosure - SUPPLEMENTAL FINANCIAL INFORMATION</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATION</Role>
+      <ShortName>SUPPLEMENTAL FINANCIAL INFORMATION</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>13</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R14.htm</HtmlFileName>
+      <LongName>9952162 - Disclosure - GOODWILL AND INTANGIBLE ASSETS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETS</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>14</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R15.htm</HtmlFileName>
+      <LongName>9952163 - Disclosure - INCOME TAXES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXES</Role>
+      <ShortName>INCOME TAXES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>15</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R16.htm</HtmlFileName>
+      <LongName>9952164 - Disclosure - EARNINGS PER SHARE</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/EARNINGSPERSHARE</Role>
+      <ShortName>EARNINGS PER SHARE</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>16</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R17.htm</HtmlFileName>
+      <LongName>9952165 - Disclosure - SHARE-BASED COMPENSATION</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATION</Role>
+      <ShortName>SHARE-BASED COMPENSATION</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>17</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R18.htm</HtmlFileName>
+      <LongName>9952166 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLAN</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>18</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R19.htm</HtmlFileName>
+      <LongName>9952167 - Disclosure - RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/RISKMANAGEMENTACTIVITIESANDFAIRVALUEMEASUREMENTS</Role>
+      <ShortName>RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>19</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R20.htm</HtmlFileName>
+      <LongName>9952168 - Disclosure - SHORT-TERM AND LONG-TERM DEBT</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHORTTERMANDLONGTERMDEBT</Role>
+      <ShortName>SHORT-TERM AND LONG-TERM DEBT</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>20</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R21.htm</HtmlFileName>
+      <LongName>9952169 - Disclosure - ACCUMULATED OTHER COMPREHENSIVE INCOME/(LOSS)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ACCUMULATEDOTHERCOMPREHENSIVEINCOMELOSS</Role>
+      <ShortName>ACCUMULATED OTHER COMPREHENSIVE INCOME/(LOSS)</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>21</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R22.htm</HtmlFileName>
+      <LongName>9952170 - Disclosure - LEASES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/LEASES</Role>
+      <ShortName>LEASES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>22</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R23.htm</HtmlFileName>
+      <LongName>9952171 - Disclosure - COMMITMENTS AND CONTINGENCIES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/COMMITMENTSANDCONTINGENCIES</Role>
+      <ShortName>COMMITMENTS AND CONTINGENCIES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>23</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R24.htm</HtmlFileName>
+      <LongName>9952172 - Disclosure - SUPPLIER FINANCE PROGRAMS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLIERFINANCEPROGRAMS</Role>
+      <ShortName>SUPPLIER FINANCE PROGRAMS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>24</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R25.htm</HtmlFileName>
+      <LongName>995410 - Disclosure - Pay vs Performance Disclosure</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://xbrl.sec.gov/ecd/role/PvpDisclosure</Role>
+      <ShortName>Pay vs Performance Disclosure</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>25</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R26.htm</HtmlFileName>
+      <LongName>995445 - Disclosure - Insider Trading Arrangements</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://xbrl.sec.gov/ecd/role/InsiderTradingArrangements</Role>
+      <ShortName>Insider Trading Arrangements</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>26</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R27.htm</HtmlFileName>
+      <LongName>995447 - Disclosure - Insider Trading Policies and Procedures</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://xbrl.sec.gov/ecd/role/InsiderTradingPoliciesProc</Role>
+      <ShortName>Insider Trading Policies and Procedures</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>27</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R28.htm</HtmlFileName>
+      <LongName>995550 - Disclosure - Cybersecurity Risk Management and Strategy Disclosure</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://xbrl.sec.gov/cyd/role/CybersecurityRiskManagementAndStrategyDisclosure</Role>
+      <ShortName>Cybersecurity Risk Management and Strategy Disclosure</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>28</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R29.htm</HtmlFileName>
+      <LongName>9955511 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESPolicies</Role>
+      <ShortName>SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)</ShortName>
+      <MenuCategory>Policies</MenuCategory>
+      <Position>29</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R30.htm</HtmlFileName>
+      <LongName>9955512 - Disclosure - SEGMENT INFORMATION (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SEGMENTINFORMATIONTables</Role>
+      <ShortName>SEGMENT INFORMATION (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/SEGMENTINFORMATION</ParentRole>
+      <Position>30</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R31.htm</HtmlFileName>
+      <LongName>9955513 - Disclosure - SUPPLEMENTAL FINANCIAL INFORMATION (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATIONTables</Role>
+      <ShortName>SUPPLEMENTAL FINANCIAL INFORMATION (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATION</ParentRole>
+      <Position>31</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R32.htm</HtmlFileName>
+      <LongName>9955514 - Disclosure - GOODWILL AND INTANGIBLE ASSETS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETSTables</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETS</ParentRole>
+      <Position>32</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R33.htm</HtmlFileName>
+      <LongName>9955515 - Disclosure - INCOME TAXES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXESTables</Role>
+      <ShortName>INCOME TAXES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/INCOMETAXES</ParentRole>
+      <Position>33</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R34.htm</HtmlFileName>
+      <LongName>9955516 - Disclosure - EARNINGS PER SHARE (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/EARNINGSPERSHARETables</Role>
+      <ShortName>EARNINGS PER SHARE (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/EARNINGSPERSHARE</ParentRole>
+      <Position>34</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R35.htm</HtmlFileName>
+      <LongName>9955517 - Disclosure - SHARE-BASED COMPENSATION (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATIONTables</Role>
+      <ShortName>SHARE-BASED COMPENSATION (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/SHAREBASEDCOMPENSATION</ParentRole>
+      <Position>35</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R36.htm</HtmlFileName>
+      <LongName>9955518 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANTables</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLAN</ParentRole>
+      <Position>36</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R37.htm</HtmlFileName>
+      <LongName>9955519 - Disclosure - RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/RISKMANAGEMENTACTIVITIESANDFAIRVALUEMEASUREMENTSTables</Role>
+      <ShortName>RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/RISKMANAGEMENTACTIVITIESANDFAIRVALUEMEASUREMENTS</ParentRole>
+      <Position>37</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R38.htm</HtmlFileName>
+      <LongName>9955520 - Disclosure - SHORT-TERM AND LONG-TERM DEBT (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHORTTERMANDLONGTERMDEBTTables</Role>
+      <ShortName>SHORT-TERM AND LONG-TERM DEBT (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/SHORTTERMANDLONGTERMDEBT</ParentRole>
+      <Position>38</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R39.htm</HtmlFileName>
+      <LongName>9955521 - Disclosure - ACCUMULATED OTHER COMPREHENSIVE INCOME/(LOSS) (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ACCUMULATEDOTHERCOMPREHENSIVEINCOMELOSSTables</Role>
+      <ShortName>ACCUMULATED OTHER COMPREHENSIVE INCOME/(LOSS) (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/ACCUMULATEDOTHERCOMPREHENSIVEINCOMELOSS</ParentRole>
+      <Position>39</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R40.htm</HtmlFileName>
+      <LongName>9955522 - Disclosure - LEASES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/LEASESTables</Role>
+      <ShortName>LEASES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/LEASES</ParentRole>
+      <Position>40</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R41.htm</HtmlFileName>
+      <LongName>9955523 - Disclosure - COMMITMENTS AND CONTINGENCIES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/COMMITMENTSANDCONTINGENCIESTables</Role>
+      <ShortName>COMMITMENTS AND CONTINGENCIES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/COMMITMENTSANDCONTINGENCIES</ParentRole>
+      <Position>41</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R42.htm</HtmlFileName>
+      <LongName>9955524 - Disclosure - SUPPLIER FINANCE PROGRAMS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLIERFINANCEPROGRAMSTables</Role>
+      <ShortName>SUPPLIER FINANCE PROGRAMS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.pg.com/role/SUPPLIERFINANCEPROGRAMS</ParentRole>
+      <Position>42</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R43.htm</HtmlFileName>
+      <LongName>9955525 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESAdditionalInformationDetails</Role>
+      <ShortName>SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>43</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R44.htm</HtmlFileName>
+      <LongName>9955526 - Disclosure - SEGMENT INFORMATION - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SEGMENTINFORMATIONAdditionalInformationDetails</Role>
+      <ShortName>SEGMENT INFORMATION - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>44</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R45.htm</HtmlFileName>
+      <LongName>9955527 - Disclosure - SEGMENT INFORMATION - Percent Of Sales By Business Unit (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SEGMENTINFORMATIONPercentOfSalesByBusinessUnitDetails</Role>
+      <ShortName>SEGMENT INFORMATION - Percent Of Sales By Business Unit (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>45</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R46.htm</HtmlFileName>
+      <LongName>9955528 - Disclosure - SEGMENT INFORMATION - US And International Sales And Assets (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SEGMENTINFORMATIONUSAndInternationalSalesAndAssetsDetails</Role>
+      <ShortName>SEGMENT INFORMATION - US And International Sales And Assets (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>46</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R47.htm</HtmlFileName>
+      <LongName>9955529 - Disclosure - SEGMENT INFORMATION - Segment Results (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SEGMENTINFORMATIONSegmentResultsDetails</Role>
+      <ShortName>SEGMENT INFORMATION - Segment Results (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>47</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R48.htm</HtmlFileName>
+      <LongName>9955530 - Disclosure - SUPPLEMENTAL FINANCIAL INFORMATION - Property, Plant And Equipment (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATIONPropertyPlantAndEquipmentDetails</Role>
+      <ShortName>SUPPLEMENTAL FINANCIAL INFORMATION - Property, Plant And Equipment (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>48</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R49.htm</HtmlFileName>
+      <LongName>9955531 - Disclosure - SUPPLEMENTAL FINANCIAL INFORMATION - Accrued And Other Liabilities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATIONAccruedAndOtherLiabilitiesDetails</Role>
+      <ShortName>SUPPLEMENTAL FINANCIAL INFORMATION - Accrued And Other Liabilities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>49</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R50.htm</HtmlFileName>
+      <LongName>9955532 - Disclosure - SUPPLEMENTAL FINANCIAL INFORMATION - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATIONAdditionalInformationDetails</Role>
+      <ShortName>SUPPLEMENTAL FINANCIAL INFORMATION - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>50</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R51.htm</HtmlFileName>
+      <LongName>9955533 - Disclosure - SUPPLEMENTAL FINANCIAL INFORMATION - Restructuring Activity (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATIONRestructuringActivityDetails</Role>
+      <ShortName>SUPPLEMENTAL FINANCIAL INFORMATION - Restructuring Activity (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>51</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R52.htm</HtmlFileName>
+      <LongName>9955534 - Disclosure - SUPPLEMENTAL FINANCIAL INFORMATION - Other Costs (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLEMENTALFINANCIALINFORMATIONOtherCostsDetails</Role>
+      <ShortName>SUPPLEMENTAL FINANCIAL INFORMATION - Other Costs (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>52</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R53.htm</HtmlFileName>
+      <LongName>9955535 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Goodwill By Global Business Unit (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETSGoodwillByGlobalBusinessUnitDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Goodwill By Global Business Unit (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>53</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R54.htm</HtmlFileName>
+      <LongName>9955536 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETSAdditionalInformationDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>54</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R55.htm</HtmlFileName>
+      <LongName>9955537 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Intangible Assets (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETSIntangibleAssetsDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Intangible Assets (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>55</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R56.htm</HtmlFileName>
+      <LongName>9955538 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Amortization Of Intangible Assets (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETSAmortizationOfIntangibleAssetsDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Amortization Of Intangible Assets (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>56</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R57.htm</HtmlFileName>
+      <LongName>9955539 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Estimated Amortization Expense (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/GOODWILLANDINTANGIBLEASSETSEstimatedAmortizationExpenseDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Estimated Amortization Expense (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>57</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R58.htm</HtmlFileName>
+      <LongName>9955540 - Disclosure - INCOME TAXES - Earnings From Continuing Operations Before Income Taxes (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXESEarningsFromContinuingOperationsBeforeIncomeTaxesDetails</Role>
+      <ShortName>INCOME TAXES - Earnings From Continuing Operations Before Income Taxes (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>58</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R59.htm</HtmlFileName>
+      <LongName>9955541 - Disclosure - INCOME TAXES - Provision For Income Taxes On Continuing Operations (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXESProvisionForIncomeTaxesOnContinuingOperationsDetails</Role>
+      <ShortName>INCOME TAXES - Provision For Income Taxes On Continuing Operations (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>59</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R60.htm</HtmlFileName>
+      <LongName>9955542 - Disclosure - INCOME TAXES - Income Tax Rate Reconciliation (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXESIncomeTaxRateReconciliationDetails</Role>
+      <ShortName>INCOME TAXES - Income Tax Rate Reconciliation (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>60</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R61.htm</HtmlFileName>
+      <LongName>9955543 - Disclosure - INCOME TAXES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXESAdditionalInformationDetails</Role>
+      <ShortName>INCOME TAXES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>61</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R62.htm</HtmlFileName>
+      <LongName>9955544 - Disclosure - INCOME TAXES - Unrecognized Tax Benefits Reconciliation (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXESUnrecognizedTaxBenefitsReconciliationDetails</Role>
+      <ShortName>INCOME TAXES - Unrecognized Tax Benefits Reconciliation (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>62</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R63.htm</HtmlFileName>
+      <LongName>9955545 - Disclosure - INCOME TAXES - Deferred Income Tax Assets And Liabilities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/INCOMETAXESDeferredIncomeTaxAssetsAndLiabilitiesDetails</Role>
+      <ShortName>INCOME TAXES - Deferred Income Tax Assets And Liabilities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>63</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R64.htm</HtmlFileName>
+      <LongName>9955546 - Disclosure - EARNINGS PER SHARE (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/EARNINGSPERSHAREDetails</Role>
+      <ShortName>EARNINGS PER SHARE (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <ParentRole>http://www.pg.com/role/EARNINGSPERSHARETables</ParentRole>
+      <Position>64</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R65.htm</HtmlFileName>
+      <LongName>9955547 - Disclosure - SHARE-BASED COMPENSATION - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATIONAdditionalInformationDetails</Role>
+      <ShortName>SHARE-BASED COMPENSATION - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>65</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R66.htm</HtmlFileName>
+      <LongName>9955548 - Disclosure - SHARE-BASED COMPENSATION - Share-Based Compensation Activity (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATIONShareBasedCompensationActivityDetails</Role>
+      <ShortName>SHARE-BASED COMPENSATION - Share-Based Compensation Activity (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>66</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R67.htm</HtmlFileName>
+      <LongName>9955549 - Disclosure - SHARE-BASED COMPENSATION - Assumptions Utilized In The Binomial Lattice-Based Valuation Model (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATIONAssumptionsUtilizedInTheBinomialLatticeBasedValuationModelDetails</Role>
+      <ShortName>SHARE-BASED COMPENSATION - Assumptions Utilized In The Binomial Lattice-Based Valuation Model (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>67</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R68.htm</HtmlFileName>
+      <LongName>9955550 - Disclosure - SHARE-BASED COMPENSATION - Options Outstanding (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATIONOptionsOutstandingDetails</Role>
+      <ShortName>SHARE-BASED COMPENSATION - Options Outstanding (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>68</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R69.htm</HtmlFileName>
+      <LongName>9955551 - Disclosure - SHARE-BASED COMPENSATION - Additional Information On Stock Options (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATIONAdditionalInformationOnStockOptionsDetails</Role>
+      <ShortName>SHARE-BASED COMPENSATION - Additional Information On Stock Options (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>69</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R70.htm</HtmlFileName>
+      <LongName>9955552 - Disclosure - SHARE-BASED COMPENSATION - Schedule Of Non-Vested RSUs And PSUs (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHAREBASEDCOMPENSATIONScheduleOfNonVestedRSUsAndPSUsDetails</Role>
+      <ShortName>SHARE-BASED COMPENSATION - Schedule Of Non-Vested RSUs And PSUs (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>70</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R71.htm</HtmlFileName>
+      <LongName>9955553 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANAdditionalInformationDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>71</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R72.htm</HtmlFileName>
+      <LongName>9955554 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Reconciliation Of Benefit Obligations And Plan Assets (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANReconciliationOfBenefitObligationsAndPlanAssetsDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Reconciliation Of Benefit Obligations And Plan Assets (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>72</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R73.htm</HtmlFileName>
+      <LongName>9955555 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Reconciliation Of Benefit Plans Recognized In The Balance Sheet (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANReconciliationOfBenefitPlansRecognizedInTheBalanceSheetDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Reconciliation Of Benefit Plans Recognized In The Balance Sheet (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>73</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R74.htm</HtmlFileName>
+      <LongName>9955556 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Pension Plans With Accumulated And Projected Benefit Obligations In Excess Of Plan (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANPensionPlansWithAccumulatedAndProjectedBenefitObligationsInExcessOfPlanDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Pension Plans With Accumulated And Projected Benefit Obligations In Excess Of Plan (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>74</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R75.htm</HtmlFileName>
+      <LongName>9955557 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Components Of Net Periodic Benefit Cost (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANComponentsOfNetPeriodicBenefitCostDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Components Of Net Periodic Benefit Cost (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>75</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R76.htm</HtmlFileName>
+      <LongName>9955558 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Weighted Average Assumptions For The Benefit Calculations As Well As Assumed Health Care Trend Rates Balance Sheets (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANWeightedAverageAssumptionsForTheBenefitCalculationsAsWellAsAssumedHealthCareTrendRatesBalanceSheetsDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Weighted Average Assumptions For The Benefit Calculations As Well As Assumed Health Care Trend Rates Balance Sheets (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>76</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R77.htm</HtmlFileName>
+      <LongName>9955559 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Weighted Average Assumptions For The Benefit Calculations As Well As Assumed Health Care Trend Rates Statement Of Earnings (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANWeightedAverageAssumptionsForTheBenefitCalculationsAsWellAsAssumedHealthCareTrendRatesStatementOfEarningsDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Weighted Average Assumptions For The Benefit Calculations As Well As Assumed Health Care Trend Rates Statement Of Earnings (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>77</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R78.htm</HtmlFileName>
+      <LongName>9955560 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Target And Actual Asset Allocation (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANTargetAndActualAssetAllocationDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Target And Actual Asset Allocation (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>78</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R79.htm</HtmlFileName>
+      <LongName>9955561 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Fair Value Of Plan Asset (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANFairValueOfPlanAssetDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Fair Value Of Plan Asset (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>79</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R80.htm</HtmlFileName>
+      <LongName>9955562 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Total Benefit Payments Expected To Be Paid (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANTotalBenefitPaymentsExpectedToBePaidDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - Total Benefit Payments Expected To Be Paid (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>80</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R81.htm</HtmlFileName>
+      <LongName>9955563 - Disclosure - POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - ESOP Shares Outstanding (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/POSTRETIREMENTBENEFITSANDEMPLOYEESTOCKOWNERSHIPPLANESOPSharesOutstandingDetails</Role>
+      <ShortName>POSTRETIREMENT BENEFITS AND EMPLOYEE STOCK OWNERSHIP PLAN - ESOP Shares Outstanding (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>81</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R82.htm</HtmlFileName>
+      <LongName>9955564 - Disclosure - RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/RISKMANAGEMENTACTIVITIESANDFAIRVALUEMEASUREMENTSAdditionalInformationDetails</Role>
+      <ShortName>RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>82</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R83.htm</HtmlFileName>
+      <LongName>9955565 - Disclosure - RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Notional Amounts And Fair Values Of Qualifying And Non-Qualifying Financial Instruments Used In Hedging Transactions (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/RISKMANAGEMENTACTIVITIESANDFAIRVALUEMEASUREMENTSNotionalAmountsAndFairValuesOfQualifyingAndNonQualifyingFinancialInstrumentsUsedInHedgingTransactionsDetails</Role>
+      <ShortName>RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Notional Amounts And Fair Values Of Qualifying And Non-Qualifying Financial Instruments Used In Hedging Transactions (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>83</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R84.htm</HtmlFileName>
+      <LongName>9955566 - Disclosure - RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Gains And Losses On Derivatives In Net Investment Hedges Recognized in OCI (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/RISKMANAGEMENTACTIVITIESANDFAIRVALUEMEASUREMENTSGainsAndLossesOnDerivativesInNetInvestmentHedgesRecognizedinOCIDetails</Role>
+      <ShortName>RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Gains And Losses On Derivatives In Net Investment Hedges Recognized in OCI (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>84</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R85.htm</HtmlFileName>
+      <LongName>9955567 - Disclosure - RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Gains And Losses On Derivatives In Net Investment Hedges Recognized in Earnings (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/RISKMANAGEMENTACTIVITIESANDFAIRVALUEMEASUREMENTSGainsAndLossesOnDerivativesInNetInvestmentHedgesRecognizedinEarningsDetails</Role>
+      <ShortName>RISK MANAGEMENT ACTIVITIES AND FAIR VALUE MEASUREMENTS - Gains And Losses On Derivatives In Net Investment Hedges Recognized in Earnings (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>85</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R86.htm</HtmlFileName>
+      <LongName>9955568 - Disclosure - SHORT-TERM AND LONG-TERM DEBT - Short-Term Debt (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHORTTERMANDLONGTERMDEBTShortTermDebtDetails</Role>
+      <ShortName>SHORT-TERM AND LONG-TERM DEBT - Short-Term Debt (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>86</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R87.htm</HtmlFileName>
+      <LongName>9955569 - Disclosure - SHORT-TERM AND LONG-TERM DEBT - Long-Term Debt (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHORTTERMANDLONGTERMDEBTLongTermDebtDetails</Role>
+      <ShortName>SHORT-TERM AND LONG-TERM DEBT - Long-Term Debt (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>87</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R88.htm</HtmlFileName>
+      <LongName>9955570 - Disclosure - SHORT-TERM AND LONG-TERM DEBT - Long-Term Debt Maturities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHORTTERMANDLONGTERMDEBTLongTermDebtMaturitiesDetails</Role>
+      <ShortName>SHORT-TERM AND LONG-TERM DEBT - Long-Term Debt Maturities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>88</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R89.htm</HtmlFileName>
+      <LongName>9955571 - Disclosure - SHORT-TERM AND LONG-TERM DEBT - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SHORTTERMANDLONGTERMDEBTAdditionalInformationDetails</Role>
+      <ShortName>SHORT-TERM AND LONG-TERM DEBT - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>89</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R90.htm</HtmlFileName>
+      <LongName>9955572 - Disclosure - ACCUMULATED OTHER COMPREHENSIVE INCOME/(LOSS) - Statement of AOCI (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/ACCUMULATEDOTHERCOMPREHENSIVEINCOMELOSSStatementofAOCIDetails</Role>
+      <ShortName>ACCUMULATED OTHER COMPREHENSIVE INCOME/(LOSS) - Statement of AOCI (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>90</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R91.htm</HtmlFileName>
+      <LongName>9955573 - Disclosure - LEASES - Lease Cost (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/LEASESLeaseCostDetails</Role>
+      <ShortName>LEASES - Lease Cost (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>91</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R92.htm</HtmlFileName>
+      <LongName>9955574 - Disclosure - LEASES - Supplemental Balance Sheet (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/LEASESSupplementalBalanceSheetDetails</Role>
+      <ShortName>LEASES - Supplemental Balance Sheet (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>92</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R93.htm</HtmlFileName>
+      <LongName>9955575 - Disclosure - LEASES - Future Maturities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/LEASESFutureMaturitiesDetails</Role>
+      <ShortName>LEASES - Future Maturities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>93</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R94.htm</HtmlFileName>
+      <LongName>9955576 - Disclosure - LEASES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/LEASESAdditionalInformationDetails</Role>
+      <ShortName>LEASES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>94</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R95.htm</HtmlFileName>
+      <LongName>9955577 - Disclosure - COMMITMENTS AND CONTINGENCIES - Purchase Obligations (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/COMMITMENTSANDCONTINGENCIESPurchaseObligationsDetails</Role>
+      <ShortName>COMMITMENTS AND CONTINGENCIES - Purchase Obligations (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>95</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R96.htm</HtmlFileName>
+      <LongName>9955578 - Disclosure - SUPPLIER FINANCE PROGRAMS - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLIERFINANCEPROGRAMSAdditionalInformationDetails</Role>
+      <ShortName>SUPPLIER FINANCE PROGRAMS - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>96</Position>
+    </Report>
+    <Report instance="pg-20250630.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R97.htm</HtmlFileName>
+      <LongName>9955579 - Disclosure - SUPPLIER FINANCE PROGRAMS - Rollforward (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.pg.com/role/SUPPLIERFINANCEPROGRAMSRollforwardDetails</Role>
+      <ShortName>SUPPLIER FINANCE PROGRAMS - Rollforward (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>97</Position>
+    </Report>
+    <Report>
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <LongName>All Reports</LongName>
+      <ReportType>Book</ReportType>
+      <ShortName>All Reports</ShortName>
+    </Report>
+  </MyReports>
+  <InputFiles>
+    <File doctype="10-K" isDefinitelyFs="true" isUsgaap="true" original="pg-20250630.htm">pg-20250630.htm</File>
+    <File>pg-20250630.xsd</File>
+    <File>pg-20250630_cal.xml</File>
+    <File>pg-20250630_def.xml</File>
+    <File>pg-20250630_lab.xml</File>
+    <File>pg-20250630_pre.xml</File>
+  </InputFiles>
+  <SupplementalFiles>
+    <File>pg-20250630_g1.jpg</File>
+    <File>pg-20250630_g2.jpg</File>
+  </SupplementalFiles>
+  <BaseTaxonomies>
+    <BaseTaxonomy items="1691">http://fasb.org/us-gaap/2025</BaseTaxonomy>
+    <BaseTaxonomy items="15">http://xbrl.sec.gov/cyd/2025</BaseTaxonomy>
+    <BaseTaxonomy items="83">http://xbrl.sec.gov/dei/2025</BaseTaxonomy>
+    <BaseTaxonomy items="5">http://xbrl.sec.gov/ecd/2025</BaseTaxonomy>
+  </BaseTaxonomies>
+  <HasPresentationLinkbase>true</HasPresentationLinkbase>
+  <HasCalculationLinkbase>true</HasCalculationLinkbase>
+</FilingSummary>

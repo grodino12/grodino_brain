@@ -1,0 +1,59 @@
+{
+  "_notes": "Numeric cell notation → NumericNotation flag. Regex-based. Every raw cell text is tested against these patterns during extraction. Matching flags are OR'd together and stored on RawLineItem.notation_flags.",
+
+  "normalization": {
+    "case_insensitive": false,
+    "collapse_whitespace": true,
+    "strip_punctuation": false
+  },
+
+  "entries": {
+    "parens_negative": {
+      "canonical": "PARENS_NEGATIVE",
+      "regex_patterns": [
+        {
+          "pattern": "^\\$?\\(\\s*[\\d,\\.]+\\s*\\)$",
+          "description": "$(1,234) or (1,234.56) — accounting parens for negative",
+          "captures": {}
+        }
+      ]
+    },
+    "negative_minus": {
+      "canonical": "NEGATIVE_MINUS",
+      "regex_patterns": [
+        { "pattern": "^-\\s*\\$?[\\d,\\.]+$", "description": "-1,234 or -$1,234", "captures": {} },
+        { "pattern": "^\\$?-[\\d,\\.]+$", "description": "$-1,234 (rare)", "captures": {} }
+      ]
+    },
+    "zero_dash": {
+      "canonical": "ZERO_DASH",
+      "regex_patterns": [
+        { "pattern": "^\\s*[—\\-–]\\s*$", "description": "— (em dash), - (hyphen), or – (en dash) used for zero/null", "captures": {} }
+      ]
+    },
+    "dollar_sign": {
+      "canonical": "DOLLAR_SIGN",
+      "regex_patterns": [
+        { "pattern": "\\$", "description": "Any cell containing a dollar sign", "captures": {} }
+      ]
+    },
+    "trailing_asterisk": {
+      "canonical": "TRAILING_ASTERISK",
+      "regex_patterns": [
+        { "pattern": "\\*\\s*$", "description": "1,234* — trailing asterisk referring to a footnote", "captures": {} }
+      ]
+    },
+    "has_footnote": {
+      "canonical": "HAS_FOOTNOTE",
+      "regex_patterns": [
+        { "pattern": "\\([a-zA-Z0-9]{1,2}\\)\\s*$", "description": "(1) or (a) or (14) — footnote reference at end of cell", "captures": {} }
+      ]
+    },
+    "superscript_suffix": {
+      "canonical": "SUPERSCRIPT_SUFFIX",
+      "regex_patterns": [
+        { "pattern": "^\\$?[\\d,\\.]+\\s*[KMB]$", "description": "$1.3B or 1,234M — magnitude suffix appended", "captures": {} }
+      ]
+    }
+  }
+}
