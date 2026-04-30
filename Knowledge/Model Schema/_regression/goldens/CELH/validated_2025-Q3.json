@@ -27,7 +27,7 @@
           "line_items": [
             {
               "raw_filing_label": "Cash and cash equivalents",
-              "canonical_label": "Cash & Cash Equivalents",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
               "ledger_rule_id": "GEN-BS-001",
               "value": "805955",
               "raw_numeric_text": "805,955",
@@ -47,8 +47,8 @@
             },
             {
               "raw_filing_label": "Restricted cash",
-              "canonical_label": "Restricted Cash",
-              "ledger_rule_id": "GEN-BS-002",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+              "ledger_rule_id": "GEN-BS-001",
               "value": "126508",
               "raw_numeric_text": "126,508",
               "notation_flags": 0,
@@ -868,7 +868,7 @@
           "line_items": [
             {
               "raw_filing_label": "Cash and cash equivalents",
-              "canonical_label": "Cash & Cash Equivalents",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
               "ledger_rule_id": "GEN-BS-001",
               "value": "890190",
               "raw_numeric_text": "890,190",
@@ -4357,7 +4357,7 @@
     "mapped_line_items": [
       {
         "raw_filing_label": "Cash and cash equivalents",
-        "canonical_label": "Cash & Cash Equivalents",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
         "ledger_rule_id": "GEN-BS-001",
         "value": "805955",
         "raw_numeric_text": "805,955",
@@ -4376,13 +4376,13 @@
         },
         "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Cash & Cash Equivalents",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {
         "raw_filing_label": "Restricted cash",
-        "canonical_label": "Restricted Cash",
-        "ledger_rule_id": "GEN-BS-002",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+        "ledger_rule_id": "GEN-BS-001",
         "value": "126508",
         "raw_numeric_text": "126,508",
         "notation_flags": 0,
@@ -4400,7 +4400,7 @@
         },
         "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Restricted Cash",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {
@@ -5341,7 +5341,7 @@
       },
       {
         "raw_filing_label": "Cash and cash equivalents",
-        "canonical_label": "Cash & Cash Equivalents",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
         "ledger_rule_id": "GEN-BS-001",
         "value": "890190",
         "raw_numeric_text": "890,190",
@@ -5360,7 +5360,7 @@
         },
         "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Cash & Cash Equivalents",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {

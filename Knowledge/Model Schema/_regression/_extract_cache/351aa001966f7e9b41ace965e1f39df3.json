@@ -1,0 +1,4734 @@
+{
+  "ticker": "GOOG",
+  "filing_type": "10-K",
+  "filing_date": "2023-02-03",
+  "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+  "statements": [
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": null,
+        "period_end_date": "2022-12-31",
+        "raw_period_label": "as of 2022-12-31",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+          "ledger_rule_id": "GEN-BS-001",
+          "value": "21879",
+          "raw_numeric_text": "21,879",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashAndCashEquivalentsAtCarryingValue | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Marketable securities",
+          "canonical_label": "Short-Term Investments",
+          "ledger_rule_id": "GEN-BS-044",
+          "value": "91883",
+          "raw_numeric_text": "91,883",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:MarketableSecuritiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total cash, cash equivalents, and marketable securities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "113762",
+          "raw_numeric_text": "113,762",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsAndShortTermInvestments | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable, net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "40258",
+          "raw_numeric_text": "40,258",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Inventory",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-BS-005",
+          "value": "2670",
+          "raw_numeric_text": "2,670",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Other current assets",
+          "canonical_label": "Other Current Assets",
+          "ledger_rule_id": "GEN-BS-055",
+          "value": "8105",
+          "raw_numeric_text": "8,105",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "164795",
+          "raw_numeric_text": "164,795",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Non-marketable securities",
+          "canonical_label": "Long-Term Investments",
+          "ledger_rule_id": "GEN-BS-048",
+          "value": "30492",
+          "raw_numeric_text": "30,492",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLongTermInvestments | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "Deferred Tax Assets",
+          "ledger_rule_id": "GEN-BS-008",
+          "value": "5261",
+          "raw_numeric_text": "5,261",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxAssetsNet | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Property and equipment, net",
+          "canonical_label": "Net PP&E",
+          "ledger_rule_id": "GEN-BS-007",
+          "value": "112668",
+          "raw_numeric_text": "112,668",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Operating lease assets",
+          "canonical_label": "ROU Assets - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-009",
+          "value": "14381",
+          "raw_numeric_text": "14,381",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Intangible assets, net",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "2084",
+          "raw_numeric_text": "2,084",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "canonical_label": "Goodwill",
+          "ledger_rule_id": "GEN-BS-013",
+          "value": "28960",
+          "raw_numeric_text": "28,960",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Other non-current assets",
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
+          "value": "6623",
+          "raw_numeric_text": "6,623",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "365264",
+          "raw_numeric_text": "365,264",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-BS-015",
+          "value": "5128",
+          "raw_numeric_text": "5,128",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued compensation and benefits",
+          "canonical_label": "Accrued Compensation",
+          "ledger_rule_id": "GEN-BS-049",
+          "value": "14028",
+          "raw_numeric_text": "14,028",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EmployeeRelatedLiabilitiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued expenses and other current liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
+          "value": "37866",
+          "raw_numeric_text": "37,866",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued revenue share",
+          "canonical_label": "Accrued Revenue Share",
+          "ledger_rule_id": "GEN-BS-056",
+          "value": "8370",
+          "raw_numeric_text": "8,370",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AccruedRevenueShare | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue - Current",
+          "ledger_rule_id": "GEN-BS-021",
+          "value": "3908",
+          "raw_numeric_text": "3,908",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current liabilities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "69300",
+          "raw_numeric_text": "69,300",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Long-term debt",
+          "canonical_label": "Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-041",
+          "value": "14701",
+          "raw_numeric_text": "14,701",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermDebtAndCapitalLeaseObligations | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue, non-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
+          "value": "599",
+          "raw_numeric_text": "599",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes payable, non-current",
+          "canonical_label": "Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-041",
+          "value": "9258",
+          "raw_numeric_text": "9,258",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedIncomeTaxesNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "Deferred Tax Liability",
+          "ledger_rule_id": "GEN-BS-025",
+          "value": "514",
+          "raw_numeric_text": "514",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Operating lease liabilities",
+          "canonical_label": "Lease Liability - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-023",
+          "value": "12501",
+          "raw_numeric_text": "12,501",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Other long-term liabilities",
+          "canonical_label": "Other Non-Current Liabilities",
+          "ledger_rule_id": "GEN-BS-034",
+          "value": "2247",
+          "raw_numeric_text": "2,247",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total liabilities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "109120",
+          "raw_numeric_text": "109,120",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Liabilities | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred stock, $ 0.001  par value per share,  100  shares authorized;  no  shares issued and outstanding",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
+          "value": "0",
+          "raw_numeric_text": "0",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ConvertiblePreferredStockNonredeemableOrRedeemableIssuerOptionValue | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A, Class B, and Class C stock and additional paid-in capital, $ 0.001  par value per share:  300,000  shares authorized (Class A  180,000 , Class B  60,000 , Class C  60,000 );  13,242  (Class A  6,015 , Class B  893 , Class C  6,334 ) and  12,849  (Class A  5,964 , Class B  883 , Class C  6,002 ) shares issued and outstanding",
+          "canonical_label": "Common Stock and Additional Paid-in Capital",
+          "ledger_rule_id": "GEN-BS-054",
+          "value": "68184",
+          "raw_numeric_text": "68,184",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStocksIncludingAdditionalPaidInCapital | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Authorized",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "60000",
+          "raw_numeric_text": "60,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Outstanding",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "12849000000",
+          "raw_numeric_text": "12,849",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "5964000000",
+          "raw_numeric_text": "5,964",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Outstanding",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "883000000",
+          "raw_numeric_text": "883",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "6002000000",
+          "raw_numeric_text": "6,002",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accumulated other comprehensive income (loss)",
+          "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+          "ledger_rule_id": "GEN-BS-030",
+          "value": "-7603",
+          "raw_numeric_text": "7,603",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Retained earnings",
+          "canonical_label": "Retained Earnings (Accumulated Deficit)",
+          "ledger_rule_id": "GEN-BS-031",
+          "value": "195563",
+          "raw_numeric_text": "195,563",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total stockholders’ equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "256144",
+          "raw_numeric_text": "256,144",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquity | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total liabilities and stockholders’ equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "365264",
+          "raw_numeric_text": "365,264",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2021,
+        "fiscal_quarter": null,
+        "period_end_date": "2021-12-31",
+        "raw_period_label": "as of 2021-12-31",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+          "ledger_rule_id": "GEN-BS-001",
+          "value": "20945",
+          "raw_numeric_text": "20,945",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashAndCashEquivalentsAtCarryingValue | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Marketable securities",
+          "canonical_label": "Short-Term Investments",
+          "ledger_rule_id": "GEN-BS-044",
+          "value": "118704",
+          "raw_numeric_text": "118,704",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:MarketableSecuritiesCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total cash, cash equivalents, and marketable securities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "139649",
+          "raw_numeric_text": "139,649",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsAndShortTermInvestments | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable, net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "39304",
+          "raw_numeric_text": "39,304",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Inventory",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-BS-005",
+          "value": "1170",
+          "raw_numeric_text": "1,170",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Other current assets",
+          "canonical_label": "Other Current Assets",
+          "ledger_rule_id": "GEN-BS-055",
+          "value": "8020",
+          "raw_numeric_text": "8,020",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "188143",
+          "raw_numeric_text": "188,143",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Non-marketable securities",
+          "canonical_label": "Long-Term Investments",
+          "ledger_rule_id": "GEN-BS-048",
+          "value": "29549",
+          "raw_numeric_text": "29,549",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLongTermInvestments | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "Deferred Tax Assets",
+          "ledger_rule_id": "GEN-BS-008",
+          "value": "1284",
+          "raw_numeric_text": "1,284",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxAssetsNet | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Property and equipment, net",
+          "canonical_label": "Net PP&E",
+          "ledger_rule_id": "GEN-BS-007",
+          "value": "97599",
+          "raw_numeric_text": "97,599",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Operating lease assets",
+          "canonical_label": "ROU Assets - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-009",
+          "value": "12959",
+          "raw_numeric_text": "12,959",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Intangible assets, net",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "1417",
+          "raw_numeric_text": "1,417",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Goodwill",
+          "canonical_label": "Goodwill",
+          "ledger_rule_id": "GEN-BS-013",
+          "value": "22956",
+          "raw_numeric_text": "22,956",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Other non-current assets",
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
+          "value": "5361",
+          "raw_numeric_text": "5,361",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "359268",
+          "raw_numeric_text": "359,268",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-BS-015",
+          "value": "6037",
+          "raw_numeric_text": "6,037",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued compensation and benefits",
+          "canonical_label": "Accrued Compensation",
+          "ledger_rule_id": "GEN-BS-049",
+          "value": "13889",
+          "raw_numeric_text": "13,889",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EmployeeRelatedLiabilitiesCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued expenses and other current liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
+          "value": "32044",
+          "raw_numeric_text": "32,044",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued revenue share",
+          "canonical_label": "Accrued Revenue Share",
+          "ledger_rule_id": "GEN-BS-056",
+          "value": "8996",
+          "raw_numeric_text": "8,996",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AccruedRevenueShare | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue - Current",
+          "ledger_rule_id": "GEN-BS-021",
+          "value": "3288",
+          "raw_numeric_text": "3,288",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current liabilities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "64254",
+          "raw_numeric_text": "64,254",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Long-term debt",
+          "canonical_label": "Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-041",
+          "value": "14817",
+          "raw_numeric_text": "14,817",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermDebtAndCapitalLeaseObligations | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue, non-current",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
+          "value": "535",
+          "raw_numeric_text": "535",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityNoncurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes payable, non-current",
+          "canonical_label": "Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-041",
+          "value": "9176",
+          "raw_numeric_text": "9,176",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedIncomeTaxesNoncurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "Deferred Tax Liability",
+          "ledger_rule_id": "GEN-BS-025",
+          "value": "5257",
+          "raw_numeric_text": "5,257",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Operating lease liabilities",
+          "canonical_label": "Lease Liability - Operating - Non-Current",
+          "ledger_rule_id": "GEN-BS-023",
+          "value": "11389",
+          "raw_numeric_text": "11,389",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Other long-term liabilities",
+          "canonical_label": "Other Non-Current Liabilities",
+          "ledger_rule_id": "GEN-BS-034",
+          "value": "2205",
+          "raw_numeric_text": "2,205",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total liabilities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "107633",
+          "raw_numeric_text": "107,633",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Liabilities | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred stock, $ 0.001  par value per share,  100  shares authorized;  no  shares issued and outstanding",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
+          "value": "0",
+          "raw_numeric_text": "0",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ConvertiblePreferredStockNonredeemableOrRedeemableIssuerOptionValue | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred stock - Preferred Stock Par Or Stated Value Per Share",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1E-9",
+          "raw_numeric_text": "0.001",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockParOrStatedValuePerShare | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred stock - Preferred Stock Shares Authorized",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "100",
+          "raw_numeric_text": "100",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockSharesAuthorized | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A, Class B, and Class C stock and additional paid-in capital, $ 0.001  par value per share:  300,000  shares authorized (Class A  180,000 , Class B  60,000 , Class C  60,000 );  13,242  (Class A  6,015 , Class B  893 , Class C  6,334 ) and  12,849  (Class A  5,964 , Class B  883 , Class C  6,002 ) shares issued and outstanding",
+          "canonical_label": "Common Stock and Additional Paid-in Capital",
+          "ledger_rule_id": "GEN-BS-054",
+          "value": "61774",
+          "raw_numeric_text": "61,774",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStocksIncludingAdditionalPaidInCapital | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Par Or Stated Value Per Share",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1E-9",
+          "raw_numeric_text": "0.001",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Authorized",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "300000",
+          "raw_numeric_text": "300,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Authorized",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "180000",
+          "raw_numeric_text": "180,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Authorized",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "60000",
+          "raw_numeric_text": "60,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Outstanding",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "13242000000",
+          "raw_numeric_text": "13,242",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "6015000000",
+          "raw_numeric_text": "6,015",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Outstanding",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "893000000",
+          "raw_numeric_text": "893",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Class A - Common Stock Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "6334000000",
+          "raw_numeric_text": "6,334",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accumulated other comprehensive income (loss)",
+          "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+          "ledger_rule_id": "GEN-BS-030",
+          "value": "-1623",
+          "raw_numeric_text": "1,623",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Retained earnings",
+          "canonical_label": "Retained Earnings (Accumulated Deficit)",
+          "ledger_rule_id": "GEN-BS-031",
+          "value": "191484",
+          "raw_numeric_text": "191,484",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total stockholders’ equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "251635",
+          "raw_numeric_text": "251,635",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquity | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total liabilities and stockholders’ equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "359268",
+          "raw_numeric_text": "359,268",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": null,
+        "period_end_date": "2022-12-31",
+        "raw_period_label": "2022-01-01 to 2022-12-31 (52wk)",
+        "period_length_weeks": 52,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Revenues",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "282836",
+          "raw_numeric_text": "282,836",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Cost of revenues",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "126203",
+          "raw_numeric_text": "126,203",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfRevenue | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Research and development",
+          "canonical_label": "Research and Development",
+          "ledger_rule_id": "GEN-IS-027",
+          "value": "39500",
+          "raw_numeric_text": "39,500",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ResearchAndDevelopmentExpense | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Sales and marketing",
+          "canonical_label": "Sales and Marketing",
+          "ledger_rule_id": "GEN-IS-028",
+          "value": "26567",
+          "raw_numeric_text": "26,567",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingAndMarketingExpense | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "General and administrative",
+          "canonical_label": "General and Administrative",
+          "ledger_rule_id": "GEN-IS-029",
+          "value": "15724",
+          "raw_numeric_text": "15,724",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GeneralAndAdministrativeExpense | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Total costs and expenses",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "207994",
+          "raw_numeric_text": "207,994",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostsAndExpenses | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income from operations",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "74842",
+          "raw_numeric_text": "74,842",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Other income (expense), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "-3514",
+          "raw_numeric_text": "3,514",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NonoperatingIncomeExpense | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income before income taxes",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "71328",
+          "raw_numeric_text": "71,328",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Provision for income taxes",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "11356",
+          "raw_numeric_text": "11,356",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "59972",
+          "raw_numeric_text": "59,972",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic net income per share of Class A, Class B, and Class C stock",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "4.59",
+          "raw_numeric_text": "4.59",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted net income per share of Class A, Class B, and Class C stock",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "4.56",
+          "raw_numeric_text": "4.56",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "59972",
+          "raw_numeric_text": "59,972",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2021,
+        "fiscal_quarter": null,
+        "period_end_date": "2021-12-31",
+        "raw_period_label": "2021-01-01 to 2021-12-31 (52wk)",
+        "period_length_weeks": 52,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Revenues",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "257637",
+          "raw_numeric_text": "257,637",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Cost of revenues",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "110939",
+          "raw_numeric_text": "110,939",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfRevenue | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Research and development",
+          "canonical_label": "Research and Development",
+          "ledger_rule_id": "GEN-IS-027",
+          "value": "31562",
+          "raw_numeric_text": "31,562",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ResearchAndDevelopmentExpense | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Sales and marketing",
+          "canonical_label": "Sales and Marketing",
+          "ledger_rule_id": "GEN-IS-028",
+          "value": "22912",
+          "raw_numeric_text": "22,912",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingAndMarketingExpense | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "General and administrative",
+          "canonical_label": "General and Administrative",
+          "ledger_rule_id": "GEN-IS-029",
+          "value": "13510",
+          "raw_numeric_text": "13,510",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GeneralAndAdministrativeExpense | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Total costs and expenses",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "178923",
+          "raw_numeric_text": "178,923",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostsAndExpenses | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income from operations",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "78714",
+          "raw_numeric_text": "78,714",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Other income (expense), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "12020",
+          "raw_numeric_text": "12,020",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NonoperatingIncomeExpense | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income before income taxes",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "90734",
+          "raw_numeric_text": "90,734",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Provision for income taxes",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "14701",
+          "raw_numeric_text": "14,701",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "76033",
+          "raw_numeric_text": "76,033",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic net income per share of Class A, Class B, and Class C stock",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "5.69",
+          "raw_numeric_text": "5.69",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted net income per share of Class A, Class B, and Class C stock",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "5.61",
+          "raw_numeric_text": "5.61",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "76033",
+          "raw_numeric_text": "76,033",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2020,
+        "fiscal_quarter": null,
+        "period_end_date": "2020-12-31",
+        "raw_period_label": "2020-01-01 to 2020-12-31 (52wk)",
+        "period_length_weeks": 52,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Revenues",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "182527",
+          "raw_numeric_text": "182,527",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Cost of revenues",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "84732",
+          "raw_numeric_text": "84,732",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfRevenue | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Research and development",
+          "canonical_label": "Research and Development",
+          "ledger_rule_id": "GEN-IS-027",
+          "value": "27573",
+          "raw_numeric_text": "27,573",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ResearchAndDevelopmentExpense | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Sales and marketing",
+          "canonical_label": "Sales and Marketing",
+          "ledger_rule_id": "GEN-IS-028",
+          "value": "17946",
+          "raw_numeric_text": "17,946",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingAndMarketingExpense | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "General and administrative",
+          "canonical_label": "General and Administrative",
+          "ledger_rule_id": "GEN-IS-029",
+          "value": "11052",
+          "raw_numeric_text": "11,052",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GeneralAndAdministrativeExpense | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Total costs and expenses",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "141303",
+          "raw_numeric_text": "141,303",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostsAndExpenses | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income from operations",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "41224",
+          "raw_numeric_text": "41,224",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Other income (expense), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "6858",
+          "raw_numeric_text": "6,858",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NonoperatingIncomeExpense | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income before income taxes",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "48082",
+          "raw_numeric_text": "48,082",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Provision for income taxes",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "7813",
+          "raw_numeric_text": "7,813",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "40269",
+          "raw_numeric_text": "40,269",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic net income per share of Class A, Class B, and Class C stock",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "2.96",
+          "raw_numeric_text": "2.96",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted net income per share of Class A, Class B, and Class C stock",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "2.93",
+          "raw_numeric_text": "2.93",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "40269",
+          "raw_numeric_text": "40,269",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": null,
+        "period_end_date": "2022-12-31",
+        "raw_period_label": "2022-01-01 to 2022-12-31 (52wk)",
+        "period_length_weeks": 52,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "59972",
+          "raw_numeric_text": "59,972",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation and impairment of property and equipment",
+          "canonical_label": "Depreciation and Impairment of PP&E",
+          "ledger_rule_id": "GEN-CF-080",
+          "value": "15287",
+          "raw_numeric_text": "15,287",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:DepreciationAndImpairmentOnDispositionOfPropertyAndEquipment | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Amortization and impairment of intangible assets",
+          "canonical_label": "Amortization and Impairment of Intangibles",
+          "ledger_rule_id": "GEN-CF-079",
+          "value": "641",
+          "raw_numeric_text": "641",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AmortizationAndImpairmentOfIntangibleAssets | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Stock-based compensation expense",
+          "canonical_label": "Stock-Based Compensation",
+          "ledger_rule_id": "GEN-CF-006",
+          "value": "19362",
+          "raw_numeric_text": "19,362",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
+          "value": "-8081",
+          "raw_numeric_text": "8,081",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxesAndTaxCredits | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "(Gain) loss on debt and equity securities, net",
+          "canonical_label": "Loss (Gain) on Equity and Debt Securities, Net",
+          "ledger_rule_id": "GEN-CF-081",
+          "value": "5519",
+          "raw_numeric_text": "5,519",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DebtAndEquitySecuritiesGainLoss | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "1030",
+          "raw_numeric_text": "1,030",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNoncashIncomeExpense | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable, net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-CF-011",
+          "value": "-2317",
+          "raw_numeric_text": "2,317",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes, net",
+          "canonical_label": "Change in Income Taxes",
+          "ledger_rule_id": "GEN-CF-076",
+          "value": "584",
+          "raw_numeric_text": "584",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInIncomeTaxes | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other assets",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "-5046",
+          "raw_numeric_text": "5,046",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInOtherOperatingAssets | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-CF-014",
+          "value": "707",
+          "raw_numeric_text": "707",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayable | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued expenses and other liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-CF-015",
+          "value": "3915",
+          "raw_numeric_text": "3,915",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccruedLiabilities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued revenue share",
+          "canonical_label": "Accrued Revenue Share",
+          "ledger_rule_id": "GEN-CF-075",
+          "value": "-445",
+          "raw_numeric_text": "445",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:IncreaseDecreaseInAccruedRevenueShare | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue",
+          "ledger_rule_id": "GEN-CF-019",
+          "value": "367",
+          "raw_numeric_text": "367",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInContractWithCustomerLiability | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by operating activities",
+          "canonical_label": "Cash Flow from Operations",
+          "ledger_rule_id": "GEN-CF-022",
+          "value": "91495",
+          "raw_numeric_text": "91,495",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of property and equipment",
+          "canonical_label": "Purchase of PP&E",
+          "ledger_rule_id": "GEN-CF-024",
+          "value": "-31485",
+          "raw_numeric_text": "31,485",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of marketable securities",
+          "canonical_label": "Net Change in Short-Term Investments",
+          "ledger_rule_id": "GEN-CF-057",
+          "value": "-78874",
+          "raw_numeric_text": "78,874",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireMarketableSecurities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Maturities and sales of marketable securities",
+          "canonical_label": "Net Change in Short-Term Investments",
+          "ledger_rule_id": "GEN-CF-057",
+          "value": "97822",
+          "raw_numeric_text": "97,822",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfMarketableSecurities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of non-marketable securities",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "-2531",
+          "raw_numeric_text": "2,531",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireOtherInvestments | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Maturities and sales of non-marketable securities",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "150",
+          "raw_numeric_text": "150",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfOtherInvestments | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Acquisitions, net of cash acquired, and purchases of intangible assets",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "-6969",
+          "raw_numeric_text": "6,969",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other investing activities",
+          "canonical_label": "Other Investing Activities",
+          "ledger_rule_id": "GEN-CF-043",
+          "value": "1589",
+          "raw_numeric_text": "1,589",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromOtherInvestingActivities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in investing activities",
+          "canonical_label": "Cash Flow from Investing",
+          "ledger_rule_id": "GEN-CF-026",
+          "value": "-20298",
+          "raw_numeric_text": "20,298",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net payments related to stock-based award activities",
+          "canonical_label": "Stock-Based Award Activities, Net",
+          "ledger_rule_id": "GEN-CF-077",
+          "value": "-9300",
+          "raw_numeric_text": "9,300",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:NetProceedsPaymentsRelatedToStockBasedAwardActivities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Repurchases of stock",
+          "canonical_label": "Share Repurchases",
+          "ledger_rule_id": "GEN-CF-032",
+          "value": "-59296",
+          "raw_numeric_text": "59,296",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from issuance of debt, net of costs",
+          "canonical_label": "Proceeds from Issuance of Long-Term Debt",
+          "ledger_rule_id": "GEN-CF-047",
+          "value": "52872",
+          "raw_numeric_text": "52,872",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromDebtNetOfIssuanceCosts | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Repayments of debt",
+          "canonical_label": "Net Change in Other Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-046",
+          "value": "-54068",
+          "raw_numeric_text": "54,068",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfDebtAndCapitalLeaseObligations | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from sale of interest in consolidated entities, net",
+          "canonical_label": "Proceeds from Sale of Interest in Consolidated Entities",
+          "ledger_rule_id": "GEN-CF-078",
+          "value": "35",
+          "raw_numeric_text": "35",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromMinorityShareholders | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in financing activities",
+          "canonical_label": "Cash Flow from Financing",
+          "ledger_rule_id": "GEN-CF-033",
+          "value": "-69757",
+          "raw_numeric_text": "69,757",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Effect of exchange rate changes on cash and cash equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "-506",
+          "raw_numeric_text": "506",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net increase (decrease) in cash and cash equivalents",
+          "canonical_label": "Net Change in Cash",
+          "ledger_rule_id": "GEN-CF-035",
+          "value": "934",
+          "raw_numeric_text": "934",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash paid for income taxes, net of refunds",
+          "canonical_label": "Cash Paid for Taxes",
+          "ledger_rule_id": "GEN-CF-039",
+          "value": "18892",
+          "raw_numeric_text": "18,892",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxesPaidNet | ctx:duration:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash and cash equivalents at beginning of period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "20945",
+          "raw_numeric_text": "20,945",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash and cash equivalents at end of period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "21879",
+          "raw_numeric_text": "21,879",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2021,
+        "fiscal_quarter": null,
+        "period_end_date": "2021-12-31",
+        "raw_period_label": "2021-01-01 to 2021-12-31 (52wk)",
+        "period_length_weeks": 52,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "76033",
+          "raw_numeric_text": "76,033",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation and impairment of property and equipment",
+          "canonical_label": "Depreciation and Impairment of PP&E",
+          "ledger_rule_id": "GEN-CF-080",
+          "value": "11555",
+          "raw_numeric_text": "11,555",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:DepreciationAndImpairmentOnDispositionOfPropertyAndEquipment | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Amortization and impairment of intangible assets",
+          "canonical_label": "Amortization and Impairment of Intangibles",
+          "ledger_rule_id": "GEN-CF-079",
+          "value": "886",
+          "raw_numeric_text": "886",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AmortizationAndImpairmentOfIntangibleAssets | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Stock-based compensation expense",
+          "canonical_label": "Stock-Based Compensation",
+          "ledger_rule_id": "GEN-CF-006",
+          "value": "15376",
+          "raw_numeric_text": "15,376",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
+          "value": "1808",
+          "raw_numeric_text": "1,808",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxesAndTaxCredits | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "(Gain) loss on debt and equity securities, net",
+          "canonical_label": "Loss (Gain) on Equity and Debt Securities, Net",
+          "ledger_rule_id": "GEN-CF-081",
+          "value": "-12270",
+          "raw_numeric_text": "12,270",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DebtAndEquitySecuritiesGainLoss | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "-213",
+          "raw_numeric_text": "213",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNoncashIncomeExpense | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable, net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-CF-011",
+          "value": "-9095",
+          "raw_numeric_text": "9,095",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes, net",
+          "canonical_label": "Change in Income Taxes",
+          "ledger_rule_id": "GEN-CF-076",
+          "value": "-625",
+          "raw_numeric_text": "625",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInIncomeTaxes | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other assets",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "-1846",
+          "raw_numeric_text": "1,846",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInOtherOperatingAssets | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-CF-014",
+          "value": "283",
+          "raw_numeric_text": "283",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayable | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued expenses and other liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-CF-015",
+          "value": "7304",
+          "raw_numeric_text": "7,304",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccruedLiabilities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued revenue share",
+          "canonical_label": "Accrued Revenue Share",
+          "ledger_rule_id": "GEN-CF-075",
+          "value": "1682",
+          "raw_numeric_text": "1,682",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:IncreaseDecreaseInAccruedRevenueShare | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue",
+          "ledger_rule_id": "GEN-CF-019",
+          "value": "774",
+          "raw_numeric_text": "774",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInContractWithCustomerLiability | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by operating activities",
+          "canonical_label": "Cash Flow from Operations",
+          "ledger_rule_id": "GEN-CF-022",
+          "value": "91652",
+          "raw_numeric_text": "91,652",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of property and equipment",
+          "canonical_label": "Purchase of PP&E",
+          "ledger_rule_id": "GEN-CF-024",
+          "value": "-24640",
+          "raw_numeric_text": "24,640",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of marketable securities",
+          "canonical_label": "Net Change in Short-Term Investments",
+          "ledger_rule_id": "GEN-CF-057",
+          "value": "-135196",
+          "raw_numeric_text": "135,196",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireMarketableSecurities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Maturities and sales of marketable securities",
+          "canonical_label": "Net Change in Short-Term Investments",
+          "ledger_rule_id": "GEN-CF-057",
+          "value": "128294",
+          "raw_numeric_text": "128,294",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfMarketableSecurities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of non-marketable securities",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "-2838",
+          "raw_numeric_text": "2,838",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireOtherInvestments | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Maturities and sales of non-marketable securities",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "934",
+          "raw_numeric_text": "934",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfOtherInvestments | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Acquisitions, net of cash acquired, and purchases of intangible assets",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "-2618",
+          "raw_numeric_text": "2,618",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other investing activities",
+          "canonical_label": "Other Investing Activities",
+          "ledger_rule_id": "GEN-CF-043",
+          "value": "541",
+          "raw_numeric_text": "541",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromOtherInvestingActivities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in investing activities",
+          "canonical_label": "Cash Flow from Investing",
+          "ledger_rule_id": "GEN-CF-026",
+          "value": "-35523",
+          "raw_numeric_text": "35,523",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net payments related to stock-based award activities",
+          "canonical_label": "Stock-Based Award Activities, Net",
+          "ledger_rule_id": "GEN-CF-077",
+          "value": "-10162",
+          "raw_numeric_text": "10,162",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:NetProceedsPaymentsRelatedToStockBasedAwardActivities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Repurchases of stock",
+          "canonical_label": "Share Repurchases",
+          "ledger_rule_id": "GEN-CF-032",
+          "value": "-50274",
+          "raw_numeric_text": "50,274",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from issuance of debt, net of costs",
+          "canonical_label": "Proceeds from Issuance of Long-Term Debt",
+          "ledger_rule_id": "GEN-CF-047",
+          "value": "20199",
+          "raw_numeric_text": "20,199",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromDebtNetOfIssuanceCosts | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Repayments of debt",
+          "canonical_label": "Net Change in Other Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-046",
+          "value": "-21435",
+          "raw_numeric_text": "21,435",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfDebtAndCapitalLeaseObligations | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from sale of interest in consolidated entities, net",
+          "canonical_label": "Proceeds from Sale of Interest in Consolidated Entities",
+          "ledger_rule_id": "GEN-CF-078",
+          "value": "310",
+          "raw_numeric_text": "310",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromMinorityShareholders | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in financing activities",
+          "canonical_label": "Cash Flow from Financing",
+          "ledger_rule_id": "GEN-CF-033",
+          "value": "-61362",
+          "raw_numeric_text": "61,362",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Effect of exchange rate changes on cash and cash equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "-287",
+          "raw_numeric_text": "287",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net increase (decrease) in cash and cash equivalents",
+          "canonical_label": "Net Change in Cash",
+          "ledger_rule_id": "GEN-CF-035",
+          "value": "-5520",
+          "raw_numeric_text": "5,520",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash paid for income taxes, net of refunds",
+          "canonical_label": "Cash Paid for Taxes",
+          "ledger_rule_id": "GEN-CF-039",
+          "value": "13412",
+          "raw_numeric_text": "13,412",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxesPaidNet | ctx:duration:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash and cash equivalents at beginning of period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "26465",
+          "raw_numeric_text": "26,465",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash and cash equivalents at end of period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "20945",
+          "raw_numeric_text": "20,945",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2020,
+        "fiscal_quarter": null,
+        "period_end_date": "2020-12-31",
+        "raw_period_label": "2020-01-01 to 2020-12-31 (52wk)",
+        "period_length_weeks": 52,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "40269",
+          "raw_numeric_text": "40,269",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation and impairment of property and equipment",
+          "canonical_label": "Depreciation and Impairment of PP&E",
+          "ledger_rule_id": "GEN-CF-080",
+          "value": "12905",
+          "raw_numeric_text": "12,905",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:DepreciationAndImpairmentOnDispositionOfPropertyAndEquipment | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Amortization and impairment of intangible assets",
+          "canonical_label": "Amortization and Impairment of Intangibles",
+          "ledger_rule_id": "GEN-CF-079",
+          "value": "792",
+          "raw_numeric_text": "792",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AmortizationAndImpairmentOfIntangibleAssets | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Stock-based compensation expense",
+          "canonical_label": "Stock-Based Compensation",
+          "ledger_rule_id": "GEN-CF-006",
+          "value": "12991",
+          "raw_numeric_text": "12,991",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
+          "value": "1390",
+          "raw_numeric_text": "1,390",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxesAndTaxCredits | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "(Gain) loss on debt and equity securities, net",
+          "canonical_label": "Loss (Gain) on Equity and Debt Securities, Net",
+          "ledger_rule_id": "GEN-CF-081",
+          "value": "-6317",
+          "raw_numeric_text": "6,317",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DebtAndEquitySecuritiesGainLoss | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "1267",
+          "raw_numeric_text": "1,267",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNoncashIncomeExpense | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable, net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-CF-011",
+          "value": "-6524",
+          "raw_numeric_text": "6,524",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes, net",
+          "canonical_label": "Change in Income Taxes",
+          "ledger_rule_id": "GEN-CF-076",
+          "value": "1209",
+          "raw_numeric_text": "1,209",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInIncomeTaxes | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other assets",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "-1330",
+          "raw_numeric_text": "1,330",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInOtherOperatingAssets | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-CF-014",
+          "value": "694",
+          "raw_numeric_text": "694",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayable | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued expenses and other liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-CF-015",
+          "value": "5504",
+          "raw_numeric_text": "5,504",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccruedLiabilities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued revenue share",
+          "canonical_label": "Accrued Revenue Share",
+          "ledger_rule_id": "GEN-CF-075",
+          "value": "1639",
+          "raw_numeric_text": "1,639",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:IncreaseDecreaseInAccruedRevenueShare | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue",
+          "ledger_rule_id": "GEN-CF-019",
+          "value": "635",
+          "raw_numeric_text": "635",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInContractWithCustomerLiability | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by operating activities",
+          "canonical_label": "Cash Flow from Operations",
+          "ledger_rule_id": "GEN-CF-022",
+          "value": "65124",
+          "raw_numeric_text": "65,124",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of property and equipment",
+          "canonical_label": "Purchase of PP&E",
+          "ledger_rule_id": "GEN-CF-024",
+          "value": "-22281",
+          "raw_numeric_text": "22,281",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of marketable securities",
+          "canonical_label": "Net Change in Short-Term Investments",
+          "ledger_rule_id": "GEN-CF-057",
+          "value": "-136576",
+          "raw_numeric_text": "136,576",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireMarketableSecurities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Maturities and sales of marketable securities",
+          "canonical_label": "Net Change in Short-Term Investments",
+          "ledger_rule_id": "GEN-CF-057",
+          "value": "132906",
+          "raw_numeric_text": "132,906",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfMarketableSecurities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of non-marketable securities",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "-7175",
+          "raw_numeric_text": "7,175",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireOtherInvestments | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Maturities and sales of non-marketable securities",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "1023",
+          "raw_numeric_text": "1,023",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleAndMaturityOfOtherInvestments | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Acquisitions, net of cash acquired, and purchases of intangible assets",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "-738",
+          "raw_numeric_text": "738",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other investing activities",
+          "canonical_label": "Other Investing Activities",
+          "ledger_rule_id": "GEN-CF-043",
+          "value": "68",
+          "raw_numeric_text": "68",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromOtherInvestingActivities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in investing activities",
+          "canonical_label": "Cash Flow from Investing",
+          "ledger_rule_id": "GEN-CF-026",
+          "value": "-32773",
+          "raw_numeric_text": "32,773",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net payments related to stock-based award activities",
+          "canonical_label": "Stock-Based Award Activities, Net",
+          "ledger_rule_id": "GEN-CF-077",
+          "value": "-5720",
+          "raw_numeric_text": "5,720",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "goog:NetProceedsPaymentsRelatedToStockBasedAwardActivities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Repurchases of stock",
+          "canonical_label": "Share Repurchases",
+          "ledger_rule_id": "GEN-CF-032",
+          "value": "-31149",
+          "raw_numeric_text": "31,149",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from issuance of debt, net of costs",
+          "canonical_label": "Proceeds from Issuance of Long-Term Debt",
+          "ledger_rule_id": "GEN-CF-047",
+          "value": "11761",
+          "raw_numeric_text": "11,761",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromDebtNetOfIssuanceCosts | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Repayments of debt",
+          "canonical_label": "Net Change in Other Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-046",
+          "value": "-2100",
+          "raw_numeric_text": "2,100",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfDebtAndCapitalLeaseObligations | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from sale of interest in consolidated entities, net",
+          "canonical_label": "Proceeds from Sale of Interest in Consolidated Entities",
+          "ledger_rule_id": "GEN-CF-078",
+          "value": "2800",
+          "raw_numeric_text": "2,800",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromMinorityShareholders | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in financing activities",
+          "canonical_label": "Cash Flow from Financing",
+          "ledger_rule_id": "GEN-CF-033",
+          "value": "-24408",
+          "raw_numeric_text": "24,408",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Effect of exchange rate changes on cash and cash equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "24",
+          "raw_numeric_text": "24",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net increase (decrease) in cash and cash equivalents",
+          "canonical_label": "Net Change in Cash",
+          "ledger_rule_id": "GEN-CF-035",
+          "value": "7967",
+          "raw_numeric_text": "7,967",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash paid for income taxes, net of refunds",
+          "canonical_label": "Cash Paid for Taxes",
+          "ledger_rule_id": "GEN-CF-039",
+          "value": "4990",
+          "raw_numeric_text": "4,990",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxesPaidNet | ctx:duration:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash and cash equivalents at beginning of period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "18498",
+          "raw_numeric_text": "18,498",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2019-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Cash and cash equivalents at end of period - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "26465",
+          "raw_numeric_text": "26,465",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\GOOG\\2022-FY\\filings\\GOOG_2022-12-31_10-K.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2020-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        }
+      ]
+    }
+  ],
+  "is_nci_filer": false,
+  "extraction_metadata": {
+    "extractor": "financials-extract/ixbrl-htm",
+    "accession": "0001652044-23-000016",
+    "report_date": "2022-12-31",
+    "quarter_label": "2022-FY",
+    "primary_tables_found": [
+      "BS",
+      "IS",
+      "IS",
+      "CF"
+    ],
+    "fact_counts": {
+      "consolidated_used": 227,
+      "label_synthesis_misses": 0
+    },
+    "label_synthesis_concepts": []
+  }
+}
