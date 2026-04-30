@@ -1,115 +1,123 @@
 ---
 name: depreciation-amortization-impairment-projections
-description: Build a per-ticker asset-depreciation dataset from SEC iXBRL footnote data (PP&E, intangibles, goodwill, leases, impairments) sourced from `companyfacts.json`. Output is a structured `AssetDepreciationFiling` Pydantic JSON keyed by period. Feeds an analytical "ASSET DEPRECIATION SCHEDULE" workbook tab and is consumed by `model-calc` to derive D&A / amortization / impairment forecasts from BS rollforward outputs rather than independent drivers. Use when the user asks to build, refresh, or analyze the asset-depreciation projection layer for one or more tickers.
+description: Build a per-ticker asset-depreciation dataset that feeds three downstream forecasts in tandem — Net PP&E rollforward (GEN-BS-007), Intangibles rollforward (GEN-BS-012), and D&A on CF (GEN-CF-002). Hybrid input — primary-statement values reuse the framework's existing canonical mappings (validated_*.json), footnote-only values lift from companyfacts.json. Output is an `AssetDepreciationFiling` Pydantic JSON keyed by period. Use when the user asks to build, refresh, or analyze the asset-depreciation projection layer for one or more tickers.
 ---
 
 # depreciation-amortization-impairment-projections
 
-Analytical-layer skill, parallel to the primary-statement extraction stack. Pulls concept-tagged data from the cumulative `companyfacts.json` cached by `sec-edgar-fetch` and assembles it into a structured per-ticker dataset that drives a dedicated workbook tab and replaces label-driven D&A heuristics in the forecast layer.
+Analytical-layer skill that consolidates D&A / amortization / impairment data into one source-of-truth object, then feeds it to the three forecast rows that share a driver: PP&E rollforward, Intangibles rollforward, and CF D&A. By pulling the driver from one place, BS and CF stay arithmetically consistent — depreciation taken on PP&E equals D&A added back on CF, by construction.
 
-## Why this skill exists
+## Architecture
 
-D&A, amortization, and impairment values are typically **embedded** inside COGS / SG&A on the IS and only broken out in footnotes. The primary-statement pipeline (`financials-extract`) sees them as CFO non-cash add-backs but has no visibility into:
+The asset depreciation sheet is **upstream** of three forecast rows. They project in tandem from a single driver set:
 
-- Per-asset-class depreciation rates
-- Useful-life ranges by asset class
-- Accumulated depreciation by class
-- Intangibles-by-class amortization expense
-- 5-year forward amortization schedule (already disclosed in every 10-K)
-- Goodwill rollforward (BoP + acquisitions − impairment − FX − divestitures = EoP)
-- Operating + finance lease cost components
+```
+                 AssetDepreciationFiling (per ticker)
+                              │
+            ┌─────────────────┼──────────────────┐
+            ↓                 ↓                  ↓
+    PP&E rollforward     Intangibles RF      CF D&A add-back
+    (GEN-BS-007)         (GEN-BS-012)        (GEN-CF-002)
+    PP&E[t] = PP&E[t-1]  Intang[t] = beg     = depreciation
+    + CapEx              − amortization        + amortization
+    − depreciation       − impairment          (matches BS rollforward
+                                                outputs exactly)
+```
 
-All of those are tagged in iXBRL and cached in `companyfacts.json`. This skill lifts them into a structured object.
+Single source means:
+- Depreciation taken on PP&E rollforward = depreciation portion of CF D&A — **mechanically equal**
+- Amortization on Intangibles rollforward = amortization portion of CF D&A — **mechanically equal**
+- Impairment events flow through both BS and CF without separate forecasting
 
-The forecast layer (`model-calc`) currently treats `GEN-CF-002 D&A` as a single % of revenue or hold-last driver. After this skill ships, model-calc can instead source D&A from a rollforward driven by per-class PP&E base × per-class depreciation rate, and amortization from the disclosed forward schedule. That's strictly more faithful and aligns with the no-heuristic policy (`feedback_structural_over_heuristic.md`) — every value comes from a concept-tagged disclosure, not a label scan.
+This replaces the current "GEN-CF-002 D&A as % of revenue" heuristic with structural integrity.
+
+## Hybrid input — reuse the framework, lift footnotes
+
+The framework has already done the filer-specific naming work. Every `validated_*.json` carries:
+- `raw_filing_label` (filer's exact wording)
+- `canonical_label` (canonical mapped to)
+- `ledger_rule_id` (which canonical)
+- `citation.line_hint` (us-gaap concept)
+- `value` per period
+
+For canonicals that already live on the primary statements, the skill **reuses** those values rather than re-deriving them from companyfacts. That preserves the framework's sign-convention handling, period dedup, and cross-filing reconciliation.
+
+For footnote-only data the primary pipeline never sees, the skill **lifts** from `companyfacts.json` (already cached by `sec-edgar-fetch`).
+
+| Source | What it provides | Why |
+|---|---|---|
+| `validated_*.json` (per filing) | D&A on CF, Amortization on CF, Impairment lines on IS/CF, lease cost on CF | Already canonicalized; filer naming/sign already resolved |
+| `companyfacts.json` (per ticker, cumulative) | PP&E gross, accumulated depreciation, gross/net intangibles, accumulated amortization, future amortization schedule, goodwill rollforward components, ROU asset balances | Footnote disclosures not in the primary statements |
+
+Validated files are the **first** lookup; companyfacts is the **gap-filler**. If a value appears in both, validated wins (it's gone through reconcile/validate).
 
 ## Pipeline position
 
 ```
-sec-edgar-fetch  →  companyfacts.json
-                          │
-                          ↓
+sec-edgar-fetch                    financials-extract
+        │                                  │
+        ↓                                  ↓
+companyfacts.json              validated_*.json (per filing)
+        │                                  │
+        └──────────────┬───────────────────┘
+                       ↓
    depreciation-amortization-impairment-projections
-                          │
-                          ↓
-              asset_depreciation.json
-                          │
-                          ↓
-           model-write (ASSET DEPRECIATION tab)
-                          │
-                          ↓
-           model-calc (D&A driver sources from this tab)
+                       │
+                       ↓
+            asset_depreciation.json
+                       │
+                       ↓
+       model-write (ASSET DEPRECIATION tab)
+                       │
+                       ↓
+       model-calc — three forecasts source from this tab:
+         · PP&E rollforward (GEN-BS-007)
+         · Intangibles rollforward (GEN-BS-012)
+         · CF D&A (GEN-CF-002)
 ```
 
-Runs **per-ticker**, not per-filing — `companyfacts.json` is cumulative, so one pass over it produces the full historical dataset for that ticker. Re-run when `sec-edgar-fetch` refreshes the companyfacts file.
+Runs **per-ticker**, not per-filing. Re-run when:
+- `sec-edgar-fetch` refreshes the companyfacts file (new period available), OR
+- `financials-validate` produces a new `validated_*.json` (existing period's primary-statement values changed)
 
-## Source data
+## Canonicals consumed from validated_*.json
 
-- **Primary:** `Brain\Sources\{TICKER}\companyfacts.json` — populated by `sec-edgar-fetch`.
-- **Secondary (planned):** `Brain\Sources\{TICKER}\{PERIOD}\filings\*_financial_report.xlsx` for class-level breakdowns that aren't in `companyfacts.json`'s top-level facts (axis-member dimensions like asset-class). Phase 2.
+Read directly by `ledger_rule_id`:
 
-## Concept catalog
+| rule_id | canonical | feeds field |
+|---|---|---|
+| `GEN-CF-002` | D&A | depreciation_expense + amortization_expense (combined) |
+| `GEN-CF-052` | Depreciation | depreciation_expense (when filer splits) |
+| `GEN-CF-053` | Amortization | amortization_expense (when filer splits) |
+| `GEN-CF-003` | Impairment of Intangibles | intangibles_impairment |
+| `GEN-CF-058` | Non-Cash Lease Expense | operating_lease_cost (CF-side reconciliation) |
+| `GEN-CF-061` | Restructuring + Asset Impairment | partial signal for long_lived_asset_impairment |
+| `GEN-CF-071` | Impairment of Long-Lived Assets (PP&E) | long_lived_asset_impairment |
+| `GEN-CF-079` | Amortization + Impairment of Intangibles | amortization_expense + intangibles_impairment (combined) |
+| `GEN-CF-080` | Depreciation + Impairment of PP&E | depreciation_expense + long_lived_asset_impairment (combined) |
+| `GEN-IS-024` | Impairment of Intangibles | intangibles_impairment (IS side; should match CF-003) |
 
-The skill consumes ~30 us-gaap concepts. Source-of-truth list lives in `scripts/concept_catalog.py`. Major buckets:
+When the same conceptual value is captured by two canonicals (e.g., a filer that uses GEN-CF-002 D&A combined and a filer that splits GEN-CF-052 + GEN-CF-053), the extractor aggregates appropriately.
 
-| Bucket | Sample concepts |
-|---|---|
-| **PP&E totals** | `PropertyPlantAndEquipmentGross`, `PropertyPlantAndEquipmentNet`, `AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment` |
-| **Depreciation expense** | `Depreciation`, `DepreciationAndAmortization`, `DepreciationDepletionAndAmortization` |
-| **Intangibles** | `FiniteLivedIntangibleAssetsNet`, `FiniteLivedIntangibleAssetsAccumulatedAmortization`, `IndefiniteLivedIntangibleAssetsExcludingGoodwill` |
-| **Amortization expense** | `AmortizationOfIntangibleAssets` |
-| **Forward amortization** | `FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths`, `...NextRollingTwelveMonths`, `...YearTwo` … `YearFive` |
-| **Goodwill rollforward** | `Goodwill`, `GoodwillAcquiredDuringPeriod`, `GoodwillImpairmentLoss`, `GoodwillForeignCurrencyTranslationGainLoss`, `GoodwillWrittenOffRelatedToSaleOfBusinessUnit` |
-| **LLA impairment** | `ImpairmentOfLongLivedAssetsHeldForUse`, `AssetImpairmentCharges`, `RestructuringChargesImpairment` |
-| **Lease cost** | `OperatingLeaseCost`, `FinanceLeaseRightOfUseAssetAmortization`, `FinanceLeaseInterestExpense`, `ShortTermLeaseCost`, `VariableLeaseCost` |
-| **ROU assets** | `OperatingLeaseRightOfUseAsset`, `FinanceLeaseRightOfUseAsset` |
+## Concepts pulled from companyfacts.json
 
-## Output schema
+Footnote-only values not represented in the primary statements:
 
-`AssetDepreciationFiling` Pydantic model (`scripts/models.py`). Top-level fields are `dict[period_label, value]` time series — period_label format follows the existing `Period` model (`FY{year}` for annual, `Q{N} FY{year}` for quarterly).
+- PP&E: `PropertyPlantAndEquipmentGross`, `PropertyPlantAndEquipmentNet`, `AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment`
+- Intangibles: `FiniteLivedIntangibleAssetsGross`, `FiniteLivedIntangibleAssetsAccumulatedAmortization`, `FiniteLivedIntangibleAssetsNet`, `IndefiniteLivedIntangibleAssetsExcludingGoodwill`
+- Forward amortization: `FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths` … `YearFive` … `AfterYearFive`
+- Goodwill rollforward components: `GoodwillAcquiredDuringPeriod`, `GoodwillForeignCurrencyTranslationGainLoss`, `GoodwillWrittenOffRelatedToSaleOfBusinessUnit`, `GoodwillPeriodIncreaseDecrease`, `GoodwillImpairmentLoss`
+- ROU assets: `OperatingLeaseRightOfUseAsset`, `FinanceLeaseRightOfUseAsset`
+- Lease cost split: `OperatingLeaseCost`, `FinanceLeaseRightOfUseAssetAmortization`, `ShortTermLeaseCost`, `VariableLeaseCost`
 
-```python
-class AssetDepreciationFiling(BaseModel):
-    ticker: str
-    cik: str
-    last_refreshed: str
-
-    # PP&E
-    ppe_gross: dict[str, Decimal]
-    ppe_accumulated_depreciation: dict[str, Decimal]
-    ppe_net: dict[str, Decimal]
-    depreciation_expense: dict[str, Decimal]
-
-    # Intangibles
-    intangibles_gross: dict[str, Decimal]
-    intangibles_accumulated_amortization: dict[str, Decimal]
-    intangibles_net: dict[str, Decimal]
-    amortization_expense: dict[str, Decimal]
-    future_amortization_schedule: Optional[FutureAmortizationSchedule]
-
-    # Goodwill
-    goodwill_balance: dict[str, Decimal]
-    goodwill_rollforward: list[GoodwillRollforward]
-
-    # Impairments
-    goodwill_impairment: dict[str, Decimal]
-    intangibles_impairment: dict[str, Decimal]
-    long_lived_asset_impairment: dict[str, Decimal]
-
-    # Leases
-    operating_lease_rou_asset: dict[str, Decimal]
-    finance_lease_rou_asset: dict[str, Decimal]
-    operating_lease_cost: dict[str, Decimal]
-    finance_lease_cost: dict[str, Decimal]
-```
-
-`extra="forbid"` per the schema-sync rule.
+Source-of-truth lives in `scripts/concept_catalog.py`.
 
 ## CLI
 
 ```
 depreciation-amortization-impairment-projections \
     --ticker            CELH \
+    --ticker-root       "Brain/Knowledge/Model Schema/Ticker Libraries/CELH/" \
     --companyfacts      "Brain/Sources/CELH/companyfacts.json" \
     --out               "Brain/Knowledge/Model Schema/Ticker Libraries/CELH/asset_depreciation.json"
 ```
@@ -120,12 +128,18 @@ Or run on every ticker that has a `companyfacts.json`:
 depreciation-amortization-impairment-projections --all
 ```
 
+The `--ticker-root` flag is where the validated_*.json files live; `--companyfacts` supplies the footnote layer.
+
+## Output schema
+
+`AssetDepreciationFiling` Pydantic model in `scripts/models.py`. All time-series fields are `dict[period_label, Decimal]`; period labels follow the existing `Period` model (`FY{year}` for annual, `Q{N} FY{year}` for quarterly). `extra="forbid"` per the schema-sync rule.
+
 ## Phases
 
-- **Phase 1 (initial)** — companyfacts.json → `AssetDepreciationFiling` JSON. Totals only (no asset-class breakdowns). Sufficient for a flat asset-depreciation tab.
-- **Phase 2** — class-level breakdowns by parsing `*_financial_report.xlsx` footnote sheets (axis-member dimensions). Gives per-class depreciation rates.
-- **Phase 3** — workbook integration: model-write extension that writes an `ASSET DEPRECIATION` tab from the JSON; model-calc rewires `GEN-CF-002 D&A` to source from this tab via rollforward.
-- **Phase 4** — projection logic: forward depreciation = PP&E base × class-weighted depreciation rate; forward amortization sourced from disclosed schedule; impairment defaulted to zero with analyst-override input.
+- **Phase 1 (initial)** — extractor + JSON output. Totals only (no asset-class breakdowns). Sufficient for a flat asset-depreciation tab plus the three downstream rollforward consumers.
+- **Phase 2** — class-level breakdowns by parsing `*_financial_report.xlsx` footnote sheets (axis-member dimensions). Per-class depreciation rates, weighted-avg useful lives.
+- **Phase 3** — `model-write` extension that emits an `ASSET DEPRECIATION SCHEDULE` tab from the JSON.
+- **Phase 4** — `model-calc` rewires `GEN-BS-007 Net PP&E`, `GEN-BS-012 Intangibles`, and `GEN-CF-002 D&A` to source from the new tab via rollforward, so the three forecasts move in tandem.
 
 Phase 1 ships first; later phases land incrementally as the structure stabilizes.
 
@@ -134,11 +148,13 @@ Phase 1 ships first; later phases land incrementally as the structure stabilizes
 - User asks to build, refresh, or analyze the asset-depreciation layer for a ticker
 - User asks about D&A / amortization / impairment forecasting that's not based on % of revenue
 - User mentions an "asset depreciation sheet" or "asset depreciation schedule"
-- After `sec-edgar-fetch` refreshes a ticker's companyfacts (re-run to pick up new periods)
+- User asks to project PP&E or Intangibles via rollforward (this skill produces the depreciation/amortization driver they need)
+- After `sec-edgar-fetch` or `financials-validate` refreshes a ticker's input data
 
 ## Key conventions
 
-- **No label scans.** Every value comes from a concept-tagged fact. Per the no-heuristic policy.
-- **Period labels match the existing `Period` model** in `financials-schema/financials_schema/period.py`. No ad-hoc keys.
-- **Decimal-typed values throughout** to avoid float drift on rollforward arithmetic.
-- **`extra="forbid"`** on every Pydantic model. Schema-sync rule applies to this skill's `models.py` the same way it does to `LibraryEntry`.
+- **No label scans.** Values come from `ledger_rule_id` lookups (validated files) or us-gaap concept matches (companyfacts). Per the no-heuristic policy.
+- **Validated files first, companyfacts second.** The framework's canonical mappings already encode filer-specific naming; reuse them.
+- **Period labels match the existing `Period` model.**
+- **Decimal-typed values** to avoid float drift on rollforward arithmetic.
+- **`extra="forbid"`** on every Pydantic model.
