@@ -1,6 +1,6 @@
 # Generic Canonical Catalog
 
-Source: `pattern_libraries/generic_line_item_mappings.json` (162 entries).
+Source: `pattern_libraries/generic_line_item_mappings.json` (161 entries).
 
 Use the **projection model class** column to annotate forecast-projection treatment. Empty = TBD.
 
@@ -52,21 +52,20 @@ Linkage / derived: `link_to_is`, `link_to_cf`, `bs_delta`, `rollforward`, `resid
 | GEN-IS-002 | COGS                                             | revenue_cost       | line_item | negative |        |        | `CostOfGoodsAndServicesSold`             |                                                                                |
 | GEN-IS-003 | Gross Profit (Loss)                              | revenue_cost       | subtotal  |          |        |        | `GrossProfit`                            | Σ revenue + COGS                                                               |
 
-## BALANCE SHEET (53 entries)
+## BALANCE SHEET (52 entries)
 
 | rule_id    | model_label                                   | section                 | type      | sign     | parent     | accept | concept                                | projection model class                                                                                                |
 | ---------- | --------------------------------------------- | ----------------------- | --------- | -------- | ---------- | ------ | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GEN-BS-001 | Cash & Cash Equivalents                       | current_assets          | line_item |          |            |        | ``                                     | rollforward: prev + GEN-CF-035 (Cash + Net Change)                                                                    |
-| GEN-BS-002 | Restricted Cash                               | current_assets          | line_item |          |            |        | `RestrictedCash`                       | COMBINE THIS ITEM WITH CASH & CASH EQUIVALENTS                                                                        |
+| GEN-BS-001 | Cash, Cash Equivalents & Restricted Cash      | current_assets          | line_item |          |            |        | `CashAndCashEquivalentsAtCarryingValue (+2)` | rollforward: prev + GEN-CF-035 (Cash + Net Change)                                                                    |
 | GEN-BS-003 | Accounts Receivable                           | current_assets          | line_item |          |            |        | `AccountsReceivableNetCurrent`         | DSO                                                                                                                   |
-| GEN-BS-004 | Note Receivable - Current                     | current_assets          | line_item |          |            |        | `NotesAndLoansReceivableNetCurrent`    | % of total debt (future could use Debt maturity schedule)                                                             |
-| GEN-BS-005 | Inventories                                   | current_assets          | line_item |          |            |        | `InventoryNet`                         | parent: Σ children if disclosed (GEN-BS-051..053 calculted as DIO), else DIO                                          |
+| GEN-BS-004 | Note Receivable - Current                     | current_assets          | line_item |          |            |        | `NotesAndLoansReceivableNetCurrent`    | % of GEN-BS-011 (current portion of total notes receivable) |
+| GEN-BS-005 | Inventories                                   | current_assets          | line_item |          |            |        | `InventoryNet`                         | DIO (parent). If children disclosed: children = parent × straightlined hist ratio (per RATIO_OF_PARENT) |
 | GEN-BS-006 | Prepaid Expenses                              | current_assets          | line_item |          |            |        | `PrepaidExpenseAndOtherAssetsCurrent`  | % of Revenue                                                                                                          |
 | GEN-BS-044 | Short-Term Investments                        | current_assets          | line_item |          |            |        | `ShortTermInvestments`                 | Straightlined                                                                                                         |
 | GEN-BS-050 | Prepaid Income Taxes                          | current_assets          | line_item |          |            |        | `PrepaidTaxes`                         | Does this item occure in every quarter consistently or is it mostly just prepaying in calendar Q1 before due from IRS |
-| GEN-BS-051 | Raw Materials                                 | current_assets          | line_item |          | GEN-BS-005 |        | `InventoryRawMaterials (+2)`           | = GEN-BS-005 × historical ratio                                                                                       |
-| GEN-BS-052 | Work in Process                               | current_assets          | line_item |          | GEN-BS-005 |        | `InventoryWorkInProcess (+1)`          | = GEN-BS-005 × historical ratio                                                                                       |
-| GEN-BS-053 | Finished Goods                                | current_assets          | line_item |          | GEN-BS-005 |        | `InventoryFinishedGoods (+1)`          | = GEN-BS-005 × historical ratio                                                                                       |
+| GEN-BS-051 | Raw Materials                                 | current_assets          | line_item |          | GEN-BS-005 |        | `InventoryRawMaterials (+2)`           | = GEN-BS-005 × straightlined historical ratio (RATIO_OF_PARENT) |
+| GEN-BS-052 | Work in Process                               | current_assets          | line_item |          | GEN-BS-005 |        | `InventoryWorkInProcess (+1)`          | = GEN-BS-005 × straightlined historical ratio (RATIO_OF_PARENT) |
+| GEN-BS-053 | Finished Goods                                | current_assets          | line_item |          | GEN-BS-005 |        | `InventoryFinishedGoods (+1)`          | = GEN-BS-005 × straightlined historical ratio (RATIO_OF_PARENT) |
 | GEN-BS-055 | Other Current Assets                          | current_assets          | line_item |          |            |        | `OtherAssetsCurrent`                   | % of Revenue                                                                                                          |
 | GEN-BS-007 | Net PP&E                                      | non_current_assets      | line_item |          |            |        | `PropertyPlantAndEquipmentNet`         | rollforward: prev + CapEx − D&A (PP&E)                                                                                |
 | GEN-BS-008 | Deferred Tax Assets                           | non_current_assets      | line_item |          |            |        | `DeferredIncomeTaxAssetsNet`           | Flatline (reduce over an amortization period)                                                                         |

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order — this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
-  "last_updated": "2026-04-28",
+  "last_updated": "2026-04-30",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
     "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
@@ -342,25 +342,22 @@
     {
       "rule_id": "GEN-BS-001",
       "model_sheet": "BALANCE SHEET",
-      "model_label": "Cash & Cash Equivalents",
+      "model_label": "Cash, Cash Equivalents & Restricted Cash",
       "aliases": [
         "cash and cash equivalents",
         "cash equivalents",
         "cash",
-        "cash cash equivalents restricted cash and restricted cash equivalents"
-      ],
-      "filing_section": "current_assets"
-    },
-    {
-      "rule_id": "GEN-BS-002",
-      "model_sheet": "BALANCE SHEET",
-      "model_label": "Restricted Cash",
-      "aliases": [
+        "cash cash equivalents restricted cash and restricted cash equivalents",
         "restricted cash",
         "restricted cash and cash equivalents"
       ],
       "filing_section": "current_assets",
-      "us_gaap_concept": "RestrictedCash"
+      "us_gaap_concepts": [
+        "CashAndCashEquivalentsAtCarryingValue",
+        "RestrictedCash",
+        "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+      ],
+      "note": "Consolidated cash row — combines unrestricted cash, cash equivalents, and restricted cash into one BS line. Mirrors how ASC 230 (effective FY2018+) requires the CF to reconcile the combined balance. Aliases cover all three filer-rendering variants (separate lines, combined line, restricted-only line); all route here. Restricted cash is typically immaterial for the issuers in scope and doesn't warrant a separate forecast driver."
     },
     {
       "rule_id": "GEN-BS-003",
