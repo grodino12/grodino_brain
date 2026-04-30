@@ -436,14 +436,42 @@ def main():
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(filing.model_dump_json(indent=2), encoding="utf-8")
 
-    # Summary print
-    n_validated_periods = len(filing.depreciation_expense) + len(filing.amortization_expense)
-    n_ppe_periods = len(filing.ppe_gross) + len(filing.ppe_net)
-    print(f"[{args.ticker}] wrote {args.out}")
-    print(f"  depreciation/amortization periods: {len(filing.depreciation_expense)} / {len(filing.amortization_expense)}")
-    print(f"  ppe gross/net periods:             {len(filing.ppe_gross)} / {len(filing.ppe_net)}")
-    print(f"  goodwill rollforward periods:      {len(filing.goodwill_rollforward)}")
-    print(f"  future amortization schedule:      {'YES (' + filing.future_amortization_schedule.as_of_period + ')' if filing.future_amortization_schedule else 'NO'}")
+    # Summary print — show UNION coverage across all D&A-related fields, since
+    # different filers tag different concepts. A single period typically lands
+    # in exactly one bucket per side (split, combined, or combined-with-impairment).
+    dep_periods = (
+        set(filing.depreciation_expense)
+        | set(filing.depreciation_and_amortization_combined)
+        | set(filing.depreciation_and_lla_impairment_combined)
+    )
+    amort_periods = (
+        set(filing.amortization_expense)
+        | set(filing.depreciation_and_amortization_combined)
+        | set(filing.amortization_and_intangibles_impairment_combined)
+    )
+    impairment_periods = (
+        set(filing.goodwill_impairment)
+        | set(filing.intangibles_impairment)
+        | set(filing.long_lived_asset_impairment)
+        | set(filing.amortization_and_intangibles_impairment_combined)
+        | set(filing.depreciation_and_lla_impairment_combined)
+    )
+    print(f"[{args.ticker}] ({filing.reporting_unit}) wrote {args.out}")
+    print(f"  depreciation periods (union):           {len(dep_periods)}")
+    print(f"    pure dep:                             {len(filing.depreciation_expense)}")
+    print(f"    via D&A combined:                     {len(filing.depreciation_and_amortization_combined)}")
+    print(f"    via dep+lla-impairment combined:      {len(filing.depreciation_and_lla_impairment_combined)}")
+    print(f"  amortization periods (union):           {len(amort_periods)}")
+    print(f"    pure amort:                           {len(filing.amortization_expense)}")
+    print(f"    via D&A combined:                     {len(filing.depreciation_and_amortization_combined)}")
+    print(f"    via amort+intang-impairment combined: {len(filing.amortization_and_intangibles_impairment_combined)}")
+    print(f"  impairment periods (union):             {len(impairment_periods)}")
+    print(f"    standalone goodwill impairment:       {len(filing.goodwill_impairment)}")
+    print(f"    standalone intangibles impairment:    {len(filing.intangibles_impairment)}")
+    print(f"    standalone LLA impairment:            {len(filing.long_lived_asset_impairment)}")
+    print(f"  ppe gross/net periods:                  {len(filing.ppe_gross)} / {len(filing.ppe_net)}")
+    print(f"  goodwill rollforward periods:           {len(filing.goodwill_rollforward)}")
+    print(f"  future amortization schedule:           {'YES (' + filing.future_amortization_schedule.as_of_period + ')' if filing.future_amortization_schedule else 'NO'}")
 
 
 if __name__ == "__main__":

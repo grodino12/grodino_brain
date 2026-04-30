@@ -44,15 +44,21 @@ PPE_NET = ConceptMapping(
 DEPRECIATION_EXPENSE = ConceptMapping(
     field="depreciation_expense",
     concepts=(
-        # Standalone depreciation when filer splits D&A
+        # Pure depreciation (PP&E only) — when the filer splits D&A. Some
+        # filers also tag this in the PP&E footnote even when the CF rolls D&A.
         "Depreciation",
-        # Combined when filer reports D&A together (we'll capture this; the
-        # downstream consumer can decide how to allocate to dep vs amort)
+    ),
+    is_instant=False,
+    note="Pure depreciation. Filers who report D&A combined go to depreciation_and_amortization_combined instead.",
+)
+DA_COMBINED = ConceptMapping(
+    field="depreciation_and_amortization_combined",
+    concepts=(
         "DepreciationAndAmortization",
         "DepreciationDepletionAndAmortization",
     ),
     is_instant=False,
-    note="Includes combined D&A concepts; first match wins per period. If split-form Depreciation is tagged, it's preferred.",
+    note="Combined D&A — filer reports as one CF row. Companion to GEN-CF-002 from validated layer.",
 )
 
 # ---------------------------------------------------------------------------
@@ -206,6 +212,7 @@ ALL_MAPPINGS: tuple[ConceptMapping, ...] = (
     PPE_ACC_DEPRECIATION,
     PPE_NET,
     DEPRECIATION_EXPENSE,
+    DA_COMBINED,
     INTANGIBLES_GROSS,
     INTANGIBLES_ACC_AMORTIZATION,
     INTANGIBLES_NET,
