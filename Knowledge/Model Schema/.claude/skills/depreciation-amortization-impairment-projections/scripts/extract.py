@@ -68,17 +68,54 @@ def period_label(fy: int, fp: str) -> Optional[str]:
 # When a single canonical contributes to multiple fields (combined-form lines),
 # include both targets in the value.
 VALIDATED_RULE_TO_FIELDS: dict[str, tuple[str, ...]] = {
-    "GEN-CF-002": ("depreciation_expense", "amortization_expense"),  # combined D&A
-    "GEN-CF-052": ("depreciation_expense",),                          # split: dep
-    "GEN-CF-053": ("amortization_expense",),                          # split: amort
-    "GEN-CF-003": ("intangibles_impairment",),                        # impairment of intangibles (CF)
-    "GEN-CF-058": ("operating_lease_cost",),                          # non-cash lease expense (CF reconciliation)
-    "GEN-CF-061": ("long_lived_asset_impairment",),                   # restructuring + asset impairment combined
-    "GEN-CF-071": ("long_lived_asset_impairment",),                   # PP&E impairment standalone
-    "GEN-CF-079": ("amortization_expense", "intangibles_impairment"), # combined am + imp
-    "GEN-CF-080": ("depreciation_expense", "long_lived_asset_impairment"),  # combined dep + imp
-    "GEN-IS-024": ("intangibles_impairment",),                        # IS-side impairment of intangibles
+    # Split-form D&A (filer reports separately) — clean fields
+    "GEN-CF-052": ("depreciation_expense",),
+    "GEN-CF-053": ("amortization_expense",),
+    # Standalone impairments (clean fields)
+    "GEN-CF-003": ("intangibles_impairment",),
+    "GEN-CF-071": ("long_lived_asset_impairment",),
+    "GEN-IS-024": ("intangibles_impairment",),
+    # Lease cost CF reconciliation
+    "GEN-CF-058": ("operating_lease_cost",),
+    # Restructuring + asset impairment combined — bundled with restructuring
+    # cash payments at some filers; not strictly an impairment-only line.
+    # Routed conservatively to long_lived_asset_impairment.
+    "GEN-CF-061": ("long_lived_asset_impairment",),
+    # Combined-form CF lines (filer doesn't split) — go to dedicated combined
+    # fields. Consumers prefer split fields, fall back to combined when split
+    # are empty.
+    "GEN-CF-002": ("depreciation_and_amortization_combined",),
+    "GEN-CF-079": ("amortization_and_intangibles_impairment_combined",),
+    "GEN-CF-080": ("depreciation_and_lla_impairment_combined",),
 }
+
+
+def _detect_reporting_unit(ticker_root: Path) -> str:
+    """Read any validated_*.json and return the filer's reporting unit
+    ('thousands', 'millions', or 'ones'). Picks the most-recent FY file when
+    available since 10-Ks are most likely to have unambiguous unit declaration.
+
+    Falls back to 'thousands' if no validated file is found (rare — would mean
+    the ticker hasn't been ingested yet)."""
+    val_files = sorted(ticker_root.glob("validated_*-FY.json")) or sorted(ticker_root.glob("validated_*.json"))
+    if not val_files:
+        return "thousands"
+    d = json.loads(val_files[-1].read_text(encoding="utf-8"))
+    statements = d.get("mapped", {}).get("raw", {}).get("statements", [])
+    for st in statements:
+        unit = st.get("unit")
+        if unit in ("thousands", "millions", "ones"):
+            return unit
+    return "thousands"
+
+
+def _unit_divisor(reporting_unit: str) -> Decimal:
+    """Convert raw-dollar companyfacts values into the filer's native unit."""
+    return {
+        "thousands": Decimal("1000"),
+        "millions": Decimal("1000000"),
+        "ones": Decimal("1"),
+    }.get(reporting_unit, Decimal("1000"))
 
 
 def _ingest_validated_files(ticker_root: Path) -> tuple[
@@ -183,6 +220,7 @@ def _select_per_period(facts: list[dict]) -> dict[str, Decimal]:
 def _ingest_companyfacts(
     companyfacts_path: Path,
     existing_field_values: dict[str, dict[str, Decimal]],
+    unit_divisor: Decimal,
 ) -> tuple[dict[str, dict[str, Decimal]], Optional[FutureAmortizationSchedule], list[GoodwillRollforward]]:
     """Read companyfacts.json. Populate fields from concept_catalog.ALL_MAPPINGS,
     skipping (period, field) pairs that the validated layer already filled.

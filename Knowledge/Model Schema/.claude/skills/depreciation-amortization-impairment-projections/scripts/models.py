@@ -67,6 +67,11 @@ class AssetDepreciationFiling(BaseModel):
     cik: str
     last_refreshed: str  # ISO date when companyfacts.json was last pulled
 
+    # All values are in the filer's native reporting unit. companyfacts values
+    # (raw dollars) are scaled into this unit during extraction so the output
+    # mixes cleanly with other framework data for the same ticker.
+    reporting_unit: str  # "thousands" | "millions" | "ones"
+
     # ----- PP&E -----
     ppe_gross: dict[str, Decimal] = Field(default_factory=dict)
     ppe_accumulated_depreciation: dict[str, Decimal] = Field(default_factory=dict)
@@ -79,6 +84,14 @@ class AssetDepreciationFiling(BaseModel):
     intangibles_net: dict[str, Decimal] = Field(default_factory=dict)
     amortization_expense: dict[str, Decimal] = Field(default_factory=dict)
     future_amortization_schedule: Optional[FutureAmortizationSchedule] = None
+
+    # ----- Combined-form CF lines (filer doesn't split) -----
+    # Populated when the filer reports D&A or amortization+impairment as a
+    # single CF row. Consumers should prefer the split fields above when
+    # present and fall back to combined here when those are empty.
+    depreciation_and_amortization_combined: dict[str, Decimal] = Field(default_factory=dict)  # GEN-CF-002
+    amortization_and_intangibles_impairment_combined: dict[str, Decimal] = Field(default_factory=dict)  # GEN-CF-079
+    depreciation_and_lla_impairment_combined: dict[str, Decimal] = Field(default_factory=dict)  # GEN-CF-080
 
     # ----- Goodwill -----
     goodwill_balance: dict[str, Decimal] = Field(default_factory=dict)
