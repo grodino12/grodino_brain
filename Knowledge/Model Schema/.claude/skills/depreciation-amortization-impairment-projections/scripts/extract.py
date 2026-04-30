@@ -196,8 +196,17 @@ def _facts_for(facts_root: dict, concept: str) -> list[dict]:
 def _select_per_period(facts: list[dict]) -> dict[str, Decimal]:
     """Walk facts, dedupe by period (fy + fp), return period_label -> Decimal.
 
-    Dedup rule: when multiple facts target the same period, prefer the latest
-    `filed` timestamp (most recent restatement)."""
+    companyfacts tags the same (fy, fp) tuple multiple times — once for the
+    actual current-period value and once for every PRIOR-YEAR COMPARABLE shown
+    in subsequent filings. Example for CELH PP&E:
+      end=2023-12-31, fy=2024, fp=FY  (← prior-year comparable in the FY2024 10-K)
+      end=2024-12-31, fy=2024, fp=FY  (← actual FY2024 ending balance)
+    Both have fy=2024, fp=FY, both filed 2025-03-03. Naive `latest filed` ties
+    and picks whichever appears first in the JSON.
+
+    Correct rule: prefer the fact with the latest `end` date within each
+    (fy, fp) bucket. The current-period fact's end-date always falls inside
+    the fiscal year being reported; comparables are earlier."""
     by_period: dict[str, dict] = {}
     for f in facts:
         fy = f.get("fy")
@@ -206,7 +215,7 @@ def _select_per_period(facts: list[dict]) -> dict[str, Decimal]:
         if period is None:
             continue
         prior = by_period.get(period)
-        if prior is None or (f.get("filed", "") > prior.get("filed", "")):
+        if prior is None or f.get("end", "") > prior.get("end", ""):
             by_period[period] = f
     out: dict[str, Decimal] = {}
     for period, f in by_period.items():
