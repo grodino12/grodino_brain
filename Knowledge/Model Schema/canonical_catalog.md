@@ -117,10 +117,17 @@ Linkage / derived: `link_to_is`, `link_to_cf`, `bs_delta`, `rollforward`, `resid
 | GEN-CF-001 | Net Income (Loss)                                 | operating  | line_item |          |        |            | ``                                       | =GEN-IS-022            |
 | GEN-CF-002 | Depreciation & Amortization                       | operating  | line_item |          |        |            | `DepreciationDepletionAndAmortization`   | =                      |
 | GEN-CF-003 | Impairment of Intangibles                         | operating  | line_item |          |        |            | `GoodwillAndIntangibleAssetImpairment`   |                        |
-| GEN-CF-004 | Allowance for Credit Losses                       | operating  | line_item |          |        |            | `ProvisionForDoubtfulAccounts`           |                        |
+| GEN-CF-052 | Depreciation                                      | operating  | line_item |          |        |            | `Depreciation`                           |                        |
+| GEN-CF-053 | Amortization                                      | operating  | line_item |          |        |            | `AdjustmentForAmortization`              |                        |
+| GEN-CF-058 | Non-Cash Lease Expense                            | operating  | line_item |          |        |            | `OperatingLeaseRightOfUseAssetAmorti…`   |                        |
+| GEN-CF-061 | Restructuring and Asset Impairment Charges        | operating  | line_item |          |        |            | `RestructuringCostsAndAssetImpairmen…`   |                        |
+| GEN-CF-071 | Impairment of Long-Lived Assets (PP&E)            | operating  | line_item |          |        |            | `ImpairmentOfLongLivedAssetsHeldForUse`  |                        |
+| GEN-CF-079 | Amortization and Impairment of Intangibles        | operating  | line_item |          |        |            | `goog:AmortizationAndImpairmentOfInt…`   |                        |
+| GEN-CF-080 | Depreciation and Impairment of PP&E               | operating  | line_item |          |        |            | `goog:DepreciationAndImpairmentOnDis…`   |                        |
 | GEN-CF-005 | Inventory Write-Down                              | operating  | line_item |          |        |            | `InventoryWriteDown`                     |                        |
-| GEN-CF-006 | Stock-Based Compensation                          | operating  | line_item |          |        |            | `ShareBasedCompensation`                 |                        |
 | GEN-CF-007 | Gain (Loss) on Disposal of PP&E                   | operating  | line_item |          |        |            | `GainLossOnDispositionOfAssets1`         |                        |
+| GEN-CF-004 | Allowance for Credit Losses                       | operating  | line_item |          |        |            | `ProvisionForDoubtfulAccounts`           |                        |
+| GEN-CF-006 | Stock-Based Compensation                          | operating  | line_item |          |        |            | `ShareBasedCompensation`                 |                        |
 | GEN-CF-008 | (Benefit) Provision for Deferred Income Taxes     | operating  | line_item |          |        |            | `DeferredIncomeTaxExpenseBenefit`        |                        |
 | GEN-CF-009 | Foreign Currency Gain (Loss)                      | operating  | line_item |          |        |            | `ForeignCurrencyTransactionGainLossU…`   |                        |
 | GEN-CF-010 | Other Operating Items                             | operating  | line_item |          |        |            | ``                                       |                        |
@@ -140,23 +147,16 @@ Linkage / derived: `link_to_is`, `link_to_cf`, `bs_delta`, `rollforward`, `resid
 | GEN-CF-039 | Cash Paid for Taxes                               | operating  | line_item |          |        | cash_other | `IncomeTaxesPaid`                        |                        |
 | GEN-CF-050 | Gain (Loss) on Extinguishment of Debt             | operating  | line_item |          |        |            | `GainsLossesOnExtinguishmentOfDebt`      |                        |
 | GEN-CF-051 | Net Change in Other Working Capital               | operating  | line_item |          |        |            | `IncreaseDecreaseInOtherNoncurrentLi…`   |                        |
-| GEN-CF-052 | Depreciation                                      | operating  | line_item |          |        |            | `Depreciation`                           |                        |
-| GEN-CF-053 | Amortization                                      | operating  | line_item |          |        |            | `AdjustmentForAmortization`              |                        |
 | GEN-CF-055 | Change in Fair Value of Contingent Consideration  | operating  | line_item |          |        |            | `LiabilitiesFairValueAdjustment`         |                        |
-| GEN-CF-058 | Non-Cash Lease Expense                            | operating  | line_item |          |        |            | `OperatingLeaseRightOfUseAssetAmorti…`   |                        |
 | GEN-CF-059 | Pension and Postretirement Benefits Expense       | operating  | line_item |          |        |            | `PensionAndOtherPostretirementBenefi…`   |                        |
 | GEN-CF-060 | Pension and Postretirement Benefits Contributions | operating  | line_item | negative |        |            | `PensionAndOtherPostretirementBenefi…`   |                        |
-| GEN-CF-061 | Restructuring and Asset Impairment Charges        | operating  | line_item |          |        |            | `RestructuringCostsAndAssetImpairmen…`   |                        |
 | GEN-CF-062 | Cash Payments for Restructuring                   | operating  | line_item | negative |        |            | `PaymentsForRestructuring`               |                        |
 | GEN-CF-066 | Acquisition and Divestiture-Related Charges       | operating  | line_item |          |        |            | `BusinessCombinationSeparatelyRecogn…`   |                        |
 | GEN-CF-067 | Cash Payments for Acquisition and Divestiture C…  | operating  | line_item | negative |        |            | `PaymentsForMergerRelatedCosts`          |                        |
-| GEN-CF-071 | Impairment of Long-Lived Assets (PP&E)            | operating  | line_item |          |        |            | `ImpairmentOfLongLivedAssetsHeldForUse`  |                        |
 | GEN-CF-072 | Change in Accrued Compensation                    | operating  | line_item |          |        |            | `IncreaseDecreaseInEmployeeRelatedLi…`   |                        |
 | GEN-CF-074 | Change in Prepaid Income Taxes                    | operating  | line_item |          |        |            | `IncreaseDecreaseInPrepaidTaxes`         |                        |
 | GEN-CF-075 | Accrued Revenue Share                             | operating  | line_item |          |        |            | `goog:IncreaseDecreaseInAccruedReven…`   |                        |
 | GEN-CF-076 | Change in Income Taxes                            | operating  | line_item |          |        |            | `IncreaseDecreaseInIncomeTaxes`          |                        |
-| GEN-CF-079 | Amortization and Impairment of Intangibles        | operating  | line_item |          |        |            | `goog:AmortizationAndImpairmentOfInt…`   |                        |
-| GEN-CF-080 | Depreciation and Impairment of PP&E               | operating  | line_item |          |        |            | `goog:DepreciationAndImpairmentOnDis…`   |                        |
 | GEN-CF-081 | Loss (Gain) on Equity and Debt Securities, Net    | operating  | line_item |          |        |            | `DebtAndEquitySecuritiesGainLoss`        |                        |
 | GEN-CF-023 | Collections from Note Receivable                  | investing  | line_item |          |        |            | `ProceedsFromCollectionOfNotesReceiv…`   |                        |
 | GEN-CF-024 | Purchase of PP&E                                  | investing  | line_item |          |        |            | `PaymentsToAcquirePropertyPlantAndEq…`   |                        |

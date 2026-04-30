@@ -1083,7 +1083,7 @@
         "class a and class b common stock and class c capital stock and additional paid-in capital",
         "class a class b and class c stock and additional paid-in capital"
       ],
-      "note": "Combined par + APIC line used by filers that don't separate the two (GOOG, AAPL, many tech). Distinct from GEN-BS-028 (Common Stock par) and GEN-BS-029 (APIC), which are the split form. Concept-based matching is the primary key — heavy label noise (embedded share counts that change quarter-to-quarter) makes label aliasing fragile."
+      "note": "Combined par + APIC line used by filers that don't separate the two on the balance sheet (common in tech). Distinct from GEN-BS-028 (Common Stock par) and GEN-BS-029 (APIC), which are the split form. Concept-based matching is the primary key — heavy label noise (embedded share counts that change quarter-to-quarter) makes label aliasing fragile."
     },
     {
       "rule_id": "GEN-BS-055",
@@ -1109,7 +1109,7 @@
         "accrued revenue share"
       ],
       "cf_delta_target": "Accrued Revenue Share",
-      "note": "Platform-economy accrued payable to revenue-share counterparties (TAC partners, App Store developers, content licensors, etc.). GOOG: traffic acquisition costs owed to Apple Safari, Mozilla, Samsung, AdSense network publishers. Distinct from GEN-BS-016 Accrued Expenses (general operating accruals). Future-applicable to META, AAPL, streaming filers; concept namespace will vary per filer extension. Paired with GEN-CF-075 for the WC-change line."
+      "note": "Platform-economy accrued payable to revenue-share counterparties — traffic-acquisition-cost partners, app-store developers, content licensors. Distinct from GEN-BS-016 Accrued Expenses (general operating accruals). No us-gaap base concept exists; matching is by filer-extension namespace (goog:AccruedRevenueShare today; add aapl:/meta:/streaming-filer variants as those tickers come online). Paired with GEN-CF-075 for the WC-change line."
     },
     {
       "rule_id": "GEN-IS-022",
@@ -2414,7 +2414,7 @@
         "research and development expense",
         "r&d"
       ],
-      "note": "Primary R&D opex line. Used by tech (GOOG, AAPL, MSFT), pharma (MRNA, PFE), and any filer with a dedicated R&D line distinct from SG&A. Sign: negative — renders as a charge against operating income. Position: between GEN-IS-002 COGS and GEN-IS-005 Income from Operations, alongside GEN-IS-004 SG&A."
+      "note": "Primary R&D opex line for filers with a dedicated R&D row distinct from SG&A (common in tech and pharma). Sign: negative — renders as a charge against operating income. Position: between GEN-IS-002 COGS and GEN-IS-005 Income from Operations, alongside GEN-IS-004 SG&A."
     },
     {
       "rule_id": "GEN-IS-028",
@@ -2430,7 +2430,7 @@
         "selling and marketing expenses",
         "marketing and selling expenses"
       ],
-      "note": "Primary S&M opex line for filers that split S&M from G&A (tech — GOOG, AAPL, MSFT, META). Distinct from GEN-IS-004 SG&A, which is the combined-form line used by staples filers. The two are mutually exclusive at any given filer."
+      "note": "Primary S&M opex line for filers that split S&M from G&A (common in tech). Distinct from GEN-IS-004 SG&A, which is the combined-form line used by most staples filers. The two are mutually exclusive at any given filer."
     },
     {
       "rule_id": "GEN-IS-029",
@@ -2445,7 +2445,7 @@
         "general and administrative expense",
         "g&a"
       ],
-      "note": "Primary G&A opex line for filers that split S&M from G&A (tech — GOOG, AAPL, MSFT, META). Distinct from GEN-IS-004 SG&A, which is the combined-form line used by staples filers. Companion to GEN-IS-028 Sales and Marketing."
+      "note": "Primary G&A opex line for filers that split S&M from G&A (common in tech). Distinct from GEN-IS-004 SG&A, which is the combined-form line used by most staples filers. Companion to GEN-IS-028 Sales and Marketing."
     },
     {
       "rule_id": "GEN-IS-030",
@@ -2462,7 +2462,7 @@
         "european commission fine",
         "loss contingency"
       ],
-      "note": "Non-recurring opex line for litigation settlements / regulatory fines that the filer renders as a discrete IS line above Income from Operations. GOOG: EC antitrust fines FY2017 (€2.42B Google Shopping), FY2018 (€4.34B Android), FY2019 (€1.49B AdSense). Generalizable to AAPL EU DMA, JNJ talc, GE asbestos, and similar regulatory/litigation events. When a filer doesn't have one, the row stays empty."
+      "note": "Non-recurring opex line for litigation settlements and regulatory fines that the filer renders as a discrete IS line above Income from Operations. Examples include EU antitrust fines, product-liability settlements (talc, asbestos), and competition-authority penalties. When a filer doesn't have one, the row stays empty."
     },
     {
       "rule_id": "GEN-CF-069",
@@ -2573,7 +2573,7 @@
       "model_label": "Accrued Revenue Share",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "WC-change companion to GEN-BS-056 Accrued Revenue Share. Sign organic — positive when accrued balance grows (cash add-back to CFO), negative when it shrinks. Mirrors the GEN-CF-015 / GEN-BS-016 relationship for the platform-economy revenue-share split-out. Concept namespace varies per filer extension (goog:, meta:, etc.).",
+      "note": "WC-change companion to GEN-BS-056 Accrued Revenue Share. Sign organic — positive when accrued balance grows (cash add-back to CFO), negative when it shrinks. Mirrors the GEN-CF-015 / GEN-BS-016 relationship for the platform-economy revenue-share split-out. No us-gaap base concept; matched via filer-extension namespace (goog: today; add meta:/aapl: variants as those tickers come online).",
       "aliases": [
         "accrued revenue share"
       ],
@@ -2587,7 +2587,7 @@
       "model_label": "Change in Income Taxes",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "WC-change companion to GEN-BS-017 Income Taxes Payable. Sign organic — positive when accrued tax balance grows (cash add-back to CFO), negative when paid down. The us-gaap:IncreaseDecreaseInIncomeTaxes concept covers payable + receivable nets at filers that report a single combined line (GOOG); per-filer variants for split-form filers included. Distinct from GEN-CF-074 Change in Prepaid Income Taxes (asset-side).",
+      "note": "WC-change companion to GEN-BS-017 Income Taxes Payable. Sign organic — positive when accrued tax balance grows (cash add-back to CFO), negative when paid down. The us-gaap:IncreaseDecreaseInIncomeTaxes concept covers payable + receivable nets at filers that report a single combined line; per-filer variants for split-form filers are included as alternates. Distinct from GEN-CF-074 Change in Prepaid Income Taxes (asset-side).",
       "aliases": [
         "income taxes, net",
         "change in income taxes",
@@ -2608,7 +2608,7 @@
       "model_label": "Stock-Based Award Activities, Net",
       "filing_section": "financing",
       "row_type": "line_item",
-      "note": "Combined-net form of stock-based award cash flows: nets tax withholdings on RSU/PSU vesting (typically negative, dominant) with proceeds from stock option exercises and ESPP (typically positive, smaller). Used by tech filers (GOOG, META, AMZN-style). Distinct from GEN-CF-063 Tax Withholdings on RSU/PSU Settlement, which is the withholdings-only form used by staples filers that split the two cash flows. The two are mutually exclusive at any given filer. Concept namespace varies per filer extension.",
+      "note": "Combined-net form of stock-based award cash flows: nets tax withholdings on RSU/PSU vesting (typically negative, dominant) with proceeds from stock option exercises and ESPP (typically positive, smaller). Common in tech filers. Distinct from GEN-CF-063 Tax Withholdings on RSU/PSU Settlement, which is the withholdings-only form used by staples filers that split the two cash flows. The two are mutually exclusive at any given filer. Concept namespace varies per filer extension.",
       "aliases": [
         "net payments related to stock-based award activities",
         "stock-based award activities, net"
@@ -2623,7 +2623,7 @@
       "model_label": "Proceeds from Sale of Interest in Consolidated Entities",
       "filing_section": "financing",
       "row_type": "line_item",
-      "note": "Cash inflow from selling a minority stake in a consolidated subsidiary to outside investors while retaining control. Treated as a financing activity (capital injection from new NCI holders). Distinct from GEN-CF-065 Proceeds from Divestitures of Businesses (investing, full divestiture). GOOG: Waymo, Verily, GFiber outside-investor rounds. Generalizable to any filer with consolidated subs and outside-investor capital.",
+      "note": "Cash inflow from selling a minority stake in a consolidated subsidiary to outside investors while retaining control. Treated as a financing activity (capital injection from new NCI holders). Distinct from GEN-CF-065 Proceeds from Divestitures of Businesses (investing, full divestiture). Applicable to any filer with consolidated subs and outside-investor capital rounds.",
       "us_gaap_concept": "ProceedsFromMinorityShareholders",
       "aliases": [
         "proceeds from sale of interest in consolidated entities, net",
@@ -2637,7 +2637,7 @@
       "model_label": "Amortization and Impairment of Intangibles",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "Combined-by-asset-class CFO non-cash add-back: amortization of intangibles + impairment of intangibles in one line. Used by tech filers (GOOG, future META/AMZN-style) that split D&A by asset class. Distinct from GEN-CF-002 D&A (combined depreciation + amortization, no impairment) and GEN-CF-003 Impairment of Intangibles (impairment only). When a filer reports separate amortization and impairment lines, those route to their respective canonicals; this row stays empty. Paired with GEN-CF-080 Depreciation and Impairment of PP&E for the full asset-class-split layout.",
+      "note": "Combined-by-asset-class CFO non-cash add-back: amortization of intangibles + impairment of intangibles in one line. Used by filers that split D&A by asset class (common in tech). Distinct from GEN-CF-002 D&A (combined depreciation + amortization, no impairment) and GEN-CF-003 Impairment of Intangibles (impairment only). When a filer reports separate amortization and impairment lines, those route to their respective canonicals; this row stays empty. Paired with GEN-CF-080 Depreciation and Impairment of PP&E for the full asset-class-split layout.",
       "us_gaap_concepts": [
         "goog:AmortizationAndImpairmentOfIntangibleAssets"
       ],
@@ -2651,7 +2651,7 @@
       "model_label": "Depreciation and Impairment of PP&E",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "Combined-by-asset-class CFO non-cash add-back: depreciation of PP&E + impairment of PP&E (and disposition losses) in one line. Used by tech filers (GOOG, future META/AMZN-style) that split D&A by asset class. Distinct from GEN-CF-002 D&A (combined D+A across asset classes, no impairment). When a filer reports separate depreciation and impairment lines, those route to their respective canonicals; this row stays empty. Companion to GEN-CF-079 Amortization and Impairment of Intangibles.",
+      "note": "Combined-by-asset-class CFO non-cash add-back: depreciation of PP&E + impairment of PP&E (and disposition losses) in one line. Used by filers that split D&A by asset class (common in tech). Distinct from GEN-CF-002 D&A (combined D+A across asset classes, no impairment). When a filer reports separate depreciation and impairment lines, those route to their respective canonicals; this row stays empty. Companion to GEN-CF-079 Amortization and Impairment of Intangibles.",
       "us_gaap_concepts": [
         "goog:DepreciationAndImpairmentOnDispositionOfPropertyAndEquipment"
       ],
@@ -2665,7 +2665,7 @@
       "model_label": "Loss (Gain) on Equity and Debt Securities, Net",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "Non-cash CFO add-back reversing the IS-side fair-value gain/loss recognized on marketable + non-marketable equity and debt securities under ASC 321 (effective FY2018+). Sign organic — when IS shows a gain (positive), CF reverses negative; when IS shows a loss, CF reverses positive. GOOG: Uber post-IPO swing, Lyft, SpaceX, Other Bets equity stakes. Generalizable to META, MSFT, BRK (massive equity holdings), and any filer with material FV-through-P&L investment portfolio. Distinct from GEN-CF-009 (FX unrealized gain/loss).",
+      "note": "Non-cash CFO add-back reversing the IS-side fair-value gain/loss recognized on marketable + non-marketable equity and debt securities under ASC 321 (effective FY2018+). Sign organic — when IS shows a gain (positive), CF reverses negative; when IS shows a loss, CF reverses positive. Applicable to any filer with material FV-through-P&L investment portfolio (tech, financials, holding companies). Distinct from GEN-CF-009 (FX unrealized gain/loss).",
       "us_gaap_concept": "DebtAndEquitySecuritiesGainLoss",
       "us_gaap_concepts": [
         "GainLossOnSaleOfInvestments",
