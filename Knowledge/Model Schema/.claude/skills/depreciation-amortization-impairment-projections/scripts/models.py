@@ -72,6 +72,10 @@ class AssetDepreciationFiling(BaseModel):
     # mixes cleanly with other framework data for the same ticker.
     reporting_unit: str  # "thousands" | "millions" | "ones"
 
+    # Fiscal-year end month (1-12). Most filers are December (12); PG is June (6),
+    # WMT/COST/HD are January, etc. Derived empirically from companyfacts FY facts.
+    fiscal_year_end_month: int
+
     # ----- PP&E -----
     ppe_gross: dict[str, Decimal] = Field(default_factory=dict)
     ppe_accumulated_depreciation: dict[str, Decimal] = Field(default_factory=dict)

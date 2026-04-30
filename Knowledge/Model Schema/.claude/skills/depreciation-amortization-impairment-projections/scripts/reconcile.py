@@ -97,38 +97,40 @@ def parse_date_header(s: str) -> Optional[tuple[int, int, int]]:
 
 
 def derive_fy_end_month(asset_depreciation: dict) -> int:
-    """Determine filer's fiscal-year-end month by inspecting `as_of_period`
-    from the future amortization schedule, or fall back to December.
-    Filers with non-calendar fiscal years tag their FY at month-end."""
-    # No structural way from the JSON; default to December (most filers).
-    # PG would override to 6 (June) if known. Pass-through for now.
-    fas = asset_depreciation.get("future_amortization_schedule")
-    if fas:
-        return 12  # FY tagging in companyfacts uses calendar-year fy field
-    return 12
+    """Read filer's fiscal-year-end month from the asset_depreciation.json
+    `fiscal_year_end_month` field (set during extract). Falls back to 12."""
+    return asset_depreciation.get("fiscal_year_end_month") or 12
 
 
 def date_to_period_label(year: int, month: int, day: int, fy_end_month: int = 12) -> str:
-    """Map an end-date to a period label. For calendar filers (fy_end=12):
-        2024-12-31 -> FY2024
-        2024-09-30 -> Q3 FY2024
-        2024-06-30 -> Q2 FY2024
-        2024-03-31 -> Q1 FY2024
-    For non-calendar filers, the fy on the Q/FY label depends on which fiscal
-    period the date falls in. Phase 1 supports calendar filers cleanly; PG-style
-    filers will need a small tweak."""
+    """Map a calendar end-date to a fiscal-period label, accounting for
+    non-calendar fiscal years (PG fiscal year ends June, etc.).
+
+    Fiscal-year labeling: a date is in fiscal year Y if it falls within the
+    12 months ending at month `fy_end_month` of year Y. Calendar months <= fy_end
+    use same year; later months belong to next fiscal year.
+
+    Examples for fy_end_month=12 (calendar):
+        2024-12-31 -> FY2024;  2024-09-30 -> Q3 FY2024;  2024-03-31 -> Q1 FY2024
+    Examples for fy_end_month=6 (PG):
+        2024-06-30 -> FY2024;  2023-09-30 -> Q1 FY2024;  2023-12-31 -> Q2 FY2024;
+        2024-03-31 -> Q3 FY2024
+    """
+    fy_year = year if month <= fy_end_month else year + 1
+    months_after_prev_fye = (month - fy_end_month) % 12
+
+    # Fiscal-year-end: month matches fy_end and day is at month-end (>= 28)
     if month == fy_end_month and day >= 28:
-        return f"FY{year}"
-    # Quarterly mapping for calendar filers: Q1 ends Mar, Q2 ends Jun, Q3 ends Sep
-    if month in (3, 4):
-        return f"Q1 FY{year}"
-    if month in (6, 7):
-        return f"Q2 FY{year}"
-    if month in (9, 10):
-        return f"Q3 FY{year}"
-    if month == fy_end_month:
-        return f"FY{year}"
-    return f"FY{year}-M{month:02d}"  # uncategorizable; tag for manual review
+        return f"FY{fy_year}"
+    if months_after_prev_fye == 3:
+        return f"Q1 FY{fy_year}"
+    if months_after_prev_fye == 6:
+        return f"Q2 FY{fy_year}"
+    if months_after_prev_fye == 9:
+        return f"Q3 FY{fy_year}"
+    if months_after_prev_fye == 0:
+        return f"FY{fy_year}"
+    return f"FY{fy_year}-M{month:02d}"  # uncategorizable; tag for manual review
 
 
 # ---------------------------------------------------------------------------

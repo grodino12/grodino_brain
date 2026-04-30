@@ -90,6 +90,29 @@ VALIDATED_RULE_TO_FIELDS: dict[str, tuple[str, ...]] = {
 }
 
 
+def _detect_fy_end_month(companyfacts_path: Path) -> int:
+    """Find the filer's fiscal-year-end month (1-12) by inspecting the most
+    common end-date month among `fp=FY` facts. PG → 6, calendar filers → 12."""
+    from collections import Counter
+    data = json.loads(companyfacts_path.read_text(encoding="utf-8"))
+    us_gaap = data.get("facts", {}).get("us-gaap", {})
+    months: Counter = Counter()
+    for concept_block in us_gaap.values():
+        usd_facts = concept_block.get("units", {}).get("USD", []) or []
+        for f in usd_facts:
+            if f.get("fp") != "FY":
+                continue
+            end = f.get("end", "")
+            if len(end) >= 7:
+                try:
+                    months[int(end[5:7])] += 1
+                except ValueError:
+                    continue
+    if not months:
+        return 12  # default
+    return months.most_common(1)[0][0]
+
+
 def _detect_reporting_unit(ticker_root: Path) -> str:
     """Read any validated_*.json and return the filer's reporting unit
     ('thousands', 'millions', or 'ones'). Picks the most-recent FY file when
@@ -374,6 +397,7 @@ def build_filing(
     # into the same unit as validated_*.json values.
     reporting_unit = _detect_reporting_unit(ticker_root)
     unit_divisor = _unit_divisor(reporting_unit)
+    fy_end_month = _detect_fy_end_month(companyfacts_path)
 
     # Phase 1: validated-files layer (primary statements)
     validated_values, _validated_sources = _ingest_validated_files(ticker_root)
@@ -398,6 +422,7 @@ def build_filing(
         cik=cik,
         last_refreshed=_dt.date.today().isoformat(),
         reporting_unit=reporting_unit,
+        fiscal_year_end_month=fy_end_month,
         ppe_gross=merged.get("ppe_gross", {}),
         ppe_accumulated_depreciation=merged.get("ppe_accumulated_depreciation", {}),
         ppe_net=merged.get("ppe_net", {}),
