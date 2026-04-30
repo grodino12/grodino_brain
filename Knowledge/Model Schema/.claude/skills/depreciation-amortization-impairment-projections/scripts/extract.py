@@ -361,14 +361,19 @@ def build_filing(
     ticker_root: Path,
     companyfacts_path: Path,
 ) -> AssetDepreciationFiling:
+    # Detect filer's reporting unit so we can scale companyfacts (raw dollars)
+    # into the same unit as validated_*.json values.
+    reporting_unit = _detect_reporting_unit(ticker_root)
+    unit_divisor = _unit_divisor(reporting_unit)
+
     # Phase 1: validated-files layer (primary statements)
     validated_values, _validated_sources = _ingest_validated_files(ticker_root)
 
-    # Phase 2: companyfacts gap-fill
+    # Phase 2: companyfacts gap-fill (scaled into filer's unit)
     cf_data = json.loads(companyfacts_path.read_text(encoding="utf-8"))
     cik = str(cf_data.get("cik", ""))
     gap_fill, future_schedule, goodwill_rollforward = _ingest_companyfacts(
-        companyfacts_path, validated_values
+        companyfacts_path, validated_values, unit_divisor
     )
 
     # Merge: validated wins, companyfacts fills gaps.
@@ -383,6 +388,7 @@ def build_filing(
         ticker=ticker,
         cik=cik,
         last_refreshed=_dt.date.today().isoformat(),
+        reporting_unit=reporting_unit,
         ppe_gross=merged.get("ppe_gross", {}),
         ppe_accumulated_depreciation=merged.get("ppe_accumulated_depreciation", {}),
         ppe_net=merged.get("ppe_net", {}),
@@ -403,6 +409,9 @@ def build_filing(
         finance_lease_cost=merged.get("finance_lease_cost", {}),
         short_term_lease_cost=merged.get("short_term_lease_cost", {}),
         variable_lease_cost=merged.get("variable_lease_cost", {}),
+        depreciation_and_amortization_combined=merged.get("depreciation_and_amortization_combined", {}),
+        amortization_and_intangibles_impairment_combined=merged.get("amortization_and_intangibles_impairment_combined", {}),
+        depreciation_and_lla_impairment_combined=merged.get("depreciation_and_lla_impairment_combined", {}),
     )
 
 
