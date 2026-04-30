@@ -21,6 +21,7 @@ Exit codes:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -59,6 +60,7 @@ VALIDATE_CLI = SKILLS_ROOT / "financials-validate" / "scripts" / "validate.py"
 MODELWRITE_CLI = SKILLS_ROOT / "model-write" / "scripts" / "write.py"
 
 GOLDENS_ROOT = MODEL_SCHEMA / "_regression" / "goldens"
+EXTRACT_CACHE_DIR = MODEL_SCHEMA / "_regression" / "_extract_cache"
 
 # Latest workbook filename per ticker (the canonical artifact to snapshot).
 WORKBOOK_FILENAME = {
@@ -135,6 +137,32 @@ def _env_for_skills() -> dict:
     return env
 
 
+# ============================================================================
+# Extract cache: skip re-running extract.py when (source, library, extract code)
+# are unchanged. Extract is the slow step (PDF/HTM parsing) and dominates the
+# inner loop when iterating on reconcile/validate/library tweaks. Reconcile,
+# validate, and model-write always run fresh — they're cheap and depend on
+# state the cache key doesn't capture (ticker ledger, schema package).
+# ============================================================================
+
+def _file_sha(p: Path) -> str:
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def extract_cache_key(source: Path) -> str:
+    """16-hex-char digest of (source bytes, library JSON, extract.py).
+    Any change to one of those invalidates the cache for this filing."""
+    h = hashlib.sha256()
+    h.update(_file_sha(source).encode())
+    h.update(_file_sha(LIBRARY).encode())
+    h.update(_file_sha(EXTRACT_CLI).encode())
+    return h.hexdigest()[:32]
+
+
+# Per-ticker hit/miss tally — written by run_pipeline, summarized in main().
+_CACHE_STATS: dict[str, dict[str, int]] = {}
+
+
 def _run(cmd: list, label: str) -> None:
     """Run a subprocess; raise SystemExit(2) on nonzero return."""
     result = subprocess.run(
@@ -155,14 +183,21 @@ def _run(cmd: list, label: str) -> None:
         raise SystemExit(2)
 
 
-def run_pipeline(ticker: str, filings: list[dict], out_dir: Path) -> Path:
+def run_pipeline(ticker: str, filings: list[dict], out_dir: Path, *, use_cache: bool = True) -> Path:
     """Run extract -> reconcile -> validate per filing, then model-write across
     all validated outputs. Returns the path to the produced workbook.
+
+    Extract output is cached by sha256(source + library + extract.py); cache
+    hits skip the extract subprocess and copy the prior output directly.
+    Pass use_cache=False to force fresh extract on all filings.
     """
     troot = ticker_root(ticker)
     cache = out_dir / ".cache"
     cache.mkdir(parents=True, exist_ok=True)
+    if use_cache:
+        EXTRACT_CACHE_DIR.mkdir(parents=True, exist_ok=True)
     validated_paths: list[Path] = []
+    hits = misses = 0
 
     for f in filings:
         period = f["period"]
@@ -171,13 +206,25 @@ def run_pipeline(ticker: str, filings: list[dict], out_dir: Path) -> Path:
         novels = cache / f"novels_{period}.json"
         validated = out_dir / f"validated_{period}.json"
 
-        _run([
-            "python", EXTRACT_CLI,
-            "--ticker-root", troot,
-            "--source", f["source"],
-            "--out", raw,
-            "--library", LIBRARY,
-        ], label=f"{ticker}/{period} extract")
+        cache_path = EXTRACT_CACHE_DIR / f"{extract_cache_key(f['source'])}.json" if use_cache else None
+        if cache_path is not None and cache_path.exists():
+            shutil.copy2(cache_path, raw)
+            hits += 1
+        else:
+            _run([
+                "python", EXTRACT_CLI,
+                "--ticker-root", troot,
+                "--source", f["source"],
+                "--out", raw,
+                "--library", LIBRARY,
+            ], label=f"{ticker}/{period} extract")
+            if cache_path is not None:
+                # Copy via temp then rename to keep cache writes atomic across
+                # parallel ticker workers.
+                tmp = cache_path.with_suffix(".tmp")
+                shutil.copy2(raw, tmp)
+                tmp.replace(cache_path)
+            misses += 1
 
         _run([
             "python", RECONCILE_CLI,
@@ -203,6 +250,7 @@ def run_pipeline(ticker: str, filings: list[dict], out_dir: Path) -> Path:
     cmd += ["--out", workbook_out]
     _run(cmd, label=f"{ticker} model-write")
 
+    _CACHE_STATS[ticker] = {"hits": hits, "misses": misses}
     return workbook_out
 
 
@@ -411,6 +459,8 @@ def main() -> int:
                     help="keep the temp pipeline directory for inspection")
     ap.add_argument("--max-workers", type=int, default=0,
                     help="parallel ticker workers (default: min(cpu_count, n_tickers); 1 = serial)")
+    ap.add_argument("--no-cache", action="store_true",
+                    help="force fresh extract on every filing (bypass _extract_cache/)")
     args = ap.parse_args()
 
     tickers = [args.ticker] if args.ticker else ["CELH", "PG", "PEP", "MNST", "GOOG"]
@@ -446,8 +496,11 @@ def main() -> int:
             t_dir = tmp_root / t
             t_dir.mkdir(parents=True, exist_ok=True)
             t0 = time.monotonic()
-            run_pipeline(t, filings, t_dir)
-            print(f"[{t}] pipeline done ({time.monotonic() - t0:.1f}s)")
+            run_pipeline(t, filings, t_dir, use_cache=not args.no_cache)
+            elapsed = time.monotonic() - t0
+            stats = _CACHE_STATS.get(t, {"hits": 0, "misses": 0})
+            print(f"[{t}] pipeline done ({elapsed:.1f}s; "
+                  f"extract cache {stats['hits']} hit / {stats['misses']} miss)")
             return t, t_dir
 
         wall_start = time.monotonic()
