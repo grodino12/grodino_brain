@@ -243,21 +243,22 @@ def _ingest_companyfacts(
             for period, val in per_period.items():
                 if period in existing or period in gap_fill[mapping.field]:
                     continue
-                gap_fill[mapping.field][period] = val
+                # Scale raw-dollar companyfacts values into the filer's unit.
+                gap_fill[mapping.field][period] = val / unit_divisor
             # Don't break — but successive concepts only add NEW periods (not
             # overwrite). First-mapping-wins per period is enforced by the
             # `if period in gap_fill[mapping.field]: continue` line above.
 
     # ----- future amortization schedule (10-K only — pick the latest) -----
-    future_schedule = _build_future_amortization_schedule(us_gaap)
+    future_schedule = _build_future_amortization_schedule(us_gaap, unit_divisor)
 
     # ----- goodwill rollforward (component sums per period) -----
-    goodwill_rollforward = _build_goodwill_rollforward(us_gaap)
+    goodwill_rollforward = _build_goodwill_rollforward(us_gaap, unit_divisor)
 
     return gap_fill, future_schedule, goodwill_rollforward
 
 
-def _build_future_amortization_schedule(us_gaap: dict) -> Optional[FutureAmortizationSchedule]:
+def _build_future_amortization_schedule(us_gaap: dict, unit_divisor: Decimal) -> Optional[FutureAmortizationSchedule]:
     """Pick the most recent FY disclosure of the 5-year forward amortization.
     Fields are tagged once a year on the 10-K. Returns the latest fy's snapshot."""
     component_facts: dict[str, list[dict]] = {}
@@ -280,7 +281,7 @@ def _build_future_amortization_schedule(us_gaap: dict) -> Optional[FutureAmortiz
         for f in component_facts.get(slot, []):
             if f.get("fp") == "FY" and f.get("fy") == anchor_fy:
                 try:
-                    return Decimal(str(f["val"]))
+                    return Decimal(str(f["val"])) / unit_divisor
                 except Exception:
                     return None
         return None
@@ -299,13 +300,13 @@ def _build_future_amortization_schedule(us_gaap: dict) -> Optional[FutureAmortiz
     )
 
 
-def _build_goodwill_rollforward(us_gaap: dict) -> list[GoodwillRollforward]:
+def _build_goodwill_rollforward(us_gaap: dict, unit_divisor: Decimal) -> list[GoodwillRollforward]:
     """Build a per-period rollforward by combining Goodwill balance with the
     component concepts. Filers don't always tag every component; missing legs
     default to zero, and the residual goes into measurement_period_adjustments
     if `GoodwillPeriodIncreaseDecrease` was tagged for that period."""
     bal_facts = _facts_for(us_gaap, "Goodwill")
-    bal_by_period = _select_per_period(bal_facts)
+    bal_by_period = {p: v / unit_divisor for p, v in _select_per_period(bal_facts).items()}
     if not bal_by_period:
         return []
 
@@ -315,7 +316,7 @@ def _build_goodwill_rollforward(us_gaap: dict) -> list[GoodwillRollforward]:
         for concept in concepts:
             facts = _facts_for(us_gaap, concept)
             for period, val in _select_per_period(facts).items():
-                leg_total[period] += val
+                leg_total[period] += (val / unit_divisor)
         component_per_period[leg] = leg_total
 
     # Need a beginning balance for each period: prior period's ending.
