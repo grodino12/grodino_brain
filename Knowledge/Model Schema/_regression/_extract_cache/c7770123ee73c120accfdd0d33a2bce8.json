@@ -1,0 +1,3452 @@
+{
+  "ticker": "MNST",
+  "filing_type": "10-Q",
+  "filing_date": "2023-05-05",
+  "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+  "statements": [
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2023,
+        "fiscal_quarter": 1,
+        "period_end_date": "2023-03-31",
+        "raw_period_label": "as of 2023-03-31",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "canonical_label": "Cash & Cash Equivalents",
+          "ledger_rule_id": "GEN-BS-001",
+          "value": "1672660",
+          "raw_numeric_text": "1,672,660",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashAndCashEquivalentsAtCarryingValue | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Short-term investments",
+          "canonical_label": "Short-Term Investments",
+          "ledger_rule_id": "GEN-BS-044",
+          "value": "1383028",
+          "raw_numeric_text": "1,383,028",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShortTermInvestments | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable, net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "1190351",
+          "raw_numeric_text": "1,190,351",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-BS-005",
+          "value": "906723",
+          "raw_numeric_text": "906,723",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other current assets",
+          "canonical_label": "Prepaid Expenses",
+          "ledger_rule_id": "GEN-BS-006",
+          "value": "110958",
+          "raw_numeric_text": "110,958",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid income taxes",
+          "canonical_label": "Prepaid Income Taxes",
+          "ledger_rule_id": "GEN-BS-050",
+          "value": "30889",
+          "raw_numeric_text": "30,889",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidTaxes | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "5294609",
+          "raw_numeric_text": "5,294,609",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "INVESTMENTS",
+          "canonical_label": "Long-Term Investments",
+          "ledger_rule_id": "GEN-BS-048",
+          "value": "41152",
+          "raw_numeric_text": "41,152",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermInvestments | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "PROPERTY AND EQUIPMENT, net",
+          "canonical_label": "Net PP&E",
+          "ledger_rule_id": "GEN-BS-007",
+          "value": "545922",
+          "raw_numeric_text": "545,922",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "DEFERRED INCOME TAXES, net",
+          "canonical_label": "Deferred Tax Assets",
+          "ledger_rule_id": "GEN-BS-008",
+          "value": "177039",
+          "raw_numeric_text": "177,039",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxAssetsNet | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "GOODWILL",
+          "canonical_label": "Goodwill",
+          "ledger_rule_id": "GEN-BS-013",
+          "value": "1417941",
+          "raw_numeric_text": "1,417,941",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER INTANGIBLE ASSETS, net",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "1222598",
+          "raw_numeric_text": "1,222,598",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER ASSETS",
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
+          "value": "145101",
+          "raw_numeric_text": "145,101",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total Assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "8844362",
+          "raw_numeric_text": "8,844,362",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-BS-015",
+          "value": "491249",
+          "raw_numeric_text": "491,249",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
+          "value": "245932",
+          "raw_numeric_text": "245,932",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowances",
+          "canonical_label": "Accrued Promotional Allowance",
+          "ledger_rule_id": "GEN-BS-018",
+          "value": "308094",
+          "raw_numeric_text": "308,094",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:AccruedPromotionalAllowancesLiabilitiesCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue - Current",
+          "ledger_rule_id": "GEN-BS-021",
+          "value": "44440",
+          "raw_numeric_text": "44,440",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued compensation",
+          "canonical_label": "Accrued Compensation",
+          "ledger_rule_id": "GEN-BS-049",
+          "value": "42673",
+          "raw_numeric_text": "42,673",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EmployeeRelatedLiabilitiesCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes payable",
+          "canonical_label": "Income Taxes Payable",
+          "ledger_rule_id": "GEN-BS-017",
+          "value": "55123",
+          "raw_numeric_text": "55,123",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedIncomeTaxesCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current liabilities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1187511",
+          "raw_numeric_text": "1,187,511",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "DEFERRED REVENUE",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
+          "value": "219764",
+          "raw_numeric_text": "219,764",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityNoncurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER LIABILITIES",
+          "canonical_label": "Other Non-Current Liabilities",
+          "ledger_rule_id": "GEN-BS-034",
+          "value": "41727",
+          "raw_numeric_text": "41,727",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1,250,000  shares authorized;  1,117,392  shares issued and  1,046,616  shares outstanding as of March 31, 2023;  1,283,688  shares issued and  1,044,600  shares outstanding as of December 31, 2022",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "5587",
+          "raw_numeric_text": "5,587",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValueOutstanding | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1 - Common Stock Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1117392000",
+          "raw_numeric_text": "1,117,392",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1 - Common Stock Shares Outstanding",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1046616000",
+          "raw_numeric_text": "1,046,616",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Additional paid-in capital",
+          "canonical_label": "Additional Paid-in Capital",
+          "ledger_rule_id": "GEN-BS-029",
+          "value": "4829301",
+          "raw_numeric_text": "4,829,301",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AdditionalPaidInCapitalCommonStock | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Retained earnings",
+          "canonical_label": "Retained Earnings (Accumulated Deficit)",
+          "ledger_rule_id": "GEN-BS-031",
+          "value": "4706192",
+          "raw_numeric_text": "4,706,192",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accumulated other comprehensive loss",
+          "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+          "ledger_rule_id": "GEN-BS-030",
+          "value": "-147911",
+          "raw_numeric_text": "147,911",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock in treasury, at cost;  70,776  shares and  239,088  shares as of March 31, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Treasury Stock",
+          "ledger_rule_id": "GEN-BS-035",
+          "value": "-1997809",
+          "raw_numeric_text": "1,997,809",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock in treasury - Treasury Stock Common Shares",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "70776",
+          "raw_numeric_text": "70,776",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total stockholders’ equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "7395360",
+          "raw_numeric_text": "7,395,360",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquity | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total Liabilities and Stockholders’ Equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "8844362",
+          "raw_numeric_text": "8,844,362",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": 4,
+        "period_end_date": "2022-12-31",
+        "raw_period_label": "as of 2022-12-31",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "canonical_label": "Cash & Cash Equivalents",
+          "ledger_rule_id": "GEN-BS-001",
+          "value": "1307141",
+          "raw_numeric_text": "1,307,141",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashAndCashEquivalentsAtCarryingValue | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Short-term investments",
+          "canonical_label": "Short-Term Investments",
+          "ledger_rule_id": "GEN-BS-044",
+          "value": "1362314",
+          "raw_numeric_text": "1,362,314",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShortTermInvestments | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable, net",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "1016203",
+          "raw_numeric_text": "1,016,203",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-BS-005",
+          "value": "935631",
+          "raw_numeric_text": "935,631",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other current assets",
+          "canonical_label": "Prepaid Expenses",
+          "ledger_rule_id": "GEN-BS-006",
+          "value": "109823",
+          "raw_numeric_text": "109,823",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid income taxes",
+          "canonical_label": "Prepaid Income Taxes",
+          "ledger_rule_id": "GEN-BS-050",
+          "value": "33785",
+          "raw_numeric_text": "33,785",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidTaxes | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "4764897",
+          "raw_numeric_text": "4,764,897",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "INVESTMENTS",
+          "canonical_label": "Long-Term Investments",
+          "ledger_rule_id": "GEN-BS-048",
+          "value": "61443",
+          "raw_numeric_text": "61,443",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermInvestments | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "PROPERTY AND EQUIPMENT, net",
+          "canonical_label": "Net PP&E",
+          "ledger_rule_id": "GEN-BS-007",
+          "value": "516897",
+          "raw_numeric_text": "516,897",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "DEFERRED INCOME TAXES, net",
+          "canonical_label": "Deferred Tax Assets",
+          "ledger_rule_id": "GEN-BS-008",
+          "value": "177039",
+          "raw_numeric_text": "177,039",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxAssetsNet | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "GOODWILL",
+          "canonical_label": "Goodwill",
+          "ledger_rule_id": "GEN-BS-013",
+          "value": "1417941",
+          "raw_numeric_text": "1,417,941",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER INTANGIBLE ASSETS, net",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "1220410",
+          "raw_numeric_text": "1,220,410",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER ASSETS",
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
+          "value": "134478",
+          "raw_numeric_text": "134,478",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total Assets",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "8293105",
+          "raw_numeric_text": "8,293,105",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-BS-015",
+          "value": "444265",
+          "raw_numeric_text": "444,265",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
+          "value": "172991",
+          "raw_numeric_text": "172,991",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowances",
+          "canonical_label": "Accrued Promotional Allowance",
+          "ledger_rule_id": "GEN-BS-018",
+          "value": "255631",
+          "raw_numeric_text": "255,631",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:AccruedPromotionalAllowancesLiabilitiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue - Current",
+          "ledger_rule_id": "GEN-BS-021",
+          "value": "43311",
+          "raw_numeric_text": "43,311",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued compensation",
+          "canonical_label": "Accrued Compensation",
+          "ledger_rule_id": "GEN-BS-049",
+          "value": "72463",
+          "raw_numeric_text": "72,463",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EmployeeRelatedLiabilitiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes payable",
+          "canonical_label": "Income Taxes Payable",
+          "ledger_rule_id": "GEN-BS-017",
+          "value": "13317",
+          "raw_numeric_text": "13,317",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedIncomeTaxesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total current liabilities",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1001978",
+          "raw_numeric_text": "1,001,978",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "DEFERRED REVENUE",
+          "canonical_label": "Deferred Revenue - Non-Current",
+          "ledger_rule_id": "GEN-BS-026",
+          "value": "223800",
+          "raw_numeric_text": "223,800",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ContractWithCustomerLiabilityNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER LIABILITIES",
+          "canonical_label": "Other Non-Current Liabilities",
+          "ledger_rule_id": "GEN-BS-034",
+          "value": "42286",
+          "raw_numeric_text": "42,286",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1,250,000  shares authorized;  1,117,392  shares issued and  1,046,616  shares outstanding as of March 31, 2023;  1,283,688  shares issued and  1,044,600  shares outstanding as of December 31, 2022",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "6418",
+          "raw_numeric_text": "6,418",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValueOutstanding | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1 - Common Stock Par Or Stated Value Per Share",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "0.000005",
+          "raw_numeric_text": "0.005",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockParOrStatedValuePerShare | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1 - Common Stock Shares Authorized",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1250000",
+          "raw_numeric_text": "1,250,000",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesAuthorized | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1 - Common Stock Shares Issued",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1283688000",
+          "raw_numeric_text": "1,283,688",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock - $ 0.005  par value;  1 - Common Stock Shares Outstanding",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1044600000",
+          "raw_numeric_text": "1,044,600",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesOutstanding | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Additional paid-in capital",
+          "canonical_label": "Additional Paid-in Capital",
+          "ledger_rule_id": "GEN-BS-029",
+          "value": "4776804",
+          "raw_numeric_text": "4,776,804",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AdditionalPaidInCapitalCommonStock | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Retained earnings",
+          "canonical_label": "Retained Earnings (Accumulated Deficit)",
+          "ledger_rule_id": "GEN-BS-031",
+          "value": "9001173",
+          "raw_numeric_text": "9,001,173",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accumulated other comprehensive loss",
+          "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+          "ledger_rule_id": "GEN-BS-030",
+          "value": "-159073",
+          "raw_numeric_text": "159,073",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock in treasury, at cost;  70,776  shares and  239,088  shares as of March 31, 2023 and December 31, 2022, respectively",
+          "canonical_label": "Treasury Stock",
+          "ledger_rule_id": "GEN-BS-035",
+          "value": "-6600281",
+          "raw_numeric_text": "6,600,281",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock in treasury - Treasury Stock Common Shares",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "239088",
+          "raw_numeric_text": "239,088",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonShares | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total stockholders’ equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "7025041",
+          "raw_numeric_text": "7,025,041",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquity | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total Liabilities and Stockholders’ Equity",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "8293105",
+          "raw_numeric_text": "8,293,105",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | BS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2023,
+        "fiscal_quarter": 1,
+        "period_end_date": "2023-03-31",
+        "raw_period_label": "2023-01-01 to 2023-03-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": false
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "NET SALES",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "1698930",
+          "raw_numeric_text": "1,698,930",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "COST OF SALES",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "801081",
+          "raw_numeric_text": "801,081",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "GROSS PROFIT",
+          "canonical_label": "Gross Profit (Loss)",
+          "ledger_rule_id": "GEN-IS-003",
+          "value": "897849",
+          "raw_numeric_text": "897,849",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GrossProfit | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING EXPENSES",
+          "canonical_label": "Operating Expenses",
+          "ledger_rule_id": "GEN-IS-026",
+          "value": "412785",
+          "raw_numeric_text": "412,785",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingExpenses | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING INCOME",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "485064",
+          "raw_numeric_text": "485,064",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "INTEREST and OTHER INCOME (EXPENSE), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "12496",
+          "raw_numeric_text": "12,496",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "INCOME BEFORE PROVISION FOR INCOME TAXES",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "497560",
+          "raw_numeric_text": "497,560",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "PROVISION FOR INCOME TAXES",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "100116",
+          "raw_numeric_text": "100,116",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET INCOME",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "397444",
+          "raw_numeric_text": "397,444",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "0.38",
+          "raw_numeric_text": "0.38",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsPerBasicShare | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "0.38",
+          "raw_numeric_text": "0.38",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsPerDilutedShare | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Weighted Average Shares Outstanding (Basic)",
+          "ledger_rule_id": "GEN-IS-018",
+          "value": "1044909000",
+          "raw_numeric_text": "1,044,909",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Weighted Average Shares Outstanding (Diluted)",
+          "ledger_rule_id": "GEN-IS-019",
+          "value": "1059069000",
+          "raw_numeric_text": "1,059,069",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income, as reported",
+          "canonical_label": "Net Income (Loss) Attributable to Common Shareholders",
+          "ledger_rule_id": "GEN-IS-014",
+          "value": "397444",
+          "raw_numeric_text": "397,444",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": 1,
+        "period_end_date": "2022-03-31",
+        "raw_period_label": "2022-01-01 to 2022-03-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "NET SALES",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "1518574",
+          "raw_numeric_text": "1,518,574",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "COST OF SALES",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "741907",
+          "raw_numeric_text": "741,907",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "GROSS PROFIT",
+          "canonical_label": "Gross Profit (Loss)",
+          "ledger_rule_id": "GEN-IS-003",
+          "value": "776667",
+          "raw_numeric_text": "776,667",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GrossProfit | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING EXPENSES",
+          "canonical_label": "Operating Expenses",
+          "ledger_rule_id": "GEN-IS-026",
+          "value": "377178",
+          "raw_numeric_text": "377,178",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingExpenses | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING INCOME",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "399489",
+          "raw_numeric_text": "399,489",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "INTEREST and OTHER INCOME (EXPENSE), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "-7300",
+          "raw_numeric_text": "7,300",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "INCOME BEFORE PROVISION FOR INCOME TAXES",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "392189",
+          "raw_numeric_text": "392,189",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "PROVISION FOR INCOME TAXES",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "97986",
+          "raw_numeric_text": "97,986",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET INCOME",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "294203",
+          "raw_numeric_text": "294,203",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "0.28",
+          "raw_numeric_text": "0.28",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsPerBasicShare | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "0.27",
+          "raw_numeric_text": "0.27",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsPerDilutedShare | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Weighted Average Shares Outstanding (Basic)",
+          "ledger_rule_id": "GEN-IS-018",
+          "value": "1058810000",
+          "raw_numeric_text": "1,058,810",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Weighted Average Shares Outstanding (Diluted)",
+          "ledger_rule_id": "GEN-IS-019",
+          "value": "1071108000",
+          "raw_numeric_text": "1,071,108",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Net income, as reported",
+          "canonical_label": "Net Income (Loss) Attributable to Common Shareholders",
+          "ledger_rule_id": "GEN-IS-014",
+          "value": "294203",
+          "raw_numeric_text": "294,203",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2023,
+        "fiscal_quarter": 1,
+        "period_end_date": "2023-03-31",
+        "raw_period_label": "2023-01-01 to 2023-03-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": false
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "397444",
+          "raw_numeric_text": "397,444",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation and amortization",
+          "canonical_label": "Depreciation & Amortization",
+          "ledger_rule_id": "GEN-CF-002",
+          "value": "16808",
+          "raw_numeric_text": "16,808",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Non-cash lease expense",
+          "canonical_label": "Non-Cash Lease Expense",
+          "ledger_rule_id": "GEN-CF-058",
+          "value": "2160",
+          "raw_numeric_text": "2,160",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:NonCashLeaseExpense | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Gain on disposal of property and equipment",
+          "canonical_label": "Gain (Loss) on Disposal of PP&E",
+          "ledger_rule_id": "GEN-CF-007",
+          "value": "-385",
+          "raw_numeric_text": "385",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GainLossOnSaleOfPropertyPlantEquipment | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Stock-based compensation",
+          "canonical_label": "Stock-Based Compensation",
+          "ledger_rule_id": "GEN-CF-006",
+          "value": "16051",
+          "raw_numeric_text": "16,051",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-CF-011",
+          "value": "-167512",
+          "raw_numeric_text": "167,512",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-CF-012",
+          "value": "35495",
+          "raw_numeric_text": "35,495",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInInventories | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other assets",
+          "canonical_label": "Prepaid Expenses",
+          "ledger_rule_id": "GEN-CF-013",
+          "value": "1273",
+          "raw_numeric_text": "1,273",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid income taxes",
+          "canonical_label": "Change in Prepaid Income Taxes",
+          "ledger_rule_id": "GEN-CF-074",
+          "value": "3986",
+          "raw_numeric_text": "3,986",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInPrepaidTaxes | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-CF-014",
+          "value": "51124",
+          "raw_numeric_text": "51,124",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayable | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-CF-015",
+          "value": "14207",
+          "raw_numeric_text": "14,207",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccruedLiabilities | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowances",
+          "canonical_label": "Accrued Promotional Allowance",
+          "ledger_rule_id": "GEN-CF-016",
+          "value": "48265",
+          "raw_numeric_text": "48,265",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:IncreaseDecreaseInAccruedPromotionalAllowancesLiabilitiesCurrent | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued compensation",
+          "canonical_label": "Change in Accrued Compensation",
+          "ledger_rule_id": "GEN-CF-072",
+          "value": "-30261",
+          "raw_numeric_text": "30,261",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInEmployeeRelatedLiabilities | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes payable",
+          "canonical_label": "Change in Income Taxes",
+          "ledger_rule_id": "GEN-CF-076",
+          "value": "41617",
+          "raw_numeric_text": "41,617",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other liabilities",
+          "canonical_label": "Net Change in Other Working Capital",
+          "ledger_rule_id": "GEN-CF-051",
+          "value": "-751",
+          "raw_numeric_text": "751",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInOtherNoncurrentLiabilities | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue",
+          "ledger_rule_id": "GEN-CF-019",
+          "value": "-5046",
+          "raw_numeric_text": "5,046",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:IncreaseDecreaseInCustomerLiability | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by (used in) operating activities",
+          "canonical_label": "Cash Flow from Operations",
+          "ledger_rule_id": "GEN-CF-022",
+          "value": "424475",
+          "raw_numeric_text": "424,475",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Sales of available-for-sale investments",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "522501",
+          "raw_numeric_text": "522,501",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfAvailableForSaleSecuritiesDebt | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of available-for-sale investments",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "-518751",
+          "raw_numeric_text": "518,751",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of property and equipment",
+          "canonical_label": "Purchase of PP&E",
+          "ledger_rule_id": "GEN-CF-024",
+          "value": "-40100",
+          "raw_numeric_text": "40,100",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from sale of property and equipment",
+          "canonical_label": "Proceeds from Sale of Assets",
+          "ledger_rule_id": "GEN-CF-041",
+          "value": "564",
+          "raw_numeric_text": "564",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfPropertyPlantAndEquipment | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Additions to intangibles",
+          "canonical_label": "Additions to Intangibles",
+          "ledger_rule_id": "GEN-CF-069",
+          "value": "-3952",
+          "raw_numeric_text": "3,952",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:PaymentsToProceedsFromIntangiblesAssets | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Increase in other assets",
+          "canonical_label": "Other Investing Activities",
+          "ledger_rule_id": "GEN-CF-043",
+          "value": "-13028",
+          "raw_numeric_text": "13,028",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromOtherInvestingActivities | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in investing activities",
+          "canonical_label": "Cash Flow from Investing",
+          "ledger_rule_id": "GEN-CF-026",
+          "value": "-52766",
+          "raw_numeric_text": "52,766",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "(Payments) borrowings on debt",
+          "canonical_label": "Net Change in Other Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-046",
+          "value": "-7271",
+          "raw_numeric_text": "7,271",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebt | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Issuance of common stock",
+          "canonical_label": "Proceeds from Issuance of Common Stock",
+          "ledger_rule_id": "GEN-CF-031",
+          "value": "36348",
+          "raw_numeric_text": "36,348",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromIssuanceOfCommonStock | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of common stock held in treasury",
+          "canonical_label": "Share Repurchases",
+          "ledger_rule_id": "GEN-CF-032",
+          "value": "-35126",
+          "raw_numeric_text": "35,126",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in financing activities",
+          "canonical_label": "Cash Flow from Financing",
+          "ledger_rule_id": "GEN-CF-033",
+          "value": "-6049",
+          "raw_numeric_text": "6,049",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Effect of exchange rate changes on cash and cash equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "-141",
+          "raw_numeric_text": "141",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "NET INCREASE (DECREASE) IN CASH AND CASH EQUIVALENTS",
+          "canonical_label": "Net Change in Cash",
+          "ledger_rule_id": "GEN-CF-035",
+          "value": "365519",
+          "raw_numeric_text": "365,519",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Interest",
+          "canonical_label": "Cash Paid for Interest",
+          "ledger_rule_id": "GEN-CF-038",
+          "value": "96",
+          "raw_numeric_text": "96",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestPaidNet | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes",
+          "canonical_label": "Cash Paid for Taxes",
+          "ledger_rule_id": "GEN-CF-039",
+          "value": "56985",
+          "raw_numeric_text": "56,985",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxesPaid | ctx:duration:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH AND CASH EQUIVALENTS - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1307141",
+          "raw_numeric_text": "1,307,141",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2022-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH AND CASH EQUIVALENTS - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1672660",
+          "raw_numeric_text": "1,672,660",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2023-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2022,
+        "fiscal_quarter": 1,
+        "period_end_date": "2022-03-31",
+        "raw_period_label": "2022-01-01 to 2022-03-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": true
+      },
+      "unit": "thousands",
+      "raw_unit_phrase": "in thousands",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Net income",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "294203",
+          "raw_numeric_text": "294,203",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation and amortization",
+          "canonical_label": "Depreciation & Amortization",
+          "ledger_rule_id": "GEN-CF-002",
+          "value": "14599",
+          "raw_numeric_text": "14,599",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Non-cash lease expense",
+          "canonical_label": "Non-Cash Lease Expense",
+          "ledger_rule_id": "GEN-CF-058",
+          "value": "1481",
+          "raw_numeric_text": "1,481",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:NonCashLeaseExpense | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Gain on disposal of property and equipment",
+          "canonical_label": "Gain (Loss) on Disposal of PP&E",
+          "ledger_rule_id": "GEN-CF-007",
+          "value": "-6",
+          "raw_numeric_text": "6",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GainLossOnSaleOfPropertyPlantEquipment | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Stock-based compensation",
+          "canonical_label": "Stock-Based Compensation",
+          "ledger_rule_id": "GEN-CF-006",
+          "value": "16332",
+          "raw_numeric_text": "16,332",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-CF-011",
+          "value": "-134433",
+          "raw_numeric_text": "134,433",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-CF-012",
+          "value": "-208673",
+          "raw_numeric_text": "208,673",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInInventories | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other assets",
+          "canonical_label": "Prepaid Expenses",
+          "ledger_rule_id": "GEN-CF-013",
+          "value": "-29621",
+          "raw_numeric_text": "29,621",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid income taxes",
+          "canonical_label": "Change in Prepaid Income Taxes",
+          "ledger_rule_id": "GEN-CF-074",
+          "value": "-5885",
+          "raw_numeric_text": "5,885",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInPrepaidTaxes | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-CF-014",
+          "value": "18329",
+          "raw_numeric_text": "18,329",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayable | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-CF-015",
+          "value": "20603",
+          "raw_numeric_text": "20,603",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccruedLiabilities | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued promotional allowances",
+          "canonical_label": "Accrued Promotional Allowance",
+          "ledger_rule_id": "GEN-CF-016",
+          "value": "61171",
+          "raw_numeric_text": "61,171",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:IncreaseDecreaseInAccruedPromotionalAllowancesLiabilitiesCurrent | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued compensation",
+          "canonical_label": "Change in Accrued Compensation",
+          "ledger_rule_id": "GEN-CF-072",
+          "value": "-32122",
+          "raw_numeric_text": "32,122",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInEmployeeRelatedLiabilities | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes payable",
+          "canonical_label": "Change in Income Taxes",
+          "ledger_rule_id": "GEN-CF-076",
+          "value": "-9818",
+          "raw_numeric_text": "9,818",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other liabilities",
+          "canonical_label": "Net Change in Other Working Capital",
+          "ledger_rule_id": "GEN-CF-051",
+          "value": "-596",
+          "raw_numeric_text": "596",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInOtherNoncurrentLiabilities | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred revenue",
+          "canonical_label": "Deferred Revenue",
+          "ledger_rule_id": "GEN-CF-019",
+          "value": "-5915",
+          "raw_numeric_text": "5,915",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:IncreaseDecreaseInCustomerLiability | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash provided by (used in) operating activities",
+          "canonical_label": "Cash Flow from Operations",
+          "ledger_rule_id": "GEN-CF-022",
+          "value": "-351",
+          "raw_numeric_text": "351",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Sales of available-for-sale investments",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "504808",
+          "raw_numeric_text": "504,808",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfAvailableForSaleSecuritiesDebt | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of available-for-sale investments",
+          "canonical_label": "Net Change in Long-Term Investments",
+          "ledger_rule_id": "GEN-CF-070",
+          "value": "-441925",
+          "raw_numeric_text": "441,925",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Acquisition of CANarchy, net of cash",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "-330356",
+          "raw_numeric_text": "330,356",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesGross | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of property and equipment",
+          "canonical_label": "Purchase of PP&E",
+          "ledger_rule_id": "GEN-CF-024",
+          "value": "-21511",
+          "raw_numeric_text": "21,511",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from sale of property and equipment",
+          "canonical_label": "Proceeds from Sale of Assets",
+          "ledger_rule_id": "GEN-CF-041",
+          "value": "14",
+          "raw_numeric_text": "14",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfPropertyPlantAndEquipment | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Additions to intangibles",
+          "canonical_label": "Additions to Intangibles",
+          "ledger_rule_id": "GEN-CF-069",
+          "value": "-8419",
+          "raw_numeric_text": "8,419",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "mnst:PaymentsToProceedsFromIntangiblesAssets | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Increase in other assets",
+          "canonical_label": "Other Investing Activities",
+          "ledger_rule_id": "GEN-CF-043",
+          "value": "-6241",
+          "raw_numeric_text": "6,241",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromOtherInvestingActivities | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in investing activities",
+          "canonical_label": "Cash Flow from Investing",
+          "ledger_rule_id": "GEN-CF-026",
+          "value": "-303630",
+          "raw_numeric_text": "303,630",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "(Payments) borrowings on debt",
+          "canonical_label": "Net Change in Other Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-046",
+          "value": "3454",
+          "raw_numeric_text": "3,454",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebt | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Issuance of common stock",
+          "canonical_label": "Proceeds from Issuance of Common Stock",
+          "ledger_rule_id": "GEN-CF-031",
+          "value": "4510",
+          "raw_numeric_text": "4,510",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromIssuanceOfCommonStock | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Purchases of common stock held in treasury",
+          "canonical_label": "Share Repurchases",
+          "ledger_rule_id": "GEN-CF-032",
+          "value": "-12187",
+          "raw_numeric_text": "12,187",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net cash used in financing activities",
+          "canonical_label": "Cash Flow from Financing",
+          "ledger_rule_id": "GEN-CF-033",
+          "value": "-4223",
+          "raw_numeric_text": "4,223",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Effect of exchange rate changes on cash and cash equivalents",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "-3472",
+          "raw_numeric_text": "3,472",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "NET INCREASE (DECREASE) IN CASH AND CASH EQUIVALENTS",
+          "canonical_label": "Net Change in Cash",
+          "ledger_rule_id": "GEN-CF-035",
+          "value": "-311676",
+          "raw_numeric_text": "311,676",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Interest",
+          "canonical_label": "Cash Paid for Interest",
+          "ledger_rule_id": "GEN-CF-038",
+          "value": "91",
+          "raw_numeric_text": "91",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestPaidNet | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes",
+          "canonical_label": "Cash Paid for Taxes",
+          "ledger_rule_id": "GEN-CF-039",
+          "value": "112863",
+          "raw_numeric_text": "112,863",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxesPaid | ctx:duration:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH AND CASH EQUIVALENTS - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1326462",
+          "raw_numeric_text": "1,326,462",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2021-12-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH AND CASH EQUIVALENTS - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "1014786",
+          "raw_numeric_text": "1,014,786",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\MNST\\2023-Q1\\filings\\MNST_2023-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2022-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        }
+      ]
+    }
+  ],
+  "is_nci_filer": false,
+  "extraction_metadata": {
+    "extractor": "financials-extract/ixbrl-htm",
+    "accession": "0001104659-23-056507",
+    "report_date": "2023-03-31",
+    "quarter_label": "2023-Q1",
+    "primary_tables_found": [
+      "BS",
+      "IS",
+      "IS",
+      "CF"
+    ],
+    "fact_counts": {
+      "consolidated_used": 165,
+      "label_synthesis_misses": 0
+    },
+    "label_synthesis_concepts": []
+  }
+}

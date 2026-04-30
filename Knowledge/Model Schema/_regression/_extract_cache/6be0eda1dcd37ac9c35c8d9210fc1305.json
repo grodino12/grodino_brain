@@ -1,0 +1,3877 @@
+{
+  "ticker": "PG",
+  "filing_type": "10-Q",
+  "filing_date": "2025-04-24",
+  "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+  "statements": [
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 3,
+        "period_end_date": "2025-03-31",
+        "raw_period_label": "as of 2025-03-31",
+        "period_length_weeks": null,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "canonical_label": "Cash & Cash Equivalents",
+          "ledger_rule_id": "GEN-BS-001",
+          "value": "9116",
+          "raw_numeric_text": "9,116",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "6139",
+          "raw_numeric_text": "6,139",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Materials and supplies",
+          "canonical_label": "Raw Materials",
+          "ledger_rule_id": "GEN-BS-051",
+          "value": "1935",
+          "raw_numeric_text": "1,935",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Work in process",
+          "canonical_label": "Work in Process",
+          "ledger_rule_id": "GEN-BS-052",
+          "value": "957",
+          "raw_numeric_text": "957",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryWorkInProcessNetOfReserves | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Finished goods",
+          "canonical_label": "Finished Goods",
+          "ledger_rule_id": "GEN-BS-053",
+          "value": "4508",
+          "raw_numeric_text": "4,508",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryFinishedGoodsNetOfReserves | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-BS-005",
+          "value": "7400",
+          "raw_numeric_text": "7,400",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other current assets",
+          "canonical_label": "Prepaid Expenses",
+          "ledger_rule_id": "GEN-BS-006",
+          "value": "1780",
+          "raw_numeric_text": "1,780",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL CURRENT ASSETS",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "24435",
+          "raw_numeric_text": "24,435",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "PROPERTY, PLANT AND EQUIPMENT, NET",
+          "canonical_label": "Net PP&E",
+          "ledger_rule_id": "GEN-BS-007",
+          "value": "22728",
+          "raw_numeric_text": "22,728",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "GOODWILL",
+          "canonical_label": "Goodwill",
+          "ledger_rule_id": "GEN-BS-013",
+          "value": "40476",
+          "raw_numeric_text": "40,476",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "21836",
+          "raw_numeric_text": "21,836",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER NONCURRENT ASSETS",
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
+          "value": "13508",
+          "raw_numeric_text": "13,508",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL ASSETS",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "122984",
+          "raw_numeric_text": "122,984",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-BS-015",
+          "value": "14512",
+          "raw_numeric_text": "14,512",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued and other liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
+          "value": "9847",
+          "raw_numeric_text": "9,847",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Debt due within one year",
+          "canonical_label": "Current Portion of Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-033",
+          "value": "9889",
+          "raw_numeric_text": "9,889",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DebtCurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL CURRENT LIABILITIES",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "34248",
+          "raw_numeric_text": "34,248",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "LONG-TERM DEBT",
+          "canonical_label": "Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-041",
+          "value": "24252",
+          "raw_numeric_text": "24,252",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermDebtNoncurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "DEFERRED INCOME TAXES",
+          "canonical_label": "Deferred Tax Liability",
+          "ledger_rule_id": "GEN-BS-025",
+          "value": "6481",
+          "raw_numeric_text": "6,481",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER NONCURRENT LIABILITIES",
+          "canonical_label": "Other Non-Current Liabilities",
+          "ledger_rule_id": "GEN-BS-034",
+          "value": "5458",
+          "raw_numeric_text": "5,458",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL LIABILITIES",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "70439",
+          "raw_numeric_text": "70,439",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Liabilities | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred stock",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
+          "value": "781",
+          "raw_numeric_text": "781",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common stock – shares issued –",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "4009200000.0",
+          "raw_numeric_text": "4,009.2",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common Stock Value",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "4009",
+          "raw_numeric_text": "4,009",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Additional paid-in capital",
+          "canonical_label": "Additional Paid-in Capital",
+          "ledger_rule_id": "GEN-BS-029",
+          "value": "68615",
+          "raw_numeric_text": "68,615",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Reserve for ESOP debt retirement",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "-672",
+          "raw_numeric_text": "672",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accumulated other comprehensive loss",
+          "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+          "ledger_rule_id": "GEN-BS-030",
+          "value": "-11307",
+          "raw_numeric_text": "11,307",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock",
+          "canonical_label": "Treasury Stock",
+          "ledger_rule_id": "GEN-BS-035",
+          "value": "-138073",
+          "raw_numeric_text": "138,073",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Retained earnings",
+          "canonical_label": "Retained Earnings (Accumulated Deficit)",
+          "ledger_rule_id": "GEN-BS-031",
+          "value": "128919",
+          "raw_numeric_text": "128,919",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Noncontrolling interest",
+          "canonical_label": "Noncontrolling Interest",
+          "ledger_rule_id": "GEN-BS-036",
+          "value": "273",
+          "raw_numeric_text": "273",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:MinorityInterest | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL SHAREHOLDERS’ EQUITY",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "52545",
+          "raw_numeric_text": "52,545",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "122984",
+          "raw_numeric_text": "122,984",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | BS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period": {
+        "fiscal_year": 2024,
+        "fiscal_quarter": 4,
+        "period_end_date": "2024-06-30",
+        "raw_period_label": "as of 2024-06-30",
+        "period_length_weeks": null,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Cash and cash equivalents",
+          "canonical_label": "Cash & Cash Equivalents",
+          "ledger_rule_id": "GEN-BS-001",
+          "value": "9482",
+          "raw_numeric_text": "9,482",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts receivable",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-BS-003",
+          "value": "6118",
+          "raw_numeric_text": "6,118",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Materials and supplies",
+          "canonical_label": "Raw Materials",
+          "ledger_rule_id": "GEN-BS-051",
+          "value": "1617",
+          "raw_numeric_text": "1,617",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryRawMaterialsAndSuppliesNetOfReserves | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Work in process",
+          "canonical_label": "Work in Process",
+          "ledger_rule_id": "GEN-BS-052",
+          "value": "929",
+          "raw_numeric_text": "929",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryWorkInProcessNetOfReserves | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Finished goods",
+          "canonical_label": "Finished Goods",
+          "ledger_rule_id": "GEN-BS-053",
+          "value": "4470",
+          "raw_numeric_text": "4,470",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryFinishedGoodsNetOfReserves | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Total inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-BS-005",
+          "value": "7016",
+          "raw_numeric_text": "7,016",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InventoryNet | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Prepaid expenses and other current assets",
+          "canonical_label": "Prepaid Expenses",
+          "ledger_rule_id": "GEN-BS-006",
+          "value": "2095",
+          "raw_numeric_text": "2,095",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL CURRENT ASSETS",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "24709",
+          "raw_numeric_text": "24,709",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AssetsCurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "PROPERTY, PLANT AND EQUIPMENT, NET",
+          "canonical_label": "Net PP&E",
+          "ledger_rule_id": "GEN-BS-007",
+          "value": "22152",
+          "raw_numeric_text": "22,152",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "GOODWILL",
+          "canonical_label": "Goodwill",
+          "ledger_rule_id": "GEN-BS-013",
+          "value": "40303",
+          "raw_numeric_text": "40,303",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Goodwill | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TRADEMARKS AND OTHER INTANGIBLE ASSETS, NET",
+          "canonical_label": "Intangible Assets",
+          "ledger_rule_id": "GEN-BS-012",
+          "value": "22047",
+          "raw_numeric_text": "22,047",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER NONCURRENT ASSETS",
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
+          "value": "13158",
+          "raw_numeric_text": "13,158",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherAssetsNoncurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL ASSETS",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "122370",
+          "raw_numeric_text": "122,370",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_assets",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Assets | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accounts payable",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-BS-015",
+          "value": "15364",
+          "raw_numeric_text": "15,364",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accrued and other liabilities",
+          "canonical_label": "Accrued Expenses",
+          "ledger_rule_id": "GEN-BS-016",
+          "value": "11073",
+          "raw_numeric_text": "11,073",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Debt due within one year",
+          "canonical_label": "Current Portion of Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-033",
+          "value": "7191",
+          "raw_numeric_text": "7,191",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DebtCurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL CURRENT LIABILITIES",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "33627",
+          "raw_numeric_text": "33,627",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesCurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "LONG-TERM DEBT",
+          "canonical_label": "Long-Term Debt",
+          "ledger_rule_id": "GEN-BS-041",
+          "value": "25269",
+          "raw_numeric_text": "25,269",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LongTermDebtNoncurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "DEFERRED INCOME TAXES",
+          "canonical_label": "Deferred Tax Liability",
+          "ledger_rule_id": "GEN-BS-025",
+          "value": "6516",
+          "raw_numeric_text": "6,516",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxLiabilitiesNet | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "OTHER NONCURRENT LIABILITIES",
+          "canonical_label": "Other Non-Current Liabilities",
+          "ledger_rule_id": "GEN-BS-034",
+          "value": "6398",
+          "raw_numeric_text": "6,398",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherLiabilitiesNoncurrent | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL LIABILITIES",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "71811",
+          "raw_numeric_text": "71,811",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Liabilities | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Preferred stock",
+          "canonical_label": "Convertible Preferred Stock",
+          "ledger_rule_id": "GEN-BS-027",
+          "value": "798",
+          "raw_numeric_text": "798",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PreferredStockValue | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common Stock Shares Issued",
+          "canonical_label": "Common Stock - Shares Issued",
+          "ledger_rule_id": "GEN-BS-037",
+          "value": "4009200000.0",
+          "raw_numeric_text": "4,009.2",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockSharesIssued | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Common Stock Value",
+          "canonical_label": "Common Stock",
+          "ledger_rule_id": "GEN-BS-028",
+          "value": "4009",
+          "raw_numeric_text": "4,009",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CommonStockValue | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Additional paid-in capital",
+          "canonical_label": "Additional Paid-in Capital",
+          "ledger_rule_id": "GEN-BS-029",
+          "value": "67684",
+          "raw_numeric_text": "67,684",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Reserve for ESOP debt retirement",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "-737",
+          "raw_numeric_text": "737",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ReserveForEsopDebtRetirement | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Accumulated other comprehensive loss",
+          "canonical_label": "Accumulated Other Comprehensive Income (Loss)",
+          "ledger_rule_id": "GEN-BS-030",
+          "value": "-11900",
+          "raw_numeric_text": "11,900",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock",
+          "canonical_label": "Treasury Stock",
+          "ledger_rule_id": "GEN-BS-035",
+          "value": "-133379",
+          "raw_numeric_text": "133,379",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:TreasuryStockCommonValue | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Retained earnings",
+          "canonical_label": "Retained Earnings (Accumulated Deficit)",
+          "ledger_rule_id": "GEN-BS-031",
+          "value": "123811",
+          "raw_numeric_text": "123,811",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "Noncontrolling interest",
+          "canonical_label": "Noncontrolling Interest",
+          "ledger_rule_id": "GEN-BS-036",
+          "value": "272",
+          "raw_numeric_text": "272",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:MinorityInterest | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL SHAREHOLDERS’ EQUITY",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "50559",
+          "raw_numeric_text": "50,559",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "equity",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "122370",
+          "raw_numeric_text": "122,370",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_current_liabilities",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:LiabilitiesAndStockholdersEquity | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | BS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 3,
+        "period_end_date": "2025-03-31",
+        "raw_period_label": "2025-01-01 to 2025-03-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "NET SALES",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "19776",
+          "raw_numeric_text": "19,776",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Cost of products sold",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "9694",
+          "raw_numeric_text": "9,694",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Selling, general and administrative expense",
+          "canonical_label": "SG&A",
+          "ledger_rule_id": "GEN-IS-004",
+          "value": "5524",
+          "raw_numeric_text": "5,524",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING INCOME",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "4558",
+          "raw_numeric_text": "4,558",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest expense",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "-217",
+          "raw_numeric_text": "217",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest income",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "111",
+          "raw_numeric_text": "111",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Other non-operating income/(expense), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "210",
+          "raw_numeric_text": "210",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "4661",
+          "raw_numeric_text": "4,661",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "868",
+          "raw_numeric_text": "868",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "3793",
+          "raw_numeric_text": "3,793",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+          "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+          "ledger_rule_id": "GEN-IS-023",
+          "value": "23",
+          "raw_numeric_text": "23",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "post_ni_deduction",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
+          "value": "3769",
+          "raw_numeric_text": "3,769",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "1.58",
+          "raw_numeric_text": "1.58",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "1.54",
+          "raw_numeric_text": "1.54",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "3793",
+          "raw_numeric_text": "3,793",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 3,
+        "period_end_date": "2025-03-31",
+        "raw_period_label": "2024-07-01 to 2025-03-31 (39wk)",
+        "period_length_weeks": 39,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "NET SALES",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "63395",
+          "raw_numeric_text": "63,395",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Cost of products sold",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "30533",
+          "raw_numeric_text": "30,533",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Selling, general and administrative expense",
+          "canonical_label": "SG&A",
+          "ledger_rule_id": "GEN-IS-004",
+          "value": "16765",
+          "raw_numeric_text": "16,765",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING INCOME",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "16096",
+          "raw_numeric_text": "16,096",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest expense",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "-695",
+          "raw_numeric_text": "695",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest income",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "365",
+          "raw_numeric_text": "365",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Other non-operating income/(expense), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "-120",
+          "raw_numeric_text": "120",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "15646",
+          "raw_numeric_text": "15,646",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "3207",
+          "raw_numeric_text": "3,207",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "12439",
+          "raw_numeric_text": "12,439",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+          "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+          "ledger_rule_id": "GEN-IS-023",
+          "value": "80",
+          "raw_numeric_text": "80",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "post_ni_deduction",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
+          "value": "12359",
+          "raw_numeric_text": "12,359",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "5.16",
+          "raw_numeric_text": "5.16",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "5.03",
+          "raw_numeric_text": "5.03",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "12439",
+          "raw_numeric_text": "12,439",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2024,
+        "fiscal_quarter": 3,
+        "period_end_date": "2024-03-31",
+        "raw_period_label": "2024-01-01 to 2024-03-31 (13wk)",
+        "period_length_weeks": 13,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "NET SALES",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "20195",
+          "raw_numeric_text": "20,195",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Cost of products sold",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "9855",
+          "raw_numeric_text": "9,855",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Selling, general and administrative expense",
+          "canonical_label": "SG&A",
+          "ledger_rule_id": "GEN-IS-004",
+          "value": "5880",
+          "raw_numeric_text": "5,880",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING INCOME",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "4460",
+          "raw_numeric_text": "4,460",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest expense",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "-233",
+          "raw_numeric_text": "233",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest income",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "104",
+          "raw_numeric_text": "104",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Other non-operating income/(expense), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "260",
+          "raw_numeric_text": "260",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "4592",
+          "raw_numeric_text": "4,592",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "812",
+          "raw_numeric_text": "812",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "3781",
+          "raw_numeric_text": "3,781",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+          "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+          "ledger_rule_id": "GEN-IS-023",
+          "value": "27",
+          "raw_numeric_text": "27",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "post_ni_deduction",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
+          "value": "3754",
+          "raw_numeric_text": "3,754",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "1.56",
+          "raw_numeric_text": "1.56",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "1.52",
+          "raw_numeric_text": "1.52",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "3781",
+          "raw_numeric_text": "3,781",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period": {
+        "fiscal_year": 2024,
+        "fiscal_quarter": 3,
+        "period_end_date": "2024-03-31",
+        "raw_period_label": "2023-07-01 to 2024-03-31 (39wk)",
+        "period_length_weeks": 39,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "NET SALES",
+          "canonical_label": "Net Sales / Revenue",
+          "ledger_rule_id": "GEN-IS-001",
+          "value": "63507",
+          "raw_numeric_text": "63,507",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:Revenues | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Cost of products sold",
+          "canonical_label": "COGS",
+          "ledger_rule_id": "GEN-IS-002",
+          "value": "30500",
+          "raw_numeric_text": "30,500",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "revenue_cost",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CostOfGoodsAndServicesSold | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Selling, general and administrative expense",
+          "canonical_label": "SG&A",
+          "ledger_rule_id": "GEN-IS-004",
+          "value": "17006",
+          "raw_numeric_text": "17,006",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:SellingGeneralAndAdministrativeExpense | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Indefinite-lived intangible asset impairment charge",
+          "canonical_label": "Impairment of Intangibles",
+          "ledger_rule_id": "GEN-IS-024",
+          "value": "1341",
+          "raw_numeric_text": "1,341",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "OPERATING INCOME",
+          "canonical_label": "Income (Loss) from Operations",
+          "ledger_rule_id": "GEN-IS-005",
+          "value": "14660",
+          "raw_numeric_text": "14,660",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating_expenses",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OperatingIncomeLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest expense",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "-705",
+          "raw_numeric_text": "705",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InterestExpenseNonoperating | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Interest income",
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
+          "value": "366",
+          "raw_numeric_text": "366",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:InvestmentIncomeInterest | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Other non-operating income/(expense), net",
+          "canonical_label": "Other Income (Expense)",
+          "ledger_rule_id": "GEN-IS-008",
+          "value": "570",
+          "raw_numeric_text": "570",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNonoperatingIncomeExpense | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "EARNINGS BEFORE INCOME TAXES",
+          "canonical_label": "Pre-Tax Income (Loss)",
+          "ledger_rule_id": "GEN-IS-009",
+          "value": "14891",
+          "raw_numeric_text": "14,891",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "non_operating",
+          "subsection_context": null,
+          "sign_convention": "positive",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeLossIncludingPortionAttributableToNoncontrollingInterest | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Income taxes",
+          "canonical_label": "Income Tax (Expense) Benefit",
+          "ledger_rule_id": "GEN-IS-010",
+          "value": "3061",
+          "raw_numeric_text": "3,061",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "tax",
+          "subsection_context": null,
+          "sign_convention": "negative",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "11830",
+          "raw_numeric_text": "11,830",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Less: Net earnings attributable to noncontrolling interests",
+          "canonical_label": "Net Income (Loss) Attributable to Noncontrolling Interest",
+          "ledger_rule_id": "GEN-IS-023",
+          "value": "88",
+          "raw_numeric_text": "88",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "post_ni_deduction",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+          "canonical_label": "Net Income (Loss) Less NCI",
+          "ledger_rule_id": "GEN-IS-011",
+          "value": "11742",
+          "raw_numeric_text": "11,742",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Basic",
+          "canonical_label": "Basic Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-016",
+          "value": "4.89",
+          "raw_numeric_text": "4.89",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareBasic | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "Diluted",
+          "canonical_label": "Diluted Earnings (Loss) per Share",
+          "ledger_rule_id": "GEN-IS-017",
+          "value": "4.75",
+          "raw_numeric_text": "4.75",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "eps",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EarningsPerShareDiluted | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        },
+        {
+          "raw_filing_label": "NET EARNINGS",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-IS-022",
+          "value": "11830",
+          "raw_numeric_text": "11,830",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "unclassified",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | IS"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2025,
+        "fiscal_quarter": 3,
+        "period_end_date": "2025-03-31",
+        "raw_period_label": "2024-07-01 to 2025-03-31 (39wk)",
+        "period_length_weeks": 39,
+        "is_comparative": false
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Net earnings",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "12439",
+          "raw_numeric_text": "12,439",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation and amortization",
+          "canonical_label": "Depreciation & Amortization",
+          "ledger_rule_id": "GEN-CF-002",
+          "value": "2124",
+          "raw_numeric_text": "2,124",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Share-based compensation expense",
+          "canonical_label": "Stock-Based Compensation",
+          "ledger_rule_id": "GEN-CF-006",
+          "value": "364",
+          "raw_numeric_text": "364",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
+          "value": "183",
+          "raw_numeric_text": "183",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxExpenseBenefit | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Loss/(gain) on sale of assets",
+          "canonical_label": "Gain (Loss) on Disposal of PP&E",
+          "ledger_rule_id": "GEN-CF-007",
+          "value": "782",
+          "raw_numeric_text": "782",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GainLossOnDispositionOfAssets1 | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in accounts receivable",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-CF-011",
+          "value": "-79",
+          "raw_numeric_text": "79",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-CF-012",
+          "value": "-409",
+          "raw_numeric_text": "409",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInInventories | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-CF-014",
+          "value": "-1666",
+          "raw_numeric_text": "1,666",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in other operating assets and liabilities",
+          "canonical_label": "Net Change in Other Working Capital",
+          "ledger_rule_id": "GEN-CF-051",
+          "value": "-1125",
+          "raw_numeric_text": "1,125",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInOtherOperatingCapitalNet | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "218",
+          "raw_numeric_text": "218",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNoncashExpense | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
+          "canonical_label": "Cash Flow from Operations",
+          "ledger_rule_id": "GEN-CF-022",
+          "value": "12832",
+          "raw_numeric_text": "12,832",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Capital expenditures",
+          "canonical_label": "Purchase of PP&E",
+          "ledger_rule_id": "GEN-CF-024",
+          "value": "-2777",
+          "raw_numeric_text": "2,777",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from asset sales",
+          "canonical_label": "Proceeds from Sale of Assets",
+          "ledger_rule_id": "GEN-CF-041",
+          "value": "64",
+          "raw_numeric_text": "64",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfProductiveAssets | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Acquisitions, net of cash acquired",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "-11",
+          "raw_numeric_text": "11",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other investing activity",
+          "canonical_label": "Other Investing Activities",
+          "ledger_rule_id": "GEN-CF-043",
+          "value": "-33",
+          "raw_numeric_text": "33",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromInvestments | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
+          "canonical_label": "Cash Flow from Investing",
+          "ledger_rule_id": "GEN-CF-026",
+          "value": "-2755",
+          "raw_numeric_text": "2,755",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Dividends to shareholders",
+          "canonical_label": "Common Dividends",
+          "ledger_rule_id": "GEN-CF-040",
+          "value": "-7319",
+          "raw_numeric_text": "7,319",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsOfDividends | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Additions to short-term debt with original maturities of more than three months",
+          "canonical_label": "Proceeds from Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-044",
+          "value": "5905",
+          "raw_numeric_text": "5,905",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Reductions in short-term debt with original maturities of more than three months",
+          "canonical_label": "Repayments of Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-045",
+          "value": "-3781",
+          "raw_numeric_text": "3,781",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net additions/(reductions) to other short-term debt",
+          "canonical_label": "Net Change in Other Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-046",
+          "value": "-543",
+          "raw_numeric_text": "543",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Additions to long-term debt",
+          "canonical_label": "Proceeds from Issuance of Long-Term Debt",
+          "ledger_rule_id": "GEN-CF-047",
+          "value": "995",
+          "raw_numeric_text": "995",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromIssuanceOfLongTermDebt | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Reductions in long-term debt",
+          "canonical_label": "Repayments of Long-Term Debt",
+          "ledger_rule_id": "GEN-CF-048",
+          "value": "-1478",
+          "raw_numeric_text": "1,478",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfLongTermDebt | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock purchases",
+          "canonical_label": "Share Repurchases",
+          "ledger_rule_id": "GEN-CF-032",
+          "value": "-5800",
+          "raw_numeric_text": "5,800",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Impact of stock options and other",
+          "canonical_label": "Stock Options & Other Financing Activities",
+          "ledger_rule_id": "GEN-CF-049",
+          "value": "1601",
+          "raw_numeric_text": "1,601",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ProceedsFromStockOptionsExercisedAndOtherFinancingActivities | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
+          "canonical_label": "Cash Flow from Financing",
+          "ledger_rule_id": "GEN-CF-033",
+          "value": "-10420",
+          "raw_numeric_text": "10,420",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "EFFECT OF EXCHANGE RATE CHANGES ON CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "-22",
+          "raw_numeric_text": "22",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+          "canonical_label": "Net Change in Cash",
+          "ledger_rule_id": "GEN-CF-035",
+          "value": "-365",
+          "raw_numeric_text": "365",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "9482",
+          "raw_numeric_text": "9,482",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-06-30",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "9116",
+          "raw_numeric_text": "9,116",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2025-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        }
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period": {
+        "fiscal_year": 2024,
+        "fiscal_quarter": 3,
+        "period_end_date": "2024-03-31",
+        "raw_period_label": "2023-07-01 to 2024-03-31 (39wk)",
+        "period_length_weeks": 39,
+        "is_comparative": true
+      },
+      "unit": "millions",
+      "raw_unit_phrase": "in millions",
+      "unit_detection_source": "explicit_header",
+      "unit_detection_confidence": 1.0,
+      "share_unit": "actual",
+      "eps_unit": "actual",
+      "currency": "USD",
+      "dialect": "US_GAAP",
+      "line_items": [
+        {
+          "raw_filing_label": "Net earnings",
+          "canonical_label": "Net Income (Loss)",
+          "ledger_rule_id": "GEN-CF-001",
+          "value": "11830",
+          "raw_numeric_text": "11,830",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProfitLoss | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Depreciation and amortization",
+          "canonical_label": "Depreciation & Amortization",
+          "ledger_rule_id": "GEN-CF-002",
+          "value": "2135",
+          "raw_numeric_text": "2,135",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DepreciationDepletionAndAmortization | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Share-based compensation expense",
+          "canonical_label": "Stock-Based Compensation",
+          "ledger_rule_id": "GEN-CF-006",
+          "value": "433",
+          "raw_numeric_text": "433",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ShareBasedCompensation | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Deferred income taxes",
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
+          "value": "-206",
+          "raw_numeric_text": "206",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:DeferredIncomeTaxExpenseBenefit | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Loss/(gain) on sale of assets",
+          "canonical_label": "Gain (Loss) on Disposal of PP&E",
+          "ledger_rule_id": "GEN-CF-007",
+          "value": "-51",
+          "raw_numeric_text": "51",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:GainLossOnDispositionOfAssets1 | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Indefinite-lived intangible asset impairment charge",
+          "canonical_label": "Impairment of Intangibles",
+          "ledger_rule_id": "GEN-CF-003",
+          "value": "1341",
+          "raw_numeric_text": "1,341",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in accounts receivable",
+          "canonical_label": "Accounts Receivable",
+          "ledger_rule_id": "GEN-CF-011",
+          "value": "-692",
+          "raw_numeric_text": "692",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsReceivable | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in inventories",
+          "canonical_label": "Inventories",
+          "ledger_rule_id": "GEN-CF-012",
+          "value": "-47",
+          "raw_numeric_text": "47",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInInventories | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in accounts payable and accrued and other liabilities",
+          "canonical_label": "Accounts Payable",
+          "ledger_rule_id": "GEN-CF-014",
+          "value": "56",
+          "raw_numeric_text": "56",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInAccountsPayableAndAccruedLiabilities | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Change in other operating assets and liabilities",
+          "canonical_label": "Net Change in Other Working Capital",
+          "ledger_rule_id": "GEN-CF-051",
+          "value": "-1196",
+          "raw_numeric_text": "1,196",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:IncreaseDecreaseInOtherOperatingCapitalNet | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other",
+          "canonical_label": "Other Operating Items",
+          "ledger_rule_id": "GEN-CF-010",
+          "value": "490",
+          "raw_numeric_text": "490",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:OtherNoncashExpense | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL OPERATING ACTIVITIES",
+          "canonical_label": "Cash Flow from Operations",
+          "ledger_rule_id": "GEN-CF-022",
+          "value": "14092",
+          "raw_numeric_text": "14,092",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "operating",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInOperatingActivities | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Capital expenditures",
+          "canonical_label": "Purchase of PP&E",
+          "ledger_rule_id": "GEN-CF-024",
+          "value": "-2539",
+          "raw_numeric_text": "2,539",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Proceeds from asset sales",
+          "canonical_label": "Proceeds from Sale of Assets",
+          "ledger_rule_id": "GEN-CF-041",
+          "value": "77",
+          "raw_numeric_text": "77",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromSaleOfProductiveAssets | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Acquisitions, net of cash acquired",
+          "canonical_label": "Acquisitions, Net of Cash Acquired",
+          "ledger_rule_id": "GEN-CF-042",
+          "value": "-21",
+          "raw_numeric_text": "21",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Other investing activity",
+          "canonical_label": "Other Investing Activities",
+          "ledger_rule_id": "GEN-CF-043",
+          "value": "-503",
+          "raw_numeric_text": "503",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForProceedsFromInvestments | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL INVESTING ACTIVITIES",
+          "canonical_label": "Cash Flow from Investing",
+          "ledger_rule_id": "GEN-CF-026",
+          "value": "-2986",
+          "raw_numeric_text": "2,986",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "investing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInInvestingActivities | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Dividends to shareholders",
+          "canonical_label": "Common Dividends",
+          "ledger_rule_id": "GEN-CF-040",
+          "value": "-6863",
+          "raw_numeric_text": "6,863",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsOfDividends | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Additions to short-term debt with original maturities of more than three months",
+          "canonical_label": "Proceeds from Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-044",
+          "value": "2961",
+          "raw_numeric_text": "2,961",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Reductions in short-term debt with original maturities of more than three months",
+          "canonical_label": "Repayments of Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-045",
+          "value": "-7523",
+          "raw_numeric_text": "7,523",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Net additions/(reductions) to other short-term debt",
+          "canonical_label": "Net Change in Other Short-Term Debt",
+          "ledger_rule_id": "GEN-CF-046",
+          "value": "2331",
+          "raw_numeric_text": "2,331",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Additions to long-term debt",
+          "canonical_label": "Proceeds from Issuance of Long-Term Debt",
+          "ledger_rule_id": "GEN-CF-047",
+          "value": "1598",
+          "raw_numeric_text": "1,598",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:ProceedsFromIssuanceOfLongTermDebt | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Reductions in long-term debt",
+          "canonical_label": "Repayments of Long-Term Debt",
+          "ledger_rule_id": "GEN-CF-048",
+          "value": "-2335",
+          "raw_numeric_text": "2,335",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:RepaymentsOfLongTermDebt | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Treasury stock purchases",
+          "canonical_label": "Share Repurchases",
+          "ledger_rule_id": "GEN-CF-032",
+          "value": "-3490",
+          "raw_numeric_text": "3,490",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:PaymentsForRepurchaseOfCommonStock | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "Impact of stock options and other",
+          "canonical_label": "Stock Options & Other Financing Activities",
+          "ledger_rule_id": "GEN-CF-049",
+          "value": "965",
+          "raw_numeric_text": "965",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "pg:ProceedsFromStockOptionsExercisedAndOtherFinancingActivities | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "TOTAL FINANCING ACTIVITIES",
+          "canonical_label": "Cash Flow from Financing",
+          "ledger_rule_id": "GEN-CF-033",
+          "value": "-12356",
+          "raw_numeric_text": "12,356",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "financing",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:NetCashProvidedByUsedInFinancingActivities | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "EFFECT OF EXCHANGE RATE CHANGES ON CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+          "canonical_label": "FX Effect on Cash",
+          "ledger_rule_id": "GEN-CF-034",
+          "value": "-168",
+          "raw_numeric_text": "168",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "line_item",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CHANGE IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH",
+          "canonical_label": "Net Change in Cash",
+          "ledger_rule_id": "GEN-CF-035",
+          "value": "-1418",
+          "raw_numeric_text": "1,418",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "subtotal",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect | ctx:duration:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "8246",
+          "raw_numeric_text": "8,246",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2023-06-30",
+            "note": "iXBRL HTM | CF"
+          }
+        },
+        {
+          "raw_filing_label": "CASH - Cash Cash Equivalents Restricted Cash And Restricted Cash Equivalents",
+          "canonical_label": null,
+          "ledger_rule_id": null,
+          "value": "6828",
+          "raw_numeric_text": "6,828",
+          "notation_flags": 0,
+          "footnote_markers": [],
+          "indent_level": 2,
+          "row_type": "memo",
+          "section": "cash_other",
+          "subsection_context": null,
+          "sign_convention": "as_reported",
+          "citation": {
+            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\PG\\2025-Q3\\filings\\PG_2025-03-31_10-Q.htm",
+            "page": 1,
+            "line_hint": "us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | ctx:instant:2024-03-31",
+            "note": "iXBRL HTM | CF"
+          }
+        }
+      ]
+    }
+  ],
+  "is_nci_filer": true,
+  "extraction_metadata": {
+    "extractor": "financials-extract/ixbrl-htm",
+    "accession": "0000080424-25-000037",
+    "report_date": "2025-03-31",
+    "quarter_label": "2025-Q3",
+    "primary_tables_found": [
+      "IS",
+      "IS",
+      "BS",
+      "CF"
+    ],
+    "fact_counts": {
+      "consolidated_used": 184,
+      "label_synthesis_misses": 3
+    },
+    "label_synthesis_concepts": [
+      "CommonStockSharesIssued",
+      "CommonStockValue"
+    ]
+  }
+}
