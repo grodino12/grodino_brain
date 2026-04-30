@@ -112,85 +112,85 @@ Linkage / derived: `link_to_is`, `link_to_cf`, `bs_delta`, `rollforward`, `resid
 
 ## CASH FLOW (80 entries)
 
-| rule_id    | model_label                                       | section    | type      | sign     | parent | accept     | concept                                  | projection model class |
-| ---------- | ------------------------------------------------- | ---------- | --------- | -------- | ------ | ---------- | ---------------------------------------- | ---------------------- |
-| GEN-CF-001 | Net Income (Loss)                                 | operating  | line_item |          |        |            | ``                                       | =GEN-IS-022            |
-| GEN-CF-002 | Depreciation & Amortization                       | operating  | line_item |          |        |            | `DepreciationDepletionAndAmortization`   | =                      |
-| GEN-CF-003 | Impairment of Intangibles                         | operating  | line_item |          |        |            | `GoodwillAndIntangibleAssetImpairment`   |                        |
-| GEN-CF-052 | Depreciation                                      | operating  | line_item |          |        |            | `Depreciation`                           |                        |
-| GEN-CF-053 | Amortization                                      | operating  | line_item |          |        |            | `AdjustmentForAmortization`              |                        |
-| GEN-CF-061 | Restructuring and Asset Impairment Charges        | operating  | line_item |          |        |            | `RestructuringCostsAndAssetImpairmen…`   |                        |
-| GEN-CF-071 | Impairment of Long-Lived Assets (PP&E)            | operating  | line_item |          |        |            | `ImpairmentOfLongLivedAssetsHeldForUse`  |                        |
-| GEN-CF-079 | Amortization and Impairment of Intangibles        | operating  | line_item |          |        |            | `goog:AmortizationAndImpairmentOfInt…`   |                        |
-| GEN-CF-080 | Depreciation and Impairment of PP&E               | operating  | line_item |          |        |            | `goog:DepreciationAndImpairmentOnDis…`   |                        |
-| GEN-CF-005 | Inventory Write-Down                              | operating  | line_item |          |        |            | `InventoryWriteDown`                     |                        |
-| GEN-CF-007 | Gain (Loss) on Disposal of PP&E                   | operating  | line_item |          |        |            | `GainLossOnDispositionOfAssets1`         |                        |
-| GEN-CF-004 | Allowance for Credit Losses                       | operating  | line_item |          |        |            | `ProvisionForDoubtfulAccounts`           |                        |
-| GEN-CF-006 | Stock-Based Compensation                          | operating  | line_item |          |        |            | `ShareBasedCompensation`                 |                        |
-| GEN-CF-008 | (Benefit) Provision for Deferred Income Taxes     | operating  | line_item |          |        |            | `DeferredIncomeTaxExpenseBenefit`        |                        |
-| GEN-CF-009 | Foreign Currency Gain (Loss)                      | operating  | line_item |          |        |            | `ForeignCurrencyTransactionGainLossU…`   |                        |
-| GEN-CF-010 | Other Operating Items                             | operating  | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-011 | Accounts Receivable                               | operating  | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-012 | Inventories                                       | operating  | line_item |          |        |            | `IncreaseDecreaseInInventories`          |                        |
-| GEN-CF-013 | Prepaid Expenses                                  | operating  | line_item |          |        |            | `IncreaseDecreaseInPrepaidDeferredEx…`   |                        |
-| GEN-CF-014 | Accounts Payable                                  | operating  | line_item |          |        |            | `IncreaseDecreaseInAccountsPayableAn…`   |                        |
-| GEN-CF-015 | Accrued Expenses                                  | operating  | line_item |          |        |            | `IncreaseDecreaseInAccruedLiabilities`   |                        |
-| GEN-CF-016 | Accrued Promotional Allowance                     | operating  | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-017 | Other Current Liabilities                         | operating  | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-018 | ROU & Lease Liability, Net                        | operating  | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-019 | Deferred Revenue                                  | operating  | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-020 | Other Non-Current Assets                          | operating  | line_item |          |        |            | `IncreaseDecreaseInOtherNoncurrentAs…`   |                        |
-| GEN-CF-021 | Note Receivable                                   | operating  | line_item |          |        |            | `IncreaseDecreaseInFinanceReceivables`   |                        |
-| GEN-CF-022 | Cash Flow from Operations                         | operating  | subtotal  |          |        |            | `NetCashProvidedByUsedInOperatingAct…`   |                        |
-| GEN-CF-038 | Cash Paid for Interest                            | operating  | line_item |          |        | cash_other | `InterestPaidNet`                        |                        |
-| GEN-CF-039 | Cash Paid for Taxes                               | operating  | line_item |          |        | cash_other | `IncomeTaxesPaid`                        |                        |
-| GEN-CF-050 | Gain (Loss) on Extinguishment of Debt             | operating  | line_item |          |        |            | `GainsLossesOnExtinguishmentOfDebt`      |                        |
-| GEN-CF-051 | Net Change in Other Working Capital               | operating  | line_item |          |        |            | `IncreaseDecreaseInOtherNoncurrentLi…`   |                        |
-| GEN-CF-055 | Change in Fair Value of Contingent Consideration  | operating  | line_item |          |        |            | `LiabilitiesFairValueAdjustment`         |                        |
-| GEN-CF-059 | Pension and Postretirement Benefits Expense       | operating  | line_item |          |        |            | `PensionAndOtherPostretirementBenefi…`   |                        |
-| GEN-CF-060 | Pension and Postretirement Benefits Contributions | operating  | line_item | negative |        |            | `PensionAndOtherPostretirementBenefi…`   |                        |
-| GEN-CF-062 | Cash Payments for Restructuring                   | operating  | line_item | negative |        |            | `PaymentsForRestructuring`               |                        |
-| GEN-CF-066 | Acquisition and Divestiture-Related Charges       | operating  | line_item |          |        |            | `BusinessCombinationSeparatelyRecogn…`   |                        |
-| GEN-CF-067 | Cash Payments for Acquisition and Divestiture C…  | operating  | line_item | negative |        |            | `PaymentsForMergerRelatedCosts`          |                        |
-| GEN-CF-072 | Change in Accrued Compensation                    | operating  | line_item |          |        |            | `IncreaseDecreaseInEmployeeRelatedLi…`   |                        |
-| GEN-CF-074 | Change in Prepaid Income Taxes                    | operating  | line_item |          |        |            | `IncreaseDecreaseInPrepaidTaxes`         |                        |
-| GEN-CF-075 | Accrued Revenue Share                             | operating  | line_item |          |        |            | `goog:IncreaseDecreaseInAccruedReven…`   |                        |
-| GEN-CF-076 | Change in Income Taxes                            | operating  | line_item |          |        |            | `IncreaseDecreaseInIncomeTaxes`          |                        |
-| GEN-CF-081 | Loss (Gain) on Equity and Debt Securities, Net    | operating  | line_item |          |        |            | `DebtAndEquitySecuritiesGainLoss`        |                        |
-| GEN-CF-023 | Collections from Note Receivable                  | investing  | line_item |          |        |            | `ProceedsFromCollectionOfNotesReceiv…`   |                        |
-| GEN-CF-024 | Purchase of PP&E                                  | investing  | line_item |          |        |            | `PaymentsToAcquirePropertyPlantAndEq…`   |                        |
-| GEN-CF-025 | Purchase of Non-Marketable Equity Securities      | investing  | line_item |          |        |            | `PaymentsToAcquireEquitySecuritiesFvNi`  |                        |
-| GEN-CF-026 | Cash Flow from Investing                          | investing  | subtotal  |          |        |            | `NetCashProvidedByUsedInInvestingAct…`   |                        |
-| GEN-CF-041 | Proceeds from Sale of Assets                      | investing  | line_item |          |        |            | `ProceedsFromSaleOfProductiveAssets`     |                        |
-| GEN-CF-042 | Acquisitions, Net of Cash Acquired                | investing  | line_item |          |        |            | `PaymentsToAcquireBusinessesNetOfCas…`   |                        |
-| GEN-CF-043 | Other Investing Activities                        | investing  | line_item |          |        |            | `PaymentsForProceedsFromInvestments`     |                        |
-| GEN-CF-057 | Net Change in Short-Term Investments              | investing  | line_item |          |        |            | `ProceedsFromSaleOfShortTermInvestments` |                        |
-| GEN-CF-058 | Non-Cash Lease Expense                            | operating  | line_item |          |        |            | `OperatingLeaseRightOfUseAssetAmorti…`   |                        |
-| GEN-CF-065 | Proceeds from Divestitures of Businesses          | investing  | line_item |          |        |            | `ProceedsFromDivestitureOfBusinesses…`   |                        |
-| GEN-CF-069 | Additions to Intangibles                          | investing  | line_item |          |        |            | `PaymentsToAcquireIntangibleAssets`      |                        |
-| GEN-CF-070 | Net Change in Long-Term Investments               | investing  | line_item |          |        |            | `PaymentsToAcquireAvailableForSaleSe…`   |                        |
-| GEN-CF-027 | Finance Lease Payments                            | financing  | line_item |          |        |            | `FinanceLeasePrincipalPayments`          |                        |
-| GEN-CF-028 | Proceeds from Exercise of Stock Options           | financing  | line_item |          |        |            | `ProceedsFromStockOptionsExercised`      |                        |
-| GEN-CF-029 | Proceeds from Issuance of Preferred Stock         | financing  | line_item |          |        |            | `ProceedsFromIssuanceOfPreferredStoc…`   |                        |
-| GEN-CF-030 | Preferred Dividends                               | financing  | line_item |          |        |            | `PaymentsOfDividendsPreferredStockAn…`   |                        |
-| GEN-CF-031 | Proceeds from Issuance of Common Stock            | financing  | line_item |          |        |            | `ProceedsFromIssuanceOfCommonStock`      |                        |
-| GEN-CF-032 | Share Repurchases                                 | financing  | line_item |          |        |            | `PaymentsForRepurchaseOfCommonStock`     |                        |
-| GEN-CF-033 | Cash Flow from Financing                          | financing  | subtotal  |          |        |            | `NetCashProvidedByUsedInFinancingAct…`   |                        |
-| GEN-CF-040 | Common Dividends                                  | financing  | line_item |          |        |            | `PaymentsOfDividends`                    |                        |
-| GEN-CF-044 | Proceeds from Short-Term Debt                     | financing  | line_item |          |        |            | `ProceedsFromShortTermDebtMaturingIn…`   |                        |
-| GEN-CF-045 | Repayments of Short-Term Debt                     | financing  | line_item |          |        |            | `RepaymentsOfShortTermDebtMaturingIn…`   |                        |
-| GEN-CF-046 | Net Change in Other Short-Term Debt               | financing  | line_item |          |        |            | `ProceedsFromRepaymentsOfShortTermDe…`   |                        |
-| GEN-CF-047 | Proceeds from Issuance of Long-Term Debt          | financing  | line_item |          |        |            | `ProceedsFromIssuanceOfLongTermDebt`     |                        |
-| GEN-CF-048 | Repayments of Long-Term Debt                      | financing  | line_item |          |        |            | `RepaymentsOfLongTermDebt`               |                        |
-| GEN-CF-049 | Stock Options & Other Financing Activities        | financing  | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-054 | Debt Issuance Fees                                | financing  | line_item |          |        |            | `PaymentsOfDebtIssuanceCosts`            |                        |
-| GEN-CF-056 | Other Financing Activities                        | financing  | line_item |          |        |            | `ProceedsFromPaymentsForOtherFinanci…`   |                        |
-| GEN-CF-063 | Tax Withholdings on RSU/PSU Settlement            | financing  | line_item | negative |        |            | `PaymentsRelatedToTaxWithholdingForS…`   |                        |
-| GEN-CF-064 | Payments of Contingent Consideration              | financing  | line_item | negative |        |            | `PaymentForContingentConsiderationLi…`   |                        |
-| GEN-CF-077 | Stock-Based Award Activities, Net                 | financing  | line_item |          |        |            | `goog:NetProceedsPaymentsRelatedToSt…`   |                        |
-| GEN-CF-078 | Proceeds from Sale of Interest in Consolidated …  | financing  | line_item |          |        |            | `ProceedsFromMinorityShareholders`       |                        |
-| GEN-CF-034 | FX Effect on Cash                                 | cash_other | line_item |          |        |            | `EffectOfExchangeRateOnCashCashEquiv…`   |                        |
-| GEN-CF-035 | Net Change in Cash                                | cash_other | subtotal  |          |        |            | `CashCashEquivalentsRestrictedCashAn…`   |                        |
-| GEN-CF-068 | ROU Assets Obtained in Exchange for Lease Oblig…  | cash_other | line_item |          |        |            | `RightOfUseAssetObtainedInExchangeFo…`   |                        |
-| GEN-CF-036 | Cash at Beginning of Period                       |            | line_item |          |        |            | ``                                       |                        |
-| GEN-CF-037 | Cash at End of Period                             |            | line_item |          |        |            | ``                                       |                        |
+| rule_id    | model_label                                       | section    | type      | sign     | parent | accept     | concept                                  | projection model class    |
+| ---------- | ------------------------------------------------- | ---------- | --------- | -------- | ------ | ---------- | ---------------------------------------- | ------------------------- |
+| GEN-CF-001 | Net Income (Loss)                                 | operating  | line_item |          |        |            | ``                                       | =GEN-IS-022               |
+| GEN-CF-002 | Depreciation & Amortization                       | operating  | line_item |          |        |            | `DepreciationDepletionAndAmortization`   | =                         |
+| GEN-CF-003 | Impairment of Intangibles                         | operating  | line_item |          |        |            | `GoodwillAndIntangibleAssetImpairment`   |                           |
+| GEN-CF-052 | Depreciation                                      | operating  | line_item |          |        |            | `Depreciation`                           |                           |
+| GEN-CF-053 | Amortization                                      | operating  | line_item |          |        |            | `AdjustmentForAmortization`              |                           |
+| GEN-CF-061 | Restructuring and Asset Impairment Charges        | operating  | line_item |          |        |            | `RestructuringCostsAndAssetImpairmen…`   |                           |
+| GEN-CF-071 | Impairment of Long-Lived Assets (PP&E)            | operating  | line_item |          |        |            | `ImpairmentOfLongLivedAssetsHeldForUse`  |                           |
+| GEN-CF-079 | Amortization and Impairment of Intangibles        | operating  | line_item |          |        |            | `goog:AmortizationAndImpairmentOfInt…`   |                           |
+| GEN-CF-080 | Depreciation and Impairment of PP&E               | operating  | line_item |          |        |            | `goog:DepreciationAndImpairmentOnDis…`   |                           |
+| GEN-CF-005 | Inventory Write-Down                              | operating  | line_item |          |        |            | `InventoryWriteDown`                     |                           |
+| GEN-CF-007 | Gain (Loss) on Disposal of PP&E                   | operating  | line_item |          |        |            | `GainLossOnDispositionOfAssets1`         |                           |
+| GEN-CF-004 | Allowance for Credit Losses                       | operating  | line_item |          |        |            | `ProvisionForDoubtfulAccounts`           |                           |
+| GEN-CF-006 | Stock-Based Compensation                          | operating  | line_item |          |        |            | `ShareBasedCompensation`                 |                           |
+| GEN-CF-008 | (Benefit) Provision for Deferred Income Taxes     | operating  | line_item |          |        |            | `DeferredIncomeTaxExpenseBenefit`        |                           |
+| GEN-CF-009 | Foreign Currency Gain (Loss)                      | operating  | line_item |          |        |            | `ForeignCurrencyTransactionGainLossU…`   |                           |
+| GEN-CF-010 | Other Operating Items                             | operating  | line_item |          |        |            | ``                                       |                           |
+| GEN-CF-011 | Accounts Receivable                               | operating  | line_item |          |        |            | ``                                       |                           |
+| GEN-CF-012 | Inventories                                       | operating  | line_item |          |        |            | `IncreaseDecreaseInInventories`          |                           |
+| GEN-CF-013 | Prepaid Expenses                                  | operating  | line_item |          |        |            | `IncreaseDecreaseInPrepaidDeferredEx…`   |                           |
+| GEN-CF-014 | Accounts Payable                                  | operating  | line_item |          |        |            | `IncreaseDecreaseInAccountsPayableAn…`   |                           |
+| GEN-CF-015 | Accrued Expenses                                  | operating  | line_item |          |        |            | `IncreaseDecreaseInAccruedLiabilities`   |                           |
+| GEN-CF-016 | Accrued Promotional Allowance                     | operating  | line_item |          |        |            | ``                                       |                           |
+| GEN-CF-017 | Other Current Liabilities                         | operating  | line_item |          |        |            | ``                                       |                           |
+| GEN-CF-018 | ROU & Lease Liability, Net                        | operating  | line_item |          |        |            | ``                                       |                           |
+| GEN-CF-019 | Deferred Revenue                                  | operating  | line_item |          |        |            | ``                                       |                           |
+| GEN-CF-020 | Other Non-Current Assets                          | operating  | line_item |          |        |            | `IncreaseDecreaseInOtherNoncurrentAs…`   |                           |
+| GEN-CF-021 | Note Receivable                                   | operating  | line_item |          |        |            | `IncreaseDecreaseInFinanceReceivables`   |                           |
+| GEN-CF-022 | Cash Flow from Operations                         | operating  | subtotal  |          |        |            | `NetCashProvidedByUsedInOperatingAct…`   |                           |
+| GEN-CF-038 | Cash Paid for Interest                            | operating  | line_item |          |        | cash_other | `InterestPaidNet`                        |                           |
+| GEN-CF-039 | Cash Paid for Taxes                               | operating  | line_item |          |        | cash_other | `IncomeTaxesPaid`                        |                           |
+| GEN-CF-050 | Gain (Loss) on Extinguishment of Debt             | operating  | line_item |          |        |            | `GainsLossesOnExtinguishmentOfDebt`      |                           |
+| GEN-CF-051 | Net Change in Other Working Capital               | operating  | line_item |          |        |            | `IncreaseDecreaseInOtherNoncurrentLi…`   |                           |
+| GEN-CF-055 | Change in Fair Value of Contingent Consideration  | operating  | line_item |          |        |            | `LiabilitiesFairValueAdjustment`         |                           |
+| GEN-CF-059 | Pension and Postretirement Benefits Expense       | operating  | line_item |          |        |            | `PensionAndOtherPostretirementBenefi…`   |                           |
+| GEN-CF-060 | Pension and Postretirement Benefits Contributions | operating  | line_item | negative |        |            | `PensionAndOtherPostretirementBenefi…`   |                           |
+| GEN-CF-062 | Cash Payments for Restructuring                   | operating  | line_item | negative |        |            | `PaymentsForRestructuring`               |                           |
+| GEN-CF-066 | Acquisition and Divestiture-Related Charges       | operating  | line_item |          |        |            | `BusinessCombinationSeparatelyRecogn…`   |                           |
+| GEN-CF-067 | Cash Payments for Acquisition and Divestiture C…  | operating  | line_item | negative |        |            | `PaymentsForMergerRelatedCosts`          |                           |
+| GEN-CF-072 | Change in Accrued Compensation                    | operating  | line_item |          |        |            | `IncreaseDecreaseInEmployeeRelatedLi…`   |                           |
+| GEN-CF-074 | Change in Prepaid Income Taxes                    | operating  | line_item |          |        |            | `IncreaseDecreaseInPrepaidTaxes`         |                           |
+| GEN-CF-075 | Accrued Revenue Share                             | operating  | line_item |          |        |            | `goog:IncreaseDecreaseInAccruedReven…`   |                           |
+| GEN-CF-076 | Change in Income Taxes                            | operating  | line_item |          |        |            | `IncreaseDecreaseInIncomeTaxes`          |                           |
+| GEN-CF-081 | Loss (Gain) on Equity and Debt Securities, Net    | operating  | line_item |          |        |            | `DebtAndEquitySecuritiesGainLoss`        |                           |
+| GEN-CF-023 | Collections from Note Receivable                  | investing  | line_item |          |        |            | `ProceedsFromCollectionOfNotesReceiv…`   |                           |
+| GEN-CF-024 | Purchase of PP&E                                  | investing  | line_item |          |        |            | `PaymentsToAcquirePropertyPlantAndEq…`   |                           |
+| GEN-CF-025 | Purchase of Non-Marketable Equity Securities      | investing  | line_item |          |        |            | `PaymentsToAcquireEquitySecuritiesFvNi`  |                           |
+| GEN-CF-026 | Cash Flow from Investing                          | investing  | subtotal  |          |        |            | `NetCashProvidedByUsedInInvestingAct…`   |                           |
+| GEN-CF-041 | Proceeds from Sale of Assets                      | investing  | line_item |          |        |            | `ProceedsFromSaleOfProductiveAssets`     |                           |
+| GEN-CF-042 | Acquisitions, Net of Cash Acquired                | investing  | line_item |          |        |            | `PaymentsToAcquireBusinessesNetOfCas…`   |                           |
+| GEN-CF-043 | Other Investing Activities                        | investing  | line_item |          |        |            | `PaymentsForProceedsFromInvestments`     |                           |
+| GEN-CF-057 | Net Change in Short-Term Investments              | investing  | line_item |          |        |            | `ProceedsFromSaleOfShortTermInvestments` |                           |
+| GEN-CF-058 | Non-Cash Lease Expense                            | operating  | line_item |          |        |            | `OperatingLeaseRightOfUseAssetAmorti…`   |                           |
+| GEN-CF-065 | Proceeds from Divestitures of Businesses          | investing  | line_item |          |        |            | `ProceedsFromDivestitureOfBusinesses…`   |                           |
+| GEN-CF-069 | Additions to Intangibles                          | investing  | line_item |          |        |            | `PaymentsToAcquireIntangibleAssets`      |                           |
+| GEN-CF-070 | Net Change in Long-Term Investments               | investing  | line_item |          |        |            | `PaymentsToAcquireAvailableForSaleSe…`   |                           |
+| GEN-CF-027 | Finance Lease Payments                            | financing  | line_item |          |        |            | `FinanceLeasePrincipalPayments`          |                           |
+| GEN-CF-028 | Proceeds from Exercise of Stock Options           | financing  | line_item |          |        |            | `ProceedsFromStockOptionsExercised`      |                           |
+| GEN-CF-029 | Proceeds from Issuance of Preferred Stock         | financing  | line_item |          |        |            | `ProceedsFromIssuanceOfPreferredStoc…`   |                           |
+| GEN-CF-030 | Preferred Dividends                               | financing  | line_item |          |        |            | `PaymentsOfDividendsPreferredStockAn…`   |                           |
+| GEN-CF-031 | Proceeds from Issuance of Common Stock            | financing  | line_item |          |        |            | `ProceedsFromIssuanceOfCommonStock`      |                           |
+| GEN-CF-032 | Share Repurchases                                 | financing  | line_item |          |        |            | `PaymentsForRepurchaseOfCommonStock`     |                           |
+| GEN-CF-033 | Cash Flow from Financing                          | financing  | subtotal  |          |        |            | `NetCashProvidedByUsedInFinancingAct…`   |                           |
+| GEN-CF-040 | Common Dividends                                  | financing  | line_item |          |        |            | `PaymentsOfDividends`                    |                           |
+| GEN-CF-044 | Proceeds from Short-Term Debt                     | financing  | line_item |          |        |            | `ProceedsFromShortTermDebtMaturingIn…`   |                           |
+| GEN-CF-045 | Repayments of Short-Term Debt                     | financing  | line_item |          |        |            | `RepaymentsOfShortTermDebtMaturingIn…`   |                           |
+| GEN-CF-046 | Net Change in Other Short-Term Debt               | financing  | line_item |          |        |            | `ProceedsFromRepaymentsOfShortTermDe…`   |                           |
+| GEN-CF-047 | Proceeds from Issuance of Long-Term Debt          | financing  | line_item |          |        |            | `ProceedsFromIssuanceOfLongTermDebt`     |                           |
+| GEN-CF-048 | Repayments of Long-Term Debt                      | financing  | line_item |          |        |            | `RepaymentsOfLongTermDebt`               |                           |
+| GEN-CF-049 | Stock Options & Other Financing Activities        | financing  | line_item |          |        |            | ``                                       |                           |
+| GEN-CF-054 | Debt Issuance Fees                                | financing  | line_item |          |        |            | `PaymentsOfDebtIssuanceCosts`            |                           |
+| GEN-CF-056 | Other Financing Activities                        | financing  | line_item |          |        |            | `ProceedsFromPaymentsForOtherFinanci…`   |                           |
+| GEN-CF-063 | Tax Withholdings on RSU/PSU Settlement            | financing  | line_item | negative |        |            | `PaymentsRelatedToTaxWithholdingForS…`   |                           |
+| GEN-CF-064 | Payments of Contingent Consideration              | financing  | line_item | negative |        |            | `PaymentForContingentConsiderationLi…`   |                           |
+| GEN-CF-077 | Stock-Based Award Activities, Net                 | financing  | line_item |          |        |            | `goog:NetProceedsPaymentsRelatedToSt…`   |                           |
+| GEN-CF-078 | Proceeds from Sale of Interest in Consolidated …  | financing  | line_item |          |        |            | `ProceedsFromMinorityShareholders`       |                           |
+| GEN-CF-034 | FX Effect on Cash                                 | cash_other | line_item |          |        |            | `EffectOfExchangeRateOnCashCashEquiv…`   |                           |
+| GEN-CF-035 | Net Change in Cash                                | cash_other | subtotal  |          |        |            | `CashCashEquivalentsRestrictedCashAn…`   |                           |
+| GEN-CF-068 | ROU Assets Obtained in Exchange for Lease Oblig…  | cash_other | line_item |          |        |            | `RightOfUseAssetObtainedInExchangeFo…`   |                           |
+| GEN-CF-036 | Cash at Beginning of Period                       |            | line_item |          |        |            | ``                                       | Prior period Cash Balance |
+| GEN-CF-037 | Cash at End of Period                             |            | line_item |          |        |            | ``                                       | CF 36 + CF 35             |
