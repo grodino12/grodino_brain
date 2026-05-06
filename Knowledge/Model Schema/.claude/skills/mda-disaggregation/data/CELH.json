@@ -1,0 +1,320 @@
+{
+  "ticker": "CELH",
+  "periods": [
+    "Q1 2023", "Q2 2023", "Q3 2023", "Q4 2023", "FY2023",
+    "Q1 2024", "Q2 2024", "Q3 2024", "Q4 2024", "FY2024",
+    "Q1 2025", "Q2 2025", "Q3 2025", "Q4 2025", "FY2025"
+  ],
+  "ytd_periods": ["9M 2023", "9M 2024", "9M 2025"],
+
+  "geography": {
+    "regions": ["North America", "Europe", "Asia-Pacific", "Other"],
+    "data": {
+      "North America": {
+        "Q1 2023": [248552, "Q1 2024 10-Q comparable column. Q1 2023 10-Q itself did not disclose disaggregation."],
+        "Q2 2023": [310815, "Q2 2024 10-Q comparable column."],
+        "Q3 2023": [371178, "Q3 2023 10-Q Note 4."],
+        "FY2023": [1263341, "FY2023 10-K MD&A geography table."],
+        "Q1 2024": [339512, "Q1 2024 10-Q MD&A geography table."],
+        "Q2 2024": [382351, "Q2 2024 10-Q MD&A geography table."],
+        "Q3 2024": [247125, "Q3 2024 10-Q MD&A. Sweden largest foreign country at $9.5M Q3."],
+        "FY2024": [1280894, "FY2024 10-K MD&A geography table."],
+        "Q1 2025": [306534, "Q1 2025 10-Q Note 4."],
+        "Q2 2025": [714459, "Q2 2025 10-Q Note 4. First quarter post-Alani close (April 1, 2025)."],
+        "Q3 2025": [701990, "Q3 2025 10-Q Note 4. Includes ~33 days of Rockstar (closed Aug 28)."],
+        "FY2025": [2422490, "FY2025 10-K MD&A. Full year of Celsius + 9 months Alani + ~4 months Rockstar."]
+      },
+      "Europe": {
+        "Q1 2023": [8652, "Q1 2024 10-Q comparable."],
+        "Q2 2023": [11909, "Q2 2024 10-Q comparable."],
+        "Q3 2023": [11038, "Q3 2023 10-Q Note 4."],
+        "FY2023": [43722, "FY2023 10-K."],
+        "Q1 2024": [14142, "Q1 2024 10-Q."],
+        "Q2 2024": [16684, "Q2 2024 10-Q."],
+        "Q3 2024": [16243, "Q3 2024 10-Q."],
+        "FY2024": [61696, "FY2024 10-K."],
+        "Q1 2025": [18659, "Q1 2025 10-Q."],
+        "Q2 2025": [18301, "Q2 2025 10-Q."],
+        "Q3 2025": [17691, "Q3 2025 10-Q."],
+        "FY2025": [72544, "FY2025 10-K."]
+      },
+      "Asia-Pacific": {
+        "Q1 2023": [1258, "Q1 2024 10-Q comparable."],
+        "Q2 2023": [1606, "Q2 2024 10-Q comparable."],
+        "Q3 2023": [1247, "Q3 2023 10-Q Note 4."],
+        "FY2023": [4755, "FY2023 10-K."],
+        "Q1 2024": [675, "Q1 2024 10-Q."],
+        "Q2 2024": [860, "Q2 2024 10-Q."],
+        "Q3 2024": [594, "Q3 2024 10-Q."],
+        "FY2024": [5658, "FY2024 10-K."],
+        "Q1 2025": [2244, "Q1 2025 10-Q."],
+        "Q2 2025": [4381, "Q2 2025 10-Q."],
+        "Q3 2025": [3518, "Q3 2025 10-Q."],
+        "FY2025": [12971, "FY2025 10-K."]
+      },
+      "Other": {
+        "Q1 2023": [1477, "Q1 2024 10-Q comparable."],
+        "Q2 2023": [1553, "Q2 2024 10-Q comparable."],
+        "Q3 2023": [1294, "Q3 2023 10-Q Note 4."],
+        "FY2023": [6196, "FY2023 10-K."],
+        "Q1 2024": [1379, "Q1 2024 10-Q."],
+        "Q2 2024": [2082, "Q2 2024 10-Q."],
+        "Q3 2024": [1786, "Q3 2024 10-Q."],
+        "FY2024": [7382, "FY2024 10-K."],
+        "Q1 2025": [1839, "Q1 2025 10-Q. Puerto Rico included in Other."],
+        "Q2 2025": [2118, "Q2 2025 10-Q."],
+        "Q3 2025": [1907, "Q3 2025 10-Q."],
+        "FY2025": [1400, "Computed: FY2025 - 9M 2025 = 7264 - 5864 = 1400."]
+      }
+    }
+  },
+
+  "customer_concentration": {
+    "customers": ["Pepsi", "Costco", "Amazon", "All others"],
+    "data": {
+      "Pepsi": {
+        "Q1 2023": [0.602, "Q1 2023 10-Q"], "Q2 2023": [0.567, "Q2 2023 10-Q"],
+        "Q3 2023": [0.646, "Q3 2023 10-Q"], "FY2023": [0.594, "FY2023 10-K"],
+        "Q1 2024": [0.592, "Q1 2024 10-Q"], "Q2 2024": [0.529, "Q2 2024 10-Q"],
+        "Q3 2024": [0.470, "Q3 2024 10-Q"], "FY2024": [0.547, "FY2024 10-K"],
+        "Q1 2025": [0.576, "Q1 2025 10-Q"], "Q2 2025": [0.333, "Q2 2025 10-Q"],
+        "Q3 2025": [0.354, "Q3 2025 10-Q"], "FY2025": [0.432, "FY2025 10-K"]
+      },
+      "Costco": {
+        "Q1 2023": [0.129, "Q1 2023 10-Q"], "Q2 2023": [0.130, "Q2 2023 10-Q"],
+        "Q3 2023": [0.089, "Q3 2023 10-Q"], "FY2023": [0.120, "FY2023 10-K"],
+        "Q1 2024": [0.102, "Q1 2024 10-Q"], "Q2 2024": [0.121, "Q2 2024 10-Q"],
+        "Q3 2024": [0.149, "Q3 2024 10-Q"], "FY2024": [0.116, "FY2024 10-K"],
+        "Q1 2025": [0.059, "Q1 2025 10-Q"], "Q2 2025": [0.117, "Q2 2025 10-Q"],
+        "Q3 2025": [0.111, "Q3 2025 10-Q"], "FY2025": [0.108, "FY2025 10-K"]
+      },
+      "Amazon": {
+        "Q1 2023": [0.084, "Q1 2023 10-Q"],
+        "FY2023": [0.076, "FY2023 10-K"],
+        "Q3 2024": [0.102, "Q3 2024 10-Q"],
+        "Q1 2025": [0.121, "Q1 2025 10-Q"],
+        "Q3 2025": [0.055, "Q3 2025 10-Q"]
+      },
+      "All others": {
+        "Q1 2023": [0.185, "Q1 2023 10-Q"], "Q2 2023": [0.303, "Q2 2023 10-Q"],
+        "Q3 2023": [0.265, "Q3 2023 10-Q"], "FY2023": [0.210, "FY2023 10-K"],
+        "Q1 2024": [0.306, "Q1 2024 10-Q"], "Q2 2024": [0.350, "Q2 2024 10-Q"],
+        "Q3 2024": [0.279, "Q3 2024 10-Q"], "FY2024": [0.337, "FY2024 10-K"],
+        "Q1 2025": [0.244, "Q1 2025 10-Q"], "Q2 2025": [0.550, "Q2 2025 10-Q"],
+        "Q3 2025": [0.480, "Q3 2025 10-Q"], "FY2025": [0.460, "FY2025 10-K"]
+      }
+    }
+  },
+
+  "functional_concentration": {
+    "single_period": {
+      "FY2023": [0.961, "FY2023 10-K Concentrations of Risk"],
+      "Q3 2024": [0.945, "Q3 2024 10-Q (3M)"],
+      "FY2024": [0.953, "FY2024 10-K"],
+      "Q2 2025": [0.926, "Q2 2025 10-Q (3M)"],
+      "Q3 2025": [0.950, "Q3 2025 10-Q (3M)"],
+      "FY2025": [0.929, "FY2025 10-K"]
+    },
+    "ytd": {
+      "Q3 2024": [0.954, "Q3 2024 10-Q (9M)"],
+      "Q2 2025": [0.935, "Q2 2025 10-Q (6M)"],
+      "Q3 2025": [0.941, "Q3 2025 10-Q (9M)"]
+    }
+  },
+
+  "brand_contribution": {
+    "active_periods": ["Q1 2025", "Q2 2025", "Q3 2025", "Q4 2025", "FY2025"],
+    "residual_brand_label": "Celsius (residual)",
+    "acquired_brands": [
+      {
+        "name": "Alani Nu",
+        "data": {
+          "Q1 2025": [0, "Pre-acquisition (closed April 1, 2025)."],
+          "Q2 2025": [301200, "Q2 2025 10-Q Note 5: '$301.2 million from Closing Date through June 30, 2025.'"],
+          "Q3 2025": [332000, "Q3 2025 10-Q MD&A. Cross-check Item 4 = 35.3% x 9M revenue."],
+          "FY2025": [1001900, "FY2025 10-K Note 5: '$1,001.9 million from Closing Date through Dec 31, 2025.' Item 9A: 39.8% of consolidated revenue."]
+        }
+      },
+      {
+        "name": "Rockstar",
+        "data": {
+          "Q1 2025": [0, "Pre-acquisition (closed August 28, 2025)."],
+          "Q2 2025": [0, "Pre-acquisition."],
+          "Q3 2025": [12200, "Q3 2025 10-Q Note 5: '$12.2 million Aug 28 - Sep 30.'"],
+          "FY2025": [55600, "FY2025 10-K Note 5: '$55.6 million from Closing Date through Dec 31, 2025.' Item 9A: 2.2% of consolidated revenue."]
+        }
+      }
+    ]
+  },
+
+  "pro_forma": {
+    "periods": ["Q3 2024", "Q3 2025", "9M 2024", "9M 2025", "FY2024", "FY2025"],
+    "as_reported": {
+      "Q3 2024": [265748, "Q3 2025 10-Q N5"],
+      "Q3 2025": [725106, "Q3 2025 10-Q N5"],
+      "9M 2024": [1023433, "Q3 2025 10-Q N5"],
+      "9M 2025": [1793641, "Q3 2025 10-Q N5"],
+      "FY2024": [1355630, "FY2025 10-K N5"],
+      "FY2025": [2515269, "FY2025 10-K N5"]
+    },
+    "pro_forma_values": {
+      "Q3 2024": [513912, "Q3 2025 10-Q N5"],
+      "Q3 2025": [798496, "Q3 2025 10-Q N5. Diff = ~2 missing months Rockstar."],
+      "9M 2024": [1737287, "Q3 2025 10-Q N5"],
+      "9M 2025": [2271993, "Q3 2025 10-Q N5. Diff = Alani Q1 + Rockstar Jan-Aug 27."],
+      "FY2024": [2317965, "FY2025 10-K N5. Implied: ~$962M full-year combined in 2024."],
+      "FY2025": [3003677, "FY2025 10-K N5. Implied: ~$488M additional from full-year ownership."]
+    }
+  },
+
+  "sga_walk": {
+    "totals": {
+      "Q1 2023": [68900, "Q1 2023 10-Q"],
+      "Q2 2023": [94200, "Q2 2023 10-Q"],
+      "Q3 2023": [96400, "Q3 2023 10-Q"],
+      "FY2023": [366800, "FY2023 10-K"],
+      "Q1 2024": [99000, "Q1 2024 10-Q"],
+      "Q2 2024": [114900, "Q2 2024 10-Q"],
+      "Q3 2024": [125400, "Q3 2024 10-Q"],
+      "FY2024": [524500, "FY2024 10-K"],
+      "Q1 2025": [120300, "Q1 2025 10-Q"],
+      "Q2 2025": [237900, "Q2 2025 10-Q"],
+      "Q3 2025": [205600, "Q3 2025 10-Q"],
+      "FY2025": [798800, "FY2025 10-K"]
+    },
+    "data": {
+      "Q1 2023": {
+        "mkt_invest": 16500, "storage": -3000, "employee_ms": 3600, "admin": 5500, "stock_comp": 1200, "other_admin": 1400,
+        "src": "Q1 2023 10-Q MD&A: SG&A $68.9M (+$25.1M YoY). Marketing +$16.5M; Storage -$3.0M; Employee +$3.6M; Admin +$5.5M (audit/legal/insurance/rent); Stock comp +$1.2M; Other (R&D/D&A/use+excise tax) +$1.4M."
+      },
+      "Q2 2023": {
+        "mkt_invest": 21700, "storage": 3000, "employee_ms": 1800, "admin": 15000, "stock_comp": 1500, "other_admin": 4300,
+        "src": "Q2 2023 10-Q MD&A: SG&A $94.2M (+$47.3M YoY, +101%). Marketing +$21.7M; Storage +$3.0M; Employee +$1.8M; Admin +$15.0M (audit/legal/legal settlements/insurance/rent); Stock comp +$1.5M; Other (D&A/R&D/use+excise/other selling) +$4.3M."
+      },
+      "Q3 2023": {
+        "mkt_invest": 21200, "storage": 2200, "employee_ms": 3900, "admin": -6300, "stock_comp": -1300, "distrib_term": -149500,
+        "src": "Q3 2023 10-Q MD&A: SG&A $96.4M (-$129.8M YoY, -57%). Distributor termination -$149.5M (vs 2022's $193.8M one-time); Marketing +$21.2M; Storage +$2.2M; Employee +$3.9M; Admin -$6.3M (down to $11.3M; mainly $7.8M litigation settlement in 2022); Stock comp -$1.3M (forfeitures)."
+      },
+      "FY2023": {
+        "mkt_invest": 75000, "storage": 12100, "employee_ms": 13400, "admin": 18000, "stock_comp": 600, "distrib_term": -181000,
+        "src": "FY2023 10-K MD&A: SG&A $366.8M (-$61.9M YoY, -14%). Distributor termination -$181.0M (vs 2022 $193.8M); Marketing +$75.0M; Storage +$12.1M; Employee +$13.4M; Admin +$18.0M (+45%, up to $57.9M); Stock comp +$0.6M."
+      },
+      "Q1 2024": {
+        "mkt_invest": 14400, "storage": 4500, "employee_ms": 7600, "admin": 2800, "stock_comp": -1900, "other_selling": 2700,
+        "src": "Q1 2024 10-Q MD&A: SG&A $99.0M (+$30.1M YoY, +44%). Marketing +$14.4M; Storage +$4.5M; Employee +$7.6M; Other selling +$2.7M; Admin +$2.8M (consulting); Stock comp -$1.9M."
+      },
+      "Q2 2024": {
+        "mkt_invest": 22900, "employee_ms": 9700, "admin": -10400, "stock_comp": -1000, "other_admin": -500,
+        "src": "Q2 2024 10-Q MD&A: SG&A $114.9M (+$20.7M YoY, +22%). Marketing +$22.9M; Employee +$9.7M; Admin -$10.4M (lower consulting); Stock comp -$1.0M; Other (storage/R&D/D&A) -$0.5M."
+      },
+      "Q3 2024": {
+        "mkt_invest": 17500, "employee_ms": 9300, "other_admin": 2200,
+        "src": "Q3 2024 10-Q MD&A: SG&A $125.4M (+$29.0M YoY, +30%). Marketing +$17.5M; Employee +$9.3M; Other SG&A +$2.2M. Less granular bucket breakdown."
+      },
+      "FY2024": {
+        "mkt_invest": 61500, "employee_ms": 35500, "legal_accrual": 52800, "other_admin": 7900,
+        "src": "FY2024 10-K MD&A: SG&A $524.5M (+$157.7M YoY, +43%). Marketing +$61.5M; Employee +$35.5M; Legal accrual +$52.8M (one-time loss contingency); Other (write-offs/restructuring/co-packer/acq) +$20.3M, partially offset by Other -$12.4M = net Other +$7.9M."
+      },
+      "Q1 2025": {
+        "mkt_invest": 2800, "employee_ms": 4900, "admin": 12100, "other_admin": 1500,
+        "src": "Q1 2025 10-Q MD&A: SG&A $120.3M (+$21.3M YoY, +22%). Admin +$12.1M (acquisition transaction & legal expenses); Employee +$4.9M; Marketing +$2.8M; All other +$1.5M. Pre-Alani close (April 1, 2025)."
+      },
+      "Q2 2025": {
+        "mkt_invest": 17500, "employee_ms": 7900, "alani_ms": 29700, "other_selling": 5500,
+        "acq_integ": 16000, "alani_ga": 15800, "contingent": 13800, "other_admin": 16800,
+        "src": "Q2 2025 10-Q MD&A: SG&A $237.9M (+$123.0M YoY, +107%). M&S +$60.6M (Alani $29.7M + Marketing $17.5M + Employee $7.9M + Other selling $5.5M). G&A +$62.4M (Acquisition $16.0M + Alani $15.8M + Contingent $13.8M + Legal/consulting $11.7M + Other admin $5.1M = $16.8M combined other)."
+      },
+      "Q3 2025": {
+        "mkt_invest": 17800, "employee_ms": 4800, "alani_ms": 19300, "other_selling": 6000,
+        "acq_integ": 15300, "alani_ga": 12500, "other_admin": 4500,
+        "src": "Q3 2025 10-Q MD&A: SG&A $205.6M (+$80.2M YoY, +64%). M&S +$47.9M (Alani $19.3M + Marketing 'Live.Fit.Go.' $17.8M + Employee $4.8M + Other selling $6.0M). G&A +$32.3M (Acquisition/integration $15.3M + Alani $12.5M + Other admin $4.5M). Distributor Termination Fees of $246.7M shown SEPARATELY as new IS line."
+      },
+      "FY2025": {
+        "mkt_invest": 76600, "employee_ms": 29100, "alani_ms": 65000, "other_selling": 29900,
+        "acq_integ": 44900, "alani_ga": 53400, "contingent": 13800, "legal_accrual": -46000, "other_admin": 7600,
+        "src": "FY2025 10-K MD&A: SG&A $798.8M (+$274.3M YoY, +52%). M&S +$200.6M (Marketing $76.6M + Alani $65.0M + Employee $29.1M + Other selling $29.9M). G&A +$73.7M (Alani $53.4M + Acquisition/integration $44.9M + Contingent $13.8M + Other G&A $7.6M, OFFSET BY -$46.0M legal accrual reversal vs prior year booking). Distributor Termination Fees of $327.5M shown SEPARATELY."
+      }
+    },
+    "ytd_data": {
+      "9M 2023": {
+        "mkt_invest": 59300, "employee_ms": 9300, "admin": 14100, "stock_comp": 1400, "distrib_term": -141600,
+        "src": "Q3 2023 10-Q 9M walk: SG&A $259.5M (-$57.4M YoY). Distributor termination -$141.6M; Marketing +$59.3M; Employee +$9.3M; Admin +$14.1M (+33%, up to $43.2M); Stock comp +$1.4M."
+      },
+      "9M 2024": {
+        "mkt_invest": 56000, "employee_ms": 26600, "other_admin": -2800,
+        "src": "Q3 2024 10-Q 9M walk: SG&A $339.3M (+$79.8M YoY, +31%). Marketing +$56.0M; Employee +$26.6M; All other SG&A -$2.8M."
+      },
+      "9M 2025": {
+        "mkt_invest": 38100, "employee_ms": 15900, "alani_ms": 49000, "other_selling": 10600,
+        "acq_integ": 40400, "alani_ga": 28300, "contingent": 13800, "other_admin": 28400,
+        "src": "Q3 2025 10-Q 9M walk: SG&A $563.8M (+$224.5M YoY, +66%). M&S +$113.6M (Alani $49.0M + Marketing $38.1M + Employee $15.9M + Other selling $10.6M). G&A +$110.9M (Acquisition $40.4M + Alani $28.3M + Other admin (D&A/stock comp) $16.4M + Contingent $13.8M + Other G&A (legal/consulting) $12.0M = $28.4M combined other admin)."
+      }
+    },
+    "distributor_term_separate": {
+      "Q3 2025": [246700, "Q3 2025 10-Q. Separate IS line: $246.7M Q3 alone."],
+      "FY2025": [327500, "FY2025 10-K. Separate IS line: $327.5M FY total."]
+    }
+  },
+
+  "gp": {
+    "totals": {
+      "Q1 2023": [113800, "Q1 2023 10-Q"],
+      "Q2 2023": [159000, "Q2 2023 10-Q"],
+      "Q3 2023": [194100, "Q3 2023 10-Q"],
+      "FY2023": [633100, "FY2023 10-K"],
+      "Q1 2024": [182200, "Q1 2024 10-Q"],
+      "Q2 2024": [209100, "Q2 2024 10-Q"],
+      "Q3 2024": [122200, "Q3 2024 10-Q"],
+      "FY2024": [680200, "FY2024 10-K"],
+      "Q1 2025": [172400, "Q1 2025 10-Q"],
+      "Q2 2025": [380900, "Q2 2025 10-Q"],
+      "Q3 2025": [372300, "Q3 2025 10-Q"],
+      "FY2025": [1267300, "FY2025 10-K"]
+    },
+    "drivers": ["raw", "promo", "freight", "mix", "brand", "inv", "tariffs"],
+    "driver_data": {
+      "Q1 2023": {"raw": "+", "freight": "-", "mix": "+", "src": "Q1 2023 10-Q", "q": "Volume leverage; reduced higher-cost intl can mix; offset by inventory write-offs and freight from Pepsi distribution integration."},
+      "Q2 2023": {"raw": "+", "freight": "+", "src": "Q2 2023 10-Q", "q": "Lower packaging/raw material; reduced waste; freight efficiencies."},
+      "Q3 2023": {"raw": "+", "promo": "+", "freight": "+", "src": "Q3 2023 10-Q", "q": "Packaging/raw savings; waste reduction; freight efficiency; improved promotional leverage."},
+      "FY2023": {"raw": "+", "src": "FY2023 10-K", "q": "Raw material sourcing efficiencies; product waste reduction."},
+      "Q1 2024": {"raw": "+", "freight": "+", "src": "Q1 2024 10-Q", "q": "Decreases in raw/package material unit cost; reduced outbound freight."},
+      "Q2 2024": {"raw": "+", "freight": "+", "src": "Q2 2024 10-Q", "q": "Same: raw/package cost; freight efficiency."},
+      "Q3 2024": {"raw": "+", "promo": "-", "freight": "+", "src": "Q3 2024 10-Q", "q": "Promo allowances UP as % gross revenue (-) due to Pepsi supply chain optimization. Partially offset by lower freight + materials."},
+      "FY2024": {"raw": "+", "promo": "-", "freight": "+", "src": "FY2024 10-K", "q": "Raw/package cost decreases + freight reduction; offset by increased promo allowances."},
+      "Q1 2025": {"raw": "+", "promo": "-", "src": "Q1 2025 10-Q", "q": "Raw/package material decreases (+); offset by increased promo (-)."},
+      "Q2 2025": {"raw": "+", "mix": "+", "brand": "-", "inv": "-", "src": "Q2 2025 10-Q", "q": "Material savings; product mix and scale efficiencies; offset by lower GM profile of Alani Nu and one-time inventory step-up."},
+      "Q3 2025": {"raw": "+", "promo": "+", "mix": "+", "brand": "-", "tariffs": "-", "src": "Q3 2025 10-Q", "q": "Lower promo spend; pack mix; favorable channel mix; raw materials scale; tariffs (-); Alani+Rockstar drag."},
+      "FY2025": {"raw": "+", "promo": "+", "mix": "+", "brand": "-", "inv": "-", "src": "FY2025 10-K", "q": "Comparatively lower margin from Alani Nu and Rockstar; offset by product/pack mix and COGS improvements."}
+    }
+  },
+
+  "other_inc_exp": {
+    "totals": {
+      "Q1 2023": [4900, "Q1 2023 10-Q"],
+      "Q2 2023": [4600, "Q2 2023 10-Q"],
+      "Q3 2023": [7000, "Q3 2023 10-Q"],
+      "FY2023": [25400, "FY2023 10-K"],
+      "Q1 2024": [9300, "Q1 2024 10-Q"],
+      "Q2 2024": [10400, "Q2 2024 10-Q"],
+      "Q3 2024": [11400, "Q3 2024 10-Q"],
+      "FY2024": [39300, "FY2024 10-K"],
+      "Q1 2025": [9000, "Q1 2025 10-Q"],
+      "Q2 2025": [-13600, "Q2 2025: implied from 9M 2025 Other (-$12.6M) - Q1 (+9.0) - Q3 (-8.0) = -13.6M."],
+      "Q3 2025": [-8000, "Q3 2025 10-Q. Net Other Expense (debt issued April 2025)."],
+      "FY2025": [-16000, "FY2025 10-K. Net Other Expense."]
+    },
+    "data": {
+      "Q3 2025": {"int_exp": -18200, "src": "Q3 2025 10-Q. Interest expense $18.2M (no debt prior year)."},
+      "FY2025": {
+        "int_inc": -18200, "int_exp": -49000, "rockstar_agency": 12600, "fx_other": -700,
+        "src": "FY2025 10-K full walk: +$49M interest expense (new $900M term loan); -$18.2M interest income (lower cash balance); +$12.6M Rockstar transition agency income; -$0.7M FX/other."
+      }
+    }
+  },
+
+  "taxonomy_notes": {
+    "sga_2023_to_2025_shift": "CELH 2023-2024 era: flat SG&A walk (Marketing/Storage/Employee/Admin/Stock comp/Other). CELH 2025 era: hierarchical M&S vs G&A split with Alani-attributable rows. Pre-2025 'Employee' costs map to employee_ms (M&S bucket); pre-2025 'Stock comp' maps to stock_comp under G&A. Pre-2025 'Admin' maps to admin under G&A.",
+    "distributor_term_relocation": "Pre-2025: Distributor Termination Fees were inside SG&A (+$193.8M FY2022 booked). Q3 2025+: split into separate IS line ($246.7M Q3 / $327.5M FY2025). Tracked in distributor_term_separate.",
+    "fy2024_legal_accrual_reversal": "FY2024 booked +$52.8M legal accrual; FY2025 reversed -$46.0M. The reversal sits under legal_accrual key as a negative value in FY2025 G&A."
+  }
+}
