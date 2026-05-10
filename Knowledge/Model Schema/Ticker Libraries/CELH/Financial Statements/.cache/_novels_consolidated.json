@@ -1,176 +1,26 @@
 [
   {
-    "raw_filing_label": "Accounts receivable-net",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:AccountsReceivableNetCurrent",
+    "raw_filing_label": "Accrued freight",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "celh:AccruedFreight",
     "periods": [
       "2022-FY",
       "2022-FY"
     ],
-    "sample_value": "63,311",
+    "sample_value": "8,532",
     "nearest_matches": [
       [
-        "accounts receivable-net",
-        1.0
+        "accrued wages",
+        0.6428571428571428
       ],
       [
-        "accounts receivable net",
-        0.9565217391304348
+        "accrued revenue share",
+        0.6111111111111112
       ],
       [
-        "accounts receivable",
-        0.9047619047619048
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Accounts receivable-net (note 2)",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:AccountsReceivableNetCurrent",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "38,741,049",
-    "nearest_matches": [
-      [
-        "accounts receivable-net",
-        1.0
-      ],
-      [
-        "accounts receivable net",
-        0.9565217391304348
-      ],
-      [
-        "accounts receivable",
-        0.9047619047619048
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Accrued promotional allowance",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "celh:AccruedPromotionalAllowance",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "35,977",
-    "nearest_matches": [
-      [
-        "accrued promotional allowance",
-        1.0
-      ],
-      [
-        "change in accrued promotional allowance",
-        0.8529411764705883
-      ],
-      [
-        "promotional allowance",
-        0.84
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Accumulated deficit",
-    "statement_type": "CF",
-    "section": "equity",
-    "concept": "us-gaap:RetainedEarningsAccumulatedDeficit",
-    "periods": [
-      "2021-FY",
-      "2021-FY",
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "51,489,559",
-    "nearest_matches": [
-      [
-        "accrued liabilities",
-        0.5263157894736843
-      ],
-      [
-        "accrued income taxes",
-        0.5128205128205128
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Accumulated other comprehensive (loss) income",
-    "statement_type": "CF",
-    "section": "equity",
-    "concept": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "1,881",
-    "nearest_matches": [
-      [
-        "accrued employee compensation",
-        0.5555555555555556
-      ],
-      [
-        "accrued compensation",
-        0.5396825396825398
-      ],
-      [
-        "accounts and note receivable net",
-        0.5333333333333333
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Accumulated other comprehensive income (loss)",
-    "statement_type": "CF",
-    "section": "equity",
-    "concept": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "613,651",
-    "nearest_matches": [
-      [
-        "accounts and note receivable net",
-        0.5714285714285714
-      ],
-      [
-        "accrued employee compensation",
-        0.5671641791044777
-      ],
-      [
-        "accrued compensation",
-        0.5517241379310345
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Additional paid-in capital",
-    "statement_type": "CF",
-    "section": "equity",
-    "concept": "us-gaap:AdditionalPaidInCapital",
-    "periods": [
-      "2021-FY",
-      "2021-FY",
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "267,846,196",
-    "nearest_matches": [
-      [
-        "additions to intangibles",
-        0.56
-      ],
-      [
-        "total operating activities",
-        0.5
-      ],
-      [
-        "additions to intangible assets",
-        0.5
+        "accrued payroll",
+        0.6
       ]
     ]
   },
@@ -181,70 +31,62 @@
     "concept": "celh:AmortizationOfDiscountOnBondsPayable",
     "periods": [
       "2021-Q2",
-      "2021-Q3"
+      "2021-Q3",
+      "2021-FY",
+      "2022-FY"
     ],
     "sample_value": "327,451",
     "nearest_matches": []
   },
   {
-    "raw_filing_label": "Cash",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "raw_filing_label": "Balance at December 31, 2020",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:SharesOutstanding",
     "periods": [
-      "2021-FY",
       "2021-FY"
     ],
-    "sample_value": "16,254,708",
+    "sample_value": "72,262,829",
     "nearest_matches": []
   },
   {
-    "raw_filing_label": "Common stock, $ 0.001 \u00a0par value;  100,000 \u00a0shares authorized,  76,382 \u00a0and  74,909 \u00a0shares issued and outstanding at December 31, 2022 and December 31, 2021, respectively",
-    "statement_type": "CF",
-    "section": "equity",
-    "concept": "us-gaap:CommonStockValue",
+    "raw_filing_label": "Balance at December 31, 2021",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:SharesOutstanding",
     "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "74,908,845",
+    "nearest_matches": []
+  },
+  {
+    "raw_filing_label": "Balance at December 31, 2022",
+    "statement_type": "BS",
+    "section": "equity",
+    "concept": "us-gaap:SharesOutstanding",
+    "periods": [
+      "2022-FY",
       "2022-FY",
       "2022-FY"
     ],
-    "sample_value": "76",
-    "nearest_matches": [
-      [
-        "common stock repurchases",
-        0.6666666666666667
-      ],
-      [
-        "repurchase of common stock",
-        0.631578947368421
-      ],
-      [
-        "dividends paid on common stock",
-        0.5714285714285714
-      ]
-    ]
+    "sample_value": "76,382",
+    "nearest_matches": []
   },
   {
-    "raw_filing_label": "Common stock, $ 0.001 \u00a0par value;  100,000,000 \u00a0shares authorized,  74,908,845 \u00a0and  72,262,829 \u00a0shares \u00a0\u00a0\u00a0issued and outstanding at December 31, 2021 and December 31, 2020, respectively (note 13)",
-    "statement_type": "CF",
-    "section": "equity",
-    "concept": "us-gaap:CommonStockValue",
+    "raw_filing_label": "Brands",
+    "statement_type": "BS",
+    "section": "mezzanine",
+    "concept": "us-gaap:PreferredStockValue",
     "periods": [
-      "2021-FY",
-      "2021-FY"
+      "2022-FY"
     ],
-    "sample_value": "74,909",
+    "sample_value": "446",
     "nearest_matches": [
       [
-        "common stock repurchases",
-        0.6666666666666667
-      ],
-      [
-        "repurchase of common stock",
-        0.631578947368421
-      ],
-      [
-        "dividends paid on common stock",
-        0.5714285714285714
+        "brands-net",
+        0.75
       ]
     ]
   },
@@ -273,196 +115,50 @@
     ]
   },
   {
-    "raw_filing_label": "Deferred other costs-current",
+    "raw_filing_label": "Deferred tax asset-net",
     "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "celh:DeferredContractCostsCurrent",
-    "periods": [
-      "2022-FY"
-    ],
-    "sample_value": "14,124",
-    "nearest_matches": [
-      [
-        "deferred income taxes-net",
-        0.6415094339622642
-      ],
-      [
-        "deferred income taxes net",
-        0.6037735849056604
-      ],
-      [
-        "other non-current assets",
-        0.5769230769230769
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Deferred other costs-non-current",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "celh:DeferredOtherCostsNonCurrent",
-    "periods": [
-      "2022-FY"
-    ],
-    "sample_value": "262,462",
-    "nearest_matches": [
-      [
-        "deferred income taxes-net",
-        0.631578947368421
-      ],
-      [
-        "other non-current assets",
-        0.6071428571428572
-      ],
-      [
-        "deferred income taxes net",
-        0.5964912280701755
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Deferred revenue-current",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "us-gaap:DeferredRevenueCurrent",
-    "periods": [
-      "2022-FY"
-    ],
-    "sample_value": "9,675",
-    "nearest_matches": [
-      [
-        "deferred revenue",
-        0.8
-      ],
-      [
-        "change in deferred revenue",
-        0.64
-      ],
-      [
-        "unearned revenue",
-        0.6
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Deferred revenue-non-current",
-    "statement_type": "CF",
-    "section": "non_current_liabilities",
-    "concept": "us-gaap:OtherLiabilitiesAndDeferredRevenueNoncurrent",
-    "periods": [
-      "2022-FY"
-    ],
-    "sample_value": "179,788",
-    "nearest_matches": [
-      [
-        "deferred revenue",
-        0.7272727272727273
-      ],
-      [
-        "change in deferred revenue",
-        0.5925925925925926
-      ],
-      [
-        "deferred income taxes-net",
-        0.5660377358490566
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Deferred tax asset",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:DeferredIncomeTaxAssetsNet",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "501",
-    "nearest_matches": [
-      [
-        "deferred tax provision",
-        0.7
-      ],
-      [
-        "deferred income taxes-net",
-        0.6976744186046511
-      ],
-      [
-        "deferred income taxes net",
-        0.6976744186046511
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Deferred tax asset (note 14)",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:DeferredIncomeTaxAssetsNet",
+    "section": "operating",
+    "concept": "celh:DeferredTaxAssetNet",
     "periods": [
       "2021-FY"
     ],
     "sample_value": "9,019,241",
     "nearest_matches": [
       [
-        "deferred tax provision",
-        0.7
-      ],
-      [
         "deferred income taxes-net",
-        0.6976744186046511
+        0.7234042553191489
       ],
-      [
-        "deferred income taxes net",
-        0.6976744186046511
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Deferred tax liability",
-    "statement_type": "CF",
-    "section": "non_current_liabilities",
-    "concept": "us-gaap:DeferredIncomeTaxLiabilities",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "15,919",
-    "nearest_matches": [
       [
         "deferred tax provision",
         0.6818181818181819
       ],
       [
         "deferred income taxes net",
-        0.5957446808510638
-      ],
-      [
-        "other current liabilities",
-        0.5957446808510638
+        0.6808510638297872
       ]
     ]
   },
   {
-    "raw_filing_label": "Deferred tax liability (note 14)",
+    "raw_filing_label": "Deferred tax liability-net",
     "statement_type": "CF",
-    "section": "non_current_liabilities",
-    "concept": "us-gaap:DeferredIncomeTaxLiabilities",
+    "section": "operating",
+    "concept": "celh:DeferredTaxLiabilitynet",
     "periods": [
       "2021-FY"
     ],
-    "sample_value": "3,146,394",
+    "sample_value": "182,156",
     "nearest_matches": [
       [
         "deferred tax provision",
-        0.6818181818181819
+        0.6666666666666667
+      ],
+      [
+        "deferred income taxes-net",
+        0.6274509803921569
       ],
       [
         "deferred income taxes net",
-        0.5957446808510638
-      ],
-      [
-        "other current liabilities",
-        0.5957446808510638
+        0.6274509803921569
       ]
     ]
   },
@@ -499,10 +195,12 @@
     "section": "operating",
     "concept": "celh:IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities",
     "periods": [
+      "2021-FY",
+      "2021-FY",
       "2022-Q1",
       "2022-Q1"
     ],
-    "sample_value": "765",
+    "sample_value": "373,744",
     "nearest_matches": [
       [
         "change in other current liabilities",
@@ -544,13 +242,239 @@
     ]
   },
   {
+    "raw_filing_label": "Domestic",
+    "statement_type": "IS",
+    "section": "unclassified",
+    "concept": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "periods": [
+      "2021-FY",
+      "2021-FY",
+      "2022-FY",
+      "2022-FY",
+      "2022-FY"
+    ],
+    "sample_value": "4,175,915",
+    "nearest_matches": []
+  },
+  {
+    "raw_filing_label": "Due to Pepsi",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:DueToRelatedPartiesCurrentAndNoncurrent",
+    "periods": [
+      "2022-FY"
+    ],
+    "sample_value": "34,807",
+    "nearest_matches": [
+      [
+        "accrued compensation",
+        0.5
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Effect of dilutive share based awards",
+    "statement_type": "IS",
+    "section": "unclassified",
+    "concept": "us-gaap:AntidilutiveSecuritiesExcludedFromComputationOfEarningsPerShareAmount",
+    "periods": [
+      "2021-FY",
+      "2021-FY"
+    ],
+    "sample_value": "3,907,371",
+    "nearest_matches": []
+  },
+  {
+    "raw_filing_label": "European deferred tax",
+    "statement_type": "IS",
+    "section": "unclassified",
+    "concept": "celh:EuropeanDeferredTax",
+    "periods": [
+      "2022-FY"
+    ],
+    "sample_value": "82",
+    "nearest_matches": [
+      [
+        "earnings before taxes",
+        0.5714285714285714
+      ],
+      [
+        "income before taxes",
+        0.55
+      ],
+      [
+        "dividends on preferred stock",
+        0.5306122448979591
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "European deferred tax (note 14)",
+    "statement_type": "IS",
+    "section": "unclassified",
+    "concept": "celh:EuropeanDeferredTax",
+    "periods": [
+      "2021-FY"
+    ],
+    "sample_value": "81,500",
+    "nearest_matches": [
+      [
+        "earnings before taxes",
+        0.5714285714285714
+      ],
+      [
+        "income before taxes",
+        0.55
+      ],
+      [
+        "dividends on preferred stock",
+        0.5306122448979591
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Finance Lease Liability Payments Due Next Twelve Months",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:FinanceLeaseLiabilityPaymentsDueNextTwelveMonths",
+    "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "160,239",
+    "nearest_matches": [
+      [
+        "finance lease liability current",
+        0.6511627906976745
+      ],
+      [
+        "finance lease liability non-current",
+        0.6444444444444444
+      ],
+      [
+        "finance lease liability-current",
+        0.627906976744186
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Finance Lease Liability Payments Due Year Four",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:FinanceLeaseLiabilityPaymentsDueYearFour",
+    "periods": [
+      "2022-FY"
+    ],
+    "sample_value": "64",
+    "nearest_matches": [
+      [
+        "finance lease liability current",
+        0.7012987012987013
+      ],
+      [
+        "finance lease liability non-current",
+        0.691358024691358
+      ],
+      [
+        "finance lease liabilities",
+        0.676056338028169
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Finance Lease Liability Payments Due Year Three",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:FinanceLeaseLiabilityPaymentsDueYearThree",
+    "periods": [
+      "2022-FY"
+    ],
+    "sample_value": "67",
+    "nearest_matches": [
+      [
+        "finance lease liability current",
+        0.717948717948718
+      ],
+      [
+        "finance lease liability non-current",
+        0.7073170731707318
+      ],
+      [
+        "finance lease liability-current",
+        0.6923076923076923
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Finance Lease Liability Payments Due Year Two",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:FinanceLeaseLiabilityPaymentsDueYearTwo",
+    "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "45,955",
+    "nearest_matches": [
+      [
+        "finance lease liability current",
+        0.7105263157894737
+      ],
+      [
+        "finance lease liability non-current",
+        0.7
+      ],
+      [
+        "finance lease liabilities",
+        0.6857142857142857
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Foreign",
+    "statement_type": "IS",
+    "section": "unclassified",
+    "concept": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "periods": [
+      "2021-FY",
+      "2021-FY",
+      "2022-FY",
+      "2022-FY",
+      "2022-FY"
+    ],
+    "sample_value": "117,468",
+    "nearest_matches": [
+      [
+        "foreign exchange gain",
+        0.5
+      ],
+      [
+        "foreign exchange loss",
+        0.5
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Freight",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "celh:Freight",
+    "periods": [
+      "2021-FY",
+      "2021-FY"
+    ],
+    "sample_value": "15,871,800",
+    "nearest_matches": []
+  },
+  {
     "raw_filing_label": "Gain on China transaction",
     "statement_type": "CF",
     "section": "operating",
     "concept": "us-gaap:GainLossOnInvestments",
     "periods": [
       "2021-Q2",
-      "2021-Q3"
+      "2021-Q3",
+      "2021-FY"
     ],
     "sample_value": "23,100",
     "nearest_matches": [
@@ -575,7 +499,9 @@
     "concept": "us-gaap:GainLossOnTerminationOfLease",
     "periods": [
       "2021-Q2",
-      "2021-Q3"
+      "2021-Q3",
+      "2021-FY",
+      "2022-FY"
     ],
     "sample_value": "152,112",
     "nearest_matches": [
@@ -592,76 +518,14 @@
   {
     "raw_filing_label": "Goodwill",
     "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:Goodwill",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "13,679",
-    "nearest_matches": []
-  },
-  {
-    "raw_filing_label": "Goodwill (note 9)",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:Goodwill",
+    "section": "unclassified",
+    "concept": "us-gaap:GoodwillImpairmentLoss",
     "periods": [
       "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "14,526,583",
-    "nearest_matches": []
-  },
-  {
-    "raw_filing_label": "Intangibles",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:IntangibleAssetsNetExcludingGoodwill",
-    "periods": [
-      "2022-FY",
       "2022-FY"
     ],
-    "sample_value": "12,254",
-    "nearest_matches": [
-      [
-        "additions to intangibles",
-        0.6285714285714286
-      ],
-      [
-        "impairment of intangibles",
-        0.6111111111111112
-      ],
-      [
-        "intangible asset impairment",
-        0.5789473684210527
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Intangibles (note 9)",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:IntangibleAssetsNetExcludingGoodwill",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "16,301,326",
-    "nearest_matches": [
-      [
-        "additions to intangibles",
-        0.6285714285714286
-      ],
-      [
-        "impairment of intangibles",
-        0.6111111111111112
-      ],
-      [
-        "intangible asset impairment",
-        0.5789473684210527
-      ]
-    ]
+    "sample_value": "395,515",
+    "nearest_matches": []
   },
   {
     "raw_filing_label": "Interest",
@@ -695,7 +559,9 @@
     "concept": "us-gaap:InterestExpenseSubordinatedNotesAndDebentures",
     "periods": [
       "2021-Q2",
-      "2021-Q3"
+      "2021-Q3",
+      "2021-FY",
+      "2022-FY"
     ],
     "sample_value": "247,437",
     "nearest_matches": [
@@ -723,6 +589,8 @@
       "2021-Q2",
       "2021-Q3",
       "2021-Q3",
+      "2021-FY",
+      "2021-FY",
       "2022-Q1",
       "2022-Q1",
       "2022-Q2",
@@ -745,152 +613,204 @@
     ]
   },
   {
-    "raw_filing_label": "Inventories-net",
+    "raw_filing_label": "Interest payments on finance lease liabilities",
     "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:InventoryNet",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "173,289",
-    "nearest_matches": [
-      [
-        "inventories-net",
-        1.0
-      ],
-      [
-        "inventories",
-        0.8461538461538461
-      ],
-      [
-        "inventory reserve",
-        0.6875
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Inventories-net (note 4)",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:InventoryNet",
+    "section": "operating",
+    "concept": "us-gaap:FinanceLeaseInterestPaymentOnLiability",
     "periods": [
       "2021-FY",
       "2021-FY"
     ],
-    "sample_value": "191,221,851",
+    "sample_value": "7,431",
     "nearest_matches": [
       [
-        "inventories-net",
-        1.0
-      ],
-      [
-        "inventories",
-        0.8461538461538461
-      ],
-      [
-        "inventory reserve",
-        0.6875
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Lease liability obligation-finance leases",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "us-gaap:FinanceLeaseLiabilityCurrent",
-    "periods": [
-      "2022-FY",
-      "2022-FY",
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "70",
-    "nearest_matches": [
-      [
-        "principal payments on finance leases",
-        0.5714285714285714
+        "repayments of finance lease obligations",
+        0.7764705882352942
       ],
       [
         "payments on finance lease obligations",
-        0.5128205128205128
+        0.7710843373493976
       ],
       [
         "principal payments on finance lease obligations",
-        0.5
+        0.7526881720430108
       ]
     ]
   },
   {
-    "raw_filing_label": "Lease liability obligation-financial leases (note 7)",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "us-gaap:FinanceLeaseLiabilityCurrent",
+    "raw_filing_label": "Less: Amount representing interest",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:LesseeOperatingLeaseLiabilityUndiscountedExcessAmount",
     "periods": [
       "2021-FY",
       "2021-FY",
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "157,046",
-    "nearest_matches": [
-      [
-        "principal payments on finance leases",
-        0.5316455696202531
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Lease liability obligation-operating leases",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "us-gaap:OperatingLeaseLiabilityCurrent",
-    "periods": [
-      "2022-FY",
-      "2022-FY",
       "2022-FY",
       "2022-FY"
     ],
-    "sample_value": "661",
+    "sample_value": "73,161",
     "nearest_matches": [
       [
-        "rou assets obtained for new operating leases",
-        0.6206896551724138
-      ],
-      [
-        "amortization of operating lease assets",
-        0.5925925925925926
-      ],
-      [
-        "amortization of operating lease rou asset",
+        "noncontrolling interest",
         0.5714285714285714
+      ],
+      [
+        "noncontrolling interests",
+        0.5614035087719298
+      ],
+      [
+        "non-controlling interest",
+        0.5614035087719298
       ]
     ]
   },
   {
-    "raw_filing_label": "Lease liability obligation-operating leases (note 7)",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "us-gaap:OperatingLeaseLiabilityCurrent",
+    "raw_filing_label": "Less: Inventory reserve",
+    "statement_type": "BS",
+    "section": "non_current_assets",
+    "concept": "us-gaap:InventoryValuationReserves",
     "periods": [
       "2021-FY",
       "2021-FY",
-      "2021-FY",
-      "2021-FY"
+      "2022-FY",
+      "2022-FY"
     ],
-    "sample_value": "511,764",
+    "sample_value": "2,573,028",
     "nearest_matches": [
       [
-        "rou assets obtained for new operating leases",
-        0.6206896551724138
+        "total inventories",
+        0.6153846153846154
       ],
       [
-        "amortization of operating lease assets",
-        0.5925925925925926
+        "inventories",
+        0.6060606060606061
       ],
       [
-        "amortization of operating lease rou asset",
-        0.5714285714285714
+        "inventories-net",
+        0.5945945945945945
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Less: dividends paid to Series A convertible preferred stockholders",
+    "statement_type": "IS",
+    "section": "unclassified",
+    "concept": "us-gaap:PaymentsOfDividendsPreferredStockAndPreferenceStock",
+    "periods": [
+      "2022-FY"
+    ],
+    "sample_value": "11,526",
+    "nearest_matches": [
+      [
+        "dividends on series a convertible preferred stock",
+        0.8347826086956522
+      ],
+      [
+        "dividends on series a convertible preferred shares",
+        0.8103448275862069
+      ],
+      [
+        "dividends on preferred stock",
+        0.5957446808510638
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Lessee Operating Lease Liability Payments Due Next Twelve Months",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths",
+    "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "561,648",
+    "nearest_matches": [
+      [
+        "operating lease liability current",
+        0.6185567010309279
+      ],
+      [
+        "operating lease liability non-current",
+        0.6138613861386139
+      ],
+      [
+        "operating lease liability-current",
+        0.5979381443298969
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Lessee Operating Lease Liability Payments Due Year Four",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearFour",
+    "periods": [
+      "2021-FY"
+    ],
+    "sample_value": "5,212",
+    "nearest_matches": [
+      [
+        "operating lease liability current",
+        0.6590909090909092
+      ],
+      [
+        "operating lease liability non-current",
+        0.6521739130434783
+      ],
+      [
+        "operating lease liability-current",
+        0.6363636363636364
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Lessee Operating Lease Liability Payments Due Year Three",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearThree",
+    "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "162,538",
+    "nearest_matches": [
+      [
+        "operating lease liability current",
+        0.6741573033707866
+      ],
+      [
+        "operating lease liability non-current",
+        0.6666666666666667
+      ],
+      [
+        "operating lease liability-current",
+        0.651685393258427
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Lessee Operating Lease Liability Payments Due Year Two",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearTwo",
+    "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "513,462",
+    "nearest_matches": [
+      [
+        "operating lease liability current",
+        0.6666666666666667
+      ],
+      [
+        "operating lease liability non-current",
+        0.6593406593406592
+      ],
+      [
+        "operating lease liability-current",
+        0.6436781609195402
       ]
     ]
   },
@@ -900,10 +820,12 @@
     "section": "non_current_assets",
     "concept": "us-gaap:DepositsAssets",
     "periods": [
+      "2021-FY",
+      "2021-FY",
       "2022-Q1",
       "2022-Q1"
     ],
-    "sample_value": "293",
+    "sample_value": "299,828",
     "nearest_matches": [
       [
         "long-term debt current portion",
@@ -916,31 +838,6 @@
       [
         "long-term debt net",
         0.6222222222222222
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Long term security deposits",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:DepositsAssets",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "299,828",
-    "nearest_matches": [
-      [
-        "long-term debt repayments",
-        0.6153846153846154
-      ],
-      [
-        "other long-term assets",
-        0.5306122448979591
-      ],
-      [
-        "loss on debt and equity securities net",
-        0.523076923076923
       ]
     ]
   },
@@ -972,227 +869,130 @@
     ]
   },
   {
-    "raw_filing_label": "Note receivable",
+    "raw_filing_label": "Net (loss) income",
     "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:NotesAndLoansReceivableNetNoncurrent",
+    "section": "operating",
+    "concept": "us-gaap:NetIncomeLoss",
     "periods": [
+      "2022-FY",
       "2022-FY",
       "2022-FY"
     ],
-    "sample_value": "3,574",
+    "sample_value": "187,282",
     "nearest_matches": [
       [
-        "note receivable",
-        1.0
+        "net income",
+        0.8
       ],
       [
-        "notes receivable",
-        0.967741935483871
+        "net loss",
+        0.6956521739130435
       ],
       [
-        "note receivable-net",
-        0.8823529411764706
+        "net income loss",
+        0.6666666666666667
       ]
     ]
   },
   {
-    "raw_filing_label": "Note receivable (note 6)",
+    "raw_filing_label": "Net proceeds from collection of section 16b short swing profit",
     "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:NotesAndLoansReceivableNetNoncurrent",
+    "section": "financing",
+    "concept": "celh:NetProceedsFromCollectionOfSectionShortSwingProfit",
+    "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "90,800",
+    "nearest_matches": [
+      [
+        "proceeds from collection of notes receivable",
+        0.6603773584905661
+      ],
+      [
+        "net proceeds from sale of common stock",
+        0.62
+      ],
+      [
+        "net proceeds from issuance of common stock",
+        0.5961538461538461
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Payments on bonds payable",
+    "statement_type": "CF",
+    "section": "financing",
+    "concept": "celh:PaymentsOnBondsPayable",
+    "periods": [
+      "2021-FY",
+      "2022-FY"
+    ],
+    "sample_value": "9,601,531",
+    "nearest_matches": [
+      [
+        "payments on debt",
+        0.6829268292682926
+      ],
+      [
+        "payments on credit facilities",
+        0.6296296296296297
+      ],
+      [
+        "change in accounts payable",
+        0.6274509803921569
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Payments under operating leases",
+    "statement_type": "CF",
+    "section": "operating",
+    "concept": "celh:OperatingCashFlowsFromOperatingLeases",
     "periods": [
       "2021-FY",
       "2021-FY"
     ],
-    "sample_value": "7,116,738",
+    "sample_value": "470,544",
     "nearest_matches": [
       [
-        "note receivable",
-        1.0
+        "other operating assets",
+        0.679245283018868
       ],
       [
-        "notes receivable",
-        0.967741935483871
+        "rou assets obtained for new operating leases",
+        0.6666666666666667
       ],
       [
-        "note receivable-net",
-        0.8823529411764706
+        "operating lease cost",
+        0.6274509803921569
       ]
     ]
   },
   {
-    "raw_filing_label": "Note receivable-current",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:NotesAndLoansReceivableNetCurrent",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "2,979",
-    "nearest_matches": [
-      [
-        "note receivable-net",
-        0.8571428571428572
-      ],
-      [
-        "note receivable",
-        0.7894736842105263
-      ],
-      [
-        "notes receivable",
-        0.7692307692307692
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Note receivable-current (note 6)",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:NotesAndLoansReceivableNetCurrent",
+    "raw_filing_label": "Present value of lease liabilities",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "us-gaap:OperatingLeaseLiability",
     "periods": [
       "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "2,587,905",
-    "nearest_matches": [
-      [
-        "note receivable-net",
-        0.8571428571428572
-      ],
-      [
-        "note receivable",
-        0.7894736842105263
-      ],
-      [
-        "notes receivable",
-        0.7692307692307692
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Other current liabilities",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "us-gaap:OtherLiabilitiesCurrent",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "3,586",
-    "nearest_matches": [
-      [
-        "other current liabilities",
-        1.0
-      ],
-      [
-        "other accrued liabilities",
-        0.84
-      ],
-      [
-        "change in other current liabilities",
-        0.8333333333333335
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Other current liabilities (note 11)",
-    "statement_type": "CF",
-    "section": "current_liabilities",
-    "concept": "us-gaap:OtherLiabilitiesCurrent",
-    "periods": [
       "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "976,072",
-    "nearest_matches": [
-      [
-        "other current liabilities",
-        1.0
-      ],
-      [
-        "other accrued liabilities",
-        0.84
-      ],
-      [
-        "change in other current liabilities",
-        0.8333333333333335
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Other long-term assets",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:DepositsAssets",
-    "periods": [
       "2022-FY",
       "2022-FY"
     ],
-    "sample_value": "263",
+    "sample_value": "1,169,699",
     "nearest_matches": [
       [
-        "other long-term assets",
-        1.0
+        "finance lease liabilities",
+        0.711864406779661
       ],
       [
-        "other long-term liabilities",
-        0.7755102040816326
+        "operating lease liabilities",
+        0.6885245901639344
       ],
       [
-        "other non-current assets",
-        0.7391304347826086
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Prepaid expenses and other current assets",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "11,341",
-    "nearest_matches": [
-      [
-        "prepaid expenses and other current assets",
-        1.0
-      ],
-      [
-        "change in other non-current assets",
-        0.6933333333333335
-      ],
-      [
-        "other non-current assets",
-        0.6153846153846154
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Prepaid expenses and other current assets (note 5)",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "13,555,037",
-    "nearest_matches": [
-      [
-        "prepaid expenses and other current assets",
-        1.0
-      ],
-      [
-        "change in other non-current assets",
-        0.6933333333333335
-      ],
-      [
-        "other non-current assets",
-        0.6153846153846154
+        "employee related liabilities",
+        0.6451612903225806
       ]
     ]
   },
@@ -1224,202 +1024,16 @@
     ]
   },
   {
-    "raw_filing_label": "Property and equipment-net",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:PropertyPlantAndEquipmentNet",
+    "raw_filing_label": "State Beverage Container Deposit",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "celh:StateBeverageContainerDeposit",
     "periods": [
       "2022-FY",
       "2022-FY"
     ],
-    "sample_value": "10,185",
-    "nearest_matches": [
-      [
-        "purchase of property and equipment",
-        0.7333333333333334
-      ],
-      [
-        "impairment of property and equipment",
-        0.7096774193548387
-      ],
-      [
-        "purchase of property plant and equipment",
-        0.6666666666666667
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Property and equipment-net (note 8)",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:PropertyPlantAndEquipmentNet",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "3,180,058",
-    "nearest_matches": [
-      [
-        "purchase of property and equipment",
-        0.7333333333333334
-      ],
-      [
-        "impairment of property and equipment",
-        0.7096774193548387
-      ],
-      [
-        "purchase of property plant and equipment",
-        0.6666666666666667
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Restricted cash",
-    "statement_type": "CF",
-    "section": "current_assets",
-    "concept": "us-gaap:RestrictedCash",
-    "periods": [
-      "2022-FY"
-    ],
-    "sample_value": "38,768",
-    "nearest_matches": [
-      [
-        "restructuring charges",
-        0.6111111111111112
-      ],
-      [
-        "restructuring costs",
-        0.5882352941176471
-      ],
-      [
-        "net increase in cash",
-        0.5714285714285714
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Right of use assets-finance leases",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:FinanceLeaseRightOfUseAsset",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "208",
-    "nearest_matches": [
-      [
-        "right of use assets and lease liabilities net",
-        0.7088607594936708
-      ],
-      [
-        "right of use assets and lease liabilities-net",
-        0.7088607594936708
-      ],
-      [
-        "change in right of use asset and lease liability-net",
-        0.6046511627906976
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Right of use assets-financial leases (note 7)",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:FinanceLeaseRightOfUseAsset",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "85,953",
-    "nearest_matches": [
-      [
-        "right of use assets and lease liabilities net",
-        0.691358024691358
-      ],
-      [
-        "right of use assets and lease liabilities-net",
-        0.691358024691358
-      ],
-      [
-        "right-of-use assets obtained in exchange for lease obligations",
-        0.5918367346938775
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Right of use assets-operating leases",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:OperatingLeaseRightOfUseAsset",
-    "periods": [
-      "2022-FY",
-      "2022-FY"
-    ],
-    "sample_value": "972",
-    "nearest_matches": [
-      [
-        "right of use assets and lease liabilities net",
-        0.691358024691358
-      ],
-      [
-        "right of use assets and lease liabilities-net",
-        0.691358024691358
-      ],
-      [
-        "rou assets obtained for new operating leases",
-        0.65
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Right of use assets-operating leases (note 7)",
-    "statement_type": "CF",
-    "section": "non_current_assets",
-    "concept": "us-gaap:OperatingLeaseRightOfUseAsset",
-    "periods": [
-      "2021-FY",
-      "2021-FY"
-    ],
-    "sample_value": "1,128,151",
-    "nearest_matches": [
-      [
-        "right of use assets and lease liabilities net",
-        0.691358024691358
-      ],
-      [
-        "right of use assets and lease liabilities-net",
-        0.691358024691358
-      ],
-      [
-        "rou assets obtained for new operating leases",
-        0.65
-      ]
-    ]
-  },
-  {
-    "raw_filing_label": "Series A convertible preferred shares, $ 0.001 \u00a0par value,  5 % cumulative dividends;  1,467 \u00a0and  0 \u00a0shares issued and outstanding at December 31, 2022 and December 31,2021, respectively, aggregate liquidation preference of $ 550,000 \u00a0and $ 0 \u00a0as of December 31, 2022 and December 31, 2021, respectively",
-    "statement_type": "CF",
-    "section": "mezzanine",
-    "concept": "us-gaap:PreferredStockValue",
-    "periods": [
-      "2022-FY"
-    ],
-    "sample_value": "824,488",
-    "nearest_matches": [
-      [
-        "dividends paid on series a preferred shares",
-        0.725
-      ],
-      [
-        "dividends on series a preferred shares",
-        0.72
-      ],
-      [
-        "dividends paid on preferred shares",
-        0.704225352112676
-      ]
-    ]
+    "sample_value": "3,388",
+    "nearest_matches": []
   },
   {
     "raw_filing_label": "Taxes",
@@ -1440,6 +1054,44 @@
       [
         "taxes paid",
         0.6666666666666667
+      ]
+    ]
+  },
+  {
+    "raw_filing_label": "Unbilled purchases",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "celh:UnbilledPurchases",
+    "periods": [
+      "2021-FY",
+      "2021-FY",
+      "2022-FY",
+      "2022-FY"
+    ],
+    "sample_value": "5,438,316",
+    "nearest_matches": []
+  },
+  {
+    "raw_filing_label": "VAT payable",
+    "statement_type": "BS",
+    "section": "unclassified",
+    "concept": "celh:ValueAddedTaxPayment",
+    "periods": [
+      "2022-FY"
+    ],
+    "sample_value": "198",
+    "nearest_matches": [
+      [
+        "taxes payable",
+        0.75
+      ],
+      [
+        "notes payable",
+        0.75
+      ],
+      [
+        "accounts payable",
+        0.7407407407407408
       ]
     ]
   }

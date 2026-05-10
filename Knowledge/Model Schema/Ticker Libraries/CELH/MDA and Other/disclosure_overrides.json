@@ -20,7 +20,8 @@
       "country:IE": "Ireland",
       "celh:OtherMember": "Other (geography)",
       "celh:GeographicalLocationsExcludingNorthAmericaMember": "International (ex-NA)",
-      "celh:GeographicalLocationsForeignOperationsExcludingIrelandSwedenAndFinlandMember": "Foreign Ops (ex-IE/SE/FI)"
+      "celh:GeographicalLocationsForeignOperationsExcludingIrelandSwedenAndFinlandMember": "Foreign Ops (ex-IE/SE/FI)",
+      "celh:GeographicalNonNorthAmericaMember": "Non-North America (rolled up)"
     }
   },
   "DISC-MA-PROFORMA": {
@@ -47,7 +48,9 @@
     "member_aliases": {
       "us-gaap:RestrictedStockUnitsRSUMember": "RSUs",
       "us-gaap:PerformanceSharesMember": "PSUs",
-      "celh:RestrictedStockUnitsAndPerformanceStockUnitsMember": "RSUs + PSUs (combined)"
+      "us-gaap:RestrictedStockMember": "Restricted Stock",
+      "celh:RestrictedStockUnitsAndPerformanceStockUnitsMember": "RSUs + PSUs (combined)",
+      "celh:StockBasedAwardsIssuedToNonEmployeeConsultantsMember": "Non-Employee Consultant Awards"
     }
   },
   "DISC-PPE-CLASS": {

@@ -144,6 +144,41 @@ def run(period: str, ticker_root: Path, library_path: Path):
     finally:
         ixbrl_path.find_primary_tables = original
 
+    # Post-filter: drop noise statements introduced by concept-overlap classification.
+    # SE rollforward tables share BS concepts (CommonStock, RetainedEarnings, ...) so
+    # the classifier votes them BS. Filter:
+    #   - BS must be instant (BS proper). Duration BS = SE rollforward leak.
+    #   - IS/CF in a 10-K must be full-year (>= 48 weeks). Sub-period IS = quarterly
+    #     footnote cross-references that don't belong in the annual statement set.
+    from datetime import timedelta
+    is_annual = (raw.filing_type.value == "10-K") if hasattr(raw.filing_type, "value") else (str(raw.filing_type) == "FilingType.TEN_K" or "K" in str(raw.filing_type))
+    keep = []
+    dropped = []
+    for s in raw.statements:
+        per = s.period
+        is_instant = per.raw_period_label.startswith("as of ")
+        stype = s.statement_type.value if hasattr(s.statement_type, "value") else str(s.statement_type)
+        if stype == "BS" and not is_instant:
+            dropped.append((stype, per.raw_period_label, len(s.line_items)))
+            continue
+        # BS instant stubs: the SE rollforward emits 5-7-item instants for
+        # quarterly intermediate balances (Q1/Q2/Q3) and prior-prior year
+        # beginning balances. A real BS column has ~50+ items.
+        if stype == "BS" and is_instant and len(s.line_items) < 20:
+            dropped.append((stype, per.raw_period_label, len(s.line_items)))
+            continue
+        if is_annual and stype in ("IS", "CF") and not is_instant:
+            # parse weeks from "yyyy-mm-dd to yyyy-mm-dd (Nwk)"
+            m = re.search(r"\((\d+)wk\)", per.raw_period_label)
+            if m and int(m.group(1)) < 48:
+                dropped.append((stype, per.raw_period_label, len(s.line_items)))
+                continue
+        keep.append(s)
+    raw.statements = keep
+    print(f"[{period}] kept {len(keep)} / dropped {len(dropped)} stmts")
+    for d in dropped:
+        print(f"  drop: {d[0]} | {d[1]} | items={d[2]}")
+
     out = ticker_root / "Financial Statements" / ".cache" / f"raw_{period}.json"
     out.write_text(raw.model_dump_json(indent=2), encoding="utf-8")
     by_stmt = Counter()
