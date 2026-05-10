@@ -185,7 +185,7 @@ def run(period: str, ticker_root: Path, library_path: Path):
     # SE rollforward), not on the primary statements the model needs.
     NOISE_RE = re.compile(
         r"^("
-        r"Balance at December \d+|"
+        r"Balance at (December|June|September|March) \d+(,\s*\d{4})?|"
         r"(Lessee )?Operating Lease Liability Payments Due (Next Twelve Months|Year (Two|Three|Four|Five))|"
         r"Finance Lease Liability Payments Due (Next Twelve Months|Year (Two|Three|Four|Five))|"
         r"Domestic|Foreign|"

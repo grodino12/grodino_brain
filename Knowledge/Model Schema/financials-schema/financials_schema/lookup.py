@@ -285,6 +285,7 @@ def _entry_canonical(entry: dict) -> dict:
         "model_label": entry["model_label"],
         "filing_subsection": entry.get("filing_subsection"),
         "filing_section": entry.get("filing_section"),
+        "accepted_sections": entry.get("accepted_sections"),
         "sign_convention": entry.get("sign_convention"),
         "memo": entry.get("memo", False),
         "row_type": entry.get("row_type"),
@@ -410,7 +411,8 @@ def select_entry(
     if item_section is not None and item_section != "unclassified":
         pool = [c for c in pool
                 if c.get("filing_section") is None
-                or c.get("filing_section") == item_section]
+                or c.get("filing_section") == item_section
+                or item_section in (c.get("accepted_sections") or [])]
         if not pool:
             return None
     if len(pool) == 1:
