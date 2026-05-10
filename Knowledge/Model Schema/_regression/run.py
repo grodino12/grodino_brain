@@ -93,12 +93,12 @@ def model_output_dir(ticker: str) -> Path:
 
 def cache_dir(ticker: str) -> Path:
     """raw_/mapped_/novels_ JSONs live alongside the ticker library."""
-    return ticker_root(ticker) / ".cache"
+    return ticker_root(ticker) / "Financial Statements" / ".cache"
 
 
 def validated_dir(ticker: str) -> Path:
     """validated_*.json lives in the ticker library, not Model Outputs."""
-    return ticker_root(ticker)
+    return ticker_root(ticker) / "Financial Statements"
 
 
 def discover_filings(ticker: str) -> list[dict]:

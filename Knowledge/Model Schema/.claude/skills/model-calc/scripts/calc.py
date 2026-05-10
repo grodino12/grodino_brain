@@ -993,7 +993,7 @@ def _load_growth_basis(ticker_root: Path) -> str:
     """Read `growth_basis` from ticker config.json. Returns "yoy" (default) or
     "qoq". Per-row override happens in Excel via the Basis column on IS DRIVERS.
     """
-    cfg_path = ticker_root / "config.json"
+    cfg_path = ticker_root / "Financial Statements" / "config.json"
     if not cfg_path.exists():
         return "yoy"
     try:

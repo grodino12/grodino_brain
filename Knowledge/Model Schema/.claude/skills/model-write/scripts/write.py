@@ -146,7 +146,7 @@ def period_label(p: Period) -> str:
 # ============================================================================
 
 def load_ledger(ticker_root: Path) -> dict:
-    return json.loads((ticker_root / "decisions_ledger.json").read_text(encoding="utf-8"))
+    return json.loads((ticker_root / "Financial Statements" / "decisions_ledger.json").read_text(encoding="utf-8"))
 
 
 def load_generic_library(ticker_root: Path, explicit_path: Path | None = None) -> dict:
@@ -165,7 +165,7 @@ def load_generic_library(ticker_root: Path, explicit_path: Path | None = None) -
 
 
 def load_config(ticker_root: Path) -> dict:
-    return json.loads((ticker_root / "config.json").read_text(encoding="utf-8"))
+    return json.loads((ticker_root / "Financial Statements" / "config.json").read_text(encoding="utf-8"))
 
 
 def load_validated(path: Path) -> ValidatedFiling:

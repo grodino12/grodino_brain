@@ -415,7 +415,7 @@ def main():
     args = parser.parse_args()
 
     # CLI guard: ticker from config matches the filing
-    config_path = args.ticker_root / "config.json"
+    config_path = args.ticker_root / "Financial Statements" / "config.json"
     if not config_path.exists():
         sys.exit(f"ERROR: no config.json at {config_path}")
     config = _strip_underscore_keys(json.loads(config_path.read_text(encoding="utf-8")))
@@ -428,7 +428,7 @@ def main():
             f"but input filing says {raw_filing.ticker!r}"
         )
 
-    ledger_path = args.ticker_root / "decisions_ledger.json"
+    ledger_path = args.ticker_root / "Financial Statements" / "decisions_ledger.json"
     if not ledger_path.exists():
         sys.exit(f"ERROR: no decisions_ledger.json at {ledger_path}")
     ledger = load_ledger(ledger_path)

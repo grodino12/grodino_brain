@@ -136,7 +136,7 @@ def load_label_section_map(library_path: Path, ticker_root: Path) -> dict[tuple[
                 continue
             _add(entry, label, "generic")
 
-    ledger_path = ticker_root / "decisions_ledger.json"
+    ledger_path = ticker_root / "Financial Statements" / "decisions_ledger.json"
     if ledger_path.exists():
         ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
         for entry in ledger.get("mappings", []):

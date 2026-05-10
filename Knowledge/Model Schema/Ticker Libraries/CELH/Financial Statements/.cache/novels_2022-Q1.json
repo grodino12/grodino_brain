@@ -1,0 +1,289 @@
+{
+  "filing": {
+    "ticker": "CELH",
+    "filing_type": "10-Q",
+    "filing_date": "2022-05-10",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Long term security deposits",
+      "value": "293",
+      "raw_numeric_text": "293",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2022-03-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt current portion",
+          0.631578947368421
+        ],
+        [
+          "long term investments",
+          0.625
+        ],
+        [
+          "long-term debt net",
+          0.6222222222222222
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Long term security deposits",
+      "value": "300",
+      "raw_numeric_text": "300",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt current portion",
+          0.631578947368421
+        ],
+        [
+          "long term investments",
+          0.625
+        ],
+        [
+          "long-term debt net",
+          0.6222222222222222
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-2",
+      "raw_numeric_text": "2",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q1 FY2021",
+      "period_end_date": "2021-03-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-2",
+      "raw_numeric_text": "2",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2021-03-31",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Deferred tax-net",
+      "value": "2561",
+      "raw_numeric_text": "2,561",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:DeferredTaxLiabilitynet | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "deferred income taxes-net",
+          0.7804878048780488
+        ],
+        [
+          "deferred income taxes net",
+          0.7317073170731707
+        ],
+        [
+          "deferred income taxes",
+          0.7027027027027026
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Deposits and other current liabilities",
+      "value": "765",
+      "raw_numeric_text": "765",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "change in other current liabilities",
+          0.7945205479452055
+        ],
+        [
+          "other current liabilities",
+          0.7936507936507937
+        ],
+        [
+          "accounts payable and other current liabilities",
+          0.7857142857142857
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2022",
+      "period_end_date": "2022-03-31",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Interest",
+      "value": "2",
+      "raw_numeric_text": "2",
+      "section": "cash_other",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InterestExpense | ctx:duration:2022-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "interest",
+          1.0
+        ],
+        [
+          "interest paid",
+          0.7619047619047619
+        ],
+        [
+          "inventories",
+          0.631578947368421
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2021",
+      "period_end_date": "2021-03-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Deposits and other current liabilities",
+      "value": "174",
+      "raw_numeric_text": "174",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities | ctx:duration:2021-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "change in other current liabilities",
+          0.7945205479452055
+        ],
+        [
+          "other current liabilities",
+          0.7936507936507937
+        ],
+        [
+          "accounts payable and other current liabilities",
+          0.7857142857142857
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q1 FY2021",
+      "period_end_date": "2021-03-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Interest",
+      "value": "2",
+      "raw_numeric_text": "2",
+      "section": "cash_other",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q1\\filings\\CELH_2022-03-31_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InterestExpense | ctx:duration:2021-03-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "interest",
+          1.0
+        ],
+        [
+          "interest paid",
+          0.7619047619047619
+        ],
+        [
+          "inventories",
+          0.631578947368421
+        ]
+      ]
+    }
+  ]
+}

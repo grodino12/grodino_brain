@@ -1,0 +1,1282 @@
+{
+  "filing": {
+    "ticker": "CELH",
+    "filing_type": "10-K",
+    "filing_date": "2022-03-16",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Cash",
+      "value": "16254708",
+      "raw_numeric_text": "16,254,708",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CashAndCashEquivalentsAtCarryingValue | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Accounts receivable-net (note 2)",
+      "value": "38741049",
+      "raw_numeric_text": "38,741,049",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts receivable-net",
+          1.0
+        ],
+        [
+          "accounts receivable net",
+          0.9565217391304348
+        ],
+        [
+          "accounts receivable",
+          0.9047619047619048
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Note receivable-current (note 6)",
+      "value": "2587905",
+      "raw_numeric_text": "2,587,905",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NotesAndLoansReceivableNetCurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "note receivable-net",
+          0.8571428571428572
+        ],
+        [
+          "note receivable",
+          0.7894736842105263
+        ],
+        [
+          "notes receivable",
+          0.7692307692307692
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Inventories-net (note 4)",
+      "value": "191221851",
+      "raw_numeric_text": "191,221,851",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InventoryNet | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "inventories-net",
+          1.0
+        ],
+        [
+          "inventories",
+          0.8461538461538461
+        ],
+        [
+          "inventory reserve",
+          0.6875
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Prepaid expenses and other current assets (note 5)",
+      "value": "13555037",
+      "raw_numeric_text": "13,555,037",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "prepaid expenses and other current assets",
+          1.0
+        ],
+        [
+          "change in other non-current assets",
+          0.6933333333333335
+        ],
+        [
+          "other non-current assets",
+          0.6153846153846154
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Note receivable (note 6)",
+      "value": "7116738",
+      "raw_numeric_text": "7,116,738",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NotesAndLoansReceivableNetNoncurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "note receivable",
+          1.0
+        ],
+        [
+          "notes receivable",
+          0.967741935483871
+        ],
+        [
+          "note receivable-net",
+          0.8823529411764706
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Property and equipment-net (note 8)",
+      "value": "3180058",
+      "raw_numeric_text": "3,180,058",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "purchase of property and equipment",
+          0.7333333333333334
+        ],
+        [
+          "impairment of property and equipment",
+          0.7096774193548387
+        ],
+        [
+          "purchase of property plant and equipment",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Deferred tax asset (note 14)",
+      "value": "9019241",
+      "raw_numeric_text": "9,019,241",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DeferredIncomeTaxAssetsNet | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "deferred tax provision",
+          0.7
+        ],
+        [
+          "deferred income taxes-net",
+          0.6976744186046511
+        ],
+        [
+          "deferred income taxes net",
+          0.6976744186046511
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Right of use assets-operating leases (note 7)",
+      "value": "1128151",
+      "raw_numeric_text": "1,128,151",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "right of use assets and lease liabilities net",
+          0.691358024691358
+        ],
+        [
+          "right of use assets and lease liabilities-net",
+          0.691358024691358
+        ],
+        [
+          "rou assets obtained for new operating leases",
+          0.65
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Right of use assets-financial leases (note 7)",
+      "value": "85953",
+      "raw_numeric_text": "85,953",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:FinanceLeaseRightOfUseAsset | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "right of use assets and lease liabilities net",
+          0.691358024691358
+        ],
+        [
+          "right of use assets and lease liabilities-net",
+          0.691358024691358
+        ],
+        [
+          "right-of-use assets obtained in exchange for lease obligations",
+          0.5918367346938775
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Long term security deposits",
+      "value": "299828",
+      "raw_numeric_text": "299,828",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt repayments",
+          0.6153846153846154
+        ],
+        [
+          "other long-term assets",
+          0.5306122448979591
+        ],
+        [
+          "loss on debt and equity securities net",
+          0.523076923076923
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Intangibles (note 9)",
+      "value": "16301326",
+      "raw_numeric_text": "16,301,326",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "additions to intangibles",
+          0.6285714285714286
+        ],
+        [
+          "impairment of intangibles",
+          0.6111111111111112
+        ],
+        [
+          "intangible asset impairment",
+          0.5789473684210527
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Goodwill (note 9)",
+      "value": "14526583",
+      "raw_numeric_text": "14,526,583",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:Goodwill | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Lease liability obligation-operating leases (note 7)",
+      "value": "511764",
+      "raw_numeric_text": "511,764",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingLeaseLiabilityCurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "rou assets obtained for new operating leases",
+          0.6206896551724138
+        ],
+        [
+          "amortization of operating lease assets",
+          0.5925925925925926
+        ],
+        [
+          "amortization of operating lease rou asset",
+          0.5714285714285714
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Lease liability obligation-financial leases (note 7)",
+      "value": "157046",
+      "raw_numeric_text": "157,046",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:FinanceLeaseLiabilityCurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "principal payments on finance leases",
+          0.5316455696202531
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Other current liabilities (note 11)",
+      "value": "976072",
+      "raw_numeric_text": "976,072",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OtherLiabilitiesCurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "other current liabilities",
+          1.0
+        ],
+        [
+          "other accrued liabilities",
+          0.84
+        ],
+        [
+          "change in other current liabilities",
+          0.8333333333333335
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Lease liability obligation-operating leases (note 7)",
+      "value": "657935",
+      "raw_numeric_text": "657,935",
+      "section": "non_current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "rou assets obtained for new operating leases",
+          0.6206896551724138
+        ],
+        [
+          "amortization of operating lease assets",
+          0.5925925925925926
+        ],
+        [
+          "amortization of operating lease rou asset",
+          0.5714285714285714
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Lease liability obligation-financial leases (note 7)",
+      "value": "45408",
+      "raw_numeric_text": "45,408",
+      "section": "non_current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:FinanceLeaseLiabilityNoncurrent | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "principal payments on finance leases",
+          0.5316455696202531
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Deferred tax liability (note 14)",
+      "value": "3146394",
+      "raw_numeric_text": "3,146,394",
+      "section": "non_current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DeferredIncomeTaxLiabilities | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "deferred tax provision",
+          0.6818181818181819
+        ],
+        [
+          "deferred income taxes net",
+          0.5957446808510638
+        ],
+        [
+          "other current liabilities",
+          0.5957446808510638
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Common stock, $ 0.001 \u00a0par value;  100,000,000 \u00a0shares authorized,  74,908,845 \u00a0and  72,262,829 \u00a0shares \u00a0\u00a0\u00a0issued and outstanding at December 31, 2021 and December 31, 2020, respectively (note 13)",
+      "value": "74909",
+      "raw_numeric_text": "74,909",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValue | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "common stock repurchases",
+          0.6666666666666667
+        ],
+        [
+          "repurchase of common stock",
+          0.631578947368421
+        ],
+        [
+          "dividends paid on common stock",
+          0.5714285714285714
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Additional paid-in capital",
+      "value": "267846196",
+      "raw_numeric_text": "267,846,196",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "additions to intangibles",
+          0.56
+        ],
+        [
+          "total operating activities",
+          0.5
+        ],
+        [
+          "additions to intangible assets",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Accumulated other comprehensive income (loss)",
+      "value": "613651",
+      "raw_numeric_text": "613,651",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts and note receivable net",
+          0.5714285714285714
+        ],
+        [
+          "accrued employee compensation",
+          0.5671641791044777
+        ],
+        [
+          "accrued compensation",
+          0.5517241379310345
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2021",
+      "period_end_date": "2021-12-31",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Accumulated deficit",
+      "value": "-51489559",
+      "raw_numeric_text": "51,489,559",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2021-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accrued liabilities",
+          0.5263157894736843
+        ],
+        [
+          "accrued income taxes",
+          0.5128205128205128
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Cash",
+      "value": "43248021",
+      "raw_numeric_text": "43,248,021",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CashAndCashEquivalentsAtCarryingValue | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Accounts receivable-net (note 2)",
+      "value": "14986213",
+      "raw_numeric_text": "14,986,213",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccountsReceivableNetCurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts receivable-net",
+          1.0
+        ],
+        [
+          "accounts receivable net",
+          0.9565217391304348
+        ],
+        [
+          "accounts receivable",
+          0.9047619047619048
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Note receivable-current (note 6)",
+      "value": "1885887",
+      "raw_numeric_text": "1,885,887",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NotesAndLoansReceivableNetCurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "note receivable-net",
+          0.8571428571428572
+        ],
+        [
+          "note receivable",
+          0.7894736842105263
+        ],
+        [
+          "notes receivable",
+          0.7692307692307692
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Inventories-net (note 4)",
+      "value": "18403622",
+      "raw_numeric_text": "18,403,622",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InventoryNet | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "inventories-net",
+          1.0
+        ],
+        [
+          "inventories",
+          0.8461538461538461
+        ],
+        [
+          "inventory reserve",
+          0.6875
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Prepaid expenses and other current assets (note 5)",
+      "value": "14626922",
+      "raw_numeric_text": "14,626,922",
+      "section": "current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PrepaidExpenseAndOtherAssetsCurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "prepaid expenses and other current assets",
+          1.0
+        ],
+        [
+          "change in other non-current assets",
+          0.6933333333333335
+        ],
+        [
+          "other non-current assets",
+          0.6153846153846154
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Note receivable (note 6)",
+      "value": "9429437",
+      "raw_numeric_text": "9,429,437",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:NotesAndLoansReceivableNetNoncurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "note receivable",
+          1.0
+        ],
+        [
+          "notes receivable",
+          0.967741935483871
+        ],
+        [
+          "note receivable-net",
+          0.8823529411764706
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Property and equipment-net (note 8)",
+      "value": "579377",
+      "raw_numeric_text": "579,377",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:PropertyPlantAndEquipmentNet | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "purchase of property and equipment",
+          0.7333333333333334
+        ],
+        [
+          "impairment of property and equipment",
+          0.7096774193548387
+        ],
+        [
+          "purchase of property plant and equipment",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Right of use assets-operating leases (note 7)",
+      "value": "836038",
+      "raw_numeric_text": "836,038",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingLeaseRightOfUseAsset | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "right of use assets and lease liabilities net",
+          0.691358024691358
+        ],
+        [
+          "right of use assets and lease liabilities-net",
+          0.691358024691358
+        ],
+        [
+          "rou assets obtained for new operating leases",
+          0.65
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Right of use assets-financial leases (note 7)",
+      "value": "162119",
+      "raw_numeric_text": "162,119",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:FinanceLeaseRightOfUseAsset | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "right of use assets and lease liabilities net",
+          0.691358024691358
+        ],
+        [
+          "right of use assets and lease liabilities-net",
+          0.691358024691358
+        ],
+        [
+          "right-of-use assets obtained in exchange for lease obligations",
+          0.5918367346938775
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Long term security deposits",
+      "value": "122733",
+      "raw_numeric_text": "122,733",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt repayments",
+          0.6153846153846154
+        ],
+        [
+          "other long-term assets",
+          0.5306122448979591
+        ],
+        [
+          "loss on debt and equity securities net",
+          0.523076923076923
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Intangibles (note 9)",
+      "value": "16590083",
+      "raw_numeric_text": "16,590,083",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:IntangibleAssetsNetExcludingGoodwill | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "additions to intangibles",
+          0.6285714285714286
+        ],
+        [
+          "impairment of intangibles",
+          0.6111111111111112
+        ],
+        [
+          "intangible asset impairment",
+          0.5789473684210527
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Goodwill (note 9)",
+      "value": "10419321",
+      "raw_numeric_text": "10,419,321",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:Goodwill | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Lease liability obligation-operating leases (note 7)",
+      "value": "321283",
+      "raw_numeric_text": "321,283",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingLeaseLiabilityCurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "rou assets obtained for new operating leases",
+          0.6206896551724138
+        ],
+        [
+          "amortization of operating lease assets",
+          0.5925925925925926
+        ],
+        [
+          "amortization of operating lease rou asset",
+          0.5714285714285714
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Lease liability obligation-financial leases (note 7)",
+      "value": "205824",
+      "raw_numeric_text": "205,824",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:FinanceLeaseLiabilityCurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "principal payments on finance leases",
+          0.5316455696202531
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Other current liabilities (note 11)",
+      "value": "425232",
+      "raw_numeric_text": "425,232",
+      "section": "current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OtherLiabilitiesCurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "other current liabilities",
+          1.0
+        ],
+        [
+          "other accrued liabilities",
+          0.84
+        ],
+        [
+          "change in other current liabilities",
+          0.8333333333333335
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Lease liability obligation-operating leases (note 7)",
+      "value": "514948",
+      "raw_numeric_text": "514,948",
+      "section": "non_current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:OperatingLeaseLiabilityNoncurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "rou assets obtained for new operating leases",
+          0.6206896551724138
+        ],
+        [
+          "amortization of operating lease assets",
+          0.5925925925925926
+        ],
+        [
+          "amortization of operating lease rou asset",
+          0.5714285714285714
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Lease liability obligation-financial leases (note 7)",
+      "value": "82290",
+      "raw_numeric_text": "82,290",
+      "section": "non_current_liabilities",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:FinanceLeaseLiabilityNoncurrent | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "principal payments on finance leases",
+          0.5316455696202531
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Common stock, $ 0.001 \u00a0par value;  100,000,000 \u00a0shares authorized,  74,908,845 \u00a0and  72,262,829 \u00a0shares \u00a0\u00a0\u00a0issued and outstanding at December 31, 2021 and December 31, 2020, respectively (note 13)",
+      "value": "72263",
+      "raw_numeric_text": "72,263",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:CommonStockValue | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "common stock repurchases",
+          0.6666666666666667
+        ],
+        [
+          "repurchase of common stock",
+          0.631578947368421
+        ],
+        [
+          "dividends paid on common stock",
+          0.5714285714285714
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Additional paid-in capital",
+      "value": "159884154",
+      "raw_numeric_text": "159,884,154",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AdditionalPaidInCapital | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "additions to intangibles",
+          0.56
+        ],
+        [
+          "total operating activities",
+          0.5
+        ],
+        [
+          "additions to intangible assets",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Accumulated other comprehensive income (loss)",
+      "value": "-202142",
+      "raw_numeric_text": "202,142",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts and note receivable net",
+          0.5714285714285714
+        ],
+        [
+          "accrued employee compensation",
+          0.5671641791044777
+        ],
+        [
+          "accrued compensation",
+          0.5517241379310345
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Accumulated deficit",
+      "value": "-55426832",
+      "raw_numeric_text": "55,426,832",
+      "section": "equity",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
+        "page": 1,
+        "line_hint": "us-gaap:RetainedEarningsAccumulatedDeficit | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accrued liabilities",
+          0.5263157894736843
+        ],
+        [
+          "accrued income taxes",
+          0.5128205128205128
+        ]
+      ]
+    }
+  ]
+}

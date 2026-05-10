@@ -62,7 +62,7 @@ def detect_source_kind(source: Path) -> str:
 
 
 def load_ticker_from_config(ticker_root: Path) -> str:
-    config_path = ticker_root / "config.json"
+    config_path = ticker_root / "Financial Statements" / "config.json"
     if not config_path.exists():
         raise SystemExit(f"ERROR: no config.json at {config_path}")
     config = json.loads(config_path.read_text(encoding="utf-8"))

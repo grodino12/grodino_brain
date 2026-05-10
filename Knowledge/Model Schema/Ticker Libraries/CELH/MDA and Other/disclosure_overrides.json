@@ -1,0 +1,69 @@
+{
+  "_comment": "Per-ticker structural overrides for mda-disaggregation skill. Auto-populated as novels surface during extraction; manually augmented when filer-specific normalization is needed. Per `feedback_structural_over_heuristic.md`: this file holds member aliases / skip flags / extension concepts only — does NOT extend the generic library's taxonomy.",
+  "_display": {
+    "unit_divisor": 1000,
+    "unit_label": "thousands"
+  },
+  "DISC-SEG-PNL": {
+    "member_aliases": {
+      "celh:ReportableSegmentMember": "Celsius (single segment)"
+    }
+  },
+  "DISC-GEO-REV": {
+    "member_aliases": {
+      "srt:NorthAmericaMember": "North America",
+      "srt:EuropeMember": "Europe",
+      "srt:AsiaMember": "Asia",
+      "srt:AsiaPacificMember": "Asia Pacific",
+      "country:SE": "Sweden",
+      "country:FI": "Finland",
+      "country:IE": "Ireland",
+      "celh:OtherMember": "Other (geography)",
+      "celh:GeographicalLocationsExcludingNorthAmericaMember": "International (ex-NA)",
+      "celh:GeographicalLocationsForeignOperationsExcludingIrelandSwedenAndFinlandMember": "Foreign Ops (ex-IE/SE/FI)"
+    }
+  },
+  "DISC-MA-PROFORMA": {
+    "member_aliases": {
+      "celh:AlaniNuMember": "Alani Nu",
+      "celh:RockstarMember": "Rockstar",
+      "celh:AlaniNuAndRockstarEnergyMember": "Alani Nu + Rockstar (combined)"
+    }
+  },
+  "DISC-CUST-CONC": {
+    "member_aliases": {
+      "celh:PepsicoIncMember": "PepsiCo Inc.",
+      "celh:CostcoMember": "Costco",
+      "celh:AmazonMember": "Amazon",
+      "celh:AllOtherMember": "All Other"
+    }
+  },
+  "DISC-DEBT-SCHED": {
+    "member_aliases": {
+      "celh:TermLoanFacilityMember": "Term Loan Facility"
+    }
+  },
+  "DISC-SBC-AWARDS": {
+    "member_aliases": {
+      "us-gaap:RestrictedStockUnitsRSUMember": "RSUs",
+      "us-gaap:PerformanceSharesMember": "PSUs",
+      "celh:RestrictedStockUnitsAndPerformanceStockUnitsMember": "RSUs + PSUs (combined)"
+    }
+  },
+  "DISC-PPE-CLASS": {
+    "member_aliases": {
+      "us-gaap:MachineryAndEquipmentMember": "Machinery & Equipment",
+      "celh:MerchandisingEquipmentCoolersMember": "Merchandising Equipment / Coolers",
+      "us-gaap:LeaseholdImprovementsMember": "Leasehold Improvements",
+      "us-gaap:OfficeEquipmentMember": "Office Equipment",
+      "us-gaap:VehiclesMember": "Vehicles",
+      "us-gaap:ConstructionInProgressMember": "Construction in Progress"
+    }
+  },
+  "DISC-INT-CLASS": {
+    "member_aliases": {
+      "celh:BrandsMember": "Brands",
+      "us-gaap:CustomerRelationshipsMember": "Customer Relationships"
+    }
+  }
+}

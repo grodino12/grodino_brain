@@ -874,7 +874,7 @@ def main():
     args = parser.parse_args()
 
     # CLI guard
-    config_path = args.ticker_root / "config.json"
+    config_path = args.ticker_root / "Financial Statements" / "config.json"
     config = json.loads(config_path.read_text(encoding="utf-8"))
     config = {k: v for k, v in config.items() if not k.startswith("_")}
     config_ticker = config["ticker"]
@@ -888,7 +888,7 @@ def main():
           f"({len(mapped.raw.statements)} statements, {total_items} mapped line items)")
 
     # Load anomalies.json for cash convention overrides
-    anomalies_path = args.ticker_root / "anomalies.json"
+    anomalies_path = args.ticker_root / "Financial Statements" / "anomalies.json"
     anomalies: dict = {}
     if anomalies_path.exists():
         anomalies = json.loads(anomalies_path.read_text(encoding="utf-8"))

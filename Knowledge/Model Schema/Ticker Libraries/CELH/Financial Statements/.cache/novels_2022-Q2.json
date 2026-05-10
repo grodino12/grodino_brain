@@ -1,0 +1,161 @@
+{
+  "filing": {
+    "ticker": "CELH",
+    "filing_type": "10-Q",
+    "filing_date": "2022-08-09",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q2\\filings\\CELH_2022-06-30_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-4",
+      "raw_numeric_text": "4",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q2\\filings\\CELH_2022-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2022-06-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2021",
+      "period_end_date": "2021-06-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-3",
+      "raw_numeric_text": "3",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q2\\filings\\CELH_2022-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2021-06-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Deferred tax-net",
+      "value": "1072",
+      "raw_numeric_text": "1,072",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q2\\filings\\CELH_2022-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:DeferredTaxLiabilitynet | ctx:duration:2022-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "deferred income taxes-net",
+          0.7804878048780488
+        ],
+        [
+          "deferred income taxes net",
+          0.7317073170731707
+        ],
+        [
+          "deferred income taxes",
+          0.7027027027027026
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2022",
+      "period_end_date": "2022-06-30",
+      "fiscal_year": 2022,
+      "raw_filing_label": "Taxes",
+      "value": "2100",
+      "raw_numeric_text": "2,100",
+      "section": "cash_other",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q2\\filings\\CELH_2022-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:TaxesOther | ctx:duration:2022-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "taxes",
+          1.0
+        ],
+        [
+          "taxes paid",
+          0.6666666666666667
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2021",
+      "period_end_date": "2021-06-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Proceeds from capital raise",
+      "value": "67769",
+      "raw_numeric_text": "67,769",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2022-Q2\\filings\\CELH_2022-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromContributedCapital | ctx:duration:2021-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from asset sales",
+          0.7307692307692308
+        ],
+        [
+          "proceeds from sale of assets",
+          0.7272727272727273
+        ],
+        [
+          "proceeds from stock option exercises",
+          0.6984126984126984
+        ]
+      ]
+    }
+  ]
+}

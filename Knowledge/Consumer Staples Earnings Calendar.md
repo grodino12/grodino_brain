@@ -1,7 +1,7 @@
 ---
 type: earnings-calendar
 sector: Consumer Staples
-generated_on: 2026-05-03
+generated_on: 2026-05-10
 data_source: yfinance (Yahoo Finance)
 update_frequency: weekly
 tags: [earnings-calendar, consumer-staples, watchlist]
@@ -9,43 +9,43 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-05-03 08:00 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-05-10 08:00 US Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- |
-| TSN | Tyson Foods | 2026-02-02 (BMO) | 2026-05-04 (BMO) | ✅ | ✅ |
-| ADM | Archer-Daniels-Midland | 2026-02-03 (BMO) | 2026-05-05 (BMO) | ✅ | ✅ |
-| MNST | Monster Beverage | 2026-02-26 (AMC) | 2026-05-07 (AMC) | ❌ | ✅ |
-| CELH | Celsius Holdings | 2026-02-26 (BMO) | 2026-05-07 (BMO) | ✅ | ✅ |
-| TGT | Target | 2026-03-03 (BMO) | 2026-05-20 (BMO) | ❌ | ✅ |
-| WMT | Walmart | 2026-02-19 (BMO) | 2026-05-21 (BMO) | ✅ | ✅ |
-| COST | Costco Wholesale | 2026-03-05 (AMC) | 2026-05-28 (AMC) | ❌ | ❌ |
-| HRL | Hormel Foods | 2026-02-26 (BMO) | 2026-05-28 (BMO) | ✅ | ✅ |
-| DG | Dollar General | 2026-03-12 (BMO) | 2026-06-02 (BMO) | ❌ | ✅ |
-| DLTR | Dollar Tree | 2026-03-16 (BMO) | 2026-06-03 (BMO) | ❌ | ✅ |
-| BF-B | Brown-Forman | 2026-03-04 (BMO) | 2026-06-04 (BMO) | ✅ | ✅ |
-| SJM | JM Smucker | 2026-02-26 (BMO) | 2026-06-09 (BMO) | ✅ | ✅ |
-| KR | Kroger | 2026-03-05 (BMO) | 2026-06-22 (BMO) | ✅ | ✅ |
-| GIS | General Mills | 2026-03-18 (BMO) | 2026-06-24 (BMO) | ✅ | ✅ |
-| STZ | Constellation Brands | 2026-04-08 (AMC) | 2026-07-01 (AMC) | ✅ | ✅ |
-| MKC | McCormick & Co | 2026-03-31 (BMO) | 2026-07-02 (BMO) | ❌ | ✅ |
-| CAG | ConAgra Brands | 2026-04-01 (BMO) | 2026-07-09 (BMO) | ✅ | ✅ |
-| PEP | PepsiCo | 2026-04-16 (BMO) | 2026-07-16 (BMO) | ❌ | ✅ |
-| KO | Coca-Cola | 2026-04-28 (BMO) | 2026-07-21 (BMO) | ❌ | ❌ |
-| PM | Philip Morris International | 2026-04-22 (BMO) | 2026-07-22 (BMO) | ❌ | ❌ |
-| LW | Lamb Weston | 2026-04-01 (BMO) | 2026-07-22 (BMO) | ✅ | ✅ |
-| KDP | Keurig Dr Pepper | 2026-04-23 (BMO) | 2026-07-23 (BMO) | ❌ | ❌ |
-| MDLZ | Mondelez International | 2026-04-28 (AMC) | 2026-07-28 (AMC) | ❌ | ❌ |
-| SYY | Sysco | 2026-04-28 (BMO) | 2026-07-28 (BMO) | ❌ | ❌ |
-| PG | Procter & Gamble | 2026-04-24 (BMO) | 2026-07-29 (BMO) | ❌ | ❌ |
-| BG | Bunge | 2026-04-29 (BMO) | 2026-07-29 (BMO) | ❌ | ❌ |
-| MO | Altria Group | 2026-04-30 (BMO) | 2026-07-30 (BMO) | ❌ | ❌ |
-| HSY | Hershey | 2026-04-30 (BMO) | 2026-07-30 (BMO) | ❌ | ❌ |
-| CLX | Clorox | 2026-04-30 (AMC) | 2026-07-30 (AMC) | ❌ | ❌ |
-| CL | Colgate-Palmolive | 2026-05-01 (BMO) | 2026-07-31 (BMO) | ❌ | ❌ |
-| CHD | Church & Dwight | 2026-05-01 (BMO) | 2026-07-31 (BMO) | ❌ | ❌ |
-| KMB | Kimberly-Clark | 2026-04-28 (BMO) | 2026-08-10 (BMO) | ❌ | ❌ |
-| EL | Estée Lauder | 2026-05-01 (BMO) | 2026-08-19 (BMO) | ❌ | ❌ |
+| PG | Procter & Gamble | — | — | — | — |
+| COST | Costco Wholesale | — | — | — | — |
+| WMT | Walmart | — | — | — | — |
+| KO | Coca-Cola | — | — | — | — |
+| PEP | PepsiCo | — | — | — | — |
+| PM | Philip Morris International | — | — | — | — |
+| MO | Altria Group | — | — | — | — |
+| MDLZ | Mondelez International | — | — | — | — |
+| CL | Colgate-Palmolive | — | — | — | — |
+| TGT | Target | — | — | — | — |
+| KMB | Kimberly-Clark | — | — | — | — |
+| GIS | General Mills | — | — | — | — |
+| SYY | Sysco | — | — | — | — |
+| KR | Kroger | — | — | — | — |
+| STZ | Constellation Brands | — | — | — | — |
+| HSY | Hershey | — | — | — | — |
+| KDP | Keurig Dr Pepper | — | — | — | — |
+| MNST | Monster Beverage | — | — | — | — |
+| EL | Estée Lauder | — | — | — | — |
+| TSN | Tyson Foods | — | — | — | — |
+| ADM | Archer-Daniels-Midland | — | — | — | — |
+| CHD | Church & Dwight | — | — | — | — |
+| CAG | ConAgra Brands | — | — | — | — |
+| CLX | Clorox | — | — | — | — |
+| SJM | JM Smucker | — | — | — | — |
+| HRL | Hormel Foods | — | — | — | — |
+| MKC | McCormick & Co | — | — | — | — |
+| LW | Lamb Weston | — | — | — | — |
+| BG | Bunge | — | — | — | — |
+| DLTR | Dollar Tree | — | — | — | — |
+| DG | Dollar General | — | — | — | — |
+| BF-B | Brown-Forman | — | — | — | — |
+| CELH | Celsius Holdings | — | — | — | — |
 
 ---
 

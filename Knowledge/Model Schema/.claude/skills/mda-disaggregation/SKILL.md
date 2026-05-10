@@ -1,149 +1,87 @@
 ---
 name: mda-disaggregation
 description: |
-  Extract MD&A disclosures from a ticker's 10-Q + 10-K filings and produce a standalone {TICKER}_MDA.xlsx workbook
-  with revenue disaggregation, customer concentration, brand/segment contribution, pro forma analysis, SG&A walk,
-  GP qualitative drivers, and Other Inc/Exp walk. All sections transposed (periods as columns, metrics as rows).
-  Q4 columns derived from FY - 9M YTD where arithmetically possible (i.e., $ values, not percentages).
+  Extract structural footnote disclosure tables from a ticker's 10-K / 10-Q iXBRL filings and produce a
+  standalone {TICKER}_disclosures.xlsx workbook. Axis-driven extraction — no label heuristics, no static
+  taxonomies. Each disclosure table reads from XBRL axes the filer already tagged; output shape mirrors
+  whatever members the filer disclosed. Per-ticker quirks (member aliases, skip flags, filer-extension
+  concepts) live in `Ticker Libraries/{TICKER}/MDA and Other/disclosure_overrides.json`. Hand-curated
+  filer-specific narrative content (SG&A walks, GP qualitative drivers — content with no XBRL substrate)
+  lives in `Ticker Libraries/{TICKER}/MDA and Other/mda_narrative.json` and gets rendered as a
+  filer-specific section, never enforced cross-ticker.
 when_to_use:
-  - User wants to build a clean revenue/P&L decomposition from filings for any covered ticker
-  - User asks "where does revenue come from" / "show me the SG&A walk" / "is there a brand split"
-  - Output workbook references a model workbook (do NOT modify the model workbook itself with openpyxl)
+  - User wants to extract / compare disclosure tables (segments, geography, customer concentration,
+    M&A pro forma, debt schedule, SBC awards, tax disclosure, PP&E by class, intangibles by class,
+    goodwill rollforward, future amortization, ROU assets) across one or more tickers.
+  - User asks to refresh `{TICKER}_disclosures.xlsx` after onboarding a new filing.
+  - User needs to triage a filer-specific axis or extension concept that the generic library
+    doesn't yet cover (surface as novel; user adds to disclosure_overrides.json).
 ---
 
-# MD&A Disaggregation skill
+# MDA Disaggregation skill
 
-Builds a standalone `{TICKER}_MDA.xlsx` containing 8 sections of MD&A-extracted data, formatted for analyst review.
+Builds a standalone `{TICKER}_disclosures.xlsx` containing axis-driven structural disclosure tables, plus
+a per-ticker filer-specific section rendered from `mda_narrative.json`. Designed to grow as new
+disclosure tables are added to the generic library.
+
+## Architecture
+
+Three library surfaces (mirrors the existing financials library pattern):
+
+| Library | Path | Role |
+|---|---|---|
+| **Generic disclosure tables** | `Brain\Knowledge\Model Schema\pattern_libraries\MDA and Other\generic_disclosure_tables.json` | Cross-ticker canonical disclosure-table definitions: required axes, concept priority lists, render shape. **No filer knowledge.** |
+| **Per-ticker structural overrides** | `Brain\Knowledge\Model Schema\Ticker Libraries\{TICKER}\MDA and Other\disclosure_overrides.json` | Member alias normalization (e.g. PEP's `pep:PFNAMember` → "PepsiCo Foods NA"), skip flags (filer doesn't disclose this table), filer-extension concepts to treat as us-gaap-equivalent. **Auto-populated** by skill when novels are surfaced and user triages. |
+| **Per-ticker filer-specific narrative** | `Brain\Knowledge\Model Schema\Ticker Libraries\{TICKER}\MDA and Other\mda_narrative.json` | Hand-curated content with no XBRL substrate (SG&A walks, GP qualitative drivers, Other Inc/Exp filer-specific decomposition). Filer-specific by design — never enforced cross-ticker. |
+
+## Critical rules (carried from `feedback_structural_over_heuristic.md`)
+
+1. **No new label-text regexes, keyword scans, or static concept allowlists** for cross-ticker logic. Generic library decisions must be derivable from XBRL structural signals (concept name, axis, member, label linkbase).
+2. **Per-ticker overrides do NOT extend the generic library's taxonomy** — they handle member-level normalization, skip flags, and extension concepts only. New disclosure tables go in the generic library.
+3. **Per-ticker narrative entries are explicitly heuristic-tolerant** because they don't drive automated routing — they're analyst captures, rendered as a filer-specific section labeled "Not standardized cross-ticker."
+
+## Extraction flow
+
+For each filing's iXBRL htm:
+
+1. **Parse iXBRL** — extract every fact with `(concept, contextRef)`; resolve contextRef to `(period, [(axis, member), ...])`.
+2. **For each disclosure table in the generic library:**
+   a. Filter facts to those whose context carries the table's required axes.
+   b. For each metric in the table's concept dict, walk the concept list left-to-right (first-match priority). Bucket by `(metric, member, period)`.
+   c. Apply per-ticker overrides: skip if `skip: true`, alias members, accept extension concepts.
+   d. Render to xlsx as a table block.
+3. **Surface novels** — any axis the filing uses that the generic library doesn't cover, OR any member that doesn't match a canonical normalization, gets surfaced as a `NovelItem` for user triage. User decides: extend generic library (if cross-ticker) or extend per-ticker overrides (if filer-specific).
+4. **Render per-ticker narrative** — read `mda_narrative.json`; render its content as a final clearly-labeled filer-specific section.
 
 ## Output workbook layout
 
-Single sheet named `MD&A`. Periods as columns (typically 12-15: Q1 YYYY through FY YYYY for each year covered).
-Q4 inserted between Q3 and FY of each year, derived as formula `=FY - Q1 - Q2 - Q3` for $ values.
-Source citations as cell notes (Shift+F2 style) with default openpyxl Comment dimensions.
+Single sheet `Disclosures`. One section per disclosure table from the generic library, rendered in `section_order`. Each section: section header, period column headers, member rows × metric blocks (or table-specific shape). Source citations as cell notes (Shift+F2 style) with default openpyxl Comment dimensions.
 
-### Sections
+Final section "Filer-Specific (Not Standardized)" rendered from `mda_narrative.json` if it exists.
 
-| # | Section | Q4 derivable? |
-|---|---|---|
-| 1 | Geography ($ thousands, single-period) | ✓ formula |
-| 2 | Customer concentration (% of revenue) | ✗ percentages cannot be subtracted |
-| 3 | Functional / product concentration (% of revenue) | ✗ same |
-| 4 | Brand contribution ($ thousands, post-acquisition periods only) | ✓ formula; Celsius/legacy = residual |
-| 5 | Pro Forma vs As-Reported (custom layout) | n/a |
-| 6 | SG&A walk ($ Δ, hierarchical M&S vs G&A grouping) | ✓ formula on totals; sub-rows derived from FY-9M where both disclosed |
-| 7 | Gross profit + margin + qualitative drivers | ✓ GP $ formula; margin = GP$/Revenue; drivers stay blank for Q4 |
-| 8 | Other Inc/Exp walk | ✓ formula |
+**Engineering rules** (carried from prior implementation, all earned the hard way):
 
-## Critical engineering rules
-
-These are non-negotiable — every one was learned the hard way:
-
-1. **Standalone workbook only.** Do NOT add MD&A as a sheet inside a workbook that has external links (openpyxl re-renumbers external-link rIds on save and corrupts the file). Output is always `Brain\Knowledge\Model Outputs\{TICKER}\{TICKER}_MDA.xlsx`.
-
-2. **Default comment box dimensions only.** Setting `comment.width` or `comment.height` triggers Excel's "we found a problem" repair warning. Use `Comment(text, author)` with no size kwargs.
-
-3. **No merged cells.** Section headers / notes go in column A only.
-
-4. **Periods as columns, metrics as rows.** Always. Period column order: `Q1 YYYY, Q2 YYYY, Q3 YYYY, Q4 YYYY, FY YYYY` for each year.
-
-5. **Q4 derivation is for $ values only.** Customer % and product concentration % rows cannot be derived for Q4. Show `n/d` with cell note "Q4 NOT derivable: percentages cannot be subtracted."
-
-6. **GP margin Q4** = `GP$_Q4 / Revenue$_Q4`, NOT `FY% - 9M%`.
-
-7. **Cell notes always on hardcoded value cells** with format `{filing} {section}: {verbatim quote or short attribution}`. Formulas get notes only if the derivation is non-obvious.
-
-8. **Number format for $thousands**: `'#,##0;(#,##0);"--"'`. For %: `'0.0%;(0.0%);"--"'`.
-
-9. **Source values from MD&A narrative are rounded** to nearest $0.1M ($100K precision). The `validated_*.json` files have exact IS line values if a user asks to swap totals to dollar precision.
-
-## SG&A walk hierarchy (Section 6)
-
-Match the filer's natural disclosure structure. CELH (and most consumer staples) discloses:
-
-```
-Total SG&A
-YoY Total Δ
-
-  MARKETING & SELLING Δ          (subtotal — formula = sum of M&S sub-rows)
-    Marketing investments / campaigns
-    Storage / Distribution
-    Sales/Marketing Employee
-    Acquired-brand attributable (e.g., Alani Nu M&S)
-    Other selling
-    
-  GENERAL & ADMIN Δ              (subtotal — formula = sum of G&A sub-rows)
-    Administrative expenses (legacy general admin)
-    Acquisition / Integration costs
-    Acquired-brand attributable (e.g., Alani Nu G&A)
-    Contingent consideration remeasurement
-    Legal accrual / settlement
-    Stock-based compensation (legacy era)
-    Other admin
-
-Distributor Termination Δ        (special — was inside SG&A in some eras; separate IS line in others)
-
-Σ Buckets check                  (= M&S subtotal + G&A subtotal + Distrib Term)
-```
-
-Pre-2025 (or pre-acquisition) periods often DON'T split between M&S and G&A — the disclosure is flat (Marketing + Storage + Employee + Admin + Stock comp). Map those values into the closest M&S vs G&A bucket. Pre-acquisition Employee costs typically go under M&S.
-
-## Q4 derivation logic
-
-The 9M YTD walk lives in each filer's Q3 10-Q (the "Nine months ended ... compared to nine months ended ..." section). Pull it for each year. Then Q4 = FY - 9M for any bucket that BOTH disclosures break out separately. If 9M lumps into "all other SG&A" but FY breaks out, leave the Q4 cell blank — don't synthesize from incomplete data.
-
-Distributor termination behaves specially: when the prior comparable year had termination fees and the current year doesn't, a NEGATIVE delta appears (e.g., FY2023 distrib_term = -$181M because FY2022 had +$193.8M one-time). In recent years (CELH 2025), distributor termination became a separate IS line — track that on its own row outside the SG&A walk.
-
-## Brand contribution (Section 4)
-
-Only populate periods AFTER the acquisition closed. Pre-acquisition periods are 100% the legacy brand.
-
-For the residual brand (e.g., Celsius for CELH), formula = `Total Revenue - Acquired Brand 1 - Acquired Brand 2 ...`.
-
-Acquired brand contribution comes from:
-- **Note 5 (Acquisitions)** — direct $ disclosure for partial periods ("contributed approximately $X.X million for the period from Closing Date through ...")
-- **MD&A narrative** — "Alani Nu Acquisition contributed approximately $332.0 million of revenue" in Results of Operations
-- **Item 9A (Controls and Procedures)** — "Alani Nu represented approximately X.X% of consolidated revenue for ..." (use as cross-check)
-
-These three should agree to within rounding; cite all three in the cell note.
-
-## Pro forma (Section 5)
-
-Mandatory disclosure under ASC 805 when a material acquisition closes. Find in Note 5 of the filing covering the close period and subsequent ones. Format: as-if both acquisitions had closed Jan 1 of prior year. Disclosed for Q3, 9M, and FY periods at minimum.
-
-## Workflow
-
-```
-1. Identify filings for ticker:
-   Brain\Sources\{TICKER}\{YYYY-Qn or YYYY-FY}\filings\*.htm
-
-2. Extract MD&A regions (Results of Operations) + footnote regions (Note 4 Revenue, Note 5 Acquisitions, Concentrations of Risk, Item 9A Controls).
-   Anchor terms to grep:
-     - "amount of revenue by geographical" / "amount of revenues by geographical"
-     - "Revenue from customers accounting for more than"
-     - "[Ff]unctional energy drink product revenue accounted"  (or analogous wording for non-CELH)
-     - "Gross [Pp]rofit" + "increased by" / "decreased by"
-     - "Selling, [Gg]eneral and [Aa]dministrative [Ee]xpenses" + "increase of" / "decrease of"
-     - "Other (Income|Expense)" + "increased" / "primarily attributable"
-     - Acquisition narrative: "Acquisition .{1,80}contributed approximately"
-     - Pro forma: "[Pp]ro forma" + "Revenue $"
-     - Item 9A: "represented approximately .{1,80}consolidated revenue"
-
-3. Populate `data/{TICKER}.json` per the schema in `data/schema.md`.
-
-4. Run `scripts/build_mda_workbook.py --ticker {TICKER}` to generate `Brain\Knowledge\Model Outputs\{TICKER}\{TICKER}_MDA.xlsx`.
-```
-
-## Iteration on disclosure variations
-
-Different filers structure SG&A walks differently. The skill's bucket taxonomy (Section 6) is intentionally broad to accommodate variation. When a new ticker introduces a bucket not in the canonical list, add a row and document the mapping decision in `data/{TICKER}.json` with a `taxonomy_notes` field.
-
-When CELH (or any ticker's) disclosure structure CHANGES across years (CELH did this in 2025 — moved from flat list to M&S/G&A split), preserve both views: pre-change rows go under the closest analog bucket; post-change rows use the canonical hierarchy.
+- **Standalone workbook only.** Never a sheet inside a workbook with external links — openpyxl renumbers external-link rIds on save and corrupts the file.
+- **Default Comment dimensions.** Setting `comment.width`/`comment.height` triggers Excel's "we found a problem" repair warning.
+- **No merged cells.** Section headers go in column A only.
+- **Number format:** `'#,##0;(#,##0);"--"'` for $ thousands, `'0.0%;(0.0%);"--"'` for %.
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | `SKILL.md` | This document |
-| `scripts/build_mda_workbook.py` | Generic builder. Reads `data/{TICKER}.json`, outputs xlsx |
-| `data/schema.md` | JSON schema documentation |
-| `data/CELH.json` | First reference instance |
+| `scripts/build_disclosures_workbook.py` | Generic builder. Reads library + per-ticker overrides + per-ticker narrative; outputs xlsx |
+
+## Roadmap (per ROADMAP.md)
+
+| Phase | Scope | Status |
+|---|---|---|
+| 0 | Folder reorganization | ✓ shipped 2026-05-09 |
+| 1 | Library scaffold + Segment P&L on CELH | **active** |
+| 2 | Port 4 original sections (geography, customer, pro forma, brand — axis-driven) | pending |
+| 3 | Add 3 new structural sections (debt, SBC, tax) | pending |
+| 4 | Absorb depreciation extraction (PP&E, intangibles, goodwill, future amort, ROU) | pending |
+| 5 | Cross-ticker validation (PEP, MNST end-to-end) | pending |
+| 6 | Cleanup + handoff | pending |
+| 7+ | (Future) Model-feeding bridge — model-calc consumes rollforwards from this skill's output | future |

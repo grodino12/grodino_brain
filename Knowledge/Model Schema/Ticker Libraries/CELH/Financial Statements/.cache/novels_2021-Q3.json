@@ -1,0 +1,334 @@
+{
+  "filing": {
+    "ticker": "CELH",
+    "filing_type": "10-Q",
+    "filing_date": "2021-11-12",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "Q3 FY2021",
+      "period_end_date": "2021-09-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Long-term security deposits",
+      "value": "308449",
+      "raw_numeric_text": "308,449",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2021-09-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt current portion",
+          0.6666666666666667
+        ],
+        [
+          "long-term debt net",
+          0.6666666666666667
+        ],
+        [
+          "long-term investment securities",
+          0.6551724137931035
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Long-term security deposits",
+      "value": "122733",
+      "raw_numeric_text": "122,733",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt current portion",
+          0.6666666666666667
+        ],
+        [
+          "long-term debt net",
+          0.6666666666666667
+        ],
+        [
+          "long-term investment securities",
+          0.6551724137931035
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2021",
+      "period_end_date": "2021-09-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-7496",
+      "raw_numeric_text": "7,496",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2021-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2020",
+      "period_end_date": "2020-09-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Interest expense on bonds",
+      "value": "-391458",
+      "raw_numeric_text": "391,458",
+      "section": "non_operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InterestExpenseSubordinatedNotesAndDebentures | ctx:duration:2020-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest expense net",
+          0.8
+        ],
+        [
+          "interest expense",
+          0.7804878048780488
+        ],
+        [
+          "interest expense nonoperating",
+          0.7777777777777779
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2020",
+      "period_end_date": "2020-09-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-13400",
+      "raw_numeric_text": "13,400",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2020-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2020",
+      "period_end_date": "2020-09-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Amortization of discount on bonds payable",
+      "value": "-506100",
+      "raw_numeric_text": "506,100",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:AmortizationOfDiscountOnBondsPayable | ctx:duration:2020-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q3 FY2020",
+      "period_end_date": "2020-09-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Gain on lease cancellations",
+      "value": "152112",
+      "raw_numeric_text": "152,112",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:GainLossOnTerminationOfLease | ctx:duration:2020-09-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "income loss from operations",
+          0.5185185185185186
+        ],
+        [
+          "net foreign exchange gain",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q3 FY2021",
+      "period_end_date": "2021-09-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Deferred Tax Liability-net",
+      "value": "-182156",
+      "raw_numeric_text": "182,156",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:DeferredTaxLiabilitynet | ctx:duration:2021-09-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "deferred tax provision",
+          0.6666666666666667
+        ],
+        [
+          "deferred income taxes-net",
+          0.6274509803921569
+        ],
+        [
+          "deferred income taxes net",
+          0.6274509803921569
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q3 FY2021",
+      "period_end_date": "2021-09-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Proceeds from capital raise",
+      "value": "67769386",
+      "raw_numeric_text": "67,769,386",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromContributedCapital | ctx:duration:2021-09-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from asset sales",
+          0.7307692307692308
+        ],
+        [
+          "proceeds from sale of assets",
+          0.7272727272727273
+        ],
+        [
+          "proceeds from stock option exercises",
+          0.6984126984126984
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q3 FY2020",
+      "period_end_date": "2020-09-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Gain on China transaction",
+      "value": "-384493",
+      "raw_numeric_text": "384,493",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:GainLossOnInvestments | ctx:duration:2020-09-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "business combination transaction costs",
+          0.6031746031746033
+        ],
+        [
+          "foreign currency transaction loss",
+          0.5862068965517242
+        ],
+        [
+          "payments on finance lease obligations",
+          0.5483870967741935
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q3 FY2020",
+      "period_end_date": "2020-09-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Proceeds from capital raise",
+      "value": "21983116",
+      "raw_numeric_text": "21,983,116",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q3\\filings\\CELH_2021-09-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromContributedCapital | ctx:duration:2020-09-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from asset sales",
+          0.7307692307692308
+        ],
+        [
+          "proceeds from sale of assets",
+          0.7272727272727273
+        ],
+        [
+          "proceeds from stock option exercises",
+          0.6984126984126984
+        ]
+      ]
+    }
+  ]
+}

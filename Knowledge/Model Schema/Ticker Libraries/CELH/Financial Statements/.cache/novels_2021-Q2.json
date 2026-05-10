@@ -1,0 +1,334 @@
+{
+  "filing": {
+    "ticker": "CELH",
+    "filing_type": "10-Q",
+    "filing_date": "2021-08-12",
+    "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm"
+  },
+  "novels": [
+    {
+      "statement_type": "BS",
+      "period_label": "Q2 FY2021",
+      "period_end_date": "2021-06-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Long-term security deposits",
+      "value": "112456",
+      "raw_numeric_text": "112,456",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2021-06-30",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt current portion",
+          0.6666666666666667
+        ],
+        [
+          "long-term debt net",
+          0.6666666666666667
+        ],
+        [
+          "long-term investment securities",
+          0.6551724137931035
+        ]
+      ]
+    },
+    {
+      "statement_type": "BS",
+      "period_label": "Q4 FY2020",
+      "period_end_date": "2020-12-31",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Long-term security deposits",
+      "value": "122733",
+      "raw_numeric_text": "122,733",
+      "section": "non_current_assets",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:DepositsAssets | ctx:instant:2020-12-31",
+        "note": "iXBRL HTM | BS"
+      },
+      "nearest_matches": [
+        [
+          "long-term debt current portion",
+          0.6666666666666667
+        ],
+        [
+          "long-term debt net",
+          0.6666666666666667
+        ],
+        [
+          "long-term investment securities",
+          0.6551724137931035
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2021",
+      "period_end_date": "2021-06-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-2972",
+      "raw_numeric_text": "2,972",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2021-06-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2020",
+      "period_end_date": "2020-06-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Interest expense on bonds",
+      "value": "-247437",
+      "raw_numeric_text": "247,437",
+      "section": "non_operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:InterestExpenseSubordinatedNotesAndDebentures | ctx:duration:2020-06-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest expense net",
+          0.8
+        ],
+        [
+          "interest expense",
+          0.7804878048780488
+        ],
+        [
+          "interest expense nonoperating",
+          0.7777777777777779
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2020",
+      "period_end_date": "2020-06-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Interest on other obligations",
+      "value": "-9981",
+      "raw_numeric_text": "9,981",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:InterestOnOtherObligations | ctx:duration:2020-06-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "interest and other income net",
+          0.6896551724137931
+        ],
+        [
+          "interest and other expense net",
+          0.6440677966101696
+        ],
+        [
+          "interest and other income net of expense",
+          0.6376811594202898
+        ]
+      ]
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2020",
+      "period_end_date": "2020-06-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Amortization of discount on bonds payable",
+      "value": "-327451",
+      "raw_numeric_text": "327,451",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:AmortizationOfDiscountOnBondsPayable | ctx:duration:2020-06-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": []
+    },
+    {
+      "statement_type": "IS",
+      "period_label": "Q2 FY2020",
+      "period_end_date": "2020-06-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Gain on lease cancellations",
+      "value": "152112",
+      "raw_numeric_text": "152,112",
+      "section": "unclassified",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:GainLossOnTerminationOfLease | ctx:duration:2020-06-30",
+        "note": "iXBRL HTM | IS"
+      },
+      "nearest_matches": [
+        [
+          "income loss from operations",
+          0.5185185185185186
+        ],
+        [
+          "net foreign exchange gain",
+          0.5
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2021",
+      "period_end_date": "2021-06-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Deposits/deferred revenue and other current liabilities",
+      "value": "339952",
+      "raw_numeric_text": "339,952",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities | ctx:duration:2021-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts payable and other current liabilities",
+          0.693069306930693
+        ],
+        [
+          "change in other current liabilities",
+          0.6666666666666667
+        ],
+        [
+          "prepaid expenses and other current assets",
+          0.6458333333333333
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2021",
+      "period_end_date": "2021-06-30",
+      "fiscal_year": 2021,
+      "raw_filing_label": "Proceeds from capital raise",
+      "value": "67769386",
+      "raw_numeric_text": "67,769,386",
+      "section": "financing",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:ProceedsFromContributedCapital | ctx:duration:2021-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "proceeds from asset sales",
+          0.7307692307692308
+        ],
+        [
+          "proceeds from sale of assets",
+          0.7272727272727273
+        ],
+        [
+          "proceeds from stock option exercises",
+          0.6984126984126984
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2020",
+      "period_end_date": "2020-06-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Gain on China transaction",
+      "value": "23100",
+      "raw_numeric_text": "23,100",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "us-gaap:GainLossOnInvestments | ctx:duration:2020-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "business combination transaction costs",
+          0.6031746031746033
+        ],
+        [
+          "foreign currency transaction loss",
+          0.5862068965517242
+        ],
+        [
+          "payments on finance lease obligations",
+          0.5483870967741935
+        ]
+      ]
+    },
+    {
+      "statement_type": "CF",
+      "period_label": "Q2 FY2020",
+      "period_end_date": "2020-06-30",
+      "fiscal_year": 2020,
+      "raw_filing_label": "Deposits/deferred revenue and other current liabilities",
+      "value": "109313",
+      "raw_numeric_text": "109,313",
+      "section": "operating",
+      "subsection_context": null,
+      "citation": {
+        "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-Q2\\filings\\CELH_2021-06-30_10-Q.htm",
+        "page": 1,
+        "line_hint": "celh:IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities | ctx:duration:2020-06-30",
+        "note": "iXBRL HTM | CF"
+      },
+      "nearest_matches": [
+        [
+          "accounts payable and other current liabilities",
+          0.693069306930693
+        ],
+        [
+          "change in other current liabilities",
+          0.6666666666666667
+        ],
+        [
+          "prepaid expenses and other current assets",
+          0.6458333333333333
+        ]
+      ]
+    }
+  ]
+}

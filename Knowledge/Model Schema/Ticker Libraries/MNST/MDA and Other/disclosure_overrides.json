@@ -1,0 +1,69 @@
+{
+  "_comment": "MNST per-ticker overrides for mda-disaggregation skill.",
+  "_display": {
+    "unit_divisor": 1000,
+    "unit_label": "thousands"
+  },
+  "DISC-SEG-PNL": {
+    "member_aliases": {
+      "mnst:MonsterEnergyDrinksSegmentMember": "Monster Energy Drinks",
+      "mnst:StrategicBrandsSegmentMember": "Strategic Brands",
+      "mnst:AlcoholBrandsSegmentMember": "Alcohol Brands",
+      "us-gaap:AllOtherSegmentsMember": "All Other"
+    },
+    "extension_concepts": {
+      "depreciation_amortization": ["mnst:DepreciationDepletionAndAmortizationExcludingRightOfUseAssets"]
+    }
+  },
+  "DISC-GEO-REV": {
+    "member_aliases": {
+      "mnst:U.s.AndCanadaMember": "U.S. & Canada",
+      "us-gaap:EMEAMember": "EMEA",
+      "srt:AsiaPacificMember": "Asia Pacific",
+      "mnst:LatinAmericaAndCaribbeanMember": "Latin America & Caribbean",
+      "us-gaap:NonUsMember": "Non-US (rolled up)"
+    }
+  },
+  "DISC-MA-PROFORMA": {
+    "member_aliases": {
+      "mnst:BangEnergyMember": "Bang Energy",
+      "mnst:CanarchyCraftBreweryCollectiveLlcMember": "CANarchy Craft Brewery"
+    }
+  },
+  "DISC-DEBT-SCHED": {
+    "member_aliases": {
+      "mnst:TermLoanMember": "Term Loan"
+    }
+  },
+  "DISC-SBC-AWARDS": {
+    "member_aliases": {
+      "us-gaap:RestrictedStockUnitsRSUMember": "RSUs",
+      "mnst:RestrictedStockUnitsAndPerformanceShareUnitsMember": "RSUs + PSUs",
+      "mnst:RestrictedStockUnitsAndOrPerformanceShareUnitsMember": "RSUs and/or PSUs",
+      "mnst:NonQualifiedStockOptionsMember": "Non-Qualified Stock Options",
+      "mnst:IncentiveStockOptionsMember": "Incentive Stock Options",
+      "mnst:NonQualifiedStockOptionsRestrictedStockUnitsAndPerformanceShareUnitsMember": "NQSO + RSU + PSU",
+      "mnst:OtherShareBasedAwardsMember": "Other Share-Based Awards"
+    }
+  },
+  "DISC-PPE-CLASS": {
+    "member_aliases": {
+      "us-gaap:LandMember": "Land",
+      "us-gaap:BuildingMember": "Buildings",
+      "us-gaap:LeaseholdImprovementsMember": "Leasehold Improvements",
+      "us-gaap:EquipmentMember": "Equipment",
+      "us-gaap:FurnitureAndFixturesMember": "Furniture & Fixtures",
+      "us-gaap:OfficeEquipmentMember": "Office Equipment",
+      "us-gaap:VehiclesMember": "Vehicles",
+      "us-gaap:SoftwareAndSoftwareDevelopmentCostsMember": "Software & Dev Costs",
+      "us-gaap:ConstructionInProgressMember": "Construction in Progress"
+    }
+  },
+  "DISC-GOODWILL-ROLL": {
+    "member_aliases": {
+      "mnst:MonsterEnergyDrinksSegmentMember": "Monster Energy Drinks",
+      "mnst:StrategicBrandsSegmentMember": "Strategic Brands",
+      "mnst:AlcoholBrandsSegmentMember": "Alcohol Brands"
+    }
+  }
+}

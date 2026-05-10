@@ -1,0 +1,266 @@
+{
+  "_comment": "Generic cross-ticker structural disclosure tables. Axis-driven extraction from iXBRL — no label heuristics. Per `feedback_structural_over_heuristic.md`. Entries grow as new disclosures are added; per-ticker filer-specific quirks live in `Ticker Libraries/{TICKER}/MDA and Other/disclosure_overrides.json`.",
+  "schema_version": "1.0",
+  "disclosure_tables": {
+    "DISC-SEG-PNL": {
+      "name": "Segment P&L",
+      "section_order": 1,
+      "rationale": "ASC 280 reportable-segment data. Filer-disclosed segments form rows; cell values vary by metric. Single-segment filers (CELH today) render one row.",
+      "extraction": {
+        "axes": ["us-gaap:StatementBusinessSegmentsAxis"],
+        "concepts": {
+          "revenue": ["Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet", "SalesRevenueGoodsNet"],
+          "operating_income": ["OperatingIncomeLoss", "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"],
+          "total_assets": ["Assets"],
+          "capex": ["PaymentsToAcquirePropertyPlantAndEquipment"],
+          "depreciation_amortization": ["DepreciationDepletionAndAmortization", "DepreciationAndAmortization"]
+        },
+        "concept_priority": "first_match",
+        "_concept_priority_doc": "For each metric, walk the concept list left-to-right; first concept with a tagged fact wins. Lets the same disclosure entry handle ASC 606 / pre-606 / industry-specific revenue concept variants without filer-specific branching."
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["revenue", "operating_income", "total_assets", "capex", "depreciation_amortization"],
+        "metric_labels": {
+          "revenue": "Revenue",
+          "operating_income": "Operating Income",
+          "total_assets": "Total Assets",
+          "capex": "CapEx",
+          "depreciation_amortization": "D&A"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-GEO-REV": {
+      "name": "Geography (Revenue + Long-Lived Assets)",
+      "section_order": 2,
+      "rationale": "ASC 280 entity-wide geographic disclosure. Members are filer-disclosed regions/countries; values are $ amounts. Universal across CELH/PEP/MNST FY2025 10-Ks (33/54/48 axis refs respectively).",
+      "extraction": {
+        "axes": ["srt:StatementGeographicalAxis"],
+        "concepts": {
+          "revenue": ["Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet", "SalesRevenueGoodsNet"],
+          "long_lived_assets": ["NoncurrentAssets", "PropertyPlantAndEquipmentNet", "LongLivedAssetsNet"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["revenue", "long_lived_assets"],
+        "metric_labels": {
+          "revenue": "Revenue",
+          "long_lived_assets": "Long-Lived Assets"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-CUST-CONC": {
+      "name": "Customer Concentration (% of Revenue)",
+      "section_order": 25,
+      "rationale": "Customers > 10% of revenue, tagged via MajorCustomersAxis on ConcentrationRiskPercentage1. Members are filer-disclosed customer names.",
+      "extraction": {
+        "axes": ["srt:MajorCustomersAxis", "us-gaap:MajorCustomersAxis"],
+        "concepts": {
+          "pct_of_revenue": ["ConcentrationRiskPercentage1"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "value_type": "percent",
+        "metric_rows": ["pct_of_revenue"],
+        "metric_labels": {"pct_of_revenue": "% of Revenue"},
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-MA-PROFORMA": {
+      "name": "M&A Pro Forma + Acquisition Contribution",
+      "section_order": 3,
+      "rationale": "ASC 805 mandatory disclosure when material acquisitions close. As-if both acquisitions had closed at start of prior year. Members are individual acquisitions tagged via BusinessAcquisitionAxis.",
+      "extraction": {
+        "axes": ["us-gaap:BusinessAcquisitionAxis"],
+        "concepts": {
+          "revenue_contributed": ["BusinessAcquisitionsProFormaRevenue", "BusinessAcquisitionProFormaRevenue"],
+          "ni_contributed": ["BusinessAcquisitionsProFormaNetIncomeLoss", "BusinessAcquisitionProFormaNetIncomeLoss"],
+          "purchase_price": ["BusinessCombinationConsiderationTransferred1", "BusinessAcquisitionCostOfAcquiredEntityPurchasePrice"],
+          "goodwill_assigned": ["BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedGoodwill", "BusinessAcquisitionPurchasePriceAllocationGoodwillAmount"],
+          "intangibles_acquired": ["BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedFiniteLivedIntangiblesNet", "BusinessAcquisitionPurchasePriceAllocationAmortizableIntangibleAssets"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["revenue_contributed", "ni_contributed", "purchase_price", "goodwill_assigned", "intangibles_acquired"],
+        "metric_labels": {
+          "revenue_contributed": "Pro Forma Revenue",
+          "ni_contributed": "Pro Forma Net Income",
+          "purchase_price": "Purchase Price",
+          "goodwill_assigned": "Goodwill Assigned",
+          "intangibles_acquired": "Intangibles Acquired"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-DEBT-SCHED": {
+      "name": "Debt Schedule",
+      "section_order": 4,
+      "rationale": "Per-instrument debt detail (term loans, revolvers, notes, lines of credit). Members tagged via DebtInstrumentAxis.",
+      "extraction": {
+        "axes": ["us-gaap:DebtInstrumentAxis", "us-gaap:LongtermDebtTypeAxis", "us-gaap:LineOfCreditFacilityAxis"],
+        "concepts": {
+          "face_amount": ["DebtInstrumentFaceAmount"],
+          "carrying_amount": ["LongTermDebtNoncurrent", "LongTermDebt", "DebtInstrumentCarryingAmount"],
+          "stated_rate": ["DebtInstrumentInterestRateStatedPercentage"],
+          "effective_rate": ["DebtInstrumentInterestRateEffectivePercentage"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["face_amount", "carrying_amount", "stated_rate", "effective_rate"],
+        "metric_labels": {
+          "face_amount": "Face Amount",
+          "carrying_amount": "Carrying Amount",
+          "stated_rate": "Stated Rate (raw decimal)",
+          "effective_rate": "Effective Rate (raw decimal)"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-SBC-AWARDS": {
+      "name": "Stock-Based Compensation by Award Type",
+      "section_order": 5,
+      "rationale": "Stock comp activity by award class (RSU/PSU/options/ESPP). Members tagged via AwardTypeAxis.",
+      "extraction": {
+        "axes": ["us-gaap:AwardTypeAxis"],
+        "concepts": {
+          "sbc_expense": ["AllocatedShareBasedCompensationExpense", "ShareBasedCompensation"],
+          "unrecognized_cost": ["EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized"],
+          "weighted_avg_fair_value_grant": ["ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodWeightedAverageGrantDateFairValue"],
+          "shares_granted": ["ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriod"],
+          "shares_vested": ["ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriod"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["sbc_expense", "unrecognized_cost", "weighted_avg_fair_value_grant", "shares_granted", "shares_vested"],
+        "metric_labels": {
+          "sbc_expense": "SBC Expense $",
+          "unrecognized_cost": "Unrecognized Cost $",
+          "weighted_avg_fair_value_grant": "Wtd Avg Grant FV $",
+          "shares_granted": "Shares Granted #",
+          "shares_vested": "Shares Vested #"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-TAX-DISCL": {
+      "name": "Income Tax Disclosure (Jurisdiction Split)",
+      "section_order": 6,
+      "rationale": "Federal/state/foreign current+deferred breakdown via IncomeTaxAuthorityAxis.",
+      "extraction": {
+        "axes": ["us-gaap:IncomeTaxAuthorityAxis"],
+        "concepts": {
+          "current_tax": ["CurrentIncomeTaxExpenseBenefit"],
+          "deferred_tax": ["DeferredIncomeTaxExpenseBenefit"],
+          "total_tax": ["IncomeTaxExpenseBenefit"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["current_tax", "deferred_tax", "total_tax"],
+        "metric_labels": {
+          "current_tax": "Current Tax",
+          "deferred_tax": "Deferred Tax",
+          "total_tax": "Total Tax"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-PPE-CLASS": {
+      "name": "PP&E by Class",
+      "section_order": 7,
+      "rationale": "PP&E gross/accumulated-depreciation by asset class (machinery, buildings, leasehold improvements, etc.). Members via PropertyPlantAndEquipmentByTypeAxis. Absorbed from depreciation skill 2026-05-09.",
+      "extraction": {
+        "axes": ["us-gaap:PropertyPlantAndEquipmentByTypeAxis"],
+        "concepts": {
+          "gross": ["PropertyPlantAndEquipmentGross"],
+          "useful_life_min": ["PropertyPlantAndEquipmentUsefulLife"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["gross", "useful_life_min"],
+        "metric_labels": {
+          "gross": "Gross PP&E",
+          "useful_life_min": "Useful Life (years)"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-INT-CLASS": {
+      "name": "Intangibles by Class",
+      "section_order": 8,
+      "rationale": "Intangibles gross/accumulated-amortization by class (trademarks, customer relationships, distribution agreements). Members via FiniteLivedIntangibleAssetsByMajorClassAxis. Absorbed from depreciation skill 2026-05-09.",
+      "extraction": {
+        "axes": ["us-gaap:FiniteLivedIntangibleAssetsByMajorClassAxis", "us-gaap:IndefiniteLivedIntangibleAssetsByMajorClassAxis"],
+        "concepts": {
+          "gross": ["FiniteLivedIntangibleAssetsGross", "IndefiniteLivedIntangibleAssetsExcludingGoodwill"],
+          "accumulated_amortization": ["FiniteLivedIntangibleAssetsAccumulatedAmortization"],
+          "net": ["FiniteLivedIntangibleAssetsNet"],
+          "useful_life": ["FiniteLivedIntangibleAssetUsefulLife"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["gross", "accumulated_amortization", "net", "useful_life"],
+        "metric_labels": {
+          "gross": "Gross",
+          "accumulated_amortization": "Accumulated Amortization",
+          "net": "Net",
+          "useful_life": "Useful Life (years)"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    },
+    "DISC-GOODWILL-ROLL": {
+      "name": "Goodwill Rollforward",
+      "section_order": 9,
+      "rationale": "Goodwill balance + period changes (acquisitions, impairments, FX). When filer has multiple reporting units, broken down by StatementBusinessSegmentsAxis. Absorbed from depreciation skill 2026-05-09.",
+      "extraction": {
+        "axes": ["us-gaap:StatementBusinessSegmentsAxis"],
+        "concepts": {
+          "goodwill_balance": ["Goodwill"],
+          "goodwill_acquired": ["GoodwillAcquiredDuringPeriod"],
+          "goodwill_impaired": ["GoodwillImpairmentLoss"],
+          "goodwill_fx": ["GoodwillForeignCurrencyTranslationGainLoss", "GoodwillTranslationAdjustments"]
+        },
+        "concept_priority": "first_match"
+      },
+      "render": {
+        "shape": "members_as_rows_periods_as_columns",
+        "metric_rows": ["goodwill_balance", "goodwill_acquired", "goodwill_impaired", "goodwill_fx"],
+        "metric_labels": {
+          "goodwill_balance": "Goodwill Balance",
+          "goodwill_acquired": "Acquired this Period",
+          "goodwill_impaired": "Impairment Loss",
+          "goodwill_fx": "FX Translation"
+        },
+        "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
+        "number_format_percent": "0.0%;(0.0%);\"--\""
+      }
+    }
+  }
+}
