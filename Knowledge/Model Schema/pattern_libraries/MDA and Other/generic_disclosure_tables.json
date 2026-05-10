@@ -124,8 +124,14 @@
         "metric_labels": {
           "face_amount": "Face Amount",
           "carrying_amount": "Carrying Amount",
-          "stated_rate": "Stated Rate (raw decimal)",
-          "effective_rate": "Effective Rate (raw decimal)"
+          "stated_rate": "Stated Rate",
+          "effective_rate": "Effective Rate"
+        },
+        "metric_value_types": {
+          "face_amount": "dollar",
+          "carrying_amount": "dollar",
+          "stated_rate": "percent",
+          "effective_rate": "percent"
         },
         "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
         "number_format_percent": "0.0%;(0.0%);\"--\""
@@ -152,9 +158,16 @@
         "metric_labels": {
           "sbc_expense": "SBC Expense $",
           "unrecognized_cost": "Unrecognized Cost $",
-          "weighted_avg_fair_value_grant": "Wtd Avg Grant FV $",
+          "weighted_avg_fair_value_grant": "Wtd Avg Grant FV (per share)",
           "shares_granted": "Shares Granted #",
           "shares_vested": "Shares Vested #"
+        },
+        "metric_value_types": {
+          "sbc_expense": "dollar",
+          "unrecognized_cost": "dollar",
+          "weighted_avg_fair_value_grant": "raw_dollar",
+          "shares_granted": "count",
+          "shares_vested": "count"
         },
         "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
         "number_format_percent": "0.0%;(0.0%);\"--\""
@@ -204,6 +217,10 @@
           "gross": "Gross PP&E",
           "useful_life_min": "Useful Life (years)"
         },
+        "metric_value_types": {
+          "gross": "dollar",
+          "useful_life_min": "count"
+        },
         "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
         "number_format_percent": "0.0%;(0.0%);\"--\""
       }
@@ -230,6 +247,12 @@
           "accumulated_amortization": "Accumulated Amortization",
           "net": "Net",
           "useful_life": "Useful Life (years)"
+        },
+        "metric_value_types": {
+          "gross": "dollar",
+          "accumulated_amortization": "dollar",
+          "net": "dollar",
+          "useful_life": "count"
         },
         "number_format_dollar_thousands": "#,##0;(#,##0);\"--\"",
         "number_format_percent": "0.0%;(0.0%);\"--\""

@@ -296,18 +296,41 @@ def render_disclosure_section(ws, start_row, table_id, table_def, buckets, all_p
     name = table_def["name"]
     metric_rows = table_def["render"]["metric_rows"]
     metric_labels = table_def["render"]["metric_labels"]
-    value_type = table_def["render"].get("value_type", "dollar")
-    if value_type == "percent":
-        fmt = table_def["render"]["number_format_percent"]
-        divisor = 1  # raw decimals (0.602 = 60.2%) — no unit conversion
-        unit_suffix = "(% of revenue)"
-    else:
-        fmt = table_def["render"]["number_format_dollar_thousands"]
-        divisor = display.get("unit_divisor", 1)
-        unit_suffix = f"($ in {display.get('unit_label', 'dollars')})"
+    table_value_type = table_def["render"].get("value_type", "dollar")
+    per_metric_types = table_def["render"].get("metric_value_types", {})
 
-    # Section header
+    fmt_dollar = table_def["render"]["number_format_dollar_thousands"]
+    fmt_percent = table_def["render"]["number_format_percent"]
+    fmt_count = "#,##0;(#,##0);\"--\""  # integer for share counts etc.
+    unit_divisor_dollar = display.get("unit_divisor", 1)
+    unit_label = display.get("unit_label", "dollars")
+
+    def metric_render_config(metric):
+        """Return (divisor, format) for a metric. Per-metric type wins over table type.
+
+        Types:
+          - "dollar"  → divide by ticker's unit_divisor (e.g. /1000 for thousands), $ format
+          - "raw_dollar" → no divisor (per-share $, useful for Wtd Avg Grant FV), $ format with cents
+          - "percent" → no divisor (raw decimal 0.5 → 50%), % format
+          - "count"   → no divisor (share counts, useful-life years), integer format
+        """
+        vt = per_metric_types.get(metric, table_value_type)
+        if vt == "percent":
+            return 1, fmt_percent
+        if vt == "count":
+            return 1, fmt_count
+        if vt == "raw_dollar":
+            return 1, "$#,##0.00;($#,##0.00);\"--\""
+        return unit_divisor_dollar, fmt_dollar  # default: dollar
+
+    # Section header — note mixed types if any
     sr = start_row
+    if table_value_type == "percent" and not per_metric_types:
+        unit_suffix = "(% values)"
+    elif per_metric_types:
+        unit_suffix = f"(mixed: $ in {unit_label}, % / counts as labeled)"
+    else:
+        unit_suffix = f"($ in {unit_label})"
     header = f"{table_def['section_order']}. {name.upper()}  {unit_suffix}"
     ws.cell(row=sr, column=1, value=header).font = SECTION_FONT
     ws.cell(row=sr, column=1).border = TOP_BORDER
@@ -347,6 +370,7 @@ def render_disclosure_section(ws, start_row, table_id, table_def, buckets, all_p
         metric_data = buckets.get(metric, {})
         if not metric_data:
             continue
+        divisor, fmt = metric_render_config(metric)
         ws.cell(row=cur, column=1, value=metric_labels.get(metric, metric)).font = METRIC_FONT
         cur += 1
         for member in sorted_members:

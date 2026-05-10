@@ -17,11 +17,11 @@ purpose: Revenue forecasting drivers + backward-looking trend signal
 
 **Reported revenue $783M (record).** Brand splits:
 
-| Brand | Q1 2026 | YoY |
-|---|---|---|
-| CELSIUS | $348M | +6% |
-| Alani Nu | $368M | +60% pro forma / +85% scanner-clean |
-| Rockstar | $67M | "Stabilization year" |
+| Brand    | Q1 2026 | YoY                                 |
+| -------- | ------- | ----------------------------------- |
+| CELSIUS  | $348M   | +6%                                 |
+| Alani Nu | $368M   | +60% pro forma / +85% scanner-clean |
+| Rockstar | $67M    | "Stabilization year"                |
 
 **Profitability:**
 - GM 48.3% (+90bps from Q4 2025)
@@ -52,12 +52,12 @@ purpose: Revenue forecasting drivers + backward-looking trend signal
 
 Brand × Geography. Three brands × two geos = 5 lines (Rockstar Intl is de minimis).
 
-| | NA FY2025 | Intl FY2025 | Total |
-|---|---|---|---|
-| CELSIUS | ~$1,365M | ~$93M | $1,458M |
-| Alani Nu (9 mo) | ~$1,002M | ~$0 | $1,002M |
-| Rockstar (~4 mo, NA only) | $56M | — | $56M |
-| Total | $2,422M | $93M | **$2,515M** |
+|                           | NA FY2025 | Intl FY2025 | Total       |
+| ------------------------- | --------- | ----------- | ----------- |
+| CELSIUS                   | ~$1,365M  | ~$93M       | $1,458M     |
+| Alani Nu (9 mo)           | ~$1,002M  | ~$0         | $1,002M     |
+| Rockstar (~4 mo, NA only) | $56M      | —           | $56M        |
+| Total                     | $2,422M   | $93M        | **$2,515M** |
 
 NA-by-brand split is implied — CELH discloses brand revenue and NA/Intl total separately, never crossed.
 
