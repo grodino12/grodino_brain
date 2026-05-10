@@ -179,6 +179,34 @@ def run(period: str, ticker_root: Path, library_path: Path):
     for d in dropped:
         print(f"  drop: {d[0]} | {d[1]} | items={d[2]}")
 
+    # Line-item noise filter: drop disclosure-schedule rows that leaked into
+    # BS/IS via the concept-membership classifier. These rows are real iXBRL
+    # facts but they live in footnote tables (lease maturity, EPS reconciliation,
+    # SE rollforward), not on the primary statements the model needs.
+    NOISE_RE = re.compile(
+        r"^("
+        r"Balance at December \d+|"
+        r"(Lessee )?Operating Lease Liability Payments Due (Next Twelve Months|Year (Two|Three|Four|Five))|"
+        r"Finance Lease Liability Payments Due (Next Twelve Months|Year (Two|Three|Four|Five))|"
+        r"Domestic|Foreign|"
+        r"Effect of dilutive share based awards|"
+        r"Less: Amount representing interest|"
+        r"Less: Inventory reserve|"
+        r"Present value of lease liabilities|"
+        r"Interest payments on finance lease liabilities|"
+        r"Payments under operating leases|"
+        r"European deferred tax( \(note 14\))?|"
+        r"Brands"  # mezzanine-misclassified Brands (concept us-gaap:PreferredStockValue)
+        r")$"
+    )
+    item_drops = 0
+    for s in raw.statements:
+        before = len(s.line_items)
+        s.line_items = [li for li in s.line_items if not NOISE_RE.match(li.raw_filing_label)]
+        item_drops += before - len(s.line_items)
+    if item_drops:
+        print(f"  noise-filter: dropped {item_drops} disclosure-leak line items")
+
     out = ticker_root / "Financial Statements" / ".cache" / f"raw_{period}.json"
     out.write_text(raw.model_dump_json(indent=2), encoding="utf-8")
     by_stmt = Counter()

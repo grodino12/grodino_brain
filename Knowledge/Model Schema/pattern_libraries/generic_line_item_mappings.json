@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order — this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
-  "last_updated": "2026-04-30",
+  "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order \u2014 this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
+  "last_updated": "2026-05-10",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
     "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
@@ -66,7 +66,7 @@
       "filing_section": "operating_expenses",
       "sign_convention": "negative",
       "us_gaap_concept": "SellingGeneralAndAdministrativeExpense",
-      "note": "Combined-form SG&A used by staples filers (CELH, PG, PEP, MNST). Filers that split S&M from G&A (tech — GOOG, AAPL, MSFT) route to GEN-IS-028 (Sales and Marketing) and GEN-IS-029 (General and Administrative) via concept and label. Aliases for the split-form labels are intentionally NOT here — keeping them would silently mis-route split-form filers' G&A and S&M lines into the combined SG&A row."
+      "note": "Combined-form SG&A used by staples filers (CELH, PG, PEP, MNST). Filers that split S&M from G&A (tech \u2014 GOOG, AAPL, MSFT) route to GEN-IS-028 (Sales and Marketing) and GEN-IS-029 (General and Administrative) via concept and label. Aliases for the split-form labels are intentionally NOT here \u2014 keeping them would silently mis-route split-form filers' G&A and S&M lines into the combined SG&A row."
     },
     {
       "rule_id": "GEN-IS-005",
@@ -104,7 +104,10 @@
         "interest earned",
         "interest expense",
         "interest expense nonoperating",
-        "interest and debt expense"
+        "interest and debt expense",
+        "amortization of discount on bonds payable",
+        "interest expense on bonds",
+        "interest on other obligations"
       ],
       "filing_section": "non_operating",
       "us_gaap_concept": "InterestExpense",
@@ -186,7 +189,7 @@
       "model_sheet": "ANNL P&L",
       "model_label": "Income Tax (Expense) Benefit",
       "sign_convention": "negative",
-      "note": "Income tax stored with natural sign — expense negative, benefit positive. The IS keyword sign-detection sees BOTH \"expense\" and \"benefit\" in this label, returns ambiguous, and falls back to as_reported. So we set explicit sign_convention=negative because the modal case is expense.",
+      "note": "Income tax stored with natural sign \u2014 expense negative, benefit positive. The IS keyword sign-detection sees BOTH \"expense\" and \"benefit\" in this label, returns ambiguous, and falls back to as_reported. So we set explicit sign_convention=negative because the modal case is expense.",
       "aliases": [
         "income tax (expense) benefit",
         "income tax expense benefit",
@@ -225,7 +228,8 @@
         "cumulative preferred dividends",
         "dividends on preferred stock",
         "preferred dividends declared",
-        "cumulative dividends on preferred stock"
+        "cumulative dividends on preferred stock",
+        "less: dividends paid to series a convertible preferred stockholders"
       ],
       "filing_section": "eps",
       "us_gaap_concept": "PreferredStockDividendsIncomeStatementImpact"
@@ -357,7 +361,7 @@
         "RestrictedCash",
         "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
       ],
-      "note": "Consolidated cash row — combines unrestricted cash, cash equivalents, and restricted cash into one BS line. Mirrors how ASC 230 (effective FY2018+) requires the CF to reconcile the combined balance. Aliases cover all three filer-rendering variants (separate lines, combined line, restricted-only line); all route here. Restricted cash is typically immaterial for the issuers in scope and doesn't warrant a separate forecast driver."
+      "note": "Consolidated cash row \u2014 combines unrestricted cash, cash equivalents, and restricted cash into one BS line. Mirrors how ASC 230 (effective FY2018+) requires the CF to reconcile the combined balance. Aliases cover all three filer-rendering variants (separate lines, combined line, restricted-only line); all route here. Restricted cash is typically immaterial for the issuers in scope and doesn't warrant a separate forecast driver."
     },
     {
       "rule_id": "GEN-BS-003",
@@ -462,7 +466,7 @@
       "model_sheet": "BALANCE SHEET",
       "model_label": "Net PP&E",
       "memo": true,
-      "note": "PP&E gross-and-accumulated-depreciation detail. Some filers (PEP) show gross PP&E + accumulated depreciation as separate BS lines that net to PP&E Net. We render only the net (GEN-BS-007) on the workbook by convention; this memo bucket absorbs the detail concepts so they don't surface as novels and don't double-count into the BS. Shared model_label 'Net PP&E' intentional — same row identity for cross-filing dedup, just at finer granularity we don't model.",
+      "note": "PP&E gross-and-accumulated-depreciation detail. Some filers (PEP) show gross PP&E + accumulated depreciation as separate BS lines that net to PP&E Net. We render only the net (GEN-BS-007) on the workbook by convention; this memo bucket absorbs the detail concepts so they don't surface as novels and don't double-count into the BS. Shared model_label 'Net PP&E' intentional \u2014 same row identity for cross-filing dedup, just at finer granularity we don't model.",
       "aliases": [
         "property plant and equipment gross",
         "property, plant and equipment, gross",
@@ -601,7 +605,9 @@
         "other long-term assets, net",
         "other non-current assets, net",
         "other assets noncurrent",
-        "deposits assets"
+        "deposits assets",
+        "long-term security deposits",
+        "long term security deposits"
       ],
       "filing_section": "non_current_assets"
     },
@@ -920,7 +926,7 @@
       "model_label": "Par Value of Equity",
       "filing_section": "equity",
       "memo": true,
-      "note": "Per-share par/stated value disclosure (parenthetical on the BS, not a balance). Memo entry — recognized at reconcile so it doesn't surface as a novel, but model-write does not render it as a row.",
+      "note": "Per-share par/stated value disclosure (parenthetical on the BS, not a balance). Memo entry \u2014 recognized at reconcile so it doesn't surface as a novel, but model-write does not render it as a row.",
       "aliases": [
         "common stock par or stated value per share",
         "preferred stock par or stated value per share",
@@ -952,7 +958,7 @@
       "model_label": "Treasury Stock",
       "filing_section": "equity",
       "sign_convention": "negative",
-      "note": "Contra-equity dollar balance. The bare 'treasury shares' alias is intentionally absent — it conflicts with the share-count concept TreasuryStockCommonShares (memo, GEN-BS-043). us_gaap_concepts widened to include TreasuryStockValue (the parent concept some filers use, e.g. PEP) so concept-fallback resolves filer-specific label phrasings like 'Repurchased common stock, in excess of par value (X shares)'.",
+      "note": "Contra-equity dollar balance. The bare 'treasury shares' alias is intentionally absent \u2014 it conflicts with the share-count concept TreasuryStockCommonShares (memo, GEN-BS-043). us_gaap_concepts widened to include TreasuryStockValue (the parent concept some filers use, e.g. PEP) so concept-fallback resolves filer-specific label phrasings like 'Repurchased common stock, in excess of par value (X shares)'.",
       "aliases": [
         "treasury stock",
         "treasury stock common value",
@@ -1005,7 +1011,7 @@
       "model_label": "Treasury Stock - Shares Outstanding",
       "filing_section": "equity",
       "memo": true,
-      "note": "Treasury share count (not dollar). Distinct from GEN-BS-035 Treasury Stock which is the dollar balance — without this memo entry, share-count concept TreasuryStockCommonShares fuzzy-matches the dollar canonical and gets summed alongside it, double-counting equity.",
+      "note": "Treasury share count (not dollar). Distinct from GEN-BS-035 Treasury Stock which is the dollar balance \u2014 without this memo entry, share-count concept TreasuryStockCommonShares fuzzy-matches the dollar canonical and gets summed alongside it, double-counting equity.",
       "aliases": [
         "treasury stock common shares",
         "treasury shares",
@@ -1017,7 +1023,7 @@
       "rule_id": "GEN-BS-051",
       "model_sheet": "BALANCE SHEET",
       "model_label": "Raw Materials",
-      "note": "Inventory raw-materials detail row. Children of GEN-BS-005 Inventories — when present, parent renders as =SUM(detail) subtotal in historical and uses RATIO_OF_PARENT in forecast (each child = ratio × parent_forecast, ratios sum to 1.0).",
+      "note": "Inventory raw-materials detail row. Children of GEN-BS-005 Inventories \u2014 when present, parent renders as =SUM(detail) subtotal in historical and uses RATIO_OF_PARENT in forecast (each child = ratio \u00d7 parent_forecast, ratios sum to 1.0).",
       "aliases": [
         "inventory raw materials and supplies net of reserves",
         "raw materials",
@@ -1080,7 +1086,7 @@
         "class a and class b common stock and class c capital stock and additional paid-in capital",
         "class a class b and class c stock and additional paid-in capital"
       ],
-      "note": "Combined par + APIC line used by filers that don't separate the two on the balance sheet (common in tech). Distinct from GEN-BS-028 (Common Stock par) and GEN-BS-029 (APIC), which are the split form. Concept-based matching is the primary key — heavy label noise (embedded share counts that change quarter-to-quarter) makes label aliasing fragile."
+      "note": "Combined par + APIC line used by filers that don't separate the two on the balance sheet (common in tech). Distinct from GEN-BS-028 (Common Stock par) and GEN-BS-029 (APIC), which are the split form. Concept-based matching is the primary key \u2014 heavy label noise (embedded share counts that change quarter-to-quarter) makes label aliasing fragile."
     },
     {
       "rule_id": "GEN-BS-055",
@@ -1106,14 +1112,14 @@
         "accrued revenue share"
       ],
       "cf_delta_target": "Accrued Revenue Share",
-      "note": "Platform-economy accrued payable to revenue-share counterparties — traffic-acquisition-cost partners, app-store developers, content licensors. Distinct from GEN-BS-016 Accrued Expenses (general operating accruals). No us-gaap base concept exists; matching is by filer-extension namespace (goog:AccruedRevenueShare today; add aapl:/meta:/streaming-filer variants as those tickers come online). Paired with GEN-CF-075 for the WC-change line."
+      "note": "Platform-economy accrued payable to revenue-share counterparties \u2014 traffic-acquisition-cost partners, app-store developers, content licensors. Distinct from GEN-BS-016 Accrued Expenses (general operating accruals). No us-gaap base concept exists; matching is by filer-extension namespace (goog:AccruedRevenueShare today; add aapl:/meta:/streaming-filer variants as those tickers come online). Paired with GEN-CF-075 for the WC-change line."
     },
     {
       "rule_id": "GEN-IS-022",
       "model_sheet": "ANNL P&L",
       "model_label": "Net Income (Loss)",
       "row_type": "subtotal",
-      "note": "The TRUE Net Income line — consolidated, BEFORE splitting the NCI portion. Always rendered before any NCI adjustments. For filers without noncontrolling interests, this is the only NI line shown. For filers with NCI, this row is followed by GEN-IS-023 (NCI portion) and GEN-IS-011 (NI Less NCI = parent's share).",
+      "note": "The TRUE Net Income line \u2014 consolidated, BEFORE splitting the NCI portion. Always rendered before any NCI adjustments. For filers without noncontrolling interests, this is the only NI line shown. For filers with NCI, this row is followed by GEN-IS-023 (NCI portion) and GEN-IS-011 (NI Less NCI = parent's share).",
       "aliases": [
         "profit loss",
         "income loss including portion attributable to noncontrolling interest",
@@ -1148,7 +1154,7 @@
       "model_label": "Impairment of Intangibles",
       "filing_section": "operating_expenses",
       "sign_convention": "negative",
-      "note": "Impairment is a write-down — always negative on the IS regardless of the magnitude-only sign filers typically report. Same convention as GEN-IS-002 COGS. CF counterpart (GEN-CF-003) follows the filer's visual sign per feedback_cf_visual_sign.md.",
+      "note": "Impairment is a write-down \u2014 always negative on the IS regardless of the magnitude-only sign filers typically report. Same convention as GEN-IS-002 COGS. CF counterpart (GEN-CF-003) follows the filer's visual sign per feedback_cf_visual_sign.md.",
       "aliases": [
         "impairment of intangible assets",
         "impairment of intangibles",
@@ -1173,7 +1179,8 @@
         "net earnings",
         "net income loss",
         "net earnings (loss)",
-        "profit loss"
+        "profit loss",
+        "net (loss) income"
       ],
       "filing_section": "operating",
       "note": "Starting NI line of indirect-method CF. For filers without NCI this is just NI. Filers with NCI may use either consolidated NI (us-gaap:ProfitLoss, includes NCI portion) or attributable-to-parent NI as the CF starting line; we treat both as the same row here since downstream CF arithmetic is unaffected."
@@ -1285,7 +1292,11 @@
         "deferred income taxes",
         "deferred tax provision",
         "(benefit) provision for deferred income taxes",
-        "deferred income taxes and other tax charges and credits"
+        "deferred income taxes and other tax charges and credits",
+        "deferred tax-net",
+        "deferred tax liability-net",
+        "deferred tax asset-net",
+        "deferred tax liability net"
       ],
       "filing_section": "operating",
       "us_gaap_concept": "DeferredIncomeTaxExpenseBenefit",
@@ -1420,10 +1431,12 @@
         "other current liabilities (change)",
         "other current liabilities",
         "change in other current liabilities",
-        "other accrued liabilities"
+        "other accrued liabilities",
+        "deposits and other current liabilities",
+        "deposits/deferred revenue and other current liabilities"
       ],
       "filing_section": "operating",
-      "note": "WC change for the Other Current Liabilities BS bucket. Income-tax payable WC change is intentionally NOT aliased here — that line routes to GEN-CF-076 Change in Income Taxes."
+      "note": "WC change for the Other Current Liabilities BS bucket. Income-tax payable WC change is intentionally NOT aliased here \u2014 that line routes to GEN-CF-076 Change in Income Taxes."
     },
     {
       "rule_id": "GEN-CF-018",
@@ -1629,7 +1642,7 @@
       "rule_id": "GEN-CF-040",
       "model_sheet": "CASH FLOW",
       "model_label": "Common Dividends",
-      "note": "Cash dividends paid to common stockholders. Ambiguous aliases (unmodified 'dividends paid') default here — most public-company filings refer to common. Paired with GEN-IS-021.",
+      "note": "Cash dividends paid to common stockholders. Ambiguous aliases (unmodified 'dividends paid') default here \u2014 most public-company filings refer to common. Paired with GEN-IS-021.",
       "aliases": [
         "dividends paid on common stock",
         "cash dividends paid on common stock",
@@ -1655,7 +1668,8 @@
         "proceeds from issuance of common stock",
         "proceeds from common stock offering",
         "proceeds from sale of common stock",
-        "net proceeds from issuance of common stock"
+        "net proceeds from issuance of common stock",
+        "proceeds from capital raise"
       ],
       "filing_section": "financing",
       "us_gaap_concept": "ProceedsFromIssuanceOfCommonStock"
@@ -1962,7 +1976,7 @@
       "model_sheet": "CASH FLOW",
       "model_label": "Gain (Loss) on Extinguishment of Debt",
       "filing_section": "operating",
-      "note": "Non-cash add-back when debt is retired early at a premium/discount. Sign read from filer's parens (extract honors visual sign on CF — no library sign_convention).",
+      "note": "Non-cash add-back when debt is retired early at a premium/discount. Sign read from filer's parens (extract honors visual sign on CF \u2014 no library sign_convention).",
       "aliases": [
         "gain loss on extinguishment of debt",
         "gains losses on extinguishment of debt",
@@ -2087,7 +2101,7 @@
       "model_sheet": "CASH FLOW",
       "model_label": "Net Change in Short-Term Investments",
       "row_type": "line_item",
-      "note": "Net cash flow from short-term investing activity (purchases, sales, maturities). Some filers (CELH, KO) report only proceeds; others (PEP) split into multiple maturity-bucket lines; tech filers (GOOG) split as 'Purchases of marketable securities' + 'Maturities and sales of marketable securities'. All variants route to this single canonical so the workbook shows one consolidated row — model-write's row consolidation by canonical_label sums purchases (negative) and sales/maturities (positive) into the net change.",
+      "note": "Net cash flow from short-term investing activity (purchases, sales, maturities). Some filers (CELH, KO) report only proceeds; others (PEP) split into multiple maturity-bucket lines; tech filers (GOOG) split as 'Purchases of marketable securities' + 'Maturities and sales of marketable securities'. All variants route to this single canonical so the workbook shows one consolidated row \u2014 model-write's row consolidation by canonical_label sums purchases (negative) and sales/maturities (positive) into the net change.",
       "aliases": [
         "proceeds from sales and maturities of short-term investments",
         "proceeds from sale of short-term investments",
@@ -2118,7 +2132,7 @@
       "model_label": "Non-Cash Lease Expense",
       "row_type": "line_item",
       "filing_section": "operating",
-      "note": "Non-cash CFO add-back for amortization of operating lease right-of-use assets — the operating-lease counterpart to the depreciation add-back. Distinct from finance-lease principal payments which sit in financing.",
+      "note": "Non-cash CFO add-back for amortization of operating lease right-of-use assets \u2014 the operating-lease counterpart to the depreciation add-back. Distinct from finance-lease principal payments which sit in financing.",
       "aliases": [
         "operating lease right-of-use asset amortization",
         "operating lease right of use asset amortization",
@@ -2288,7 +2302,7 @@
       "model_label": "ROU Assets Obtained in Exchange for Lease Obligations",
       "memo": true,
       "filing_section": "cash_other",
-      "note": "Supplemental non-cash disclosure: balance of operating-lease right-of-use assets recognized in the period in exchange for new lease liabilities. Universal across filers post-ASC-842 adoption. Memo-only — not summed into CFO/CFI/CFF, presented under non-cash supplemental disclosures.",
+      "note": "Supplemental non-cash disclosure: balance of operating-lease right-of-use assets recognized in the period in exchange for new lease liabilities. Universal across filers post-ASC-842 adoption. Memo-only \u2014 not summed into CFO/CFI/CFF, presented under non-cash supplemental disclosures.",
       "aliases": [
         "right-of-use assets obtained in exchange for lease obligations",
         "right of use assets obtained in exchange for operating lease liabilities",
@@ -2319,7 +2333,7 @@
       "model_label": "Other Comprehensive Income (Loss)",
       "memo": true,
       "filing_section": "non_operating",
-      "note": "Stop-gap memo bucket for OCI line items that bleed into the IS table when filers (PEP) co-locate IS and Comprehensive Income in one HTM table. Walker should STOP at the OCI header but doesn't catch every layout variant — rather than let these surface as novels and block reconcile, route them here as memo (not summed into IS subtotals). TO BE REPLACED when StatementType.COMPREHENSIVE_INCOME ships (roadmap §21 — OCI 4th statement build). All OCI components (translation, cash flow hedges, pension adjustments, AFS securities, total OCI net of tax) collapse to this one canonical for now. Sheet 'ANNL P&L' is informational; the OCI 4th statement will route these to its own sheet.",
+      "note": "Stop-gap memo bucket for OCI line items that bleed into the IS table when filers (PEP) co-locate IS and Comprehensive Income in one HTM table. Walker should STOP at the OCI header but doesn't catch every layout variant \u2014 rather than let these surface as novels and block reconcile, route them here as memo (not summed into IS subtotals). TO BE REPLACED when StatementType.COMPREHENSIVE_INCOME ships (roadmap \u00a721 \u2014 OCI 4th statement build). All OCI components (translation, cash flow hedges, pension adjustments, AFS securities, total OCI net of tax) collapse to this one canonical for now. Sheet 'ANNL P&L' is informational; the OCI 4th statement will route these to its own sheet.",
       "aliases": [
         "other comprehensive income loss net of tax",
         "other comprehensive income loss",
@@ -2373,7 +2387,7 @@
       "model_sheet": "BALANCE SHEET",
       "model_label": "Accrued Compensation",
       "filing_section": "current_liabilities",
-      "note": "Accrued employee compensation liability — payroll, bonuses, vacation, employee benefits payable but not yet paid.",
+      "note": "Accrued employee compensation liability \u2014 payroll, bonuses, vacation, employee benefits payable but not yet paid.",
       "aliases": [
         "accrued compensation",
         "accrued employee compensation",
@@ -2411,7 +2425,7 @@
         "research and development expense",
         "r&d"
       ],
-      "note": "Primary R&D opex line for filers with a dedicated R&D row distinct from SG&A (common in tech and pharma). Sign: negative — renders as a charge against operating income. Position: between GEN-IS-002 COGS and GEN-IS-005 Income from Operations, alongside GEN-IS-004 SG&A."
+      "note": "Primary R&D opex line for filers with a dedicated R&D row distinct from SG&A (common in tech and pharma). Sign: negative \u2014 renders as a charge against operating income. Position: between GEN-IS-002 COGS and GEN-IS-005 Income from Operations, alongside GEN-IS-004 SG&A."
     },
     {
       "rule_id": "GEN-IS-028",
@@ -2570,7 +2584,7 @@
       "model_label": "Accrued Revenue Share",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "WC-change companion to GEN-BS-056 Accrued Revenue Share. Sign organic — positive when accrued balance grows (cash add-back to CFO), negative when it shrinks. Mirrors the GEN-CF-015 / GEN-BS-016 relationship for the platform-economy revenue-share split-out. No us-gaap base concept; matched via filer-extension namespace (goog: today; add meta:/aapl: variants as those tickers come online).",
+      "note": "WC-change companion to GEN-BS-056 Accrued Revenue Share. Sign organic \u2014 positive when accrued balance grows (cash add-back to CFO), negative when it shrinks. Mirrors the GEN-CF-015 / GEN-BS-016 relationship for the platform-economy revenue-share split-out. No us-gaap base concept; matched via filer-extension namespace (goog: today; add meta:/aapl: variants as those tickers come online).",
       "aliases": [
         "accrued revenue share"
       ],
@@ -2584,7 +2598,7 @@
       "model_label": "Change in Income Taxes",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "WC-change companion to GEN-BS-017 Income Taxes Payable. Sign organic — positive when accrued tax balance grows (cash add-back to CFO), negative when paid down. The us-gaap:IncreaseDecreaseInIncomeTaxes concept covers payable + receivable nets at filers that report a single combined line; per-filer variants for split-form filers are included as alternates. Distinct from GEN-CF-074 Change in Prepaid Income Taxes (asset-side).",
+      "note": "WC-change companion to GEN-BS-017 Income Taxes Payable. Sign organic \u2014 positive when accrued tax balance grows (cash add-back to CFO), negative when paid down. The us-gaap:IncreaseDecreaseInIncomeTaxes concept covers payable + receivable nets at filers that report a single combined line; per-filer variants for split-form filers are included as alternates. Distinct from GEN-CF-074 Change in Prepaid Income Taxes (asset-side).",
       "aliases": [
         "income taxes, net",
         "change in income taxes",
@@ -2662,7 +2676,7 @@
       "model_label": "Loss (Gain) on Equity and Debt Securities, Net",
       "filing_section": "operating",
       "row_type": "line_item",
-      "note": "Non-cash CFO add-back reversing the IS-side fair-value gain/loss recognized on marketable + non-marketable equity and debt securities under ASC 321 (effective FY2018+). Sign organic — when IS shows a gain (positive), CF reverses negative; when IS shows a loss, CF reverses positive. Applicable to any filer with material FV-through-P&L investment portfolio (tech, financials, holding companies). Distinct from GEN-CF-009 (FX unrealized gain/loss).",
+      "note": "Non-cash CFO add-back reversing the IS-side fair-value gain/loss recognized on marketable + non-marketable equity and debt securities under ASC 321 (effective FY2018+). Sign organic \u2014 when IS shows a gain (positive), CF reverses negative; when IS shows a loss, CF reverses positive. Applicable to any filer with material FV-through-P&L investment portfolio (tech, financials, holding companies). Distinct from GEN-CF-009 (FX unrealized gain/loss).",
       "us_gaap_concept": "DebtAndEquitySecuritiesGainLoss",
       "us_gaap_concepts": [
         "GainLossOnSaleOfInvestments",
@@ -2676,6 +2690,31 @@
         "gain (loss) on debt and equity securities",
         "unrealized gain on equity securities"
       ]
+    },
+    {
+      "rule_id": "GEN-CF-082",
+      "model_sheet": "CASH FLOW",
+      "model_label": "Goodwill Impairment",
+      "aliases": [
+        "goodwill impairment",
+        "impairment of goodwill",
+        "goodwill"
+      ],
+      "filing_section": "operating",
+      "sign_convention": "negative",
+      "us_gaap_concept": "GoodwillImpairmentLoss"
+    },
+    {
+      "rule_id": "GEN-IS-031",
+      "model_sheet": "ANNL P&L",
+      "model_label": "Gain (Loss) on Lease Cancellations",
+      "aliases": [
+        "gain on lease cancellations",
+        "gain (loss) on lease cancellations",
+        "gain on lease termination"
+      ],
+      "filing_section": "non_operating",
+      "us_gaap_concept": "GainLossOnTerminationOfLease"
     }
   ]
 }

@@ -245,8 +245,8 @@
         },
         {
           "raw_filing_label": "Long term security deposits",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
           "value": "299828",
           "raw_numeric_text": "299,828",
           "notation_flags": 0,
@@ -804,26 +804,6 @@
           }
         },
         {
-          "raw_filing_label": "Less: Inventory reserve",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-2573028",
-          "raw_numeric_text": "2,573,028",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:InventoryValuationReserves | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Inventories",
           "canonical_label": "Inventories",
           "ledger_rule_id": "GEN-BS-005",
@@ -904,126 +884,6 @@
           }
         },
         {
-          "raw_filing_label": "Lessee Operating Lease Liability Payments Due Next Twelve Months",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "561648",
-          "raw_numeric_text": "561,648",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Finance Lease Liability Payments Due Next Twelve Months",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "160239",
-          "raw_numeric_text": "160,239",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:FinanceLeaseLiabilityPaymentsDueNextTwelveMonths | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Lessee Operating Lease Liability Payments Due Year Two",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "513462",
-          "raw_numeric_text": "513,462",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearTwo | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Finance Lease Liability Payments Due Year Two",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "45955",
-          "raw_numeric_text": "45,955",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:FinanceLeaseLiabilityPaymentsDueYearTwo | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Lessee Operating Lease Liability Payments Due Year Three",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "162538",
-          "raw_numeric_text": "162,538",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearThree | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Lessee Operating Lease Liability Payments Due Year Four",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "5212",
-          "raw_numeric_text": "5,212",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearFour | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Total future minimum lease payments",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -1060,86 +920,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:FinanceLeaseLiabilityPaymentsDue | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Less: Amount representing interest",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-73161",
-          "raw_numeric_text": "73,161",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:LesseeOperatingLeaseLiabilityUndiscountedExcessAmount | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Less: Amount representing interest",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-3740",
-          "raw_numeric_text": "3,740",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:FinanceLeaseLiabilityUndiscountedExcessAmount | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Present value of lease liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "1169699",
-          "raw_numeric_text": "1,169,699",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:OperatingLeaseLiability | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Present value of lease liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "202454",
-          "raw_numeric_text": "202,454",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:FinanceLeaseLiability | ctx:instant:2021-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1666,8 +1446,8 @@
         },
         {
           "raw_filing_label": "Long term security deposits",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Other Non-Current Assets",
+          "ledger_rule_id": "GEN-BS-014",
           "value": "122733",
           "raw_numeric_text": "122,733",
           "notation_flags": 0,
@@ -2245,26 +2025,6 @@
           }
         },
         {
-          "raw_filing_label": "Less: Inventory reserve",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-1613055",
-          "raw_numeric_text": "1,613,055",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:InventoryValuationReserves | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Inventories",
           "canonical_label": "Inventories",
           "ledger_rule_id": "GEN-BS-005",
@@ -2747,15 +2507,15 @@
         },
         {
           "raw_filing_label": "Interest on other obligations",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
           "value": "-7505",
           "raw_numeric_text": "7,505",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -2946,26 +2706,6 @@
           }
         },
         {
-          "raw_filing_label": "Effect of dilutive share based awards",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "3907371",
-          "raw_numeric_text": "3,907,371",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AntidilutiveSecuritiesExcludedFromComputationOfEarningsPerShareAmount | ctx:duration:2021-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
           "raw_filing_label": "Diluted",
           "canonical_label": "Weighted Average Shares Outstanding (Diluted)",
           "ledger_rule_id": "GEN-IS-019",
@@ -3082,46 +2822,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:Revenues | ctx:duration:2021-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Domestic",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-4175915",
-          "raw_numeric_text": "4,175,915",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2021-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Foreign",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "117468",
-          "raw_numeric_text": "117,468",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2021-12-31",
             "note": "iXBRL HTM | IS"
           }
         },
@@ -3328,8 +3028,8 @@
         },
         {
           "raw_filing_label": "Interest expense on bonds",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
           "value": "-431813",
           "raw_numeric_text": "431,813",
           "notation_flags": 0,
@@ -3338,7 +3038,7 @@
           "row_type": "line_item",
           "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "as_reported",
+          "sign_convention": "negative",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
@@ -3348,15 +3048,15 @@
         },
         {
           "raw_filing_label": "Interest on other obligations",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
           "value": "-16004",
           "raw_numeric_text": "16,004",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -3368,15 +3068,15 @@
         },
         {
           "raw_filing_label": "Amortization of discount on bonds payable",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Interest Income (Expense)",
+          "ledger_rule_id": "GEN-IS-006",
           "value": "-576415",
           "raw_numeric_text": "576,415",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_operating",
           "subsection_context": null,
           "sign_convention": "as_reported",
           "citation": {
@@ -3408,17 +3108,17 @@
         },
         {
           "raw_filing_label": "Gain on lease cancellations",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Gain (Loss) on Lease Cancellations",
+          "ledger_rule_id": "GEN-IS-031",
           "value": "152112",
           "raw_numeric_text": "152,112",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "non_operating",
           "subsection_context": null,
-          "sign_convention": "as_reported",
+          "sign_convention": "positive",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
@@ -3443,26 +3143,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:ForeignCurrencyTransactionGainLossBeforeTax | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "European deferred tax (note 14)",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-81500",
-          "raw_numeric_text": "81,500",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "celh:EuropeanDeferredTax | ctx:duration:2020-12-31",
             "note": "iXBRL HTM | IS"
           }
         },
@@ -3627,26 +3307,6 @@
           }
         },
         {
-          "raw_filing_label": "Effect of dilutive share based awards",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "4248516",
-          "raw_numeric_text": "4,248,516",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AntidilutiveSecuritiesExcludedFromComputationOfEarningsPerShareAmount | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
           "raw_filing_label": "Diluted",
           "canonical_label": "Weighted Average Shares Outstanding (Diluted)",
           "ledger_rule_id": "GEN-IS-019",
@@ -3763,46 +3423,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:Revenues | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Domestic",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "8110620",
-          "raw_numeric_text": "8,110,620",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Foreign",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "529406",
-          "raw_numeric_text": "529,406",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | ctx:duration:2020-12-31",
             "note": "iXBRL HTM | IS"
           }
         },
@@ -3969,8 +3589,8 @@
         },
         {
           "raw_filing_label": "Deferred tax asset-net",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
           "value": "-9019241",
           "raw_numeric_text": "9,019,241",
           "notation_flags": 0,
@@ -4109,8 +3729,8 @@
         },
         {
           "raw_filing_label": "Deferred tax liability-net",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "(Benefit) Provision for Deferred Income Taxes",
+          "ledger_rule_id": "GEN-CF-008",
           "value": "-182156",
           "raw_numeric_text": "182,156",
           "notation_flags": 0,
@@ -4129,8 +3749,8 @@
         },
         {
           "raw_filing_label": "Deposits and other current liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Other Current Liabilities",
+          "ledger_rule_id": "GEN-CF-017",
           "value": "373744",
           "raw_numeric_text": "373,744",
           "notation_flags": 0,
@@ -4344,46 +3964,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:InterestPaidNet | ctx:duration:2021-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
-          "raw_filing_label": "Payments under operating leases",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-470544",
-          "raw_numeric_text": "470,544",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "operating",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "celh:OperatingCashFlowsFromOperatingLeases | ctx:duration:2021-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
-          "raw_filing_label": "Interest payments on finance lease liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-7431",
-          "raw_numeric_text": "7,431",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "operating",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:FinanceLeaseInterestPaymentOnLiability | ctx:duration:2021-12-31",
             "note": "iXBRL HTM | CF"
           }
         },
@@ -4750,8 +4330,8 @@
         },
         {
           "raw_filing_label": "Deposits and other current liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Other Current Liabilities",
+          "ledger_rule_id": "GEN-CF-017",
           "value": "-96281",
           "raw_numeric_text": "96,281",
           "notation_flags": 0,
@@ -5070,17 +4650,17 @@
         },
         {
           "raw_filing_label": "Goodwill",
-          "canonical_label": null,
-          "ledger_rule_id": null,
+          "canonical_label": "Goodwill Impairment",
+          "ledger_rule_id": "GEN-CF-082",
           "value": "395515",
           "raw_numeric_text": "395,515",
           "notation_flags": 0,
           "footnote_markers": [],
           "indent_level": 2,
           "row_type": "line_item",
-          "section": "unclassified",
+          "section": "operating",
           "subsection_context": null,
-          "sign_convention": "as_reported",
+          "sign_convention": "negative",
           "citation": {
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
@@ -5105,46 +4685,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:NoncashOrPartNoncashAcquisitionOtherLiabilitiesAssumed1 | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
-          "raw_filing_label": "Payments under operating leases",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-389831",
-          "raw_numeric_text": "389,831",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "operating",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "celh:OperatingCashFlowsFromOperatingLeases | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | CF"
-          }
-        },
-        {
-          "raw_filing_label": "Interest payments on finance lease liabilities",
-          "canonical_label": null,
-          "ledger_rule_id": null,
-          "value": "-16004",
-          "raw_numeric_text": "16,004",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "operating",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:FinanceLeaseInterestPaymentOnLiability | ctx:duration:2020-12-31",
             "note": "iXBRL HTM | CF"
           }
         },

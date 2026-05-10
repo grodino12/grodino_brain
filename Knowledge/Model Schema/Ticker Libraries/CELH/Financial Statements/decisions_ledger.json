@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ticker": "CELH",
-  "last_updated": "2026-04-26",
+  "last_updated": "2026-05-10",
   "source_md": "Brain/Sessions/CELH Model/03_celh_decisions_ledger.md",
   "notes": "Converted from markdown handoff. Append-only; to supersede a rule, add a new entry and set the old one's superseded_by field. | Phase 3 (2026-04-23): generic-covered mappings moved to pattern_libraries/generic_line_item_mappings.json; model_row stripped throughout; CELH-specific entries retained with sign-agnostic labels.",
   "mappings": [
@@ -241,6 +241,91 @@
       "decided_date": "2026-04-26",
       "note": "Material in FY2025 due to Alani Nu acquisition; per STRUCT-IS-002 historically classified as S&M but called out separately on the rendered IS. sign_convention=negative: filer renders as positive (charge in expense convention); store negative for IS cascade subtraction.",
       "sign_convention": "negative"
+    },
+    {
+      "rule_id": "NEW-CF-CELH-CHINA",
+      "filing_term_normalized": "gain on china transaction",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Gain on China Transaction",
+      "section": "operating",
+      "sign_convention": "negative",
+      "position_note": "In operating-activities non-cash adjustments. CELH-specific (one-time 2021 transaction).",
+      "decided_date": "2026-05-10",
+      "note": "us-gaap:GainLossOnInvestments concept on CF; backfill 2021-FY/Q2/Q3 only."
+    },
+    {
+      "rule_id": "NEW-CF-CELH-BONDS",
+      "filing_term_normalized": "payments on bonds payable",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Payments on Bonds Payable",
+      "section": "financing",
+      "sign_convention": "negative",
+      "position_note": "In financing-activities. CELH-specific bond accounting pre-Pepsi.",
+      "decided_date": "2026-05-10",
+      "note": "celh:PaymentsOnBondsPayable concept; backfill 2021-FY / 2022-FY."
+    },
+    {
+      "rule_id": "NEW-CF-CELH-S16B",
+      "filing_term_normalized": "net proceeds from collection of section 16b short swing profit",
+      "model_sheet": "CASH FLOW",
+      "new_row_label": "Section 16(b) Short-Swing Profit Recovery",
+      "section": "financing",
+      "position_note": "In financing-activities other inflows. CELH-specific (one-time recoveries from insiders).",
+      "decided_date": "2026-05-10",
+      "note": "celh:NetProceedsFromCollectionOfSectionShortSwingProfit; backfill 2021-FY / 2022-FY."
+    },
+    {
+      "rule_id": "NEW-BS-CELH-FREIGHT",
+      "aliases": [
+        "accrued freight",
+        "freight"
+      ],
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Accrued Freight",
+      "section": "current_liabilities",
+      "position_note": "Current liabilities, accrued-expense detail.",
+      "decided_date": "2026-05-10",
+      "note": "celh:AccruedFreight / celh:Freight; backfill 2021-FY / 2022-FY. Both aliases route to the same row."
+    },
+    {
+      "rule_id": "NEW-BS-CELH-PEPSI",
+      "filing_term_normalized": "due to pepsi",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Due to Pepsi",
+      "section": "current_liabilities",
+      "position_note": "Related-party payable to Pepsi (post-Aug 2022 distribution agreement).",
+      "decided_date": "2026-05-10",
+      "note": "us-gaap:DueToRelatedPartiesCurrentAndNoncurrent; first appears 2022-FY."
+    },
+    {
+      "rule_id": "NEW-BS-CELH-DEPOSIT",
+      "filing_term_normalized": "state beverage container deposit",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "State Beverage Container Deposit",
+      "section": "current_liabilities",
+      "position_note": "Accrued-liability detail unique to beverage manufacturers (state container-deposit programs).",
+      "decided_date": "2026-05-10",
+      "note": "celh:StateBeverageContainerDeposit; appears 2022-FY."
+    },
+    {
+      "rule_id": "NEW-BS-CELH-UNBILLED",
+      "filing_term_normalized": "unbilled purchases",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "Unbilled Purchases",
+      "section": "current_liabilities",
+      "position_note": "Accrued-liability detail; goods received not yet invoiced.",
+      "decided_date": "2026-05-10",
+      "note": "celh:UnbilledPurchases; backfill 2021-FY / 2022-FY."
+    },
+    {
+      "rule_id": "NEW-BS-CELH-VAT",
+      "filing_term_normalized": "vat payable",
+      "model_sheet": "BALANCE SHEET",
+      "new_row_label": "VAT Payable",
+      "section": "current_liabilities",
+      "position_note": "Accrued-liability detail; European VAT obligation.",
+      "decided_date": "2026-05-10",
+      "note": "celh:ValueAddedTaxPayment; appears 2022-FY."
     }
   ],
   "structural_decisions": [
@@ -288,5 +373,5 @@
     }
   ],
   "validation_overrides": [],
-  "_last_updated": "2026-04-26"
+  "_last_updated": "2026-05-10"
 }
