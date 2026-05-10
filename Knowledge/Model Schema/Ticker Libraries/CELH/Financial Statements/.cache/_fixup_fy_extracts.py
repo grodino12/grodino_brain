@@ -207,6 +207,41 @@ def run(period: str, ticker_root: Path, library_path: Path):
     if item_drops:
         print(f"  noise-filter: dropped {item_drops} disclosure-leak line items")
 
+    # Cross-section duplicate filter: within a Statement, the same canonical_label
+    # sometimes surfaces 2-3 times because a disclosure note's Rn-table walk
+    # produced a copy of the same concept tagged with a wrong section
+    # (e.g. "Note Receivable-current" winding up in current_liabilities).
+    # Reconcile rejects this as a section-collision. Keep the copy whose
+    # section is consistent with the canonical's expected; drop the rest.
+    import json as _json
+    lib_path = library_path
+    lib_json = _json.loads(lib_path.read_text(encoding="utf-8"))
+    canon_expected_section = {
+        e["model_label"]: e.get("filing_section")
+        for e in lib_json["mappings"]
+        if e.get("filing_section")
+    }
+    coll_drops = 0
+    for s in raw.statements:
+        groups: dict[str, list] = {}
+        for li in s.line_items:
+            cl = li.canonical_label
+            if cl:
+                groups.setdefault(cl, []).append(li)
+        keep_items = []
+        for li in s.line_items:
+            cl = li.canonical_label
+            if cl and len(groups[cl]) > 1:
+                expected = canon_expected_section.get(cl)
+                item_sec = li.section.value if hasattr(li.section, "value") else str(li.section)
+                if expected and item_sec != expected:
+                    coll_drops += 1
+                    continue
+            keep_items.append(li)
+        s.line_items = keep_items
+    if coll_drops:
+        print(f"  cross-section-dup filter: dropped {coll_drops} duplicate items in wrong sections")
+
     out = ticker_root / "Financial Statements" / ".cache" / f"raw_{period}.json"
     out.write_text(raw.model_dump_json(indent=2), encoding="utf-8")
     by_stmt = Counter()

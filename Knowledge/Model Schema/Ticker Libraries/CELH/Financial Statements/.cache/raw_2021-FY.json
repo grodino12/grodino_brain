@@ -84,26 +84,6 @@
           }
         },
         {
-          "raw_filing_label": "Inventories-net (note 4)",
-          "canonical_label": "Inventories",
-          "ledger_rule_id": "GEN-BS-005",
-          "value": "191221851",
-          "raw_numeric_text": "191,221,851",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:InventoryNet | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Prepaid expenses and other current assets (note 5)",
           "canonical_label": "Prepaid Expenses",
           "ledger_rule_id": "GEN-BS-006",
@@ -320,26 +300,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:Assets | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Accounts payable and accrued expenses (note 10)",
-          "canonical_label": "Accounts Payable",
-          "ledger_rule_id": "GEN-BS-015",
-          "value": "91478612",
-          "raw_numeric_text": "91,478,612",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrent | ctx:instant:2021-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -684,66 +644,6 @@
           }
         },
         {
-          "raw_filing_label": "Inventories",
-          "canonical_label": "Inventories",
-          "ledger_rule_id": "GEN-BS-005",
-          "value": "191221851",
-          "raw_numeric_text": "191,221,851",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:InventoryNet | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Note Receivable-current",
-          "canonical_label": "Note Receivable - Current",
-          "ledger_rule_id": "GEN-BS-004",
-          "value": "2587905",
-          "raw_numeric_text": "2,587,905",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NotesAndLoansReceivableNetCurrent | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Note Receivable-non-current",
-          "canonical_label": "Note Receivable - Non-Current",
-          "ledger_rule_id": "GEN-BS-011",
-          "value": "7116738",
-          "raw_numeric_text": "7,116,738",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NotesAndLoansReceivableNetNoncurrent | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Total Note Receivable",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -984,26 +884,6 @@
           }
         },
         {
-          "raw_filing_label": "Accounts payable",
-          "canonical_label": "Accounts Payable",
-          "ledger_rule_id": "GEN-BS-015",
-          "value": "35820120",
-          "raw_numeric_text": "35,820,120",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Promotional allowances",
           "canonical_label": "Accrued Promotional Allowance",
           "ledger_rule_id": "GEN-BS-018",
@@ -1044,26 +924,6 @@
           }
         },
         {
-          "raw_filing_label": "Accrued expenses",
-          "canonical_label": "Accrued Expenses",
-          "ledger_rule_id": "GEN-BS-016",
-          "value": "15311390",
-          "raw_numeric_text": "15,311,390",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Unbilled purchases",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -1080,26 +940,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "celh:UnbilledPurchases | ctx:instant:2021-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Total",
-          "canonical_label": "Accrued Expenses",
-          "ledger_rule_id": "GEN-BS-016",
-          "value": "91478612",
-          "raw_numeric_text": "91,478,612",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrent | ctx:instant:2021-12-31",
             "note": "iXBRL HTM | BS"
           }
         }
@@ -1181,26 +1021,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:NotesAndLoansReceivableNetCurrent | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Inventories-net (note 4)",
-          "canonical_label": "Inventories",
-          "ledger_rule_id": "GEN-BS-005",
-          "value": "18403622",
-          "raw_numeric_text": "18,403,622",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:InventoryNet | ctx:instant:2020-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1401,26 +1221,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:Assets | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Accounts payable and accrued expenses (note 10)",
-          "canonical_label": "Accounts Payable",
-          "ledger_rule_id": "GEN-BS-015",
-          "value": "25412753",
-          "raw_numeric_text": "25,412,753",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrent | ctx:instant:2020-12-31",
             "note": "iXBRL HTM | BS"
           }
         },
@@ -1785,66 +1585,6 @@
           }
         },
         {
-          "raw_filing_label": "Inventories",
-          "canonical_label": "Inventories",
-          "ledger_rule_id": "GEN-BS-005",
-          "value": "18403622",
-          "raw_numeric_text": "18,403,622",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_assets",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:InventoryNet | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Note Receivable-current",
-          "canonical_label": "Note Receivable - Current",
-          "ledger_rule_id": "GEN-BS-004",
-          "value": "1885887",
-          "raw_numeric_text": "1,885,887",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NotesAndLoansReceivableNetCurrent | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Note Receivable-non-current",
-          "canonical_label": "Note Receivable - Non-Current",
-          "ledger_rule_id": "GEN-BS-011",
-          "value": "9429437",
-          "raw_numeric_text": "9,429,437",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "non_current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NotesAndLoansReceivableNetNoncurrent | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Total Note Receivable",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -1965,26 +1705,6 @@
           }
         },
         {
-          "raw_filing_label": "Accounts payable",
-          "canonical_label": "Accounts Payable",
-          "ledger_rule_id": "GEN-BS-015",
-          "value": "11854421",
-          "raw_numeric_text": "11,854,421",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccountsPayableCurrent | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Promotional allowances",
           "canonical_label": "Accrued Promotional Allowance",
           "ledger_rule_id": "GEN-BS-018",
@@ -2025,26 +1745,6 @@
           }
         },
         {
-          "raw_filing_label": "Accrued expenses",
-          "canonical_label": "Accrued Expenses",
-          "ledger_rule_id": "GEN-BS-016",
-          "value": "7282906",
-          "raw_numeric_text": "7,282,906",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccruedLiabilitiesCurrent | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
           "raw_filing_label": "Unbilled purchases",
           "canonical_label": null,
           "ledger_rule_id": null,
@@ -2061,26 +1761,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "celh:UnbilledPurchases | ctx:instant:2020-12-31",
-            "note": "iXBRL HTM | BS"
-          }
-        },
-        {
-          "raw_filing_label": "Total",
-          "canonical_label": "Accrued Expenses",
-          "ledger_rule_id": "GEN-BS-016",
-          "value": "25412753",
-          "raw_numeric_text": "25,412,753",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "line_item",
-          "section": "current_liabilities",
-          "subsection_context": null,
-          "sign_convention": "as_reported",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrent | ctx:instant:2020-12-31",
             "note": "iXBRL HTM | BS"
           }
         }
@@ -2362,46 +2042,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2021-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Net income",
-          "canonical_label": "Net Income (Loss)",
-          "ledger_rule_id": "GEN-IS-022",
-          "value": "3937273",
-          "raw_numeric_text": "3,937,273",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "subtotal",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "positive",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2021-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Net income",
-          "canonical_label": "Net Income (Loss)",
-          "ledger_rule_id": "GEN-IS-022",
-          "value": "3937273",
-          "raw_numeric_text": "3,937,273",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "subtotal",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "positive",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2021-12-31",
             "note": "iXBRL HTM | IS"
           }
         },
@@ -2963,46 +2603,6 @@
             "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
             "page": 1,
             "line_hint": "us-gaap:IncomeTaxExpenseBenefit | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Net income",
-          "canonical_label": "Net Income (Loss)",
-          "ledger_rule_id": "GEN-IS-022",
-          "value": "8523849",
-          "raw_numeric_text": "8,523,849",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "subtotal",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "positive",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NetIncomeLoss | ctx:duration:2020-12-31",
-            "note": "iXBRL HTM | IS"
-          }
-        },
-        {
-          "raw_filing_label": "Net income",
-          "canonical_label": "Net Income (Loss)",
-          "ledger_rule_id": "GEN-IS-022",
-          "value": "8523849",
-          "raw_numeric_text": "8,523,849",
-          "notation_flags": 0,
-          "footnote_markers": [],
-          "indent_level": 2,
-          "row_type": "subtotal",
-          "section": "unclassified",
-          "subsection_context": null,
-          "sign_convention": "positive",
-          "citation": {
-            "source_path": "C:\\Users\\rodin\\Desktop\\Brain\\Sources\\CELH\\2021-FY\\filings\\CELH_2021-12-31_10-K.htm",
-            "page": 1,
-            "line_hint": "us-gaap:NetIncomeLossAvailableToCommonStockholdersBasic | ctx:duration:2020-12-31",
             "note": "iXBRL HTM | IS"
           }
         },
