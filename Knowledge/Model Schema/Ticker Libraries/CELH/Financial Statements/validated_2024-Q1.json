@@ -27,7 +27,7 @@
           "line_items": [
             {
               "raw_filing_label": "Cash and cash equivalents",
-              "canonical_label": "Cash & Cash Equivalents",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
               "ledger_rule_id": "GEN-BS-001",
               "value": "879498",
               "raw_numeric_text": "879,498",
@@ -888,7 +888,7 @@
           "line_items": [
             {
               "raw_filing_label": "Cash and cash equivalents",
-              "canonical_label": "Cash & Cash Equivalents",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
               "ledger_rule_id": "GEN-BS-001",
               "value": "755981",
               "raw_numeric_text": "755,981",
@@ -2631,8 +2631,8 @@
             },
             {
               "raw_filing_label": "Income taxes payable",
-              "canonical_label": "Other Current Liabilities",
-              "ledger_rule_id": "GEN-CF-017",
+              "canonical_label": "Change in Income Taxes",
+              "ledger_rule_id": "GEN-CF-076",
               "value": "8250",
               "raw_numeric_text": "8,250",
               "notation_flags": 0,
@@ -3292,8 +3292,8 @@
             },
             {
               "raw_filing_label": "Income taxes payable",
-              "canonical_label": "Other Current Liabilities",
-              "ledger_rule_id": "GEN-CF-017",
+              "canonical_label": "Change in Income Taxes",
+              "ledger_rule_id": "GEN-CF-076",
               "value": "7251",
               "raw_numeric_text": "7,251",
               "notation_flags": 0,
@@ -3714,7 +3714,7 @@
     "mapped_line_items": [
       {
         "raw_filing_label": "Cash and cash equivalents",
-        "canonical_label": "Cash & Cash Equivalents",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
         "ledger_rule_id": "GEN-BS-001",
         "value": "879498",
         "raw_numeric_text": "879,498",
@@ -3733,7 +3733,7 @@
         },
         "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Cash & Cash Equivalents",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {
@@ -4722,7 +4722,7 @@
       },
       {
         "raw_filing_label": "Cash and cash equivalents",
-        "canonical_label": "Cash & Cash Equivalents",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
         "ledger_rule_id": "GEN-BS-001",
         "value": "755981",
         "raw_numeric_text": "755,981",
@@ -4741,7 +4741,7 @@
         },
         "model_sheet": "QTR BS",
         "model_row": 0,
-        "model_label": "Cash & Cash Equivalents",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {
@@ -6738,8 +6738,8 @@
       },
       {
         "raw_filing_label": "Income taxes payable",
-        "canonical_label": "Other Current Liabilities",
-        "ledger_rule_id": "GEN-CF-017",
+        "canonical_label": "Change in Income Taxes",
+        "ledger_rule_id": "GEN-CF-076",
         "value": "8250",
         "raw_numeric_text": "8,250",
         "notation_flags": 0,
@@ -6757,7 +6757,7 @@
         },
         "model_sheet": "QTR CF",
         "model_row": 0,
-        "model_label": "Other Current Liabilities",
+        "model_label": "Change in Income Taxes",
         "mapping_source": "ledger_auto"
       },
       {
@@ -7506,8 +7506,8 @@
       },
       {
         "raw_filing_label": "Income taxes payable",
-        "canonical_label": "Other Current Liabilities",
-        "ledger_rule_id": "GEN-CF-017",
+        "canonical_label": "Change in Income Taxes",
+        "ledger_rule_id": "GEN-CF-076",
         "value": "7251",
         "raw_numeric_text": "7,251",
         "notation_flags": 0,
@@ -7525,7 +7525,7 @@
         },
         "model_sheet": "QTR CF",
         "model_row": 0,
-        "model_label": "Other Current Liabilities",
+        "model_label": "Change in Income Taxes",
         "mapping_source": "ledger_auto"
       },
       {

@@ -25,7 +25,7 @@
       "line_items": [
         {
           "raw_filing_label": "Cash and cash equivalents",
-          "canonical_label": "Cash & Cash Equivalents",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
           "ledger_rule_id": "GEN-BS-001",
           "value": "595476",
           "raw_numeric_text": "595,476",
@@ -45,8 +45,8 @@
         },
         {
           "raw_filing_label": "Restricted cash",
-          "canonical_label": "Restricted Cash",
-          "ledger_rule_id": "GEN-BS-002",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+          "ledger_rule_id": "GEN-BS-001",
           "value": "38105",
           "raw_numeric_text": "38,105",
           "notation_flags": 0,
@@ -806,7 +806,7 @@
       "line_items": [
         {
           "raw_filing_label": "Cash and cash equivalents",
-          "canonical_label": "Cash & Cash Equivalents",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
           "ledger_rule_id": "GEN-BS-001",
           "value": "614159",
           "raw_numeric_text": "614,159",
@@ -826,8 +826,8 @@
         },
         {
           "raw_filing_label": "Restricted cash",
-          "canonical_label": "Restricted Cash",
-          "ledger_rule_id": "GEN-BS-002",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+          "ledger_rule_id": "GEN-BS-001",
           "value": "38768",
           "raw_numeric_text": "38,768",
           "notation_flags": 0,

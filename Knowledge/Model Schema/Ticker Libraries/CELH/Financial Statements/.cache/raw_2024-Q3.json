@@ -25,7 +25,7 @@
       "line_items": [
         {
           "raw_filing_label": "Cash and cash equivalents",
-          "canonical_label": "Cash & Cash Equivalents",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
           "ledger_rule_id": "GEN-BS-001",
           "value": "903748",
           "raw_numeric_text": "903,748",
@@ -846,7 +846,7 @@
       "line_items": [
         {
           "raw_filing_label": "Cash and cash equivalents",
-          "canonical_label": "Cash & Cash Equivalents",
+          "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
           "ledger_rule_id": "GEN-BS-001",
           "value": "755981",
           "raw_numeric_text": "755,981",
@@ -3231,8 +3231,8 @@
         },
         {
           "raw_filing_label": "Income taxes payable",
-          "canonical_label": "Other Current Liabilities",
-          "ledger_rule_id": "GEN-CF-017",
+          "canonical_label": "Change in Income Taxes",
+          "ledger_rule_id": "GEN-CF-076",
           "value": "-49631",
           "raw_numeric_text": "49,631",
           "notation_flags": 0,
@@ -3952,8 +3952,8 @@
         },
         {
           "raw_filing_label": "Income taxes payable",
-          "canonical_label": "Other Current Liabilities",
-          "ledger_rule_id": "GEN-CF-017",
+          "canonical_label": "Change in Income Taxes",
+          "ledger_rule_id": "GEN-CF-076",
           "value": "57662",
           "raw_numeric_text": "57,662",
           "notation_flags": 0,

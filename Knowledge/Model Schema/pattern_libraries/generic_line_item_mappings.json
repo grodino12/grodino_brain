@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Cross-ticker canonical line-item mappings for consumer-staples tickers. Loaded alongside per-ticker decisions_ledger.json during reconcile; ticker-specific entries override generic ones. Row order is derived at model-write time from the latest filing's document order \u2014 this file does NOT carry model_row. Entries carry aliases for all known raw-filing wordings of the same canonical concept.",
-  "last_updated": "2026-05-10",
+  "last_updated": "2026-05-11",
   "source_reference": "CELH FY2024 10-K (latest available at migration time)",
   "conventions": {
     "sign_agnostic_labels": "Canonical labels use parentheticals for the alternative sign (e.g. 'Interest Income (Expense)') so values read correctly when they flip sign across companies or years.",
@@ -2410,7 +2410,8 @@
         "operating expenses",
         "total operating expenses"
       ],
-      "us_gaap_concept": "OperatingExpenses"
+      "us_gaap_concept": "OperatingExpenses",
+      "row_type": "subtotal"
     },
     {
       "rule_id": "GEN-IS-027",

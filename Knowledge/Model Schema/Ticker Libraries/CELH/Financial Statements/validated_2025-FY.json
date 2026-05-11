@@ -27,7 +27,7 @@
           "line_items": [
             {
               "raw_filing_label": "Cash and cash equivalents",
-              "canonical_label": "Cash & Cash Equivalents",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
               "ledger_rule_id": "GEN-BS-001",
               "value": "398866",
               "raw_numeric_text": "398,866",
@@ -47,8 +47,8 @@
             },
             {
               "raw_filing_label": "Restricted cash",
-              "canonical_label": "Restricted Cash",
-              "ledger_rule_id": "GEN-BS-002",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+              "ledger_rule_id": "GEN-BS-001",
               "value": "141121",
               "raw_numeric_text": "141,121",
               "notation_flags": 0,
@@ -948,7 +948,7 @@
           "line_items": [
             {
               "raw_filing_label": "Cash and cash equivalents",
-              "canonical_label": "Cash & Cash Equivalents",
+              "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
               "ledger_rule_id": "GEN-BS-001",
               "value": "890190",
               "raw_numeric_text": "890,190",
@@ -2972,8 +2972,8 @@
             },
             {
               "raw_filing_label": "Income taxes payable",
-              "canonical_label": "Other Current Liabilities",
-              "ledger_rule_id": "GEN-CF-017",
+              "canonical_label": "Change in Income Taxes",
+              "ledger_rule_id": "GEN-CF-076",
               "value": "38750",
               "raw_numeric_text": "38,750",
               "notation_flags": 0,
@@ -3813,8 +3813,8 @@
             },
             {
               "raw_filing_label": "Income taxes payable",
-              "canonical_label": "Other Current Liabilities",
-              "ledger_rule_id": "GEN-CF-017",
+              "canonical_label": "Change in Income Taxes",
+              "ledger_rule_id": "GEN-CF-076",
               "value": "-39536",
               "raw_numeric_text": "39,536",
               "notation_flags": 0,
@@ -4514,8 +4514,8 @@
             },
             {
               "raw_filing_label": "Income taxes payable",
-              "canonical_label": "Other Current Liabilities",
-              "ledger_rule_id": "GEN-CF-017",
+              "canonical_label": "Change in Income Taxes",
+              "ledger_rule_id": "GEN-CF-076",
               "value": "48102",
               "raw_numeric_text": "48,102",
               "notation_flags": 0,
@@ -4897,7 +4897,7 @@
     "mapped_line_items": [
       {
         "raw_filing_label": "Cash and cash equivalents",
-        "canonical_label": "Cash & Cash Equivalents",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
         "ledger_rule_id": "GEN-BS-001",
         "value": "398866",
         "raw_numeric_text": "398,866",
@@ -4916,13 +4916,13 @@
         },
         "model_sheet": "BALANCE SHEET",
         "model_row": 0,
-        "model_label": "Cash & Cash Equivalents",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {
         "raw_filing_label": "Restricted cash",
-        "canonical_label": "Restricted Cash",
-        "ledger_rule_id": "GEN-BS-002",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
+        "ledger_rule_id": "GEN-BS-001",
         "value": "141121",
         "raw_numeric_text": "141,121",
         "notation_flags": 0,
@@ -4940,7 +4940,7 @@
         },
         "model_sheet": "BALANCE SHEET",
         "model_row": 0,
-        "model_label": "Restricted Cash",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {
@@ -5977,7 +5977,7 @@
       },
       {
         "raw_filing_label": "Cash and cash equivalents",
-        "canonical_label": "Cash & Cash Equivalents",
+        "canonical_label": "Cash, Cash Equivalents & Restricted Cash",
         "ledger_rule_id": "GEN-BS-001",
         "value": "890190",
         "raw_numeric_text": "890,190",
@@ -5996,7 +5996,7 @@
         },
         "model_sheet": "BALANCE SHEET",
         "model_row": 0,
-        "model_label": "Cash & Cash Equivalents",
+        "model_label": "Cash, Cash Equivalents & Restricted Cash",
         "mapping_source": "ledger_auto"
       },
       {
@@ -8305,8 +8305,8 @@
       },
       {
         "raw_filing_label": "Income taxes payable",
-        "canonical_label": "Other Current Liabilities",
-        "ledger_rule_id": "GEN-CF-017",
+        "canonical_label": "Change in Income Taxes",
+        "ledger_rule_id": "GEN-CF-076",
         "value": "38750",
         "raw_numeric_text": "38,750",
         "notation_flags": 0,
@@ -8324,7 +8324,7 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Other Current Liabilities",
+        "model_label": "Change in Income Taxes",
         "mapping_source": "ledger_auto"
       },
       {
@@ -9289,8 +9289,8 @@
       },
       {
         "raw_filing_label": "Income taxes payable",
-        "canonical_label": "Other Current Liabilities",
-        "ledger_rule_id": "GEN-CF-017",
+        "canonical_label": "Change in Income Taxes",
+        "ledger_rule_id": "GEN-CF-076",
         "value": "-39536",
         "raw_numeric_text": "39,536",
         "notation_flags": 0,
@@ -9308,7 +9308,7 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Other Current Liabilities",
+        "model_label": "Change in Income Taxes",
         "mapping_source": "ledger_auto"
       },
       {
@@ -10105,8 +10105,8 @@
       },
       {
         "raw_filing_label": "Income taxes payable",
-        "canonical_label": "Other Current Liabilities",
-        "ledger_rule_id": "GEN-CF-017",
+        "canonical_label": "Change in Income Taxes",
+        "ledger_rule_id": "GEN-CF-076",
         "value": "48102",
         "raw_numeric_text": "48,102",
         "notation_flags": 0,
@@ -10124,7 +10124,7 @@
         },
         "model_sheet": "CASH FLOW",
         "model_row": 0,
-        "model_label": "Other Current Liabilities",
+        "model_label": "Change in Income Taxes",
         "mapping_source": "ledger_auto"
       },
       {
