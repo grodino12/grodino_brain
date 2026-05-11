@@ -1,9 +1,9 @@
 ---
 type: roadmap
-date: 2026-05-09
-project: Celsius HF Case Study (last update: post-MDA-Rework-Architecture session)
+date: 2026-05-11
+project: Celsius HF Case Study (last update: post-CELH-Historical-Backfill session)
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "May 9th MDA Rework Architecture Session"
+last_session: "May 11th CELH Historical Backfill Session"
 next_objective: "**Phase 0 + Phase 1 shipped 2026-05-09.** File migration (105 files × 5 tickers into Financial Statements\\ subfolder) done; 11 path constants updated in run.py + 6 skill scripts; verified all paths resolve. New axis-driven extractor `build_disclosures_workbook.py` working end-to-end on CELH (12 filings, 9,591 facts parsed); `CELH_disclosures.xlsx` shows Segment P&L Revenue across FY2022-FY2025 ($653,604K → $2,515,269K — Alani Nu impact correct). Generic library `pattern_libraries\\MDA and Other\\generic_disclosure_tables.json` + per-ticker `disclosure_overrides.json` (with member alias + unit divisor) functional. **Phase 2 next:** add library entries for Geography (`srt:StatementGeographicalAxis`), Customer Concentration (`ConcentrationRiskByBenchmark/Type × MajorCustomersAxis`), M&A Pro Forma (`BusinessAcquisitionAxis` + `BusinessAcquisitionsProForma*` concepts), Brand Contribution. **Pending from Phase 0/1:** harness re-lock to verify financials path migration; delete obsolete CELH_MDA.xlsx (Excel was locked during cleanup); polish Q4 quarterly period derivation."
 ---
 
