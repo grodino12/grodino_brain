@@ -229,69 +229,69 @@ Pepsi now holds two preferred classes totaling **~$1.76B in mezzanine equity**, 
 #### 7. SEC investigation and 2024 $54M legal accrual unresolved on calls
 
 **SEC investigation:**
-- First disclosed Q1 2021 call
-- Boilerplate "no material updates" through Q3 2023
-- **Not mentioned in prepared remarks from FY2023 (Feb 2024) onwards**
-- **Never explicitly resolved on any earnings call**
+- First disclosed Q1 2021 call `[Q1'21 call]`
+- Boilerplate "no material updates" through Q3 2023 `[multiple calls]`
+- **Not mentioned in prepared remarks from FY2023 (Feb 2024) onwards** `[multiple calls]`
+- **Never explicitly resolved on any earnings call** `[analysis]`
 
 **2024 $54M legal accrual:**
-- $7.9M Q2 2024 ("legal charge")
-- ~$46M Q4 2024 ("accrued legal expenses related to a case we have on appeal")
-- "Case on appeal" implies adverse trial-court ruling
-- **Matter never named on any call**
+- $7.9M Q2 2024 ("legal charge") `[Q2'24 call]`
+- ~$46M Q4 2024 ("accrued legal expenses related to a case we have on appeal") `[Q4'24 call]`
+- "Case on appeal" implies adverse trial-court ruling `[analysis]`
+- **Matter never named on any call** `[analysis]`
 
-May 2025 Alani M&A call disclosed Alani had $10.7M distributor termination fees pre-acquisition CELH didn't know about — small example of latent liability that surfaces only when disclosure forces it.
+May 2025 Alani M&A call disclosed Alani had $10.7M distributor termination fees pre-acquisition CELH didn't know about — small example of latent liability that surfaces only when disclosure forces it. `[Alani modeling call]`
 
-**To dig**: cross-reference FY2024 10-K Item 3 + notes against PACER for active CELH-defendant securities/derivative cases. The Flo Rida verdict (Q1 2023, ~$83M jury award) was under appeal — that may be the "case on appeal." Also the FY2021 stock-comp restatement / material weakness chain may have residual SEC exposure.
+**To dig**: cross-reference FY2024 10-K Item 3 + notes against PACER for active CELH-defendant securities/derivative cases. The Flo Rida verdict (Q1 2023, ~$83M jury award) was under appeal — that may be the "case on appeal." Also the FY2021 stock-comp restatement / material weakness chain may have residual SEC exposure. `[analysis]`
 
 #### 8. Org is increasingly Pepsi-alumni — culture/governance trajectory
 
-Pepsi-experienced senior hires:
-- **Tony Guilfoyle** (Q4 2020) — ex-Rockstar, ran Rockstar from $5M → multi-billion → Pepsi acquisition. Now Chief Customer Officer.
-- **James Lee** (Aug 2022 board) — Pepsi Beverages NA CSO. Departed Aug 2024 to be Target CFO.
-- **Israel Kontorovsky** (Q3 2024 board) — PepsiCo
-- **Eric Hanson** (March 2025) — President & COO, "senior roles of PepsiCo"
-- **Rishi Daing** (Q3 2025) — CMO, ex-PepsiCo + Mark Anthony Brands
-- **Garrett Quigley** (Q3 2025) — President International
+Pepsi-experienced senior hires: `[multiple calls; src?]`
+- **Tony Guilfoyle** (Q4 2020) — ex-Rockstar, ran Rockstar from $5M → multi-billion → Pepsi acquisition. Now Chief Customer Officer. `[Q4'20 call]`
+- **James Lee** (Aug 2022 board) — Pepsi Beverages NA CSO. Departed Aug 2024 to be Target CFO. `[src?]`
+- **Israel Kontorovsky** (Q3 2024 board) — PepsiCo `[Q3'24 call]`
+- **Eric Hanson** (March 2025) — President & COO, "senior roles of PepsiCo" `[src?]`
+- **Rishi Daing** (Q3 2025) — CMO, ex-PepsiCo + Mark Anthony Brands `[Q3'25 call]`
+- **Garrett Quigley** (Q3 2025) — President International `[Q3'25 call]`
 
-Founder John Fieldly remains CEO/Chairman, but operational layer beneath him is increasingly Pepsi-built. Combined with cap table trajectory in #6, this is multi-year integration of CELH into Pepsi orbit at the people, equity, distribution, and governance levels simultaneously.
+Founder John Fieldly remains CEO/Chairman, but operational layer beneath him is increasingly Pepsi-built. Combined with cap table trajectory in #6, this is multi-year integration of CELH into Pepsi orbit at the people, equity, distribution, and governance levels simultaneously. `[analysis]`
 
-**To dig**: model long-term scenario where CELH becomes structurally indistinguishable from a Pepsi sub-brand portfolio. Both bull case (synergies, distribution scale) and bear case (loss of independence) flow from this trajectory.
+**To dig**: model long-term scenario where CELH becomes structurally indistinguishable from a Pepsi sub-brand portfolio. Both bull case (synergies, distribution scale) and bear case (loss of independence) flow from this trajectory. `[analysis]`
 
 ### Tier 3: lower-priority but worth flagging
 
-- **Q3 2023 promotional allowance true-up** added 165bps to GM. Mgmt called it a one-time accrual adjustment from "updated information." If structural mix shift to non-promo channels (foodservice, club) it's permanent; if true-up to overaccruals it's nonrecurring. Material for FY2023 baseline normalization.
+- **Q3 2023 promotional allowance true-up** added 165bps to GM. Mgmt called it a one-time accrual adjustment from "updated information." If structural mix shift to non-promo channels (foodservice, club) it's permanent; if true-up to overaccruals it's nonrecurring. Material for FY2023 baseline normalization. `[Q3'23 call]`
 
-- **Func Food / Nordics is structurally different** — owns local distribution + FAST protein bars. FAST brand impaired $2.4M in 2022. Likely worth backing out from any "international growth" forecast.
+- **Func Food / Nordics is structurally different** — owns local distribution + FAST protein bars. FAST brand impaired $2.4M in 2022. Likely worth backing out from any "international growth" forecast. `[FY2022 10-K; src?]`
 
-- **$7M Rockstar Q3 2025 booked in "other income"** under GAAP; reverts to net sales 2026. Specific accounting characterization not explained on the call. (Q1 2026: U.S. now on finished-goods model; Canada moves H1 2026.)
+- **$7M Rockstar Q3 2025 booked in "other income"** under GAAP; reverts to net sales 2026. Specific accounting characterization not explained on the call. (Q1 2026: U.S. now on finished-goods model; Canada moves H1 2026.) `[Q3'25 call; Q1'26 call]`
 
-- **Big Beverages co-packer (Oct 2024)** — added 2nd line confirmed Q3 2025. **NC line begins producing 2H 2026, full benefit 2027.** Real capacity / vertical integration on the "low-50s by H2 2026 / mid-50s by 2027-28" GM bridge.
+- **Big Beverages co-packer (Oct 2024)** — added 2nd line confirmed Q3 2025. **NC line begins producing 2H 2026, full benefit 2027.** Real capacity / vertical integration on the "low-50s by H2 2026 / mid-50s by 2027-28" GM bridge. `[Q3'25 call; Q1'26 call]`
 
-- **Q1 2026 Langhans color on price-pack-architecture timing**: "we'll see some initial impacts in the back half of [2026], but we'll see a lot more when we look at 2027 and 2028." This is the cleanest forward statement on RGM impact timing.
+- **Q1 2026 Langhans color on price-pack-architecture timing**: "we'll see some initial impacts in the back half of [2026], but we'll see a lot more when we look at 2027 and 2028." This is the cleanest forward statement on RGM impact timing. `[Q1'26 call]`
 
-- **UK is the international soft spot** — Q3 2025 Fieldly: "we've learned valuable lessons that will make us even stronger as we enter 2026." Spain via Suntory in Q1 2026 is a Europe extension. Pepsi remains absent from Europe. **Suntory partnership economics, not Pepsi, are the Europe story.**
+- **UK is the international soft spot** — Q3 2025 Fieldly: "we've learned valuable lessons that will make us even stronger as we enter 2026." Spain via Suntory in Q1 2026 is a Europe extension. Pepsi remains absent from Europe. **Suntory partnership economics, not Pepsi, are the Europe story.** `[Q3'25 call; Q1'26 call]`
 
-- **Pre-Pepsi era specifics** (from 2018-2021 transcripts):
+- **Pre-Pepsi era specifics** (from 2018-2021 transcripts) — *all sub-items* `[2018–21 calls]`*:*
   - **2018 distributor lawsuit + $1M settlement** is a precedent for distributor-termination economics that bears on the Pepsi 2022 framework. Worth excavating 10-K footnote and any related litigation for the partner identity, geography, and termination math.
   - **Carl DeSantis preferred conversion Q4 2018 + the $10M convertible notes simultaneously** — cap table cleanup right before the 2019 distribution inflection. DeSantis is the foundational shareholder; his cap-table movements correlate with major strategic phases.
   - **Tony Guilfoyle Q4 2020 hire** explicitly brought the Rockstar→Pepsi sales playbook ($5M → multi-billion → Pepsi exit) into CELH. ~18 months between his arrival and the Pepsi distribution agreement announcement — likely brought a team that's still embedded in CELH commercial org today.
   - **Func Food integration economics**: $24.2M paid Oct 2019 for ~$25M annualized incremental revenue (1× revenue), with FAST protein bar portfolio. Func was "over-leveraged" pre-deal. Worth understanding what mgmt actually paid for: Sweden distribution rights, FAST IP, or relief from a struggling distributor.
 
-- **Pepsi M&A call (Aug 1 2022) forward statements that subsequently ran:**
+- **Pepsi M&A call (Aug 1 2022) forward statements that subsequently ran:** *all sub-items* `[Pepsi M&A call]` *(outcome figures cross-checked vs later calls/filings)*:
   - "40% increase in distribution over next 12 months" → ACV 65% → 95% by Q1 2023 (exceeded distribution-gain framing)
   - "Transition mostly complete in 90-120 days" → >80% transitioned 2 weeks in, ~95% by mid-Q1 2023 ✓
   - "Cash neutral to Celsius" on terminations → roughly true; $194M GAAP charge fully Pepsi-funded ✓
   - "$550M not depleted in 6-7 months" → cash balance ~$755M FY2023 ✓
-  - Q4 2022 forward: "mid-40s GM in 2023" → delivered 48% ✓; "S&M back to ~22% Q1 2023" → came in at 18.3%, big beat
+  - Q4 2022 forward: "mid-40s GM in 2023" → delivered 48% ✓; "S&M back to ~22% Q1 2023" → came in at 18.3%, big beat `[Q4'22 call]`
 
-- **Alani Nu deal economics** (May 28 2025 modeling call):
+- **Alani Nu deal economics** (May 28 2025 modeling call) — *all sub-items* `[Alani modeling call]` *unless tagged*:
   - Headline $1.8B = $1.275B cash + $500M restricted CELH stock + $25M earnout (max)
   - $150M NPV tax benefits → net $1.65B
   - **<3.0× 2024 revenue ($595M)** / **12× synergized 2024 EBITDA of $137M** (assumes $50M synergies on standalone $88M / 15% margin)
   - 2022-2024 Alani revenue CAGR 49%
   - Earnout hit max in Q2 2025 (revenue-target trigger)
-  - **Q1 2026: $50M synergies CAPTURED already** — ahead of "$4.2M/month from April 2026" guide
+  - **Q1 2026: $50M synergies CAPTURED already** — ahead of "$4.2M/month from April 2026" guide `[Q1'26 call]`
   - 8.6% pro forma ownership for sellers
   - Pro forma net leverage at close ~1.0×
 
