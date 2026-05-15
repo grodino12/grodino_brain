@@ -14,7 +14,7 @@ purpose: Revenue forecasting drivers + backward-looking trend signal
 # CELH Revenue Research Dossier
 
 > **Source tags** — factual claims below carry a bracketed source tag.
-> `[Q1'26 call]` Q1 2026 earnings call (May 7 2026) · `[Q4'25 call]` Q4 2025 earnings call (Feb 26 2026) · `[Q4'25 PR]` Q4 2025 press release · `[CAGNY '26]` CAGNY deck (Feb 2026) · `[Alani modeling call]` (May 28 2025) · `[Pepsi M&A call]` (Aug 1 2022) · `[Qx'yy call]` that quarter's earnings call · `[FYxxxx 10-K]` / `[Qx'yy 10-Q]` SEC filing · `[2018–21 calls]` pre-Pepsi-era transcripts · `[multiple calls]` synthesized across several calls · `[analysis]` author synthesis, not a single source · `[src?]` source not determinable from the dossier text — verify against `Brain\Sources\CELH\`.
+> `[Q1'26 call]` Q1 2026 earnings call (May 7 2026) · `[Q4'25 call]` Q4 2025 earnings call (Feb 26 2026) · `[Q4'25 PR]` Q4 2025 press release · `[CAGNY '26]` CAGNY deck (Feb 2026) · `[Alani modeling call]` (May 28 2025) · `[Pepsi M&A call]` (Aug 1 2022) · `[Qx'yy call]` that quarter's earnings call · `[<Mon'yy> conf]` a dated investor-conference appearance · `[FYxxxx 10-K]` / `[Qx'yy 10-Q]` SEC filing · `[2018–21 calls]` pre-Pepsi-era transcripts · `[multiple calls]` synthesized across several calls · `[analysis]` author synthesis, not a single source · `[src?]` source not determinable from the dossier text — verify against `Brain\Sources\CELH\`.
 > Convention: a datapoint for period P is tagged to P's own earnings call (first disclosure), even if later calls recapped it. Tags were assigned from attribution already present in the text plus section context; they were **not** re-verified against the underlying transcripts.
 
 ## Part 1 — Q1 2026 update (newest data, May 7 2026)
@@ -101,13 +101,13 @@ Brand revenue and NA/Intl totals are from the `[FY2025 10-K]`; the NA-by-brand s
 - **Org investments**: Dublin intl hub `[FY2024 10-K]`; Garrett Quigley appointed President International (Q3 2025) — first dedicated international leadership `[Q3'25 call]`
 - Q1 2025 disclosed: ex-2024 launches, intl was +9% organic `[Q1'25 call]`
 - **UK underperformance** acknowledged Q3 2025 ("learned valuable lessons"); AUS overperforming `[Q3'25 call]`
-- Mgmt 2026 tone: "intentional, focused market selection... not about entering as many markets as possible" `[src?]`
+- Mgmt 2026 tone (Fieldly): "We are prioritizing focused market selection... This is not about entering as many markets as possible." `[Q4'25 call]`
 
 ### Channel/distribution drivers (NA)
 
 - Portfolio ACV 99.5% — saturated at portfolio level; growth from Alani (94.2%) + Rockstar (85.4%) ramps `[Q4'25 call]`
 - **Convenience is explicit Alani white space** `[Q4'25 call]`
-- Large format also expanding (cooler space carved from beer/juice/premium water) `[src?]`
+- Large format also expanding — Fieldly (Q&A): retailers "optimizing some of the beer coolers... Juice category as well, and high premium waters" → anticipated CELSIUS space gains in large format `[Q4'25 call]`
 - Energy = 19% of LRB sales vs 14% five years ago (CAGNY 2026) `[CAGNY '26]`
 - **Pepsi customer concentration** trajectory: 59.4% (FY23) → 54.7% (FY24) → 43.2% (FY25, depressed by Alani in legacy distributors) `[FY2023–25 10-Ks]`. **2026 will re-spike up** as Alani fully flows through Pepsi `[analysis]`
 - **Foodservice and non-tracked channels** are growing load — see backward-looking trend #5 in Part 3 `[analysis]`
@@ -169,8 +169,8 @@ Pattern: every major distribution shift triggers a termination charge, then gets
 **The 2024 timeline:**
 - **Q1 2024 (May 2024)**: First acknowledgment, Langhans: "this is kind of a new normal for us at the moment. I wouldn't bake in a reversal" `[Q1'24 call]`
 - **Q2 2024 (Aug 2024)**: $20-25M magnitude framing `[Q2'24 call]`
-- **Mid-June 2024 conference**: Mgmt signaled $20-30M going forward `[src?]`
-- **Q3 2024 (Nov 2024)**: Actual hit was **$124M** — 5× the mid-June signal `[Q3'24 call]`
+- **June 11 2024 (Evercore ISI conf)**: Langhans quantified the *in-quarter* (Q2'24) Pepsi optimization at "20 to $30 million" and framed H2 as "less of an issue" `[Jun'24 Evercore conf]`
+- **Q3 2024 (Nov 2024)**: Actual hit was **$124M** — 5× the prior quarter's destock, despite June's "less of an issue" framing `[Q3'24 call]`
 - **Q4 2024 (Feb 2025)**: Actual was $8-10M; "rightsizing complete" `[Q4'24 call]`
 
 Then in Q4 2025 the dynamic ran in reverse: $25M *positive* timing benefit (Alani load-in vs CELSIUS draw-down), only quantified after the fact. `[Q4'25 call]`
@@ -246,11 +246,11 @@ May 2025 Alani M&A call disclosed Alani had $10.7M distributor termination fees 
 
 #### 8. Org is increasingly Pepsi-alumni — culture/governance trajectory
 
-Pepsi-experienced senior hires: `[multiple calls; src?]`
+Pepsi-experienced senior hires: `[multiple calls]`
 - **Tony Guilfoyle** (Q4 2020) — ex-Rockstar, ran Rockstar from $5M → multi-billion → Pepsi acquisition. Now Chief Customer Officer. `[Q4'20 call]`
-- **James Lee** (Aug 2022 board) — Pepsi Beverages NA CSO. Departed Aug 2024 to be Target CFO. `[src?]`
+- **James Lee** (Aug 2022 board) — PepsiCo Beverages NA SVP & Chief Strategy and Transformational Officer. Departed Aug 2024 to be Target CFO. `[Q2'22 call]`
 - **Israel Kontorovsky** (Q3 2024 board) — PepsiCo `[Q3'24 call]`
-- **Eric Hanson** (March 2025) — President & COO, "senior roles of PepsiCo" `[src?]`
+- **Eric Hanson** (hired to start March 24 2025) — first President & COO, "27-year vet of PepsiCo" / "senior roles of PepsiCo" `[Mar'25 conf; Q1'25 call]`
 - **Rishi Daing** (Q3 2025) — CMO, ex-PepsiCo + Mark Anthony Brands `[Q3'25 call]`
 - **Garrett Quigley** (Q3 2025) — President International `[Q3'25 call]`
 
@@ -262,7 +262,7 @@ Founder John Fieldly remains CEO/Chairman, but operational layer beneath him is 
 
 - **Q3 2023 promotional allowance true-up** added 165bps to GM. Mgmt called it a one-time accrual adjustment from "updated information." If structural mix shift to non-promo channels (foodservice, club) it's permanent; if true-up to overaccruals it's nonrecurring. Material for FY2023 baseline normalization. `[Q3'23 call]`
 
-- **Func Food / Nordics is structurally different** — owns local distribution + FAST protein bars. FAST brand impaired $2.4M in 2022. Likely worth backing out from any "international growth" forecast. `[FY2022 10-K; src?]`
+- **Func Food / Nordics is structurally different** — owns local distribution + FAST protein bars. CELH impaired the **Func Food brand name** by $2.5M ($2,538K per the intangibles footnote) in FY2022, triggered by the post-Pepsi strategic shift to the US market — *not* the "FAST" brand specifically (FAST is a product line within Func Food). Likely worth backing out from any "international growth" forecast. `[FY2022 10-K]`
 
 - **$7M Rockstar Q3 2025 booked in "other income"** under GAAP; reverts to net sales 2026. Specific accounting characterization not explained on the call. (Q1 2026: U.S. now on finished-goods model; Canada moves H1 2026.) `[Q3'25 call; Q1'26 call]`
 
