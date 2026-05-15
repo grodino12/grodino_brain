@@ -13,7 +13,13 @@ purpose: Revenue forecasting drivers + backward-looking trend signal
 
 # CELH Revenue Research Dossier
 
+> **Source tags** — factual claims below carry a bracketed source tag.
+> `[Q1'26 call]` Q1 2026 earnings call (May 7 2026) · `[Q4'25 call]` Q4 2025 earnings call (Feb 26 2026) · `[Q4'25 PR]` Q4 2025 press release · `[CAGNY '26]` CAGNY deck (Feb 2026) · `[Alani modeling call]` (May 28 2025) · `[Pepsi M&A call]` (Aug 1 2022) · `[Qx'yy call]` that quarter's earnings call · `[FYxxxx 10-K]` / `[Qx'yy 10-Q]` SEC filing · `[2018–21 calls]` pre-Pepsi-era transcripts · `[multiple calls]` synthesized across several calls · `[analysis]` author synthesis, not a single source · `[src?]` source not determinable from the dossier text — verify against `Brain\Sources\CELH\`.
+> Convention: a datapoint for period P is tagged to P's own earnings call (first disclosure), even if later calls recapped it. Tags were assigned from attribution already present in the text plus section context; they were **not** re-verified against the underlying transcripts.
+
 ## Part 1 — Q1 2026 update (newest data, May 7 2026)
+
+*Everything in Part 1 is from the Q1 2026 earnings call* `[Q1'26 call]` *unless tagged otherwise.*
 
 **Reported revenue $783M (record).** Brand splits:
 
@@ -50,7 +56,7 @@ purpose: Revenue forecasting drivers + backward-looking trend signal
 
 ### Build structure
 
-Brand × Geography. Three brands × two geos = 5 lines (Rockstar Intl is de minimis).
+Brand × Geography. Three brands × two geos = 5 lines (Rockstar Intl is de minimis). `[analysis]`
 
 |                           | NA FY2025 | Intl FY2025 | Total       |
 | ------------------------- | --------- | ----------- | ----------- |
@@ -59,55 +65,56 @@ Brand × Geography. Three brands × two geos = 5 lines (Rockstar Intl is de mini
 | Rockstar (~4 mo, NA only) | $56M      | —           | $56M        |
 | Total                     | $2,422M   | $93M        | **$2,515M** |
 
-NA-by-brand split is implied — CELH discloses brand revenue and NA/Intl total separately, never crossed.
+Brand revenue and NA/Intl totals are from the `[FY2025 10-K]`; the NA-by-brand split is implied — CELH discloses brand revenue and NA/Intl total separately, never crossed — so the per-cell NA/Intl figures are `[analysis]`.
 
 ### Brand drivers entering FY2026
 
 **CELSIUS brand**
-- Tracked retail +12.8% Q4 2025; reported revenue −7.7% (Pepsi-system load-in timing for Alani)
-- "Came out of gate with low double-digit growth" first 6–8 wks 2026 → confirmed Q1 2026 actual +6% reported; Q1 2026 mgmt cited SKU rationalization timing as suppression
-- **+17% YoY shelf space allocation in 2026** (post-spring resets, internal company reporting as of 12/31/25)
-- 2026 innovation: Fizz-Free national (Jan 2026); Electric Vibe LTO (May 2026, soccer-themed); summer LTO planned
-- Velocity tradeoff: Hanson Q1 2026: "Optimization plays out over a couple of quarters where we see the reduction faster than the ACV build"
+- Tracked retail +12.8% Q4 2025; reported revenue −7.7% (Pepsi-system load-in timing for Alani) `[Q4'25 call]`
+- "Came out of gate with low double-digit growth" first 6–8 wks 2026 `[Q4'25 call]` → confirmed Q1 2026 actual +6% reported; Q1 2026 mgmt cited SKU rationalization timing as suppression `[Q1'26 call]`
+- **+17% YoY shelf space allocation in 2026** (post-spring resets, internal company reporting as of 12/31/25) `[Q4'25 call]`
+- 2026 innovation: Fizz-Free national (Jan 2026); Electric Vibe LTO (May 2026, soccer-themed); summer LTO planned `[Q4'25 call; Q1'26 call]`
+- Velocity tradeoff: Hanson Q1 2026: "Optimization plays out over a couple of quarters where we see the reduction faster than the ACV build" `[Q1'26 call]`
 
 **Alani Nu**
-- $370M Q4 2025 record; pro forma +136% Q4 vs PY; CFO Q1 2026: $368M (+85% scanner-clean / +60% reported)
-- **+102% YoY shelf space allocation in 2026**, mostly via Pepsi system, biggest white space = convenience
-- ACV: 87% (start Q4 2025) → 92.6% (12/28/25) → 94.2% (2/1/26); still room vs CELSIUS at 98.5%
-- Cherry Bomb (Q4 2025) sold out record time; **Lime Slush became Alani's #1 SKU in tracked channels** in Q1 2026 (per Q1 2026 call)
-- Distribution: U.S. DSD substantially complete YE 2025; **integration fully complete Q1 2026**
-- 9-month annualized baseline ($1,336M) is a floor; +136% Q4 pro-forma + +102% shelf gains argue for material upside
+- $370M Q4 2025 record; pro forma +136% Q4 vs PY `[Q4'25 call]`; CFO Q1 2026: $368M (+85% scanner-clean / +60% reported) `[Q1'26 call]`
+- **+102% YoY shelf space allocation in 2026**, mostly via Pepsi system, biggest white space = convenience `[Q4'25 call]`
+- ACV: 87% (start Q4 2025) → 92.6% (12/28/25) → 94.2% (2/1/26); still room vs CELSIUS at 98.5% `[Q4'25 call]`
+- Cherry Bomb (Q4 2025) sold out record time `[Q4'25 call]`; **Lime Slush became Alani's #1 SKU in tracked channels** in Q1 2026 (per Q1 2026 call) `[Q1'26 call]`
+- Distribution: U.S. DSD substantially complete YE 2025 `[Q4'25 call]`; **integration fully complete Q1 2026** `[Q1'26 call]`
+- 9-month annualized baseline ($1,336M) is a floor; +136% Q4 pro-forma + +102% shelf gains argue for material upside `[analysis]`
 
 **Rockstar Energy**
-- Retail −10.3% Q4 2025; ACV 85.4%; TDPs −17%
-- Mgmt: "stabilize and move it back into growth over the next handful of years"
-- **GAAP accounting wrinkle**: Q4 2025 = $45M net sales + $6M other income; FY2025 = $56M + $13M. U.S. fully transitions to finished-goods Q1 2026; Canada H1 2026 → **2026 reported revenue gets an artificial lift from accounting transition** on top of underlying performance
-- Q1 2026 already reported $67M Rockstar net sales (entirely net sales, U.S. on finished-goods model)
+- Retail −10.3% Q4 2025; ACV 85.4%; TDPs −17% `[Q4'25 call]`
+- Mgmt: "stabilize and move it back into growth over the next handful of years" `[Q4'25 call]`
+- **GAAP accounting wrinkle**: Q4 2025 = $45M net sales + $6M other income; FY2025 = $56M + $13M `[Q4'25 call; FY2025 10-K]`. U.S. fully transitions to finished-goods Q1 2026; Canada H1 2026 `[Q4'25 call]` → **2026 reported revenue gets an artificial lift from accounting transition** on top of underlying performance `[analysis]`
+- Q1 2026 already reported $67M Rockstar net sales (entirely net sales, U.S. on finished-goods model) `[Q1'26 call]`
 
 ### Geographic drivers
 
-**North America** (95% of FY2025 revenue) — see brand drivers above.
+**North America** (95% of FY2025 revenue) — see brand drivers above. `[FY2025 10-K]`
 
-**International** (3.7% of FY2025 revenue, $92.8M, +24%)
-- Currently in ~10 markets; Spain added Q1 2026 via Suntory; Portugal next
-- Active markets: Nordics (mature), UK, Ireland, France, Australia, NZ, Benelux, Canada, China (royalty), Spain (new)
-- Sequencing of historical launches: UK/Ireland H2 2024 → France Q4 2024 → AUS/NZ Q4 2024 → Benelux Q1 2025 → Spain Q1 2026
-- **Org investments**: Dublin intl hub (FY2024 10-K); Garrett Quigley appointed President International (Q3 2025) — first dedicated international leadership
-- Q1 2025 disclosed: ex-2024 launches, intl was +9% organic
-- **UK underperformance** acknowledged Q3 2025 ("learned valuable lessons"); AUS overperforming
-- Mgmt 2026 tone: "intentional, focused market selection... not about entering as many markets as possible"
+**International** (3.7% of FY2025 revenue, $92.8M, +24%) `[FY2025 10-K]`
+- Currently in ~10 markets; Spain added Q1 2026 via Suntory; Portugal next `[Q1'26 call]`
+- Active markets: Nordics (mature), UK, Ireland, France, Australia, NZ, Benelux, Canada, China (royalty), Spain (new) `[multiple calls]`
+- Sequencing of historical launches: UK/Ireland H2 2024 → France Q4 2024 → AUS/NZ Q4 2024 → Benelux Q1 2025 → Spain Q1 2026 `[multiple calls]`
+- **Org investments**: Dublin intl hub `[FY2024 10-K]`; Garrett Quigley appointed President International (Q3 2025) — first dedicated international leadership `[Q3'25 call]`
+- Q1 2025 disclosed: ex-2024 launches, intl was +9% organic `[Q1'25 call]`
+- **UK underperformance** acknowledged Q3 2025 ("learned valuable lessons"); AUS overperforming `[Q3'25 call]`
+- Mgmt 2026 tone: "intentional, focused market selection... not about entering as many markets as possible" `[src?]`
 
 ### Channel/distribution drivers (NA)
 
-- Portfolio ACV 99.5% — saturated at portfolio level; growth from Alani (94.2%) + Rockstar (85.4%) ramps
-- **Convenience is explicit Alani white space**
-- Large format also expanding (cooler space carved from beer/juice/premium water)
-- Energy = 19% of LRB sales vs 14% five years ago (CAGNY 2026)
-- **Pepsi customer concentration** trajectory: 59.4% (FY23) → 54.7% (FY24) → 43.2% (FY25, depressed by Alani in legacy distributors). **2026 will re-spike up** as Alani fully flows through Pepsi
-- **Foodservice and non-tracked channels** are growing load — see backward-looking trend #5 in Part 3
+- Portfolio ACV 99.5% — saturated at portfolio level; growth from Alani (94.2%) + Rockstar (85.4%) ramps `[Q4'25 call]`
+- **Convenience is explicit Alani white space** `[Q4'25 call]`
+- Large format also expanding (cooler space carved from beer/juice/premium water) `[src?]`
+- Energy = 19% of LRB sales vs 14% five years ago (CAGNY 2026) `[CAGNY '26]`
+- **Pepsi customer concentration** trajectory: 59.4% (FY23) → 54.7% (FY24) → 43.2% (FY25, depressed by Alani in legacy distributors) `[FY2023–25 10-Ks]`. **2026 will re-spike up** as Alani fully flows through Pepsi `[analysis]`
+- **Foodservice and non-tracked channels** are growing load — see backward-looking trend #5 in Part 3 `[analysis]`
 
 ### Demographic / category tailwinds (CAGNY 2026 deck)
 
+*All items in this subsection from the CAGNY deck* `[CAGNY '26]`*.*
 - Energy +$3.3B in 2025; CELH portfolio captured 33% of zero-sugar growth
 - Zero-sugar = 85% of total energy growth
 - 31% of 2025 energy growth from new-to-category consumers
@@ -119,19 +126,19 @@ NA-by-brand split is implied — CELH discloses brand revenue and NA/Intl total 
 
 ### Forecast risks / sensitivities
 
-- **Tariffs + Midwest aluminum premium + LME** — flagged Q1 2025 → escalated through 2025 → Q1 2026 mgmt: "if elevated costs remain across the year, we may see some impact on the timing and sequencing of our ramp back to the low-50s"
-- **Pepsi inventory cycles** — Q3 2024 caused $124M Pepsi destock (5× larger than mgmt's mid-quarter signal)
-- **Promo intensity / RGM** — mgmt says "not about broad-based price increases"; don't model meaningful price/list growth
-- **Industry-wide growth "moderated"** per FY2024 + FY2025 10-K
-- **Velocity drag** as TDP expands — pattern repeats every cycle (see backward-looking trend #3)
+- **Tariffs + Midwest aluminum premium + LME** — flagged Q1 2025 → escalated through 2025 → Q1 2026 mgmt: "if elevated costs remain across the year, we may see some impact on the timing and sequencing of our ramp back to the low-50s" `[multiple calls; Q1'26 call]`
+- **Pepsi inventory cycles** — Q3 2024 caused $124M Pepsi destock (5× larger than mgmt's mid-quarter signal) `[Q3'24 call]`
+- **Promo intensity / RGM** — mgmt says "not about broad-based price increases"; don't model meaningful price/list growth `[Q1'26 call]`
+- **Industry-wide growth "moderated"** per FY2024 + FY2025 10-K `[FY2024 10-K; FY2025 10-K]`
+- **Velocity drag** as TDP expands — pattern repeats every cycle (see backward-looking trend #3) `[analysis]`
 
 ### Forecast gaps (no public disclosure)
 
-- **No FY2026 revenue or growth guidance** — CELH does not provide formal forward guidance
-- **No price/volume/mix decomposition** — single one-off in Q1 2023 10-Q noting growth was "increases in sales volume, as opposed to increases in product pricing"
-- **Brand-level NA vs Intl split** — CELH discloses brand revenue + geo revenue separately, never crossed
-- **Channel-level revenue disclosure** — none in filings; Circana ACV/TDP for tracked only
-- **Innovation pipeline detail** — broad ("intentional innovation cadence"), not SKU-level
+- **No FY2026 revenue or growth guidance** — CELH does not provide formal forward guidance `[analysis]`
+- **No price/volume/mix decomposition** — single one-off in Q1 2023 10-Q noting growth was "increases in sales volume, as opposed to increases in product pricing" `[Q1'23 10-Q]`
+- **Brand-level NA vs Intl split** — CELH discloses brand revenue + geo revenue separately, never crossed `[FY2025 10-K]`
+- **Channel-level revenue disclosure** — none in filings; Circana ACV/TDP for tracked only `[analysis]`
+- **Innovation pipeline detail** — broad ("intentional innovation cadence"), not SKU-level `[analysis]`
 
 ---
 
@@ -147,75 +154,77 @@ NA-by-brand split is implied — CELH discloses brand revenue and NA/Intl total 
 | 2022 | Pepsi onboarding | $194M (FY) | Pepsi-funded | Deferred rev / 20-yr amortization |
 | 2025 | Alani Nu → Pepsi | $327M (FY) | Up to $275M Pepsi-reimbursed | Deferred rev / 17-yr amortization |
 
-Pattern: every major distribution shift triggers a termination charge, then gets socialized back through Pepsi reimbursement and amortized into deferred revenue over the agreement life.
+*Table sources: 2018 row* `[2018–21 calls]` *· 2022 row* `[Pepsi M&A call; FY2022 10-K]` *· 2025 row* `[FY2025 10-K]`*.*
 
-**Forecasting implication**: any future distribution add (Rockstar platform optimization, international Pepsi expansion) likely follows the same pattern. Captaincy alone is $598.8M / 17 years = **~$35M/year contra-revenue**; Alani termination reimbursement adds another piece (~$16M/year if we assume the full $275M cap amortized over 17 years). There may be **$50M+/year of structural revenue suppression** annually that's not transitory.
+Pattern: every major distribution shift triggers a termination charge, then gets socialized back through Pepsi reimbursement and amortized into deferred revenue over the agreement life. `[analysis]`
 
-**To dig**: model a steady-state contra-revenue line once all deals layer in. Build a separate schedule for each amortizing piece. Most analyst models likely don't capture this.
+**Forecasting implication**: any future distribution add (Rockstar platform optimization, international Pepsi expansion) likely follows the same pattern. Captaincy alone is $598.8M / 17 years = **~$35M/year contra-revenue**; Alani termination reimbursement adds another piece (~$16M/year if we assume the full $275M cap amortized over 17 years). There may be **$50M+/year of structural revenue suppression** annually that's not transitory. `[analysis]`
 
-**Q1 2026 evidence**: Langhans on Peter Grom's question: "[The CELSIUS termination] impacted the CELSIUS brand by about $1 million a quarter. So, very minor. With Alani, because we also had a couple other things going on when we did this transaction, including the captaincy, **there's about a $5 million impact in that number that's in the bridge. That's really a non-cash item. That's just the amortization from the balance sheet.**" → confirms ~$5M/quarter Alani contra-rev amortization.
+**To dig**: model a steady-state contra-revenue line once all deals layer in. Build a separate schedule for each amortizing piece. Most analyst models likely don't capture this. `[analysis]`
+
+**Q1 2026 evidence**: Langhans on Peter Grom's question: "[The CELSIUS termination] impacted the CELSIUS brand by about $1 million a quarter. So, very minor. With Alani, because we also had a couple other things going on when we did this transaction, including the captaincy, **there's about a $5 million impact in that number that's in the bridge. That's really a non-cash item. That's just the amortization from the balance sheet.**" → confirms ~$5M/quarter Alani contra-rev amortization. `[Q1'26 call]`
 
 #### 2. Mgmt's real-time visibility into Pepsi inventory has been weak — 2024 destock proves it
 
 **The 2024 timeline:**
-- **Q1 2024 (May 2024)**: First acknowledgment, Langhans: "this is kind of a new normal for us at the moment. I wouldn't bake in a reversal"
-- **Q2 2024 (Aug 2024)**: $20-25M magnitude framing
-- **Mid-June 2024 conference**: Mgmt signaled $20-30M going forward
-- **Q3 2024 (Nov 2024)**: Actual hit was **$124M** — 5× the mid-June signal
-- **Q4 2024 (Feb 2025)**: Actual was $8-10M; "rightsizing complete"
+- **Q1 2024 (May 2024)**: First acknowledgment, Langhans: "this is kind of a new normal for us at the moment. I wouldn't bake in a reversal" `[Q1'24 call]`
+- **Q2 2024 (Aug 2024)**: $20-25M magnitude framing `[Q2'24 call]`
+- **Mid-June 2024 conference**: Mgmt signaled $20-30M going forward `[src?]`
+- **Q3 2024 (Nov 2024)**: Actual hit was **$124M** — 5× the mid-June signal `[Q3'24 call]`
+- **Q4 2024 (Feb 2025)**: Actual was $8-10M; "rightsizing complete" `[Q4'24 call]`
 
-Then in Q4 2025 the dynamic ran in reverse: $25M *positive* timing benefit (Alani load-in vs CELSIUS draw-down), only quantified after the fact.
+Then in Q4 2025 the dynamic ran in reverse: $25M *positive* timing benefit (Alani load-in vs CELSIUS draw-down), only quantified after the fact. `[Q4'25 call]`
 
-**Why this matters**: Q1 2026 mgmt now claims "tightened alignment between shipments and underlying takeaway." But the same partnership structure exists. Q1 2026 reported Alani $368M is +60% pro forma but 85% scanner-clean — the bridge mgmt provided is reverse-engineered to reconcile the discrepancy.
+**Why this matters**: Q1 2026 mgmt now claims "tightened alignment between shipments and underlying takeaway" `[Q1'26 call]`. But the same partnership structure exists. Q1 2026 reported Alani $368M is +60% pro forma but 85% scanner-clean — the bridge mgmt provided is reverse-engineered to reconcile the discrepancy. `[analysis]`
 
-**To dig**: pull the gap between Nielsen US scanner growth and CELH NA reported revenue quarterly back to Q1 2023. The size and direction of that gap is the cleanest read on channel inventory dynamics that mgmt narrates only retroactively.
+**To dig**: pull the gap between Nielsen US scanner growth and CELH NA reported revenue quarterly back to Q1 2023. The size and direction of that gap is the cleanest read on channel inventory dynamics that mgmt narrates only retroactively. `[analysis]`
 
 #### 3. Velocity-dilution lag pattern repeats with every TDP/ACV expansion
 
 Documented examples:
-- **2019 Walmart rollout**: 1,500 stores, took 3 quarters to normalize
-- **2021 Costco national rollout**: 561 stores, drove margin drag from "secondary repacking facilities" through 2022
-- **2022 Pepsi onboarding**: ACV 65→95% in 2 quarters; velocity comp problems through 2024
-- **2026 17% CELSIUS / +102% Alani shelf gains**: Hanson Q1 2026: "Optimization generally plays out over a couple of quarters where we see the reduction faster than the ACV build"
+- **2019 Walmart rollout**: 1,500 stores, took 3 quarters to normalize `[2018–21 calls]`
+- **2021 Costco national rollout**: 561 stores, drove margin drag from "secondary repacking facilities" through 2022 `[2018–21 calls]`
+- **2022 Pepsi onboarding**: ACV 65→95% in 2 quarters; velocity comp problems through 2024 `[Pepsi M&A call; multiple calls]`
+- **2026 17% CELSIUS / +102% Alani shelf gains**: Hanson Q1 2026: "Optimization generally plays out over a couple of quarters where we see the reduction faster than the ACV build" `[Q1'26 call]`
 
-**To dig**: build a velocity model anchored on tracked $/store/week vs TDP. Every expansion has produced 2-3 quarters of decel as new doors come online before the same doors mature. The 2026 expansion is the largest yet — velocity comp problem will likely be material in 2H 2026 / 1H 2027 even if depletions are fine on per-store basis. **Argues against a clean "+TDP × +velocity" multiplicative forecast.**
+**To dig**: build a velocity model anchored on tracked $/store/week vs TDP. Every expansion has produced 2-3 quarters of decel as new doors come online before the same doors mature. The 2026 expansion is the largest yet — velocity comp problem will likely be material in 2H 2026 / 1H 2027 even if depletions are fine on per-store basis. **Argues against a clean "+TDP × +velocity" multiplicative forecast.** `[analysis]`
 
 #### 4. Pricing actions are sparse, opaque, and structurally important
 
 **Two known frontline price increases in 8+ years**:
-- April 2022 (magnitude never disclosed; flowed through scan data Q3-Q4 2022)
-- Q4 2024 (magnitude never disclosed; only confirmed retrospectively in Q1 2025)
+- April 2022 (magnitude never disclosed; flowed through scan data Q3-Q4 2022) `[multiple calls]`
+- Q4 2024 (magnitude never disclosed; only confirmed retrospectively in Q1 2025) `[Q1'25 call]`
 
-Mgmt has consistently demurred when pressed. Q3 2021 Fieldly cited Monster/Red Bull holding price as cover. Q4 2023 Fieldly to Pascarelli: "There's a variety of different levers than just taking frontline pricing."
+Mgmt has consistently demurred when pressed. Q3 2021 Fieldly cited Monster/Red Bull holding price as cover. Q4 2023 Fieldly to Pascarelli: "There's a variety of different levers than just taking frontline pricing." `[Q3'21 call; Q4'23 call]`
 
-**But pricing is load-bearing in current narrative**: Q1 2026 Langhans cited "price pack architecture" 5+ times as a margin lever. Mgmt told modelers Q2 GM is "sidestep" sequentially → Q3/Q4 "stair-step" — much of that delta requires either commodity relief (out of CELH's control) or unstated pricing/mix actions.
+**But pricing is load-bearing in current narrative**: Q1 2026 Langhans cited "price pack architecture" 5+ times as a margin lever. Mgmt told modelers Q2 GM is "sidestep" sequentially → Q3/Q4 "stair-step" — much of that delta requires either commodity relief (out of CELH's control) or unstated pricing/mix actions. `[Q1'26 call]`
 
-**To dig**: back-solve unit pricing from Nielsen $ scan vs unit scan trajectory by SKU/pack. Only way to validate the GM bridge mgmt won't disclose explicitly.
+**To dig**: back-solve unit pricing from Nielsen $ scan vs unit scan trajectory by SKU/pack. Only way to validate the GM bridge mgmt won't disclose explicitly. `[analysis]`
 
 #### 5. Foodservice + non-tracked channels are an increasingly opaque % of revenue
 
-By FY2023, foodservice was **10-12.5% of Pepsi revenue** (Jersey Mike's 2,000 stores Q3 2023; Dunkin' 3,000+ Q3 2023; Foodbuy/Compass since Oct 2019). Q1 2026 Fieldly explicitly: "this is the first quarter of the organization managing a portfolio of brands under the category captaincy within the energy category of PepsiCo. So that has really unlocked a lot of opportunities — food service, a variety of **non-reported track channels**."
+By FY2023, foodservice was **10-12.5% of Pepsi revenue** (Jersey Mike's 2,000 stores Q3 2023; Dunkin' 3,000+ Q3 2023; Foodbuy/Compass since Oct 2019) `[Q3'23 call]`. Q1 2026 Fieldly explicitly: "this is the first quarter of the organization managing a portfolio of brands under the category captaincy within the energy category of PepsiCo. So that has really unlocked a lot of opportunities — food service, a variety of **non-reported track channels**." `[Q1'26 call]`
 
-Circana / Nielsen tracks MULO+ w/C — excludes foodservice, gym/fitness clubs, military, college/university, vending, on-premise. As CELH leans into these via captaincy, **the gap between tracked-channel growth and reported revenue growth widens.**
+Circana / Nielsen tracks MULO+ w/C — excludes foodservice, gym/fitness clubs, military, college/university, vending, on-premise. As CELH leans into these via captaincy, **the gap between tracked-channel growth and reported revenue growth widens.** `[analysis]`
 
-Q1 2026 +6% CELSIUS reported is below scanner reads (CELSIUS scanner +13% Q4 2025, "low double-digit" early 2026). Mgmt's explanation has been SKU rationalization; the real story may be that tracked-channel SKU concentration is higher than non-tracked, so reported lags scan during optimization.
+Q1 2026 +6% CELSIUS reported is below scanner reads (CELSIUS scanner +13% Q4 2025, "low double-digit" early 2026) `[Q1'26 call; Q4'25 call]`. Mgmt's explanation has been SKU rationalization; the real story may be that tracked-channel SKU concentration is higher than non-tracked, so reported lags scan during optimization. `[analysis]`
 
-**To dig**: track named foodservice wins (Subway, Jersey Mike's, Dunkin' historically; what's next?) and Pepsi Foodservice's SKU-deck cycle. Q1 2026 Hanson: "food service becomes a zero-sum game. You're in or you're not."
+**To dig**: track named foodservice wins (Subway, Jersey Mike's, Dunkin' historically; what's next?) and Pepsi Foodservice's SKU-deck cycle. Q1 2026 Hanson: "food service becomes a zero-sum game. You're in or you're not." `[Q1'26 call]`
 
 ### Tier 2: governance/risk
 
 #### 6. Pepsi cap table position has compounded — increased ownership Q3 2025 never quantified on the call
 
 Cap table evolution:
-- 2018: Carl DeSantis convertible preferred conversion → cleaned cap table
-- 2019-2021: $67.8M secondary + multiple raises
-- Aug 2022: Pepsi Series A — $550M cash for ~1.5M preferred shares (valued $832.5M, $282.5M premium recorded as other asset, amortizes over 20 years)
-- Aug 2025: Pepsi Series B — 390K shares, $907.6M (per FY2025 10-K balance sheet)
-- Q3 2025 call: "PepsiCo's increased ownership stake in Celsius Holdings and an additional Board representation" — magnitude not stated
+- 2018: Carl DeSantis convertible preferred conversion → cleaned cap table `[2018–21 calls]`
+- 2019-2021: $67.8M secondary + multiple raises `[2018–21 calls]`
+- Aug 2022: Pepsi Series A — $550M cash for ~1.5M preferred shares (valued $832.5M, $282.5M premium recorded as other asset, amortizes over 20 years) `[Pepsi M&A call; FY2022 10-K]`
+- Aug 2025: Pepsi Series B — 390K shares, $907.6M (per FY2025 10-K balance sheet) `[FY2025 10-K]`
+- Q3 2025 call: "PepsiCo's increased ownership stake in Celsius Holdings and an additional Board representation" — magnitude not stated `[Q3'25 call]`
 
-Pepsi now holds two preferred classes totaling **~$1.76B in mezzanine equity**, plus board representation that grew in Q3 2025. FY2025 10-K risk-factor language: "The increased ownership stake and additional board representation by Pepsi may allow it to exert greater influence over our strategic and governance decisions."
+Pepsi now holds two preferred classes totaling **~$1.76B in mezzanine equity**, plus board representation that grew in Q3 2025. FY2025 10-K risk-factor language: "The increased ownership stake and additional board representation by Pepsi may allow it to exert greater influence over our strategic and governance decisions." `[FY2025 10-K]`
 
-**To dig**: pull 13D/13G filings around Aug-Sep 2025 for new % and voting agreement structure. The "preferred global distribution partner" in 2022 has, three years later, evolved into major equity holder + board influence + captaincy + reimbursement-controller. Control trajectory matters before forecasting any "what if Pepsi pushes back" scenarios.
+**To dig**: pull 13D/13G filings around Aug-Sep 2025 for new % and voting agreement structure. The "preferred global distribution partner" in 2022 has, three years later, evolved into major equity holder + board influence + captaincy + reimbursement-controller. Control trajectory matters before forecasting any "what if Pepsi pushes back" scenarios. `[analysis]`
 
 #### 7. SEC investigation and 2024 $54M legal accrual unresolved on calls
 
