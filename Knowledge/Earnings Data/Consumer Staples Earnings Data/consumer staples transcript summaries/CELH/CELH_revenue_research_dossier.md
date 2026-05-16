@@ -313,9 +313,9 @@ Founder John Fieldly remains CEO/Chairman, but operational layer beneath him is 
 - Alani Nu modeling call: `2025-Q1\transcripts\2025-05-28_CELH_MergerAcquisition.pdf`
 
 ### Decks & press
-- Q4 2025 press release: `2026-Q1\transcripts\CELH_2026-02-26_press_release.pdf`
-- Q4 2025 transcript: `2026-Q1\transcripts\CELH_2026-02-26_transcript.pdf`
-- CAGNY Feb 2026 deck: `2026-Q1\presentation\CELH_2026-02-26_presentation.pdf`
+- Q4 2025 press release: `2025-FY\transcripts\2026-02-26_CELH_PressRelease.pdf`
+- Q4 2025 transcript: `2025-FY\transcripts\2026-02-26_CELH_Earnings.pdf`
+- CAGNY Feb 2026 deck: `2025-FY\presentation\2026-02-26_CELH_Presentation.pdf`
 
 ### Existing knowledge
 - `CELH_2026-02-26_2025Q4 Earnings.md` (this folder, prior summary)
