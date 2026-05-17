@@ -47,6 +47,11 @@ SCALE_RE = re.compile(r'\(\s*(?:in\s*)?\$?\s*(B|K|000|millions?|billions?|thousa
 # bare period qualifiers with no year ('9M Revenue', 'FY G&A', 'Revenue Q4')
 LEAD_PER = re.compile(r'^\s*(?:Q[1-4]|FY|9M|H[12]|1H|2H|YTD)\b[\s.:/-]*', re.I)
 TRAIL_PER = re.compile(r'[\s.:/-]*\b(?:Q[1-4]|FY|9M|H[12]|1H|2H|YTD)\s*$', re.I)
+# parenthetical period qualifier, e.g. '(FY)', '(Q4)', '(Full Year)', '(Nine Months)'
+_PAREN_PERIOD = re.compile(
+    r'\s*\((?:Q[1-4]|FY|H[12]|9M|Full[ -]?Year|Nine Months(?: YTD)?|'
+    r'Six Months(?: YTD)?|Three Months(?: YTD)?|YTD|First Half|Second Half|'
+    r'Quarter|Annual)\)\s*', re.I)
 
 # light canonicalization of obvious synonyms
 ALIAS = {
@@ -134,6 +139,8 @@ _canon('S&M % of Revenue', 's&m % of revenue', 's&m % of sales',
        'sales & marketing as % of revenue', 's&m expense % of sales')
 _canon('G&A % of Revenue', 'g&a % of revenue', 'g&a % of sales', 'g&a (% of revenue)',
        'g&a (% of sales)')
+_canon('Adjusted SG&A % of Revenue', 'adjusted sg&a % of revenue',
+       'adjusted sg&a as % of revenue')
 # convenience-channel: keep sales growth, store count and ACV as 3 DISTINCT metrics;
 # only merge exact same-metric label variants within each
 _canon('Convenience Channel ACV', 'convenience acv', 'convenience channel acv')
@@ -204,6 +211,7 @@ def is_period_cell(x):
 def norm_metric(label):
     s = str(label)
     s = PER_RE.sub('', s)                       # drop period tokens with a year
+    s = _PAREN_PERIOD.sub(' ', s)               # drop '(FY)' / '(Q4)' / '(Full Year)'
     s = LEAD_PER.sub('', s)                     # drop bare leading period ('9M ', 'FY ')
     s = TRAIL_PER.sub('', s)                    # drop bare trailing period ('... Q4')
     s = UNIT_RE.sub('', s)
@@ -266,16 +274,9 @@ def clean_value(v):
     return v.strip()
 
 
-_PAREN_PERIOD = re.compile(
-    r'\s*\((?:Q[1-4]|FY|H[12]|9M|Full[ -]?Year|Nine Months(?: YTD)?|'
-    r'Six Months(?: YTD)?|Three Months(?: YTD)?|YTD|First Half|Second Half|'
-    r'Quarter|Annual)\)\s*', re.I)
-
-
 def canon_metric(raw):
     """Canonicalize a STEP-5 KPI metric name so it lines up with sheet rows."""
-    s = _PAREN_PERIOD.sub(' ', str(raw))
-    m = norm_metric(s)
+    m = norm_metric(raw)
     return CANON.get(m.lower(), m)
 
 
