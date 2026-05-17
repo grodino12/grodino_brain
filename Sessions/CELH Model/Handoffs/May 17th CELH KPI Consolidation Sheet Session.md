@@ -37,20 +37,24 @@ Installed the **Advanced URI** Obsidian plugin (v1.46.1) into `Brain\.obsidian\p
 ### 5. Tab reorder
 Transcript tabs reordered newest-first (descending `NN` prefix); `KPI Consolidated` stays leftmost, ` Transcript Reports` + `Disclosures` stay rightmost. Idempotent in `_consolidate.py`.
 
-### 6. Late fixes (IN THE SCRIPT, NOT YET SAVED — see Current state)
+### 6. Hyperlink + CANON fixes
 - `kpi_line` hardened: a specific KPI line is used only on a value match or exact name match; loose name resemblance now falls back to the STEP-5 section header (was mislinking a 227% sales-growth cell onto a 97% store-count line).
 - `CANON` additions: `Asia (China royalty)`→`Asia Revenue`; `Other International` pair; `Convenience ACV`/`Convenience channel ACV` and the two store-location variants merged.
 
+### 7. Two parser bugs fixed (period placement)
+- **Header misdetection (root cause of the Convenience ACV error).** A data row whose value cell contained a parenthetical period annotation — e.g. `Amazon Energy Category Share` with `"18.6% (Q2 2023)"` — was being misclassified as a period-style header, which hijacked the column pointer to the *Prior* column and stamped `Q2 2023` onto every row below it. New `is_period_cell()` requires a cell to be *essentially just a period label* to count as a header. This is why `Convenience ACV` had shown `~73%` (prior value) under Q2 2023 and lost the real `95.6%` Q3 2023 figure.
+- **Period fallback.** Rows with no period in label or column header now fall back to the transcript's own reporting period (`transcript_period()` from the staging filename / event title; `fallback_period()` honors a bare `9M`/`FY`/`Qn` label prefix). Recovered 22 rows; 10 still skipped (conference transcripts with no derivable period).
+
 ## Current state
 
-- **`KPI Consolidated` sheet (last successful save):** 133 metrics × 42 periods, 528 numeric datapoints, 475 cells all hyperlinked (462 exact KPI line, 13 STEP-5-section fallback), every cell with a source note.
-- **`_consolidate.py`:** the §6 edits (kpi_line value-match fix + Asia/convenience CANON merges) are in the script but the last two runs **failed to save — Excel held the file locked.** The workbook on disk does NOT yet reflect them.
+- **`KPI Consolidated` sheet (saved):** 153 metrics × 41 periods, 556 numeric datapoints, 502 cells all hyperlinked (378 exact KPI line, 124 STEP-5-section fallback), every cell with a source note. `Convenience Channel ACV` Q3 2023 = 95.6% verified correct.
+- **`_consolidate.py`:** all edits applied and saved to the workbook — kpi_line value-match guard, Asia/convenience CANON merges, and the two §7 parser fixes.
 - **Advanced URI plugin:** installed + enabled; not yet activated (needs Obsidian reload).
 
 ## Open decisions / pending work
 
-1. **OPENS THE NEXT SESSION (two parts).** (a) Close `CELH_disclosures.xlsx` in Excel and re-run `python "Model Outputs\CELH\_staging_reports\_consolidate.py"` to apply the §6 fixes. (b) **Period-fallback bug:** 27 datapoints are silently dropped because their digest row sits under a `Current/Prior/Change` header (no period) with a no-period label — e.g. Q3 2023 `Convenience ACV` 95.6% is lost. Fix: in `_consolidate.py`'s data-row loop, when neither label nor header yields a period, fall back to the transcript's own reporting period parsed from the event title (e.g. "Q3 2023 Earnings Call").
-2. **Untraced:** `Convenience ACV` shows 73% under Q2 2023; 73% is the Q3-2023 prior-year (≈Q3 2022) figure per the CEO quote — source digest not yet identified. Trace after fix 1.
+1. **RESOLVED this session** — the period-fallback bug and the Convenience-ACV 73%/95.6% error (both traced to the §7 header-misdetection + period-fallback fixes). Workbook re-run and saved. No carryover.
+2. **Minor — link precision:** 124 of 502 cells deep-link only to the STEP-5 *section* header rather than an exact KPI line (digest datapoints with no value-matching STEP-5 entry — many are conference/channel figures never formalized as STEP-5 KPIs). Acceptable; revisit only if exact-line coverage matters.
 3. **Qualitative-commentary-drift tracking** — TODO logged in `ROADMAP.md` status table this session: a method to measure how management's commentary on a qualitative item shifts across transcripts over time (counterpart to this quantitative matrix).
 4. **Cleanup deferred:** `_staging_reports\` (digest JSONs + `_assemble.py` + `_consolidate.py`) is intermediate; user has not decided whether to keep. The old ` Transcript Reports` tab is kept per user instruction.
 5. **Obsidian:** reload required to activate Advanced URI; vault name assumed `Brain` — if links don't resolve, regenerate with the correct vault name.

@@ -189,6 +189,18 @@ def parse_period(text):
     return None
 
 
+def is_period_cell(x):
+    """True only if the cell is essentially a period LABEL (a column header) —
+    not a data value that merely contains a period annotation, e.g. the cell
+    '18.6% (Q2 2023)' is a value, not a header."""
+    s = str(x).strip()
+    p = PER_RE.search(s)
+    if not p:
+        return False
+    remainder = (s[:p.start()] + s[p.end():]).strip(" .,;:()-–—'\"E")
+    return len(remainder) <= 1
+
+
 def norm_metric(label):
     s = str(label)
     s = PER_RE.sub('', s)                       # drop period tokens with a year
@@ -457,7 +469,9 @@ def main():
 
             # --- header row detection ---
             is_header = any(t in HEADER_TOKENS for t in low)
-            per_in_hdr = [parse_period(x) for x in vals]
+            # only treat a cell as a period header if it IS a period label,
+            # not a value that merely contains one (e.g. '18.6% (Q2 2023)')
+            per_in_hdr = [parse_period(x) if is_period_cell(x) else None for x in vals]
             has_hdr_period = any(per_in_hdr)
 
             if is_header or has_hdr_period:
