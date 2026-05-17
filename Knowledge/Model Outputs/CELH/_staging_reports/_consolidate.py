@@ -281,13 +281,17 @@ def canon_metric(raw):
 
 
 def md_value(s):
-    """Parse a STEP-5 '**Value**' field to a $M number (fraction for %)."""
+    """Parse a STEP-5 '**Value**' field to a $M number (fraction for %).
+
+    Handles leading-dot billions notation ('.0282B' = $28.2M) and '$28.2M' style.
+    """
     s = str(s).strip()
-    m = re.search(r'-?\$?\s*-?[\d,]+\.?\d*', s)
+    m = re.search(r'[+-]?\$?\s*[+-]?[\d,]*\.?\d+', s)
     if not m:
         return None
     try:
-        num = float(m.group().replace('$', '').replace(' ', '').replace(',', ''))
+        num = float(m.group().replace('$', '').replace(' ', '')
+                    .replace(',', '').lstrip('+'))
     except ValueError:
         return None
     tail = s[m.end():m.end() + 1].upper()
@@ -331,6 +335,15 @@ def parse_md_kpis(path):
                 continue
             vm = re.search(r'\*\*Value\*\*:\s*([^|]+)', ln)
             pvm = re.search(r'PriorYearValue:\s*([^|]+)', ln)
+            ym = re.search(r'YoYChangePct:\s*([^|]+)', ln)
+            yoy = None
+            if ym:
+                yn = re.search(r'[+-]?\d[\d.]*', ym.group(1))
+                if yn:
+                    try:
+                        yoy = float(yn.group())
+                    except ValueError:
+                        pass
             fy = re.search(r'FiscalYear:\s*(\d{4})', ln)
             fq = re.search(r'FiscalQuarter:\s*([A-Za-z0-9]+)', ln)
             period = None
@@ -346,9 +359,24 @@ def parse_md_kpis(path):
                          'metric_raw': mm.group(1).strip(), 'period': period,
                          'value': md_value(vm.group(1)) if vm else None,
                          'prior': md_value(pvm.group(1)) if pvm else None,
+                         'yoy': yoy,
                          'pct': bool(vm) and '%' in vm.group(1)})
     _MD_CACHE[path] = (kpis, step5_line, ev, dt)
     return _MD_CACHE[path]
+
+
+def prior_consistent(value, prior, yoy):
+    """Sanity-check a STEP-5 PriorYearValue against the line's own YoYChangePct.
+    Catches .md typos (e.g. '4.02B' where '.402B' was meant). True = trust it."""
+    if value is None or prior is None or yoy is None:
+        return True                       # can't check -> allow
+    denom = 1.0 + yoy / 100.0
+    if abs(denom) < 0.05:
+        return True
+    expected = value / denom
+    if abs(expected) < 1e-6:
+        return True
+    return abs(prior - expected) / abs(expected) <= 0.4
 
 
 def prior_year_period(plabel):
@@ -576,12 +604,16 @@ def main():
 
     # --- backfill prior-year values from .md STEP 5 into otherwise-empty cells ---
     backfilled = 0
+    bad_prior = 0
     matrix_lc = {k.lower(): k for k in matrix}
     for mdp in glob.glob(os.path.join(SOURCES, "**", "transcripts", "CELH_*.md"),
                          recursive=True):
         kpis, _, ev, dt = parse_md_kpis(mdp)
         for k in kpis:
             if k['prior'] is None or not k['period']:
+                continue
+            if not k['pct'] and not prior_consistent(k['value'], k['prior'], k['yoy']):
+                bad_prior += 1                 # .md typo — skip rather than insert
                 continue
             pp = prior_year_period(k['period'])
             cmk = matrix_lc.get(k['metric'].lower())
@@ -767,7 +799,8 @@ def main():
     print(f"  metric rows consolidated: {n_before} -> {n_after}")
     print(f"  numeric datapoints kept: {placed}; non-numeric dropped: {dropped_text}")
     print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
-    print(f"  prior-year cells backfilled from .md STEP 5: {backfilled}")
+    print(f"  prior-year cells backfilled from .md STEP 5: {backfilled} "
+          f"(skipped {bad_prior} as .md-inconsistent vs YoY%)")
     print(f"  cells deep-linked to .md: {n_cells - len(no_md)} "
           f"(exact KPI line: {stats['kpi']}, STEP-5 section: {stats['section']}, "
           f"prior-year: {stats['prior']}, file top: {stats['none']}); no .md found: {len(no_md)}")
