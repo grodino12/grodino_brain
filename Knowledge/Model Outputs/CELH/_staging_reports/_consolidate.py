@@ -189,6 +189,37 @@ def norm_metric(label):
     return ALIAS.get(key, s)
 
 
+# a value is quantitative only if it is a bare number or a number + a unit token
+# (%, pp, bps, x); phrases ('Going forward', 'Energy Category') and ranges are out
+QUANT_RE = re.compile(
+    r'[~≈<>]?\s*[+-]?\$?[\d,]+\.?\d*\s*(?:%|pp|ppt|pts?|bps|bp|x)?\+?\s*$', re.I)
+
+
+def finalize(v):
+    """Return (number, is_percent) for a quantitative value, else None.
+
+    Percentages are converted to a fraction (40.4% -> 0.404) so every cell
+    holds a real number; text phrases and ranges return None and are dropped.
+    """
+    if isinstance(v, (int, float)):
+        return (float(v), False)
+    if not isinstance(v, str):
+        return None
+    s = v.strip()
+    if not s or not QUANT_RE.fullmatch(s):
+        return None
+    m = re.search(r'[+-]?[\d,]+\.?\d*', s)
+    if not m:
+        return None
+    try:
+        num = float(m.group().replace(',', ''))
+    except ValueError:
+        return None
+    if '%' in s:
+        return (num / 100.0, True)
+    return (num, False)
+
+
 def clean_value(v):
     """Coerce '$15.1M' / '~$400M' / '1,200' to a float; leave %/text as-is."""
     if isinstance(v, (int, float)):
@@ -217,6 +248,7 @@ def main():
     matrix = {}
     periods = {}          # label -> sort_key
     skipped_no_period = 0
+    dropped_text = 0
     placed = 0
 
     for f in files:
@@ -283,6 +315,11 @@ def main():
             if isinstance(value, (int, float)) and not (
                     isinstance(raw, str) and re.search(r'[MBK]\s*$', raw.strip(), re.I)):
                 value *= label_scale(c0)
+            fin = finalize(value)
+            if fin is None:                  # text phrase / range -> not quantitative
+                dropped_text += 1
+                continue
+            value, is_pct = fin
 
             per = parse_period(c0)
             plabel = per[0] if per else hdr_period
@@ -299,7 +336,7 @@ def main():
                 continue
 
             periods[plabel] = pkey
-            rec = {'value': value, 'earn': is_earn, 'event': event,
+            rec = {'value': value, 'pct': is_pct, 'earn': is_earn, 'event': event,
                    'date': date, 'label': c0}
             matrix.setdefault(metric, {}).setdefault(plabel, []).append(rec)
             placed += 1
@@ -378,10 +415,15 @@ def main():
     def tab_of(rec):
         return tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
 
+    def vfmt(r):
+        return f"{r['value']:.1%}" if r['pct'] else f"{r['value']:g}"
+
     def place(row, j, recs):
         recs_s = sorted(recs, key=lambda r: str(r['date']))
         prim = next((r for r in recs_s if r['earn']), recs_s[0])
         c = ws.cell(row=row, column=2 + j, value=prim['value'])
+        if prim['pct']:
+            c.number_format = '0.0%'
         for r in recs_s:
             if tab_of(r) is None:
                 unlocated.add((r['event'], r['date']))
@@ -396,7 +438,7 @@ def main():
                      f"(► = figure shown in cell):"]
             for r in recs_s:
                 mark = "►" if r is prim else "•"
-                lines.append(f"{mark} {r['value']}  —  {r['event']} ({r['date']})")
+                lines.append(f"{mark} {vfmt(r)}  —  {r['event']} ({r['date']})")
                 lines.append(f"   tab: {tab_of(r) or '(see Event/Date)'}  |  “{r['label']}”")
             txt = "\n".join(lines)
         cm = Comment(txt, "transcript consolidation")
@@ -436,7 +478,7 @@ def main():
     n_multi = sum(1 for pm in matrix.values() for recs in pm.values() if len(recs) > 1)
     print(f"Wrote '{SHEET}': {len(matrix)} metrics x {len(ordered_periods)} periods")
     print(f"  metric rows consolidated: {n_before} -> {n_after}")
-    print(f"  datapoints kept (incl. duplicates): {placed}")
+    print(f"  numeric datapoints kept: {placed}; non-numeric dropped: {dropped_text}")
     print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
     print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
     print(f"  rows skipped (no period detected): {skipped_no_period}")
