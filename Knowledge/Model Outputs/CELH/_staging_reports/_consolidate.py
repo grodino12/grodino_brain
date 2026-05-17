@@ -13,6 +13,7 @@ conference source; earnings sources never overwrite each other (first wins).
 import json, glob, re, os
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.comments import Comment
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WB_PATH = os.path.join(os.path.dirname(HERE), "CELH_disclosures.xlsx")
@@ -28,7 +29,26 @@ PER_RE = re.compile(
 
 ORD = {'Q1': 1, 'Q2': 2, 'H1': 2.5, 'Q3': 3, '9M': 3.5, 'H2': 3.5, 'Q4': 4, 'FY': 5}
 
-UNIT_RE = re.compile(r'\s*\((?:\$M|\$|%|\$ ?M|in \$M|M)\)\s*$', re.I)
+UNIT_RE = re.compile(
+    r'\s*\(\s*(?:in\s*)?'
+    r'(?:\$\s*[MBK]?|\$?\s*000s?|[MBK]|%|bps|pts?|pp|x|'
+    r'millions?|billions?|thousands?|non-?GAAP|GAAP|adjusted|adj\.?)'
+    r'\s*\)\s*$', re.I)
+
+SCALE_RE = re.compile(r'\(\s*(?:in\s*)?\$?\s*(B|K|000|millions?|billions?|thousands?)\s*\)\s*$', re.I)
+
+
+def label_scale(label):
+    """Multiplier to bring a value into $M, read from a unit suffix on the label."""
+    m = SCALE_RE.search(str(label))
+    if not m:
+        return 1.0
+    t = m.group(1).lower()
+    if t in ('b', 'billion', 'billions'):
+        return 1000.0
+    if t in ('k', '000', 'thousand', 'thousands'):
+        return 0.001
+    return 1.0
 
 # bare period qualifiers with no year ('9M Revenue', 'FY G&A', 'Revenue Q4')
 LEAD_PER = re.compile(r'^\s*(?:Q[1-4]|FY|9M|H[12]|1H|2H|YTD)\b[\s.:/-]*', re.I)
@@ -186,9 +206,15 @@ def main():
 
     for f in files:
         d = json.load(open(f, encoding='utf-8'))
-        event = str(d.get('event', ''))
-        is_earn = 'earning' in event.lower()
         rows = d.get('rows', [])
+        # use the tab's own Event/Date cells (rows[0]/rows[1]) as the source key
+        event = str(d.get('event', ''))
+        date = str(d.get('date', ''))
+        if rows and len(rows[0]) > 1 and str(rows[0][0]).strip().lower() == 'event':
+            event = str(rows[0][1]).strip()
+        if len(rows) > 1 and len(rows[1]) > 1 and str(rows[1][0]).strip().lower() == 'date':
+            date = str(rows[1][1]).strip()
+        is_earn = 'earning' in event.lower()
         in_quant = False
         cur_col = None        # column index of the 'Current' value
         hdr_period = None     # period from a period-style header
@@ -259,10 +285,17 @@ def main():
             periods[plabel] = pkey
             cell = matrix.setdefault(metric, {})
             prev = cell.get(plabel)
+            rec = {'value': value, 'earn': is_earn, 'event': event,
+                   'date': date, 'label': c0, 'others': 0}
             # earnings source wins; first earnings source is kept
-            if prev is None or (is_earn and not prev[1]):
-                cell[plabel] = (value, is_earn)
+            if prev is None:
+                cell[plabel] = rec
                 placed += 1
+            elif is_earn and not prev['earn']:
+                rec['others'] = prev['others'] + 1
+                cell[plabel] = rec
+            else:
+                prev['others'] += 1
 
     # --- order axes ---
     ordered_periods = sorted(periods, key=lambda p: periods[p])
@@ -280,6 +313,19 @@ def main():
 
     # --- write sheet ---
     wb = openpyxl.load_workbook(WB_PATH)
+
+    # map (event, date) -> real workbook tab name, read from each transcript tab
+    tab_map = {}
+    for sn in wb.sheetnames:
+        if sn in (SHEET, ' Transcript Reports', 'Disclosures'):
+            continue
+        sh = wb[sn]
+        if str(sh.cell(1, 1).value).strip().lower() != 'event':
+            continue
+        ev = str(sh.cell(1, 2).value).strip()
+        dt = str(sh.cell(2, 2).value).strip()[:10]
+        tab_map[(ev, dt)] = sn
+
     if SHEET in wb.sheetnames:
         del wb[SHEET]
     ws = wb.create_sheet(SHEET, 0)   # first tab
@@ -304,6 +350,24 @@ def main():
         c.fill = hdr_fill; c.font = hdr_font
         c.alignment = Alignment(horizontal='center')
 
+    unlocated = []
+
+    def place(row, j, rec):
+        c = ws.cell(row=row, column=2 + j, value=rec['value'])
+        tab = tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
+        if tab is None:
+            unlocated.append((rec['event'], rec['date']))
+            tab = "(see Event/Date below)"
+        txt = (f"Source: {rec['event']}\n"
+               f"Date: {rec['date']}\n"
+               f"Workbook tab: {tab}\n"
+               f"Digest label: “{rec['label']}”")
+        if rec['others']:
+            txt += f"\n(metric+period also reported in {rec['others']} other transcript(s))"
+        cm = Comment(txt, "transcript consolidation")
+        cm.width, cm.height = 320, 132
+        c.comment = cm
+
     div_fill = PatternFill('solid', fgColor='D9D9D9')
     rr = hrow
     for m in core_present:
@@ -312,7 +376,7 @@ def main():
         for j, p in enumerate(ordered_periods):
             v = matrix[m].get(p)
             if v is not None:
-                ws.cell(row=rr, column=2 + j, value=v[0])
+                place(rr, j, v)
     rr += 1
     dc = ws.cell(row=rr, column=1, value="— Other transcript-disclosed metrics —")
     dc.font = Font(bold=True, italic=True, size=9)
@@ -324,7 +388,7 @@ def main():
         for j, p in enumerate(ordered_periods):
             v = matrix[m].get(p)
             if v is not None:
-                ws.cell(row=rr, column=2 + j, value=v[0])
+                place(rr, j, v)
 
     ws.freeze_panes = "B5"
     ws.column_dimensions['A'].width = 38
@@ -336,6 +400,7 @@ def main():
     print(f"  priority (EBITDA/Amazon/brand): {len(core_present)}; other: {len(rest)}")
     print(f"  datapoints placed: {placed}; rows dropped as standard filing lines: {dropped_standard}")
     print(f"  rows skipped (no period): {skipped_no_period}")
+    print(f"  source comments attached: {placed}; datapoints with no tab match: {len(unlocated)}")
     print(f"  period span: {ordered_periods[0]} -> {ordered_periods[-1]}")
     print(f"  total sheets now: {len(wb.sheetnames)}")
 
