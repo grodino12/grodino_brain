@@ -17,6 +17,7 @@ from urllib.parse import quote
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.comments import Comment
+from openpyxl.utils import get_column_letter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WB_PATH = os.path.join(os.path.dirname(HERE), "CELH_disclosures.xlsx")
@@ -603,7 +604,10 @@ def main():
     n_after = len(matrix)
 
     # --- backfill prior-year values from .md STEP 5 into otherwise-empty cells ---
+    # consistent priors -> the .md figure directly; priors that conflict with the
+    # line's own YoY% -> a live formula reconstructing it from the current cell.
     backfilled = 0
+    computed_cnt = 0
     bad_prior = 0
     matrix_lc = {k.lower(): k for k in matrix}
     for mdp in glob.glob(os.path.join(SOURCES, "**", "transcripts", "CELH_*.md"),
@@ -612,19 +616,27 @@ def main():
         for k in kpis:
             if k['prior'] is None or not k['period']:
                 continue
-            if not k['pct'] and not prior_consistent(k['value'], k['prior'], k['yoy']):
-                bad_prior += 1                 # .md typo — skip rather than insert
-                continue
             pp = prior_year_period(k['period'])
             cmk = matrix_lc.get(k['metric'].lower())
             if not pp or cmk is None or pp in matrix[cmk]:
                 continue                       # only fill EXISTING rows / EMPTY cells
-            matrix[cmk][pp] = [{'value': k['prior'], 'pct': k['pct'], 'earn': False,
-                                'event': ev, 'date': dt, 'label': k['metric_raw'],
-                                'derived': True, 'md': mdp, 'line': k['line']}]
+            base = {'pct': k['pct'], 'event': ev, 'date': dt,
+                    'label': k['metric_raw'], 'md': mdp, 'line': k['line']}
+            if k['pct'] or prior_consistent(k['value'], k['prior'], k['yoy']):
+                matrix[cmk][pp] = [dict(base, value=k['prior'], earn=False,
+                                        derived=True)]
+                backfilled += 1
+            elif (k['yoy'] is not None and k['period'] in matrix[cmk]
+                  and any(not r.get('derived') and not r.get('computed')
+                          for r in matrix[cmk][k['period']])):
+                matrix[cmk][pp] = [dict(base, computed=True,
+                                        current_period=k['period'], yoy=k['yoy'])]
+                computed_cnt += 1
+            else:
+                bad_prior += 1                 # no reliable basis — leave blank
+                continue
             pk = parse_period(pp)
             periods.setdefault(pp, pk[1] if pk else 0)
-            backfilled += 1
 
     # --- order axes ---
     ordered_periods = sorted(periods, key=lambda p: periods[p])
@@ -671,6 +683,7 @@ def main():
     hdr_font = Font(bold=True, color='FFFFFF')
     core_font = Font(bold=True)
     prior_font = Font(italic=True, color='808080')   # prior-year backfilled cells
+    computed_font = Font(italic=True, color='2F6FA8')  # reconstructed-formula cells
 
     ws.cell(row=1, column=1, value="CELH Transcript KPI Consolidation — reported value per period")
     ws.cell(row=1, column=1).font = Font(bold=True, size=12)
@@ -691,7 +704,7 @@ def main():
 
     unlocated = set()
     no_md = []
-    stats = {'kpi': 0, 'section': 0, 'none': 0, 'prior': 0}
+    stats = {'kpi': 0, 'section': 0, 'none': 0, 'prior': 0, 'computed': 0}
 
     def tab_of(rec):
         return tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
@@ -715,6 +728,23 @@ def main():
                 f"STEP-5 KPI “{r['label']}” (PriorYearValue field).",
                 "transcript consolidation")
             cm.width, cm.height = 330, 100
+            c.comment = cm
+            return
+        if recs_s[0].get('computed'):             # reconstructed as a live formula
+            r = recs_s[0]
+            ref = f"{get_column_letter(2 + ordered_periods.index(r['current_period']))}{row}"
+            c = ws.cell(row=row, column=2 + j,
+                        value=f"={ref}/(1+{r['yoy'] / 100:g})")
+            c.font = computed_font
+            c.hyperlink = obsidian_uri(r['md'], r['line'])
+            stats['computed'] += 1
+            cm = Comment(
+                f"Computed prior-year value: ={ref}/(1+{r['yoy']:g}%).\n"
+                "The .md PriorYearValue conflicted with the line's stated YoY%, so "
+                f"it is reconstructed from the {r['current_period']} figure.\n"
+                f"YoY source: {r['event']} ({r['date']}) — “{r['label']}”.",
+                "transcript consolidation")
+            cm.width, cm.height = 340, 116
             c.comment = cm
             return
         prim = next((r for r in recs_s if r['earn']), recs_s[0])
@@ -799,11 +829,13 @@ def main():
     print(f"  metric rows consolidated: {n_before} -> {n_after}")
     print(f"  numeric datapoints kept: {placed}; non-numeric dropped: {dropped_text}")
     print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
-    print(f"  prior-year cells backfilled from .md STEP 5: {backfilled} "
-          f"(skipped {bad_prior} as .md-inconsistent vs YoY%)")
+    print(f"  prior-year cells: {backfilled} backfilled from .md, "
+          f"{computed_cnt} reconstructed as formulas (.md-inconsistent), "
+          f"{bad_prior} left blank (no basis)")
     print(f"  cells deep-linked to .md: {n_cells - len(no_md)} "
           f"(exact KPI line: {stats['kpi']}, STEP-5 section: {stats['section']}, "
-          f"prior-year: {stats['prior']}, file top: {stats['none']}); no .md found: {len(no_md)}")
+          f"prior-year: {stats['prior']}, computed: {stats['computed']}, "
+          f"file top: {stats['none']}); no .md found: {len(no_md)}")
     print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
     print(f"  rows placed via transcript-period fallback: {fallback_used}")
     print(f"  rows skipped (no period, no fallback): {skipped_no_period}")
