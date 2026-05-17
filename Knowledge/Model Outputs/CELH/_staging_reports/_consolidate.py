@@ -682,8 +682,9 @@ def main():
     hdr_fill = PatternFill('solid', fgColor='1F4E78')
     hdr_font = Font(bold=True, color='FFFFFF')
     core_font = Font(bold=True)
-    prior_font = Font(italic=True, color='808080')   # prior-year backfilled cells
-    computed_font = Font(italic=True, color='2F6FA8')  # reconstructed-formula cells
+    reported_font = Font(color='2F6FA8')             # directly-reported cells (blue)
+    prior_font = Font(italic=True, color='808080')   # prior-year backfilled cells (gray)
+    computed_font = Font(italic=True)                # reconstructed-formula cells (black)
 
     ws.cell(row=1, column=1, value="CELH Transcript KPI Consolidation — reported value per period")
     ws.cell(row=1, column=1).font = Font(bold=True, size=12)
@@ -749,6 +750,7 @@ def main():
             return
         prim = next((r for r in recs_s if r['earn']), recs_s[0])
         c = ws.cell(row=row, column=2 + j, value=prim['value'])
+        c.font = reported_font
         if prim['pct']:
             c.number_format = '0.0%'
         md = find_md(prim['event'], prim['date'])    # deep-link to the source .md
