@@ -134,6 +134,11 @@ _canon('S&M % of Revenue', 's&m % of revenue', 's&m % of sales',
        'sales & marketing as % of revenue', 's&m expense % of sales')
 _canon('G&A % of Revenue', 'g&a % of revenue', 'g&a % of sales', 'g&a (% of revenue)',
        'g&a (% of sales)')
+# convenience-channel: keep sales growth, store count and ACV as 3 DISTINCT metrics;
+# only merge exact same-metric label variants within each
+_canon('Convenience Channel ACV', 'convenience acv', 'convenience channel acv')
+_canon('Convenience Channel Store Locations', 'convenience channel store locations',
+       'convenience store locations')
 
 # key metrics surfaced (bold) at the top of the sheet, in this order
 CORE = [
