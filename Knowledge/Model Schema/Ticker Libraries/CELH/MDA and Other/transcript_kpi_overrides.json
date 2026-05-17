@@ -1,0 +1,14 @@
+{
+  "ticker": "CELH",
+  "_doc": "Per-ticker transcript-KPI overrides for CELH. 'aliases' extend the generic transcript_kpi_library.json canonical_aliases (same form: lowercased post-normalization metric -> canonical row name). 'corrections' record audit-surfaced value fixes: each {metric, period, value|skip, note}. Corrections are applied by build_kpi_sheet.py after the matrix is built; never hand-edit digest JSONs to fix a value.",
+  "aliases": {
+    "asia (china royalty)": "Asia Revenue",
+    "asia (china royalties)": "Asia Revenue",
+    "asia (incl. china royalties)": "Asia Revenue",
+    "convenience acv": "Convenience Channel ACV",
+    "convenience channel acv": "Convenience Channel ACV",
+    "convenience channel store locations": "Convenience Channel Store Locations",
+    "convenience store locations": "Convenience Channel Store Locations"
+  },
+  "corrections": []
+}
