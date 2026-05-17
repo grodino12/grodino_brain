@@ -326,27 +326,39 @@ def parse_md_kpis(path):
 
 
 def kpi_line(path, metric, period, value):
-    """Best STEP-5 line for an (metric, period, value) datapoint -> (line, kind)."""
+    """Best STEP-5 line for an (metric, period, value) datapoint -> (line, kind).
+
+    A specific KPI line is only used when the datapoint can be confirmed against
+    it — by matching value, or by an exact metric-name match. A loose name
+    resemblance is NOT enough (it would mislink e.g. a sales-growth % onto a
+    store-count KPI); those fall back to the STEP-5 section header instead.
+    """
     kpis, step5 = parse_md_kpis(path)
     cands = [k for k in kpis if k['period'] == period]
+    section = (step5, 'section' if step5 else 'none')
     if not cands:
-        return (step5, 'section' if step5 else 'none')
+        return section
 
     def vclose(k):
         if k['value'] is None or value is None:
             return False
         return abs(k['value'] - value) <= 0.02 * max(abs(k['value']), abs(value), 1e-9) + 1e-6
 
-    pool = [k for k in cands if vclose(k)] or cands
     ml = str(metric).lower()
-    exact = [k for k in pool if k['metric'].lower() == ml]
-    if exact:
+    vmatch = [k for k in cands if vclose(k)]
+    if vmatch:                                   # value confirmed -> trust it
+        if len(vmatch) == 1:
+            return (vmatch[0]['line'], 'kpi')
+        exact = [k for k in vmatch if k['metric'].lower() == ml]
+        if exact:
+            return (exact[0]['line'], 'kpi')
+        mt = set(ml.split())
+        best = max(vmatch, key=lambda k: len(mt & set(k['metric'].lower().split())))
+        return (best['line'], 'kpi')
+    exact = [k for k in cands if k['metric'].lower() == ml]   # no value match
+    if len(exact) == 1:                          # exact name is still trustworthy
         return (exact[0]['line'], 'kpi')
-    if len(pool) == 1:
-        return (pool[0]['line'], 'kpi')
-    mt = set(ml.split())
-    best = max(pool, key=lambda k: len(mt & set(k['metric'].lower().split())))
-    return (best['line'], 'kpi')
+    return section                               # uncertain -> KPI section, not a guess
 
 
 def obsidian_uri(path, line):
