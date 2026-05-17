@@ -246,6 +246,114 @@ def clean_value(v):
     return v.strip()
 
 
+_PAREN_PERIOD = re.compile(
+    r'\s*\((?:Q[1-4]|FY|H[12]|9M|Full[ -]?Year|Nine Months(?: YTD)?|'
+    r'Six Months(?: YTD)?|Three Months(?: YTD)?|YTD|First Half|Second Half|'
+    r'Quarter|Annual)\)\s*', re.I)
+
+
+def canon_metric(raw):
+    """Canonicalize a STEP-5 KPI metric name so it lines up with sheet rows."""
+    s = _PAREN_PERIOD.sub(' ', str(raw))
+    m = norm_metric(s)
+    return CANON.get(m.lower(), m)
+
+
+def md_value(s):
+    """Parse a STEP-5 '**Value**' field to a $M number (fraction for %)."""
+    s = str(s).strip()
+    m = re.search(r'-?\$?\s*-?[\d,]+\.?\d*', s)
+    if not m:
+        return None
+    try:
+        num = float(m.group().replace('$', '').replace(' ', '').replace(',', ''))
+    except ValueError:
+        return None
+    tail = s[m.end():m.end() + 1].upper()
+    if tail == 'B':
+        num *= 1000
+    elif tail == 'K':
+        num /= 1000
+    if '%' in s:
+        num /= 100.0
+    return num
+
+
+_MD_CACHE = {}
+
+
+def parse_md_kpis(path):
+    """Parse a transcript .md's STEP 5 KPI block -> ([{line,metric,period,value}], step5_line)."""
+    if path in _MD_CACHE:
+        return _MD_CACHE[path]
+    kpis, step5_line = [], None
+    try:
+        lines = open(path, encoding='utf-8').read().split('\n')
+    except OSError:
+        _MD_CACHE[path] = (kpis, step5_line)
+        return _MD_CACHE[path]
+    in5 = False
+    for i, ln in enumerate(lines, 1):
+        if re.match(r'##\s+STEP\s*5\b', ln):
+            in5, step5_line = True, i
+            continue
+        if in5 and re.match(r'##\s+STEP\s*6\b', ln):
+            break
+        if in5 and ln.startswith('##### '):
+            mm = re.match(r'#####\s+\*\*(.+?)\*\*', ln)
+            if not mm:
+                continue
+            vm = re.search(r'\*\*Value\*\*:\s*([^|]+)', ln)
+            fy = re.search(r'FiscalYear:\s*(\d{4})', ln)
+            fq = re.search(r'FiscalQuarter:\s*([A-Za-z0-9]+)', ln)
+            period = None
+            if fy and fq:
+                y, q = fy.group(1), fq.group(1).upper()
+                if q in ('Q1', 'Q2', 'Q3', 'Q4', 'H1', 'H2'):
+                    period = f"{q} {y}"
+                elif q == 'FY':
+                    period = f"FY{y}"
+                elif q == '9M':
+                    period = f"9M {y}"
+            kpis.append({'line': i, 'metric': canon_metric(mm.group(1)),
+                         'period': period,
+                         'value': md_value(vm.group(1)) if vm else None})
+    _MD_CACHE[path] = (kpis, step5_line)
+    return _MD_CACHE[path]
+
+
+def kpi_line(path, metric, period, value):
+    """Best STEP-5 line for an (metric, period, value) datapoint -> (line, kind)."""
+    kpis, step5 = parse_md_kpis(path)
+    cands = [k for k in kpis if k['period'] == period]
+    if not cands:
+        return (step5, 'section' if step5 else 'none')
+
+    def vclose(k):
+        if k['value'] is None or value is None:
+            return False
+        return abs(k['value'] - value) <= 0.02 * max(abs(k['value']), abs(value), 1e-9) + 1e-6
+
+    pool = [k for k in cands if vclose(k)] or cands
+    ml = str(metric).lower()
+    exact = [k for k in pool if k['metric'].lower() == ml]
+    if exact:
+        return (exact[0]['line'], 'kpi')
+    if len(pool) == 1:
+        return (pool[0]['line'], 'kpi')
+    mt = set(ml.split())
+    best = max(pool, key=lambda k: len(mt & set(k['metric'].lower().split())))
+    return (best['line'], 'kpi')
+
+
+def obsidian_uri(path, line):
+    rel = os.path.relpath(path, BRAIN_ROOT).replace(os.sep, '/')
+    uri = f"obsidian://adv-uri?vault={quote(VAULT)}&filepath={quote(rel)}"
+    if line:
+        uri += f"&line={line}"
+    return uri
+
+
 def main():
     files = sorted(glob.glob(os.path.join(HERE, "*.json")))
     # matrix[metric][period] = list of source records
@@ -433,6 +541,7 @@ def main():
 
     unlocated = set()
     no_md = []
+    stats = {'kpi': 0, 'section': 0, 'none': 0}
 
     def tab_of(rec):
         return tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
@@ -440,15 +549,17 @@ def main():
     def vfmt(r):
         return f"{r['value']:.1%}" if r['pct'] else f"{r['value']:g}"
 
-    def place(row, j, recs):
+    def place(row, j, metric, period, recs):
         recs_s = sorted(recs, key=lambda r: str(r['date']))
         prim = next((r for r in recs_s if r['earn']), recs_s[0])
         c = ws.cell(row=row, column=2 + j, value=prim['value'])
         if prim['pct']:
             c.number_format = '0.0%'
-        md = find_md(prim['event'], prim['date'])    # link cell to source .md file
+        md = find_md(prim['event'], prim['date'])    # deep-link to the source .md
         if md:
-            c.hyperlink = Path(md).as_uri()
+            line, kind = kpi_line(md, metric, period, prim['value'])
+            c.hyperlink = obsidian_uri(md, line)
+            stats[kind] = stats.get(kind, 0) + 1
         else:
             no_md.append((prim['event'], prim['date']))
         for r in recs_s:
@@ -481,7 +592,7 @@ def main():
         for j, p in enumerate(ordered_periods):
             recs = matrix[m].get(p)
             if recs:
-                place(rr, j, recs)
+                place(rr, j, m, p, recs)
     rr += 1
     dc = ws.cell(row=rr, column=1, value="— Other metrics —")
     dc.font = Font(bold=True, italic=True, size=9)
@@ -493,7 +604,7 @@ def main():
         for j, p in enumerate(ordered_periods):
             recs = matrix[m].get(p)
             if recs:
-                place(rr, j, recs)
+                place(rr, j, m, p, recs)
 
     ws.freeze_panes = "B5"
     ws.column_dimensions['A'].width = 38
@@ -522,7 +633,9 @@ def main():
     print(f"  metric rows consolidated: {n_before} -> {n_after}")
     print(f"  numeric datapoints kept: {placed}; non-numeric dropped: {dropped_text}")
     print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
-    print(f"  cells hyperlinked to source .md: {n_cells - len(no_md)}; no .md found: {len(no_md)}")
+    print(f"  cells deep-linked to .md: {n_cells - len(no_md)} "
+          f"(exact KPI line: {stats['kpi']}, fell back to STEP-5 section: {stats['section']}, "
+          f"file top: {stats['none']}); no .md found: {len(no_md)}")
     print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
     print(f"  rows skipped (no period detected): {skipped_no_period}")
     print(f"  transcript tabs reordered newest-first; total sheets: {len(wb.sheetnames)}")
