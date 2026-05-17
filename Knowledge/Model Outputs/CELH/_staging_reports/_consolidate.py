@@ -104,12 +104,20 @@ def norm_metric(label):
     return ALIAS.get(key, s)
 
 
-def is_number(v):
+def clean_value(v):
+    """Coerce '$15.1M' / '~$400M' / '1,200' to a float; leave %/text as-is."""
     if isinstance(v, (int, float)):
-        return True
-    if isinstance(v, str):
-        return bool(re.fullmatch(r'-?\d[\d,]*\.?\d*%?', v.strip()))
-    return False
+        return v
+    if not isinstance(v, str):
+        return v
+    s = v.strip().lstrip('~≈').strip().replace('$', '').strip()
+    m = re.fullmatch(r'([+-]?[\d,]+\.?\d*)\s*[Mm]?', s)
+    if m:
+        try:
+            return float(m.group(1).replace(',', '').lstrip('+'))
+        except ValueError:
+            pass
+    return v.strip()
 
 
 def main():
@@ -173,6 +181,7 @@ def main():
             value = r[cur_col]
             if value in (None, '', 'n/a', 'N/A', 'n/d'):
                 continue
+            value = clean_value(value)
 
             per = parse_period(c0)
             plabel = per[0] if per else hdr_period
@@ -226,11 +235,23 @@ def main():
         c.fill = hdr_fill; c.font = hdr_font
         c.alignment = Alignment(horizontal='center')
 
-    for i, m in enumerate(ordered_metrics):
-        rr = hrow + 1 + i
-        mc = ws.cell(row=rr, column=1, value=m)
-        if m in CORE:
-            mc.font = core_font
+    div_fill = PatternFill('solid', fgColor='D9D9D9')
+    rr = hrow
+    for m in core_present:
+        rr += 1
+        ws.cell(row=rr, column=1, value=m).font = core_font
+        for j, p in enumerate(ordered_periods):
+            v = matrix[m].get(p)
+            if v is not None:
+                ws.cell(row=rr, column=2 + j, value=v[0])
+    rr += 1
+    dc = ws.cell(row=rr, column=1, value="— Other / one-off metrics —")
+    dc.font = Font(bold=True, italic=True, size=9)
+    for j in range(len(ordered_periods) + 1):
+        ws.cell(row=rr, column=1 + j).fill = div_fill
+    for m in rest:
+        rr += 1
+        ws.cell(row=rr, column=1, value=m)
         for j, p in enumerate(ordered_periods):
             v = matrix[m].get(p)
             if v is not None:
