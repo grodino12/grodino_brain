@@ -13,14 +13,16 @@ header ('Q1 2022' / 'Q1 2021'); both styles are handled.
 """
 import json, glob, re, os
 from collections import Counter
-from pathlib import Path
+from urllib.parse import quote
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.comments import Comment
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WB_PATH = os.path.join(os.path.dirname(HERE), "CELH_disclosures.xlsx")
-SOURCES = os.path.abspath(os.path.join(HERE, "..", "..", "..", "..", "Sources", "CELH"))
+BRAIN_ROOT = os.path.abspath(os.path.join(HERE, "..", "..", "..", ".."))
+SOURCES = os.path.join(BRAIN_ROOT, "Sources", "CELH")
+VAULT = "Brain"                       # Obsidian vault name (folder basename)
 SHEET = "KPI Consolidated"
 
 PER_RE = re.compile(
