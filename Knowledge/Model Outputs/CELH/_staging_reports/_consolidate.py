@@ -1,14 +1,15 @@
 """Build a 'KPI Consolidated' sheet in CELH_disclosures.xlsx.
 
 Reads the 69 staging digest JSONs, normalizes metric + period, and writes a
-metric-time-series matrix: rows = normalized KPI, columns = period (chrono),
-cell = the 'Current' reported value. Quantitative KPIs only.
+metric-time-series matrix: rows = normalized KPI, columns = period (chrono).
+
+ALL quantitative datapoints are kept — standard three-statement lines as well
+as transcript-only granularity, and every transcript that reports a given
+(metric, period) is recorded. The cell shows the earnings-call figure (or the
+earliest source if none); the Shift+F2 note lists every source with its value.
 
 Period can live in the row label ('Total Revenue Q4 2018') or in the column
-header ('Q1 2022' / 'Q1 2021'); both styles are handled. Value/Period-only
-color tables (channel stats, China items, guidance) are skipped.
-On a (metric, period) collision, an earnings-call source wins over a
-conference source; earnings sources never overwrite each other (first wins).
+header ('Q1 2022' / 'Q1 2021'); both styles are handled.
 """
 import json, glob, re, os
 import openpyxl
@@ -20,7 +21,7 @@ WB_PATH = os.path.join(os.path.dirname(HERE), "CELH_disclosures.xlsx")
 SHEET = "KPI Consolidated"
 
 PER_RE = re.compile(
-    r'\b(Q[1-4])\s*[\'’]?\s*(20\d\d)\b'      # Q1 2022 / Q1'22-ish
+    r'\b(Q[1-4])\s*[\'’]?\s*(20\d\d)\b'            # Q1 2022
     r'|\bFY\s*(20\d\d)\b'                          # FY2018
     r'|\b(9M)\s*(20\d\d)\b'                        # 9M 2018
     r'|\b(H[12])\s*(20\d\d)\b'                     # H1 2019
@@ -29,26 +30,14 @@ PER_RE = re.compile(
 
 ORD = {'Q1': 1, 'Q2': 2, 'H1': 2.5, 'Q3': 3, '9M': 3.5, 'H2': 3.5, 'Q4': 4, 'FY': 5}
 
+# trailing unit suffix on a label, e.g. '($M)', '($B)', '($000)', '(%)', '(bps)'
 UNIT_RE = re.compile(
     r'\s*\(\s*(?:in\s*)?'
     r'(?:\$\s*[MBK]?|\$?\s*000s?|[MBK]|%|bps|pts?|pp|x|'
-    r'millions?|billions?|thousands?|non-?GAAP|GAAP|adjusted|adj\.?)'
+    r'millions?|billions?|thousands?)'
     r'\s*\)\s*$', re.I)
 
 SCALE_RE = re.compile(r'\(\s*(?:in\s*)?\$?\s*(B|K|000|millions?|billions?|thousands?)\s*\)\s*$', re.I)
-
-
-def label_scale(label):
-    """Multiplier to bring a value into $M, read from a unit suffix on the label."""
-    m = SCALE_RE.search(str(label))
-    if not m:
-        return 1.0
-    t = m.group(1).lower()
-    if t in ('b', 'billion', 'billions'):
-        return 1000.0
-    if t in ('k', '000', 'thousand', 'thousands'):
-        return 0.001
-    return 1.0
 
 # bare period qualifiers with no year ('9M Revenue', 'FY G&A', 'Revenue Q4')
 LEAD_PER = re.compile(r'^\s*(?:Q[1-4]|FY|9M|H[12]|1H|2H|YTD)\b[\s.:/-]*', re.I)
@@ -82,60 +71,30 @@ ALIAS = {
     'general & administrative': 'General & Administrative',
 }
 
-# Standard three-statement / filing line items — EXCLUDED from the sheet:
-# these are systematically extractable from SEC filings, so they add nothing here.
-STD_EXACT = {
-    'total revenue', 'revenue', 'net revenue', 'net sales', 'total net revenues',
-    'gross profit', 'gross margin', 'gross profit margin',
-    'selling & marketing', 'sales & marketing', 'selling and marketing',
-    'general & administrative', 'general and administrative', 'sg&a',
-    'operating expenses', 'total operating expenses', 'operating expense',
-    'operating income', 'income from operations', 'loss from operations',
-    'operating loss', 'operating margin',
-    'pre-tax income', 'income before taxes', 'pretax income', 'pre-tax loss',
-    'net income', 'net loss', 'net income (loss)', 'net loss to common',
-    'net income to common', 'net income to common shareholders',
-    'eps', 'earnings per share', 'diluted eps', 'basic eps',
-    'net loss per share', 'net income per share', 'diluted earnings per share',
-    'cash', 'cash & equivalents', 'cash and cash equivalents', 'cash position',
-    'working capital', 'net working capital',
-    'cash from operations', 'operating cash flow', 'cash used in operations',
-    'cash flow from operations', 'cash provided by operations', 'free cash flow',
-    'capex', 'capital expenditures',
-    'total debt', 'long-term debt', 'short-term debt', 'net debt',
-    'total assets', 'total liabilities', 'stockholders equity',
-    'shareholders equity', "stockholders' equity",
-    'inventory', 'inventories', 'accounts receivable', 'accounts payable',
-    'income tax expense', 'income tax', 'tax expense', 'effective tax rate',
-    'interest expense', 'interest income', 'depreciation & amortization',
-    'depreciation and amortization',
-    'basic shares', 'fully diluted shares', 'diluted shares', 'shares outstanding',
-    'weighted average shares', 'basic weighted average shares',
-    'diluted weighted average shares',
-}
-# regional revenue is in the 10-K geographic footnote (and the MDA Disclosures sheet)
-REGION_RE = re.compile(
-    r'\b(north america|north american|europe|european|nordics?|emea|'
-    r'asia|asian|apac|international|domestic|latin america|oceania)\b', re.I)
-
-# explicitly KEPT priority categories, surfaced at the top of the sheet
-PRIORITY = ['adjusted ebitda', 'adj ebitda', 'adj. ebitda', 'ebitda',
-            'amazon', 'e-commerce', 'ecommerce',
-            'alani', 'rockstar', 'celsius brand', 'big beverages', 'func food',
-            'fast brand']
-
-
-def is_standard(metric):
-    """True if the metric is a standard filing line item -> exclude it."""
-    key = metric.lower().strip()
-    if key in STD_EXACT:
-        return True
-    if 'revenue' in key and REGION_RE.search(key):   # regional revenue split
-        return True
-    return False
+# key metrics surfaced (bold) at the top of the sheet, in this order
+CORE = [
+    'Total Revenue', 'North America Revenue', 'International Revenue',
+    'Europe Revenue', 'Asia Revenue', 'Amazon Revenue',
+    'Gross Profit', 'Gross Margin', 'Selling & Marketing',
+    'General & Administrative', 'Operating Income', 'Net Income',
+    'Adjusted EBITDA', 'Cash', 'Working Capital',
+]
 
 HEADER_TOKENS = {'prior yr', 'prior year', 'current', 'change', 'yoy', 'yoy %',
                  'value', 'period', 'qoq', 'qoq %', 'metric'}
+
+
+def label_scale(label):
+    """Multiplier to bring a value into $M, read from a unit suffix on the label."""
+    m = SCALE_RE.search(str(label))
+    if not m:
+        return 1.0
+    t = m.group(1).lower()
+    if t in ('b', 'billion', 'billions'):
+        return 1000.0
+    if t in ('k', '000', 'thousand', 'thousands'):
+        return 0.001
+    return 1.0
 
 
 def parse_period(text):
@@ -197,11 +156,10 @@ def clean_value(v):
 
 def main():
     files = sorted(glob.glob(os.path.join(HERE, "*.json")))
-    # matrix[metric][period] = (value, is_earnings_source)
+    # matrix[metric][period] = list of source records
     matrix = {}
     periods = {}          # label -> sort_key
     skipped_no_period = 0
-    dropped_standard = 0
     placed = 0
 
     for f in files:
@@ -243,7 +201,6 @@ def main():
             if is_header or has_hdr_period:
                 cur_col = None
                 hdr_period = None
-                # skip pure color tables (Value / Period only)
                 meaningful = [t for t in low if t]
                 if meaningful and set(meaningful) <= {'value', 'period'}:
                     continue
@@ -260,10 +217,15 @@ def main():
             # --- data row ---
             if cur_col is None or cur_col >= len(r):
                 continue
-            value = r[cur_col]
-            if value in (None, '', 'n/a', 'N/A', 'n/d'):
+            raw = r[cur_col]
+            if raw in (None, '', 'n/a', 'N/A', 'n/d'):
                 continue
-            value = clean_value(value)
+            value = clean_value(raw)
+            # scale to $M from a label unit suffix, unless the raw value already
+            # carried its own M/B/K suffix (clean_value handled that case)
+            if isinstance(value, (int, float)) and not (
+                    isinstance(raw, str) and re.search(r'[MBK]\s*$', raw.strip(), re.I)):
+                value *= label_scale(c0)
 
             per = parse_period(c0)
             plabel = per[0] if per else hdr_period
@@ -278,38 +240,17 @@ def main():
             metric = norm_metric(c0)
             if not metric:
                 continue
-            if is_standard(metric):          # systematically in filings -> exclude
-                dropped_standard += 1
-                continue
 
             periods[plabel] = pkey
-            cell = matrix.setdefault(metric, {})
-            prev = cell.get(plabel)
             rec = {'value': value, 'earn': is_earn, 'event': event,
-                   'date': date, 'label': c0, 'others': 0}
-            # earnings source wins; first earnings source is kept
-            if prev is None:
-                cell[plabel] = rec
-                placed += 1
-            elif is_earn and not prev['earn']:
-                rec['others'] = prev['others'] + 1
-                cell[plabel] = rec
-            else:
-                prev['others'] += 1
+                   'date': date, 'label': c0}
+            matrix.setdefault(metric, {}).setdefault(plabel, []).append(rec)
+            placed += 1
 
     # --- order axes ---
     ordered_periods = sorted(periods, key=lambda p: periods[p])
-
-    def prio_rank(m):
-        ml = m.lower()
-        for i, p in enumerate(PRIORITY):
-            if p in ml:
-                return i
-        return None
-
-    core_present = sorted((m for m in matrix if prio_rank(m) is not None),
-                          key=lambda m: (prio_rank(m), m.lower()))
-    rest = sorted((m for m in matrix if prio_rank(m) is None), key=str.lower)
+    core_present = [m for m in CORE if m in matrix]
+    rest = sorted((m for m in matrix if m not in CORE), key=str.lower)
 
     # --- write sheet ---
     wb = openpyxl.load_workbook(WB_PATH)
@@ -334,12 +275,13 @@ def main():
     hdr_font = Font(bold=True, color='FFFFFF')
     core_font = Font(bold=True)
 
-    ws.cell(row=1, column=1, value="CELH Transcript-Disclosed KPIs — 'Current' reported value per period")
+    ws.cell(row=1, column=1, value="CELH Transcript KPI Consolidation — reported value per period")
     ws.cell(row=1, column=1).font = Font(bold=True, size=12)
     ws.cell(row=2, column=1,
-            value="Transcript-only granularity (channel, retail-scan, distribution, brand, non-GAAP, guidance). "
-                  "Standard three-statement lines & regional revenue are excluded — those come from SEC filings. "
-                  "Source: 69 transcript digests; earnings-call figures take precedence over conference restatements.")
+            value="Every quantitative datapoint disclosed across the 69 transcripts — including items also in "
+                  "SEC filings, and metrics reported by more than one transcript. Cell shows the earnings-call "
+                  "figure (else earliest source); Shift+F2 note lists every source with its value. "
+                  "Values normalized to $M; period read from row label or column header.")
     ws.cell(row=2, column=1).font = Font(italic=True, size=9, color='808080')
 
     hrow = 4
@@ -350,22 +292,35 @@ def main():
         c.fill = hdr_fill; c.font = hdr_font
         c.alignment = Alignment(horizontal='center')
 
-    unlocated = []
+    unlocated = set()
 
-    def place(row, j, rec):
-        c = ws.cell(row=row, column=2 + j, value=rec['value'])
-        tab = tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
-        if tab is None:
-            unlocated.append((rec['event'], rec['date']))
-            tab = "(see Event/Date below)"
-        txt = (f"Source: {rec['event']}\n"
-               f"Date: {rec['date']}\n"
-               f"Workbook tab: {tab}\n"
-               f"Digest label: “{rec['label']}”")
-        if rec['others']:
-            txt += f"\n(metric+period also reported in {rec['others']} other transcript(s))"
+    def tab_of(rec):
+        return tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
+
+    def place(row, j, recs):
+        recs_s = sorted(recs, key=lambda r: str(r['date']))
+        prim = next((r for r in recs_s if r['earn']), recs_s[0])
+        c = ws.cell(row=row, column=2 + j, value=prim['value'])
+        for r in recs_s:
+            if tab_of(r) is None:
+                unlocated.add((r['event'], r['date']))
+        if len(recs_s) == 1:
+            r = recs_s[0]
+            txt = (f"Source: {r['event']}\n"
+                   f"Date: {r['date']}\n"
+                   f"Workbook tab: {tab_of(r) or '(see Event/Date)'}\n"
+                   f"Digest label: “{r['label']}”")
+        else:
+            lines = [f"Reported in {len(recs_s)} transcripts "
+                     f"(► = figure shown in cell):"]
+            for r in recs_s:
+                mark = "►" if r is prim else "•"
+                lines.append(f"{mark} {r['value']}  —  {r['event']} ({r['date']})")
+                lines.append(f"   tab: {tab_of(r) or '(see Event/Date)'}  |  “{r['label']}”")
+            txt = "\n".join(lines)
         cm = Comment(txt, "transcript consolidation")
-        cm.width, cm.height = 320, 132
+        cm.width = 360
+        cm.height = min(430, 46 + 15 * (len(recs_s) * 2 + 1))
         c.comment = cm
 
     div_fill = PatternFill('solid', fgColor='D9D9D9')
@@ -374,11 +329,11 @@ def main():
         rr += 1
         ws.cell(row=rr, column=1, value=m).font = core_font
         for j, p in enumerate(ordered_periods):
-            v = matrix[m].get(p)
-            if v is not None:
-                place(rr, j, v)
+            recs = matrix[m].get(p)
+            if recs:
+                place(rr, j, recs)
     rr += 1
-    dc = ws.cell(row=rr, column=1, value="— Other transcript-disclosed metrics —")
+    dc = ws.cell(row=rr, column=1, value="— Other metrics —")
     dc.font = Font(bold=True, italic=True, size=9)
     for j in range(len(ordered_periods) + 1):
         ws.cell(row=rr, column=1 + j).fill = div_fill
@@ -386,9 +341,9 @@ def main():
         rr += 1
         ws.cell(row=rr, column=1, value=m)
         for j, p in enumerate(ordered_periods):
-            v = matrix[m].get(p)
-            if v is not None:
-                place(rr, j, v)
+            recs = matrix[m].get(p)
+            if recs:
+                place(rr, j, recs)
 
     ws.freeze_panes = "B5"
     ws.column_dimensions['A'].width = 38
@@ -396,11 +351,13 @@ def main():
         ws.column_dimensions[ws.cell(row=hrow, column=2 + j).column_letter].width = 11
 
     wb.save(WB_PATH)
-    print(f"Wrote '{SHEET}': {len(core_present) + len(rest)} metrics x {len(ordered_periods)} periods")
-    print(f"  priority (EBITDA/Amazon/brand): {len(core_present)}; other: {len(rest)}")
-    print(f"  datapoints placed: {placed}; rows dropped as standard filing lines: {dropped_standard}")
-    print(f"  rows skipped (no period): {skipped_no_period}")
-    print(f"  source comments attached: {placed}; datapoints with no tab match: {len(unlocated)}")
+    n_cells = sum(len(pm) for pm in matrix.values())
+    n_multi = sum(1 for pm in matrix.values() for recs in pm.values() if len(recs) > 1)
+    print(f"Wrote '{SHEET}': {len(matrix)} metrics x {len(ordered_periods)} periods")
+    print(f"  datapoints kept (incl. duplicates): {placed}")
+    print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
+    print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
+    print(f"  rows skipped (no period detected): {skipped_no_period}")
     print(f"  period span: {ordered_periods[0]} -> {ordered_periods[-1]}")
     print(f"  total sheets now: {len(wb.sheetnames)}")
 
