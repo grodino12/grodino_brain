@@ -282,27 +282,34 @@ def canon_metric(raw):
 
 
 def md_value(s):
-    """Parse a STEP-5 '**Value**' field to a $M number (fraction for %).
+    """Parse a STEP-5 value field -> (number_in_$M, is_percent) or None.
 
-    Handles leading-dot billions notation ('.0282B' = $28.2M) and '$28.2M' style.
+    Handles '$16.6M', leading-dot billions '.0282B' (= $28.2M), and raw-dollar
+    amounts like '$863,000' (= 0.863 $M). A value is a percent ONLY when '%'
+    immediately follows the number — not when '%' appears in a trailing note
+    such as '$152M; 20.5% of revenue'.
     """
     s = str(s).strip()
     m = re.search(r'[+-]?\$?\s*[+-]?[\d,]*\.?\d+', s)
     if not m:
         return None
+    raw = m.group()
+    had_dollar, had_comma = '$' in raw, ',' in raw
     try:
-        num = float(m.group().replace('$', '').replace(' ', '')
-                    .replace(',', '').lstrip('+'))
+        num = float(raw.replace('$', '').replace(' ', '').replace(',', '').lstrip('+'))
     except ValueError:
         return None
     tail = s[m.end():m.end() + 1].upper()
+    is_pct = (tail == '%')
     if tail == 'B':
         num *= 1000
     elif tail == 'K':
         num /= 1000
-    if '%' in s:
+    elif is_pct:
         num /= 100.0
-    return num
+    elif tail != 'M' and had_dollar and had_comma:   # raw dollars, e.g. $863,000
+        num /= 1_000_000.0
+    return (num, is_pct)
 
 
 _MD_CACHE = {}
@@ -356,12 +363,14 @@ def parse_md_kpis(path):
                     period = f"FY{y}"
                 elif q == '9M':
                     period = f"9M {y}"
+            mv = md_value(vm.group(1)) if vm else None
+            pv = md_value(pvm.group(1)) if pvm else None
             kpis.append({'line': i, 'metric': canon_metric(mm.group(1)),
                          'metric_raw': mm.group(1).strip(), 'period': period,
-                         'value': md_value(vm.group(1)) if vm else None,
-                         'prior': md_value(pvm.group(1)) if pvm else None,
+                         'value': mv[0] if mv else None,
+                         'prior': pv[0] if pv else None,
                          'yoy': yoy,
-                         'pct': bool(vm) and '%' in vm.group(1)})
+                         'pct': mv[1] if mv else False})
     _MD_CACHE[path] = (kpis, step5_line, ev, dt)
     return _MD_CACHE[path]
 
