@@ -97,6 +97,9 @@ _canon('International Revenue', 'international', 'international revenue',
        'international sales', 'international (h1)')
 _canon('Europe Revenue', 'europe revenue', 'european revenue', 'europe (nordic)',
        'europe / nordic', 'nordic revenue')
+_canon('Asia Revenue', 'asia revenue', 'asia', 'asian revenue', 'asia (china royalty)',
+       'asia (china royalties)', 'asia (incl. china royalties)')
+_canon('Other International Markets', 'other international', 'other international markets')
 _canon('Gross Profit', 'gross profit')
 _canon('Gross Margin', 'gross margin', 'gross profit margin', 'consolidated gross margin',
        'gaap gross margin', 'standalone gross margin')
