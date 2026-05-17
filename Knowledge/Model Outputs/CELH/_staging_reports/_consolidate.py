@@ -375,6 +375,30 @@ def parse_md_kpis(path):
     return _MD_CACHE[path]
 
 
+def paren_period(label, tp):
+    """Period from a parenthetical qualifier in a row label, e.g.
+    'International (H1)' -> 'H1 <transcript year>'. This overrides the column
+    header for that row, since the label is explicit about its own period."""
+    if not tp:
+        return None
+    m = _PAREN_PERIOD.search(str(label))
+    if not m:
+        return None
+    tok = m.group(0).strip().strip('()').strip().lower()
+    year = tp[0]
+    if re.fullmatch(r'q[1-4]', tok):
+        return f"{tok.upper()} {year}"
+    if tok in ('fy', 'full year', 'full-year', 'annual'):
+        return f"FY{year}"
+    if tok in ('9m', 'nine months', 'nine months ytd', 'ytd'):
+        return f"9M {year}"
+    if tok in ('h1', 'first half', 'six months', 'six months ytd'):
+        return f"H1 {year}"
+    if tok in ('h2', 'second half'):
+        return f"H2 {year}"
+    return None        # 'Quarter' / 'Three Months' — ambiguous, defer to header
+
+
 def prior_consistent(value, prior, yoy):
     """Sanity-check a STEP-5 PriorYearValue against the line's own YoYChangePct.
     Catches .md typos (e.g. '4.02B' where '.402B' was meant). True = trust it."""
@@ -568,7 +592,11 @@ def main():
             value, is_pct = fin
 
             per = parse_period(c0)
-            plabel = per[0] if per else hdr_period
+            plabel = per[0] if per else None
+            if not plabel:                      # '(H1)' / '(Q4)' qualifier in label
+                plabel = paren_period(c0, tp)
+            if not plabel:
+                plabel = hdr_period
             if not plabel and tp:               # no period anywhere -> transcript's own
                 plabel = fallback_period(c0, tp)
                 fallback_used += 1
@@ -757,7 +785,12 @@ def main():
             cm.width, cm.height = 340, 116
             c.comment = cm
             return
-        prim = next((r for r in recs_s if r['earn']), recs_s[0])
+        # earnings calls first; among ties prefer the total figure over a
+        # "to common" variant (they diverge once preferred dividends exist)
+        prim = min(recs_s, key=lambda r: (
+            0 if r['earn'] else 1,
+            1 if 'common' in str(r['label']).lower() else 0,
+            str(r['date'])))
         c = ws.cell(row=row, column=2 + j, value=prim['value'])
         c.font = reported_font
         if prim['pct']:
