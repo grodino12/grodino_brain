@@ -500,6 +500,21 @@ def main():
     for j in range(len(ordered_periods)):
         ws.column_dimensions[ws.cell(row=hrow, column=2 + j).column_letter].width = 11
 
+    # newest transcript tabs to the left (descending NN prefix); KPI sheet stays first
+    transcript_tabs, other_tabs = [], []
+    for sn in wb.sheetnames:
+        if sn == SHEET:
+            continue
+        sh = wb[sn]
+        if str(sh.cell(1, 1).value).strip().lower() == 'event':
+            m = re.match(r'(\d+)', sn)
+            transcript_tabs.append((int(m.group(1)) if m else 0, sn))
+        else:
+            other_tabs.append(sn)
+    transcript_tabs.sort(key=lambda x: x[0], reverse=True)
+    wb._sheets = ([wb[SHEET]] + [wb[sn] for _, sn in transcript_tabs]
+                  + [wb[sn] for sn in other_tabs])
+
     wb.save(WB_PATH)
     n_cells = sum(len(pm) for pm in matrix.values())
     n_multi = sum(1 for pm in matrix.values() for recs in pm.values() if len(recs) > 1)
@@ -507,10 +522,10 @@ def main():
     print(f"  metric rows consolidated: {n_before} -> {n_after}")
     print(f"  numeric datapoints kept: {placed}; non-numeric dropped: {dropped_text}")
     print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
+    print(f"  cells hyperlinked to source .md: {n_cells - len(no_md)}; no .md found: {len(no_md)}")
     print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
     print(f"  rows skipped (no period detected): {skipped_no_period}")
-    print(f"  period span: {ordered_periods[0]} -> {ordered_periods[-1]}")
-    print(f"  total sheets now: {len(wb.sheetnames)}")
+    print(f"  transcript tabs reordered newest-first; total sheets: {len(wb.sheetnames)}")
 
 
 if __name__ == "__main__":
