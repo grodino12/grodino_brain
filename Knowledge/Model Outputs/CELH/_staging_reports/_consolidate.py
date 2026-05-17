@@ -30,6 +30,10 @@ ORD = {'Q1': 1, 'Q2': 2, 'H1': 2.5, 'Q3': 3, '9M': 3.5, 'H2': 3.5, 'Q4': 4, 'FY'
 
 UNIT_RE = re.compile(r'\s*\((?:\$M|\$|%|\$ ?M|in \$M|M)\)\s*$', re.I)
 
+# bare period qualifiers with no year ('9M Revenue', 'FY G&A', 'Revenue Q4')
+LEAD_PER = re.compile(r'^\s*(?:Q[1-4]|FY|9M|H[12]|1H|2H|YTD)\b[\s.:/-]*', re.I)
+TRAIL_PER = re.compile(r'[\s.:/-]*\b(?:Q[1-4]|FY|9M|H[12]|1H|2H|YTD)\s*$', re.I)
+
 # light canonicalization of obvious synonyms
 ALIAS = {
     'domestic / north american revenue': 'North America Revenue',
@@ -96,7 +100,9 @@ def parse_period(text):
 
 def norm_metric(label):
     s = str(label)
-    s = PER_RE.sub('', s)                       # drop any period token
+    s = PER_RE.sub('', s)                       # drop period tokens with a year
+    s = LEAD_PER.sub('', s)                     # drop bare leading period ('9M ', 'FY ')
+    s = TRAIL_PER.sub('', s)                    # drop bare trailing period ('... Q4')
     s = UNIT_RE.sub('', s)
     s = re.sub(r'\bex[- ]?(China|Asia|one-time|outbound freight)\b', '', s, flags=re.I)
     s = re.sub(r'\s{2,}', ' ', s).strip(' -/,')
@@ -111,10 +117,16 @@ def clean_value(v):
     if not isinstance(v, str):
         return v
     s = v.strip().lstrip('~≈').strip().replace('$', '').strip()
-    m = re.fullmatch(r'([+-]?[\d,]+\.?\d*)\s*[Mm]?', s)
+    m = re.fullmatch(r'([+-]?[\d,]+\.?\d*)\s*([MmBbKk]?)', s)
     if m:
         try:
-            return float(m.group(1).replace(',', '').lstrip('+'))
+            num = float(m.group(1).replace(',', '').lstrip('+'))
+            suf = m.group(2).upper()
+            if suf == 'B':
+                num *= 1000          # billions -> $M
+            elif suf == 'K':
+                num /= 1000          # thousands -> $M
+            return num
         except ValueError:
             pass
     return v.strip()
