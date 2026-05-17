@@ -62,14 +62,57 @@ ALIAS = {
     'general & administrative': 'General & Administrative',
 }
 
-# core metrics surfaced at the top of the matrix, in this order
-CORE = [
-    'Total Revenue', 'North America Revenue', 'International Revenue',
-    'Europe Revenue', 'Asia Revenue', 'Amazon Revenue',
-    'Gross Profit', 'Gross Margin', 'Selling & Marketing',
-    'General & Administrative', 'Net Income', 'Adjusted EBITDA',
-    'Cash', 'Working Capital',
-]
+# Standard three-statement / filing line items — EXCLUDED from the sheet:
+# these are systematically extractable from SEC filings, so they add nothing here.
+STD_EXACT = {
+    'total revenue', 'revenue', 'net revenue', 'net sales', 'total net revenues',
+    'gross profit', 'gross margin', 'gross profit margin',
+    'selling & marketing', 'sales & marketing', 'selling and marketing',
+    'general & administrative', 'general and administrative', 'sg&a',
+    'operating expenses', 'total operating expenses', 'operating expense',
+    'operating income', 'income from operations', 'loss from operations',
+    'operating loss', 'operating margin',
+    'pre-tax income', 'income before taxes', 'pretax income', 'pre-tax loss',
+    'net income', 'net loss', 'net income (loss)', 'net loss to common',
+    'net income to common', 'net income to common shareholders',
+    'eps', 'earnings per share', 'diluted eps', 'basic eps',
+    'net loss per share', 'net income per share', 'diluted earnings per share',
+    'cash', 'cash & equivalents', 'cash and cash equivalents', 'cash position',
+    'working capital', 'net working capital',
+    'cash from operations', 'operating cash flow', 'cash used in operations',
+    'cash flow from operations', 'cash provided by operations', 'free cash flow',
+    'capex', 'capital expenditures',
+    'total debt', 'long-term debt', 'short-term debt', 'net debt',
+    'total assets', 'total liabilities', 'stockholders equity',
+    'shareholders equity', "stockholders' equity",
+    'inventory', 'inventories', 'accounts receivable', 'accounts payable',
+    'income tax expense', 'income tax', 'tax expense', 'effective tax rate',
+    'interest expense', 'interest income', 'depreciation & amortization',
+    'depreciation and amortization',
+    'basic shares', 'fully diluted shares', 'diluted shares', 'shares outstanding',
+    'weighted average shares', 'basic weighted average shares',
+    'diluted weighted average shares',
+}
+# regional revenue is in the 10-K geographic footnote (and the MDA Disclosures sheet)
+REGION_RE = re.compile(
+    r'\b(north america|north american|europe|european|nordics?|emea|'
+    r'asia|asian|apac|international|domestic|latin america|oceania)\b', re.I)
+
+# explicitly KEPT priority categories, surfaced at the top of the sheet
+PRIORITY = ['adjusted ebitda', 'adj ebitda', 'adj. ebitda', 'ebitda',
+            'amazon', 'e-commerce', 'ecommerce',
+            'alani', 'rockstar', 'celsius brand', 'big beverages', 'func food',
+            'fast brand']
+
+
+def is_standard(metric):
+    """True if the metric is a standard filing line item -> exclude it."""
+    key = metric.lower().strip()
+    if key in STD_EXACT:
+        return True
+    if 'revenue' in key and REGION_RE.search(key):   # regional revenue split
+        return True
+    return False
 
 HEADER_TOKENS = {'prior yr', 'prior year', 'current', 'change', 'yoy', 'yoy %',
                  'value', 'period', 'qoq', 'qoq %', 'metric'}
@@ -138,6 +181,7 @@ def main():
     matrix = {}
     periods = {}          # label -> sort_key
     skipped_no_period = 0
+    dropped_standard = 0
     placed = 0
 
     for f in files:
@@ -208,6 +252,9 @@ def main():
             metric = norm_metric(c0)
             if not metric:
                 continue
+            if is_standard(metric):          # systematically in filings -> exclude
+                dropped_standard += 1
+                continue
 
             periods[plabel] = pkey
             cell = matrix.setdefault(metric, {})
@@ -219,9 +266,17 @@ def main():
 
     # --- order axes ---
     ordered_periods = sorted(periods, key=lambda p: periods[p])
-    core_present = [m for m in CORE if m in matrix]
-    rest = sorted(m for m in matrix if m not in CORE)
-    ordered_metrics = core_present + rest
+
+    def prio_rank(m):
+        ml = m.lower()
+        for i, p in enumerate(PRIORITY):
+            if p in ml:
+                return i
+        return None
+
+    core_present = sorted((m for m in matrix if prio_rank(m) is not None),
+                          key=lambda m: (prio_rank(m), m.lower()))
+    rest = sorted((m for m in matrix if prio_rank(m) is None), key=str.lower)
 
     # --- write sheet ---
     wb = openpyxl.load_workbook(WB_PATH)
@@ -233,10 +288,12 @@ def main():
     hdr_font = Font(bold=True, color='FFFFFF')
     core_font = Font(bold=True)
 
-    ws.cell(row=1, column=1, value="CELH KPI Consolidation — 'Current' reported value per period")
+    ws.cell(row=1, column=1, value="CELH Transcript-Disclosed KPIs — 'Current' reported value per period")
     ws.cell(row=1, column=1).font = Font(bold=True, size=12)
     ws.cell(row=2, column=1,
-            value="Source: 69 transcript digests. Earnings-call figures take precedence over conference restatements.")
+            value="Transcript-only granularity (channel, retail-scan, distribution, brand, non-GAAP, guidance). "
+                  "Standard three-statement lines & regional revenue are excluded — those come from SEC filings. "
+                  "Source: 69 transcript digests; earnings-call figures take precedence over conference restatements.")
     ws.cell(row=2, column=1).font = Font(italic=True, size=9, color='808080')
 
     hrow = 4
@@ -257,7 +314,7 @@ def main():
             if v is not None:
                 ws.cell(row=rr, column=2 + j, value=v[0])
     rr += 1
-    dc = ws.cell(row=rr, column=1, value="— Other / one-off metrics —")
+    dc = ws.cell(row=rr, column=1, value="— Other transcript-disclosed metrics —")
     dc.font = Font(bold=True, italic=True, size=9)
     for j in range(len(ordered_periods) + 1):
         ws.cell(row=rr, column=1 + j).fill = div_fill
@@ -275,9 +332,10 @@ def main():
         ws.column_dimensions[ws.cell(row=hrow, column=2 + j).column_letter].width = 11
 
     wb.save(WB_PATH)
-    print(f"Wrote '{SHEET}': {len(ordered_metrics)} metrics x {len(ordered_periods)} periods")
-    print(f"  core metrics present: {len(core_present)} / {len(CORE)}")
-    print(f"  datapoints placed: {placed}; rows skipped (no period): {skipped_no_period}")
+    print(f"Wrote '{SHEET}': {len(core_present) + len(rest)} metrics x {len(ordered_periods)} periods")
+    print(f"  priority (EBITDA/Amazon/brand): {len(core_present)}; other: {len(rest)}")
+    print(f"  datapoints placed: {placed}; rows dropped as standard filing lines: {dropped_standard}")
+    print(f"  rows skipped (no period): {skipped_no_period}")
     print(f"  period span: {ordered_periods[0]} -> {ordered_periods[-1]}")
     print(f"  total sheets now: {len(wb.sheetnames)}")
 
