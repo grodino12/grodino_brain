@@ -304,17 +304,22 @@ _MD_CACHE = {}
 
 
 def parse_md_kpis(path):
-    """Parse a transcript .md's STEP 5 KPI block -> ([{line,metric,period,value}], step5_line)."""
+    """Parse a transcript .md -> (kpis, step5_line, event, date).
+    Each kpi: {line, metric, metric_raw, period, value, prior, pct}."""
     if path in _MD_CACHE:
         return _MD_CACHE[path]
-    kpis, step5_line = [], None
+    kpis, step5_line, ev, dt = [], None, '', ''
     try:
         lines = open(path, encoding='utf-8').read().split('\n')
     except OSError:
-        _MD_CACHE[path] = (kpis, step5_line)
+        _MD_CACHE[path] = (kpis, step5_line, ev, dt)
         return _MD_CACHE[path]
     in5 = False
     for i, ln in enumerate(lines, 1):
+        if not ev and ln.startswith('event_title:'):
+            ev = ln.split(':', 1)[1].strip()
+        if not dt and ln.startswith('date:'):
+            dt = ln.split(':', 1)[1].strip()
         if re.match(r'##\s+STEP\s*5\b', ln):
             in5, step5_line = True, i
             continue
@@ -325,6 +330,7 @@ def parse_md_kpis(path):
             if not mm:
                 continue
             vm = re.search(r'\*\*Value\*\*:\s*([^|]+)', ln)
+            pvm = re.search(r'PriorYearValue:\s*([^|]+)', ln)
             fy = re.search(r'FiscalYear:\s*(\d{4})', ln)
             fq = re.search(r'FiscalQuarter:\s*([A-Za-z0-9]+)', ln)
             period = None
@@ -337,10 +343,24 @@ def parse_md_kpis(path):
                 elif q == '9M':
                     period = f"9M {y}"
             kpis.append({'line': i, 'metric': canon_metric(mm.group(1)),
-                         'period': period,
-                         'value': md_value(vm.group(1)) if vm else None})
-    _MD_CACHE[path] = (kpis, step5_line)
+                         'metric_raw': mm.group(1).strip(), 'period': period,
+                         'value': md_value(vm.group(1)) if vm else None,
+                         'prior': md_value(pvm.group(1)) if pvm else None,
+                         'pct': bool(vm) and '%' in vm.group(1)})
+    _MD_CACHE[path] = (kpis, step5_line, ev, dt)
     return _MD_CACHE[path]
+
+
+def prior_year_period(plabel):
+    """Prior-year period label: 'Q3 2023' -> 'Q3 2022', 'FY2018' -> 'FY2017'."""
+    s = str(plabel).strip()
+    m = re.match(r'(Q[1-4]|9M|H[12])\s*(20\d\d)$', s)
+    if m:
+        return f"{m.group(1)} {int(m.group(2)) - 1}"
+    m = re.match(r'FY\s*(20\d\d)$', s)
+    if m:
+        return f"FY{int(m.group(1)) - 1}"
+    return None
 
 
 def kpi_line(path, metric, period, value):
@@ -351,7 +371,7 @@ def kpi_line(path, metric, period, value):
     resemblance is NOT enough (it would mislink e.g. a sales-growth % onto a
     store-count KPI); those fall back to the STEP-5 section header instead.
     """
-    kpis, step5 = parse_md_kpis(path)
+    kpis, step5, _, _ = parse_md_kpis(path)
     cands = [k for k in kpis if k['period'] == period]
     section = (step5, 'section' if step5 else 'none')
     if not cands:
@@ -554,6 +574,26 @@ def main():
     matrix = merged
     n_after = len(matrix)
 
+    # --- backfill prior-year values from .md STEP 5 into otherwise-empty cells ---
+    backfilled = 0
+    matrix_lc = {k.lower(): k for k in matrix}
+    for mdp in glob.glob(os.path.join(SOURCES, "**", "transcripts", "CELH_*.md"),
+                         recursive=True):
+        kpis, _, ev, dt = parse_md_kpis(mdp)
+        for k in kpis:
+            if k['prior'] is None or not k['period']:
+                continue
+            pp = prior_year_period(k['period'])
+            cmk = matrix_lc.get(k['metric'].lower())
+            if not pp or cmk is None or pp in matrix[cmk]:
+                continue                       # only fill EXISTING rows / EMPTY cells
+            matrix[cmk][pp] = [{'value': k['prior'], 'pct': k['pct'], 'earn': False,
+                                'event': ev, 'date': dt, 'label': k['metric_raw'],
+                                'derived': True, 'md': mdp, 'line': k['line']}]
+            pk = parse_period(pp)
+            periods.setdefault(pp, pk[1] if pk else 0)
+            backfilled += 1
+
     # --- order axes ---
     ordered_periods = sorted(periods, key=lambda p: periods[p])
     core_present = [m for m in CORE if m in matrix]
@@ -598,6 +638,7 @@ def main():
     hdr_fill = PatternFill('solid', fgColor='1F4E78')
     hdr_font = Font(bold=True, color='FFFFFF')
     core_font = Font(bold=True)
+    prior_font = Font(italic=True, color='808080')   # prior-year backfilled cells
 
     ws.cell(row=1, column=1, value="CELH Transcript KPI Consolidation — reported value per period")
     ws.cell(row=1, column=1).font = Font(bold=True, size=12)
@@ -618,7 +659,7 @@ def main():
 
     unlocated = set()
     no_md = []
-    stats = {'kpi': 0, 'section': 0, 'none': 0}
+    stats = {'kpi': 0, 'section': 0, 'none': 0, 'prior': 0}
 
     def tab_of(rec):
         return tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
@@ -628,6 +669,22 @@ def main():
 
     def place(row, j, metric, period, recs):
         recs_s = sorted(recs, key=lambda r: str(r['date']))
+        if recs_s[0].get('derived'):              # prior-year backfilled cell
+            r = recs_s[0]
+            c = ws.cell(row=row, column=2 + j, value=r['value'])
+            if r['pct']:
+                c.number_format = '0.0%'
+            c.font = prior_font
+            c.hyperlink = obsidian_uri(r['md'], r['line'])
+            stats['prior'] += 1
+            cm = Comment(
+                "Prior-year comparative — no transcript reported this period "
+                f"directly.\nFigure as stated in {r['event']} ({r['date']}),\n"
+                f"STEP-5 KPI “{r['label']}” (PriorYearValue field).",
+                "transcript consolidation")
+            cm.width, cm.height = 330, 100
+            c.comment = cm
+            return
         prim = next((r for r in recs_s if r['earn']), recs_s[0])
         c = ws.cell(row=row, column=2 + j, value=prim['value'])
         if prim['pct']:
@@ -710,9 +767,10 @@ def main():
     print(f"  metric rows consolidated: {n_before} -> {n_after}")
     print(f"  numeric datapoints kept: {placed}; non-numeric dropped: {dropped_text}")
     print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
+    print(f"  prior-year cells backfilled from .md STEP 5: {backfilled}")
     print(f"  cells deep-linked to .md: {n_cells - len(no_md)} "
-          f"(exact KPI line: {stats['kpi']}, fell back to STEP-5 section: {stats['section']}, "
-          f"file top: {stats['none']}); no .md found: {len(no_md)}")
+          f"(exact KPI line: {stats['kpi']}, STEP-5 section: {stats['section']}, "
+          f"prior-year: {stats['prior']}, file top: {stats['none']}); no .md found: {len(no_md)}")
     print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
     print(f"  rows placed via transcript-period fallback: {fallback_used}")
     print(f"  rows skipped (no period, no fallback): {skipped_no_period}")
