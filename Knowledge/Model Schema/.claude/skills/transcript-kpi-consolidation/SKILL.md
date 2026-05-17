@@ -33,7 +33,7 @@ transcript PDFs
 {TICKER} transcript .md analyses          Brain/Sources/{TICKER}/{period}/transcripts/{TICKER}_*.md
    |  STEP 1: extract  (agent task, schema in data/schema.md)
    v
-per-transcript digest JSONs               <skill>/_work/{TICKER}/*.json
+per-transcript digest JSONs               Ticker Libraries/{TICKER}/MDA and Other/transcript_digests/*.json
    |  build_transcript_tabs.py            STEP 2
    |  build_kpi_sheet.py                  STEP 3
    |  audit_kpi_sheet.py                  STEP 4
@@ -48,8 +48,9 @@ non-deterministic stage — it condenses the 11-step `.md` analysis into a 4-sec
 (Event/Date header, Quantitative KPI tables, Qualitative takeaways, Q&A summary). The `.md`'s
 **STEP-5 KPI block is the spine** — copy its values verbatim; never restate or recompute. Channel /
 distribution / market-share figures that the analysis did not formalize in STEP 5 are pulled from
-STEP 7 (KPI Drivers) and STEP 9/10. Digests are cached in `_work/{TICKER}/`; STEP 1 is skipped for
-transcripts already extracted. STEP 4's audit is the safety net for STEP-1 transcription errors.
+STEP 7 (KPI Drivers) and STEP 9/10. Digests are written to
+`Ticker Libraries/{TICKER}/MDA and Other/transcript_digests/`; STEP 1 is skipped for transcripts
+already extracted. STEP 4's audit is the safety net for STEP-1 transcription errors.
 
 ## STEPS 2-4 — deterministic scripts
 
@@ -58,7 +59,7 @@ transcripts already extracted. STEP 4's audit is the safety net for STEP-1 trans
 | `scripts/build_transcript_tabs.py {TICKER}` | Adds one worksheet tab per transcript (4-section layout), newest-first, to `{TICKER}_disclosures.xlsx`. |
 | `scripts/build_kpi_sheet.py {TICKER}` | Builds the `KPI Consolidated` sheet — metric rows x period columns. Numeric values only; cells deep-link to the source `.md`; Shift+F2 notes record provenance; prior-year values backfilled from STEP-5 `PriorYearValue`. |
 | `scripts/audit_kpi_sheet.py {TICKER}` | Cross-checks every directly-reported cell against the source `.md` STEP-5; writes `_audit_report.md`. |
-| `scripts/run.py {TICKER}` | Runs STEPS 2-4 in order. STEP 1 must already be done (digests present in `_work/{TICKER}/`). |
+| `scripts/run.py {TICKER}` | Runs STEPS 2-4 in order. STEP 1 must already be done (digests present in `Ticker Libraries/{TICKER}/MDA and Other/transcript_digests/`). |
 
 ## Library architecture (mirrors mda-disaggregation)
 
