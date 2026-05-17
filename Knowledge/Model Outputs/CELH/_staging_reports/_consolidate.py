@@ -12,6 +12,7 @@ Period can live in the row label ('Total Revenue Q4 2018') or in the column
 header ('Q1 2022' / 'Q1 2021'); both styles are handled.
 """
 import json, glob, re, os
+from collections import Counter
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.comments import Comment
@@ -71,13 +72,69 @@ ALIAS = {
     'general & administrative': 'General & Administrative',
 }
 
+# Canonical-name map: collapses near-duplicate labels onto one row.
+# Keys are lowercased post-norm_metric metric names. Genuinely distinct metrics
+# (basic vs diluted EPS, GAAP vs non-GAAP, $ vs %, actual vs long-term target)
+# are deliberately NOT merged.
+CANON = {}
+
+
+def _canon(name, *variants):
+    for v in variants:
+        CANON[v.lower()] = name
+
+
+_canon('Total Revenue', 'total revenue', 'net revenue', 'net revenues', 'net sales',
+       'consolidated revenue', 'reported revenue (books & records)')
+_canon('North America Revenue', 'north america', 'north america revenue',
+       'north america / domestic', 'north america / domestic revenue',
+       'north american / domestic revenue', 'north america (h1)')
+_canon('International Revenue', 'international', 'international revenue',
+       'international sales', 'international (h1)')
+_canon('Europe Revenue', 'europe revenue', 'european revenue', 'europe (nordic)',
+       'europe / nordic', 'nordic revenue')
+_canon('Gross Profit', 'gross profit')
+_canon('Gross Margin', 'gross margin', 'gross profit margin', 'consolidated gross margin',
+       'gaap gross margin', 'standalone gross margin')
+_canon('Selling & Marketing', 'selling & marketing', 'sales & marketing expense',
+       'sales & marketing expenses', 's&m expense')
+_canon('General & Administrative', 'general & administrative', 'g&a expense', 'g&a expenses')
+_canon('SG&A', 'sg&a', 'sg&a expense')
+_canon('Operating Income', 'operating income')
+_canon('Net Income', 'net income', 'net income (gaap)', 'gaap net income',
+       'net income (common shareholders)', 'net income (to common)', 'net income / (loss)',
+       'net income to common', 'net income to common shareholders', 'net loss to common')
+_canon('Adjusted EBITDA', 'adjusted ebitda', 'adj ebitda', 'adjusted ebitda (non-gaap)',
+       'adjusted ebitda ($m, non-gaap)', 'non-gaap adjusted ebitda',
+       'net non-gaap adjusted ebitda')
+_canon('Adjusted EBITDA Margin', 'adjusted ebitda margin', 'adjusted ebitda margin (non-gaap)',
+       'ebitda margin')
+_canon('Amazon Revenue', 'amazon revenue', 'amazon sales', 'amazon sales ytd 2022')
+_canon('Cash', 'cash', 'cash & cash equivalents', 'cash & equivalents',
+       'cash and cash equivalents', 'cash balance', 'cash position', 'cash (year-end)',
+       'cash (mar 31, 2023)', 'cash on hand (mar 31, 2024)')
+_canon('Operating Cash Flow', 'operating cash flow', 'cash from operations',
+       'cash flow from operating activities', 'cash provided by operations',
+       'cash used in operations', 'operating cash flow (6m)', 'operating cash flow (9m)',
+       'operating cash flow fy')
+_canon('Working Capital', 'working capital', 'net working capital',
+       'working capital (year-end)', 'net working capital (mar 31, 2023)')
+_canon('Diluted EPS', 'diluted eps', 'diluted eps (gaap)', 'gaap diluted eps')
+_canon('Adjusted Diluted EPS', 'adjusted diluted eps', 'adjusted diluted eps (non-gaap)',
+       'non-gaap adjusted diluted eps')
+_canon('S&M % of Revenue', 's&m % of revenue', 's&m % of sales',
+       'sales & marketing (% of revenue)', 'sales & marketing (% of sales)',
+       'sales & marketing as % of revenue', 's&m expense % of sales')
+_canon('G&A % of Revenue', 'g&a % of revenue', 'g&a % of sales', 'g&a (% of revenue)',
+       'g&a (% of sales)')
+
 # key metrics surfaced (bold) at the top of the sheet, in this order
 CORE = [
     'Total Revenue', 'North America Revenue', 'International Revenue',
     'Europe Revenue', 'Asia Revenue', 'Amazon Revenue',
     'Gross Profit', 'Gross Margin', 'Selling & Marketing',
     'General & Administrative', 'Operating Income', 'Net Income',
-    'Adjusted EBITDA', 'Cash', 'Working Capital',
+    'Adjusted EBITDA', 'Operating Cash Flow', 'Cash', 'Working Capital',
 ]
 
 HEADER_TOKENS = {'prior yr', 'prior year', 'current', 'change', 'yoy', 'yoy %',
@@ -247,6 +304,30 @@ def main():
             matrix.setdefault(metric, {}).setdefault(plabel, []).append(rec)
             placed += 1
 
+    # --- consolidate near-duplicate metric rows ---
+    groups = {}
+    for m in matrix:
+        groups.setdefault(m.lower(), []).append(m)
+    casefold = {}
+    for low, variants in groups.items():
+        if len(variants) == 1:
+            casefold[low] = variants[0]
+        else:                       # pick the casing with the most datapoints
+            score = Counter({v: sum(len(r) for r in matrix[v].values()) for v in variants})
+            casefold[low] = score.most_common(1)[0][0]
+
+    def canon(m):
+        return CANON.get(m.lower(), casefold.get(m.lower(), m))
+
+    n_before = len(matrix)
+    merged = {}
+    for m, pm in matrix.items():
+        dst = merged.setdefault(canon(m), {})
+        for p, recs in pm.items():
+            dst.setdefault(p, []).extend(recs)
+    matrix = merged
+    n_after = len(matrix)
+
     # --- order axes ---
     ordered_periods = sorted(periods, key=lambda p: periods[p])
     core_present = [m for m in CORE if m in matrix]
@@ -354,6 +435,7 @@ def main():
     n_cells = sum(len(pm) for pm in matrix.values())
     n_multi = sum(1 for pm in matrix.values() for recs in pm.values() if len(recs) > 1)
     print(f"Wrote '{SHEET}': {len(matrix)} metrics x {len(ordered_periods)} periods")
+    print(f"  metric rows consolidated: {n_before} -> {n_after}")
     print(f"  datapoints kept (incl. duplicates): {placed}")
     print(f"  matrix cells: {n_cells}; cells with multiple sources: {n_multi}")
     print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
