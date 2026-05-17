@@ -13,12 +13,14 @@ header ('Q1 2022' / 'Q1 2021'); both styles are handled.
 """
 import json, glob, re, os
 from collections import Counter
+from pathlib import Path
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.comments import Comment
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WB_PATH = os.path.join(os.path.dirname(HERE), "CELH_disclosures.xlsx")
+SOURCES = os.path.abspath(os.path.join(HERE, "..", "..", "..", "..", "Sources", "CELH"))
 SHEET = "KPI Consolidated"
 
 PER_RE = re.compile(
@@ -385,6 +387,23 @@ def main():
         dt = str(sh.cell(2, 2).value).strip()[:10]
         tab_map[(ev, dt)] = sn
 
+    # map transcript date -> source .md analysis file (for cell hyperlinks)
+    md_by_date = {}
+    for p in glob.glob(os.path.join(SOURCES, "**", "transcripts", "CELH_*.md"),
+                       recursive=True):
+        mm = re.match(r'CELH_(\d{4}-\d{2}-\d{2})_(.+)\.md$', os.path.basename(p))
+        if mm:
+            md_by_date.setdefault(mm.group(1), []).append((mm.group(2), p))
+
+    def find_md(event, date):
+        cands = md_by_date.get(str(date).strip()[:10], [])
+        if not cands:
+            return None
+        if len(cands) == 1:
+            return cands[0][1]
+        ev = str(event).lower()                       # disambiguate same-date events
+        return max(cands, key=lambda c: sum(w in ev for w in c[0].lower().split()))[1]
+
     if SHEET in wb.sheetnames:
         del wb[SHEET]
     ws = wb.create_sheet(SHEET, 0)   # first tab
@@ -411,6 +430,8 @@ def main():
         c.alignment = Alignment(horizontal='center')
 
     unlocated = set()
+    no_md = []
+    link_font = Font(color='0563C1', underline='single')
 
     def tab_of(rec):
         return tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
@@ -424,6 +445,12 @@ def main():
         c = ws.cell(row=row, column=2 + j, value=prim['value'])
         if prim['pct']:
             c.number_format = '0.0%'
+        md = find_md(prim['event'], prim['date'])    # link cell to source .md file
+        if md:
+            c.hyperlink = Path(md).as_uri()
+            c.font = link_font
+        else:
+            no_md.append((prim['event'], prim['date']))
         for r in recs_s:
             if tab_of(r) is None:
                 unlocated.add((r['event'], r['date']))
