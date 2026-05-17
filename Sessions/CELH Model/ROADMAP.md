@@ -3,7 +3,7 @@ type: roadmap
 date: 2026-05-17
 project: Celsius HF Case Study (last update: post-Transcript-Analysis session)
 scope: CELH financial model pipeline + universal model creation architecture + (later) GLP-1 / SNAP integration
-last_session: "May 17th CELH Transcript Analysis and Reports Session"
+last_session: "May 17th CELH KPI Consolidation Sheet Session"
 next_objective: "**Transcript-analysis workstream (2026-05-13→17 — see May 17th handoff):** ran the `analyze-earnings-transcript` skill on all 70 CELH transcript PDFs → 70 structured `.md` analyses written next to each PDF; condensed them into 69 'Transcript Report' digest JSON fragments at `Model Outputs\\CELH\\_staging_reports\\`. **IMMEDIATE NEXT ACTION:** close `CELH_disclosures.xlsx` in Excel, then run `Model Outputs\\CELH\\_staging_reports\\_assemble.py` — it adds 69 chronological worksheets (one per transcript; 4-section format: Event/Date · Quantitative · Qualitative takeaways · Q&A) to the workbook. Then optional cleanup: drop the superseded ' Transcript Reports' tab, delete `_staging_reports\\`, delete the redundant 2024-09-05 Barclays `.md`. **Model-pipeline items still open from 2026-05-11 (untouched this session):** 64-filing joint-regression sweep (CELH 17 + PG 14 + PEP 13 + MNST 20) against the `accepted_sections` + `GEN-IS-026` patches AND the MDA folder migration; decide 2021-FY/2022-FY 10-K `find_primary_tables` rewrite vs. comparative-column coverage; pre-iXBRL backfill (FY2019, 2020 quarterlies+FY, 2021-Q1); resume MDA rework Phase 2 (port 4 original sections axis-driven)."
 ---
 

@@ -374,12 +374,52 @@ def obsidian_uri(path, line):
     return uri
 
 
+_FNAME_PERIOD = re.compile(r'(20\d\d)\s*(Q[1-4]|FY)', re.I)
+_EVENT_PERIOD = re.compile(r'\b(Q[1-4])\b.{0,14}?\b(20\d\d)\b')
+
+
+def transcript_period(fname, event):
+    """The transcript's own (year, fiscal_quarter), for period fallback. Or None."""
+    m = _FNAME_PERIOD.search(os.path.basename(fname))
+    if m:
+        return (int(m.group(1)), m.group(2).upper())
+    m = _EVENT_PERIOD.search(event or '')
+    if m:
+        return (int(m.group(2)), m.group(1).upper())
+    return None
+
+
+def fallback_period(label, tp):
+    """Period for a row with none in its label/header: a bare leading qualifier
+    (9M/FY/Qn) on the label + the transcript's year, else the transcript's period."""
+    year, tq = tp
+    lm = LEAD_PER.match(str(label))
+    if lm:
+        tk = re.match(r'(Q[1-4]|FY|9M|H[12]|1H|2H|YTD)', lm.group(0).strip(), re.I)
+        tok = tk.group(1).upper() if tk else ''
+        if tok in ('Q1', 'Q2', 'Q3', 'Q4'):
+            return f"{tok} {year}"
+        if tok == 'FY':
+            return f"FY{year}"
+        if tok == '9M':
+            return f"9M {year}"
+        if tok in ('H1', '1H'):
+            return f"H1 {year}"
+        if tok in ('H2', '2H'):
+            return f"H2 {year}"
+        if tok == 'YTD':
+            return {'Q2': f"H1 {year}", 'Q3': f"9M {year}",
+                    'Q4': f"FY{year}", 'FY': f"FY{year}"}.get(tq, f"{tq} {year}")
+    return f"FY{year}" if tq == 'FY' else f"{tq} {year}"
+
+
 def main():
     files = sorted(glob.glob(os.path.join(HERE, "*.json")))
     # matrix[metric][period] = list of source records
     matrix = {}
     periods = {}          # label -> sort_key
     skipped_no_period = 0
+    fallback_used = 0
     dropped_text = 0
     placed = 0
 
@@ -394,6 +434,7 @@ def main():
         if len(rows) > 1 and len(rows[1]) > 1 and str(rows[1][0]).strip().lower() == 'date':
             date = str(rows[1][1]).strip()
         is_earn = 'earning' in event.lower()
+        tp = transcript_period(f, event)        # for no-period row fallback
         in_quant = False
         cur_col = None        # column index of the 'Current' value
         hdr_period = None     # period from a period-style header
@@ -455,13 +496,14 @@ def main():
 
             per = parse_period(c0)
             plabel = per[0] if per else hdr_period
-            pkey = per[1] if per else (periods.get(hdr_period) if hdr_period else None)
+            if not plabel and tp:               # no period anywhere -> transcript's own
+                plabel = fallback_period(c0, tp)
+                fallback_used += 1
             if not plabel:
                 skipped_no_period += 1
                 continue
-            if pkey is None:
-                pp = parse_period(plabel)
-                pkey = pp[1] if pp else 0
+            pp = parse_period(plabel)
+            pkey = pp[1] if pp else 0
 
             metric = norm_metric(c0)
             if not metric:
@@ -657,7 +699,8 @@ def main():
           f"(exact KPI line: {stats['kpi']}, fell back to STEP-5 section: {stats['section']}, "
           f"file top: {stats['none']}); no .md found: {len(no_md)}")
     print(f"  source notes attached: {n_cells}; datapoints with no tab match: {len(unlocated)}")
-    print(f"  rows skipped (no period detected): {skipped_no_period}")
+    print(f"  rows placed via transcript-period fallback: {fallback_used}")
+    print(f"  rows skipped (no period, no fallback): {skipped_no_period}")
     print(f"  transcript tabs reordered newest-first; total sheets: {len(wb.sheetnames)}")
 
 
