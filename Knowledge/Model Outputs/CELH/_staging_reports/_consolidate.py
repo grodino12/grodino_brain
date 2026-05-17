@@ -431,7 +431,6 @@ def main():
 
     unlocated = set()
     no_md = []
-    link_font = Font(color='0563C1', underline='single')
 
     def tab_of(rec):
         return tab_map.get((str(rec['event']).strip(), str(rec['date']).strip()[:10]))
@@ -448,7 +447,6 @@ def main():
         md = find_md(prim['event'], prim['date'])    # link cell to source .md file
         if md:
             c.hyperlink = Path(md).as_uri()
-            c.font = link_font
         else:
             no_md.append((prim['event'], prim['date']))
         for r in recs_s:
