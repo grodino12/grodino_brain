@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "ticker": "CELH",
-  "last_updated": "2026-05-18",
+  "last_updated": "2026-05-10",
   "source_md": "Brain/Sessions/CELH Model/03_celh_decisions_ledger.md",
   "notes": "Converted from markdown handoff. Append-only; to supersede a rule, add a new entry and set the old one's superseded_by field. | Phase 3 (2026-04-23): generic-covered mappings moved to pattern_libraries/generic_line_item_mappings.json; model_row stripped throughout; CELH-specific entries retained with sign-agnostic labels.",
   "mappings": [
@@ -48,54 +48,6 @@
       "model_sheet": "CASH FLOW",
       "model_label": "Gain (Loss) on Lease Cancellations",
       "decided_date": "2026-04-22"
-    },
-    {
-      "rule_id": "MAP-IS-001",
-      "filing_term_normalized": "amortization of intangibles",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Other Income (Expense)",
-      "decided_date": "2026-05-18",
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "MAP-IS-002",
-      "filing_term_normalized": "amortization of financial leases",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Other Income (Expense)",
-      "decided_date": "2026-05-18",
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "MAP-IS-003",
-      "filing_term_normalized": "gain on investment repayment-china note receivable",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Other Income (Expense)",
-      "decided_date": "2026-05-18",
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "MAP-IS-004",
-      "filing_term_normalized": "gain loss on investment repayment-china",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Other Income (Expense)",
-      "decided_date": "2026-05-18",
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "MAP-IS-005",
-      "filing_term_normalized": "loss gain on investment repayment-",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Other Income (Expense)",
-      "decided_date": "2026-05-18",
-      "filing_section": "non_operating"
-    },
-    {
-      "rule_id": "MAP-IS-006",
-      "filing_term_normalized": "european deferred tax",
-      "model_sheet": "ANNL P&L",
-      "model_label": "Income Tax (Expense) Benefit",
-      "decided_date": "2026-05-18",
-      "filing_section": "tax"
     }
   ],
   "renames": [
@@ -125,9 +77,9 @@
       "model_sheet": "CASH FLOW",
       "new_row_label": "Acquisition of Big Beverages",
       "section": "investing",
-      "position_note": "In investing block, after Purchase of Non-Marketable Equity Securities (35) — matches FY2024 10-K order: Collections → PP&E → Non-Marketable → Big Beverages",
+      "position_note": "In investing block, after Purchase of Non-Marketable Equity Securities (35) \u2014 matches FY2024 10-K order: Collections \u2192 PP&E \u2192 Non-Marketable \u2192 Big Beverages",
       "decided_date": "2026-04-22",
-      "note": "FY2024 10-K new line (#7 user: new row). pdfplumber truncated label to 'L.L' — fix later"
+      "note": "FY2024 10-K new line (#7 user: new row). pdfplumber truncated label to 'L.L' \u2014 fix later"
     },
     {
       "rule_id": "NEW-BS-MZ-PAR",
@@ -374,33 +326,6 @@
       "position_note": "Accrued-liability detail; European VAT obligation.",
       "decided_date": "2026-05-10",
       "note": "celh:ValueAddedTaxPayment; appears 2022-FY."
-    },
-    {
-      "rule_id": "NEW-BS-101",
-      "filing_term_normalized": "bonds payable-net",
-      "model_sheet": "BALANCE SHEET",
-      "new_row_label": "Bonds Payable, Net",
-      "section": "current_liabilities",
-      "position_note": "Current liabilities, before Other Current Liabilities",
-      "decided_date": "2026-05-18"
-    },
-    {
-      "rule_id": "NEW-CF-101",
-      "filing_term_normalized": "proceeds from notes payable-related-party net",
-      "model_sheet": "CASH FLOW",
-      "new_row_label": "Proceeds from Related-Party Notes",
-      "section": "financing",
-      "position_note": "Financing, near debt proceeds",
-      "decided_date": "2026-05-18"
-    },
-    {
-      "rule_id": "NEW-CF-102",
-      "filing_term_normalized": "cash paid on taxes on restricted stock awards",
-      "model_sheet": "CASH FLOW",
-      "new_row_label": "Cash Paid for RSU Tax Withholding",
-      "section": "financing",
-      "position_note": "Financing, after stock-option proceeds",
-      "decided_date": "2026-05-18"
     }
   ],
   "structural_decisions": [
