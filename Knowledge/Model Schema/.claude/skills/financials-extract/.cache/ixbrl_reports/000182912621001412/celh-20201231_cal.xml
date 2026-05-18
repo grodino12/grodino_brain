@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="no"?>
+    <!-- Field: Doc-Info; Name: Generator; Value: GoFiler Complete; Version: 5.6c -->
+    <!-- Field: Doc-Info; Name: VendorURI; Value: http://www.novaworks.com -->
+    <!-- Field: Doc-Info; Name: Source; Value: celh.xfr; Date: 2021%2D03%2D11T13:25:32Z -->
+    <!-- Field: Doc-Info; Name: Status; Value: 0x80050004 -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+    <link:roleRef roleURI="http://celsius.com/role/DocumentAndEntityInformation" xlink:href="celh-20201231.xsd#DocumentAndEntityInformation" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BalanceSheets" xlink:href="celh-20201231.xsd#BalanceSheets" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BalanceSheetsParenthetical" xlink:href="celh-20201231.xsd#BalanceSheetsParenthetical" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/StatementsOfOperations" xlink:href="celh-20201231.xsd#StatementsOfOperations" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/StatementsOfChangesInStockholdersEquity" xlink:href="celh-20201231.xsd#StatementsOfChangesInStockholdersEquity" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/StatementsOfCashFlows" xlink:href="celh-20201231.xsd#StatementsOfCashFlows" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/OrganizationAndDescriptionOfBusiness" xlink:href="celh-20201231.xsd#OrganizationAndDescriptionOfBusiness" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPolicies" xlink:href="celh-20201231.xsd#BasisOfPresentationAndSummaryOfSignificantAccountingPolicies" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Revenue" xlink:href="celh-20201231.xsd#Revenue" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Inventories" xlink:href="celh-20201231.xsd#Inventories" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/PrepaidExpensesAndOtherCurrentAssets" xlink:href="celh-20201231.xsd#PrepaidExpensesAndOtherCurrentAssets" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/NoteReceivable" xlink:href="celh-20201231.xsd#NoteReceivable" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Leases" xlink:href="celh-20201231.xsd#Leases" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/PropertyAndEquipment" xlink:href="celh-20201231.xsd#PropertyAndEquipment" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/GoodwillAndIntangibles" xlink:href="celh-20201231.xsd#GoodwillAndIntangibles" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Acquisition-europeanOperations" xlink:href="celh-20201231.xsd#Acquisition-europeanOperations" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/AccountsPayableAndAccruedExpenses" xlink:href="celh-20201231.xsd#AccountsPayableAndAccruedExpenses" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/OtherLiabilities" xlink:href="celh-20201231.xsd#OtherLiabilities" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BondsPayable" xlink:href="celh-20201231.xsd#BondsPayable" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/RelatedPartyTransactions" xlink:href="celh-20201231.xsd#RelatedPartyTransactions" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/StockholdersEquity" xlink:href="celh-20201231.xsd#StockholdersEquity" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/IncomeTaxes" xlink:href="celh-20201231.xsd#IncomeTaxes" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Stock-basedCompensation" xlink:href="celh-20201231.xsd#Stock-basedCompensation" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/CommitmentsAndContingencies" xlink:href="celh-20201231.xsd#CommitmentsAndContingencies" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/SubsequentEvents" xlink:href="celh-20201231.xsd#SubsequentEvents" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesPolicies" xlink:href="celh-20201231.xsd#BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesPolicies" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesTables" xlink:href="celh-20201231.xsd#BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/RevenueTables" xlink:href="celh-20201231.xsd#RevenueTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/InventoriesTables" xlink:href="celh-20201231.xsd#InventoriesTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/NoteReceivableTables" xlink:href="celh-20201231.xsd#NoteReceivableTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/LeasesTables" xlink:href="celh-20201231.xsd#LeasesTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/PropertyAndEquipmentTables" xlink:href="celh-20201231.xsd#PropertyAndEquipmentTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/GoodwillAndIntangiblesTables" xlink:href="celh-20201231.xsd#GoodwillAndIntangiblesTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Acquisition-europeanOperationsTables" xlink:href="celh-20201231.xsd#Acquisition-europeanOperationsTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/AccountsPayableAndAccruedExpensesTables" xlink:href="celh-20201231.xsd#AccountsPayableAndAccruedExpensesTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/OtherLiabilitiesTables" xlink:href="celh-20201231.xsd#OtherLiabilitiesTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BondsPayableTables" xlink:href="celh-20201231.xsd#BondsPayableTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/IncomeTaxesTables" xlink:href="celh-20201231.xsd#IncomeTaxesTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Stock-basedCompensationTables" xlink:href="celh-20201231.xsd#Stock-basedCompensationTables" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails" xlink:href="celh-20201231.xsd#BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails1" xlink:href="celh-20201231.xsd#BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails1" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails2" xlink:href="celh-20201231.xsd#BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails2" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetailsNarrative" xlink:href="celh-20201231.xsd#BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/RevenueDetails" xlink:href="celh-20201231.xsd#RevenueDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/RevenueDetailsNarrative" xlink:href="celh-20201231.xsd#RevenueDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/InventoriesDetails" xlink:href="celh-20201231.xsd#InventoriesDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/PrepaidExpensesAndOtherCurrentAssetsDetails" xlink:href="celh-20201231.xsd#PrepaidExpensesAndOtherCurrentAssetsDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/NoteReceivableDetails" xlink:href="celh-20201231.xsd#NoteReceivableDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/NoteReceivableDetailsNarrative" xlink:href="celh-20201231.xsd#NoteReceivableDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/LeasesDetails" xlink:href="celh-20201231.xsd#LeasesDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/LeasesDetails1" xlink:href="celh-20201231.xsd#LeasesDetails1" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/LeasesDetails2" xlink:href="celh-20201231.xsd#LeasesDetails2" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/LeasesDetails3" xlink:href="celh-20201231.xsd#LeasesDetails3" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/PropertyAndEquipmentDetails" xlink:href="celh-20201231.xsd#PropertyAndEquipmentDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/PropertyAndEquipmentDetailsNarrative" xlink:href="celh-20201231.xsd#PropertyAndEquipmentDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/GoodwillAndIntangiblesDetails" xlink:href="celh-20201231.xsd#GoodwillAndIntangiblesDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/GoodwillAndIntangiblesDetails1" xlink:href="celh-20201231.xsd#GoodwillAndIntangiblesDetails1" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/GoodwillAndIntangiblesDetailsNarrative" xlink:href="celh-20201231.xsd#GoodwillAndIntangiblesDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Acquisition-europeanOperationsDetails" xlink:href="celh-20201231.xsd#Acquisition-europeanOperationsDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Acquisition-europeanOperationsDetails1" xlink:href="celh-20201231.xsd#Acquisition-europeanOperationsDetails1" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Acquisition-europeanOperationsDetailsNarrative" xlink:href="celh-20201231.xsd#Acquisition-europeanOperationsDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/AccountsPayableAndAccruedExpensesDetails" xlink:href="celh-20201231.xsd#AccountsPayableAndAccruedExpensesDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/OtherLiabilitiesDetails" xlink:href="celh-20201231.xsd#OtherLiabilitiesDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/BondsPayableDetails" xlink:href="celh-20201231.xsd#BondsPayableDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/RelatedPartyTransactionsDetails" xlink:href="celh-20201231.xsd#RelatedPartyTransactionsDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/StockholdersEquityDetailsNarrative" xlink:href="celh-20201231.xsd#StockholdersEquityDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/IncomeTaxesDetails" xlink:href="celh-20201231.xsd#IncomeTaxesDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/IncomeTaxesDetails1" xlink:href="celh-20201231.xsd#IncomeTaxesDetails1" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/IncomeTaxesDetails2" xlink:href="celh-20201231.xsd#IncomeTaxesDetails2" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/IncomeTaxesDetails3" xlink:href="celh-20201231.xsd#IncomeTaxesDetails3" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/IncomeTaxesDetailsNarrative" xlink:href="celh-20201231.xsd#IncomeTaxesDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Stock-basedCompensationDetails" xlink:href="celh-20201231.xsd#Stock-basedCompensationDetails" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Stock-basedCompensationDetails1" xlink:href="celh-20201231.xsd#Stock-basedCompensationDetails1" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Stock-basedCompensationDetails2" xlink:href="celh-20201231.xsd#Stock-basedCompensationDetails2" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Stock-basedCompensationDetails3" xlink:href="celh-20201231.xsd#Stock-basedCompensationDetails3" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/Stock-basedCompensationDetailsNarrative" xlink:href="celh-20201231.xsd#Stock-basedCompensationDetailsNarrative" xlink:type="simple" />
+    <link:roleRef roleURI="http://celsius.com/role/SubsequentEventsDetailsNarrative" xlink:href="celh-20201231.xsd#SubsequentEventsDetailsNarrative" xlink:type="simple" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/DocumentAndEntityInformation" xlink:title="00000001 - Document - Document and Entity Information" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BalanceSheets" xlink:title="00000002 - Statement - Consolidated Balance Sheets">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AssetsCurrent" xlink:label="loc_us-gaapAssetsCurrent" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_Cash" xlink:label="loc_us-gaapCash" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssetsCurrent" xlink:to="loc_us-gaapCash" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AccountsReceivableNetCurrent" xlink:label="loc_us-gaapAccountsReceivableNetCurrent" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssetsCurrent" xlink:to="loc_us-gaapAccountsReceivableNetCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NotesAndLoansReceivableNetCurrent" xlink:label="loc_us-gaapNotesAndLoansReceivableNetCurrent" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssetsCurrent" xlink:to="loc_us-gaapNotesAndLoansReceivableNetCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InventoryNet" xlink:label="loc_us-gaapInventoryNet" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssetsCurrent" xlink:to="loc_us-gaapInventoryNet" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_PrepaidExpenseAndOtherAssetsCurrent" xlink:label="loc_us-gaapPrepaidExpenseAndOtherAssetsCurrent" />
+      <link:calculationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssetsCurrent" xlink:to="loc_us-gaapPrepaidExpenseAndOtherAssetsCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_Assets" xlink:label="loc_us-gaapAssets" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapAssetsCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NotesAndLoansReceivableNetNoncurrent" xlink:label="loc_us-gaapNotesAndLoansReceivableNetNoncurrent" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapNotesAndLoansReceivableNetNoncurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_PropertyPlantAndEquipmentNet" xlink:label="loc_us-gaapPropertyPlantAndEquipmentNet" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapPropertyPlantAndEquipmentNet" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FinanceLeaseRightOfUseAsset" xlink:label="loc_us-gaapFinanceLeaseRightOfUseAsset" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapFinanceLeaseRightOfUseAsset" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_DepositsAssets" xlink:label="loc_us-gaapDepositsAssets" />
+      <link:calculationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapDepositsAssets" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_IntangibleAssetsNetExcludingGoodwill" xlink:label="loc_us-gaapIntangibleAssetsNetExcludingGoodwill" />
+      <link:calculationArc order="6" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapIntangibleAssetsNetExcludingGoodwill" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_Goodwill" xlink:label="loc_us-gaapGoodwill" />
+      <link:calculationArc order="7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapGoodwill" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OperatingLeaseRightOfUseAsset" xlink:label="loc_us-gaapOperatingLeaseRightOfUseAsset" />
+      <link:calculationArc order="8" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAssets" xlink:to="loc_us-gaapOperatingLeaseRightOfUseAsset" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_LiabilitiesCurrent" xlink:label="loc_us-gaapLiabilitiesCurrent" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent" xlink:label="loc_us-gaapAccountsPayableAndAccruedLiabilitiesCurrent" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilitiesCurrent" xlink:to="loc_us-gaapAccountsPayableAndAccruedLiabilitiesCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OperatingLeaseLiabilityCurrent" xlink:label="loc_us-gaapOperatingLeaseLiabilityCurrent" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilitiesCurrent" xlink:to="loc_us-gaapOperatingLeaseLiabilityCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_LongTermDebtCurrent" xlink:label="loc_us-gaapLongTermDebtCurrent" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilitiesCurrent" xlink:to="loc_us-gaapLongTermDebtCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OtherLiabilitiesCurrent" xlink:label="loc_us-gaapOtherLiabilitiesCurrent" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilitiesCurrent" xlink:to="loc_us-gaapOtherLiabilitiesCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FinanceLeaseLiabilityCurrent" xlink:label="loc_us-gaapFinanceLeaseLiabilityCurrent" />
+      <link:calculationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilitiesCurrent" xlink:to="loc_us-gaapFinanceLeaseLiabilityCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_Liabilities" xlink:label="loc_us-gaapLiabilities" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilities" xlink:to="loc_us-gaapLiabilitiesCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OperatingLeaseLiabilityNoncurrent" xlink:label="loc_us-gaapOperatingLeaseLiabilityNoncurrent" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilities" xlink:to="loc_us-gaapOperatingLeaseLiabilityNoncurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FinanceLeaseLiabilityNoncurrent" xlink:label="loc_us-gaapFinanceLeaseLiabilityNoncurrent" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilities" xlink:to="loc_us-gaapFinanceLeaseLiabilityNoncurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_StockholdersEquity" xlink:label="loc_us-gaapStockholdersEquity" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_CommonStockValue" xlink:label="loc_us-gaapCommonStockValue" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapStockholdersEquity" xlink:to="loc_us-gaapCommonStockValue" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AdditionalPaidInCapital" xlink:label="loc_us-gaapAdditionalPaidInCapital" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapStockholdersEquity" xlink:to="loc_us-gaapAdditionalPaidInCapital" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AccumulatedOtherComprehensiveIncomeLossNetOfTax" xlink:label="loc_us-gaapAccumulatedOtherComprehensiveIncomeLossNetOfTax" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapStockholdersEquity" xlink:to="loc_us-gaapAccumulatedOtherComprehensiveIncomeLossNetOfTax" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_RetainedEarningsAccumulatedDeficit" xlink:label="loc_us-gaapRetainedEarningsAccumulatedDeficit" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapStockholdersEquity" xlink:to="loc_us-gaapRetainedEarningsAccumulatedDeficit" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_LiabilitiesAndStockholdersEquity" xlink:label="loc_us-gaapLiabilitiesAndStockholdersEquity" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilitiesAndStockholdersEquity" xlink:to="loc_us-gaapLiabilities" xlink:type="arc" weight="1" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapLiabilitiesAndStockholdersEquity" xlink:to="loc_us-gaapStockholdersEquity" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BalanceSheetsParenthetical" xlink:title="00000003 - Statement - Consolidated Balance Sheets (Parenthetical)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/StatementsOfOperations" xlink:title="00000004 - Statement - Consolidated Statements of Operations">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_GrossProfit" xlink:label="loc_us-gaapGrossProfit" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_Revenues" xlink:label="loc_us-gaapRevenues" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapGrossProfit" xlink:to="loc_us-gaapRevenues" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_CostOfRevenue" xlink:label="loc_us-gaapCostOfRevenue" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapGrossProfit" xlink:to="loc_us-gaapCostOfRevenue" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OperatingExpenses" xlink:label="loc_us-gaapOperatingExpenses" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_SellingAndMarketingExpense" xlink:label="loc_us-gaapSellingAndMarketingExpense" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapOperatingExpenses" xlink:to="loc_us-gaapSellingAndMarketingExpense" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_GeneralAndAdministrativeExpense" xlink:label="loc_us-gaapGeneralAndAdministrativeExpense" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapOperatingExpenses" xlink:to="loc_us-gaapGeneralAndAdministrativeExpense" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OperatingIncomeLoss" xlink:label="loc_us-gaapOperatingIncomeLoss" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapOperatingIncomeLoss" xlink:to="loc_us-gaapGrossProfit" xlink:type="arc" weight="1" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapOperatingIncomeLoss" xlink:to="loc_us-gaapOperatingExpenses" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NonoperatingIncomeExpense" xlink:label="loc_us-gaapNonoperatingIncomeExpense" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InterestAndDividendIncomeOperating" xlink:label="loc_us-gaapInterestAndDividendIncomeOperating" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_us-gaapInterestAndDividendIncomeOperating" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InterestExpenseDebt" xlink:label="loc_us-gaapInterestExpenseDebt" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_us-gaapInterestExpenseDebt" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InterestExpenseSubordinatedNotesAndDebentures" xlink:label="loc_us-gaapInterestExpenseSubordinatedNotesAndDebentures" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_us-gaapInterestExpenseSubordinatedNotesAndDebentures" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_AmortizationOfDiscountOnBondsPayable" xlink:label="loc_celhAmortizationOfDiscountOnBondsPayable" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_celhAmortizationOfDiscountOnBondsPayable" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_OtherMiscellaneousExpense" xlink:label="loc_celhOtherMiscellaneousExpense" />
+      <link:calculationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_celhOtherMiscellaneousExpense" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_GainLossOnTerminationOfLease" xlink:label="loc_us-gaapGainLossOnTerminationOfLease" />
+      <link:calculationArc order="6" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_us-gaapGainLossOnTerminationOfLease" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_ForeignCurrencyTransactionGainLossBeforeTax" xlink:label="loc_us-gaapForeignCurrencyTransactionGainLossBeforeTax" />
+      <link:calculationArc order="7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_us-gaapForeignCurrencyTransactionGainLossBeforeTax" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_DeferredIncomeTaxExpenseBenefit" xlink:label="loc_us-gaapDeferredIncomeTaxExpenseBenefit" />
+      <link:calculationArc order="8" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_us-gaapDeferredIncomeTaxExpenseBenefit" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_GainOnInvestmentRepaymentchinaNoteReceivableNote6" xlink:label="loc_celhGainOnInvestmentRepaymentchinaNoteReceivableNote6" />
+      <link:calculationArc order="9" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_celhGainOnInvestmentRepaymentchinaNoteReceivableNote6" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_AmortizationOfDiscountOnNotesPayables" xlink:label="loc_celhAmortizationOfDiscountOnNotesPayables" />
+      <link:calculationArc order="10" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_celhAmortizationOfDiscountOnNotesPayables" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_InterestOnOtherObligations" xlink:label="loc_celhInterestOnOtherObligations" />
+      <link:calculationArc order="11" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNonoperatingIncomeExpense" xlink:to="loc_celhInterestOnOtherObligations" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest" xlink:label="loc_us-gaapIncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapIncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest" xlink:to="loc_us-gaapOperatingIncomeLoss" xlink:type="arc" weight="1" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapIncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest" xlink:to="loc_us-gaapNonoperatingIncomeExpense" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NetIncomeLoss" xlink:label="loc_us-gaapNetIncomeLoss" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetIncomeLoss" xlink:to="loc_us-gaapIncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_IncomeTaxExpenseBenefit" xlink:label="loc_us-gaapIncomeTaxExpenseBenefit" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetIncomeLoss" xlink:to="loc_us-gaapIncomeTaxExpenseBenefit" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_ComprehensiveIncomeNetOfTax" xlink:label="loc_us-gaapComprehensiveIncomeNetOfTax" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapComprehensiveIncomeNetOfTax" xlink:to="loc_us-gaapNetIncomeLoss" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax" xlink:label="loc_us-gaapOtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapComprehensiveIncomeNetOfTax" xlink:to="loc_us-gaapOtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/StatementsOfChangesInStockholdersEquity" xlink:title="00000005 - Statement - Consolidated Statements of Changes in Stockholders&apos; Equity" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/StatementsOfCashFlows" xlink:title="00000006 - Statement - Consolidated Statements of Cash Flows">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities" xlink:label="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NetIncomeLoss" xlink:label="loc_us-gaapNetIncomeLoss" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapNetIncomeLoss" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AdjustmentForAmortization" xlink:label="loc_us-gaapAdjustmentForAmortization" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapAdjustmentForAmortization" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_InventoryAllowanceForExcessAndObsoleteProducts" xlink:label="loc_celhInventoryAllowanceForExcessAndObsoleteProducts" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_celhInventoryAllowanceForExcessAndObsoleteProducts" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_ShareBasedCompensation" xlink:label="loc_us-gaapShareBasedCompensation" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapShareBasedCompensation" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_GainLossOnInvestments" xlink:label="loc_us-gaapGainLossOnInvestments" />
+      <link:calculationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapGainLossOnInvestments" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_GainLossOnTerminationOfLease" xlink:label="loc_us-gaapGainLossOnTerminationOfLease" />
+      <link:calculationArc order="6" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapGainLossOnTerminationOfLease" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_IncreaseDecreaseInAccountsReceivable" xlink:label="loc_us-gaapIncreaseDecreaseInAccountsReceivable" />
+      <link:calculationArc order="7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapIncreaseDecreaseInAccountsReceivable" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_IncreaseDecreaseInInventories" xlink:label="loc_us-gaapIncreaseDecreaseInInventories" />
+      <link:calculationArc order="8" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapIncreaseDecreaseInInventories" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets" xlink:label="loc_us-gaapIncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets" />
+      <link:calculationArc order="9" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapIncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_IncreaseDecreaseInAccountsPayableAndAccruedLiabilities" xlink:label="loc_us-gaapIncreaseDecreaseInAccountsPayableAndAccruedLiabilities" />
+      <link:calculationArc order="10" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapIncreaseDecreaseInAccountsPayableAndAccruedLiabilities" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities" xlink:label="loc_celhIncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities" />
+      <link:calculationArc order="11" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_celhIncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_ProvisionForDoubtfulAccounts" xlink:label="loc_us-gaapProvisionForDoubtfulAccounts" />
+      <link:calculationArc order="12" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapProvisionForDoubtfulAccounts" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_Depreciation" xlink:label="loc_us-gaapDepreciation" />
+      <link:calculationArc order="13" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_us-gaapDepreciation" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_ChangeInRightToUseAndLeaseObligationnet" xlink:label="loc_celhChangeInRightToUseAndLeaseObligationnet" />
+      <link:calculationArc order="14" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:to="loc_celhChangeInRightToUseAndLeaseObligationnet" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities" xlink:label="loc_us-gaapNetCashProvidedByUsedInInvestingActivities" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_ProceedsFromSaleOfNotesReceivable" xlink:label="loc_us-gaapProceedsFromSaleOfNotesReceivable" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInInvestingActivities" xlink:to="loc_us-gaapProceedsFromSaleOfNotesReceivable" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_PaymentsToAcquirePropertyPlantAndEquipment" xlink:label="loc_us-gaapPaymentsToAcquirePropertyPlantAndEquipment" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInInvestingActivities" xlink:to="loc_us-gaapPaymentsToAcquirePropertyPlantAndEquipment" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_PaymentToEscrowForAcquisition" xlink:label="loc_celhPaymentToEscrowForAcquisition" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInInvestingActivities" xlink:to="loc_celhPaymentToEscrowForAcquisition" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities" xlink:label="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_ProceedsFromNotesPayablerelatedpartyNet" xlink:label="loc_celhProceedsFromNotesPayablerelatedpartyNet" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:to="loc_celhProceedsFromNotesPayablerelatedpartyNet" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_PaymentsOnBondsPayable" xlink:label="loc_celhPaymentsOnBondsPayable" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:to="loc_celhPaymentsOnBondsPayable" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_ProceedsFromStockOptionsExercised" xlink:label="loc_us-gaapProceedsFromStockOptionsExercised" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:to="loc_us-gaapProceedsFromStockOptionsExercised" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_PaymentsForOtherTaxes" xlink:label="loc_us-gaapPaymentsForOtherTaxes" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:to="loc_us-gaapPaymentsForOtherTaxes" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_NetProceedsFromCollectionOfSectionShortSwingProfit" xlink:label="loc_celhNetProceedsFromCollectionOfSectionShortSwingProfit" />
+      <link:calculationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:to="loc_celhNetProceedsFromCollectionOfSectionShortSwingProfit" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_ProceedsFromIssuanceOfCommonStock" xlink:label="loc_us-gaapProceedsFromIssuanceOfCommonStock" />
+      <link:calculationArc order="6" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:to="loc_us-gaapProceedsFromIssuanceOfCommonStock" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_RepaymentsOfLongTermCapitalLeaseObligations" xlink:label="loc_us-gaapRepaymentsOfLongTermCapitalLeaseObligations" />
+      <link:calculationArc order="7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:to="loc_us-gaapRepaymentsOfLongTermCapitalLeaseObligations" xlink:type="arc" weight="-1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_CashPeriodIncreaseDecrease" xlink:label="loc_us-gaapCashPeriodIncreaseDecrease" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapCashPeriodIncreaseDecrease" xlink:to="loc_us-gaapNetCashProvidedByUsedInOperatingActivities" xlink:type="arc" weight="1" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapCashPeriodIncreaseDecrease" xlink:to="loc_us-gaapNetCashProvidedByUsedInInvestingActivities" xlink:type="arc" weight="1" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapCashPeriodIncreaseDecrease" xlink:to="loc_us-gaapNetCashProvidedByUsedInFinancingActivities" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_EffectOfExchangeRateOnCashAndCashEquivalents" xlink:label="loc_us-gaapEffectOfExchangeRateOnCashAndCashEquivalents" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapCashPeriodIncreaseDecrease" xlink:to="loc_us-gaapEffectOfExchangeRateOnCashAndCashEquivalents" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/OrganizationAndDescriptionOfBusiness" xlink:title="00000007 - Disclosure - ORGANIZATION AND DESCRIPTION OF BUSINESS" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPolicies" xlink:title="00000008 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Revenue" xlink:title="00000009 - Disclosure - REVENUE" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Inventories" xlink:title="00000010 - Disclosure - INVENTORIES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/PrepaidExpensesAndOtherCurrentAssets" xlink:title="00000011 - Disclosure - PREPAID EXPENSES AND OTHER CURRENT ASSETS" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/NoteReceivable" xlink:title="00000012 - Disclosure - NOTE RECEIVABLE" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Leases" xlink:title="00000013 - Disclosure - LEASES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/PropertyAndEquipment" xlink:title="00000014 - Disclosure - PROPERTY AND EQUIPMENT" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/GoodwillAndIntangibles" xlink:title="00000015 - Disclosure - GOODWILL AND INTANGIBLES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Acquisition-europeanOperations" xlink:title="00000016 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/AccountsPayableAndAccruedExpenses" xlink:title="00000017 - Disclosure - ACCOUNTS PAYABLE AND ACCRUED EXPENSES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/OtherLiabilities" xlink:title="00000018 - Disclosure - OTHER LIABILITIES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BondsPayable" xlink:title="00000019 - Disclosure - BONDS PAYABLE" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/RelatedPartyTransactions" xlink:title="00000020 - Disclosure - RELATED PARTY TRANSACTIONS" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/StockholdersEquity" xlink:title="00000021 - Disclosure - STOCKHOLDERS&apos; EQUITY" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/IncomeTaxes" xlink:title="00000022 - Disclosure - INCOME TAXES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Stock-basedCompensation" xlink:title="00000023 - Disclosure - STOCK-BASED COMPENSATION" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/CommitmentsAndContingencies" xlink:title="00000024 - Disclosure - COMMITMENTS AND CONTINGENCIES" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/SubsequentEvents" xlink:title="00000025 - Disclosure - SUBSEQUENT EVENTS" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesPolicies" xlink:title="00000026 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesTables" xlink:title="00000027 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/RevenueTables" xlink:title="00000028 - Disclosure - REVENUE (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/InventoriesTables" xlink:title="00000029 - Disclosure - INVENTORIES (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/NoteReceivableTables" xlink:title="00000030 - Disclosure - NOTE RECEIVABLE (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/LeasesTables" xlink:title="00000031 - Disclosure - LEASES (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/PropertyAndEquipmentTables" xlink:title="00000032 - Disclosure - PROPERTY AND EQUIPMENT (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/GoodwillAndIntangiblesTables" xlink:title="00000033 - Disclosure - GOODWILL AND INTANGIBLES (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Acquisition-europeanOperationsTables" xlink:title="00000034 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/AccountsPayableAndAccruedExpensesTables" xlink:title="00000035 - Disclosure - ACCOUNTS PAYABLE AND ACCRUED EXPENSES (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/OtherLiabilitiesTables" xlink:title="00000036 - Disclosure - OTHER LIABILITIES (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BondsPayableTables" xlink:title="00000037 - Disclosure - BONDS PAYABLE (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/IncomeTaxesTables" xlink:title="00000038 - Disclosure - INCOME TAXES (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Stock-basedCompensationTables" xlink:title="00000039 - Disclosure - STOCK-BASED COMPENSATION (Tables)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails" xlink:title="00000040 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails1" xlink:title="00000041 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details 1)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails2" xlink:title="00000042 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details 2)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetailsNarrative" xlink:title="00000043 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/RevenueDetails" xlink:title="00000044 - Disclosure - REVENUE (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/RevenueDetailsNarrative" xlink:title="00000045 - Disclosure - REVENUE (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/InventoriesDetails" xlink:title="00000046 - Disclosure - INVENTORIES (Details)">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InventoryNet" xlink:label="loc_us-gaapInventoryNet" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InventoryFinishedGoods" xlink:label="loc_us-gaapInventoryFinishedGoods" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapInventoryNet" xlink:to="loc_us-gaapInventoryFinishedGoods" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InventoryRawMaterialsAndSupplies" xlink:label="loc_us-gaapInventoryRawMaterialsAndSupplies" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapInventoryNet" xlink:to="loc_us-gaapInventoryRawMaterialsAndSupplies" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_InventoryValuationReserves" xlink:label="loc_us-gaapInventoryValuationReserves" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapInventoryNet" xlink:to="loc_us-gaapInventoryValuationReserves" xlink:type="arc" weight="-1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/PrepaidExpensesAndOtherCurrentAssetsDetails" xlink:title="00000047 - Disclosure - PREPAID EXPENSES AND OTHER CURRENT ASSETS (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/NoteReceivableDetails" xlink:title="00000048 - Disclosure - NOTE RECEIVABLE (Details)">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NotesReceivableNet" xlink:label="loc_us-gaapNotesReceivableNet" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NotesAndLoansReceivableNetCurrent" xlink:label="loc_us-gaapNotesAndLoansReceivableNetCurrent" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNotesReceivableNet" xlink:to="loc_us-gaapNotesAndLoansReceivableNetCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_NotesAndLoansReceivableNetNoncurrent" xlink:label="loc_us-gaapNotesAndLoansReceivableNetNoncurrent" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapNotesReceivableNet" xlink:to="loc_us-gaapNotesAndLoansReceivableNetNoncurrent" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/NoteReceivableDetailsNarrative" xlink:title="00000049 - Disclosure - NOTE RECEIVABLE (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/LeasesDetails" xlink:title="00000050 - Disclosure - LEASES (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/LeasesDetails1" xlink:title="00000051 - Disclosure - LEASES (Details 1)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/LeasesDetails2" xlink:title="00000052 - Disclosure - LEASES (Details 2)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/LeasesDetails3" xlink:title="00000053 - Disclosure - LEASES (Details 3)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/PropertyAndEquipmentDetails" xlink:title="00000054 - Disclosure - PROPERTY AND EQUIPMENT (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/PropertyAndEquipmentDetailsNarrative" xlink:title="00000055 - Disclosure - PROPERTY AND EQUIPMENT (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/GoodwillAndIntangiblesDetails" xlink:title="00000056 - Disclosure - GOODWILL AND INTANGIBLES (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/GoodwillAndIntangiblesDetails1" xlink:title="00000057 - Disclosure - GOODWILL AND INTANGIBLES (Details 1)">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FiniteLivedIntangibleAssetsNet" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsNet" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsNet" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearTwo" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsNet" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearTwo" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearThree" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearThree" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsNet" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearThree" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearFour" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFour" />
+      <link:calculationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsNet" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFour" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearFive" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFive" />
+      <link:calculationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsNet" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFive" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive" />
+      <link:calculationArc order="6" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsNet" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/GoodwillAndIntangiblesDetailsNarrative" xlink:title="00000058 - Disclosure - GOODWILL AND INTANGIBLES (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Acquisition-europeanOperationsDetails" xlink:title="00000059 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Acquisition-europeanOperationsDetails1" xlink:title="00000060 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Details 1)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Acquisition-europeanOperationsDetailsNarrative" xlink:title="00000061 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/AccountsPayableAndAccruedExpensesDetails" xlink:title="00000062 - Disclosure - ACCOUNTS PAYABLE AND ACCRUED EXPENSES (Details)">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent" xlink:label="loc_us-gaapAccountsPayableAndAccruedLiabilitiesCurrent" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AccountsPayableCurrent" xlink:label="loc_us-gaapAccountsPayableCurrent" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAccountsPayableAndAccruedLiabilitiesCurrent" xlink:to="loc_us-gaapAccountsPayableCurrent" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_AccruedLiabilitiesCurrent" xlink:label="loc_us-gaapAccruedLiabilitiesCurrent" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapAccountsPayableAndAccruedLiabilitiesCurrent" xlink:to="loc_us-gaapAccruedLiabilitiesCurrent" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/OtherLiabilitiesDetails" xlink:title="00000063 - Disclosure - OTHER LIABILITIES (Details)">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OtherLiabilities" xlink:label="loc_us-gaapOtherLiabilities" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_OtherLiabilitiesCurrent" xlink:label="loc_us-gaapOtherLiabilitiesCurrent" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapOtherLiabilities" xlink:to="loc_us-gaapOtherLiabilitiesCurrent" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/BondsPayableDetails" xlink:title="00000064 - Disclosure - BONDS PAYABLE (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/RelatedPartyTransactionsDetails" xlink:title="00000065 - Disclosure - RELATED PARTY TRANSACTIONS (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/StockholdersEquityDetailsNarrative" xlink:title="00000066 - Disclosure - STOCKHOLDERS&apos; EQUITY (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/IncomeTaxesDetails" xlink:title="00000067 - Disclosure - INCOME TAXES (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/IncomeTaxesDetails1" xlink:title="00000068 - Disclosure - INCOME TAXES (Details 1)">
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_DeferredFederalStateAndLocalTaxExpenseBenefit" xlink:label="loc_us-gaapDeferredFederalStateAndLocalTaxExpenseBenefit" />
+      <link:loc xlink:type="locator" xlink:href="celh-20201231.xsd#celh_DeferredDomesticIncomeTaxExpenseBenefit" xlink:label="loc_celhDeferredDomesticIncomeTaxExpenseBenefit" />
+      <link:calculationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapDeferredFederalStateAndLocalTaxExpenseBenefit" xlink:to="loc_celhDeferredDomesticIncomeTaxExpenseBenefit" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_DeferredStateAndLocalIncomeTaxExpenseBenefit" xlink:label="loc_us-gaapDeferredStateAndLocalIncomeTaxExpenseBenefit" />
+      <link:calculationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapDeferredFederalStateAndLocalTaxExpenseBenefit" xlink:to="loc_us-gaapDeferredStateAndLocalIncomeTaxExpenseBenefit" xlink:type="arc" weight="1" />
+      <link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd#us-gaap_DeferredForeignIncomeTaxExpenseBenefit" xlink:label="loc_us-gaapDeferredForeignIncomeTaxExpenseBenefit" />
+      <link:calculationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_us-gaapDeferredFederalStateAndLocalTaxExpenseBenefit" xlink:to="loc_us-gaapDeferredForeignIncomeTaxExpenseBenefit" xlink:type="arc" weight="1" />
+    </link:calculationLink>
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/IncomeTaxesDetails2" xlink:title="00000069 - Disclosure - INCOME TAXES (Details 2)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/IncomeTaxesDetails3" xlink:title="00000070 - Disclosure - INCOME TAXES (Details 3)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/IncomeTaxesDetailsNarrative" xlink:title="00000071 - Disclosure - INCOME TAXES (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Stock-basedCompensationDetails" xlink:title="00000072 - Disclosure - STOCK-BASED COMPENSATION (Details)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Stock-basedCompensationDetails1" xlink:title="00000073 - Disclosure - STOCK-BASED COMPENSATION (Details 1)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Stock-basedCompensationDetails2" xlink:title="00000074 - Disclosure - STOCK-BASED COMPENSATION (Details 2)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Stock-basedCompensationDetails3" xlink:title="00000075 - Disclosure - STOCK-BASED COMPENSATION (Details 3)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/Stock-basedCompensationDetailsNarrative" xlink:title="00000076 - Disclosure - STOCK-BASED COMPENSATION (Details Narrative)" />
+    <link:calculationLink xlink:type="extended" xlink:role="http://celsius.com/role/SubsequentEventsDetailsNarrative" xlink:title="00000077 - Disclosure - SUBSEQUENT EVENTS (Details Narrative)" />
+</link:linkbase>

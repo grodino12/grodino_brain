@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+    <!-- Field: Doc-Info; Name: Generator; Value: GoFiler Complete; Version: 5.6c -->
+    <!-- Field: Doc-Info; Name: VendorURI; Value: http://www.novaworks.com -->
+    <!-- Field: Doc-Info; Name: Source; Value: celh.xfr; Date: 2021%2D03%2D11T13:25:32Z -->
+    <!-- Field: Doc-Info; Name: Status; Value: 0x80050004 -->
+    <!-- Field: Doc-Info; Name: Misc; Value: 8KlZs7xRiXgen8uCandcSa6DKcPtxJFzmZkhv2p6fZnqPygr+YHXOyaWKhoWkbkC -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:dei="http://xbrl.sec.gov/dei/2020-01-31" xmlns:us-gaap="http://fasb.org/us-gaap/2020-01-31" xmlns:us-roles="http://fasb.org/us-roles/2020-01-31" xmlns:srt="http://fasb.org/srt/2020-01-31" xmlns:srt-types="http://fasb.org/srt-types/2020-01-31" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:us-types="http://fasb.org/us-types/2020-01-31" xmlns:celh="http://celsius.com/20201231" elementFormDefault="qualified" targetNamespace="http://celsius.com/20201231">
+    <annotation>
+      <appinfo>
+	<link:roleType roleURI="http://celsius.com/role/DocumentAndEntityInformation" id="DocumentAndEntityInformation">
+	  <link:definition>00000001 - Document - Document and Entity Information</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BalanceSheets" id="BalanceSheets">
+	  <link:definition>00000002 - Statement - Consolidated Balance Sheets</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BalanceSheetsParenthetical" id="BalanceSheetsParenthetical">
+	  <link:definition>00000003 - Statement - Consolidated Balance Sheets (Parenthetical)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/StatementsOfOperations" id="StatementsOfOperations">
+	  <link:definition>00000004 - Statement - Consolidated Statements of Operations</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/StatementsOfChangesInStockholdersEquity" id="StatementsOfChangesInStockholdersEquity">
+	  <link:definition>00000005 - Statement - Consolidated Statements of Changes in Stockholders' Equity</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/StatementsOfCashFlows" id="StatementsOfCashFlows">
+	  <link:definition>00000006 - Statement - Consolidated Statements of Cash Flows</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/OrganizationAndDescriptionOfBusiness" id="OrganizationAndDescriptionOfBusiness">
+	  <link:definition>00000007 - Disclosure - ORGANIZATION AND DESCRIPTION OF BUSINESS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPolicies" id="BasisOfPresentationAndSummaryOfSignificantAccountingPolicies">
+	  <link:definition>00000008 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Revenue" id="Revenue">
+	  <link:definition>00000009 - Disclosure - REVENUE</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Inventories" id="Inventories">
+	  <link:definition>00000010 - Disclosure - INVENTORIES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/PrepaidExpensesAndOtherCurrentAssets" id="PrepaidExpensesAndOtherCurrentAssets">
+	  <link:definition>00000011 - Disclosure - PREPAID EXPENSES AND OTHER CURRENT ASSETS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/NoteReceivable" id="NoteReceivable">
+	  <link:definition>00000012 - Disclosure - NOTE RECEIVABLE</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Leases" id="Leases">
+	  <link:definition>00000013 - Disclosure - LEASES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/PropertyAndEquipment" id="PropertyAndEquipment">
+	  <link:definition>00000014 - Disclosure - PROPERTY AND EQUIPMENT</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/GoodwillAndIntangibles" id="GoodwillAndIntangibles">
+	  <link:definition>00000015 - Disclosure - GOODWILL AND INTANGIBLES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Acquisition-europeanOperations" id="Acquisition-europeanOperations">
+	  <link:definition>00000016 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/AccountsPayableAndAccruedExpenses" id="AccountsPayableAndAccruedExpenses">
+	  <link:definition>00000017 - Disclosure - ACCOUNTS PAYABLE AND ACCRUED EXPENSES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/OtherLiabilities" id="OtherLiabilities">
+	  <link:definition>00000018 - Disclosure - OTHER LIABILITIES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BondsPayable" id="BondsPayable">
+	  <link:definition>00000019 - Disclosure - BONDS PAYABLE</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/RelatedPartyTransactions" id="RelatedPartyTransactions">
+	  <link:definition>00000020 - Disclosure - RELATED PARTY TRANSACTIONS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/StockholdersEquity" id="StockholdersEquity">
+	  <link:definition>00000021 - Disclosure - STOCKHOLDERS' EQUITY</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/IncomeTaxes" id="IncomeTaxes">
+	  <link:definition>00000022 - Disclosure - INCOME TAXES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Stock-basedCompensation" id="Stock-basedCompensation">
+	  <link:definition>00000023 - Disclosure - STOCK-BASED COMPENSATION</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/CommitmentsAndContingencies" id="CommitmentsAndContingencies">
+	  <link:definition>00000024 - Disclosure - COMMITMENTS AND CONTINGENCIES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/SubsequentEvents" id="SubsequentEvents">
+	  <link:definition>00000025 - Disclosure - SUBSEQUENT EVENTS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesPolicies" id="BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesPolicies">
+	  <link:definition>00000026 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesTables" id="BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesTables">
+	  <link:definition>00000027 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/RevenueTables" id="RevenueTables">
+	  <link:definition>00000028 - Disclosure - REVENUE (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/InventoriesTables" id="InventoriesTables">
+	  <link:definition>00000029 - Disclosure - INVENTORIES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/NoteReceivableTables" id="NoteReceivableTables">
+	  <link:definition>00000030 - Disclosure - NOTE RECEIVABLE (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/LeasesTables" id="LeasesTables">
+	  <link:definition>00000031 - Disclosure - LEASES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/PropertyAndEquipmentTables" id="PropertyAndEquipmentTables">
+	  <link:definition>00000032 - Disclosure - PROPERTY AND EQUIPMENT (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/GoodwillAndIntangiblesTables" id="GoodwillAndIntangiblesTables">
+	  <link:definition>00000033 - Disclosure - GOODWILL AND INTANGIBLES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Acquisition-europeanOperationsTables" id="Acquisition-europeanOperationsTables">
+	  <link:definition>00000034 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/AccountsPayableAndAccruedExpensesTables" id="AccountsPayableAndAccruedExpensesTables">
+	  <link:definition>00000035 - Disclosure - ACCOUNTS PAYABLE AND ACCRUED EXPENSES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/OtherLiabilitiesTables" id="OtherLiabilitiesTables">
+	  <link:definition>00000036 - Disclosure - OTHER LIABILITIES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BondsPayableTables" id="BondsPayableTables">
+	  <link:definition>00000037 - Disclosure - BONDS PAYABLE (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/IncomeTaxesTables" id="IncomeTaxesTables">
+	  <link:definition>00000038 - Disclosure - INCOME TAXES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Stock-basedCompensationTables" id="Stock-basedCompensationTables">
+	  <link:definition>00000039 - Disclosure - STOCK-BASED COMPENSATION (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails" id="BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails">
+	  <link:definition>00000040 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails1" id="BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails1">
+	  <link:definition>00000041 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails2" id="BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetails2">
+	  <link:definition>00000042 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details 2)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetailsNarrative" id="BasisOfPresentationAndSummaryOfSignificantAccountingPoliciesDetailsNarrative">
+	  <link:definition>00000043 - Disclosure - BASIS OF PRESENTATION AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/RevenueDetails" id="RevenueDetails">
+	  <link:definition>00000044 - Disclosure - REVENUE (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/RevenueDetailsNarrative" id="RevenueDetailsNarrative">
+	  <link:definition>00000045 - Disclosure - REVENUE (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/InventoriesDetails" id="InventoriesDetails">
+	  <link:definition>00000046 - Disclosure - INVENTORIES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/PrepaidExpensesAndOtherCurrentAssetsDetails" id="PrepaidExpensesAndOtherCurrentAssetsDetails">
+	  <link:definition>00000047 - Disclosure - PREPAID EXPENSES AND OTHER CURRENT ASSETS (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/NoteReceivableDetails" id="NoteReceivableDetails">
+	  <link:definition>00000048 - Disclosure - NOTE RECEIVABLE (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/NoteReceivableDetailsNarrative" id="NoteReceivableDetailsNarrative">
+	  <link:definition>00000049 - Disclosure - NOTE RECEIVABLE (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/LeasesDetails" id="LeasesDetails">
+	  <link:definition>00000050 - Disclosure - LEASES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/LeasesDetails1" id="LeasesDetails1">
+	  <link:definition>00000051 - Disclosure - LEASES (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/LeasesDetails2" id="LeasesDetails2">
+	  <link:definition>00000052 - Disclosure - LEASES (Details 2)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/LeasesDetails3" id="LeasesDetails3">
+	  <link:definition>00000053 - Disclosure - LEASES (Details 3)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/PropertyAndEquipmentDetails" id="PropertyAndEquipmentDetails">
+	  <link:definition>00000054 - Disclosure - PROPERTY AND EQUIPMENT (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/PropertyAndEquipmentDetailsNarrative" id="PropertyAndEquipmentDetailsNarrative">
+	  <link:definition>00000055 - Disclosure - PROPERTY AND EQUIPMENT (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/GoodwillAndIntangiblesDetails" id="GoodwillAndIntangiblesDetails">
+	  <link:definition>00000056 - Disclosure - GOODWILL AND INTANGIBLES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/GoodwillAndIntangiblesDetails1" id="GoodwillAndIntangiblesDetails1">
+	  <link:definition>00000057 - Disclosure - GOODWILL AND INTANGIBLES (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/GoodwillAndIntangiblesDetailsNarrative" id="GoodwillAndIntangiblesDetailsNarrative">
+	  <link:definition>00000058 - Disclosure - GOODWILL AND INTANGIBLES (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Acquisition-europeanOperationsDetails" id="Acquisition-europeanOperationsDetails">
+	  <link:definition>00000059 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Acquisition-europeanOperationsDetails1" id="Acquisition-europeanOperationsDetails1">
+	  <link:definition>00000060 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Acquisition-europeanOperationsDetailsNarrative" id="Acquisition-europeanOperationsDetailsNarrative">
+	  <link:definition>00000061 - Disclosure - ACQUISITION-EUROPEAN OPERATIONS (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/AccountsPayableAndAccruedExpensesDetails" id="AccountsPayableAndAccruedExpensesDetails">
+	  <link:definition>00000062 - Disclosure - ACCOUNTS PAYABLE AND ACCRUED EXPENSES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/OtherLiabilitiesDetails" id="OtherLiabilitiesDetails">
+	  <link:definition>00000063 - Disclosure - OTHER LIABILITIES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/BondsPayableDetails" id="BondsPayableDetails">
+	  <link:definition>00000064 - Disclosure - BONDS PAYABLE (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/RelatedPartyTransactionsDetails" id="RelatedPartyTransactionsDetails">
+	  <link:definition>00000065 - Disclosure - RELATED PARTY TRANSACTIONS (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/StockholdersEquityDetailsNarrative" id="StockholdersEquityDetailsNarrative">
+	  <link:definition>00000066 - Disclosure - STOCKHOLDERS' EQUITY (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/IncomeTaxesDetails" id="IncomeTaxesDetails">
+	  <link:definition>00000067 - Disclosure - INCOME TAXES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/IncomeTaxesDetails1" id="IncomeTaxesDetails1">
+	  <link:definition>00000068 - Disclosure - INCOME TAXES (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/IncomeTaxesDetails2" id="IncomeTaxesDetails2">
+	  <link:definition>00000069 - Disclosure - INCOME TAXES (Details 2)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/IncomeTaxesDetails3" id="IncomeTaxesDetails3">
+	  <link:definition>00000070 - Disclosure - INCOME TAXES (Details 3)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/IncomeTaxesDetailsNarrative" id="IncomeTaxesDetailsNarrative">
+	  <link:definition>00000071 - Disclosure - INCOME TAXES (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Stock-basedCompensationDetails" id="Stock-basedCompensationDetails">
+	  <link:definition>00000072 - Disclosure - STOCK-BASED COMPENSATION (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Stock-basedCompensationDetails1" id="Stock-basedCompensationDetails1">
+	  <link:definition>00000073 - Disclosure - STOCK-BASED COMPENSATION (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Stock-basedCompensationDetails2" id="Stock-basedCompensationDetails2">
+	  <link:definition>00000074 - Disclosure - STOCK-BASED COMPENSATION (Details 2)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Stock-basedCompensationDetails3" id="Stock-basedCompensationDetails3">
+	  <link:definition>00000075 - Disclosure - STOCK-BASED COMPENSATION (Details 3)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/Stock-basedCompensationDetailsNarrative" id="Stock-basedCompensationDetailsNarrative">
+	  <link:definition>00000076 - Disclosure - STOCK-BASED COMPENSATION (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://celsius.com/role/SubsequentEventsDetailsNarrative" id="SubsequentEventsDetailsNarrative">
+	  <link:definition>00000077 - Disclosure - SUBSEQUENT EVENTS (Details Narrative)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:linkbaseRef xlink:type="simple" xlink:href="celh-20201231_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Presentation Links" />
+	<link:linkbaseRef xlink:type="simple" xlink:href="celh-20201231_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Label Links" />
+	<link:linkbaseRef xlink:type="simple" xlink:href="celh-20201231_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Calculation Links" />
+	<link:linkbaseRef xlink:type="simple" xlink:href="celh-20201231_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Definition Links" />
+      </appinfo>
+    </annotation>
+    <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+    <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+    <import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+    <import namespace="http://xbrl.sec.gov/dei/2020-01-31" schemaLocation="https://xbrl.sec.gov/dei/2020/dei-2020-01-31.xsd" />
+    <import namespace="http://fasb.org/us-gaap/2020-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd" />
+    <import namespace="http://fasb.org/us-types/2020-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2020/elts/us-types-2020-01-31.xsd" />
+    <import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+    <import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+    <import namespace="http://xbrl.sec.gov/country/2020-01-31" schemaLocation="https://xbrl.sec.gov/country/2020/country-2020-01-31.xsd" />
+    <import namespace="http://fasb.org/srt/2020-01-31" schemaLocation="http://xbrl.fasb.org/srt/2020/elts/srt-2020-01-31.xsd" />
+    <import namespace="http://fasb.org/srt-types/2020-01-31" schemaLocation="http://xbrl.fasb.org/srt/2020/elts/srt-types-2020-01-31.xsd" />
+    <element id="celh_RoyaltyFees" name="RoyaltyFees" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsForfeitureRate" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsForfeitureRate" nillable="true" xbrli:periodType="duration" type="num:percentItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BondsPayable" name="BondsPayable" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InitialNominalAmount" name="InitialNominalAmount" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AmortizationDiscount" name="AmortizationDiscount" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BondIssuanceCosts" name="BondIssuanceCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BondsPayableDescription" name="BondsPayableDescription" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_NoteReceivableDescription" name="NoteReceivableDescription" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InstalmentCollateralShares" name="InstalmentCollateralShares" nillable="true" xbrli:periodType="instant" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IncomeTaxExpensesBenefit" name="IncomeTaxExpensesBenefit" nillable="true" xbrli:periodType="duration" type="xbrli:pureItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_FreightExpense" name="FreightExpense" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeaseExpirationMonthYear" name="LeaseExpirationMonthYear" nillable="true" xbrli:periodType="duration" type="xbrli:gYearMonthItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ExpensesRelatedToCapitalRaise" name="ExpensesRelatedToCapitalRaise" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_MaturityDateDescription" name="MaturityDateDescription" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ReceivablesInstallmentDueDate" name="ReceivablesInstallmentDueDate" nillable="true" xbrli:periodType="duration" type="xbrli:dateItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_NetOperatingLossCarryForwardsExpiring" name="NetOperatingLossCarryForwardsExpiring" nillable="true" xbrli:periodType="duration" type="xbrli:durationItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_OtherMiscellaneousExpense" name="OtherMiscellaneousExpense" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AmortizationOfDiscountOnBondsPayable" name="AmortizationOfDiscountOnBondsPayable" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IssuanceOfCommonStocknotesPayableConversionInShares" name="IssuanceOfCommonStocknotesPayableConversionInShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IssuanceOfCommonStocknotesPayableConversion" name="IssuanceOfCommonStocknotesPayableConversion" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IssuanceOfCommonStockPursuantToExerciseOfStockOptionsCashlessInShares" name="IssuanceOfCommonStockPursuantToExerciseOfStockOptionsCashlessInShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IssuanceOfCommonStockPursuantToExerciseOfStockOptionsCashless" name="IssuanceOfCommonStockPursuantToExerciseOfStockOptionsCashless" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IssuanceOfCommonStockPursuantToExerciseOfStockOptionsCashInShares" name="IssuanceOfCommonStockPursuantToExerciseOfStockOptionsCashInShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IssuanceOfCommonStockFromPrivatePlacementShares" name="IssuanceOfCommonStockFromPrivatePlacementShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IssuanceOfCommonStockFromPrivatePlacement" name="IssuanceOfCommonStockFromPrivatePlacement" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_CashPaidForTaxesOnRestrictedStockAwards" name="CashPaidForTaxesOnRestrictedStockAwards" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ShortSwingPayment" name="ShortSwingPayment" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_NetProceedsFromCollectionOfSectionShortSwingProfit" name="NetProceedsFromCollectionOfSectionShortSwingProfit" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_PaymentsOnBondsPayable" name="PaymentsOnBondsPayable" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ProceedsFromNotesPayablerelatedpartyNet" name="ProceedsFromNotesPayablerelatedpartyNet" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_PaymentToEscrowForAcquisition" name="PaymentToEscrowForAcquisition" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities" name="IncreaseDecreaseInDeferredRevenueAndOtherCurrentLiabilities" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InventoryAllowanceForExcessAndObsoleteProducts" name="InventoryAllowanceForExcessAndObsoleteProducts" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_RevenueTextBlock" name="RevenueTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_PrepaidExpensesAndOtherCurrentAssetsTextBlock" name="PrepaidExpensesAndOtherCurrentAssetsTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_NoteReceivableTextBlock" name="NoteReceivableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AcquisitioneuropeanOperationsTextBlock" name="AcquisitioneuropeanOperationsTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BondsPayableTextBlock" name="BondsPayableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LonglivedAssetGeographicDataPolicyTextBlock" name="LonglivedAssetGeographicDataPolicyTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_CustomerAdvancePoliciesTextBlock" name="CustomerAdvancePoliciesTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_OperatingExpensesPolicyTextBlock" name="OperatingExpensesPolicyTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ScheduleOfNoteReceivableTableTextBlock" name="ScheduleOfNoteReceivableTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ScheduleOfOperatingLeasesOfLesseeDisclosureTextBlock" name="ScheduleOfOperatingLeasesOfLesseeDisclosureTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ScheduleOfWeightesdAverageRemainingLeaseTermAndWeightedAverageDiscountRateTableTextBlock" name="ScheduleOfWeightesdAverageRemainingLeaseTermAndWeightedAverageDiscountRateTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AssetsAcquiredAtFairMarketValueAndLiabilitiesTableTextBlock" name="AssetsAcquiredAtFairMarketValueAndLiabilitiesTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ProformaConsolidatedResultsOfOperations" name="ProformaConsolidatedResultsOfOperations" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ScheduleOfOtherCurrentLiabilitiesTableTextBlock" name="ScheduleOfOtherCurrentLiabilitiesTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ScheduleOfBondsPayableTableTextBlock" name="ScheduleOfBondsPayableTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LonglivedAssetsRelatedToForeignOperations" name="LonglivedAssetsRelatedToForeignOperations" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_TotalLonglivedAssets" name="TotalLonglivedAssets" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AmortizationOfDiscountOnNotesPayable" name="AmortizationOfDiscountOnNotesPayable" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InterestExpenseOnConvertibleNotes" name="InterestExpenseOnConvertibleNotes" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_PaymentForRoyaltyFees" name="PaymentForRoyaltyFees" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeaseCostInOtherExpenseTotal" name="LeaseCostInOtherExpenseTotal" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InterestOnFinanceLeaseLiabilities" name="InterestOnFinanceLeaseLiabilities" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeaseCostInGeneralAndAdministrativeExpensesTotal" name="LeaseCostInGeneralAndAdministrativeExpensesTotal" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_TotalLeasingActivityInCashFlowsFromFinancingActivities" name="TotalLeasingActivityInCashFlowsFromFinancingActivities" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeasingActivityInCashFlowsFromOperatingActivitiesTotal" name="LeasingActivityInCashFlowsFromOperatingActivitiesTotal" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_OperatingCashFlowsFromOperatingLeases" name="OperatingCashFlowsFromOperatingLeases" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AmountRepresentingInterest" name="AmountRepresentingInterest" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BrandsTotalCarryingAmount" name="BrandsTotalCarryingAmount" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IntangibleAssetsNotSubjectToAmortizationNet" name="IntangibleAssetsNotSubjectToAmortizationNet" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedSettlementOfPreexistingDebt" name="BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedSettlementOfPreexistingDebt" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedBondsPayable" name="BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedBondsPayable" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedRightOfUseAsset" name="BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedRightOfUseAsset" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedIntangibleAssetscustomerRelationships" name="BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedIntangibleAssetscustomerRelationships" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_CurrentDomesticTaxExpenseBenefit" name="CurrentDomesticTaxExpenseBenefit" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_DeferredDomesticIncomeTaxExpenseBenefit" name="DeferredDomesticIncomeTaxExpenseBenefit" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ChangeInValuationAllowanceIncludingEffectOfChangeInTaxRate" name="ChangeInValuationAllowanceIncludingEffectOfChangeInTaxRate" nillable="true" xbrli:periodType="duration" type="num:percentItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_PermanentDifferenceIncludingStockbasedCompensation" name="PermanentDifferenceIncludingStockbasedCompensation" nillable="true" xbrli:periodType="duration" type="num:percentItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_DepreciationDeferredTaxLiability" name="DepreciationDeferredTaxLiability" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_WeightedAverageGrantDateFairValueBeginng" name="WeightedAverageGrantDateFairValueBeginng" nillable="true" xbrli:periodType="instant" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_WeightedAverageGrantDateFairValueVested" name="WeightedAverageGrantDateFairValueVested" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_WeightedAverageGrantDateFairValueForfeited" name="WeightedAverageGrantDateFairValueForfeited" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_WeightedAveragesGrantDateFairValueExercised" name="WeightedAveragesGrantDateFairValueExercised" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_WeightedAveragesGrantDateFairValueGranted" name="WeightedAveragesGrantDateFairValueGranted" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_WeightedAverageGrantDateFairValue" name="WeightedAverageGrantDateFairValue" nillable="true" xbrli:periodType="instant" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_DebtInstrumentUnamortizedBalance" name="DebtInstrumentUnamortizedBalance" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedGoodwill" name="BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedGoodwill" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_GainOnInvestmentRepaymentchinaNoteReceivableNote6" name="GainOnInvestmentRepaymentchinaNoteReceivableNote6" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AmortizationOfDiscountOnNotesPayables" name="AmortizationOfDiscountOnNotesPayables" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InterestOnOtherObligations" name="InterestOnOtherObligations" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AcquisitioneuropeanOperationsDescriptions" name="AcquisitioneuropeanOperationsDescriptions" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ChangeInRightToUseAndLeaseObligationnet" name="ChangeInRightToUseAndLeaseObligationnet" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_OtherMember" name="OtherMember" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LicenseAgreementMember" name="LicenseAgreementMember" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_OperatingLeasesMember" name="OperatingLeasesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_FinanceLeasesMember" name="FinanceLeasesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_StockIncentivePlan2006Member" name="StockIncentivePlan2006Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_RangeOfExercisePrice1Member" name="RangeOfExercisePrice1Member" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_RangeOfExercisePrice2Member" name="RangeOfExercisePrice2Member" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_RangeOfExercisePrice3Member" name="RangeOfExercisePrice3Member" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_RangeOfExercisePrice4Member" name="RangeOfExercisePrice4Member" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_FurnitureAndEquipmentMember" name="FurnitureAndEquipmentMember" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_FuncFoodAcquisitionMember" name="FuncFoodAcquisitionMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AcquiredCustomerRelationshipsMember" name="AcquiredCustomerRelationshipsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_CustomerConcentrationRiskTwoMember" name="CustomerConcentrationRiskTwoMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ChinaMember" name="ChinaMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_HongKongMember" name="HongKongMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_FinlandMember" name="FinlandMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_SwedenMember" name="SwedenMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_NorwayMember" name="NorwayMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_CDFinancialLLCMember" name="CDFinancialLLCMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_UnitedStatesMember" name="UnitedStatesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ForeignRevenuesMember" name="ForeignRevenuesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InvestmentAgreementMember" name="InvestmentAgreementMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_RangeOfExercisePrice5Member" name="RangeOfExercisePrice5Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_PrincipalMember" name="PrincipalMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_InterestMember" name="InterestMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_FuncFoodMember" name="FuncFoodMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_DocumentAndEntityInformationAbstract" name="DocumentAndEntityInformationAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_NoteReceivableAbstract" name="NoteReceivableAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AcquisitioneuropeanOperationsAbstract" name="AcquisitioneuropeanOperationsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_BondsPayableAbstract" name="BondsPayableAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AllCurrenciesDomain" name="AllCurrenciesDomain" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeaseArrangementAxis" name="LeaseArrangementAxis" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" />
+    <element id="celh_LeaseArrangementDomain" name="LeaseArrangementDomain" abstract="true" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeaseCostInGeneralAndAdministrativeExpensesAbstract" name="LeaseCostInGeneralAndAdministrativeExpensesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeaseCostInOtherExpenseAbstract" name="LeaseCostInOtherExpenseAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeasingActivityInCashFlowsFromOperatingActivitiesAbstract" name="LeasingActivityInCashFlowsFromOperatingActivitiesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_LeasingActivityInCashFlowsFromFinancingActivitiesAbstract" name="LeasingActivityInCashFlowsFromFinancingActivitiesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IntangibleAssetsNotSubjectToAmortizationAbstarc" name="IntangibleAssetsNotSubjectToAmortizationAbstarc" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_AcquisitioneuropeanOperationsDetailsTextualAbstract" name="AcquisitioneuropeanOperationsDetailsTextualAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IncomeTaxesDetailsAbstract" name="IncomeTaxesDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IncomeTaxesDetails1Abstract" name="IncomeTaxesDetails1Abstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_IncomeTaxesDetailsNarrativeAbstract" name="IncomeTaxesDetailsNarrativeAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsAbstract" name="ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="celh_ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeVestedOptionsAbstract" name="ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeVestedOptionsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+</schema>
