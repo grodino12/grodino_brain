@@ -140,20 +140,53 @@ _PRETAX_CONCEPT_PREFIX = "IncomeLossFromContinuingOperationsBeforeIncomeTax"
 _MIN_STATEMENT_ROWS = 5
 
 
-def _assign_sections(local_names: list[str], stmt_type: StatementType) -> list[Section]:
-    """Walk presentation-ordered concept names, returning each row's Section.
+def _is_oci_concept(local_name: str) -> bool:
+    """Other-comprehensive-income concepts. CELH renders the income statement
+    and OCI in one combined presentation role; OCI is a separate statement
+    (out of scope), so its rows are dropped from the extracted IS."""
+    return (local_name.startswith("OtherComprehensiveIncome")
+            or local_name.startswith("ComprehensiveIncomeNetOfTax")
+            or local_name == "ComprehensiveIncomeNetOfTax")
 
-    The subtotal row itself keeps the section it closes; the transition takes
+
+def _is_net_change_in_cash_concept(local_name: str) -> bool:
+    """The CF's net-change-in-cash line. Everything tagged AFTER it in the
+    cash-flow role is supplemental disclosure (beginning/ending balances,
+    cash paid for interest/taxes, noncash investing/financing) — real but
+    not a cash flow, so those rows are tagged row_type=memo."""
+    return (local_name.startswith("CashCashEquivalents")
+            and "PeriodIncreaseDecrease" in local_name
+            ) or local_name.startswith("CashAndCashEquivalentsPeriodIncreaseDecrease")
+
+
+def _classify_rows(
+    local_names: list[str], stmt_type: StatementType,
+) -> list[tuple[Section, str | None]]:
+    """Walk presentation-ordered concept names, returning (Section, forced_row_type)
+    per row.
+
+    Section: a subtotal row keeps the section it closes; the transition takes
     effect for the rows after it. EPS / share-count concepts are forced to
-    Section.EPS regardless of position (they trail Net Income)."""
+    Section.EPS regardless of position (they trail Net Income).
+
+    forced_row_type: on the cash-flow statement, the net-change-in-cash row is
+    forced to 'subtotal' and every row after it to 'memo' (beginning/ending
+    cash, cash paid for interest/taxes, noncash supplemental — disclosure, not
+    a cash flow). None means "use the presentation linkbase's row type"."""
     current = _SECTION_START.get(stmt_type, Section.UNCLASSIFIED)
     transitions = _SECTION_TRANSITIONS.get(stmt_type, {})
-    out: list[Section] = []
+    is_cf = stmt_type == StatementType.CASH_FLOW
+    in_supplemental = False
+    out: list[tuple[Section, str | None]] = []
     for name in local_names:
         if stmt_type == StatementType.INCOME_STATEMENT and _is_eps_concept(name):
-            out.append(Section.EPS)
+            out.append((Section.EPS, None))
             continue
-        out.append(current)
+        forced: str | None = "memo" if in_supplemental else None
+        if is_cf and not in_supplemental and _is_net_change_in_cash_concept(name):
+            forced = "subtotal"
+            in_supplemental = True   # rows after net-change are supplemental
+        out.append((current, forced))
         nxt = transitions.get(name)
         if nxt is None and stmt_type == StatementType.INCOME_STATEMENT \
                 and name.startswith(_PRETAX_CONCEPT_PREFIX):
@@ -467,6 +500,12 @@ def build_raw_filing(
         # report a fact in. One Statement per period column.
         period_facts: dict[tuple, list[tuple[_PresRow, _Fact]]] = defaultdict(list)
         for prow in pres_rows:
+            # Drop OCI rows from the combined IS+OCI role — OCI is a separate
+            # statement (out of scope), not income-statement line items.
+            if stmt_type == StatementType.INCOME_STATEMENT and _is_oci_concept(
+                prow.concept_id.split("_", 1)[-1]
+            ):
+                continue
             for f in facts_by_concept.get(prow.concept_id, []):
                 ctx = contexts.get(f.context_ref)
                 if ctx is None or ctx.has_segment:
@@ -504,18 +543,21 @@ def build_raw_filing(
                 is_comparative=(p_end != filing_end),
             )
 
-            sections = _assign_sections([f.local_name for _p, f in pairs], stmt_type)
+            classified = _classify_rows([f.local_name for _p, f in pairs], stmt_type)
 
             line_items: list[RawLineItem] = []
-            for (prow, f), section in zip(pairs, sections):
+            for (prow, f), (section, forced_row_type) in zip(pairs, classified):
                 negate = "negated" in prow.preferred_role
                 value = -f.value if negate else f.value
 
                 labels = labels_by_concept.get(f.concept_id, {})
                 display_label = _row_label(labels, prow.preferred_role, f.local_name)
 
-                row_type = "subtotal" if prow.preferred_role.endswith(
-                    "totalLabel") else "line_item"
+                if forced_row_type is not None:
+                    row_type = forced_row_type
+                else:
+                    row_type = "subtotal" if prow.preferred_role.endswith(
+                        "totalLabel") else "line_item"
 
                 citation = Citation(
                     source_path=htm_path,
