@@ -906,8 +906,10 @@ def write_is_subtotals(
         ws.cell(row=nic_row, column=1).font = Font(bold=True)
 
 
-CF_TIE_OUT_WARN_MIN = Decimal("2")   # gaps ≤ $2M are silent (filer rounding)
-CF_TIE_OUT_ERROR_MIN = Decimal("4")  # gaps > $4M are validation ERRORS (raise)
+# Thresholds are in the workbook's canonical scale — THOUSANDS (collect_writes
+# normalizes every filing to thousands via stmt.unit). $2M = 2000, $4M = 4000.
+CF_TIE_OUT_WARN_MIN = Decimal("2000")   # gaps ≤ $2M are silent (filer rounding)
+CF_TIE_OUT_ERROR_MIN = Decimal("4000")  # gaps > $4M are validation ERRORS (raise)
 
 
 def check_cf_section_subtotals(
