@@ -76,7 +76,11 @@ _ROLE_IS = re.compile(r"incomestatement|statementsofoperation|statementofoperati
                       r"resultsofoperation", re.I)
 _ROLE_CF = re.compile(r"cashflow", re.I)
 # Roles that look like a primary statement by keyword but must be excluded.
-_ROLE_EXCLUDE = re.compile(r"parenthetical|comprehensive|stockholdersequity|"
+# NOTE: "comprehensive" is deliberately NOT excluded — CELH combines the income
+# statement and OCI into one role ("StatementsOfOperationsAndComprehensiveIncome").
+# A standalone Statement of Comprehensive Income role doesn't match _ROLE_IS
+# anyway (no "operations"/"incomestatement" token), so it's filtered naturally.
+_ROLE_EXCLUDE = re.compile(r"parenthetical|stockholdersequity|"
                            r"shareholdersequity|changesinequity|equitytype|"
                            r"\bnote\b|disclosure|policies|detail|table", re.I)
 
