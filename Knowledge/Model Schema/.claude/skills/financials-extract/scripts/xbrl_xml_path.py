@@ -83,6 +83,85 @@ _ROLE_EXCLUDE = re.compile(r"parenthetical|comprehensive|stockholdersequity|"
 # us-gaap standard label roles (last path segment).
 _LABEL_ROLE_STANDARD = "label"
 
+# ----------------------------------------------------------------------------
+# Section assignment by subtotal transition
+# ----------------------------------------------------------------------------
+#
+# A primary statement has no per-row section tag in XBRL. The filer's section
+# structure is instead implied by ORDER + the standardized subtotal concepts.
+# Walking the presentation-ordered rows, the "current section" advances each
+# time a known subtotal concept closes a block. Keying the transition on the
+# us-gaap concept's identity (not label text) keeps this a structural signal.
+
+_SECTION_START = {
+    StatementType.BALANCE_SHEET: Section.CURRENT_ASSETS,
+    StatementType.INCOME_STATEMENT: Section.REVENUE_COST,
+    StatementType.CASH_FLOW: Section.OPERATING,
+}
+
+# Per-statement: concept local-name -> section that takes effect for the rows
+# AFTER it. Scoped by statement type because `NetIncomeLoss` is the closing
+# subtotal on the IS but the OPENING row on the CF (indirect method) — a flat
+# map would mis-transition the CF's whole operating block.
+_SECTION_TRANSITIONS: dict[StatementType, dict[str, Section]] = {
+    StatementType.BALANCE_SHEET: {
+        "AssetsCurrent": Section.NON_CURRENT_ASSETS,
+        "Assets": Section.CURRENT_LIABILITIES,
+        "LiabilitiesCurrent": Section.NON_CURRENT_LIABILITIES,
+        "Liabilities": Section.EQUITY,
+    },
+    StatementType.INCOME_STATEMENT: {
+        "GrossProfit": Section.OPERATING_EXPENSES,
+        "OperatingIncomeLoss": Section.NON_OPERATING,
+        "NetIncomeLoss": Section.POST_NI_DEDUCTION,
+        "ProfitLoss": Section.POST_NI_DEDUCTION,
+    },
+    StatementType.CASH_FLOW: {
+        "NetCashProvidedByUsedInOperatingActivities": Section.INVESTING,
+        "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations": Section.INVESTING,
+        "NetCashProvidedByUsedInInvestingActivities": Section.FINANCING,
+        "NetCashProvidedByUsedInInvestingActivitiesContinuingOperations": Section.FINANCING,
+        "NetCashProvidedByUsedInFinancingActivities": Section.CASH_OTHER,
+        "NetCashProvidedByUsedInFinancingActivitiesContinuingOperations": Section.CASH_OTHER,
+    },
+}
+
+# Pre-tax subtotal concepts are long and vary by taxonomy year — match by
+# prefix. The row after pre-tax income belongs to the TAX section.
+_PRETAX_CONCEPT_PREFIX = "IncomeLossFromContinuingOperationsBeforeIncomeTax"
+
+# A statement period with fewer line items than this is stray-fact noise
+# (a handful of concepts tagged in an off-cycle context), not a rendered
+# statement. Real primary statements carry 15+ rows.
+_MIN_STATEMENT_ROWS = 5
+
+
+def _assign_sections(local_names: list[str], stmt_type: StatementType) -> list[Section]:
+    """Walk presentation-ordered concept names, returning each row's Section.
+
+    The subtotal row itself keeps the section it closes; the transition takes
+    effect for the rows after it. EPS / share-count concepts are forced to
+    Section.EPS regardless of position (they trail Net Income)."""
+    current = _SECTION_START.get(stmt_type, Section.UNCLASSIFIED)
+    transitions = _SECTION_TRANSITIONS.get(stmt_type, {})
+    out: list[Section] = []
+    for name in local_names:
+        if stmt_type == StatementType.INCOME_STATEMENT and _is_eps_concept(name):
+            out.append(Section.EPS)
+            continue
+        out.append(current)
+        nxt = transitions.get(name)
+        if nxt is None and stmt_type == StatementType.INCOME_STATEMENT \
+                and name.startswith(_PRETAX_CONCEPT_PREFIX):
+            nxt = Section.TAX
+        if nxt is not None:
+            current = nxt
+    return out
+
+
+def _is_eps_concept(local_name: str) -> bool:
+    return _ix._is_per_share_concept(local_name) or _ix._is_share_count_concept(local_name)
+
 
 # ============================================================================
 # XBRL file discovery
@@ -421,8 +500,10 @@ def build_raw_filing(
                 is_comparative=(p_end != filing_end),
             )
 
+            sections = _assign_sections([f.local_name for _p, f in pairs], stmt_type)
+
             line_items: list[RawLineItem] = []
-            for prow, f in pairs:
+            for (prow, f), section in zip(pairs, sections):
                 negate = "negated" in prow.preferred_role
                 value = -f.value if negate else f.value
 
@@ -431,8 +512,6 @@ def build_raw_filing(
 
                 row_type = "subtotal" if prow.preferred_role.endswith(
                     "totalLabel") else "line_item"
-
-                section = _ix.classify_section(f.local_name, stmt_type)
 
                 citation = Citation(
                     source_path=htm_path,
@@ -492,8 +571,8 @@ def build_raw_filing(
                     citation=citation,
                 ))
 
-            if not line_items:
-                continue
+            if len(line_items) < _MIN_STATEMENT_ROWS:
+                continue  # stray-fact noise, not a rendered statement
             statements.append(Statement(
                 statement_type=stmt_type,
                 period=period,
