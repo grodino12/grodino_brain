@@ -514,6 +514,19 @@ def build_raw_filing(
                 period_facts[key].append((prow, f))
 
         for (kind, p_start, p_end), pairs in period_facts.items():
+            # Dedupe: a primary-statement concept is exactly one row. A
+            # presentation linkbase can point multiple locators at the same
+            # concept (common in combined IS+OCI roles and SEC-generated
+            # instances) — keep the first presentation-ordered occurrence.
+            seen_concepts: set[str] = set()
+            deduped: list[tuple[_PresRow, _Fact]] = []
+            for prow, f in pairs:
+                if f.concept_id in seen_concepts:
+                    continue
+                seen_concepts.add(f.concept_id)
+                deduped.append((prow, f))
+            pairs = deduped
+
             weeks = (round((p_end - p_start).days / 7)
                      if kind == "duration" and p_start else None)
             is_full_year = kind == "duration" and weeks is not None and 48 <= weeks <= 54
