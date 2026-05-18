@@ -29,9 +29,9 @@ from financials_schema import FilingType, StatementType
 
 if __name__ == "__main__" and __package__ is None:
     sys.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import ixbrl_path, pdf_path
+    from scripts import ixbrl_path, pdf_path, xbrl_xml_path
 else:
-    from . import ixbrl_path, pdf_path
+    from . import ixbrl_path, pdf_path, xbrl_xml_path
 
 
 FILING_TYPE_FROM_ARG = {
@@ -49,12 +49,17 @@ ONLY_TYPE_FROM_ARG = {
 
 
 def detect_source_kind(source: Path) -> str:
-    """Return 'pdf' or 'ixbrl' based on file extension. SystemExit on unknown."""
+    """Return 'pdf', 'ixbrl', or 'xbrl-xml' for the source.
+
+    PDFs route by extension. For .htm/.html, the file is inline-iXBRL only if
+    it actually carries `<ix:>` tags — pre-iXBRL filings (CELH through fiscal
+    2020) have none, and their XBRL lives in sidecar XML, so they route to the
+    'xbrl-xml' path. SystemExit on unknown extension."""
     ext = source.suffix.lower()
     if ext == ".pdf":
         return "pdf"
     if ext in (".htm", ".html"):
-        return "ixbrl"
+        return "ixbrl" if b"<ix:" in source.read_bytes() else "xbrl-xml"
     raise SystemExit(
         f"ERROR: unsupported source extension {ext!r} (got {source}). "
         f"Expected .pdf, .htm, or .html."
@@ -145,10 +150,16 @@ def main():
     parser.add_argument("--library", type=Path, default=None,
                         help="Path to generic_line_item_mappings.json. When set, each line item gets "
                              "canonical_label + ledger_rule_id populated at extract time.")
+    parser.add_argument("--path", default="auto",
+                        choices=["auto", "pdf", "ixbrl", "xbrl-xml"],
+                        help="Override the extractor path. 'auto' (default) routes by file "
+                             "extension + iXBRL-tag presence. Force 'xbrl-xml' to extract an "
+                             "iXBRL filing from its sidecar XBRL instead of its HTM tables "
+                             "(e.g. CELH 2021/2022 10-Ks whose table layout defeats the HTM walker).")
     args = parser.parse_args()
 
     ticker = load_ticker_from_config(args.ticker_root)
-    kind = detect_source_kind(args.source)
+    kind = args.path if args.path != "auto" else detect_source_kind(args.source)
 
     if kind == "pdf":
         filing_date_ = (date.fromisoformat(args.filing_date)
@@ -170,8 +181,9 @@ def main():
             only_types=only_types,
             library_path=args.library,
         )
-    else:  # ixbrl
-        raw_filing = ixbrl_path.build_raw_filing(
+    else:  # ixbrl or xbrl-xml — both produce an identical RawFiling shape
+        builder = (xbrl_xml_path if kind == "xbrl-xml" else ixbrl_path).build_raw_filing
+        raw_filing = builder(
             htm_path=args.source,
             ticker=ticker,
             library_path=args.library,
