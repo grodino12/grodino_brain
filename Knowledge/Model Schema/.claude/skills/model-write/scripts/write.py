@@ -53,6 +53,19 @@ def _is_eps_or_share_label(label: str | None) -> bool:
     return "shares" in s or "per share" in s or "eps" in s
 
 
+def _scaled_value(item, stmt) -> Decimal:
+    """A line item's value normalized to the workbook's canonical THOUSANDS
+    scale, using the owning statement's reported `unit`. The single source of
+    truth for unit normalization — every place that pulls a value out of a
+    ValidatedFiling for the workbook (cell writes AND filer-subtotal tie-out
+    checks) must go through here, or mixed-scale filings desync."""
+    value = item.value
+    if _is_eps_or_share_label(item.canonical_label or item.raw_filing_label):
+        return value
+    scale = _UNIT_TO_THOUSANDS.get(stmt.unit)
+    return value * scale if (scale is not None and scale != 1) else value
+
+
 # ============================================================================
 # Constants
 # ============================================================================
@@ -635,16 +648,9 @@ def collect_writes(
                     continue
                 if item.ledger_rule_id in superseded_rule_ids:
                     continue
-                value = item.value
-                # Normalize the monetary value onto the workbook's canonical
-                # thousands scale using the statement's reported unit. Skip
-                # EPS/share rows — those carry per-share / share-count units.
-                if not _is_eps_or_share_label(
-                    item.canonical_label or item.raw_filing_label
-                ):
-                    scale = _UNIT_TO_THOUSANDS.get(stmt.unit)
-                    if scale is not None and scale != 1:
-                        value = value * scale
+                # Normalize the value onto the workbook's canonical thousands
+                # scale via the statement's reported unit (see _scaled_value).
+                value = _scaled_value(item, stmt)
                 # sign_convention overlays apply ONLY to IS expense lines and
                 # BS contra accounts. CF values come out of extract already
                 # matching the filer's visual sign (the iXBRL extractor honors
@@ -1070,7 +1076,7 @@ def _collect_filer_mezzanine_sums(
                 rt = li.row_type.value if hasattr(li.row_type, "value") else li.row_type
                 if rt in ("memo", "subtotal"):
                     continue
-                mezz_sum += Decimal(li.value)
+                mezz_sum += _scaled_value(li, stmt)
             key = (sheet, period_end)
             cur = out.get(key)
             if cur is None or fdate < cur[0]:
@@ -1133,7 +1139,7 @@ def _collect_filer_subtotals(
                 key = (sheet, period_end, matched)
                 cur = out.get(key)
                 if cur is None or fdate < cur[0]:
-                    out[key] = (fdate, Decimal(li.value))
+                    out[key] = (fdate, _scaled_value(li, stmt))
     return {k: v for k, (_, v) in out.items()}
 
 
