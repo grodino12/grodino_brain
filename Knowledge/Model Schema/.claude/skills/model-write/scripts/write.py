@@ -18,9 +18,39 @@ from financials_schema import (
     MappedLineItem,
     Period,
     StatementType,
+    Unit,
     ValidatedFiling,
     keep_statement_for_pipeline,
 )
+
+
+# ============================================================================
+# Unit normalization
+# ============================================================================
+#
+# The workbook's canonical monetary scale is THOUSANDS. Filers report at
+# different scales (CELH filed 2021 10-Qs in whole dollars then switched to
+# thousands; PG/PEP report in millions). The extractor records the true scale
+# per statement in `stmt.unit`; this is the single place that normalizes every
+# monetary value onto the thousands scale before it lands in a cell. Without
+# this, a workbook assembled from mixed-scale filings (e.g. CELH) carries
+# columns that differ by 1000x.
+
+_UNIT_TO_THOUSANDS: dict[Unit, Decimal] = {
+    Unit.ACTUAL:    Decimal("0.001"),
+    Unit.THOUSANDS: Decimal(1),
+    Unit.MILLIONS:  Decimal(1000),
+    Unit.BILLIONS:  Decimal(1_000_000),
+}
+
+
+def _is_eps_or_share_label(label: str | None) -> bool:
+    """EPS and share-count rows are governed by `eps_unit` / `share_unit`, not
+    the statement's monetary `unit` — they must NOT be rescaled to thousands."""
+    if not label:
+        return False
+    s = label.lower()
+    return "shares" in s or "per share" in s or "eps" in s
 
 
 # ============================================================================
@@ -606,6 +636,15 @@ def collect_writes(
                 if item.ledger_rule_id in superseded_rule_ids:
                     continue
                 value = item.value
+                # Normalize the monetary value onto the workbook's canonical
+                # thousands scale using the statement's reported unit. Skip
+                # EPS/share rows — those carry per-share / share-count units.
+                if not _is_eps_or_share_label(
+                    item.canonical_label or item.raw_filing_label
+                ):
+                    scale = _UNIT_TO_THOUSANDS.get(stmt.unit)
+                    if scale is not None and scale != 1:
+                        value = value * scale
                 # sign_convention overlays apply ONLY to IS expense lines and
                 # BS contra accounts. CF values come out of extract already
                 # matching the filer's visual sign (the iXBRL extractor honors
