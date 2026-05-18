@@ -154,9 +154,7 @@ def _is_net_change_in_cash_concept(local_name: str) -> bool:
     cash-flow role is supplemental disclosure (beginning/ending balances,
     cash paid for interest/taxes, noncash investing/financing) — real but
     not a cash flow, so those rows are tagged row_type=memo."""
-    return (local_name.startswith("CashCashEquivalents")
-            and "PeriodIncreaseDecrease" in local_name
-            ) or local_name.startswith("CashAndCashEquivalentsPeriodIncreaseDecrease")
+    return local_name.startswith("Cash") and "PeriodIncreaseDecrease" in local_name
 
 
 def _classify_rows(
