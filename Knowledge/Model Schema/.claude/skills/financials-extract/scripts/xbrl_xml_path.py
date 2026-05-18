@@ -494,6 +494,18 @@ def build_raw_filing(
     for stmt_type, pres_rows in presentation:
         want_kind = "instant" if stmt_type == StatementType.BALANCE_SHEET else "duration"
 
+        # Section / row-type classification is computed ONCE over the role's
+        # full presentation-ordered concept list — not per period. A
+        # comparative period can omit a transition subtotal (e.g. CELH's
+        # Q1-2019 CF has no investing-total fact), which would otherwise
+        # tangle that period's investing/financing split. The role's concept
+        # order is filing-wide, so one classification serves every period.
+        role_class = _classify_rows(
+            [pr.concept_id.split("_", 1)[-1] for pr in pres_rows], stmt_type)
+        class_by_concept: dict[str, tuple[Section, str | None]] = {}
+        for pr, cls in zip(pres_rows, role_class):
+            class_by_concept.setdefault(pr.concept_id, cls)
+
         # Collect every period (segment-free) that this statement's concepts
         # report a fact in. One Statement per period column.
         period_facts: dict[tuple, list[tuple[_PresRow, _Fact]]] = defaultdict(list)
@@ -554,10 +566,10 @@ def build_raw_filing(
                 is_comparative=(p_end != filing_end),
             )
 
-            classified = _classify_rows([f.local_name for _p, f in pairs], stmt_type)
-
             line_items: list[RawLineItem] = []
-            for (prow, f), (section, forced_row_type) in zip(pairs, classified):
+            for prow, f in pairs:
+                section, forced_row_type = class_by_concept.get(
+                    f.concept_id, (Section.UNCLASSIFIED, None))
                 negate = "negated" in prow.preferred_role
                 value = -f.value if negate else f.value
 

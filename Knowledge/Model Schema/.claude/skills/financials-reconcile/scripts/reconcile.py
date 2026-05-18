@@ -140,6 +140,11 @@ def build_ticker_index(
             # When both are absent the ticker overlay won't override the extract-
             # time section — fine when the extract-time section is correct.
             "filing_section": entry.get("filing_section") or entry.get("section"),
+            # accepted_sections lets one ledger entry absorb an item the filer
+            # placed in different sections across filings (CELH moved "Proceeds
+            # from related-party notes" between investing and financing) — the
+            # entry's own `section` still drives model-write row placement.
+            "accepted_sections": entry.get("accepted_sections"),
             "sign_convention": entry.get("sign_convention"),
             "memo": entry.get("memo", False),
             "row_type": entry.get("row_type"),

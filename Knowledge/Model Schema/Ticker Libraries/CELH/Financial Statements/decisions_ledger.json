@@ -95,7 +95,7 @@
       "model_sheet": "ANNL P&L",
       "model_label": "Income Tax (Expense) Benefit",
       "decided_date": "2026-05-18",
-      "filing_section": "tax"
+      "filing_section": "non_operating"
     }
   ],
   "renames": [
@@ -391,7 +391,11 @@
       "new_row_label": "Proceeds from Related-Party Notes",
       "section": "financing",
       "position_note": "Financing, near debt proceeds",
-      "decided_date": "2026-05-18"
+      "decided_date": "2026-05-18",
+      "accepted_sections": [
+        "financing",
+        "investing"
+      ]
     },
     {
       "rule_id": "NEW-CF-102",
