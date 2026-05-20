@@ -375,6 +375,95 @@ def fallback_period(label, tp):
     return f"FY{year}" if tq == 'FY' else f"{tq} {year}"
 
 
+def tp_label(tp):
+    """Convert a transcript period tuple (year, 'Q1'/'FY'/...) to a label."""
+    if not tp:
+        return None
+    return f"FY{tp[0]}" if tp[1] == 'FY' else f"{tp[1]} {tp[0]}"
+
+
+_YEAR_IN_TEXT = re.compile(r'\b(20\d{2})\b')
+
+
+def freeform_period_key(label):
+    """Sort key for free-form period labels like 'Summer 2026' or 'balance of 2026'.
+
+    Returns key ~= year * 10 + 5 (between Q4 and FY of that year), or 0 if no year."""
+    m = _YEAR_IN_TEXT.search(str(label))
+    return int(m.group(1)) * 10 + 5 if m else 0
+
+
+SKIP_COL_TOKENS = {'change', 'yoy', 'yoy %', 'qoq', 'qoq %', 'pct change',
+                   '% change', 'delta', 'metric'}
+
+
+def build_column_specs(low_cells, per_in_hdr, tp):
+    """Decide what each header column means. Returns a list of spec dicts.
+
+    Each spec drives one matrix-cell write per data row:
+      {col, plabel} for fixed-period columns (or 'PRIOR_YR' / 'CURRENT' sentinels);
+      {col, period_from_col, fallback_to_label_or_tp} for value/period tables.
+    """
+    specs = []
+    value_col = None
+    period_col = None
+    for i, tok in enumerate(low_cells):
+        col_1based = i + 1
+        if per_in_hdr[i]:
+            specs.append({'col': col_1based, 'plabel': per_in_hdr[i][0]})
+        elif tok == 'value':
+            value_col = col_1based
+        elif tok == 'period':
+            period_col = col_1based
+        elif tok == 'current':
+            label = tp_label(tp)
+            if label:
+                specs.append({'col': col_1based, 'plabel': label})
+        elif tok in ('prior yr', 'prior year'):
+            label = tp_label(tp)
+            prior = prior_year_period(label) if label else None
+            if prior:
+                specs.append({'col': col_1based, 'plabel': prior})
+        elif tok in SKIP_COL_TOKENS:
+            pass  # explicit skip
+        # unknown header cells: ignored (no spec written)
+    if value_col and period_col:
+        specs.append({'col': value_col, 'period_from_col': period_col})
+    elif value_col:
+        # Single-value table — period from row label or transcript period
+        specs.append({'col': value_col, 'fallback_to_label_or_tp': True})
+    return specs
+
+
+def _spec_to_plabel(spec, label, tp, row):
+    """Resolve the period label for one (spec, data row) pair."""
+    if 'plabel' in spec:
+        return spec['plabel']
+    if spec.get('period_from_col') is not None:
+        pcol = spec['period_from_col']
+        if pcol < len(row):
+            raw = str(row[pcol]).strip()
+            if not raw:
+                return None
+            per = parse_period(raw)
+            if per:
+                return per[0]
+            # accept free-form ('Summer 2026', 'balance of 2026') only if a year is present
+            if len(raw) <= 40 and _YEAR_IN_TEXT.search(raw):
+                return raw
+        return None
+    if spec.get('fallback_to_label_or_tp'):
+        per = parse_period(label)
+        if per:
+            return per[0]
+        plabel = paren_period(label, tp)
+        if plabel:
+            return plabel
+        if tp:
+            return fallback_period(label, tp)
+    return None
+
+
 def main():
     files = sorted(glob.glob(os.path.join(DIGESTS, "*.json")))
     if not files:
@@ -397,8 +486,7 @@ def main():
         is_earn = 'earning' in event.lower()
         tp = transcript_period(f, event)
         in_quant = False
-        cur_col = None
-        hdr_period = None
+        col_specs = []   # active column specs for the current subgroup
 
         for r in rows:
             if not r:
@@ -406,9 +494,11 @@ def main():
             c0 = str(r[0]).strip()
             if c0 == 'QUANTITATIVE':
                 in_quant = True
+                col_specs = []
                 continue
             if c0.startswith('QUALITATIVE') or c0.startswith('Q&A'):
                 in_quant = False
+                col_specs = []
                 continue
             if not in_quant or len(r) < 2:
                 continue
@@ -420,59 +510,57 @@ def main():
             has_hdr_period = any(per_in_hdr)
 
             if is_header or has_hdr_period:
-                cur_col = None
-                hdr_period = None
-                meaningful = [t for t in low if t]
-                if meaningful and set(meaningful) <= {'value', 'period'}:
+                col_specs = build_column_specs(low, per_in_hdr, tp)
+                continue
+
+            # data row — write one matrix cell per spec
+            if not col_specs:
+                # No active header; try transcript-period fallback as a single-cell write
+                if not tp:
                     continue
-                if 'current' in low:
-                    cur_col = low.index('current') + 1
-                elif has_hdr_period:
-                    best = None
-                    for i, p in enumerate(per_in_hdr):
-                        if p and (best is None or p[1] > best[1]):
-                            best = p; cur_col = i + 1
-                    hdr_period = best[0] if best else None
-                continue
+                col_specs_local = [{'col': 1, 'fallback_to_label_or_tp': True}]
+            else:
+                col_specs_local = col_specs
 
-            if cur_col is None or cur_col >= len(r):
-                continue
-            raw = r[cur_col]
-            if raw in (None, '', 'n/a', 'N/A', 'n/d'):
-                continue
-            value = clean_value(raw)
-            if isinstance(value, (int, float)) and not (
-                    isinstance(raw, str) and re.search(r'[MBK]\s*$', raw.strip(), re.I)):
-                value *= label_scale(c0)
-            fin = finalize(value)
-            if fin is None:
-                dropped_text += 1
-                continue
-            value, is_pct = fin
+            for spec in col_specs_local:
+                col = spec['col']
+                if col >= len(r):
+                    continue
+                raw = r[col]
+                if raw in (None, '', 'n/a', 'N/A', 'n/d', '-', '--'):
+                    continue
+                value = clean_value(raw)
+                if isinstance(value, (int, float)) and not (
+                        isinstance(raw, str) and re.search(r'[MBK]\s*$', raw.strip(), re.I)):
+                    value *= label_scale(c0)
+                fin = finalize(value)
+                if fin is None:
+                    dropped_text += 1
+                    continue
+                value, is_pct = fin
 
-            per = parse_period(c0)
-            plabel = per[0] if per else None
-            if not plabel:
-                plabel = paren_period(c0, tp)
-            if not plabel:
-                plabel = hdr_period
-            if not plabel and tp:
-                plabel = fallback_period(c0, tp)
-                fallback_used += 1
-            if not plabel:
-                skipped_no_period += 1
-                continue
-            pp = parse_period(plabel)
-            pkey = pp[1] if pp else 0
+                plabel = _spec_to_plabel(spec, c0, tp, r)
+                if not plabel:
+                    # secondary fallback: row label / paren / transcript period
+                    per = parse_period(c0)
+                    plabel = per[0] if per else paren_period(c0, tp)
+                    if not plabel and tp:
+                        plabel = fallback_period(c0, tp)
+                        fallback_used += 1
+                if not plabel:
+                    skipped_no_period += 1
+                    continue
+                pp = parse_period(plabel)
+                pkey = pp[1] if pp else freeform_period_key(plabel)
 
-            metric = norm_metric(c0)
-            if not metric:
-                continue
-            periods[plabel] = pkey
-            rec = {'value': value, 'pct': is_pct, 'earn': is_earn, 'event': event,
-                   'date': date, 'label': c0}
-            matrix.setdefault(metric, {}).setdefault(plabel, []).append(rec)
-            placed += 1
+                metric = norm_metric(c0)
+                if not metric:
+                    continue
+                periods[plabel] = pkey
+                rec = {'value': value, 'pct': is_pct, 'earn': is_earn, 'event': event,
+                       'date': date, 'label': c0}
+                matrix.setdefault(metric, {}).setdefault(plabel, []).append(rec)
+                placed += 1
 
     # --- consolidate near-duplicate metric rows ---
     groups = {}

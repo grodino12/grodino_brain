@@ -1,118 +1,461 @@
 # CELH KPI Consolidated — Audit vs `.md` STEP-5 KPIs
 
-Generated: 2026-05-17  ·  504 directly-reported cells checked
+Generated: 2026-05-20  ·  971 directly-reported cells checked
 
 ## Summary
 
 | Result | Count |
 |---|---|
-| Confirmed — value matches a STEP-5 KPI | 264 |
-| Confirmed — value matches, metric-name differs | 150 |
-| **VALUE MISMATCH** | 0 |
-| **MISPLACED** — cell holds a prior-year figure | 2 |
-| Unverifiable — metric not in STEP 5 for that period | 80 |
-| Unverifiable — period not in the source STEP 5 | 8 |
+| Confirmed — value matches a STEP-5 KPI | 339 |
+| Confirmed — value matches, metric-name differs | 199 |
+| **VALUE MISMATCH** | 3 |
+| **MISPLACED** — cell holds a prior-year figure | 8 |
+| Unverifiable — metric not in STEP 5 for that period | 206 |
+| Unverifiable — period not in the source STEP 5 | 216 |
 | No source `.md` found | 0 |
 
-**414 confirmed · 2 flagged · 88 unverifiable.**
+**538 confirmed · 11 flagged · 422 unverifiable.**
 
-## Flagged — review these (2)
+## Flagged — review these (11)
 
+- **MISPLACED — value equals a prior-year figure** — `Celsius brand unit growth` / Q2 2025: sheet = `0.061`, .md STEP-5 = `86.0`  ·  Sources/CELH/2025-Q2/transcripts/CELH_2025-08-07_2025Q2 Earnings.md:178
+- **MISPLACED — value equals a prior-year figure** — `Europe Revenue` / Q4 2019: sheet = `14.5`, .md STEP-5 = `24.1`  ·  Sources/CELH/2019-FY/transcripts/CELH_2020-03-12_2019Q4 Earnings.md:123
 - **MISPLACED — value equals a prior-year figure** — `Long-term debt` / FY2025: sheet = `669.9`, .md STEP-5 = `1270.0`  ·  Sources/CELH/2025-FY/transcripts/CELH_2026-02-26_2025Q4 Earnings.md:195
+- **MISPLACED — value equals a prior-year figure** — `Portfolio US share (intra-Q2)` / Q1 2026: sheet = `0.21`, .md STEP-5 = `0.249`  ·  Sources/CELH/2026-Q1/transcripts/CELH_2026-05-07_2026Q1 Earnings.md:222
+- **MISPLACED — value equals a prior-year figure** — `Portfolio dollar share (4 wks ending Apr 12)` / Q1 2026: sheet = `0.209`, .md STEP-5 = `0.249`  ·  Sources/CELH/2026-Q1/transcripts/CELH_2026-05-07_2026Q1 Earnings.md:222
+- **MISPLACED — value equals a prior-year figure** — `Sugar-free as % of category` / Q3 2024: sheet = `0.5`, .md STEP-5 = `0.46`  ·  Sources/CELH/2024-Q3/transcripts/CELH_2024-11-06_2024Q3 Earnings.md:183
+- **MISPLACED — value equals a prior-year figure** — `Traditional channel growth` / Q1 2021: sheet = `1.37`, .md STEP-5 = `3.6`  ·  Sources/CELH/2021-Q1/transcripts/CELH_2021-05-13_2021Q1 Earnings.md:188
 - **MISPLACED — value equals a prior-year figure** — `US Spacings (MULOC, 4 wks)` / Q2 2023: sheet = `14.6`, .md STEP-5 = `32.0`  ·  Sources/CELH/2023-Q2/transcripts/CELH_2023-08-08_2023Q2 Earnings.md:224
+- **VALUE MISMATCH** — `Cash` / Q1 2025: sheet = `400`, .md STEP-5 = `977.0`  ·  Sources/CELH/2025-Q1/transcripts/CELH_2025-05-06_2025Q1 Earnings.md:208
+- **VALUE MISMATCH** — `International Revenue` / Q2 2025: sheet = `48`, .md STEP-5 = `27.0`  ·  Sources/CELH/2025-Q2/transcripts/CELH_2025-08-07_2025Q2 Earnings.md:232
+- **VALUE MISMATCH** — `Total Revenue` / Q4 2025: sheet = `45`, .md STEP-5 = `721.6`  ·  Sources/CELH/2025-FY/transcripts/CELH_2026-02-26_2025Q4 Earnings Press Release.md:138
 
-## Unverifiable (88)
+## Unverifiable (422)
 
 Mostly channel / distribution / market-share metrics not formalized as STEP-5 KPIs.
 
 - `% of MULO+C stores DSD-serviced` / FY2021 (`0.65`) — metric not in STEP 5 for this period
+- `% of NA doors DSD-serviced` / Q1 2020 (`0.1`) — metric not in STEP 5 for this period
+- `12-week growth` / Q2 2021 (`0.08`) — period not in source STEP 5
 - `12-week growth` / Q2 2022 (`1.94`) — metric not in STEP 5 for this period
 - `12-week growth` / Q4 2022 (`0.1`) — metric not in STEP 5 for this period
 - `2-week growth` / Q4 2022 (`0.1`) — metric not in STEP 5 for this period
+- `4-week growth` / Q2 2021 (`0.08`) — period not in source STEP 5
 - `4-week growth` / Q2 2022 (`1.43`) — metric not in STEP 5 for this period
 - `7-Eleven DSD Transition` / Q4 2020 (`2021`) — metric not in STEP 5 for this period
+- `7-Eleven locations migrating to DSD` / Q1 2021 (`2000`) — metric not in STEP 5 for this period
+- `ACV` / Q4 2024 (`0.987`) — metric not in STEP 5 for this period
+- `ACV (all channels)` / Q4 2021 (`0.596`) — period not in source STEP 5
 - `Accrued distributor termination fees` / FY2025 (`264.1`) — metric not in STEP 5 for this period
 - `Acquisition & integration adj` / FY2025 (`-60.2`) — metric not in STEP 5 for this period
-- `Acquisition-related costs` / FY2025 (`60`) — metric not in STEP 5 for this period
+- `Acquisition & integration adj` / Q4 2025 (`-5`) — metric not in STEP 5 for this period
 - `Acquisition-related costs` / Q2 2025 (`16`) — metric not in STEP 5 for this period
+- `Acquisition-related costs` / Q4 2025 (`60`) — metric not in STEP 5 for this period
 - `Active co-packers` / FY2021 (`13`) — metric not in STEP 5 for this period
+- `Additional termination expense` / Q4 2022 (`50`) — metric not in STEP 5 for this period
+- `Adj EBITDA & one-time` / Q3 2018 (`2.1`) — metric not in STEP 5 for this period
+- `Adj EBITDA /one-time` / Q4 2018 (`2.2`) — metric not in STEP 5 for this period
+- `Adj. Gross Margin (ex-freight)` / Q2 2020 (`0.505`) — period not in source STEP 5
+- `Adj. Gross Margin (ex-freight)` / Q3 2020 (`0.537`) — period not in source STEP 5
 - `Adjusted Diluted EPS` / FY2025 (`1.34`) — metric not in STEP 5 for this period
+- `Adjusted Diluted EPS` / H1 2024 (`0.55`) — period not in source STEP 5
+- `Adjusted Diluted EPS` / Q1 2024 (`0.27`) — period not in source STEP 5
+- `Adjusted Diluted EPS` / Q2 2024 (`0.28`) — period not in source STEP 5
+- `Adjusted EBITDA` / H1 2024 (`188`) — period not in source STEP 5
+- `Adjusted EBITDA` / Q1 2018 (`-2.1`) — period not in source STEP 5
+- `Adjusted EBITDA` / Q2 2018 (`-0.12`) — period not in source STEP 5
+- `Adjusted EBITDA` / Q2 2024 (`100`) — period not in source STEP 5
+- `Adjusted EBITDA` / Q3 2017 (`1.1`) — period not in source STEP 5
+- `Adjusted EBITDA` / Q3 2022 (`25`) — period not in source STEP 5
+- `Adjusted EBITDA` / Q4 2024 (`62.9`) — period not in source STEP 5
 - `Adjusted EBITDA Margin` / FY2025 (`0.246`) — metric not in STEP 5 for this period
+- `Adjusted EBITDA Margin` / Q1 2024 (`0.247`) — period not in source STEP 5
+- `Adjusted EBITDA Margin` / Q4 2023 (`0.189`) — period not in source STEP 5
+- `Adjusted SG&A % of Revenue` / Q4 2024 (`0.361`) — period not in source STEP 5
+- `Alani` / Q4 2025 (`1.15`) — metric not in STEP 5 for this period
+- `Alani Nu` / Q4 2025 (`0.39`) — metric not in STEP 5 for this period
+- `Alani Nu 2024 Fully Synergized Adj. EBITDA` / Q4 2024 (`137`) — metric not in STEP 5 for this period
+- `Alani Nu 2024 Revenue` / Q4 2024 (`595`) — metric not in STEP 5 for this period
+- `Alani Nu Female Social Media Following` / Q4 2024 (`0.92`) — metric not in STEP 5 for this period
+- `Alani Nu brand` / Q2 2024 (`146`) — period not in source STEP 5
+- `Alani Nu household penetration` / Q2 2025 (`0.22`) — metric not in STEP 5 for this period
+- `Alani Nu net sales` / Q1 2025 (`230`) — metric not in STEP 5 for this period
+- `Alani Nu retail sales growth` / FY2024 (`0.769`) — period not in source STEP 5
+- `Alani Nu retail sales growth` / Q3 2025 (`1.15`) — metric not in STEP 5 for this period
+- `Amazon Celsius sales growth` / Q1 2021 (`2.65`) — metric not in STEP 5 for this period
+- `Amazon Revenue` / FY2021 (`32`) — period not in source STEP 5
+- `Amazon Revenue` / Q1 2021 (`7.9`) — period not in source STEP 5
+- `Amazon Revenue` / Q1 2023 (`21.8`) — period not in source STEP 5
+- `Amazon Revenue` / Q2 2022 (`14`) — period not in source STEP 5
+- `Amazon Revenue` / Q2 2024 (`39.9`) — period not in source STEP 5
+- `Amazon Revenue FY` / Q4 2023 (`100.1`) — metric not in STEP 5 for this period
+- `Amazon sales YTD 2022` / Q3 2021 (`21`) — period not in source STEP 5
 - `Amazon sales YTD 2022` / Q3 2022 (`43`) — metric not in STEP 5 for this period
+- `Annual interest expense reduction (from 2026)` / Q3 2025 (`20`) — metric not in STEP 5 for this period
+- `Asia Revenue` / Q1 2021 (`0.5`) — period not in source STEP 5
+- `Asia Revenue` / Q3 2017 (`0.362`) — period not in source STEP 5
+- `Asia Revenue` / Q4 2017 (`0.435`) — period not in source STEP 5
+- `Asia Revenue` / Q4 2019 (`0.841`) — metric not in STEP 5 for this period
+- `Avg SKUs per store gain - convenience` / Q2 2024 (`0.43`) — period not in source STEP 5
 - `Basic Shares` / Q4 2020 (`71.9`) — metric not in STEP 5 for this period
+- `Brand Celsius net sales` / Q1 2025 (`328`) — metric not in STEP 5 for this period
+- `Branded Coolers Placed (cumulative thru H1)` / Q2 2021 (`500`) — metric not in STEP 5 for this period
+- `Capital on balance sheet` / Oct 2021 (`80`) — period not in source STEP 5
 - `Cash` / FY2017 (`14.2`) — period not in source STEP 5
 - `Cash` / FY2018 (`7.7`) — metric not in STEP 5 for this period
+- `Cash` / FY2024 (`890.2`) — period not in source STEP 5
 - `Cash` / FY2025 (`398.9`) — metric not in STEP 5 for this period
+- `Cash` / Q4 2022 (`653`) — metric not in STEP 5 for this period
+- `Cash` / Q4 2024 (`890`) — metric not in STEP 5 for this period
+- `Cash balance (vs )` / FY2021 (`60`) — period not in source STEP 5
+- `Cash received from Pepsi (Series A preferred)` / Q3 2022 (`550`) — metric not in STEP 5 for this period
+- `Celsius Amazon sales growth` / Q2 2020 (`1.18`) — metric not in STEP 5 for this period
+- `Celsius Amazon sales growth` / Q3 2020 (`1.903`) — metric not in STEP 5 for this period
+- `Celsius Holdings portfolio` / Q4 2025 (`0.15`) — metric not in STEP 5 for this period
+- `Celsius MULO Plus w/ convenience share` / Q2 2024 (`0.1204`) — period not in source STEP 5
+- `Celsius MULOC share (4-wk to Jul 14)` / Q2 2024 (`0.11`) — period not in source STEP 5
+- `Celsius New York City market share` / 2024 (`0.2`) — period not in source STEP 5
+- `Celsius Share of Category Growth` / Q1 2024 (`0.47`) — metric not in STEP 5 for this period
+- `Celsius Share of Category Growth` / Q2 2024 (`0.47`) — period not in source STEP 5
+- `Celsius Spring Reset Space Gains 2026` / Q4 2025 (`0.17`) — metric not in STEP 5 for this period
+- `Celsius brand` / Q2 2024 (`402`) — period not in source STEP 5
+- `Celsius brand space gains` / Summer 2026 (`0.17`) — period not in source STEP 5
+- `Celsius contribution to category growth` / 4 wks ending Apr 17, 2022 (`0.37`) — period not in source STEP 5
+- `Celsius contribution to category growth` / Apr 2022 (`0.37`) — period not in source STEP 5
+- `Celsius household penetration` / Q2 2025 (`0.34`) — metric not in STEP 5 for this period
+- `Celsius unit sales volume growth` / Q2 2024 (`0.306`) — period not in source STEP 5
+- `China Invested Capital Recoupment` / Q2 2019 (`12.2`) — metric not in STEP 5 for this period
+- `China Note-Payable Discount Amortization` / Q2 2019 (`0.093`) — metric not in STEP 5 for this period
+- `China Note-Receivable Gain (one-time, H1)` / Q2 2019 (`12`) — metric not in STEP 5 for this period
+- `China S&M Reduction (model shift)` / FY2019 (`-7.2`) — metric not in STEP 5 for this period
+- `China Sub-Distributors` / Q3 2018 (`127`) — metric not in STEP 5 for this period
+- `Class-action settlement` / Q3 2022 (`7.8`) — metric not in STEP 5 for this period
+- `Clean scanner growth (ex-Cherry Bomb timing)` / Q1 2026 (`0.85`) — metric not in STEP 5 for this period
+- `Club Channel Sales` / FY2021 (`40`) — period not in source STEP 5
+- `Club Channel Sales` / Q2 2022 (`31`) — period not in source STEP 5
+- `Club Channel Sales` / Q2 2024 (`88`) — period not in source STEP 5
+- `Club Channel Sales` / Q3 2021 (`14`) — period not in source STEP 5
+- `Club Sales FY` / Q4 2023 (`254.6`) — metric not in STEP 5 for this period
 - `Club channel revenue` / Q2 2022 (`30.9`) — metric not in STEP 5 for this period
+- `Combined Energy Category Share` / Q4 2024 (`0.16`) — metric not in STEP 5 for this period
 - `Contingent consideration` / FY2025 (`25`) — metric not in STEP 5 for this period
+- `Contribution to Category Growth (2024)` / Q4 2024 (`0.3`) — metric not in STEP 5 for this period
 - `Convenience Channel ACV` / FY2021 (`0.44`) — metric not in STEP 5 for this period
+- `Convenience Channel ACV` / Q1 2021 (`0.168`) — metric not in STEP 5 for this period
+- `Convenience Channel ACV` / Q2 2019 (`0.109`) — metric not in STEP 5 for this period
+- `Convenience Channel ACV` / Q2 2022 (`0.629`) — period not in source STEP 5
+- `Convenience Channel ACV` / Q3 2019 (`0.119`) — metric not in STEP 5 for this period
+- `Convenience Channel ACV` / Q4 2018 (`0.102`) — metric not in STEP 5 for this period
+- `Convenience Channel ACV` / Q4 2021 (`0.453`) — period not in source STEP 5
+- `Convenience Channel Category Growth (LTM)` / Q3 2018 (`0.058`) — metric not in STEP 5 for this period
+- `Convenience Channel SPINS Growth (52 wks)` / Q1 2019 (`0.384`) — metric not in STEP 5 for this period
+- `Convenience Channel SPINS Growth (52 wks)` / Q2 2019 (`0.386`) — metric not in STEP 5 for this period
+- `Convenience Channel Store Locations` / Q2 2021 (`42000`) — period not in source STEP 5
+- `Convenience Channel Store Locations` / Q3 2021 (`49000`) — period not in source STEP 5
 - `Convenience channel sales growth` / Q2 2022 (`2.27`) — metric not in STEP 5 for this period
 - `Convenience channel sales growth` / Q3 2022 (`1.58`) — metric not in STEP 5 for this period
+- `Convenience distribution uptick` / 2024 (`0.45`) — period not in source STEP 5
+- `Convenience outpacing category` / Q2 2020 (`11.6`) — metric not in STEP 5 for this period
 - `Cooler Rollout Phase 1` / FY2021 (`2021`) — period not in source STEP 5
 - `DPO (days)` / Q2 2021 (`31`) — metric not in STEP 5 for this period
+- `DSD Velocity Lift in Existing Accounts` / Q4 2019 (`0.4`) — metric not in STEP 5 for this period
 - `DSD incremental revenue` / Q2 2022 (`41.8`) — metric not in STEP 5 for this period
+- `DSD major metro market coverage` / Q1 2021 (`0.85`) — metric not in STEP 5 for this period
+- `DSD population coverage` / FY2020 (`0.8`) — period not in source STEP 5
 - `DSD population coverage` / FY2021 (`0.98`) — metric not in STEP 5 for this period
+- `DSD regional partners` / Q1 2020 (`100`) — metric not in STEP 5 for this period
+- `DSD regional partners` / Q1 2021 (`180`) — metric not in STEP 5 for this period
+- `DSD service centers` / FY2020 (`150`) — period not in source STEP 5
+- `DSD-Converted Outlet Sales Lift` / Q3 2019 (`0.4`) — metric not in STEP 5 for this period
 - `DSO (days)` / Q2 2021 (`45`) — metric not in STEP 5 for this period
+- `Debt` / Q1 2025 (`900`) — metric not in STEP 5 for this period
+- `Deferred tax liability (discrete item)` / Q3 2022 (`71.4`) — metric not in STEP 5 for this period
+- `Diluted EPS` / FY2024 (`0.45`) — period not in source STEP 5
 - `Diluted EPS` / FY2025 (`0.25`) — metric not in STEP 5 for this period
+- `Diluted EPS` / Q1 2023 (`0.13`) — period not in source STEP 5
+- `Diluted EPS` / Q2 2024 (`0.28`) — period not in source STEP 5
+- `Diluted EPS` / Q4 2021 (`0.15`) — metric not in STEP 5 for this period
+- `Diluted EPS to common` / Q2 2024 (`0.28`) — period not in source STEP 5
+- `Distributor revenue growth YoY` / Q1 2021 (`1.72`) — metric not in STEP 5 for this period
 - `Distributor termination & integration adj` / FY2025 (`-327.5`) — metric not in STEP 5 for this period
-- `EPS` / FY2019 (`0.16`) — metric not in STEP 5 for this period
-- `EPS` / H1 2019 (`0.18`) — metric not in STEP 5 for this period
+- `Distributor termination & integration adj` / Q4 2025 (`-81`) — metric not in STEP 5 for this period
+- `Distributor termination costs` / Q4 2024 (`0`) — period not in source STEP 5
+- `Door count growth since start of 2021` / Q1 2021 (`10000`) — metric not in STEP 5 for this period
+- `E-Commerce % of North America revenue` / Q3 2020 (`0.22`) — metric not in STEP 5 for this period
+- `EPS` / Q1 2018 (`-0.06`) — period not in source STEP 5
+- `EPS` / Q2 2019 (`0.18`) — metric not in STEP 5 for this period
+- `EPS` / Q4 2018 (`-0.23`) — period not in source STEP 5
+- `EPS` / Q4 2019 (`0.16`) — metric not in STEP 5 for this period
 - `EPS` / Q4 2020 (`0.02`) — metric not in STEP 5 for this period
-- `EPS Basic` / 9M 2019 (`0.19`) — metric not in STEP 5 for this period
+- `EPS Basic` / Q3 2018 (`-0.08`) — period not in source STEP 5
 - `Earn-out contingent consideration charge` / Q2 2025 (`13.8`) — metric not in STEP 5 for this period
+- `Earn-out maximum payout` / 2025 net-sales targets (`25`) — period not in source STEP 5
 - `Effective tax rate (9 months)` / Q3 2022 (`-0.335`) — metric not in STEP 5 for this period
+- `Energy Category Share (peak end-Q1/early-)` / Q2 2024 (`12`) — period not in source STEP 5
+- `Energy Category Size (2024)` / Q4 2024 (`90000`) — metric not in STEP 5 for this period
+- `Energy Drink Category Growth` / Q2 2019 (`0.094`) — metric not in STEP 5 for this period
+- `Energy category 4-wk read (to Jul 14)` / Q2 2024 (`0.02`) — period not in source STEP 5
+- `Europe Revenue` / Q3 2020 (`9.5`) — period not in source STEP 5
+- `Europe Revenue` / Q4 2017 (`1.9`) — period not in source STEP 5
+- `FAST brand impairment` / Q3 2022 (`2.4`) — metric not in STEP 5 for this period
+- `FX impact on China investment repayment` / Q2 2020 (`0.342`) — metric not in STEP 5 for this period
+- `FX losses in quarter` / Q1 2020 (`0.078`) — metric not in STEP 5 for this period
+- `Favorable realized FX impact` / Q2 2020 (`0.197`) — metric not in STEP 5 for this period
+- `Fitness + vending incremental FY revenue` / Q4 2021 (`14.7`) — metric not in STEP 5 for this period
+- `Fitness channel growth` / FY2021 (`0.91`) — metric not in STEP 5 for this period
+- `Food Service % of PepsiCo Sales` / Q4 2023 (`0.125`) — metric not in STEP 5 for this period
+- `Food Service as % of Pepsi Sales` / 2024 (quarterly) (`0.12`) — period not in source STEP 5
+- `Food service % of NA Celsius sales` / Q2 2025 (`0.12`) — metric not in STEP 5 for this period
+- `Food service as % of Pepsi revenue` / 2024 (`0.12`) — period not in source STEP 5
+- `Foodservice as % of NA sales to PepsiCo` / Q2 2024 (`0.121`) — period not in source STEP 5
+- `Freight (% of net revenues)` / Q3 2022 (`0.059`) — period not in source STEP 5
 - `Freight (% of net revenues)` / Q3 2023 (`0.049`) — metric not in STEP 5 for this period
 - `Full-Year EBITDA 2020` / Q4 2020 (`15`) — metric not in STEP 5 for this period
+- `Full-Year Income 2020` / Q4 2019 (`10`) — period not in source STEP 5
 - `Full-Year Income 2020` / Q4 2020 (`8.5`) — metric not in STEP 5 for this period
+- `Full-Year Revenue 2020` / Q4 2019 (`75.1`) — period not in source STEP 5
+- `Full-sugar energy growth` / 2024 YTD (`-0.04`) — period not in source STEP 5
 - `Fully Diluted Shares` / Q4 2020 (`76.5`) — metric not in STEP 5 for this period
+- `Func Food Q4 Acquisition Costs` / Q4 2019 (`0.434`) — metric not in STEP 5 for this period
+- `G&A % of Revenue` / Q1 2021 (`0.16`) — period not in source STEP 5
+- `G&A % of Revenue` / Q2 2021 (`0.19`) — period not in source STEP 5
+- `G&A % of Revenue` / Q2 2024 (`0.06`) — period not in source STEP 5
 - `G&A % of Revenue` / Q2 2025 (`0.117`) — metric not in STEP 5 for this period
+- `G&A % of Revenue` / Q3 2021 (`0.25`) — period not in source STEP 5
+- `G&A % of Revenue` / Q4 2022 (`0.12`) — period not in source STEP 5
+- `G&A % of sales (ex-acquisition costs)` / Q3 2024 (`0.09`) — period not in source STEP 5
+- `G&A Distributor Settlement Accrual (prior yr)` / Q2 2018 (`0.944`) — period not in source STEP 5
+- `G&A Stock-Comp Increase vs` / Q3 2017 (`0.552`) — period not in source STEP 5
+- `G&A as % of sales` / Q2 2023 (`0.1`) — period not in source STEP 5
+- `G&A includes COVID bad debt reserve add` / Q1 2020 (`0.221`) — metric not in STEP 5 for this period
 - `Gap (promos/incentives + non-DSD timing)` / Q1 2025 (`3`) — metric not in STEP 5 for this period
+- `General & Administrative` / FY2021 (`58`) — period not in source STEP 5
+- `General & Administrative` / Q1 2018 (`2`) — period not in source STEP 5
+- `General & Administrative` / Q2 2018 (`3.1`) — period not in source STEP 5
+- `General & Administrative` / Q3 2017 (`1.6`) — period not in source STEP 5
+- `General & Administrative` / Q4 2017 (`1.6`) — period not in source STEP 5
+- `General & Administrative` / Q4 2022 (`22`) — period not in source STEP 5
+- `Global Energy Category Growth` / 2024-2029 (`0.1`) — period not in source STEP 5
+- `Grocery MULO SPINS Growth` / Q4 2019 (`1`) — metric not in STEP 5 for this period
+- `Gross Margin` / 9M 2024 (`0.502`) — period not in source STEP 5
+- `Gross Margin` / FY2022 (`0.41`) — period not in source STEP 5
 - `Gross Margin` / FY2025 (`0.504`) — metric not in STEP 5 for this period
+- `Gross Margin` / H1 2022 (`0.39`) — period not in source STEP 5
+- `Gross Margin` / H1 2024 (`0.516`) — period not in source STEP 5
+- `Gross Margin` / Q1 2018 (`0.395`) — period not in source STEP 5
+- `Gross Margin` / Q2 2018 (`0.428`) — period not in source STEP 5
+- `Gross Margin` / Q2 2024 (`0.52`) — period not in source STEP 5
+- `Gross Margin` / Q3 2017 (`0.433`) — period not in source STEP 5
+- `Gross Margin` / Q4 2017 (`0.416`) — period not in source STEP 5
 - `Gross Margin ex inventory step-up` / Q2 2025 (`0.54`) — metric not in STEP 5 for this period
+- `Gross Profit` / 9M 2022 (`192`) — period not in source STEP 5
+- `Gross Profit` / 9M 2024 (`513.5`) — period not in source STEP 5
+- `Gross Profit` / FY2021 (`128`) — period not in source STEP 5
+- `Gross Profit` / H1 2022 (`113`) — period not in source STEP 5
+- `Gross Profit` / Q1 2018 (`4.8`) — period not in source STEP 5
+- `Gross Profit` / Q2 2018 (`4`) — period not in source STEP 5
+- `Gross Profit` / Q2 2024 (`209`) — period not in source STEP 5
+- `Gross Profit` / Q3 2017 (`4.7`) — period not in source STEP 5
+- `Gross Profit` / Q4 2017 (`3.8`) — period not in source STEP 5
+- `Gross Profit` / Q4 2024 (`166.7`) — period not in source STEP 5
 - `Gross margin sequential change (vs Q2)` / Q3 2022 (`330`) — metric not in STEP 5 for this period
+- `Higher-cost spot / imported cans` / Q3 2021 (`0.053`) — metric not in STEP 5 for this period
 - `Incremental Cooler Placement` / FY2025 (`2025`) — period not in source STEP 5
+- `Incremental category sales` / 4 wks ending Apr 17, 2022 (`37.5`) — period not in source STEP 5
+- `Incremental distribution increase (PepsiCo)` / Q2 2022 (`0.4`) — metric not in STEP 5 for this period
+- `Initial termination tranche from Pepsi` / Q3 2022 (`174.7`) — metric not in STEP 5 for this period
 - `Interest expense` / FY2025 (`-49`) — metric not in STEP 5 for this period
+- `Interest expense` / Q4 2025 (`-12.7`) — metric not in STEP 5 for this period
 - `Interest income` / FY2025 (`21.1`) — metric not in STEP 5 for this period
 - `International Cadence` / FY2024 (`2025`) — period not in source STEP 5
+- `International Revenue` / FY2022 (`36`) — period not in source STEP 5
+- `International Revenue` / FY2024 (`74.7`) — period not in source STEP 5
 - `International Revenue` / FY2025 (`92.8`) — metric not in STEP 5 for this period
-- `International Revenue` / H1 2025 (`48`) — metric not in STEP 5 for this period
+- `International Revenue` / Q1 2018 (`4`) — period not in source STEP 5
+- `International Revenue` / Q1 2021 (`11`) — period not in source STEP 5
+- `International Revenue` / Q2 2020 (`9.2`) — period not in source STEP 5
+- `International Revenue` / Q2 2024 (`19.6`) — period not in source STEP 5
+- `International Revenue` / Q3 2020 (`9.9`) — period not in source STEP 5
+- `International Revenue` / Q4 2017 (`12.1`) — period not in source STEP 5
+- `International Revenue` / Q4 2018 (`13.7`) — metric not in STEP 5 for this period
+- `International Revenue` / Q4 2019 (`7.1`) — period not in source STEP 5
+- `International Revenue (ex-Canada)` / Q1 2023 (`11.4`) — period not in source STEP 5
 - `International cans on the books` / Q1 2022 (`20`) — metric not in STEP 5 for this period
+- `International run rate` / FY2025 (`100`) — period not in source STEP 5
+- `Inventory Increase` / Q3 2021 (`104`) — metric not in STEP 5 for this period
 - `Inventory reduction in quarter` / Q1 2022 (`-6`) — metric not in STEP 5 for this period
+- `Kroger Locations` / Q3 2019 (`1100`) — metric not in STEP 5 for this period
+- `Long-term debt` / FY2024 (`0`) — period not in source STEP 5
+- `Loss on China Assets (not realized)` / Q2 2019 (`0.22`) — metric not in STEP 5 for this period
+- `Loss on Debt Extinguishment` / FY2018 (`0.377`) — metric not in STEP 5 for this period
+- `MULO growth` / Q2 2020 (`0.99`) — metric not in STEP 5 for this period
+- `MULO+ with convenience market share` / 4-wk to Oct 6, 2024 (`0.116`) — period not in source STEP 5
+- `MULOC ACV` / Q2 2022 (`0.7979999999999999`) — period not in source STEP 5
+- `MULOC Total Energy Share (#3 brand)` / Q2 2022 (`0.043`) — period not in source STEP 5
+- `MULOC locations serviced by DSD` / Q3 2021 (`0.72`) — period not in source STEP 5
 - `MULOC locations serviced by DSD` / Q3 2022 (`0.92`) — metric not in STEP 5 for this period
-- `Net Loss Per Share` / 9M 2018 (`-0.21`) — metric not in STEP 5 for this period
+- `Marketing investment increase YoY` / Q1 2021 (`2.5`) — metric not in STEP 5 for this period
+- `Military Channel 52-wk Retail Sales Run Rate` / Q4 2018 (`5`) — metric not in STEP 5 for this period
+- `Net Adj EBITDA /China Q4` / Q4 2017 (`0.705`) — period not in source STEP 5
+- `Net Income` / 9M 2024 (`164`) — period not in source STEP 5
+- `Net Income` / FY2023 (`227`) — period not in source STEP 5
+- `Net Income` / Q1 2018 (`-2.9`) — period not in source STEP 5
+- `Net Income` / Q1 2023 (`31.6`) — period not in source STEP 5
+- `Net Income` / Q2 2018 (`-3.4`) — period not in source STEP 5
+- `Net Income` / Q2 2024 (`80`) — period not in source STEP 5
+- `Net Income` / Q3 2017 (`-1.7`) — period not in source STEP 5
+- `Net Income` / Q4 2017 (`-5.3`) — period not in source STEP 5
+- `Net Income` / Q4 2019 (`-1.1`) — period not in source STEP 5
+- `Net Income` / Q4 2023 (`50.1`) — period not in source STEP 5
+- `Net Inventory` / FY2020 (`18.4`) — period not in source STEP 5
 - `Net Loss Per Share` / Q2 2019 (`-0.03`) — metric not in STEP 5 for this period
+- `Net Loss Per Share` / Q3 2017 (`-0.04`) — period not in source STEP 5
+- `Net Loss Per Share` / Q4 2017 (`-0.12`) — period not in source STEP 5
 - `Net Loss Per Share` / Q4 2019 (`-0.02`) — metric not in STEP 5 for this period
+- `Net Sales (implied)` / Q4 2025 (`1360`) — metric not in STEP 5 for this period
+- `Nielsen category share (last 4 weeks)` / Q1 2021 (`0.012`) — metric not in STEP 5 for this period
+- `North America Revenue` / FY2022 (`620`) — period not in source STEP 5
+- `North America Revenue` / FY2024 (`1280.9`) — period not in source STEP 5
 - `North America Revenue` / FY2025 (`2422.5`) — metric not in STEP 5 for this period
-- `North America Revenue` / H1 2025 (`1020`) — metric not in STEP 5 for this period
+- `North America Revenue` / Q2 2024 (`722`) — period not in source STEP 5
+- `North America Revenue` / Q2 2025 (`1020`) — metric not in STEP 5 for this period
+- `North America Revenue` / Q3 2017 (`5.9`) — period not in source STEP 5
+- `North America Revenue` / Q4 2017 (`6.7`) — period not in source STEP 5
+- `North America doors (year-end 2019)` / Q1 2020 (`65000`) — metric not in STEP 5 for this period
+- `North America order growth` / April 2020 (`0.38`) — period not in source STEP 5
+- `North America revenue (US & Canada)` / Q2 2024 (`382`) — period not in source STEP 5
+- `One-Time Distributor Settlement` / 9M 2018 (`1`) — metric not in STEP 5 for this period
 - `Op. Cash Flow ex-inventory build (6M)` / Q2 2021 (`15.1`) — metric not in STEP 5 for this period
-- `Operating Cash Flow (6M)` / Q2 2021 (`-30.3`) — metric not in STEP 5 for this period
+- `Operating Cash Flow` / 9M 2022 (`171`) — period not in source STEP 5
+- `Operating Cash Flow` / H1 2022 (`42`) — period not in source STEP 5
+- `Operating Cash Flow` / Q2 2021 (`-30.3`) — metric not in STEP 5 for this period
+- `Operating Cash Flow` / Q3 2021 (`-52`) — metric not in STEP 5 for this period
+- `Operating Cash Flow` / Q4 2025 (`359`) — metric not in STEP 5 for this period
+- `Operating cash flow (6 months)` / Q2 2022 (`42.3`) — metric not in STEP 5 for this period
+- `Operating cash flow (9 months)` / Q3 2022 (`171`) — metric not in STEP 5 for this period
+- `Operational G&A ex-stock-comp/D&A (% of rev)` / Q4 2019 (`0.108`) — period not in source STEP 5
 - `Operational G&A ex-stock-comp/D&A (% of rev)` / Q4 2020 (`0.08800000000000001`) — metric not in STEP 5 for this period
 - `Other Income` / FY2025 (`13`) — metric not in STEP 5 for this period
+- `Other Income` / Q2 2019 (`11.9`) — metric not in STEP 5 for this period
+- `Other Income` / Q4 2025 (`6`) — metric not in STEP 5 for this period
+- `Other International Markets` / FY2020 (`1.5`) — period not in source STEP 5
 - `Other International Markets` / FY2021 (`3.2`) — metric not in STEP 5 for this period
+- `Other International Markets` / Q1 2021 (`0.14`) — period not in source STEP 5
+- `Other International Markets` / Q2 2020 (`0.107`) — period not in source STEP 5
+- `Other International Markets` / Q3 2020 (`0.145`) — period not in source STEP 5
+- `Other expenses 2020Q1` / Q1 2020 (`0.702`) — metric not in STEP 5 for this period
+- `Pepsi as % of North America purchases` / 2024 (`0.55`) — period not in source STEP 5
+- `PepsiCo team members supporting` / Q3 2025 (`30000`) — metric not in STEP 5 for this period
+- `Portfolio retail sales growth` / FY2024 (`0.244`) — period not in source STEP 5
+- `Portfolio tracked-channel growth` / Q3 2025 (`0.31`) — metric not in STEP 5 for this period
+- `Post-quarter debt paydown` / Q3 2025 (`200`) — metric not in STEP 5 for this period
 - `Prepaids tied to raw materials` / Q3 2021 (`40`) — metric not in STEP 5 for this period
+- `Pro Forma Consolidated Revenue Run Rate` / Q3 2019 (`100`) — metric not in STEP 5 for this period
+- `Pro Forma Revenue Run Rate` / Q3 2019 (`100`) — metric not in STEP 5 for this period
+- `Pro-Forma Combined Sales (2024)` / Q4 2024 (`2000`) — metric not in STEP 5 for this period
 - `Pro-Forma Net Leverage` / Q2 2025 (`1`) — period not in source STEP 5
+- `Pro-Forma Ownership (Alani Nu sellers)` / Q4 2024 (`0.086`) — metric not in STEP 5 for this period
+- `Quarter growth` / Q2 2021 (`0.08`) — period not in source STEP 5
 - `Quarter growth` / Q2 2022 (`1.85`) — metric not in STEP 5 for this period
 - `Quarter growth` / Q4 2022 (`0.1`) — metric not in STEP 5 for this period
+- `RTD energy category unit growth` / Q2 2025 (`0.135`) — metric not in STEP 5 for this period
+- `Raw material inventory (Q2 vs )` / Q1 2022 (`57`) — period not in source STEP 5
+- `Red Bull category share (competitor)` / 2024 (`0.37`) — period not in source STEP 5
+- `Remaining Buyback Authorization` / Q4 2025 (`260`) — metric not in STEP 5 for this period
+- `Repeat rate` / Q2 2025 (`0.65`) — metric not in STEP 5 for this period
+- `Restaurant points of distribution growth` / Q3 2024 (`0.27`) — metric not in STEP 5 for this period
+- `Restricted cash` / FY2024 (`0`) — period not in source STEP 5
 - `Restricted cash` / FY2025 (`141.1`) — metric not in STEP 5 for this period
+- `Restricted cash` / Q4 2022 (`39`) — metric not in STEP 5 for this period
+- `Retail Track Sales (Category)` / FY2023 (`1800`) — period not in source STEP 5
+- `Rockstar Energy` / Q4 2025 (`-0.17`) — metric not in STEP 5 for this period
+- `Rockstar Energy retail sales growth` / FY2024 (`-0.103`) — period not in source STEP 5
 - `Rockstar Energy revenue` / FY2025 (`55.6`) — metric not in STEP 5 for this period
 - `Rockstar combined Q3 impact` / Q3 2025 (`18`) — metric not in STEP 5 for this period
 - `Rockstar other-income GAAP portion` / Q3 2025 (`7`) — metric not in STEP 5 for this period
+- `Rockstar run rate` / H1 2026 (`250`) — period not in source STEP 5
+- `Run-rate cost synergies` / 2 yrs post-close (~Apr 2027) (`50`) — period not in source STEP 5
+- `S&M % of Revenue` / Q1 2021 (`0.24`) — period not in source STEP 5
+- `S&M % of Revenue` / Q2 2020 (`0.262`) — period not in source STEP 5
 - `S&M % of Revenue` / Q2 2025 (`0.205`) — metric not in STEP 5 for this period
+- `S&M % of Revenue` / Q3 2020 (`0.226`) — period not in source STEP 5
+- `S&M as % of sales` / Q2 2023 (`0.19`) — period not in source STEP 5
+- `SG&A` / Q1 2024 (`99`) — period not in source STEP 5
+- `SG&A` / Q4 2023 (`107`) — period not in source STEP 5
+- `SG&A expense (GAAP, FY)` / Q4 2024 (`524`) — period not in source STEP 5
+- `SG&A expense (GAAP, Q4)` / Q4 2024 (`185`) — period not in source STEP 5
 - `Scanner data trend` / Q1 2025 (`-0.04`) — metric not in STEP 5 for this period
-- `Sequential revenue growth (vs )` / Q1 2022 (`0.18`) — period not in source STEP 5
+- `Selling & Marketing` / FY2021 (`75`) — period not in source STEP 5
+- `Selling & Marketing` / Q1 2018 (`5.6`) — period not in source STEP 5
+- `Selling & Marketing` / Q2 2018 (`4.1`) — period not in source STEP 5
+- `Selling & Marketing` / Q2 2020 (`7.9`) — period not in source STEP 5
+- `Selling & Marketing` / Q2 2022 (`32.6`) — period not in source STEP 5
+- `Selling & Marketing` / Q3 2017 (`4.7`) — period not in source STEP 5
+- `Selling & Marketing` / Q4 2017 (`7.3`) — period not in source STEP 5
+- `Selling & Marketing` / Q4 2022 (`90`) — period not in source STEP 5
+- `Sequential revenue growth (vs )` / Q2 2022 (`0.18`) — metric not in STEP 5 for this period
+- `Series A preferred premium (other asset, contra revenue, 20-yr amort.)` / Q3 2022 (`282.5`) — metric not in STEP 5 for this period
+- `Series A preferred valuation` / Q3 2022 (`832.5`) — metric not in STEP 5 for this period
+- `Series B convertible preferred stock (newly issued)` / FY2024 (`0`) — period not in source STEP 5
 - `Series B convertible preferred stock (newly issued)` / FY2025 (`907.6`) — metric not in STEP 5 for this period
+- `Six-orbit warehouse build + excess freight` / Q3 2021 (`0.03`) — metric not in STEP 5 for this period
+- `Stock Option Expense` / Q2 2020 (`1.2`) — period not in source STEP 5
+- `Stock Option Expense` / Q3 2020 (`2.1`) — period not in source STEP 5
+- `Stock Option Expense Increase` / Q4 2019 (`0.287`) — metric not in STEP 5 for this period
 - `Subway Distribution Opportunity` / FY2025 (`2025`) — period not in source STEP 5
+- `Sugar-free as % of category sales` / 2024 (`0.5`) — period not in source STEP 5
+- `Sugar-free as % of energy category` / 2024 (`0.5`) — period not in source STEP 5
+- `Sugar-free energy growth` / 2024 YTD (`0.07`) — period not in source STEP 5
+- `Term note rate reduction` / Q3 2025 (`75`) — metric not in STEP 5 for this period
+- `Total CELH volume growth` / Q2 2025 (`0.31`) — metric not in STEP 5 for this period
+- `Total Debt` / Q4 2025 (`670`) — metric not in STEP 5 for this period
+- `Total Inventory` / Q4 2022 (`173`) — metric not in STEP 5 for this period
+- `Total LRB growth ()` / FY2025 (`5500`) — metric not in STEP 5 for this period
+- `Total Net Other Expense` / Q3 2020 (`0.24`) — period not in source STEP 5
+- `Total Net Other Income` / Q2 2020 (`0.31`) — period not in source STEP 5
+- `Total Other Income` / Q4 2019 (`0.15`) — period not in source STEP 5
+- `Total Revenue` / 9M 2022 (`476`) — period not in source STEP 5
+- `Total Revenue` / FY2021 (`314`) — period not in source STEP 5
+- `Total Revenue` / H1 2022 (`287`) — period not in source STEP 5
+- `Total Revenue` / H1 2024 (`759`) — period not in source STEP 5
+- `Total Revenue` / Q1 2018 (`12.1`) — period not in source STEP 5
+- `Total Revenue` / Q2 2018 (`9.3`) — period not in source STEP 5
+- `Total Revenue` / Q2 2024 (`402`) — period not in source STEP 5
+- `Total Revenue` / Q3 2017 (`10.8`) — period not in source STEP 5
+- `Total Revenue` / Q4 2017 (`9.1`) — period not in source STEP 5
+- `Total assets` / FY2024 (`1766.9`) — period not in source STEP 5
 - `Total assets` / FY2025 (`5119.6`) — metric not in STEP 5 for this period
+- `Total distributor buyout obligation (year-end)` / Q4 2024 (`0`) — period not in source STEP 5
+- `Total ending inventory (vs )` / FY2021 (`162`) — period not in source STEP 5
+- `Total one-time / short-term drag` / Q3 2021 (`0.075`) — metric not in STEP 5 for this period
+- `U.S. Retail Outlets` / Q4 2024 (`241000`) — metric not in STEP 5 for this period
+- `US ACV Distribution` / Q4 2023 (`0.98`) — metric not in STEP 5 for this period
+- `US Net Sales` / FY2023 (`1200`) — period not in source STEP 5
 - `US energy category growth` / FY2025 (`2025`) — metric not in STEP 5 for this period
+- `US energy category size (TAM)` / 2024 (`28000`) — period not in source STEP 5
+- `US store count` / FY2020 (`82000`) — period not in source STEP 5
+- `US store count` / Q3 2021 (`140000`) — period not in source STEP 5
+- `US total door count` / Q2 2021 (`109000`) — period not in source STEP 5
+- `Unfavorable cost impact` / Q2 2022 (`-7.5`) — metric not in STEP 5 for this period
+- `Unfavorable currency impact` / Q2 2022 (`-2.1`) — metric not in STEP 5 for this period
+- `Vending / Micro-Market Placements (Jul 1)` / Q2 2021 (`18500`) — metric not in STEP 5 for this period
 - `Vending / foodservice revenue` / Q2 2022 (`4.4`) — metric not in STEP 5 for this period
+- `Vending Channel Locations` / Q4 2018 (`10000`) — metric not in STEP 5 for this period
+- `Volume increases` / Q2 2022 (`40.7`) — metric not in STEP 5 for this period
 - `Walmart sales growth` / Q2 2022 (`7`) — metric not in STEP 5 for this period
+- `Weighted Avg Shares Outstanding` / Q1 2018 (`47.4`) — period not in source STEP 5
 - `Weighted Avg Shares Outstanding` / Q1 2019 (`57.2`) — metric not in STEP 5 for this period
 - `Weighted Avg Shares Outstanding Q2` / Q2 2019 (`57.3`) — metric not in STEP 5 for this period
+- `Weighted Avg Shares Q3` / Q3 2018 (`51.1`) — period not in source STEP 5
 - `Weighted Avg Shares Q3` / Q3 2019 (`59.3`) — metric not in STEP 5 for this period
 - `Working Capital` / FY2017 (`20.6`) — period not in source STEP 5
 - `Working Capital` / FY2018 (`20.2`) — metric not in STEP 5 for this period
 - `Working Capital` / Q1 2022 (`186.5`) — metric not in STEP 5 for this period
 - `Working Capital` / Q1 2023 (`801`) — metric not in STEP 5 for this period
+- `Working Capital` / Q4 2022 (`757`) — metric not in STEP 5 for this period
+- `net other income (vs $600K prior; 2020 had a $730K FX gain)` / Q4 2021 (`0.25`) — metric not in STEP 5 for this period
+- `reduced orders to Pepsi` / H1 2024 (`-47`) — period not in source STEP 5
+- `revenue (through Sept 30)` / 9M 2024 (`1020`) — period not in source STEP 5
 
 ## Limits
 
