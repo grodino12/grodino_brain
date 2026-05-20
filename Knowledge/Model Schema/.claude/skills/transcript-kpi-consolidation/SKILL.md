@@ -56,7 +56,7 @@ already extracted. STEP 4's audit is the safety net for STEP-1 transcription err
 
 | Script | Does |
 |---|---|
-| `scripts/build_transcript_tabs.py {TICKER}` | Adds one worksheet tab per transcript (4-section layout), newest-first, to `{TICKER}_disclosures.xlsx`. |
+| `scripts/build_transcript_tabs.py {TICKER}` | Adds one worksheet tab per transcript (4-section layout), newest-first, to `{TICKER}_disclosures.xlsx`. Every populated cell deep-links via `obsidian://adv-uri` to the matching line in the source `.md` — STEP-5 KPI line for QUANTITATIVE data rows, STEP-10 `#### Question N` header for Q&A rows, best fuzzy match in STEPS 4 + 6-9 for QUALITATIVE takeaways. |
 | `scripts/build_kpi_sheet.py {TICKER}` | Builds the `KPI Consolidated` sheet — metric rows x period columns. Numeric values only; cells deep-link to the source `.md`; Shift+F2 notes record provenance; prior-year values backfilled from STEP-5 `PriorYearValue`. |
 | `scripts/audit_kpi_sheet.py {TICKER}` | Cross-checks every directly-reported cell against the source `.md` STEP-5; writes `_audit_report.md`. |
 | `scripts/run.py {TICKER}` | Runs STEPS 2-4 in order. STEP 1 must already be done (digests present in `Ticker Libraries/{TICKER}/MDA and Other/transcript_digests/`). |
@@ -74,7 +74,7 @@ already extracted. STEP 4's audit is the safety net for STEP-1 transcription err
 - **All datapoints kept**, including duplicates across transcripts — the cell shows the earnings-call figure (else earliest), the Shift+F2 note lists every source.
 - **Cell colors:** blue = directly reported; gray italic = prior-year comparative backfilled from `.md`; black italic = computed formula (reconstructed when a `.md` prior conflicts with its own YoY%).
 - **Period** comes from (in precedence): an explicit period in the row label -> a parenthetical qualifier in the label (`(H1)`) -> the column header -> the transcript's own reporting period.
-- **Hyperlinks:** every cell deep-links via `obsidian://adv-uri` to the source `.md` STEP-5 line (requires the Advanced URI Obsidian plugin).
+- **Hyperlinks:** every cell deep-links via `obsidian://adv-uri` to the source `.md` STEP-5 line (requires the Advanced URI Obsidian plugin). Per-transcript tabs (STEP 2) carry the same deep-link decoration — see `build_transcript_tabs.py`'s anchor-kind table at the top of that script.
 - **Comments:** use default openpyxl Comment dimensions — do NOT set `comment.width`/`height` (triggers Excel repair warnings; carried from `mda-disaggregation`).
 
 ## Critical rules
