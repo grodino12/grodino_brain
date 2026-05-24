@@ -1,6 +1,6 @@
 {
   "_notes": "CELH quirks that affect extraction and validation. Every entry exists because CELH filings do something non-standard. Do not delete entries without understanding why.",
-  "_last_updated": "2026-04-22",
+  "_last_updated": "2026-05-24",
   "_cash_convention_note": "Cash convention differs per year. Affects the X-2 cross-statement check. FY2023 10-K reports 'Cash, cash equivalents and restricted cash'; FY2024+ simplified to 'Cash and cash equivalents' only (restricted cash hit $0 at 12/31/23).",
   "cash_convention_per_year": {
     "2023": "cash_plus_restricted",
@@ -60,8 +60,25 @@
       "reason": "Pre/post split inconsistency across filings"
     }
   ],
-  "_overrides_note": "Empty at start. Append only when a validation failure has a legitimate documented explanation.",
+  "_overrides_note": "Append only when a validation failure has a legitimate documented explanation.",
   "validation_overrides": [],
+  "_extracted_value_restatements_note": "Filer-typo corrections applied post-extract, BEFORE reconcile. Each entry must cite the source of the corrected value (typically a later filing's restated comparative). Implemented via a sibling `.cache/_fixup_*.py` script that runs idempotently after the extractor.",
+  "extracted_value_restatements": [
+    {
+      "id": "FIXUP-2020-FY-001",
+      "filing": "2020-FY 10-K (accession 0001829126-21-001412, filed 2021-03-11)",
+      "statement": "Cash Flow",
+      "period": "FY2020",
+      "line": "Amortization",
+      "original_value": 1611566,
+      "restated_value": 1484303,
+      "rationale": "Original line was implicitly combined D+A even though Depreciation ($127,263) was already broken out separately on the same statement, causing line-item double-count. Sum of as-tagged CFO line items = $3,522,347; filer's printed CFO subtotal = $3,395,084; gap = $127,263 = the Depreciation amount exactly.",
+      "authority": "2021-FY 10-K (accession 0001393905-22-000282) restated FY2020 comparative column reports Amortization = $1,484,303 = original $1,611,566 - $127,263.",
+      "cross_check": "Sum of restated 14 CF operating line items reconciles exactly to filer's printed CFO subtotal of $3,395,084. All CF-1..CF-4 validators PASS (gap = 0).",
+      "fixup_script": ".cache/_fixup_2020_FY_amort_double_count.py",
+      "applied_date": "2026-05-24"
+    }
+  ],
   "_caveats_note": "Awareness-only \u2014 no logic tied to these.",
   "caveats": [
     "Big Beverages acquisition FY2024 added ~$57M goodwill (FY2023 $14.2M \u2192 FY2024 $71.6M)",

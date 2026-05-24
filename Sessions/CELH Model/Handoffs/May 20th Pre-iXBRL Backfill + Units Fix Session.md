@@ -46,9 +46,21 @@ Two real `model-write` tie-out failures. **(a)** 2021-FY 10-K tags FY2021 financ
 ## Open decisions / pending work
 
 1. **4-ticker joint regression PENDING** — `_scaled_value` rescales PG/PEP outputs ×1000 (millions→thousands); library aliases are cross-ticker; `reconcile._register` accepted-sections propagation can change ticker overlay matches. Per `feedback_celh_pg_joint_regression.md`, run the 87-filing snapshot harness against all four tickers. **Open the next session here.**
-2. **CASH FLOW FY2019/FY2020 + Q4 FY2020** — recoverable only by deciding which side of the 2020-FY filer XBRL self-inconsistency to trust (tagged CFO $3,395K vs line items summing $3,522K; gap = Depreciation fact exactly). Decide + `validation_overrides`, or accept.
+2. ~~**CASH FLOW FY2019/FY2020 + Q4 FY2020**~~ — **RESOLVED 2026-05-24** (see § "May 24 follow-up" below). Root cause was a filer-typo double-count: 2020-FY 10-K's "Amortization" line was implicitly combined D+A despite the separate Depreciation row. 2021-FY 10-K's restated comparative confirmed; restated Amort from $1,611,566 → $1,484,303 via `.cache/_fixup_2020_FY_amort_double_count.py`. 2020-FY CF re-extracted + revalidated (28/28 PASS); workbook rebuilt; FY2019, FY2020 annual CF + Q4 FY2020 quarterly CF all populated.
 3. **Playgrounds-in-sync rule** (per `feedback_keep_playgrounds_in_sync.md`) — no structural change touched playground concerns; `playground_*.html` don't need updates.
 4. **Carryover from May 11** — pre-iXBRL backfill resolved; 2021-FY/2022-FY `find_primary_tables` rewrite obsolete (new path bypasses HTM tables); MDA Phase 2 rework untouched.
+
+## May 24 follow-up — 2020-FY CF gap resolved + post-crash audit corrections
+
+Post-crash inventory (2026-05-24) surfaced that several artifacts named in this handoff were either renamed or never persisted before the crash (see "Disk-state note" in §5). Resolved in this follow-up:
+
+- **2020-FY 10-K Amortization filer-typo diagnosed and restated.** SEC `_financial_report.xlsx` for 2020-FY shows the 14 CFO line items summing to $3,522,347 vs the filer's printed CFO subtotal $3,395,084 — gap = Depreciation fact ($127,263) **exactly**. The 2021-FY 10-K's restated FY2020 comparative reports Amortization = $1,484,303 (= 1,611,566 − 127,263), confirming the original line was combined D+A while Depreciation was separately broken out, causing double-count. **The printed CFO subtotal is correct; the as-tagged Amortization is the source of the gap.** FY2019 column in the 2020-FY 10-K reconciles cleanly with separate Dep + Amort (sums to $1,033,988 = filer's printed subtotal), so the structure is genuine — only the FY2020 column had the embedded combined value.
+- **Patch shipped.** `.cache/_fixup_2020_FY_amort_double_count.py` — idempotent, runs post-extract + pre-reconcile. Documented in `anomalies.json::extracted_value_restatements[FIXUP-2020-FY-001]` with full provenance + cross-check.
+- **Pipeline re-run.** `extract.py --path xbrl-xml` against 2020-FY 10-K HTM → `_fixup_2020_FY_amort_double_count.py` → `reconcile.py` (0 novels) → `validate.py` (28/28 PASS, all CF-1..CF-4 gap=0) → `model-write` (23 inputs, 1908 cells, FY2019..FY2025 historical + FY2026E..FY2031E forecast) → `model-calc` (124 specs inferred, 2100 forecast cells).
+- **Workbook state**: `CELH_model_GJR.xlsx` rebuilt. CASH FLOW now 7 historical periods FY2019..FY2025 (was 5, FY2021..FY2025). QTR CF now 25 quarters Q1 FY2020..Q4 FY2025 contiguous (was 24 with Q4 FY2020 missing; Q4 derived as FY2020 − YTD Q3 FY2020 via `model-qtr-derive`). Prior `CELH_model_GJR.xlsx` snapshotted to `CELH_model_GJR.prerebuild-2026-05-24.bak.xlsx`.
+- **Disk-state artifacts (from earlier audit, still relevant):** the May 18 pipeline's `.cache/` raw_/mapped_/novels_ intermediates for the other 5 backfill filings (2020-Q1/Q2/Q3, 2021-FY, 2021-Q1) remain absent — only 2020-FY was re-extracted in this follow-up because the others' validated_*.json on disk are still authoritative. Re-run extract→reconcile→validate on those 5 if a future debug session needs the intermediates.
+- **2021-FY CF still dropped.** Unrelated to the 2020-FY typo. The 2021-FY 10-K tags FY2021 financing concepts dimensionally (per §4), so the FY2021 CF column in the workbook continues to flow via `validated_2023-FY.json`'s 3-year comparative — which ties clean. No action needed.
+- **Playgrounds + ROADMAP refs corrected.** `ROADMAP.md` Project Scope + Key references table now point to `CELH_model_GJR.xlsx` and the new `Ticker Libraries/CELH/Financial Statements/` layout per `project_brain_layout.md`.
 
 **Carried rules:** structural-over-heuristic; no validator sign flips; no R-files; CF visual sign from preferredLabel.
 
@@ -63,8 +75,11 @@ Two real `model-write` tie-out failures. **(a)** 2021-FY 10-K tags FY2021 financ
 | Dispatch wiring | `Brain\Knowledge\Model Schema\.claude\skills\financials-extract\scripts\extract.py` (`detect_source_kind`, `--path`) |
 | Units normalization | `Brain\Knowledge\Model Schema\.claude\skills\model-write\scripts\write.py` (`_scaled_value`, `_UNIT_TO_THOUSANDS`, `CF_TIE_OUT_*`) |
 | Accepted-sections fix | `Brain\Knowledge\Model Schema\.claude\skills\financials-reconcile\scripts\reconcile.py` (`_register`) |
-| Workbook | `Brain\Knowledge\Model Outputs\CELH\CELH_model_GJR.xlsx` (pre-rebuild snapshot `CELH_model.prerebuild-2026-05-18.bak.xlsx`) |
+| Workbook (post 2026-05-24 rebuild) | `Brain\Knowledge\Model Outputs\CELH\CELH_model_GJR.xlsx` |
+| Workbook snapshots | `CELH_model.prerebuild-2026-05-18.bak.xlsx`, `CELH_model_GJR.prerebuild-2026-05-24.bak.xlsx` (both in `Model Outputs/CELH/`) |
 | Validated JSONs (23) | `Brain\Knowledge\Model Schema\Ticker Libraries\CELH\Financial Statements\validated_*.json` |
+| 2020-FY filer-typo fixup script | `Brain\Knowledge\Model Schema\Ticker Libraries\CELH\Financial Statements\.cache\_fixup_2020_FY_amort_double_count.py` |
+| 2020-FY restatement provenance | `Brain\Knowledge\Model Schema\Ticker Libraries\CELH\Financial Statements\anomalies.json` (`extracted_value_restatements[FIXUP-2020-FY-001]`) |
 | Surviving CF backup (2021-FY only) | `Brain\Knowledge\Model Schema\Ticker Libraries\CELH\Financial Statements\.cache\validated_2021-FY.withCF.bak.json` |
 | Cached XBRL XML | `Brain\Knowledge\Model Schema\.claude\skills\financials-extract\.cache\ixbrl_reports\{accession_nodash}\` |
 | Generic library | `Brain\Knowledge\Model Schema\pattern_libraries\generic_line_item_mappings.json` (backup `*.bak.json`) |
