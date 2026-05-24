@@ -58,9 +58,9 @@ Living document. Update after each session. **Current project focus: build a uni
 
 ## Project scope
 
-Three interlocking workbooks. CELH model is now built from scratch at `Brain\Knowledge\Model Schema\CELH\Model Output\CELH_model.xlsx`; the old `Pl3 Celsius Case Study\data\derived\CELH Financial Model.xlsm` stays as reference, untouched.
+Three interlocking workbooks. CELH model is now built from scratch at `Brain\Knowledge\Model Outputs\CELH\CELH_model_GJR.xlsx`; the old `Pl3 Celsius Case Study\data\derived\CELH Financial Model.xlsm` stays as reference, untouched.
 
-1. **`CELH_model.xlsx`** — primary target; built fresh by `model-write` from validated JSONs. 3 sheets (ANNL P&L, BALANCE SHEET, CASH FLOW), historical columns FY2021–FY2024 + forecast columns FY2025E–FY2030E, plain .xlsx (no macros).
+1. **`CELH_model_GJR.xlsx`** — primary target; built fresh by `model-write` from 23 validated JSONs (per `project_brain_layout.md` — workbook in `Model Outputs/`, everything else in `Model Schema/Ticker Libraries/CELH/`). 9-sheet workbook (ANNL P&L + BS + CF, YTD ×3, QTR ×3, plus ASSUMPTIONS + 3 DRIVERS tabs); historical columns FY2019–FY2025 + forecast FY2026E–FY2031E. Plain .xlsx, no macros.
 2. **`GLP1_Projection Data.xlsx`** — PWBM take-up curve × insurance coverage × survival curves → % of energy-drink consumers on GLP-1 over time.
 3. **`Celsius_SNAP Data_GR.xlsx`** — SNAP participation × state bans × Celsius demographic share → SNAP-funded volume at risk.
 
@@ -406,9 +406,11 @@ Surface area to watch when running PEP:
 | Pydantic schema playground | `Brain\Knowledge\Model Schema\playground_schema.html` |
 | Design docs (01–04) | `Brain\Knowledge\Model Schema\0{1..4}_*.md` |
 | Shared schema package | `Brain\Knowledge\Model Schema\financials-schema\` |
-| CELH config / anomalies / ledger | `Brain\Knowledge\Model Schema\CELH\{config,anomalies,decisions_ledger}.json` |
-| CELH model outputs | `Brain\Knowledge\Model Schema\CELH\Model Output\` |
-| CELH_model.xlsx (the built output) | `Brain\Knowledge\Model Schema\CELH\Model Output\CELH_model.xlsx` |
+| CELH config / anomalies / ledger | `Brain\Knowledge\Model Schema\Ticker Libraries\CELH\Financial Statements\{config,anomalies,decisions_ledger}.json` |
+| CELH validated JSONs (23) + `.cache\` | `Brain\Knowledge\Model Schema\Ticker Libraries\CELH\Financial Statements\` |
+| **CELH workbook (the built output)** | `Brain\Knowledge\Model Outputs\CELH\CELH_model_GJR.xlsx` |
+| Pre-rebuild snapshot (2026-05-18) | `Brain\Knowledge\Model Outputs\CELH\CELH_model.prerebuild-2026-05-18.bak.xlsx` |
+| Surviving CF backup (2021-FY only) | `Brain\Knowledge\Model Schema\Ticker Libraries\CELH\Financial Statements\.cache\validated_2021-FY.withCF.bak.json` |
 | Old xlsm (reference only, untouched) | `Pl3 Celsius Case Study\data\derived\CELH Financial Model.xlsm` |
 | Source PDFs | `Pl3 Celsius Case Study\data\CELH Reporting\Financial Statements\` |
 | model-write skill | `~\.claude\skills\model-write\` |
