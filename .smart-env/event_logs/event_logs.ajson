@@ -58,3 +58,4 @@
 "event_logs:sources:reimport_started": {"key":"sources:reimport_started","ct":1568,"first_at":1776544383375,"last_at":1779807867173,"class_name":"EventLog","event_sources":{"run_re_import":1568}},
 "event_logs:sources:reimport_progress": {"key":"sources:reimport_progress","ct":5093,"first_at":1776544383377,"last_at":1779807867201,"class_name":"EventLog","event_sources":{"run_re_import":5093}},
 "event_logs:sources:reimport_completed": {"key":"sources:reimport_completed","ct":1541,"first_at":1776544384219,"last_at":1779807867635,"class_name":"EventLog","event_sources":{"run_re_import":1541}},
+"event_logs:sources:opened": {"key":"sources:opened","ct":278,"first_at":1776546181815,"last_at":1779809359554,"class_name":"EventLog","event_sources":{"active-leaf-change":267,"open_source":7,"file-open":4}},
