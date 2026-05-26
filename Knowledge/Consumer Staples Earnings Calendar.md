@@ -1,7 +1,7 @@
 ---
 type: earnings-calendar
 sector: Consumer Staples
-generated_on: 2026-05-17
+generated_on: 2026-05-25
 data_source: yfinance (Yahoo Finance)
 update_frequency: weekly
 tags: [earnings-calendar, consumer-staples, watchlist]
@@ -9,19 +9,17 @@ tags: [earnings-calendar, consumer-staples, watchlist]
 
 # Consumer Staples Earnings Calendar
 
-_Last updated: 2026-05-17 08:00 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
+_Last updated: 2026-05-25 20:16 Eastern Daylight Time. Dates from yfinance; times labeled **BMO** (before market open), **AMC** (after market close), or **Intraday**. Audio and Transcript columns reflect whether sources for the **last** earnings release exist under `Brain/Sources/{TICKER}/`. ✅ = present, ❌ = missing, — = not applicable._
 
 | Ticker | Company | Last Earnings | Next Earnings | Audio | Transcript |
 | ------ | ------- | ------------- | ------------- | ----- | ---------- |
-| TGT | Target | 2026-03-03 (BMO) | 2026-05-20 (BMO) | ❌ | ✅ |
-| WMT | Walmart | 2026-02-19 (BMO) | 2026-05-21 (BMO) | ✅ | ✅ |
 | COST | Costco Wholesale | 2026-03-05 (AMC) | 2026-05-28 (AMC) | ❌ | ❌ |
 | HRL | Hormel Foods | 2026-02-26 (BMO) | 2026-05-28 (BMO) | ✅ | ✅ |
 | DLTR | Dollar Tree | 2026-03-16 (BMO) | 2026-05-28 (BMO) | ❌ | ✅ |
 | DG | Dollar General | 2026-03-12 (BMO) | 2026-06-02 (BMO) | ❌ | ✅ |
 | BF-B | Brown-Forman | 2026-03-04 (BMO) | 2026-06-04 (BMO) | ✅ | ✅ |
-| SJM | JM Smucker | — | 2026-06-09 (BMO) | — | — |
-| KR | Kroger | 2026-03-05 (BMO) | 2026-06-22 (BMO) | ✅ | ✅ |
+| SJM | JM Smucker | 2026-02-26 (BMO) | 2026-06-09 (BMO) | ✅ | ✅ |
+| KR | Kroger | 2026-03-05 (BMO) | 2026-06-18 (BMO) | ✅ | ✅ |
 | GIS | General Mills | 2026-03-18 (BMO) | 2026-06-24 (BMO) | ✅ | ✅ |
 | STZ | Constellation Brands | 2026-04-08 (AMC) | 2026-07-01 (AMC) | ✅ | ✅ |
 | MKC | McCormick & Co | 2026-03-31 (BMO) | 2026-07-02 (BMO) | ❌ | ✅ |
@@ -45,7 +43,9 @@ _Last updated: 2026-05-17 08:00 Eastern Daylight Time. Dates from yfinance; time
 | MNST | Monster Beverage | 2026-05-07 (AMC) | 2026-08-06 (AMC) | ❌ | ❌ |
 | KMB | Kimberly-Clark | 2026-04-28 (BMO) | 2026-08-10 (BMO) | ❌ | ❌ |
 | CELH | Celsius Holdings | 2026-05-07 (BMO) | 2026-08-10 (BMO) | ❌ | ✅ |
+| TGT | Target | 2026-05-20 (BMO) | 2026-08-19 (BMO) | ❌ | ❌ |
 | EL | Estée Lauder | 2026-05-01 (BMO) | 2026-08-19 (BMO) | ❌ | ❌ |
+| WMT | Walmart | 2026-05-21 (BMO) | 2026-08-20 (BMO) | ❌ | ❌ |
 
 ---
 
