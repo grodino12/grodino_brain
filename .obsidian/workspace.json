@@ -171,8 +171,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "smart-connections",
-              "title": "Connections"
+              "icon": "lucide-ghost",
+              "title": "smart-connections-view"
             }
           },
           {
@@ -181,8 +181,8 @@
             "state": {
               "type": "smart-lookup-view-connections",
               "state": {},
-              "icon": "smart-lookup",
-              "title": "Lookup"
+              "icon": "lucide-ghost",
+              "title": "smart-lookup-view-connections"
             }
           }
         ],
@@ -202,10 +202,10 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
+      "smart-connections-visualizer:Open smart connections visualizer": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": false,
       "smart-connections:Smart Lookup: Open lookup view": false,
-      "smart-connections-visualizer:Open smart connections visualizer": false,
       "obsidian-git:Open Git source control": false
     }
   },
