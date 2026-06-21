@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "6d026dfd8f52b774",
+        "id": "e1e33e52730dde39",
         "type": "tabs",
         "children": [
           {
-            "id": "017e8ab40d624fec",
+            "id": "5b9ca0f53e1e57a4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Sources/CELH/2023-Q1/transcripts/CELH_2023-05-09_2023Q1 Earnings.md",
-                "mode": "source",
-                "source": false
+                "file": "Sources/CELH/2025-FY/transcripts/2026-02-26_CELH_Earnings.pdf"
               },
-              "icon": "lucide-file",
-              "title": "CELH_2023-05-09_2023Q1 Earnings"
+              "icon": "lucide-file-text",
+              "title": "2026-02-26_CELH_Earnings"
             }
           }
         ]
@@ -171,8 +169,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "smart-connections-view"
+              "icon": "smart-connections",
+              "title": "Connections"
             }
           },
           {
@@ -184,14 +182,23 @@
               "icon": "lucide-ghost",
               "title": "smart-lookup-view-connections"
             }
+          },
+          {
+            "id": "a743e1f76d371fa3",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-visualizer",
+              "state": {},
+              "icon": "git-fork",
+              "title": "Smart connections visualizer"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 479.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,50 +212,49 @@
       "smart-connections-visualizer:Open smart connections visualizer": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": false,
-      "smart-connections:Smart Lookup: Open lookup view": false,
-      "obsidian-git:Open Git source control": false
+      "smart-connections:Smart Lookup: Open lookup view": false
     }
   },
-  "active": "017e8ab40d624fec",
+  "active": "30b7eccb083a459e",
   "lastOpenFiles": [
-    "Sources/CELH/2023-Q3/transcripts/CELH_2023-11-07_2023Q3 Earnings.md",
-    "Sources/CELH/2025-Q3/transcripts/CELH_2025-11-06_2025Q3 Earnings.md",
-    "Sources/CELH/2025-Q2/transcripts/CELH_2025-08-07_2025Q2 Earnings.md",
+    "Sources/CELH/2024-Q2/transcripts/2024-09-10_CELH_Conference.pdf",
+    "Sources/CELH/2024-Q2/transcripts/2024-08-06_CELH_Earnings.pdf",
+    "Sources/CELH/2024-FY/transcripts/2025-02-20_CELH_Earnings.pdf",
+    "Sources/CELH/2025-Q1/transcripts/2025-05-06_CELH_Earnings.pdf",
+    "Sources/CELH/2026-Q1/transcripts/2026-05-07_CELH_Earnings.pdf",
+    "Sources/CELH/2025-Q2/transcripts/2025-08-07_CELH_Earnings.pdf",
+    "Knowledge/Model Outputs/CELH/242E4000",
+    "Sources/CELH/2026-Q1/transcripts/CELH_2026-05-07_2026Q1 Earnings.md",
+    "Sources/CELH/2025-FY/transcripts/2026-02-26_CELH_Earnings.pdf",
+    "Sources/CELH/2025-FY/transcripts/2026-02-26_CELH_PressRelease.pdf",
+    "Sources/CELH/2025-FY/transcripts/2026-03-11_CELH_Conference.pdf",
+    "Knowledge/Model Outputs/CELH/C7E31000",
     "Sources/CELH/2025-FY/transcripts/CELH_2026-02-26_2025Q4 Earnings Press Release.md",
-    "Knowledge/Model Outputs/CELH/6B757100",
+    "Sources/CELH/2025-FY/transcripts/CELH_2026-02-26_2025Q4 Earnings.md",
+    "Sources/CELH/2025-FY/transcripts/CELH_2026-03-11_UBS Conference.md",
+    "Sources/CELH/2025-Q3/transcripts/CELH_2025-12-03_Morgan Stanley Conference.md",
+    "Sources/CELH/2025-Q3/transcripts/CELH_2025-11-06_2025Q3 Earnings.md",
+    "Sources/CELH/2025-Q3/transcripts/CELH_2026-02-19_CAGNY Conference.md",
+    "Sources/CELH/2023-Q1/transcripts/CELH_2023-05-09_2023Q1 Earnings.md",
+    "Knowledge/Earnings Data/Consumer Staples Earnings Data/consumer staples transcript summaries/CELH/CELH_2026-02-26_2025Q4 Earnings.md",
+    "Untitled.canvas",
+    "Knowledge/Model Outputs/CELH/_staging_reports/_audit_report.md",
+    "conflict-files-obsidian-git.md",
+    "Knowledge/Earnings Data/Consumer Staples Earnings Data/consumer staples transcript summaries/CELH/CELH_revenue_research_dossier.md",
+    "Sources/CELH/2023-Q3/transcripts/CELH_2023-11-07_2023Q3 Earnings.md",
+    "Sources/CELH/2025-Q2/transcripts/CELH_2025-08-07_2025Q2 Earnings.md",
     "Sources/CELH/2024-Q3/transcripts/CELH_2024-11-06_2024Q3 Earnings.md",
     "Sources/CELH/2024-FY/transcripts/CELH_2025-02-20_2024Q4 Earnings.md",
     "Sources/CELH/2025-Q1/transcripts/CELH_2025-05-06_2025Q1 Earnings.md",
-    "Sources/CELH/2026-Q1/transcripts/CELH_2026-05-07_2026Q1 Earnings.md",
     "Sources/CELH/2025-Q1/transcripts/CELH_2025-05-28_Acquiring Alani Nu.md",
-    "Sessions/CELH Model/ROADMAP.md.tmp.18708.a7c02b4d6580",
-    "Sessions/CELH Model/Handoffs/May 20th Pre-iXBRL Backfill + Units Fix Session.md.tmp.18708.2b4ef5240eb9",
-    "Sessions/CELH Model/Handoffs/May 20th Pre-iXBRL Backfill + Units Fix Session.md.tmp.18708.275898a61ff2",
-    "Knowledge/Model Schema/Ticker Libraries/CELH/Financial Statements/anomalies.json.tmp.18708.fc9f51f1abf6",
-    "Knowledge/Model Schema/Ticker Libraries/CELH/Financial Statements/anomalies.json.tmp.18708.0d189762d338",
-    "Knowledge/Model Outputs/CELH/CELH_model_GJR.prerebuild-2026-05-24.bak.xlsx",
-    "Sources/CELH/2025-Q1/transcripts/2025-05-28_CELH_MergerAcquisition.pdf",
-    "Sources/CELH/2025-Q3/transcripts/CELH_2025-12-03_Morgan Stanley Conference.md",
-    "Knowledge/Model Outputs/CELH/~$CELH_disclosures.xlsx",
     "Sources/CELH/2022-Q2/transcripts/CELH_2022-08-09_2022Q2 Earnings.md",
-    "Knowledge/Model Outputs/CELH/CELH_disclosures.prehyperlinks-2026-05-20.bak.xlsx",
     "Sessions/CELH Model/Handoffs/May 20th Pre-iXBRL Backfill + Units Fix Session.md",
     "Sessions/CELH Model/Handoffs/Archive/May 18th Transcript-KPI Skill Build Session.md",
     "Sessions/CELH Model/Handoffs/May 18th Transcript-KPI Skill Build Session.md",
     "Sessions/CELH Model/Handoffs/Archive/May 17th CELH KPI Consolidation Sheet Session.md",
     "Sources/CELH/2018-Q3/transcripts/CELH_2018-11-09_2018Q3 Earnings.md",
     "Sources/CELH/2023-Q2/transcripts/CELH_2023-08-08_2023Q2 Earnings.md",
-    "Knowledge/Model Schema/Ticker Libraries/CELH/MDA and Other/transcript_kpi_audit_report.md",
-    "Knowledge/Model Outputs/CELH/_staging_reports/_audit_report.md",
-    "Sources/CELH/2021-Q2/transcripts/CELH_2021-08-12_2021Q2 Earnings.md",
-    "Sessions/CELH Model/Handoffs/Archive/May 17th CELH Transcript Analysis and Reports Session.md",
-    "Sessions/CELH Model/Handoffs/May 17th CELH KPI Consolidation Sheet Session.md",
-    "Sources/CELH/2022-Q3/transcripts/CELH_2022-11-09_2022Q3 Earnings.md",
-    "Sources/CELH/2019-FY/transcripts/CELH_2020-03-12_2019Q4 Earnings.md",
-    "Sources/CELH/2018-FY/transcripts/CELH_2019-03-14_2018Q4 Earnings.md",
-    "Sources/CELH/2021-Q3/transcripts/CELH_2021-11-30_Morgan Stanley Conference.md",
     "Untitled 1.canvas",
-    "Untitled.canvas",
     "Knowledge/_q4_debug/TSN_EARNINGS_02.png",
     "Knowledge/_q4_debug/TSN_EARNINGS_03_post_submit.png",
     "Knowledge/_q4_debug/TSN_EARNINGS_02b_filled.png",
